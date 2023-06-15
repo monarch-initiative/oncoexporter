@@ -1,6 +1,7 @@
 import unittest
 from unittest import TestCase
 
+
 class JsonLDTestCase(TestCase):
 
     def test_reality(self):
