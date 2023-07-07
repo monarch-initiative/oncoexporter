@@ -1,0 +1,57 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["notebooks", "test"]
+
+[project]
+name = "c2p"
+version = "0.0.1"
+requires-python = ">=3.5"
+description = "Generate and work with GA4GH phenopackets for NCI"
+readme = "README.md"
+authors = [
+    {name = "Peter Robinson", email="peter.robinson@jax.org"},
+     ]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+keywords = [
+    "Global Alliance for Genomics and Health",
+    "GA4GH Phenopacket Schema",
+    "Human Phenotype Ontology",
+    "GA4GH",
+    "NCI",
+    "HPO"]
+dependencies = [
+    "hpo-toolkit>=0.2.0",
+    "pandas",
+    "phenopackets",
+    "protobuf",
+    "requests"
+]
+[project.optional-dependencies]
+test = ["pytest"]
+
+
+
+#[project.optional-dependencies]
+#dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
+
+[project.urls]
+homepage = "https://github.com/monarch-initiative/cp2"
+repository = "https://github.com/monarch-initiative/cp2.git"
+documentation = "https://github.com/monarch-initiative/cp2"
+bugtracker = "https://github.com/monarch-initiative/cp2/issues"
+
+#[project.scripts]
+# ... = "reader.__main__:main"
