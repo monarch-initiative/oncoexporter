@@ -102,6 +102,7 @@ class IndividualFactory(MessageFactory):
         race = row['race']
         ethnicity = row['ethnicity']
         days_to_birth = row['days_to_birth']
+        print(d_to_b + " DTB")
         iso_age = None
         try:
             d_to_b = -1 * int(days_to_birth)

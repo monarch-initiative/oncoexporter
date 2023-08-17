@@ -1,5 +1,5 @@
 import unittest
-import os
+import phenopackets as PPkt
 import pandas as pd
 from c2p import IndividualFactory
 
@@ -14,7 +14,7 @@ class TestCaseParse(unittest.TestCase):
                 'female',
                 'black or african american',
                 'not reported',
-                'NaN',
+                '-15987.0',
                 "['CGCI-HTMCP-CC']",
                 "Alive", 
                 "NaN",	
@@ -35,6 +35,29 @@ class TestCaseParse(unittest.TestCase):
         ga4gh_indi = ifact.from_cancer_data_aggregator(self._series)
         expected_id = 'CGCI.HTMCP-03-06-02007'
         self.assertEquals(expected_id, ga4gh_indi.id)
+
+    def test_iso_age(self):
+        ifact = IndividualFactory()
+        ga4gh_indi = ifact.from_cancer_data_aggregator(self._series)
+        expected_iso = 'P43Y43M6D'
+        calculated_iso = ga4gh_indi.time_at_last_encounter.age.iso8601duration
+        self.assertEquals(expected_iso, calculated_iso)
+
+    def test_taxonomy(self):
+        ifact = IndividualFactory()
+        ga4gh_indi = ifact.from_cancer_data_aggregator(self._series)
+        taxonomy = ga4gh_indi.taxonomy
+        self.assertIsNotNone(taxonomy)
+        self.assertEquals("NCBITaxon:9606", taxonomy.id)
+        self.assertEquals("homo sapiens sapiens", taxonomy.label)
+
+    def test_alive_vital_status(self):
+        ifact = IndividualFactory()
+        ga4gh_indi = ifact.from_cancer_data_aggregator(self._series)
+        vs = ga4gh_indi.vital_status
+        self.assertIsNotNone(vs)
+        self.assertEquals(PPkt.VitalStatus.ALIVE, vs.status)
+
 
 
 
