@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 
 
 [tool.setuptools.packages.find]
-where = ["."]
+where = ["./src"]
 exclude = ["notebooks", "test"]
 
 [project]
@@ -37,7 +37,8 @@ dependencies = [
     "pandas",
     "phenopackets",
     "protobuf",
-    "requests"
+    "requests",
+    "cdapython@git+https://github.com/CancerDataAggregator/cda-python"
 ]
 [project.optional-dependencies]
 test = ["pytest"]
