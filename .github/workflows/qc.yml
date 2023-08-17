@@ -28,6 +28,6 @@ jobs:
         architecture: x64
     - name: Install and test
       run: |
-        pip install -r requirements.txt
+        pip install .
         pip install pytest
         pytest tests
