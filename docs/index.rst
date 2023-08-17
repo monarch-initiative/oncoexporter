@@ -20,6 +20,7 @@ See :ref:`installation` for instructions on how to set up the package.
     :maxdepth: 1
 
     installation
+    workplan
     contributing
     authors
     history
