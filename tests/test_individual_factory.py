@@ -19,8 +19,22 @@ class TestCaseParse(unittest.TestCase):
                 "Alive", 
                 "NaN",	
                 "None"]
+        column_names = ['subject_id', 'subject_identifier', 'species', 'sex', 'race',
+       'ethnicity', 'days_to_birth', 'subject_associated_project',
+       'vital_status', 'days_to_death', 'cause_of_death']
+        cls._series = pd.Series(data, index=column_names)
 
-        # create a series from the list
-        my_series = pd.Series(data)
+    def test_creation(self):
+        ifact = IndividualFactory()
+        self.assertIsNotNone(ifact)
+        ga4gh_indi = ifact.from_cancer_data_aggregator(self._series)
+        self.assertIsNotNone(ga4gh_indi)
+    
+    def test_id(self):
+        ifact = IndividualFactory()
+        ga4gh_indi = ifact.from_cancer_data_aggregator(self._series)
+        expected_id = 'CGCI.HTMCP-03-06-02007'
+        self.assertEquals(expected_id, ga4gh_indi.id)
+
 
 
