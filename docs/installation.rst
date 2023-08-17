@@ -61,7 +61,7 @@ To use the kernel in notebooks, enter the following
    :linenos:
 
    pip install jupyter ipykernel
-   python -m ipykernel install --name c2p_env --display-name "c2p_env" --local
+   python -m ipykernel install --name c2p_env --display-name "c2p_env" --user
    cd notebooks
    jupyter-notebook
 

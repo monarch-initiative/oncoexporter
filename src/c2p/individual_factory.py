@@ -3,6 +3,7 @@ import phenopackets as PPkt
 import pandas as pd
 
 
+
 class C2pIndividual:
     """
     This class should not be used by client code. It provides a DTO-like object to hold
@@ -21,9 +22,11 @@ class C2pIndividual:
         self._id = id
         # todo add check for date_of_birth, leaving out for now
         self._iso8601duration = iso8601duration
-        if sex == 'M':
+        male_sex = {"m", "male"}
+        female_sex = {"f",  "female",}
+        if sex.lower() in male_sex:
             self._sex = PPkt.MALE
-        elif sex == 'F':
+        elif sex.lower() in female_sex:
              self._sex = PPkt.FEMALE
         else:
             self._sex = PPkt.UNKNOWN_SEX
@@ -55,7 +58,31 @@ class IndividualFactory(MessageFactory):
     def __init__(self) -> None:
         super().__init__()
     
-
+    @staticmethod
+    def days_to_iso(days:int):
+        if isinstance(days, str):
+            days = int(str)
+        if not isinstance(days, int):
+            raise ValueError(f"days argument must be int or str but was {type(days)}")
+        # slight simplification
+        days_in_year = 365.2425    
+        y = int(days/days_in_year)
+        days = days - int(y*days_in_year)
+        m = int(days/12)
+        days = days - int(m*12)
+        w = int(days/7)
+        days = days - int(w*7)
+        d = days
+        iso = "P"
+        if y > 0:
+            iso = f"{iso}{y}Y"
+        if m > 0:
+            iso = f"{iso}{y}M"
+        if w > 0:
+            iso = f"{iso}{w}W"
+        if d > 0:
+            iso = f"{iso}{d}D"
+        return iso
 
     def from_cancer_data_aggregator(self, row):
         """
@@ -75,10 +102,17 @@ class IndividualFactory(MessageFactory):
         race = row['race']
         ethnicity = row['ethnicity']
         days_to_birth = row['days_to_birth']
+        iso_age = None
+        try:
+            d_to_b = -1 * int(days_to_birth)
+            iso_age = IndividualFactory.days_to_iso(days=d_to_b)
+        except:
+            pass
         subject_associated_project = row['subject_associated_project']
         vital_status = row['vital_status']
         days_to_death = row['days_to_death']
         cause_of_death = row['cause_of_death']
         # TODO vital status
-        # TODO isoduration
-        return C2pIndividual(id=subject_id, sex=sex, taxonomy=species)
+        # TODO figure out where to store project data
+        c2pi = C2pIndividual(id=subject_id, iso8601duration=iso_age, sex=sex, taxonomy=species)
+        return c2pi.to_ga4gh()

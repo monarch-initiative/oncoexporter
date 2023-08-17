@@ -1,3 +1,3 @@
 
 
-from individual_factory import IndividualFactory
+from .individual_factory import IndividualFactory
