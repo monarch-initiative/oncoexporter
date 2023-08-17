@@ -31,9 +31,18 @@ class C2pIndividual:
         else:
             self._sex = PPkt.UNKNOWN_SEX
         if taxonomy == 'Homo sapiens':
-            pass # TODO
-        else:
+            self._taxonomy = PPkt.OntologyClass
+            self._taxonomy.id = "NCBITaxon:9606"
+            self._taxonomy.label = "homo sapiens sapiens"
+        elif taxonomy is not None:
             raise ValueError(f"Unknown species {taxonomy}")
+        else:
+            self._taxonomy = None
+        if vital_status == "Alive":
+            self._vital_status = PPkt.VitalStatus()
+            self._vital_status.status = PPkt.VitalStatus.ALIVE
+        else:
+            self._vital_status = None
 
 
         
@@ -45,6 +54,10 @@ class C2pIndividual:
         if self._iso8601duration is not None:
             individual.time_at_last_encounter.age.iso8601duration = self._iso8601duration
         individual.sex = self._sex
+        if self._taxonomy is not None:
+            individual.taxonomy.CopyFrom(self._taxonomy)
+        if self._vital_status is not None:
+            individual.vital_status.CopyFrom(self._vital_status)
         return individual
 
 
@@ -102,10 +115,13 @@ class IndividualFactory(MessageFactory):
         race = row['race']
         ethnicity = row['ethnicity']
         days_to_birth = row['days_to_birth']
-        print(d_to_b + " DTB")
+        # a valid date looks like this: '-15987.0'
+        if days_to_birth.startswith("-"):
+            days_to_birth = days_to_birth[1:]
         iso_age = None
         try:
-            d_to_b = -1 * int(days_to_birth)
+            # we need to parse '15987.0' first as a float and then transform to int
+            d_to_b = int(float(days_to_birth))
             iso_age = IndividualFactory.days_to_iso(days=d_to_b)
         except:
             pass
