@@ -29,7 +29,7 @@ jobs:
         touch gh-pages/.nojekyll
         
         function build_docs {
-          # The function will checkout a branch (`BRANCH`` and move the built documentation
+          # The function will checkout a branch (`BRANCH`) and move the built documentation
           # into provided documentation directory (`DOCDIR`).
           BRANCH=${1}
           DOCDIR=${2}
