@@ -31,7 +31,7 @@ class C2pIndividual:
         else:
             self._sex = PPkt.UNKNOWN_SEX
         if taxonomy == 'Homo sapiens':
-            self._taxonomy = PPkt.OntologyClass
+            self._taxonomy = PPkt.OntologyClass()
             self._taxonomy.id = "NCBITaxon:9606"
             self._taxonomy.label = "homo sapiens sapiens"
         elif taxonomy is not None:
@@ -90,7 +90,7 @@ class IndividualFactory(MessageFactory):
         if y > 0:
             iso = f"{iso}{y}Y"
         if m > 0:
-            iso = f"{iso}{y}M"
+            iso = f"{iso}{m}M"
         if w > 0:
             iso = f"{iso}{w}W"
         if d > 0:

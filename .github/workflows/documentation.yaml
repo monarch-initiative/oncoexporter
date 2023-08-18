@@ -10,21 +10,53 @@ jobs:
     - name: Checkout
       uses: actions/checkout@main
       with:
+        fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
         ref: ${{ github.ref }}
 
     - name: Set up Python 3.
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v4
       with:
         python-version: 3.9
 
     - name: install
-      run: pip3 install sphinx sphinx-rtd-theme 
+      run: pip3 install sphinx sphinx-rtd-theme sphinx-copybutton
 
     - name: Build documentation.
       run: |
-        cd docs/
-        sphinx-build -b html . _build
-        touch _build/.nojekyll
+        ## Init the target folder. 
+        # We will put all site documentation there.
+        mkdir -p gh-pages
+        touch gh-pages/.nojekyll
+        
+        function build_docs {
+          # The function will checkout a branch and build the Javadoc & documentation 
+          # into provided documentation directory.
+          BRANCH=${1}
+          DOCDIR=${2}
+        
+          git checkout ${BRANCH}
+          git fetch
+          git pull
+          ## Init the target folder.
+          # We will put all site documentation there.
+          mkdir -p gh-pages/${DOCDIR}
+        
+          ## Build the docs
+          # Generate the HTML pages and move the generated content into the target folder.
+          printf "Building the %s documentation\n" ${DOCDIR}
+
+          sphinx-apidoc --separate --module-first -d 2 -H "API documentation" --follow-links -o docs/apidocs src/c2s2
+          cd docs
+          make html
+          
+          mv _build/html/* ../gh-pages/${DOCDIR}
+        }
+                
+        # We store the docs for `main` in `stable` dir
+        # TODO - enable when the docs make it into `main
+        # build_docs main stable
+        # We store the docs for `development` in `latest` dir
+        build_docs development latest
 
     - name: Deploy documentation.
       if: ${{ github.event_name == 'push' }}

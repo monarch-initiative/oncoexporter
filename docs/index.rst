@@ -11,26 +11,21 @@ Input data from sources such as Cancer Data Aggregator (CDA) are
 transformed into collections of
 `GA4GH Phenopackets <https://github.com/phenopackets/phenopacket-schema>`_.
 
-
-Installation
-^^^^^^^^^^^^
-See :ref:`installation` for instructions on how to set up the package. 
-
-
-
 .. toctree::
-    :caption: c2p
-    :name: c2p
-    :maxdepth: 1
+  :maxdepth: 1
+  :caption: Contents:
 
-    installation
-    workplan
-    contributing
-    authors
-    history
-    LICENSE
+  installation
+  workplan
+  apidocs/modules
 
- 
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
 
 --------
 Feedback
