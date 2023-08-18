@@ -73,6 +73,12 @@ class IndividualFactory(MessageFactory):
     
     @staticmethod
     def days_to_iso(days:int):
+        """
+        Convert the number of days of life into an ISO 8601 period representing the age of an individual 
+        (e.g., P42Y7M is 42 years and 7 months).
+
+        :param days: number of days of life (str or int)
+        """
         if isinstance(days, str):
             days = int(str)
         if not isinstance(days, int):
@@ -99,11 +105,12 @@ class IndividualFactory(MessageFactory):
 
     def from_cancer_data_aggregator(self, row):
         """
-        core.series.Series
-        Index(['subject_id', 'subject_identifier', 'species', 'sex', 'race',
+        convert a row from the CDA subject table into an Individual message (GA4GH Phenopacket Schema)
+        The row is a pd.core.series.Series and contains the columns
+        ['subject_id', 'subject_identifier', 'species', 'sex', 'race',
        'ethnicity', 'days_to_birth', 'subject_associated_project',
-       'vital_status', 'days_to_death', 'cause_of_death'],
-        dtype='object')
+       'vital_status', 'days_to_death', 'cause_of_death']
+       :param row: a row from the CDA subject table
         """
         if not isinstance(row, pd.core.series.Series):
             raise ValueError(f"Invalid argument. Expected pandas series but got {type(row)}")
@@ -129,7 +136,6 @@ class IndividualFactory(MessageFactory):
         vital_status = row['vital_status']
         days_to_death = row['days_to_death']
         cause_of_death = row['cause_of_death']
-        # TODO vital status
         # TODO figure out where to store project data
         c2pi = C2pIndividual(id=subject_id, iso8601duration=iso_age, sex=sex, taxonomy=species)
         return c2pi.to_ga4gh()

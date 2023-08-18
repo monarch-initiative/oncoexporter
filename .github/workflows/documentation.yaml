@@ -32,7 +32,7 @@ jobs:
           # The function will checkout a branch and build the Javadoc & documentation 
           # into provided documentation directory.
           BRANCH=${1}
-          DOCDIR=${2}
+          DOCDIR=src/c2p
         
           git checkout ${BRANCH}
           git fetch
