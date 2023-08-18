@@ -12,7 +12,7 @@ exclude = ["notebooks", "test"]
 
 [project]
 name = "c2p"
-version = "0.0.3"
+dynamic = ["version"]
 requires-python = ">=3.5"
 description = "Generate and work with GA4GH phenopackets for NCI"
 readme = "README.md"
