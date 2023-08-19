@@ -45,7 +45,7 @@ jobs:
           # Generate the HTML pages and move the generated content into the target folder.
           printf "Building the %s documentation\n" ${DOCDIR}
 
-          sphinx-apidoc --separate --module-first -d 2 -H "API documentation" --follow-links -o docs/apidocs src/cp2
+          sphinx-apidoc --separate --module-first -d 2 -H "API documentation" --follow-links -o docs/apidocs src/c2p
           cd docs
           make doctest html
           
