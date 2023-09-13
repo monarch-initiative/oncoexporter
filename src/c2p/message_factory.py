@@ -5,6 +5,6 @@ from protobuf import Message
 class MessageFactory(metaclass=abc.ABCMeta):
     pass
 
-    @abc.abstractmethod
+    # @abc.abstractmethod
     def to_ga4gh(self):
         pass
