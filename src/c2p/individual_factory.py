@@ -169,12 +169,12 @@ class IndividualFactory(MessageFactory):
             pass
         subject_associated_project = row['subject_associated_project']
 
-        status_object = process_vital_status(row)
-
-        if status_object is not None:
-            vital_status = status_object.vital_status
-            days_to_death = status_object.days_to_death
-            cause_of_death = status_object.cause_of_death
+        # status_object = process_vital_status(row)
+        #
+        # if status_object is not None:
+        #     vital_status = status_object.vital_status
+        #     days_to_death = status_object.days_to_death
+        #     cause_of_death = status_object.cause_of_death
 
         # TODO figure out where to store project data
         c2pi = C2pIndividual(id=subject_id, iso8601duration=iso_age, sex=sex, taxonomy=species)
