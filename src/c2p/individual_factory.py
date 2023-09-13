@@ -3,7 +3,6 @@ import phenopackets as PPkt
 import pandas as pd
 
 
-
 class C2pIndividual:
     """
     This class should not be used by client code. It provides a DTO-like object to hold
@@ -44,10 +43,6 @@ class C2pIndividual:
         else:
             self._vital_status = None
 
-
-
-
-
     def to_ga4gh(self):
         individual =  PPkt.Individual()
         individual.id = self._id
@@ -61,8 +56,6 @@ class C2pIndividual:
         return individual
 
 
-
-
 class IndividualFactory(MessageFactory):
     """
     Create GA4GH individual messages from other data sources. Each data source performs ETL to
@@ -72,7 +65,7 @@ class IndividualFactory(MessageFactory):
         super().__init__()
 
     @staticmethod
-    def days_to_iso(days:int):
+    def days_to_iso(days: int):
         """
         Convert the number of days of life into an ISO 8601 period representing the age of an individual
         (e.g., P42Y7M is 42 years and 7 months).
