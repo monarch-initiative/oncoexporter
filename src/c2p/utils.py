@@ -1,0 +1,13 @@
+import phenopackets as PPKt
+from typing import Optional
+
+
+class C2pMapper:
+    def __init__(self):
+        None
+
+    def to_ncit(self, string: str) -> Optional[PPKt.OntologyClass]:
+        return None
+
+    def to_mondo(self, string: str) -> Optional[PPKt.OntologyClass]:
+        return None
