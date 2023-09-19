@@ -1,9 +1,8 @@
-from .message_factory import MessageFactory
 import phenopackets as PPkt
 import pandas as pd
+from .op_message import OpMessage
 
-
-class OpIndividual:
+class OpIndividual(OpMessage):
     """OncoPacket Individual
     This class should not be used by client code. It provides a DTO-like object to hold
     data that should be instantiated by various factory methods, and it can return

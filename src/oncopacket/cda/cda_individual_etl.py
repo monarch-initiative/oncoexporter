@@ -1,62 +1,10 @@
-from .message_factory import MessageFactory
 import phenopackets as PPkt
 import pandas as pd
 
-
-class C2pIndividual:
-    """
-    This class should not be used by client code. It provides a DTO-like object to hold
-    data that should be instantiated by various factory methods, and it can return
-    a GA4GH Individual message
-    """
-    def __init__(self, id,
-                 alternate_ids = [],
-                 date_of_birth=None,
-                 iso8601duration=None,
-                 vital_status=None,
-                 sex=None,
-                 karyotypic_sex=None,
-                 gender=None,
-                 taxonomy=None) -> None:
-        self._id = id
-        # todo add check for date_of_birth, leaving out for now
-        self._iso8601duration = iso8601duration
-        male_sex = {"m", "male"}
-        female_sex = {"f",  "female",}
-        if sex.lower() in male_sex:
-            self._sex = PPkt.MALE
-        elif sex.lower() in female_sex:
-             self._sex = PPkt.FEMALE
-        else:
-            self._sex = PPkt.UNKNOWN_SEX
-        if taxonomy == 'Homo sapiens':
-            self._taxonomy = PPkt.OntologyClass()
-            self._taxonomy.id = "NCBITaxon:9606"
-            self._taxonomy.label = "homo sapiens sapiens"
-        elif taxonomy is not None:
-            raise ValueError(f"Unknown species {taxonomy}")
-        else:
-            self._taxonomy = None
-        if vital_status == "Alive":
-            self._vital_status = PPkt.VitalStatus()
-            self._vital_status.status = PPkt.VitalStatus.ALIVE
-        else:
-            self._vital_status = None
-
-    def to_ga4gh(self):
-        individual =  PPkt.Individual()
-        individual.id = self._id
-        if self._iso8601duration is not None:
-            individual.time_at_last_encounter.age.iso8601duration = self._iso8601duration
-        individual.sex = self._sex
-        if self._taxonomy is not None:
-            individual.taxonomy.CopyFrom(self._taxonomy)
-        if self._vital_status is not None:
-            individual.vital_status.CopyFrom(self._vital_status)
-        return individual
+from ..cda.op_individual import OpIndividual
 
 
-class IndividualFactory(MessageFactory):
+class IndividualFactory():
     """
     Create GA4GH individual messages from other data sources. Each data source performs ETL to
     create an instance of the C2pIndivual class and then returns a GA4GH Individual object.
@@ -177,5 +125,5 @@ class IndividualFactory(MessageFactory):
         #     cause_of_death = status_object.cause_of_death
 
         # TODO figure out where to store project data
-        c2pi = C2pIndividual(id=subject_id, iso8601duration=iso_age, sex=sex, taxonomy=species)
+        c2pi = OpIndividual(id=subject_id, iso8601duration=iso_age, sex=sex, taxonomy=species)
         return c2pi.to_ga4gh()

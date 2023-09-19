@@ -11,7 +11,7 @@ where = ["./src"]
 exclude = ["notebooks", "test"]
 
 [project]
-name = "c2p"
+name = "oncopacket"
 dynamic = ["version"]
 requires-python = ">=3.5"
 description = "Generate and work with GA4GH phenopackets for NCI"
@@ -49,10 +49,10 @@ test = ["pytest"]
 #dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
 
 [project.urls]
-homepage = "https://github.com/monarch-initiative/cp2"
-repository = "https://github.com/monarch-initiative/cp2.git"
-documentation = "https://github.com/monarch-initiative/cp2"
-bugtracker = "https://github.com/monarch-initiative/cp2/issues"
+homepage = "https://github.com/monarch-initiative/oncopacket"
+repository = "https://github.com/monarch-initiative/oncopacket.git"
+documentation = "https://github.com/monarch-initiative/oncopacket"
+bugtracker = "https://github.com/monarch-initiative/oncopacket/issues"
 
 #[project.scripts]
 # ... = "reader.__main__:main"
