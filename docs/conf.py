@@ -38,7 +38,7 @@ autodoc_member_order = 'bysource'
 
 # -- Doctest setup ------------------------------------------------------------
 
-doctest_path = [c2s2_src]
+doctest_path = [c2p_src]
 doctest_test_doctest_blocks = ""
 
 # Nothing special here
@@ -85,7 +85,6 @@ html_theme = "sphinx_rtd_theme"
 # html_theme_options = {}
 
 html_static_path = ['_static']
-# html_style = 'css/isopret.css'
 html_css_files = ['c2p.css']
 
 # -- Options for HTMLHelp output ------------------------------------------

@@ -3,15 +3,14 @@ import phenopackets as PPkt
 import pandas as pd
 
 
-
 class C2pIndividual:
     """
     This class should not be used by client code. It provides a DTO-like object to hold
-    data that should be instantiated by various factory methods, and it can return 
+    data that should be instantiated by various factory methods, and it can return
     a GA4GH Individual message
     """
-    def __init__(self, id, 
-                 alternate_ids = [], 
+    def __init__(self, id,
+                 alternate_ids = [],
                  date_of_birth=None,
                  iso8601duration=None,
                  vital_status=None,
@@ -44,10 +43,6 @@ class C2pIndividual:
         else:
             self._vital_status = None
 
-
-        
-
-
     def to_ga4gh(self):
         individual =  PPkt.Individual()
         individual.id = self._id
@@ -61,8 +56,6 @@ class C2pIndividual:
         return individual
 
 
-
-
 class IndividualFactory(MessageFactory):
     """
     Create GA4GH individual messages from other data sources. Each data source performs ETL to
@@ -70,12 +63,14 @@ class IndividualFactory(MessageFactory):
     """
     def __init__(self) -> None:
         super().__init__()
-    
+
     @staticmethod
-    def days_to_iso(days:int):
+    def days_to_iso(days: int):
         """
-        Convert the number of days of life into an ISO 8601 period representing the age of an individual 
+        Convert the number of days of life into an ISO 8601 period representing the age of an individual
         (e.g., P42Y7M is 42 years and 7 months).
+        # FYI this exists:
+        # https://pypi.org/project/iso8601/
 
         :param days: number of days of life (str or int)
         """
@@ -84,7 +79,7 @@ class IndividualFactory(MessageFactory):
         if not isinstance(days, int):
             raise ValueError(f"days argument must be int or str but was {type(days)}")
         # slight simplification
-        days_in_year = 365.2425    
+        days_in_year = 365.2425
         y = int(days/days_in_year)
         days = days - int(y*days_in_year)
         m = int(days/12)
@@ -102,6 +97,46 @@ class IndividualFactory(MessageFactory):
         if d > 0:
             iso = f"{iso}{d}D"
         return iso
+
+
+    @staticmethod
+    def days_to_iso(days:int):
+        """
+        Convert the number of days of life into an ISO 8601 period representing the age of an individual
+        (e.g., P42Y7M is 42 years and 7 months).
+        # FYI this exists:
+        # https://pypi.org/project/iso8601/
+
+        :param days: number of days of life (str or int)
+        """
+        if isinstance(days, str):
+            days = int(str)
+        if not isinstance(days, int):
+            raise ValueError(f"days argument must be int or str but was {type(days)}")
+        # slight simplification
+        days_in_year = 365.2425
+        y = int(days/days_in_year)
+        days = days - int(y*days_in_year)
+        m = int(days/12)
+        days = days - int(m*12)
+        w = int(days/7)
+        days = days - int(w*7)
+        d = days
+        iso = "P"
+        if y > 0:
+            iso = f"{iso}{y}Y"
+        if m > 0:
+            iso = f"{iso}{m}M"
+        if w > 0:
+            iso = f"{iso}{w}W"
+        if d > 0:
+            iso = f"{iso}{d}D"
+        return iso
+
+
+    @staticmethod
+    def process_vital_status():
+        return None
 
     def from_cancer_data_aggregator(self, row):
         """
@@ -133,9 +168,14 @@ class IndividualFactory(MessageFactory):
         except:
             pass
         subject_associated_project = row['subject_associated_project']
-        vital_status = row['vital_status']
-        days_to_death = row['days_to_death']
-        cause_of_death = row['cause_of_death']
+
+        # status_object = process_vital_status(row)
+        #
+        # if status_object is not None:
+        #     vital_status = status_object.vital_status
+        #     days_to_death = status_object.days_to_death
+        #     cause_of_death = status_object.cause_of_death
+
         # TODO figure out where to store project data
         c2pi = C2pIndividual(id=subject_id, iso8601duration=iso_age, sex=sex, taxonomy=species)
         return c2pi.to_ga4gh()
