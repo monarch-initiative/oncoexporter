@@ -7,7 +7,7 @@ import sys
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 # General information about the project.
-project = u'c2p: Cancer data to GA4GH phenopacket'
+project = u'oncopacket: Cancer data to GA4GH phenopacket'
 copyright = u'2023, Peter N Robinson, Daniel Danis, Justin Reese'
 author = u'Peter N Robinson, Daniel Danis, Justin Reese'
 version = u'0.0'
@@ -85,11 +85,11 @@ html_theme = "sphinx_rtd_theme"
 # html_theme_options = {}
 
 html_static_path = ['_static']
-html_css_files = ['c2p.css']
+html_css_files = ['oncopacket.css']
 
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'c2p'
+htmlhelp_basename = 'oncopacket'
 
 

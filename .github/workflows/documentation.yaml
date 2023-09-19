@@ -30,33 +30,28 @@ jobs:
         
         function build_docs {
           # The function will checkout a branch (`BRANCH`) and move the built documentation
-          # into provided documentation directory (`DOCDIR`).
           BRANCH=${1}
-          DOCDIR=${2}
-        
           git checkout ${BRANCH}
           git fetch
           git pull
           ## Init the target folder.
           # We will put all site documentation there.
-          mkdir -p gh-pages/${DOCDIR}
+          mkdir -p gh-pages
         
           ## Build the docs
           # Generate the HTML pages and move the generated content into the target folder.
-          printf "Building the %s documentation\n" ${DOCDIR}
+          printf "Building the documentation\n"
 
-          sphinx-apidoc --separate --module-first -d 2 -H "API documentation" --follow-links -o docs/apidocs src/c2p
+          sphinx-apidoc --separate --module-first -d 2 -H "API documentation" --follow-links -o docs/apidocs src/oncopacket
           cd docs
           make doctest html
+          cp -r apidocs _build/html/.
           
-          mv _build/html/* ../gh-pages/${DOCDIR}
+          mv _build/html/* ../gh-pages/.
         }
                 
         # We store the docs for `main` in `stable` dir
-        build_docs main stable
-        # TODO - enable when the docs make it into `development`
-        # We store the docs for `development` in `latest` dir
-        # build_docs development latest
+        build_docs main
 
     - name: Deploy documentation
       if: ${{ github.event_name == 'push' }}

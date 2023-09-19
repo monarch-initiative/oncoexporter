@@ -1,5 +1,5 @@
 """
-c2p is a library for transforming National Cancer Institute (NCI) data into phenopackets.
+oncopacket is a library for transforming National Cancer Institute (NCI) data into phenopackets.
 """
 
 __version__ = '0.0.3'
