@@ -46,7 +46,7 @@ class OpIndividual(OpMessage):
         else:
             self._vital_status = None
 
-    def to_ga4gh(self):
+    def to_phenopacket(self):
         individual =  PPkt.Individual()
         individual.id = self._id
         if self._iso8601duration is not None:

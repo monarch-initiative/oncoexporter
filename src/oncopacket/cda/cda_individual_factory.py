@@ -126,4 +126,4 @@ class CdaIndividualFactory():
 
         # TODO figure out where to store project data
         opi = OpIndividual(id=subject_id, iso8601duration=iso_age, sex=sex, taxonomy=species)
-        return opi.to_ga4gh()
+        return opi.to_phenopacket()
