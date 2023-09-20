@@ -1,7 +1,7 @@
 import phenopackets as PPkt
 import pandas as pd
 
-from ..cda.op_individual import OpIndividual
+from ..model.op_Individual import OpIndividual
 
 
 class IndividualFactory():

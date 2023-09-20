@@ -28,30 +28,18 @@ jobs:
         mkdir -p gh-pages
         touch gh-pages/.nojekyll
         
-        function build_docs {
-          # The function will checkout a branch (`BRANCH`) and move the built documentation
-          BRANCH=${1}
-          git checkout ${BRANCH}
-          git fetch
-          git pull
-          ## Init the target folder.
-          # We will put all site documentation there.
-          mkdir -p gh-pages
-        
-          ## Build the docs
-          # Generate the HTML pages and move the generated content into the target folder.
-          printf "Building the documentation\n"
-
-          sphinx-apidoc --separate --module-first -d 2 -H "API documentation" --follow-links -o docs/apidocs src/oncopacket
-          cd docs
-          make doctest html
-          cp -r apidocs _build/html/.
-          
-          mv _build/html/* ../gh-pages/.
-        }
-                
-        # We store the docs for `main` in `stable` dir
-        build_docs main
+        git checkout main
+        python3 -m pip install .
+        ## Init the target folder.
+        # We will put all site documentation there.
+        mkdir -p gh-pages
+        ## Build the docs
+        # Generate the HTML pages and move the generated content into the target folder.
+        printf "Building the documentation\n"
+        sphinx-apidoc --separate --module-first -d 2 -H "API documentation" --follow-links -o docs/apidocs src/oncopacket
+        cd docs
+        make doctest html   
+        mv _build/html/* ../gh-pages/.
 
     - name: Deploy documentation
       if: ${{ github.event_name == 'push' }}
