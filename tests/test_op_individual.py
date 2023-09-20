@@ -4,6 +4,7 @@ import phenopackets as PPkt
 from src.oncopacket.model import OpIndividual
 from src.oncopacket.cda import CdaIndividualFactory
 
+
 class OpIndividualTestCase(TestCase):
 
     @classmethod
