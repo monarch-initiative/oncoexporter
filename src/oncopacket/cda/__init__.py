@@ -1,1 +1,1 @@
-from .cda_individual_etl import IndividualFactory
+from .cda_individual_factory import CdaIndividualFactory

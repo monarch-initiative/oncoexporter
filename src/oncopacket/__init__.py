@@ -4,8 +4,8 @@ oncopacket is a library for transforming National Cancer Institute (NCI) data in
 
 __version__ = '0.0.3'
 
-from src.oncopacket.cda.cda_individual_etl import IndividualFactory
+from src.oncopacket.cda.cda_individual_factory import CdaIndividualFactory
 
 __all__ = [
-    'IndividualFactory'
+    'CdaIndividualFactory'
 ]

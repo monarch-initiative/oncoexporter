@@ -4,7 +4,7 @@ import pandas as pd
 from ..model.op_Individual import OpIndividual
 
 
-class IndividualFactory():
+class CdaIndividualFactory():
     """
     Create GA4GH individual messages from other data sources. Each data source performs ETL to
     create an instance of the C2pIndivual class and then returns a GA4GH Individual object.
@@ -112,7 +112,7 @@ class IndividualFactory():
         try:
             # we need to parse '15987.0' first as a float and then transform to int
             d_to_b = int(float(days_to_birth))
-            iso_age = IndividualFactory.days_to_iso(days=d_to_b)
+            iso_age = CdaIndividualFactory.days_to_iso(days=d_to_b)
         except:
             pass
         subject_associated_project = row['subject_associated_project']
