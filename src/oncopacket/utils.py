@@ -2,7 +2,7 @@ import phenopackets as PPKt
 from typing import Optional
 
 
-class C2pMapper:
+class OpMapper:
     def __init__(self):
         None
 

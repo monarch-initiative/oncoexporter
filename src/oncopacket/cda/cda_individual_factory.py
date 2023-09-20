@@ -7,7 +7,7 @@ from ..model.op_Individual import OpIndividual
 class CdaIndividualFactory():
     """
     Create GA4GH individual messages from other data sources. Each data source performs ETL to
-    create an instance of the C2pIndivual class and then returns a GA4GH Individual object.
+    create an instance of the OpIndivual class and then returns a GA4GH Individual object.
     """
     def __init__(self) -> None:
         super().__init__()
@@ -125,5 +125,5 @@ class CdaIndividualFactory():
         #     cause_of_death = status_object.cause_of_death
 
         # TODO figure out where to store project data
-        c2pi = OpIndividual(id=subject_id, iso8601duration=iso_age, sex=sex, taxonomy=species)
-        return c2pi.to_ga4gh()
+        opi = OpIndividual(id=subject_id, iso8601duration=iso_age, sex=sex, taxonomy=species)
+        return opi.to_ga4gh()
