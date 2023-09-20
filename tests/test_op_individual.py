@@ -4,6 +4,7 @@ import phenopackets as PPkt
 from src.oncopacket.model import OpIndividual
 from src.oncopacket.cda import CdaIndividualFactory
 
+
 class OpIndividualTestCase(TestCase):
 
     @classmethod
@@ -34,7 +35,7 @@ class OpIndividualTestCase(TestCase):
         ifact = CdaIndividualFactory()
         ga4gh_indi = ifact.from_cancer_data_aggregator(self._series)
         expected_id = 'CGCI.HTMCP-03-06-02007'
-        self.assertEquals(expected_id, ga4gh_indi.id)
+        self.assertEqual(expected_id, ga4gh_indi.id)
 
     def test_iso_age(self):
         """
@@ -44,20 +45,20 @@ class OpIndividualTestCase(TestCase):
         ga4gh_indi = ifact.from_cancer_data_aggregator(self._series)
         expected_iso = 'P43Y23M6D'
         calculated_iso = ga4gh_indi.time_at_last_encounter.age.iso8601duration
-        self.assertEquals(expected_iso, calculated_iso)
+        self.assertEqual(expected_iso, calculated_iso)
 
     def test_taxonomy(self):
         ifact = CdaIndividualFactory()
         ga4gh_indi = ifact.from_cancer_data_aggregator(self._series)
         taxonomy = ga4gh_indi.taxonomy
         self.assertIsNotNone(taxonomy)
-        self.assertEquals("NCBITaxon:9606", taxonomy.id)
-        self.assertEquals("homo sapiens sapiens", taxonomy.label)
+        self.assertEqual("NCBITaxon:9606", taxonomy.id)
+        self.assertEqual("homo sapiens sapiens", taxonomy.label)
 
     def test_alive_vital_status(self):
         ifact = CdaIndividualFactory()
         ga4gh_indi = ifact.from_cancer_data_aggregator(self._series)
         vs = ga4gh_indi.vital_status
         self.assertIsNotNone(vs)
-        self.assertEquals(PPkt.VitalStatus.ALIVE, vs.status)
+        self.assertEqual(PPkt.VitalStatus.ALIVE, vs.ALIVE)
 
