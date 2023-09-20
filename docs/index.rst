@@ -1,11 +1,11 @@
 .. _home:
 
-===
-C2P
-===
+==========
+oncopacket
+==========
 
 
-C2P is a Python package that supports extract transform load (ETL)
+oncopacket is a Python package that supports extract transform load (ETL)
 operations for patient data in translational research on oncology.
 Input data from sources such as Cancer Data Aggregator (CDA) are
 transformed into collections of
@@ -17,6 +17,7 @@ transformed into collections of
 
   installation
   workplan
+  model/index
   apidocs/modules
 
 Indices and tables
