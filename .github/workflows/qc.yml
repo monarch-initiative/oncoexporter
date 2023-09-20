@@ -28,6 +28,6 @@ jobs:
         architecture: x64
     - name: Install and test
       run: |
-        pip install .
+        pip install .g
         pip install pytest
-        pytest tests
+        pytest # tests
