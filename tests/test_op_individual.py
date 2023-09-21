@@ -20,10 +20,10 @@ class OpIndividualTestCase(TestCase):
                 "Alive",
                 "NaN",
                 "None"]
-        column_names = ['subject_id', 'subject_identifier', 'species', 'sex', 'race',
+        cls._column_names = ['subject_id', 'subject_identifier', 'species', 'sex', 'race',
                         'ethnicity', 'days_to_birth', 'subject_associated_project',
                         'vital_status', 'days_to_death', 'cause_of_death']
-        cls._series = pd.Series(data, index=column_names)
+        cls._series = pd.Series(data, index=cls._column_names)
 
     def test_creation(self):
         ifact = CdaIndividualFactory()
@@ -58,6 +58,25 @@ class OpIndividualTestCase(TestCase):
     def test_alive_vital_status(self):
         ifact = CdaIndividualFactory()
         ga4gh_indi = ifact.from_cancer_data_aggregator(self._series)
+        vs = ga4gh_indi.vital_status
+        self.assertIsNotNone(vs)
+        self.assertEqual(PPkt.VitalStatus.ALIVE, vs.ALIVE)
+
+    def test_deceased_vital_status(self):
+        data = ['CGCI.HTMCP-03-06-02007',
+                "[{'system': 'GDC', 'field_name': 'case.submitter_id', 'value': 'HTMCP-03-06-02007'}]",
+                'Homo sapiens',
+                'female',
+                'black or african american',
+                'not reported',
+                '-15987.0',
+                "['CGCI-HTMCP-CC']",
+                "Dead",
+                "343",
+                "Cancer Related"]
+        series =  pd.Series(data, index=self._column_names)
+        ifact = CdaIndividualFactory()
+        ga4gh_indi = ifact.from_cancer_data_aggregator(series)
         vs = ga4gh_indi.vital_status
         self.assertIsNotNone(vs)
         self.assertEqual(PPkt.VitalStatus.ALIVE, vs.ALIVE)

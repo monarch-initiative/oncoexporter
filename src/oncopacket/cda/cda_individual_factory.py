@@ -2,6 +2,7 @@ import phenopackets as PPkt
 import pandas as pd
 
 from ..model.op_Individual import OpIndividual
+from .op_mapper import OpMapper
 
 
 class CdaIndividualFactory():
@@ -9,8 +10,15 @@ class CdaIndividualFactory():
     Create GA4GH individual messages from other data sources. Each data source performs ETL to
     create an instance of the OpIndivual class and then returns a GA4GH Individual object.
     """
-    def __init__(self) -> None:
+    def __init__(self, op_mapper=None) -> None:
+        """
+        :param OpMapper: An object that is able to map free text to Ontology terns
+        """
         super().__init__()
+        if op_mapper is None:
+            self._opMapper = OpMapper()
+        else:
+            self._opMapper = op_mapper
 
     @staticmethod
     def days_to_iso(days: int):
@@ -82,9 +90,41 @@ class CdaIndividualFactory():
         return iso
 
 
-    @staticmethod
-    def process_vital_status():
-        return None
+    def process_vital_status(self, row):
+        """
+        :param vital_status: "Alive or Dead"
+        :type vital_status: str
+        :param days_to_death: 
+        """
+        vital_status = self.get_item(row, "vital_status")
+        days_to_death = self.get_item(row, "days_to_death")
+        cause_of_death = self.get_item(row, "cause_of_death") 
+        if vital_status is None:
+            return None 
+        valid_status = {"Alive", "Dead"}
+        if vital_status not in valid_status:
+            return None
+        vstatus = PPkt.VitalStatus()
+        if vital_status == "Alive":
+            vstatus = PPkt.VitalStatus.ALIVE
+            return vstatus
+        elif vital_status == "Dead":
+            vstatus.status = PPkt.VitalStatus.DECEASED
+        if days_to_death is not None:
+            try:
+                dtd = int(days_to_death)
+                vstatus.survival_time_in_days = dtd
+            except:
+                pass
+        cause = self._opMapper.get_nci_term(cause_of_death)
+        if cause is not None:
+            vstatus.cause_of_death.CopyFrom(cause)
+        return vstatus
+    
+    def get_item(self, row, column_name):
+        if column_name not in row:
+            raise ValueError(f"Expecting to find {column_name} in row but did not. These are the columns: {row.columns}")
+        return row[column_name]
 
     def from_cancer_data_aggregator(self, row):
         """
@@ -109,10 +149,12 @@ class CdaIndividualFactory():
         if days_to_birth.startswith("-"):
             days_to_birth = days_to_birth[1:]
         iso_age = None
+        vstat = None
         try:
             # we need to parse '15987.0' first as a float and then transform to int
             d_to_b = int(float(days_to_birth))
             iso_age = CdaIndividualFactory.days_to_iso(days=d_to_b)
+            vstat = self.process_vital_status(row)
         except:
             pass
         subject_associated_project = row['subject_associated_project']
@@ -125,5 +167,5 @@ class CdaIndividualFactory():
         #     cause_of_death = status_object.cause_of_death
 
         # TODO figure out where to store project data
-        opi = OpIndividual(id=subject_id, iso8601duration=iso_age, sex=sex, taxonomy=species)
+        opi = OpIndividual(id=subject_id, iso8601duration=iso_age, sex=sex, vital_status=vstat, taxonomy=species)
         return opi.to_ga4gh()

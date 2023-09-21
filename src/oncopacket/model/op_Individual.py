@@ -40,11 +40,8 @@ class OpIndividual(OpMessage):
             raise ValueError(f"Unknown species {taxonomy}")
         else:
             self._taxonomy = None
-        if vital_status == "Alive":
-            self._vital_status = PPkt.VitalStatus()
-            self._vital_status.status = PPkt.VitalStatus.ALIVE
-        else:
-            self._vital_status = None
+        self._vital_status = vital_status
+        
 
     def to_ga4gh(self):
         individual =  PPkt.Individual()
