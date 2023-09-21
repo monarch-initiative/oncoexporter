@@ -41,7 +41,7 @@ class OpIndividual(OpMessage):
         else:
             self._taxonomy = None
         self._vital_status = vital_status
-        
+
 
     def to_ga4gh(self):
         individual =  PPkt.Individual()
@@ -52,5 +52,5 @@ class OpIndividual(OpMessage):
         if self._taxonomy is not None:
             individual.taxonomy.CopyFrom(self._taxonomy)
         if self._vital_status is not None:
-            individual.vital_status.CopyFrom(self._vital_status)
+            individual.vital_status.status = self._vital_status
         return individual
