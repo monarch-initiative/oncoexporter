@@ -60,7 +60,7 @@ class OpIndividualTestCase(TestCase):
         ga4gh_indi = ifact.from_cancer_data_aggregator(self._series)
         vs = ga4gh_indi.vital_status
         self.assertIsNotNone(vs)
-        self.assertEqual(PPkt.VitalStatus.ALIVE, vs.ALIVE)
+        self.assertEqual(PPkt.VitalStatus.ALIVE, vs.status)
 
     def test_deceased_vital_status(self):
         data = ['CGCI.HTMCP-03-06-02007',
@@ -79,5 +79,5 @@ class OpIndividualTestCase(TestCase):
         ga4gh_indi = ifact.from_cancer_data_aggregator(series)
         vs = ga4gh_indi.vital_status
         self.assertIsNotNone(vs)
-        self.assertEqual(PPkt.VitalStatus.ALIVE, vs.ALIVE)
+        self.assertEqual(PPkt.VitalStatus.ALIVE, vs.status)
 
