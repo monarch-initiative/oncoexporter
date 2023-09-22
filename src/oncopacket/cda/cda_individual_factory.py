@@ -3,9 +3,9 @@ import pandas as pd
 
 from ..model.op_Individual import OpIndividual
 from .op_mapper import OpMapper
+from .cda_factory import CdaFactory
 
-
-class CdaIndividualFactory():
+class CdaIndividualFactory(CdaFactory):
     """
     Create GA4GH individual messages from other data sources. Each data source performs ETL to
     create an instance of the OpIndivual class and then returns a GA4GH Individual object.
@@ -120,11 +120,6 @@ class CdaIndividualFactory():
         if cause is not None:
             vstatus.cause_of_death.CopyFrom(cause)
         return vstatus
-    
-    def get_item(self, row, column_name):
-        if column_name not in row:
-            raise ValueError(f"Expecting to find {column_name} in row but did not. These are the columns: {row.columns}")
-        return row[column_name]
 
     def from_cancer_data_aggregator(self, row):
         """
