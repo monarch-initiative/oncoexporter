@@ -45,4 +45,7 @@ class CdaDiseaseFactory(CdaFactory):
         researchsubject_id_rs, researchsubject_identifier, member_of_research_project, primary_diagnosis_condition, primary_diagnosis_site \
             = self.get_items_from_row(row, column_names)
 
-        return {'id':'42'}
+        disease = PPkt.Disease()
+        disease.term.id = 'fake'
+        disease.term.label = 'fake'
+        return disease

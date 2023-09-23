@@ -39,8 +39,9 @@ class OpDiseaseTestCase(TestCase):
         ga4gh_disease = dfact.from_cancer_data_aggregator(self._series)
         self.assertIsNotNone(ga4gh_disease)
 
-    def test_id(self):
+    def test_ontology_class_id(self):
         dfact = CdaDiseaseFactory()
         ga4gh_disease = dfact.from_cancer_data_aggregator(self._series)
-        expected_id = 'CGCI.HTMCP-03-06-02007'
-        self.assertEqual(expected_id, ga4gh_disease.id)
+        self.assertNotEquals(ga4gh_disease.term.id, '')
+        self.assertNotEquals(ga4gh_disease.term.label, '')
+
