@@ -45,6 +45,57 @@ class CdaDiseaseFactory(CdaFactory):
             = self.get_items_from_row(row, column_names)
 
         disease = PPkt.Disease()
+
+        disease.term.CopyFrom(self._parse_diagnosis_into_ontology_term(
+            primary_diagnosis=row["primary_diagnosis"],
+            primary_diagnosis_condition=row["primary_diagnosis_condition"],
+            primary_diagnosis_site=row["primary_diagnosis_site"]
+        ))
+
         disease.term.id = 'fake'
         disease.term.label = 'fake'
         return disease
+
+    def _parse_diagnosis_into_ontology_term(self,
+                                            primary_diagnosis: str,
+                                            primary_diagnosis_condition: str,
+                                            primary_diagnosis_site=str) -> PPkt.OntologyClass:
+
+        # primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,id,label
+        # ,,Lung,NCIT:C3200,Lung Neoplasm
+        # Adenocarcinoma,Lung Adenocarcinoma,Lung,NCIT:C3512,Lung Adenocarcinoma
+        # Acantholytic squamous cell carcinoma,Lung Squamous Cell Carcinoma,Lung,NCIT:C3493,Lung Squamous Cell Carcinoma
+        # "Adenocarcinoma, NOS",Lung Adenocarcinoma,Lung,NCIT:C3512,Lung Adenocarcinoma
+        # Squamous Cell Carcinoma,Lung Squamous Cell Carcinoma,Lung,NCIT:C3493,Lung Squamous Cell Carcinoma
+        # "Clear cell adenocarcinoma, NOS",Lung Adenocarcinoma,Lung,NCIT:C45516,Lung Adenocarcinoma
+        # Squamous Cell Carcinoma,Lung Adenocarcinoma,Lung,NCIT:C9133,Lung Adenosquamous Carcinoma
+        # Adenosquamous carcinoma,Lung Adenocarcinoma,Lung,NCIT:C9133,Lung Adenosquamous Carcinoma
+
+        ontology_term = PPkt.OntologyClass()
+        ontology_term.id = ""
+        ontology_term.label = ""
+        if primary_diagnosis == "" and primary_diagnosis_condition == "" and primary_diagnosis_site == "Lung":
+            ontology_term.id = 'NCIT:C3200'
+            ontology_term.label = 'Lung Neoplasm'
+        elif primary_diagnosis == "Adenocarcinoma" and primary_diagnosis_condition == "Lung Adenocarcinoma" and primary_diagnosis_site == "Lung":
+            ontology_term.id = 'NCIT:C3512'
+            ontology_term.label = 'Lung Adenocarcinoma'
+        elif primary_diagnosis == "Acantholytic squamous cell carcinoma" and primary_diagnosis_condition == "Lung Squamous Cell Carcinoma" and primary_diagnosis_site == "Lung":
+            ontology_term.id = 'NCIT:C3493'
+            ontology_term.label = 'Lung Squamous Cell Carcinoma'
+        elif primary_diagnosis == "Adenocarcinoma, NOS" and primary_diagnosis_condition == "Lung Adenocarcinoma" and primary_diagnosis_site == "Lung":
+            ontology_term.id = 'NCIT:C3512'
+            ontology_term.label = 'Lung Adenocarcinoma'
+        elif primary_diagnosis == "Squamous Cell Carcinoma" and primary_diagnosis_condition == "Lung Squamous Cell Carcinoma" and primary_diagnosis_site == "Lung":
+            ontology_term.id = 'NCIT:C3493'
+            ontology_term.label = 'Lung Squamous Cell Carcinoma'
+        elif primary_diagnosis == "Clear cell adenocarcinoma, NOS" and primary_diagnosis_condition == "Lung Adenocarcinoma" and primary_diagnosis_site == "Lung":
+            ontology_term.id = 'NCIT:C45516'
+            ontology_term.label = 'Lung Adenocarcinoma'
+        elif primary_diagnosis == "Squamous Cell Carcinoma" and primary_diagnosis_condition == "Lung Adenocarcinoma" and primary_diagnosis_site == "Lung":
+            ontology_term.id = 'NCIT:C9133'
+            ontology_term.label = 'Lung Adenosquamous Carcinoma'
+        elif primary_diagnosis == "Adenosquamous carcinoma" and primary_diagnosis_condition == "Lung Adenocarcinoma" and primary_diagnosis_site == "Lung":
+            ontology_term.id = 'NCIT:C9133'
+            ontology_term.label = 'Lung Adenosquamous Carcinoma'
+        return ontology_term
