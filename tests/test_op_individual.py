@@ -79,5 +79,4 @@ class OpIndividualTestCase(TestCase):
         ga4gh_indi = ifact.from_cancer_data_aggregator(series)
         vs = ga4gh_indi.vital_status
         self.assertIsNotNone(vs)
-        self.assertEqual(PPkt.VitalStatus.ALIVE, vs.status)
-
+        self.assertEqual(PPkt.VitalStatus.DECEASED, vs.status)

@@ -13,7 +13,7 @@ class CdaFactory(metaclass=abc.ABCMeta):
         return row[column_name]
 
     def get_items_from_row(self, row, column_names):
-        if not isinstance((column_names, list)):
+        if not isinstance(column_names, list):
             raise ValueError(f"column_names argument must be a list but was {type(column_names)}")
         results = []
         for name in column_names:

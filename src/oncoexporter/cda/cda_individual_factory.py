@@ -106,8 +106,7 @@ class CdaIndividualFactory(CdaFactory):
             return None
         vstatus = PPkt.VitalStatus()
         if vital_status == "Alive":
-            vstatus = PPkt.VitalStatus.ALIVE
-            return vstatus
+            vstatus.status = PPkt.VitalStatus.ALIVE
         elif vital_status == "Dead":
             vstatus.status = PPkt.VitalStatus.DECEASED
         if days_to_death is not None:
