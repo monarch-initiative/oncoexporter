@@ -34,7 +34,10 @@ class OpDiseaseTestCase(TestCase):
         assert len(data_1) == len(cls._column_names)
         cls._series = pd.Series(data_1, index=cls._column_names)
 
-    def _create_series(self, primary_diagnosis=None,
+    def _create_series(self,
+                       primary_diagnosis=None,
+                       primary_diagnosis_condition=None,
+                       primary_diagnosis_site=None,
                        age_at_diagnosis=None,
                        morphology=None,
                        stage=None,
@@ -42,6 +45,10 @@ class OpDiseaseTestCase(TestCase):
         series = self._series.copy()
         if primary_diagnosis is not None:
             series["primary_diagnosis"] = primary_diagnosis
+        if primary_diagnosis_condition is not None:
+            series["primary_diagnosis_condition"] = primary_diagnosis_condition
+        if primary_diagnosis_site is not None:
+            series["primary_diagnosis_site"] = primary_diagnosis_site
         if age_at_diagnosis is not None:
             series["age_at_diagnosis"] = age_at_diagnosis
         if morphology is not None:
@@ -68,10 +75,9 @@ class OpDiseaseTestCase(TestCase):
         data = get_disease_test_data()
         for d in data:
             dfact = CdaDiseaseFactory()
-            this_series = self._series.copy()
-            this_series['primary_diagnosis'] = d['primary_diagnosis']
-            this_series['primary_diagnosis_condition'] = d['primary_diagnosis_condition']
-            this_series['primary_diagnosis_site'] = d['primary_diagnosis_site']
+            this_series = self._create_series(primary_diagnosis=d['primary_diagnosis'],
+                                              primary_diagnosis_condition=d['primary_diagnosis_condition'],
+                                              primary_diagnosis_site=d['primary_diagnosis_site'])
             ga4gh_disease = dfact.from_cancer_data_aggregator(this_series)
             self.assertEqual(d['id'], ga4gh_disease.term.id)
             self.assertEqual(d['label'], ga4gh_disease.term.label)
