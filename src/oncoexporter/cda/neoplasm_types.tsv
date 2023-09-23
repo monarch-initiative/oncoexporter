@@ -1,0 +1,9 @@
+primary_diagnosis	primary_diagnosis_condition	primary_diagnosis_site	id	label	
+		Lung	NCIT:C3200	Lung Neoplasm	
+Adenocarcinoma	Lung Adenocarcinoma	Lung	NCIT:C3512	Lung Adenocarcinoma	
+Acantholytic squamous cell carcinoma	Lung Squamous Cell Carcinoma	Lung	NCIT:C3493	Lung Squamous Cell Carcinoma	
+"Adenocarcinoma, NOS"	Lung Adenocarcinoma	Lung	NCIT:C3512	Lung Adenocarcinoma	
+Squamous Cell Carcinoma	Lung Squamous Cell Carcinoma	Lung	NCIT:C3493	Lung Squamous Cell Carcinoma	
+"Clear cell adenocarcinoma, NOS"	Lung Adenocarcinoma	Lung	NCIT:C45516	Lung Adenocarcinoma	Lung Clear Cell Adenocarcinoma
+Squamous Cell Carcinoma	Lung Adenocarcinoma	Lung	NCIT:C9133	Lung Adenosquamous Carcinoma	
+Adenosquamous carcinoma	Lung Adenocarcinoma	Lung	NCIT:C9133	Lung Adenosquamous Carcinoma	

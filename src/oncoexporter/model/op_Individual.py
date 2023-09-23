@@ -7,6 +7,11 @@ class OpIndividual(OpMessage):
     This class should not be used by client code. It provides a DTO-like object to hold
     data that should be instantiated by various factory methods, and it can return
     a GA4GH Individual message
+
+
+    :param id: the individual identifier (application-specific)
+    :type id: str
+    :param alternate_ids:
     """
     def __init__(self, id,
                  alternate_ids = [],
@@ -17,9 +22,7 @@ class OpIndividual(OpMessage):
                  karyotypic_sex=None,
                  gender=None,
                  taxonomy=None) -> None:
-        """
-        :param id: the individual identifier (application-specific)
-
+        """Constructor method
         """
         self._id = id
         # todo add check for date_of_birth, leaving out for now
