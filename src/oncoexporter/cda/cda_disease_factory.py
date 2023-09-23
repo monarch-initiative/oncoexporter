@@ -69,8 +69,8 @@ class CdaDiseaseFactory(CdaFactory):
         # Adenosquamous carcinoma,Lung Adenocarcinoma,Lung,NCIT:C9133,Lung Adenosquamous Carcinoma
 
         ontology_term = PPkt.OntologyClass()
-        ontology_term.id = ""
-        ontology_term.label = ""
+        ontology_term.id ='NCIT:C3262'
+        ontology_term.label = 'Neoplasm'
         if primary_diagnosis == "" and primary_diagnosis_condition == "" and primary_diagnosis_site == "Lung":
             ontology_term.id = 'NCIT:C3200'
             ontology_term.label = 'Lung Neoplasm'

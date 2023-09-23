@@ -68,8 +68,8 @@ class OpDiseaseTestCase(TestCase):
     def test_ontology_class_id(self):
         dfact = CdaDiseaseFactory()
         ga4gh_disease = dfact.from_cancer_data_aggregator(self._series)
-        self.assertNotEquals(ga4gh_disease.term.id, '')
-        self.assertNotEquals(ga4gh_disease.term.label, '')
+        self.assertEquals(ga4gh_disease.term.id, 'NCIT:C3262')
+        self.assertEquals(ga4gh_disease.term.label, 'Neoplasm')
 
     def test_parsing_disease_into_ontology_classes(self):
         data = get_disease_test_data()
