@@ -57,8 +57,8 @@ class OpDiseaseTestCase(TestCase):
             this_series['primary_diagnosis_condition'] = d['primary_diagnosis_condition']
             this_series['primary_diagnosis_site'] = d['primary_diagnosis_site']
             ga4gh_disease = dfact.from_cancer_data_aggregator(this_series)
-            self.assertEqual(ga4gh_disease.term.id, d['id'])
-            self.assertEqual(ga4gh_disease.term.label, d['label'])
+            self.assertEqual(d['id'], ga4gh_disease.term.id)
+            self.assertEqual(d['label'], ga4gh_disease.term.label)
             pass
 
 def get_disease_test_data():
