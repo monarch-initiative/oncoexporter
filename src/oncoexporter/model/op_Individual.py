@@ -11,7 +11,19 @@ class OpIndividual(OpMessage):
 
     :param id: the individual identifier (application-specific)
     :type id: str
-    :param alternate_ids:
+    :param alternate_ids: list of alternative identifiers, optional
+    :type alternate_ids: list
+    :param date_of_birth: date of birth of the individual (optional, should not be used without data privacy protection)
+    :type date_of_birth: timestamp, optional
+    :param iso8601duration: age represented as an ISO 8601 Period, e.g., P42Y5M would be 42 years and 5 months
+    :type iso8601duration: str
+    :param vital_status: An object representing the Vital status of the individual, optional
+    :type vital_status: PPkt.VitalStatus
+    :param karyotypic_sex: the chromosomal sex (karyotypic sex), of the individual, e.g., XY or XX or XXY, optional
+    :param karyotypic_sex: str (must correspond to the enumerotion in the Phenopacket Schema)
+    :param gender: the self-described gender of the individual, optional
+    :param taxonomy: Ontology term representing the species of the individual
+    :type taxonomy: PPKt.OntologyClass
     """
     def __init__(self, id,
                  alternate_ids = [],
@@ -47,6 +59,10 @@ class OpIndividual(OpMessage):
 
 
     def to_ga4gh(self):
+        """Transform the data in the onject into a GA4GH Phenopacket Individual
+        :return: An message corresponding to the GA4GH Phenopacket Individual
+        :rtype: PPkt.Individual
+        """
         individual =  PPkt.Individual()
         individual.id = self._id
         if self._iso8601duration is not None:
