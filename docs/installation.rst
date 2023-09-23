@@ -8,78 +8,69 @@ We will add this project to PyPI to ease installation. For now, a local installa
 There are many ways of installing Python projects locally. We will explain several options here.
 
 
+Install into virtual environment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Loading the package from file system
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Create a virtual environment
+****************************
 
-Before the import statements, add the correct path using the sys module. For instance, to access the c2p 
-package from the ``notebooks`` folder, put the following lines at the top of the notebook.
-
-.. code-block:: shell
-   :linenos:
-
-   import sys
-   sys.path.append('../src')
-   import c2p
-
-Note that the python code for the c2p package is found in the folder ``src/c2p``.
-
-
-Virtual Environment
-^^^^^^^^^^^^^^^^^^^
-
-To use the venv module, enter the following code from the base directory.
+An optional first step is to create a virtual environment.
+Feel free to skip this if you already have a virtual environment which you want to use:
 
 
 .. code-block:: shell
    :linenos:
 
-   python3 -m venv c2p_env
-   source c2p_env/bin/activate
-   pip install --upgrade pip
-   pip install .
-
-Note that the last line will install the core dependencies listed in the ``pyproject.toml`` file.
-To install the test dependency (pytest), enter the following line
-
-.. code-block:: shell
-   :linenos:
-
-   pip install .[test]
+   python3 -m venv oncoexporter-venv
+   source oncoexporter-venv/bin/activate
 
 
-To use the virtual environment, enter the following
+The command above will create a new virtual environment at `oncoexporter-venv` and activate the environment.
+
+
+Install Oncoexporter
+********************
+
+Next, Oncoexporter can be installed into an existing virtual environment by running:
+
 
 .. code-block:: shell
    :linenos:
 
-   source c2p_env/bin/activate
+   # Ensure you are in the repo folder
+   cd oncoexporter
 
-To use the kernel in notebooks, enter the following
+   python3 -m pip install --editable .
+
+`pip` will install `oncoexporter` into the active environment. The package is installed in *editable* mode -
+any code updates are available after Python restart, instead of having to reinstall.
+
+
+Use Oncoexporter in Jupyter notebook
+************************************
+
+To use the kernel in Jupyter notebook,
+first, make sure you have `ipykernel` library to allow using the virtual environment as a Jupyter kernel.
 
 .. code-block:: shell
    :linenos:
 
-   pip install jupyter ipykernel
-   python -m ipykernel install --name c2p_env --display-name "c2p_env" --user
+   python3 -m pip install jupyter ipykernel
+
+Then, we can create a new Jupyter kernel and register the kernel with Jupyter by running:
+
+.. code-block:: shell
+   :linenos:
+
+   python -m ipykernel install --user --name oncoexporter_env --display-name "Oncoexporter"
+
+Last, starting from the project directory, we can run Jupyter to work on the notebooks of the Oncoexport repository.
+
+.. code-block::
+   :linenos:
+
    cd notebooks
    jupyter-notebook
 
 At this point, a Jupyter page should open in the system browser. Navigate to the notebook or create one and be sure 
-to activate the ``c2p_env`` kernel.
-
-
-Creating read the docs locally
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Pushing changes to to the repository will cause the online documentation to be updated. If you want
-to work on the docuemntation locally, install the following packages
-
-.. code-block:: shell
-   :linenos:
-
-   pip install sphinx sphinx-rtd-theme 
-   # to create documentation do the following
-   cd docs
-   make html
-   # this will create HTML pages in the docs/_build/html folder
+to activate the ``oncoexporter_env`` kernel.

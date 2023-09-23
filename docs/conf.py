@@ -7,7 +7,7 @@ import sys
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 # General information about the project.
-project = u'oncopacket: Cancer data to GA4GH phenopacket'
+project = u'oncoexporter: Cancer data to GA4GH phenopacket'
 copyright = u'2023, Peter N Robinson, Daniel Danis, Justin Reese'
 author = u'Peter N Robinson, Daniel Danis, Justin Reese'
 version = u'0.0'
@@ -17,8 +17,8 @@ language = 'en'
 
 # -- General configuration ------------------------------------------------
 
-c2p_src = os.path.abspath(os.path.join('..', 'src'))
-sys.path.insert(0, c2p_src)
+oncoexporter = os.path.abspath(os.path.join('..', 'src'))
+sys.path.insert(0, oncoexporter)
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
@@ -38,7 +38,7 @@ autodoc_member_order = 'bysource'
 
 # -- Doctest setup ------------------------------------------------------------
 
-doctest_path = [c2p_src]
+doctest_path = [oncoexporter]
 doctest_test_doctest_blocks = ""
 
 # Nothing special here
@@ -85,11 +85,11 @@ html_theme = "sphinx_rtd_theme"
 # html_theme_options = {}
 
 html_static_path = ['_static']
-html_css_files = ['oncopacket.css']
+html_css_files = ['oncoexporter.css']
 
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'oncopacket'
+htmlhelp_basename = 'oncoexporter'
 
 

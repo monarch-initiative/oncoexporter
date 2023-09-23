@@ -30,7 +30,7 @@ jobs:
         git checkout main
         python3 -m pip install .
         # Generate the HTML pages and move the generated content into the target folder.
-        sphinx-apidoc --separate --module-first -d 4 -H "API documentation" --follow-links -o docs/apidocs src/oncopacket
+        sphinx-apidoc --separate --module-first -d 4 -H "API reference" --follow-links -o docs/apidocs src/oncoexporter
         cd docs
         make html   
         mv _build/html/* ../gh-pages
