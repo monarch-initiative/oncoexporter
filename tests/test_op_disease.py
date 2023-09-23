@@ -1,6 +1,9 @@
 import pandas as pd
 from unittest import TestCase
+
 import phenopackets as PPkt
+import pytest
+
 from src.oncoexporter.model import OpIndividual
 from src.oncoexporter.cda import CdaDiseaseFactory
 
@@ -45,3 +48,70 @@ class OpDiseaseTestCase(TestCase):
         self.assertNotEquals(ga4gh_disease.term.id, '')
         self.assertNotEquals(ga4gh_disease.term.label, '')
 
+    def test_parsing_disease_into_ontology_classes(self):
+        data = get_disease_test_data()
+        for d in data:
+            dfact = CdaDiseaseFactory()
+            ga4gh_disease = dfact.from_cancer_data_aggregator(pd.Series(d))
+            pass
+
+def get_disease_test_data():
+    data = [
+        {
+            "primary_diagnosis": "",
+            "primary_diagnosis_condition": "Lung",
+            "primary_diagnosis_site": "NCIT:C3200",
+            "id": "Lung Neoplasm",
+            "label": "",
+        },
+        {
+            "primary_diagnosis": "Adenocarcinoma",
+            "primary_diagnosis_condition": "Lung Adenocarcinoma",
+            "primary_diagnosis_site": "Lung",
+            "id": "NCIT:C3512",
+            "label": "Lung Adenocarcinoma",
+        },
+        {
+            "primary_diagnosis": "Acantholytic squamous cell carcinoma",
+            "primary_diagnosis_condition": "Lung Squamous Cell Carcinoma",
+            "primary_diagnosis_site": "Lung",
+            "id": "NCIT:C3493",
+            "label": "Lung Squamous Cell Carcinoma",
+        },
+        {
+            "primary_diagnosis": "Adenocarcinoma, NOS",
+            "primary_diagnosis_condition": "Lung Adenocarcinoma",
+            "primary_diagnosis_site": "Lung",
+            "id": "NCIT:C3512",
+            "label": "Lung Adenocarcinoma",
+        },
+        {
+            "primary_diagnosis": "Squamous Cell Carcinoma",
+            "primary_diagnosis_condition": "Lung Squamous Cell Carcinoma",
+            "primary_diagnosis_site": "Lung",
+            "id": "NCIT:C3493",
+            "label": "Lung Squamous Cell Carcinoma",
+        },
+        {
+            "primary_diagnosis": "Clear cell adenocarcinoma, NOS",
+            "primary_diagnosis_condition": "Lung Adenocarcinoma",
+            "primary_diagnosis_site": "Lung",
+            "id": "NCIT:C45516",
+            "label": "Lung Adenocarcinoma",
+        },
+        {
+            "primary_diagnosis": "Squamous Cell Carcinoma",
+            "primary_diagnosis_condition": "Lung Adenocarcinoma",
+            "primary_diagnosis_site": "Lung",
+            "id": "NCIT:C9133",
+            "label": "Lung Adenosquamous Carcinoma",
+        },
+        {
+            "primary_diagnosis": "Adenosquamous carcinoma",
+            "primary_diagnosis_condition": "Lung Adenocarcinoma",
+            "primary_diagnosis_site": "Lung",
+            "id": "NCIT:C9133",
+            "label": "Lung Adenosquamous Carcinoma",
+        },
+    ]
+    return data
