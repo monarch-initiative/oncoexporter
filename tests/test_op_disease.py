@@ -1,9 +1,7 @@
 import pandas as pd
 from unittest import TestCase
-
 import phenopackets as PPkt
 import pytest
-
 from src.oncoexporter.model import OpIndividual
 from src.oncoexporter.cda import CdaDiseaseFactory
 
@@ -65,8 +63,8 @@ def get_disease_test_data():
     data = [
         {
             "primary_diagnosis": "",
-            "primary_diagnosis_condition": "Lung",
-            "primary_diagnosis_site": "",
+            "primary_diagnosis_condition": "",
+            "primary_diagnosis_site": "Lung",
             "id": "NCIT:C3200",
             "label": "Lung Neoplasm",
         },
