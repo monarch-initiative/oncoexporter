@@ -52,7 +52,13 @@ class OpDiseaseTestCase(TestCase):
         data = get_disease_test_data()
         for d in data:
             dfact = CdaDiseaseFactory()
-            ga4gh_disease = dfact.from_cancer_data_aggregator(pd.Series(d))
+            this_series = self._series.copy()
+            this_series['primary_diagnosis'] = d['primary_diagnosis']
+            this_series['primary_diagnosis_condition'] = d['primary_diagnosis_condition']
+            this_series['primary_diagnosis_site'] = d['primary_diagnosis_site']
+            ga4gh_disease = dfact.from_cancer_data_aggregator(this_series)
+            self.assertNotEquals(ga4gh_disease.term.id, d['id'])
+            self.assertNotEquals(ga4gh_disease.term.label, d['label'])
             pass
 
 def get_disease_test_data():
@@ -60,9 +66,9 @@ def get_disease_test_data():
         {
             "primary_diagnosis": "",
             "primary_diagnosis_condition": "Lung",
-            "primary_diagnosis_site": "NCIT:C3200",
-            "id": "Lung Neoplasm",
-            "label": "",
+            "primary_diagnosis_site": "",
+            "id": "NCIT:C3200",
+            "label": "Lung Neoplasm",
         },
         {
             "primary_diagnosis": "Adenocarcinoma",
