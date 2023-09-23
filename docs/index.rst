@@ -1,11 +1,11 @@
 .. _home:
 
-==========
-oncopacket
-==========
+============
+oncoexporter
+============
 
 
-oncopacket is a Python package that supports extract transform load (ETL)
+Oncoexporter is a Python package that supports extract transform load (ETL)
 operations for patient data in translational research on oncology.
 Input data from sources such as Cancer Data Aggregator (CDA) are
 transformed into collections of
@@ -33,5 +33,5 @@ Feedback
 --------
 
 The best place to leave feedback, ask questions, and report bugs is the 
-`C2P Issue Tracker <https://github.com/monarch-initiative/c2p/issues>`_.
+`Oncoexporter Issue Tracker <https://github.com/monarch-initiative/oncoexporter/issues>`_.
 
