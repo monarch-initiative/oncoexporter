@@ -11,28 +11,46 @@ class OpDiseaseTestCase(TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         data_1 = ["PDC000220.P065.P065-DX",
-                "[{'system': 'PDC', 'field_name': 'Diagnosis.diagnosis_id', 'value': '24b7022a-8beb-11ea-b1fd-0aad30af8a83'}, {'system': 'PDC', 'field_name': 'Diagnosis.diagnosis_submitter_id', 'value': 'P065-DX'}]",
-                "None",
-                "NaN",
-                "None",
-                "None",
-                "None",
-                "None",
-                "Academia Sinica LUAD-100.P065",
-                "PDC000220.P065",
-                "PDC000219.P065",
-                "[{'system': 'PDC', 'field_name': 'Case.case_id', 'value': '24b3ad62-8beb-11ea-b1fd-0aad30af8a83'}, {'system': 'PDC', 'field_name': 'Case.case_submitter_id', 'value': 'P065'}]",
-                 "PDC000219",
-                "None",
-                "Lung"]
+                  "[{'system': 'PDC', 'field_name': 'Diagnosis.diagnosis_id', 'value': '24b7022a-8beb-11ea-b1fd-0aad30af8a83'}, {'system': 'PDC', 'field_name': 'Diagnosis.diagnosis_submitter_id', 'value': 'P065-DX'}]",
+                  "None",
+                  "NaN",
+                  "None",
+                  "None",
+                  "None",
+                  "None",
+                  "Academia Sinica LUAD-100.P065",
+                  "PDC000220.P065",
+                  "PDC000219.P065",
+                  "[{'system': 'PDC', 'field_name': 'Case.case_id', 'value': '24b3ad62-8beb-11ea-b1fd-0aad30af8a83'}, {'system': 'PDC', 'field_name': 'Case.case_submitter_id', 'value': 'P065'}]",
+                  "PDC000219",
+                  "None",
+                  "Lung"]
         cls._column_names = ['diagnosis_id', 'diagnosis_identifier', 'primary_diagnosis',
                              'age_at_diagnosis', 'morphology', 'stage', 'grade',
-                            'method_of_diagnosis', 'subject_id', 'researchsubject_id_di',
-                            'researchsubject_id_rs', 'researchsubject_identifier',
-                            'member_of_research_project', 'primary_diagnosis_condition',
-                            'primary_diagnosis_site']
+                             'method_of_diagnosis', 'subject_id', 'researchsubject_id_di',
+                             'researchsubject_id_rs', 'researchsubject_identifier',
+                             'member_of_research_project', 'primary_diagnosis_condition',
+                             'primary_diagnosis_site']
         assert len(data_1) == len(cls._column_names)
         cls._series = pd.Series(data_1, index=cls._column_names)
+
+    def _create_series(self, primary_diagnosis=None,
+                       age_at_diagnosis=None,
+                       morphology=None,
+                       stage=None,
+                       grade=None):
+        series = self._series.copy()
+        if primary_diagnosis is not None:
+            series["primary_diagnosis"] = primary_diagnosis
+        if age_at_diagnosis is not None:
+            series["age_at_diagnosis"] = age_at_diagnosis
+        if morphology is not None:
+            series["morphology"] = morphology
+        if stage is not None:
+            series["stage"] = stage
+        if grade is not None:
+            series["grade"] = grade
+        return series
 
     def test_creation(self):
         dfact = CdaDiseaseFactory()
@@ -58,6 +76,7 @@ class OpDiseaseTestCase(TestCase):
             self.assertEqual(d['id'], ga4gh_disease.term.id)
             self.assertEqual(d['label'], ga4gh_disease.term.label)
             pass
+
 
 def get_disease_test_data():
     data = [
