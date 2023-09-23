@@ -51,9 +51,6 @@ class CdaDiseaseFactory(CdaFactory):
             primary_diagnosis_condition=row["primary_diagnosis_condition"],
             primary_diagnosis_site=row["primary_diagnosis_site"]
         ))
-
-        disease.term.id = 'fake'
-        disease.term.label = 'fake'
         return disease
 
     def _parse_diagnosis_into_ontology_term(self,
