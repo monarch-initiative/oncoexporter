@@ -1,6 +1,5 @@
 import abc
 from typing import Optional
-import pandas as pd
 import phenopackets as PPkt
 
 
@@ -11,11 +10,6 @@ class OpMapper(metaclass=abc.ABCMeta):
     Superclass for mapper objects that map input data to Ontology classes.
     Subclasses may create state in the constructor
     """
-    def __init__(self, ncit_obo=None) -> None:
-        # init OAK for NCIT
-        # init OAK for Mondo
-        # etc.
-        pass
 
     @abc.abstractmethod
     def get_ontology_term(self, row) ->Optional[PPkt.OntologyClass]:

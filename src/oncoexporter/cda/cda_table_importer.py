@@ -1,13 +1,13 @@
-from cdapython import (
-    Q, columns, unique_terms, set_default_project_dataset, set_host_url,
-    set_table_version, get_host_url, get_default_project_dataset, get_table_version
-)
-import phenopackets as PPkt
 import typing
+
+
+from cdapython import Q
+import phenopackets as PPkt
 import pandas as pd
-from . import CdaDiseaseFactory
+
+from .cda_disease_factory import CdaDiseaseFactory
 from .cda_importer import CdaImporter
-from .. import CdaIndividualFactory
+from .cda_individual_factory import CdaIndividualFactory
 
 
 class CdaTableImporter(CdaImporter):

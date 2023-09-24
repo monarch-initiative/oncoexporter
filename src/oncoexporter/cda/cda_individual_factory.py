@@ -1,8 +1,8 @@
 import phenopackets as PPkt
 import pandas as pd
 
-from ..model.op_Individual import OpIndividual
-from src.oncoexporter.cda.mapper.op_mapper import OpMapper
+from oncoexporter.model.op_Individual import OpIndividual
+
 from .cda_factory import CdaFactory
 
 class CdaIndividualFactory(CdaFactory):
@@ -14,11 +14,7 @@ class CdaIndividualFactory(CdaFactory):
         """
         :param OpMapper: An object that is able to map free text to Ontology terns
         """
-        super().__init__()
-        if op_mapper is None:
-            self._opMapper = OpMapper()
-        else:
-            self._opMapper = op_mapper
+        self._opMapper = op_mapper
 
     @staticmethod
     def days_to_iso(days: int):

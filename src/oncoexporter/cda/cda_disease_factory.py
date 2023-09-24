@@ -1,7 +1,7 @@
 import phenopackets as PPkt
 import pandas as pd
 
-from src.oncoexporter.cda.mapper.op_mapper import OpMapper
+from .mapper.op_mapper import OpMapper
 from .cda_factory import CdaFactory
 
 class CdaDiseaseFactory(CdaFactory):
