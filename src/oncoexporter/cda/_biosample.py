@@ -17,6 +17,16 @@ days_to_collection + age_at_diagnosis (diag table)	time_of_collection
 primary_disease_type	histological_diagnosis
 """
 
+"""
+source_material_type:		
+Blood Derived Normal	NCIT:C17610	Blood Derived Sample
+Normal Adjacent Tissue	NCIT:C164032	Tumor-Adjacent Normal Specimen
+Primary solid Tumor	NCIT:C162622	Tumor Segment 
+Primary Tumor	NCIT:C162622	Tumor Segment 
+Solid Tissue Normal	NCIT:C164014	Solid Tissue Specimen
+Tumor	NCIT:C18009	Tumor Tissue
+"""
+
 def make_cda_biosample(row: pd.Series) -> pp.Biosample:
     biosample = pp.Biosample()
     # anatomical_site -> sampled_tissue
