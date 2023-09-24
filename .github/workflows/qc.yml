@@ -29,5 +29,5 @@ jobs:
     - name: Install and test
       run: |
         pip install .[test]
-        # python3 -m pytest
+        python3 -m pytest
 

@@ -28,11 +28,5 @@ class OpMapper(metaclass=abc.ABCMeta):
 
     """
     def get_nci_term(self, string) -> Optional[PPkt.OntologyClass]:
-        oterm = PPkt.OntologyClass()
-        if string == "Cancer Related":
-            oterm.id = "NCIT:C156427"
-            oterm.label = "Cancer-Related Death"
-            return oterm
-        else:
-            return None
+        
     """

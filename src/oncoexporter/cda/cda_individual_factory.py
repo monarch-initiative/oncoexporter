@@ -2,7 +2,7 @@ import phenopackets as PPkt
 import pandas as pd
 
 from oncoexporter.model.op_Individual import OpIndividual
-
+from  .mapper.op_cause_of_death_mapper import OpCauseOfDeathMapper
 from .cda_factory import CdaFactory
 
 class CdaIndividualFactory(CdaFactory):
@@ -10,11 +10,12 @@ class CdaIndividualFactory(CdaFactory):
     Create GA4GH individual messages from other data sources. Each data source performs ETL to
     create an instance of the OpIndivual class and then returns a GA4GH Individual object.
     """
-    def __init__(self, op_mapper=None) -> None:
+    def __init__(self) -> None:
         """
         :param OpMapper: An object that is able to map free text to Ontology terns
         """
-        self._opMapper = op_mapper
+        super().__init__()
+        self._cause_of_death_mapper = OpCauseOfDeathMapper()
 
     @staticmethod
     def days_to_iso(days: int):
@@ -97,7 +98,6 @@ class CdaIndividualFactory(CdaFactory):
         """
         vital_status = self.get_item(row, "vital_status")
         days_to_death = self.get_item(row, "days_to_death")
-        cause_of_death = self.get_item(row, "cause_of_death") 
         if vital_status is None:
             return None 
         valid_status = {"Alive", "Dead"}
@@ -114,7 +114,7 @@ class CdaIndividualFactory(CdaFactory):
                 vstatus.survival_time_in_days = dtd
             except:
                 pass
-        cause = self._opMapper.get_nci_term(cause_of_death)
+        cause = self._cause_of_death_mapper.get_ontology_term(row)
         if cause is not None:
             vstatus.cause_of_death.CopyFrom(cause)
         return vstatus
