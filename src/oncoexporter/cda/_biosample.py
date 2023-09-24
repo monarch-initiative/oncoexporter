@@ -22,45 +22,32 @@ PORTION = pp.OntologyClass(id='NCIT:C103166', label='Portion or Totality')
 SAMPLE = pp.OntologyClass(id='NCIT:C70699', label='Sample')
 SLIDE = pp.OntologyClass(id='NCIT:C165218', label='Diagnostic Slide')
 
-"""CDA	Phenopacket
-	
-anatomical_site	sampled_tissue
-source_material_type	material_sample
-specimen_type	sample_type
-derived_from_specimen	derived_from_id
-derived_from_subject	individual_id
-days_to_collection + age_at_diagnosis (diag table)	time_of_collection
-primary_disease_type	histological_diagnosis
-"""
-
-"""
-source_material_type:		
-Blood Derived Normal	NCIT:C17610	Blood Derived Sample
-Normal Adjacent Tissue	NCIT:C164032	Tumor-Adjacent Normal Specimen
-Primary solid Tumor	NCIT:C162622	Tumor Segment 
-Primary Tumor	NCIT:C162622	Tumor Segment 
-Solid Tissue Normal	NCIT:C164014	Solid Tissue Specimen
-Tumor	NCIT:C18009	Tumor Tissue
-"""
-
-"""
-Specimen_type:		
-analyte	NCIT:C128639	Analyte
-aliquot	NCIT:C25414	Aliquot
-Portion	NCIT:C103166	Portion or Totality
-sample	NCIT:C70699	Biospecimen
-slide	NCIT:C165218	Diagnostic Slide
-"""
 
 def make_cda_biosample(row: pd.Series) -> pp.Biosample:
     biosample = pp.Biosample()
 
     biosample.id = row['specimen_id']
 
+    derived_from_subj = row['derived_from_subject']
+    if derived_from_subj is not None:
+        biosample.individual_id = derived_from_subj
+
+    # derived_from_specimen -> derived_from_id
+    derived_from = row['derived_from_specimen']
+    if derived_from is not None:
+        if derived_from == 'initial specimen':
+            biosample.derived_from_id = derived_from_subj
+        else:
+            biosample.derived_from_id = derived_from
+
     # anatomical_site -> sampled_tissue
     sampled_tissue = _map_anatomical_site(row['anatomical_site'])
     if sampled_tissue is not None:
-        biosample.sampled_tissue = sampled_tissue
+        biosample.sampled_tissue.CopyFrom(sampled_tissue)
+
+    sample_type = _map_specimen_type(row['specimen_type'])
+    if sample_type is not None:
+        biosample.sample_type.CopyFrom(sample_type)
 
     biosample.taxonomy.CopyFrom(HOMO_SAPIENS)
 
@@ -69,20 +56,10 @@ def make_cda_biosample(row: pd.Series) -> pp.Biosample:
     if histological_diagnosis is not None:
         biosample.histological_diagnosis.CopyFrom(histological_diagnosis)
 
-    # derived_from_specimen -> derived_from_id
-    if row['derived_from_specimen'] is not None:
-        biosample.derived_from_id = row['derived_from_specimen']
-
     material_sample = _map_source_material_type(row['source_material_type'])
     if material_sample is not None:
         biosample.material_sample.CopyFrom(material_sample)
 
-    sample_type = _map_specimen_type(row['specimen_type'])
-    if sample_type is not None:
-        biosample.sample_type.CopyFrom(sample_type)
-
-    if row['derived_from_subject'] is not None:
-        biosample.individual_id = row['derived_from_subject']
 
     return biosample
 
@@ -96,7 +73,7 @@ def _map_anatomical_site(val: typing.Optional[str]) -> typing.Optional[pp.Ontolo
         return None
 
 
-def _map_primary_disease_type(val: typing.Optional[str]=None) -> typing.Optional[pp.OntologyClass]:
+def _map_primary_disease_type(val: typing.Optional[str]) -> typing.Optional[pp.OntologyClass]:
     if val is not None:
         val = val.lower()
         if val == 'lung adenocarcinoma':
@@ -108,7 +85,7 @@ def _map_primary_disease_type(val: typing.Optional[str]=None) -> typing.Optional
     else:
         return None
     
-def _map_specimen_type(val: typing.Optional[str]=None) -> typing.Optional[pp.OntologyClass]:
+def _map_specimen_type(val: typing.Optional[str]) -> typing.Optional[pp.OntologyClass]:
     if val is not None:
         val = val.lower()
         if val == "analyte":
@@ -127,7 +104,7 @@ def _map_specimen_type(val: typing.Optional[str]=None) -> typing.Optional[pp.Ont
         return None
     
 
-def _map_source_material_type(val: typing.Optional[str]=None) -> typing.Optional[pp.OntologyClass]:
+def _map_source_material_type(val: typing.Optional[str]) -> typing.Optional[pp.OntologyClass]:
     if val is not None:
         val = val.lower()
         if val == "blood derived normal":
