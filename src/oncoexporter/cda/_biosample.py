@@ -20,9 +20,9 @@ TUMOR = pp.OntologyClass(id='NCIT:C18009', label='Tumor Tissue')
 	
 anatomical_site	sampled_tissue
 source_material_type	material_sample
-specimen_type	
+specimen_type	sample_type
 derived_from_specimen	derived_from_id
-derived_from_subject	
+derived_from_subject	individual_id
 days_to_collection + age_at_diagnosis (diag table)	time_of_collection
 primary_disease_type	histological_diagnosis
 """
@@ -35,6 +35,15 @@ Primary solid Tumor	NCIT:C162622	Tumor Segment
 Primary Tumor	NCIT:C162622	Tumor Segment 
 Solid Tissue Normal	NCIT:C164014	Solid Tissue Specimen
 Tumor	NCIT:C18009	Tumor Tissue
+"""
+
+"""
+Specimen_type:		
+analyte	NCIT:C128639	Analyte
+aliquot	NCIT:C25414	Aliquot
+Portion	NCIT:C103166	Portion or Totality
+sample	NCIT:C70699	Biospecimen
+slide	NCIT:C165218	Diagnostic Slide
 """
 
 def make_cda_biosample(row: pd.Series) -> pp.Biosample:
