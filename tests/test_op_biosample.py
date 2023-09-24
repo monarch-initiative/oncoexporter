@@ -2,7 +2,7 @@ import unittest
 
 import pandas as pd
 
-from oncoexporter.model.op_biosample import make_cda_biosample
+from oncoexporter.cda import CdaBiosampleFactory
 
 cols = ['specimen_id', 'specimen_associated_project',
        'days_to_collection', 'primary_disease_type', 'anatomical_site',
@@ -12,7 +12,10 @@ cols = ['specimen_id', 'specimen_associated_project',
 
 class TestMakeBiosample(unittest.TestCase):
 
-    def test_bla(self):
+    def setUp(self) -> None:
+        self.factory = CdaBiosampleFactory()
+
+    def test_create_biosample(self):
         vals = [
             'PDC000219.P067.P067 - 2 - 1',
             'PDC000219;PDC000220',
@@ -27,7 +30,7 @@ class TestMakeBiosample(unittest.TestCase):
             'PDC000219.P067'
         ]
         row = pd.Series({key: val for key, val in zip(cols, vals)})
-        biosample = make_cda_biosample(row)
+        biosample = self.factory.from_cancer_data_aggregator(row)
         
         self.assertEqual(biosample.id, "PDC000219.P067.P067 - 2 - 1")
 

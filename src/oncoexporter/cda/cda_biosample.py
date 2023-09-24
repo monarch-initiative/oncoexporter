@@ -1,7 +1,8 @@
 import typing
 
-import pandas as pd
 import phenopackets as pp
+
+from .cda_factory import CdaFactory
 
 HOMO_SAPIENS = pp.OntologyClass(id='NCBITaxon:9606', label='Homo sapiens')
 LUNG = pp.OntologyClass(id='UBERON:0002048', label='lung')
@@ -23,45 +24,49 @@ SAMPLE = pp.OntologyClass(id='NCIT:C70699', label='Sample')
 SLIDE = pp.OntologyClass(id='NCIT:C165218', label='Diagnostic Slide')
 
 
-def make_cda_biosample(row: pd.Series) -> pp.Biosample:
-    biosample = pp.Biosample()
+class CdaBiosampleFactory(CdaFactory):
+    """
+    Class for creating a `Biosample` element from a row of the `specimen` CDA table.
+    """
 
-    biosample.id = row['specimen_id']
+    def from_cancer_data_aggregator(self, row) -> pp.Biosample:
+        biosample = pp.Biosample()
 
-    derived_from_subj = row['derived_from_subject']
-    if derived_from_subj is not None:
-        biosample.individual_id = derived_from_subj
+        biosample.id = row['specimen_id']
 
-    # derived_from_specimen -> derived_from_id
-    derived_from = row['derived_from_specimen']
-    if derived_from is not None:
-        if derived_from == 'initial specimen':
-            biosample.derived_from_id = derived_from_subj
-        else:
-            biosample.derived_from_id = derived_from
+        derived_from_subj = row['derived_from_subject']
+        if derived_from_subj is not None:
+            biosample.individual_id = derived_from_subj
 
-    # anatomical_site -> sampled_tissue
-    sampled_tissue = _map_anatomical_site(row['anatomical_site'])
-    if sampled_tissue is not None:
-        biosample.sampled_tissue.CopyFrom(sampled_tissue)
+        # derived_from_specimen -> derived_from_id
+        derived_from = row['derived_from_specimen']
+        if derived_from is not None:
+            if derived_from == 'initial specimen':
+                biosample.derived_from_id = derived_from_subj
+            else:
+                biosample.derived_from_id = derived_from
 
-    sample_type = _map_specimen_type(row['specimen_type'])
-    if sample_type is not None:
-        biosample.sample_type.CopyFrom(sample_type)
+        # anatomical_site -> sampled_tissue
+        sampled_tissue = _map_anatomical_site(row['anatomical_site'])
+        if sampled_tissue is not None:
+            biosample.sampled_tissue.CopyFrom(sampled_tissue)
 
-    biosample.taxonomy.CopyFrom(HOMO_SAPIENS)
+        sample_type = _map_specimen_type(row['specimen_type'])
+        if sample_type is not None:
+            biosample.sample_type.CopyFrom(sample_type)
 
-    # primary_disease_type -> histological_diagnosis
-    histological_diagnosis = _map_primary_disease_type(row['primary_disease_type'])
-    if histological_diagnosis is not None:
-        biosample.histological_diagnosis.CopyFrom(histological_diagnosis)
+        biosample.taxonomy.CopyFrom(HOMO_SAPIENS)
 
-    material_sample = _map_source_material_type(row['source_material_type'])
-    if material_sample is not None:
-        biosample.material_sample.CopyFrom(material_sample)
+        # primary_disease_type -> histological_diagnosis
+        histological_diagnosis = _map_primary_disease_type(row['primary_disease_type'])
+        if histological_diagnosis is not None:
+            biosample.histological_diagnosis.CopyFrom(histological_diagnosis)
 
+        material_sample = _map_source_material_type(row['source_material_type'])
+        if material_sample is not None:
+            biosample.material_sample.CopyFrom(material_sample)
 
-    return biosample
+        return biosample
 
 
 def _map_anatomical_site(val: typing.Optional[str]) -> typing.Optional[pp.OntologyClass]:
