@@ -10,6 +10,7 @@ from .cda_importer import CdaImporter
 from .cda_individual_factory import CdaIndividualFactory
 from .cda_biosample import CdaBiosampleFactory
 from .cda_mutation_factory import CdaMutationFactory
+from .cda_medicalaction_factory import make_cda_medicalaction
 from tqdm import tqdm
 
 class CdaTableImporter(CdaImporter):
@@ -102,21 +103,6 @@ class CdaTableImporter(CdaImporter):
                 raise ValueError(f"Attempt to enter unknown individual ID from biosample factory: \"{individual_id}\"")
             self._ppackt_d.get(individual_id).biosamples.append(biosample_message)
 
-        """
-         
-            if self._disease_id is not None and self._disease_label is not None:
-                interpretation.diagnosis.disease.id = self._disease_id
-                interpretation.diagnosis.disease.label = self._disease_label
-            for var in self._interpretation_list:
-                genomic_interpretation = phenopackets.GenomicInterpretation()
-                genomic_interpretation.subject_or_biosample_id = self._individual_id
-                # by assumption, variants passed to this package are all causative
-                genomic_interpretation.interpretation_status = phenopackets.GenomicInterpretation.InterpretationStatus.CAUSATIVE
-                genomic_interpretation.variant_interpretation.CopyFrom(var)
-                interpretation.diagnosis.genomic_interpretations.append(genomic_interpretation)
-            php.interpretations.append(interpretation)
-        
-        """
         mutation_factory = CdaMutationFactory()
         for idx, row in tqdm(mutation_df.iterrows(), len(mutation_df), "mutation dataframe"):
             individual_id = row["cda_subject_id"]
@@ -140,6 +126,14 @@ class CdaTableImporter(CdaImporter):
             # genomic_interpretation.interpretation_status = PPkt.GenomicInterpretation.InterpretationStatus.CAUSATIVE
             genomic_interpretation.variant_interpretation.CopyFrom(variant_interpretation_message)
             diagnosis.genomic_interpretations.append(genomic_interpretation)
+
+        # make_cda_medicalaction
+        for idx, row in tqdm(treatment_df.iterrows(), len(treatment_df), "Treatment DF"):
+            individual_id = row["subject_id"]
+            medical_action_message = make_cda_medicalaction(row)
+            if individual_id not in self._ppackt_d:
+                raise ValueError(f"Attempt to enter unknown individual ID from treatemtn factory: \"{individual_id}\"")
+            self._ppackt_d.get(individual_id).medical_actions.append(medical_action_message)
 
         return list(self._ppackt_d.values())
 

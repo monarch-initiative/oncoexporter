@@ -26,19 +26,27 @@ VINCREISTINE = pp.OntologyClass(id='NCIT:C933', label='Vincristine')
 Not_Otherwise_Specified = pp.OntologyClass(id='NCIT:C19594', label='Not Otherwise Specified')
 UNKNOWN = pp.OntologyClass(id='NCIT:C17998', label='Unknown')
 
+
+
+
+
 def make_cda_medicalaction(row: pd.Series) -> pp.MedicalAction:
     medicalaction = pp.MedicalAction()
 
-    treatment = pp.Treatment()
+    treatment_type = row["treatment_type"]
+    if treatment_type == "Chemotherapy":
+        # Use the GA4GHTreatment message
+        # therapeutic_agent -> treatment agent
+        treatment_agent = _map_therapeutic_agent(row['therapeutic_agent'])
+        # radiation = _map_radiation(row['therapeutic_agent'])
+        if treatment_agent is not None:
+            treatment = pp.Treatment()
+            treatment.agent.CopyFrom(treatment_agent)
+            medicalaction.action.CopyFrom(treatment)
+    elif "Radiation Therapy" in treatment_type:
+        ## Use GA4GH RadiationTherapy object
+        pass
 
-    # therapeutic_agent -> treatment agent
-    treatment_agent = _map_therapeutic_agent(row['therapeutic_agent'])
-    if treatment_agent is not None:
-        treatment.agent.CopyFrom(treatment_agent)
-
-    action = pp.OntologyClass()
-    action.CopyFrom(treatment)
-    medicalaction.action.CpyForm(action)
 
     # treatment_outcome -> response_to_treatment
     response_to_treatment = _map_response_to_treatment(row['treatment_outcome'])
@@ -47,7 +55,8 @@ def make_cda_medicalaction(row: pd.Series) -> pp.MedicalAction:
 
     return medicalaction
 
-def _map_therapeutic_agent(val: typing.Optional[str]=None) -> typing.Optional[pp.OntologyClass]:
+
+def _map_response_to_treatment(val: typing.Optional[str]=None) -> typing.Optional[pp.OntologyClass]:
     if val is not None:
         val = val.lower()
         if val == "progressive disease":
