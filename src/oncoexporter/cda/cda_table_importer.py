@@ -1,18 +1,22 @@
-from cdapython import (
-    Q
-)
+import os.path
+
+from cdapython import Q
 import phenopackets as PPkt
 import typing
 import pandas as pd
+import pickle
 from . import CdaDiseaseFactory
 from .cda_importer import CdaImporter
 from .cda_individual_factory import CdaIndividualFactory
+from .cda_biosample import CdaBiosampleFactory
+from .cda_mutation_factory import CdaMutationFactory
+from .cda_medicalaction_factory import make_cda_medicalaction
 from tqdm import tqdm
 
 class CdaTableImporter(CdaImporter):
 
 
-    def __init__(self, query:str=None, query_obj:Q=None):
+    def __init__(self, query:str=None, query_obj:Q=None, use_cache=False):
         """
         :param query: A query for CDA such as 'primary_diagnosis_site = "Lung"'
 
@@ -29,6 +33,22 @@ class CdaTableImporter(CdaImporter):
         else:
             raise ValueError("Need to pass either query or query_obj argument but not both")
         self._ppackt_d = {} # key -- patient ID, value: PPkt.Phenopacket
+        self._use_cache = use_cache
+
+    def get_diagnosis_df(self, callable, cache_name: str):
+        print(f"Retrieving dataframe {cache_name}")
+        if self._use_cache and os.path.isfile(cache_name):
+            with open(cache_name, 'rb') as cachehandle:
+                print(f"loading cached dataframe from {cache_name}")
+                individual_df = pickle.load(cachehandle)
+        else:
+            print(f"calling CDA function")
+            individual_df = callable()
+            if self._use_cache:
+                print(f"Creating cached dataframe as {cache_name}")
+                with open(cache_name, 'wb') as f:
+                    pickle.dump(individual_df, f)
+        return individual_df
 
     def get_ga4gh_phenopackets(self) -> typing.List[PPkt.Phenopacket]:
         """
@@ -36,31 +56,91 @@ class CdaTableImporter(CdaImporter):
         1.
 
         """
+        subject_id_to_interpretation = {}
+
         individual_factory = CdaIndividualFactory()
-        individual_df = self._query.subject.run().get_all().to_dataframe()
-        for idx, row in tqdm(individual_df.iterrows(), total=len(individual_df), desc="individual messages"):
-        #for idx, row in individual_df.iterrows():
+        callable = lambda: self._query.subject.run().get_all().to_dataframe()
+        print("getting individual_df")
+        individual_df = self.get_diagnosis_df(callable, "individual_df.pkl")
+        print("obtained individual_df")
+        diagnosis_callable = lambda: self._query.diagnosis.run().get_all().to_dataframe()
+        diagnosis_df = self.get_diagnosis_df(diagnosis_callable, "diagnosis_df.pkl")
+        print("obtained diagnosis_df")
+        rsub_callable = lambda: self._query.researchsubject.run().get_all().to_dataframe()
+        rsub_df = self.get_diagnosis_df(rsub_callable, "rsub_df.pkl")
+        print("obtained rsub_df")
+
+        specimen_callable = lambda: self._query.specimen.run().get_all().to_dataframe()
+        specimen_df = self.get_diagnosis_df(specimen_callable, "specimen_df.pkl")
+
+        treatment_callable = lambda: self._query.treatment.run().get_all().to_dataframe()
+        treatment_df = self.get_diagnosis_df(treatment_callable, "treatment_df.pkl")
+
+        mutation_callable = lambda: self._query.mutation.run().get_all().to_dataframe()
+        mutation_df = self.get_diagnosis_df(mutation_callable, "mutation_df.pkl")
+
+        for idx, row in tqdm(individual_df.iterrows(),total=len(individual_df), desc= "individual dataframe"):
             individual_message = individual_factory.from_cancer_data_aggregator(row=row)
-            individual_id = individual_message.id
+            indivudal_id = individual_message.id
+            interpretation = PPkt.Interpretation()
+            interpretation.id = "id"
+            interpretation.progress_status = PPkt.Interpretation.ProgressStatus.SOLVED
+            subject_id_to_interpretation[indivudal_id] = interpretation
             ppackt = PPkt.Phenopacket()
             ppackt.subject.CopyFrom(individual_message)
-            self._ppackt_d[individual_id] = ppackt
-        diagnosis_df = self._query.diagnosis.run().get_all().to_dataframe()
-        rsub_df = self._query.researchsubject.run().get_all().to_dataframe()  # view the dataframe
+            self._ppackt_d[indivudal_id] = ppackt
         merged_df = pd.merge(diagnosis_df, rsub_df, left_on='subject_id', right_on='subject_id',
                              suffixes=["_di", "_rs"])
         disease_factory = CdaDiseaseFactory()
-        for idx, row in tqdm( merged_df.iterrows(), total=len(merged_df), desc="disease messages"):
-        #for idx, row in merged_df.iterrows():
+        for idx, row in tqdm(merged_df.iterrows(), total= len(merged_df.index), desc="merged diagnosis dataframe"):
             disease_message = disease_factory.from_cancer_data_aggregator(row)
             individual_id = row["subject_id"]
+            if individual_id not in subject_id_to_interpretation:
+                raise ValueError(f"Could not find individual id {individual_id} in subject_id_to_disease")
+            subject_id_to_interpretation.get(individual_id).diagnosis.disease.CopyFrom(disease_message.term)
             if individual_id not in self._ppackt_d:
                 raise ValueError(f"Attempt to enter unknown individual ID from disease factory: \"{individual_id}\"")
             self._ppackt_d.get(individual_id).diseases.append(disease_message)
 
+        specimen_factory = CdaBiosampleFactory()
+        for idx, row in tqdm(specimen_df.iterrows(),total= len(specimen_df.index), desc="specimen/biosample dataframe"):
+            biosample_message = specimen_factory.from_cancer_data_aggregator(row)
+            individual_id = row["subject_id"]
+            if individual_id not in self._ppackt_d:
+                raise ValueError(f"Attempt to enter unknown individual ID from biosample factory: \"{individual_id}\"")
+            self._ppackt_d.get(individual_id).biosamples.append(biosample_message)
 
-        spcimen_df = self._query.specimen.run().get_all().to_dataframe()
-        ## get specimen message
-        ## copy to corresponding phenopacket
+        mutation_factory = CdaMutationFactory()
+        for idx, row in tqdm(mutation_df.iterrows(), total=len(mutation_df.index), desc="mutation dataframe"):
+            individual_id = row["cda_subject_id"]
+            if individual_id not in subject_id_to_interpretation:
+                raise ValueError(f"Could not find individual id {individual_id} in subject_id_to_interpretation")
+            pp = self._ppackt_d[individual_id]
+            if len(pp.interpretations) == 0:
+                interpretation = PPkt.Interpretation()
+                disease = pp.diseases[0]
+                diagnosis = PPkt.Diagnosis()
+                diagnosis.disease.CopyFrom(disease.term)
+                interpretation.diagnosis.CopyFrom(diagnosis)
+                pp.interpretations.append(interpretation)
+            else:
+                diagnosis = pp.interpretations[0].diagnosis
+            variant_interpretation_message = mutation_factory.from_cancer_data_aggregator(row)
+            genomic_interpretation = PPkt.GenomicInterpretation()
+            # TODO -- CLEAN UP
+            genomic_interpretation.subject_or_biosample_id = row["Tumor_Aliquot_UUID"]
+            # by assumption, variants passed to this package are all causative -- ASK CDA
+            # genomic_interpretation.interpretation_status = PPkt.GenomicInterpretation.InterpretationStatus.CAUSATIVE
+            genomic_interpretation.variant_interpretation.CopyFrom(variant_interpretation_message)
+            diagnosis.genomic_interpretations.append(genomic_interpretation)
+
+        # make_cda_medicalaction
+        for idx, row in tqdm(treatment_df.iterrows(), total=len(treatment_df.index), desc="Treatment DF"):
+            individual_id = row["subject_id"]
+            medical_action_message = make_cda_medicalaction(row)
+            if individual_id not in self._ppackt_d:
+                raise ValueError(f"Attempt to enter unknown individual ID from treatemtn factory: \"{individual_id}\"")
+            self._ppackt_d.get(individual_id).medical_actions.append(medical_action_message)
+
         return list(self._ppackt_d.values())
 

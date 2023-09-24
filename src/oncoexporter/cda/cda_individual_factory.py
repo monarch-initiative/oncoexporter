@@ -1,7 +1,7 @@
 import phenopackets as PPkt
 import pandas as pd
 
-from ..model.op_Individual import OpIndividual
+from oncoexporter.model.op_Individual import OpIndividual
 from  .mapper.op_cause_of_death_mapper import OpCauseOfDeathMapper
 from .cda_factory import CdaFactory
 
@@ -16,7 +16,6 @@ class CdaIndividualFactory(CdaFactory):
         """
         super().__init__()
         self._cause_of_death_mapper = OpCauseOfDeathMapper()
-
 
     @staticmethod
     def days_to_iso(days: int):
