@@ -62,11 +62,11 @@ class CdaTableImporter(CdaImporter):
         rsub_callable =  self._query.researchsubject.run().get_all().to_dataframe
         rsub_df = self.get_diagnosis_df(rsub_callable, "rsub_df.pkl")
         print("obtained rsub_df")
-        specimen_callable = self._query.specimen.run.get_all().to_dataframe
+        specimen_callable = self._query.specimen.run().get_all().to_dataframe
         specimen_df = self.get_diagnosis_df(specimen_callable, "specimen_df.pkl")
-        treatment_callable = self._query.treatment.run.get_all().to_dataframe
+        treatment_callable = self._query.treatment.run().get_all().to_dataframe
         treatment_df = self.get_diagnosis_df(treatment_callable, "treatment_df.pkl")
-        mutation_callable = self._query.mutation.run.get_all().to_dataframe
+        mutation_callable = self._query.mutation.run().get_all().to_dataframe
         mutation_df = self.get_diagnosis_df(mutation_callable, "mutation_df.pkl")
         for idx, row in tqdm(individual_df.iterrows(), len(individual_df),"individual dataframe"):
             individual_message = individual_factory.from_cancer_data_aggregator(row=row)
