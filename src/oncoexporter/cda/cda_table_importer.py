@@ -46,7 +46,7 @@ class CdaTableImporter(CdaImporter):
             ppackt.subject.CopyFrom(individual_message)
             self._ppackt_d[indivudal_id] = ppackt
         diagnosis_df = self._query.diagnosis.run().get_all().to_dataframe()
-        rsub_df = self._query..researchsubject.run().get_all().to_dataframe()  # view the dataframe
+        rsub_df = self._query.researchsubject.run().get_all().to_dataframe()  # view the dataframe
         merged_df = pd.merge(diagnosis_df, rsub_df, left_on='subject_id', right_on='subject_id',
                              suffixes=["_di", "_rs"])
         disease_factory = CdaDiseaseFactory()
