@@ -5,8 +5,16 @@ import phenopackets as pp
 
 HOMO_SAPIENS = pp.OntologyClass(id='NCBITaxon:9606', label='Homo sapiens')
 LUNG = pp.OntologyClass(id='UBERON:0002048', label='lung')
+
 LUNG_ADENOCARCINOMA = pp.OntologyClass(id='NCIT:C3512', label='Lung Adenocarcinoma')
 LUNG_SQUAMOUS_CELL_CARCINOMA = pp.OntologyClass(id='NCIT:C3493', label='Lung Squamous Cell Carcinoma')
+
+BLOOD_DERIVED_NORMAL = pp.OntologyClass(id='NCIT:C17610', label='Blood Derived Sample')
+NORMAL_ADJACENT_TISSUE = pp.OntologyClass(id='NCIT:C164032', label='Tumor-Adjacent Normal Specimen')
+PRIMARY_SOLID_TUMOR = pp.OntologyClass(id='NCIT:C162622', label='Tumor Segment')
+PRIMARY_TUMOR = pp.OntologyClass(id='NCIT:C162622', label='Tumor Segment')
+SOLID_TISSUE_NORMAL = pp.OntologyClass(id='NCIT:C164014', label='Solid Tissue Specimen')
+TUMOR = pp.OntologyClass(id='NCIT:C18009', label='Tumor Tissue')
 
 """CDA	Phenopacket
 	
@@ -43,6 +51,14 @@ def make_cda_biosample(row: pd.Series) -> pp.Biosample:
     if histological_diagnosis is not None:
         biosample.histological_diagnosis.CopyFrom(histological_diagnosis)
 
+    # derived_from_specimen -> derived_from_id
+    if row['derived_from_specimen'] is not None:
+        biosample.derived_from_id = row['derived_from_specimen']
+
+    material_sample = _map_source_material_type(row['source_material_type'])
+    if material_sample is not None:
+        biosample.material_sample.CopyFrom(material_sample)
+
     return biosample
 
 
@@ -53,6 +69,7 @@ def _map_anatomical_site(val: typing.Optional[str]) -> typing.Optional[pp.Ontolo
         return LUNG
     else:
         return None
+
 
 def _map_primary_disease_type(val: typing.Optional[str]=None) -> typing.Optional[pp.OntologyClass]:
     if val is not None:
@@ -66,3 +83,23 @@ def _map_primary_disease_type(val: typing.Optional[str]=None) -> typing.Optional
     else:
         return None
     
+
+def _map_source_material_type(val: typing.Optional[str]=None) -> typing.Optional[pp.OntologyClass]:
+    if val is not None:
+        val = val.lower()
+        if val == "blood derived normal":
+            return BLOOD_DERIVED_NORMAL
+        elif val == "normal adjacent tissue":
+            return NORMAL_ADJACENT_TISSUE
+        elif val == "primary solid tumor":
+            return PRIMARY_SOLID_TUMOR
+        elif val == "primary tumor":
+            return PRIMARY_TUMOR
+        elif val == "solid tissue normal":
+            return SOLID_TISSUE_NORMAL
+        elif val == "tumor":
+            return TUMOR
+        else:
+            return None
+    else:
+        return None
