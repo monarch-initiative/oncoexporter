@@ -36,10 +36,13 @@ class CdaTableImporter(CdaImporter):
 
     def get_diagnosis_df(self, callable, cache_name: str):
         if self._use_cache and os.path.isfile((cache_name)):
-            individual_df = pickle.load(cache_name)
+            with open(cache_name, 'rb') as cachehandle:
+                print(f"loading cached dataframe from {cache_name}")
+                individual_df = pickle.load(cachehandle)
         else:
             individual_df = callable()
             if self._use_cache:
+                print(f"Creating cached dataframe as {cache_name}")
                 with open(cache_name, 'wb') as f:
                     pickle.dump(individual_df, f)
         return individual_df
