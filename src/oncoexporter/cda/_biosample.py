@@ -6,6 +6,16 @@ import phenopackets as pp
 HOMO_SAPIENS = pp.OntologyClass(id='NCBITaxon:9606', label='Homo sapiens')
 LUNG = pp.OntologyClass(id='UBERON:0002048', label='lung')
 
+"""CDA	Phenopacket
+	
+anatomical_site	sampled_tissue
+source_material_type	material_sample
+specimen_type	
+derived_from_specimen	derived_from_id
+derived_from_subject	
+days_to_collection + age_at_diagnosis (diag table)	time_of_collection
+primary_disease_type	histological_diagnosis
+"""
 
 def make_cda_biosample(row: pd.Series) -> pp.Biosample:
     biosample = pp.Biosample()
