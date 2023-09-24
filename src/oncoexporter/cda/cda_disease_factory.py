@@ -1,7 +1,8 @@
 import phenopackets as PPkt
 import pandas as pd
 
-from src.oncoexporter.cda.mapper.op_mapper import OpMapper
+
+from ..cda.mapper.op_diagnosis_mapper import OpDiagnosisMapper
 from .cda_factory import CdaFactory
 
 class CdaDiseaseFactory(CdaFactory):
@@ -18,7 +19,7 @@ class CdaDiseaseFactory(CdaFactory):
         """
         super().__init__()
         if op_mapper is None:
-            self._opMapper = OpMapper()
+            self._opMapper = OpDiagnosisMapper()
         else:
             self._opMapper = op_mapper
 
