@@ -1,8 +1,7 @@
 import pandas as pd
 from unittest import TestCase
 import phenopackets as PPkt
-from src.oncoexporter.model import OpIndividual
-from src.oncoexporter.cda import CdaIndividualFactory
+from oncoexporter.cda import CdaIndividualFactory
 
 
 class OpIndividualTestCase(TestCase):

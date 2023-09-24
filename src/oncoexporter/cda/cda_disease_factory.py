@@ -1,8 +1,8 @@
 import phenopackets as PPkt
 import pandas as pd
 
-
-from ..cda.mapper.op_diagnosis_mapper import OpDiagnosisMapper
+from .mapper.op_mapper import OpMapper
+from .mapper.op_diagnosis_mapper import OpDiagnosisMapper
 from .cda_factory import CdaFactory
 
 

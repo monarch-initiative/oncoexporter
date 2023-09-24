@@ -1,10 +1,9 @@
-from cdapython import (
-    Q
-)
 import phenopackets as PPkt
 import typing
+from cdapython import Q
 import pandas as pd
-from . import CdaDiseaseFactory
+
+from .cda_disease_factory import CdaDiseaseFactory
 from .cda_importer import CdaImporter
 from .cda_individual_factory import CdaIndividualFactory
 from tqdm import tqdm

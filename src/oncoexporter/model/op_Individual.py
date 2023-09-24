@@ -1,5 +1,4 @@
 import phenopackets as PPkt
-import pandas as pd
 from .op_message import OpMessage
 
 class OpIndividual(OpMessage):
