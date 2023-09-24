@@ -13,7 +13,7 @@ from .. import CdaIndividualFactory
 class CdaTableImporter(CdaImporter):
 
 
-    def __init__(self, query:str=None, query_obj:Q.Q=None):
+    def __init__(self, query:str=None, query_obj:Q=None):
         """
         :param query: A query for CDA such as 'primary_diagnosis_site = "Lung"'
 
@@ -24,7 +24,7 @@ class CdaTableImporter(CdaImporter):
         if query is not None and query_obj is None:
             self._query = Q(query)
         elif query_obj is not None and query is None:
-            if not isinstance(query_obj, Q.Q):
+            if not isinstance(query_obj, Q):
                 raise ValueError(f"query_obj argument must be Q.Q object, but instead was {type(query_obj)}")
             self._query = query_obj
         else:
