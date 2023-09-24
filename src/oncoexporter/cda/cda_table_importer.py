@@ -36,11 +36,13 @@ class CdaTableImporter(CdaImporter):
         self._use_cache = use_cache
 
     def get_diagnosis_df(self, callable, cache_name: str):
-        if self._use_cache and os.path.isfile((cache_name)):
+        print(f"Retrieving dataframe {cache_name}")
+        if self._use_cache and os.path.isfile(cache_name):
             with open(cache_name, 'rb') as cachehandle:
                 print(f"loading cached dataframe from {cache_name}")
                 individual_df = pickle.load(cachehandle)
         else:
+            print(f"calling CDA function")
             individual_df = callable()
             if self._use_cache:
                 print(f"Creating cached dataframe as {cache_name}")
@@ -57,22 +59,27 @@ class CdaTableImporter(CdaImporter):
         subject_id_to_interpretation = {}
 
         individual_factory = CdaIndividualFactory()
-        callable = self._query.subject.run().get_all().to_dataframe
+        callable = lambda: self._query.subject.run().get_all().to_dataframe()
+        print("getting individual_df")
         individual_df = self.get_diagnosis_df(callable, "individual_df.pkl")
         print("obtained individual_df")
-        diagnosis_callable = self._query.diagnosis.run().get_all().to_dataframe
+        diagnosis_callable = lambda: self._query.diagnosis.run().get_all().to_dataframe()
         diagnosis_df = self.get_diagnosis_df(diagnosis_callable, "diagnosis_df.pkl")
         print("obtained diagnosis_df")
-        rsub_callable =  self._query.researchsubject.run().get_all().to_dataframe
+        rsub_callable = lambda: self._query.researchsubject.run().get_all().to_dataframe()
         rsub_df = self.get_diagnosis_df(rsub_callable, "rsub_df.pkl")
         print("obtained rsub_df")
-        specimen_callable = self._query.specimen.run().get_all().to_dataframe
+
+        specimen_callable = lambda: self._query.specimen.run().get_all().to_dataframe()
         specimen_df = self.get_diagnosis_df(specimen_callable, "specimen_df.pkl")
-        treatment_callable = self._query.treatment.run().get_all().to_dataframe
+
+        treatment_callable = lambda: self._query.treatment.run().get_all().to_dataframe()
         treatment_df = self.get_diagnosis_df(treatment_callable, "treatment_df.pkl")
-        mutation_callable = self._query.mutation.run().get_all().to_dataframe
+
+        mutation_callable = lambda: self._query.mutation.run().get_all().to_dataframe()
         mutation_df = self.get_diagnosis_df(mutation_callable, "mutation_df.pkl")
-        for idx, row in tqdm(individual_df.iterrows(), len(individual_df),"individual dataframe"):
+
+        for idx, row in tqdm(individual_df.iterrows(),total=len(individual_df), desc= "individual dataframe"):
             individual_message = individual_factory.from_cancer_data_aggregator(row=row)
             indivudal_id = individual_message.id
             interpretation = PPkt.Interpretation()
@@ -85,18 +92,18 @@ class CdaTableImporter(CdaImporter):
         merged_df = pd.merge(diagnosis_df, rsub_df, left_on='subject_id', right_on='subject_id',
                              suffixes=["_di", "_rs"])
         disease_factory = CdaDiseaseFactory()
-        for idx, row in tqdm(merged_df.iterrows(), len(merged_df), "merged diagnosis dataframe"):
+        for idx, row in tqdm(merged_df.iterrows(), total= len(merged_df.index), desc="merged diagnosis dataframe"):
             disease_message = disease_factory.from_cancer_data_aggregator(row)
             individual_id = row["subject_id"]
             if individual_id not in subject_id_to_interpretation:
                 raise ValueError(f"Could not find individual id {individual_id} in subject_id_to_disease")
-            subject_id_to_interpretation.get(individual_id).diagnosis.append(disease_message.term)
+            subject_id_to_interpretation.get(individual_id).diagnosis.disease.CopyFrom(disease_message.term)
             if individual_id not in self._ppackt_d:
                 raise ValueError(f"Attempt to enter unknown individual ID from disease factory: \"{individual_id}\"")
             self._ppackt_d.get(individual_id).diseases.append(disease_message)
 
         specimen_factory = CdaBiosampleFactory()
-        for idx, row in tqdm(specimen_df.iterrows(), len(specimen_df), "specimen/biosample dataframe"):
+        for idx, row in tqdm(specimen_df.iterrows(),total= len(specimen_df.index), desc="specimen/biosample dataframe"):
             biosample_message = specimen_factory.from_cancer_data_aggregator(row)
             individual_id = row["subject_id"]
             if individual_id not in self._ppackt_d:
@@ -104,7 +111,7 @@ class CdaTableImporter(CdaImporter):
             self._ppackt_d.get(individual_id).biosamples.append(biosample_message)
 
         mutation_factory = CdaMutationFactory()
-        for idx, row in tqdm(mutation_df.iterrows(), len(mutation_df), "mutation dataframe"):
+        for idx, row in tqdm(mutation_df.iterrows(), total=len(mutation_df.index), desc="mutation dataframe"):
             individual_id = row["cda_subject_id"]
             if individual_id not in subject_id_to_interpretation:
                 raise ValueError(f"Could not find individual id {individual_id} in subject_id_to_interpretation")
@@ -128,7 +135,7 @@ class CdaTableImporter(CdaImporter):
             diagnosis.genomic_interpretations.append(genomic_interpretation)
 
         # make_cda_medicalaction
-        for idx, row in tqdm(treatment_df.iterrows(), len(treatment_df), "Treatment DF"):
+        for idx, row in tqdm(treatment_df.iterrows(), total=len(treatment_df.index), desc="Treatment DF"):
             individual_id = row["subject_id"]
             medical_action_message = make_cda_medicalaction(row)
             if individual_id not in self._ppackt_d:

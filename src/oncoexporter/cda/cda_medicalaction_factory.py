@@ -42,8 +42,8 @@ def make_cda_medicalaction(row: pd.Series) -> pp.MedicalAction:
         if treatment_agent is not None:
             treatment = pp.Treatment()
             treatment.agent.CopyFrom(treatment_agent)
-            medicalaction.action.CopyFrom(treatment)
-    elif "Radiation Therapy" in treatment_type:
+            medicalaction.treatment.CopyFrom(treatment)
+    elif "Radiation Therapy, NOS" == treatment_type:
         ## Use GA4GH RadiationTherapy object
         pass
 
