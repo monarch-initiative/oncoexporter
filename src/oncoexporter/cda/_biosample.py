@@ -16,6 +16,12 @@ PRIMARY_TUMOR = pp.OntologyClass(id='NCIT:C162622', label='Tumor Segment')
 SOLID_TISSUE_NORMAL = pp.OntologyClass(id='NCIT:C164014', label='Solid Tissue Specimen')
 TUMOR = pp.OntologyClass(id='NCIT:C18009', label='Tumor Tissue')
 
+ANALYTE = pp.OntologyClass(id='NCIT:C128639', label='Analyte')
+ALIQUOT = pp.OntologyClass(id='NCIT:C25414', label='Aliquot')
+PORTION = pp.OntologyClass(id='NCIT:C103166', label='Portion or Totality')
+SAMPLE = pp.OntologyClass(id='NCIT:C70699', label='Sample')
+SLIDE = pp.OntologyClass(id='NCIT:C165218', label='Diagnostic Slide')
+
 """CDA	Phenopacket
 	
 anatomical_site	sampled_tissue
@@ -68,6 +74,10 @@ def make_cda_biosample(row: pd.Series) -> pp.Biosample:
     if material_sample is not None:
         biosample.material_sample.CopyFrom(material_sample)
 
+    sample_type = _map_specimen_type(row['specimen_type'])
+    if sample_type is not None:
+        biosample.sample_type.CopyFrom(sample_type)
+
     return biosample
 
 
@@ -87,6 +97,24 @@ def _map_primary_disease_type(val: typing.Optional[str]=None) -> typing.Optional
             return LUNG_ADENOCARCINOMA
         elif val == 'lung squamous cell carcinoma':
             return LUNG_SQUAMOUS_CELL_CARCINOMA
+        else:
+            return None
+    else:
+        return None
+    
+def _map_specimen_type(val: typing.Optional[str]=None) -> typing.Optional[pp.OntologyClass]:
+    if val is not None:
+        val = val.lower()
+        if val == "analyte":
+            return ANALYTE
+        elif val == "aliquot":
+            return ALIQUOT
+        elif val == "portion":
+            return PORTION
+        elif val == "sample":
+            return SAMPLE
+        elif val == "slide":
+            return SLIDE
         else:
             return None
     else:
