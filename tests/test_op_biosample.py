@@ -2,7 +2,7 @@ import unittest
 
 import pandas as pd
 
-from ._biosample import make_cda_biosample
+from oncoexporter.model.op_biosample import make_cda_biosample
 
 cols = ['specimen_id', 'specimen_associated_project',
        'days_to_collection', 'primary_disease_type', 'anatomical_site',
@@ -23,12 +23,24 @@ class TestMakeBiosample(unittest.TestCase):
             'aliquot',
             'PDC000220.P067.P067-2',
             'Academia Sinica LUAD - 100.P067',
-            'Academia',
-            'Sinica',
-            'LUAD - 100.',
-            'P067',
+            'Academia Sinica LUAD - 100.P067',
             'PDC000219.P067'
         ]
         row = pd.Series({key: val for key, val in zip(cols, vals)})
         biosample = make_cda_biosample(row)
-        print(biosample)
+        
+        self.assertEqual(biosample.id, "PDC000219.P067.P067 - 2 - 1")
+
+        self.assertEqual(biosample.sample_type.id, "NCIT:C25414")
+        self.assertEqual(biosample.sample_type.label, "Aliquot")
+
+        self.assertEqual(biosample.taxonomy.id, "NCBITaxon:9606")
+        self.assertEqual(biosample.taxonomy.label, "Homo sapiens")
+
+        self.assertEqual(biosample.histological_diagnosis.id, "NCIT:C3512")
+        self.assertEqual(biosample.histological_diagnosis.label, "Lung Adenocarcinoma")
+
+        self.assertEqual(biosample.individual_id, "Academia Sinica LUAD - 100.P067")
+
+        self.assertEqual(biosample.derived_from_id, "PDC000220.P067.P067-2")
+        
