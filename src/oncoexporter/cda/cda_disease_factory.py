@@ -5,6 +5,7 @@ import pandas as pd
 from ..cda.mapper.op_diagnosis_mapper import OpDiagnosisMapper
 from .cda_factory import CdaFactory
 
+
 class CdaDiseaseFactory(CdaFactory):
     """
         Create GA4GH Disease messages from CDA (Cancer Data Aggregator). The relevant table in the

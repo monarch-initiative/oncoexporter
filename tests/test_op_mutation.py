@@ -41,5 +41,29 @@ class OpMutationTestCase(TestCase):
         json_string = MessageToJson(vinterpretation)
         print(json_string)
 
+    def test_hgvs(self):
+        d = get_column_dict()
+        d['Transcript_ID'] = "ENST00000380152"
+        d['ENSP'] = "ENSP00000369497"
+        d['HGVSc'] = "c.5526T>G"
+        d['HGVSp'] = "p.Tyr1842Ter"
+        series = pd.Series(d)
+        factory = CdaMutationFactory()
+        vinterpretation = factory.from_cancer_data_aggregator(series)
+
+        self.assertIsNotNone(vinterpretation)
+        self.assertIsNotNone(vinterpretation.variation_descriptor)
+        self.assertEqual(2, len(vinterpretation.variation_descriptor.expressions))
+
+        self.assertEqual("hgvs.c", vinterpretation.variation_descriptor.expressions[0].syntax)
+        self.assertEqual("ENST00000380152:c.5526T>G", vinterpretation.variation_descriptor.expressions[0].value)
+
+        self.assertEqual("hgvs.p", vinterpretation.variation_descriptor.expressions[1].syntax)
+        self.assertEqual("ENSP00000369497:p.Tyr1842Ter", vinterpretation.variation_descriptor.expressions[1].value)
+
+
+
+
+
 
 
