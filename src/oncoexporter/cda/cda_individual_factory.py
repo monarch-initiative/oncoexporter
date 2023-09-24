@@ -2,7 +2,7 @@ import phenopackets as PPkt
 import pandas as pd
 
 from ..model.op_Individual import OpIndividual
-from src.oncoexporter.cda.mapper.op_cause_of_death_mapper import OpCauseOfDeathMapper
+from  .mapper.op_cause_of_death_mapper import OpCauseOfDeathMapper
 from .cda_factory import CdaFactory
 
 class CdaIndividualFactory(CdaFactory):
