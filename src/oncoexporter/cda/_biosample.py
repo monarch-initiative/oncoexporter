@@ -54,6 +54,9 @@ slide	NCIT:C165218	Diagnostic Slide
 
 def make_cda_biosample(row: pd.Series) -> pp.Biosample:
     biosample = pp.Biosample()
+
+    biosample.id = row['specimen_id']
+
     # anatomical_site -> sampled_tissue
     sampled_tissue = _map_anatomical_site(row['anatomical_site'])
     if sampled_tissue is not None:
