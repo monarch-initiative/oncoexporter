@@ -39,11 +39,12 @@ class OpIndividualTestCase(TestCase):
 
     def test_iso_age(self):
         """
-        TODO - iso conversion not working (e.g. 23M
+        CDA provides age as number of days. The conversion to an ISO period depends on actual birth month etc, but
+        is approximately correct.
         """
         ifact = CdaIndividualFactory()
         ga4gh_indi = ifact.from_cancer_data_aggregator(self._series)
-        expected_iso = 'P43Y23M6D'
+        expected_iso = 'P43Y9M'
         calculated_iso = ga4gh_indi.time_at_last_encounter.age.iso8601duration
         self.assertEqual(expected_iso, calculated_iso)
 

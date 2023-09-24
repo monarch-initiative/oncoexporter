@@ -73,8 +73,9 @@ class CdaIndividualFactory(CdaFactory):
         days_in_year = 365.2425
         y = int(days/days_in_year)
         days = days - int(y*days_in_year)
-        m = int(days/12)
-        days = days - int(m*12)
+        m = int(days/30.437)
+        # average number of days in a month: 30.437
+        days = days - int(m*30.437)
         w = int(days/7)
         days = days - int(w*7)
         d = days
@@ -83,10 +84,12 @@ class CdaIndividualFactory(CdaFactory):
             iso = f"{iso}{y}Y"
         if m > 0:
             iso = f"{iso}{m}M"
+        """
         if w > 0:
             iso = f"{iso}{w}W"
         if d > 0:
             iso = f"{iso}{d}D"
+        """
         return iso
 
 
