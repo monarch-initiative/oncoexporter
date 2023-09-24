@@ -78,6 +78,9 @@ def make_cda_biosample(row: pd.Series) -> pp.Biosample:
     if sample_type is not None:
         biosample.sample_type.CopyFrom(sample_type)
 
+    if row['derived_from_subject'] is not None:
+        biosample.individual_id = row['derived_from_subject']
+
     return biosample
 
 
