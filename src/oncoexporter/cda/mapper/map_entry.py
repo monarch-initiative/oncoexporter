@@ -8,12 +8,12 @@ class MapEntry:
             raise ValueError(f"argument dictionary must be dict but was {type(dictionary)}")
         if not 'id' in dictionary:
             raise ValueError("id not in dictionary")
-        if not 'value' in dictionary:
-            raise ValueError("value not in dictionary")
+        if not 'label' in dictionary:
+            raise ValueError("label not in dictionary")
         self._id = dictionary.get('id')
-        self._value = dictionary.get('value')
+        self._label = dictionary.get('label')
         del dictionary['id']
-        del dictionary['value']
+        del dictionary['label']
         self._d = dictionary
 
 
@@ -24,5 +24,5 @@ class MapEntry:
                 return False
         return True
 
-    def get_id_and_value(self):
-        return self._id, self._value
+    def get_id_and_label(self):
+        return self._id, self._label
