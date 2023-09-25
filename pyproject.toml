@@ -10,6 +10,9 @@ build-backend = "setuptools.build_meta"
 where = ["./src"]
 exclude = ["notebooks", "test"]
 
+[tool.setuptools.package-data]
+oncoexporter = ["*.tsv"]
+
 [project]
 name = "oncoexporter"
 dynamic = ["version"]
