@@ -3,7 +3,7 @@ import phenopackets as pp
 import pandas as pd
 import pytest
 
-from src.oncoexporter.cda.mapper.op_diagnosis_mapper import OpDiagnosisMapper
+from oncoexporter.cda.mapper.op_diagnosis_mapper import OpDiagnosisMapper
 
 
 
