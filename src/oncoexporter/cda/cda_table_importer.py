@@ -92,12 +92,12 @@ class CdaTableImporter(CdaImporter):
             ppackt.id = f'{self._cohort_name}-{individual_id}'
             ppackt.subject.CopyFrom(individual_message)
             self._ppackt_d[individual_id] = ppackt
-        merged_df = pd.merge(diagnosis_df, rsub_df, left_on='subject_id', right_on='subject_id',
+        merged_df = pd.merge(diagnosis_df, rsub_df, left_on='researchsubject_id', right_on='researchsubject_id',
                              suffixes=["_di", "_rs"])
         disease_factory = CdaDiseaseFactory()
         for idx, row in tqdm(merged_df.iterrows(), total= len(merged_df.index), desc="merged diagnosis dataframe"):
             disease_message = disease_factory.from_cancer_data_aggregator(row)
-            individual_id = row["subject_id"]
+            individual_id = row["subject_id_rs"]
             if individual_id not in subject_id_to_interpretation:
                 raise ValueError(f"Could not find individual id {individual_id} in subject_id_to_disease")
             subject_id_to_interpretation.get(individual_id).diagnosis.disease.CopyFrom(disease_message.term)

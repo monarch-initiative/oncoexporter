@@ -35,16 +35,6 @@ class CdaDiseaseFactory(CdaFactory):
         """
         if not isinstance(row, pd.core.series.Series):
             raise ValueError(f"Invalid argument. Expected pandas series but got {type(row)}")
-        column_names = ['diagnosis_id', 'diagnosis_identifier', 'primary_diagnosis',
-       'age_at_diagnosis', 'morphology', 'stage', 'grade',
-       'method_of_diagnosis', 'subject_id', 'researchsubject_id_di',
-       'researchsubject_id_rs', 'researchsubject_identifier',
-       'member_of_research_project', 'primary_diagnosis_condition',
-       'primary_diagnosis_site']
-        diagnosis_id, diagnosis_identifier, primary_diagnosis, age_at_diagnosis, morphology, stage, grade, \
-           method_of_diagnosis, subject_id, researchsubject_id_di, \
-        researchsubject_id_rs, researchsubject_identifier, member_of_research_project, primary_diagnosis_condition, primary_diagnosis_site \
-            = self.get_items_from_row(row, column_names)
 
         disease = PPkt.Disease()
 
