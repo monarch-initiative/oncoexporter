@@ -2,8 +2,8 @@ import pandas as pd
 from unittest import TestCase
 import phenopackets as PPkt
 import pytest
-from src.oncoexporter.model import OpMutation
-from src.oncoexporter.cda import CdaMutationFactory
+from oncoexporter.model import OpMutation
+from oncoexporter.cda import CdaMutationFactory
 ## REMOVE LATER
 from google.protobuf.json_format import MessageToJson
 
