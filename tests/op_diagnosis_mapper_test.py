@@ -1,7 +1,5 @@
 import unittest
-import phenopackets as pp
 import pandas as pd
-import pytest
 
 from oncoexporter.cda.mapper.op_diagnosis_mapper import OpDiagnosisMapper
 
