@@ -51,7 +51,7 @@ class CdaTableImporter(CdaImporter):
                     pickle.dump(individual_df, f)
         return individual_df
 
-    def get_ga4gh_phenopackets(self) -> typing.List[PPkt.Phenopacket]:
+    def get_ga4gh_phenopackets(self, page_size: int = 100) -> typing.List[PPkt.Phenopacket]:
         """
 
         1.
@@ -60,24 +60,24 @@ class CdaTableImporter(CdaImporter):
         subject_id_to_interpretation = {}
 
         individual_factory = CdaIndividualFactory()
-        callable = lambda: self._query.subject.run().get_all().to_dataframe()
+        callable = lambda: self._query.subject.run(page_size=page_size).get_all().to_dataframe()
         print("getting individual_df")
         individual_df = self.get_diagnosis_df(callable, "individual_df.pkl")
         print("obtained individual_df")
-        diagnosis_callable = lambda: self._query.diagnosis.run().get_all().to_dataframe()
+        diagnosis_callable = lambda: self._query.diagnosis.run(page_size=page_size).get_all().to_dataframe()
         diagnosis_df = self.get_diagnosis_df(diagnosis_callable, "diagnosis_df.pkl")
         print("obtained diagnosis_df")
-        rsub_callable = lambda: self._query.researchsubject.run().get_all().to_dataframe()
+        rsub_callable = lambda: self._query.researchsubject.run(page_size=page_size).get_all().to_dataframe()
         rsub_df = self.get_diagnosis_df(rsub_callable, "rsub_df.pkl")
         print("obtained rsub_df")
 
-        specimen_callable = lambda: self._query.specimen.run().get_all().to_dataframe()
+        specimen_callable = lambda: self._query.specimen.run(page_size=page_size).get_all().to_dataframe()
         specimen_df = self.get_diagnosis_df(specimen_callable, "specimen_df.pkl")
 
-        treatment_callable = lambda: self._query.treatment.run().get_all().to_dataframe()
+        treatment_callable = lambda: self._query.treatment.run(page_size=page_size).get_all().to_dataframe()
         treatment_df = self.get_diagnosis_df(treatment_callable, "treatment_df.pkl")
 
-        mutation_callable = lambda: self._query.mutation.run().get_all().to_dataframe()
+        mutation_callable = lambda: self._query.mutation.run(page_size=page_size).get_all().to_dataframe()
         mutation_df = self.get_diagnosis_df(mutation_callable, "mutation_df.pkl")
 
         for idx, row in tqdm(individual_df.iterrows(),total=len(individual_df), desc= "individual dataframe"):
