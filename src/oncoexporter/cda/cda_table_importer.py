@@ -1,4 +1,4 @@
-import os.path
+import os
 import warnings
 
 from cdapython import Q
@@ -6,7 +6,7 @@ import phenopackets as PPkt
 import typing
 import pandas as pd
 import pickle
-from . import CdaDiseaseFactory
+from .cda_disease_factory import CdaDiseaseFactory
 from .cda_importer import CdaImporter
 from .cda_individual_factory import CdaIndividualFactory
 from .cda_biosample import CdaBiosampleFactory
@@ -33,11 +33,10 @@ class CdaTableImporter(CdaImporter):
             self._query = query_obj
         else:
             raise ValueError("Need to pass either query or query_obj argument but not both")
-        self._ppackt_d = {} # key -- patient ID, value: PPkt.Phenopacket
         self._use_cache = use_cache
         self._cohort_name = cohort_name
 
-    def get_diagnosis_df(self, callable, cache_name: str):
+    def get_diagnosis_df(self, fallback, cache_name: str):
         print(f"Retrieving dataframe {cache_name}")
         if self._use_cache and os.path.isfile(cache_name):
             with open(cache_name, 'rb') as cachehandle:
@@ -45,7 +44,7 @@ class CdaTableImporter(CdaImporter):
                 individual_df = pickle.load(cachehandle)
         else:
             print(f"calling CDA function")
-            individual_df = callable()
+            individual_df = fallback()
             if self._use_cache:
                 print(f"Creating cached dataframe as {cache_name}")
                 with open(cache_name, 'wb') as f:
@@ -58,7 +57,7 @@ class CdaTableImporter(CdaImporter):
         1.
 
         """
-        subject_id_to_interpretation = {}
+        ppackt_d = {}
 
         individual_factory = CdaIndividualFactory()
         callable = lambda: self._query.subject.run(page_size=page_size).get_all().to_dataframe()
@@ -84,34 +83,29 @@ class CdaTableImporter(CdaImporter):
         for idx, row in tqdm(individual_df.iterrows(),total=len(individual_df), desc= "individual dataframe"):
             individual_message = individual_factory.from_cancer_data_aggregator(row=row)
             individual_id = individual_message.id
-            interpretation = PPkt.Interpretation()
-            interpretation.id = "id"
-            interpretation.progress_status = PPkt.Interpretation.ProgressStatus.SOLVED
-            subject_id_to_interpretation[individual_id] = interpretation
+
             ppackt = PPkt.Phenopacket()
             ppackt.id = f'{self._cohort_name}-{individual_id}'
             ppackt.subject.CopyFrom(individual_message)
-            self._ppackt_d[individual_id] = ppackt
+            ppackt_d[individual_id] = ppackt
         merged_df = pd.merge(diagnosis_df, rsub_df, left_on='researchsubject_id', right_on='researchsubject_id',
                              suffixes=["_di", "_rs"])
         disease_factory = CdaDiseaseFactory()
         for idx, row in tqdm(merged_df.iterrows(), total= len(merged_df.index), desc="merged diagnosis dataframe"):
             disease_message = disease_factory.from_cancer_data_aggregator(row)
-            individual_id = row["subject_id_rs"]
-            if individual_id not in subject_id_to_interpretation:
-                raise ValueError(f"Could not find individual id {individual_id} in subject_id_to_disease")
-            subject_id_to_interpretation.get(individual_id).diagnosis.disease.CopyFrom(disease_message.term)
-            if individual_id not in self._ppackt_d:
-                raise ValueError(f"Attempt to enter unknown individual ID from disease factory: \"{individual_id}\"")
-            self._ppackt_d.get(individual_id).diseases.append(disease_message)
+            pp = ppackt_d.get(row["subject_id_rs"])
+
+            # Do not add the disease if it is already in the phenopacket.
+            if not any(disease.term.id == disease_message.term.id for disease in pp.diseases):
+                pp.diseases.append(disease_message)
 
         specimen_factory = CdaBiosampleFactory()
         for idx, row in tqdm(specimen_df.iterrows(),total= len(specimen_df.index), desc="specimen/biosample dataframe"):
             biosample_message = specimen_factory.from_cancer_data_aggregator(row)
             individual_id = row["subject_id"]
-            if individual_id not in self._ppackt_d:
+            if individual_id not in ppackt_d:
                 raise ValueError(f"Attempt to enter unknown individual ID from biosample factory: \"{individual_id}\"")
-            self._ppackt_d.get(individual_id).biosamples.append(biosample_message)
+            ppackt_d.get(individual_id).biosamples.append(biosample_message)
 
         mutation_factory = CdaMutationFactory()
         for idx, row in tqdm(mutation_df.iterrows(), total=len(mutation_df.index), desc="mutation dataframe"):
@@ -121,7 +115,7 @@ class CdaTableImporter(CdaImporter):
             genomic_interpretation.subject_or_biosample_id = row["Tumor_Aliquot_UUID"]
             genomic_interpretation.variant_interpretation.CopyFrom(variant_interpretation_message)
 
-            pp = self._ppackt_d[individual_id]
+            pp = ppackt_d[individual_id]
             if len(pp.interpretations) == 0:
                 diagnosis = PPkt.Diagnosis()
                 if len(pp.diseases) == 0:
@@ -156,9 +150,9 @@ class CdaTableImporter(CdaImporter):
         for idx, row in tqdm(treatment_df.iterrows(), total=len(treatment_df.index), desc="Treatment DF"):
             individual_id = row["subject_id"]
             medical_action_message = make_cda_medicalaction(row)
-            if individual_id not in self._ppackt_d:
+            if individual_id not in ppackt_d:
                 raise ValueError(f"Attempt to enter unknown individual ID from treatemtn factory: \"{individual_id}\"")
-            self._ppackt_d.get(individual_id).medical_actions.append(medical_action_message)
+            ppackt_d.get(individual_id).medical_actions.append(medical_action_message)
 
-        return list(self._ppackt_d.values())
+        return list(ppackt_d.values())
 
