@@ -2,8 +2,112 @@ primary_diagnosis	primary_diagnosis_condition	primary_diagnosis_site	id	label
 Nan	NaN	Lung	NCIT:C3200	Lung Neoplasm
 Adenocarcinoma	Lung Adenocarcinoma	Lung	NCIT:C3512	Lung Adenocarcinoma
 Acantholytic squamous cell carcinoma	Lung Squamous Cell Carcinoma	Lung	NCIT:C3493	Lung Squamous Cell Carcinoma
-Adenocarcinoma, NOS	Lung Adenocarcinoma	Lung	NCIT:C3512	Lung Adenocarcinoma
+"Adenocarcinoma, NOS"	Lung Adenocarcinoma	Lung	NCIT:C3512	Lung Adenocarcinoma
 Squamous Cell Carcinoma	Lung Squamous Cell Carcinoma	Lung	NCIT:C3493	Lung Squamous Cell Carcinoma
-Clear cell adenocarcinoma, NOS	Lung Adenocarcinoma	Lung	NCIT:C45516	ung Clear Cell Adenocarcinoma
+"Clear cell adenocarcinoma, NOS"	Lung Adenocarcinoma	Lung	NCIT:C45516	ung Clear Cell Adenocarcinoma
 Squamous Cell Carcinoma	Lung Adenocarcinoma	Lung	NCIT:C9133	Lung Adenosquamous Carcinoma
 Adenosquamous carcinoma	Lung Adenocarcinoma	Lung	NCIT:C9133	Lung Adenosquamous Carcinoma
+"Squamous cell carcinoma, keratinizing, NOS"	Squamous Cell Neoplasms	Cervix uteri	NCIT:C4028	Cervical Squamous Cell Carcinoma
+"Endometrioid adenocarcinoma, NOS"	Adenomas and Adenocarcinomas	"Uterus, NOS"	NCIT:C3769	Endometrioid Adenocarcinoma
+"Endometrioid adenocarcinoma, NOS"	Corpus Endometrial Carcinoma	Uterus	NCIT:C3769	Endometrioid Adenocarcinoma
+"Neuroendocrine carcinoma, NOS"	Adenomas and Adenocarcinomas	Cervix uteri	NCIT:C128045	Cervical Neuroendocrine Carcinoma
+Papillary serous adenocarcinoma	"Cystic, Mucinous and Serous Neoplasms"	"Uterus, NOS"	NCIT:C3435	Uterine Neoplasm
+"Adenocarcinoma, NOS"	Adenomas and Adenocarcinomas	"Uterus, NOS"	NCIT:C3435	Uterine Neoplasm
+"Carcinosarcoma, NOS"	Complex Mixed and Stromal Neoplasms	"Uterus, NOS"	NCIT:C42700	Uterine Carcinosarcoma
+"Squamous cell carcinoma, NOS"	Squamous Cell Neoplasms	Cervix uteri	NCIT:C4028	Cervical Squamous Cell Carcinoma
+"Sarcoma, NOS"	"Soft Tissue Tumors and Sarcomas, NOS"	"Uterus, NOS"	NCIT:C6339	Uterine Corpus Sarcoma
+"Serous cystadenocarcinoma, NOS"	"Cystic, Mucinous and Serous Neoplasms"	"Uterus, NOS"	NCIT:C3435	Uterine Neoplasm
+"Choriocarcinoma, NOS"	Trophoblastic neoplasms	"Uterus, NOS"	NCIT:C27246	Uterine Corpus Choriocarcinoma
+"Endometrioid adenocarcinoma, NOS"	Uterine Corpus Endometrial Carcinoma	"Uterus, NOS"	NCIT:C3769	Endometrioid Adenocarcinoma
+"Squamous cell carcinoma, NOS"	Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma	Cervix	NCIT:C4028	Cervical Squamous Cell Carcinoma
+Papillary squamous cell carcinoma	Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma	Cervix	NCIT:C40192	Cervical Papillary Squamous Cell Carcinoma
+Papillary squamous cell carcinoma	Squamous Cell Neoplasms	Cervix uteri	NCIT:C40192	Cervical Papillary Squamous Cell Carcinoma
+"Endometrioid adenocarcinoma, NOS"	Uterine Corpus Endometrial Carcinoma	Uterus	NCIT:C3769	Endometrioid Adenocarcinoma
+"Endometrioid adenocarcinoma, NOS"	Adenomas and Adenocarcinomas	Corpus uteri	NCIT:C3769	Endometrioid Adenocarcinoma
+"Carcinosarcoma, NOS"	Uterine Carcinosarcoma	Uterus	NCIT:C27246	Uterine Corpus Choriocarcinoma
+Mullerian mixed tumor	Uterine Carcinosarcoma	Uterus	NCIT:C3730	Mixed Mesodermal (Mullerian) Tumor
+Mullerian mixed tumor	Complex Mixed and Stromal Neoplasms	"Uterus, NOS"	NCIT:C3730	Mixed Mesodermal (Mullerian) Tumor
+"Squamous cell carcinoma, nonkeratinizing, NOS"	Squamous Cell Neoplasms	Cervix uteri	NCIT:C40188	Cervical Non-Keratinizing Squamous Cell Carcinoma
+"Adenocarcinoma, NOS"	Adenomas and Adenocarcinomas	Cervix uteri	NCIT:C4029	Cervical Adenocarcinoma
+"Carcinoma, NOS"	"Epithelial Neoplasms, NOS"	Corpus uteri	NCIT:C3435	Uterine Neoplasm
+Myxoid leiomyosarcoma	Myomatous Neoplasms	"Uterus, NOS"	NCIT:C3701	Myxoid Leiomyosarcoma
+"Clear cell adenocarcinoma, NOS"	Adenomas and Adenocarcinomas	Cervix uteri	NCIT:C3435	Uterine Neoplasm
+"Squamous cell carcinoma, large cell, nonkeratinizing, NOS"	Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma	Cervix	NCIT:C3436	Uterine Neoplasm
+"Squamous cell carcinoma, large cell, nonkeratinizing, NOS"	Squamous Cell Neoplasms	Cervix uteri	NCIT:C3435	Uterine Neoplasm
+Epithelioid leiomyosarcoma	Myomatous Neoplasms	"Uterus, NOS"	NCIT:C3436	Uterine Neoplasm
+"Leiomyosarcoma, NOS"	Myomatous Neoplasms	"Uterus, NOS"	NCIT:C3437	Uterine Neoplasm
+"Serous cystadenocarcinoma, NOS"	Uterine Corpus Endometrial Carcinoma	Uterus	NCIT:C3438	Uterine Neoplasm
+"Serous cystadenocarcinoma, NOS"	"Cystic, Mucinous and Serous Neoplasms"	Corpus uteri	NCIT:C3439	Uterine Neoplasm
+"Endometrial stromal sarcoma, NOS"	Complex Mixed and Stromal Neoplasms	"Uterus, NOS"	NCIT:C3440	Uterine Neoplasm
+"Endometrial stromal sarcoma, NOS"	Complex Mixed and Stromal Neoplasms	Corpus uteri	NCIT:C3441	Uterine Neoplasm
+"Neuroendocrine carcinoma, NOS"	Adenomas and Adenocarcinomas	"Uterus, NOS"	NCIT:C3442	Uterine Neoplasm
+"Clear cell adenocarcinoma, NOS"	Adenomas and Adenocarcinomas	"Uterus, NOS"	NCIT:C3443	Uterine Neoplasm
+Adenosquamous carcinoma	Complex Epithelial Neoplasms	Cervix uteri	NCIT:C3444	Uterine Neoplasm
+"Squamous cell carcinoma, keratinizing, NOS"	Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma	Cervix	NCIT:C3445	Uterine Neoplasm
+Myxoid leiomyosarcoma	Myomatous Neoplasms	Corpus uteri	NCIT:C3446	Uterine Neoplasm
+"Carcinoma, undifferentiated, NOS"	"Epithelial Neoplasms, NOS"	"Uterus, NOS"	NCIT:C3447	Uterine Neoplasm
+"Carcinoma, NOS"	"Epithelial Neoplasms, NOS"	"Uterus, NOS"	NCIT:C3448	Uterine Neoplasm
+Adenosquamous carcinoma	Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma	Cervix	NCIT:C3449	Uterine Neoplasm
+"Endometrioid adenocarcinoma, NOS"	Adenomas and Adenocarcinomas	Cervix uteri	NCIT:C3450	Uterine Neoplasm
+"Endometrioid adenocarcinoma, NOS"	Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma	Cervix	NCIT:C3451	Uterine Neoplasm
+"Adenocarcinoma, endocervical type"	Adenomas and Adenocarcinomas	Cervix uteri	NCIT:C3452	Uterine Neoplasm
+"Adenocarcinoma, endocervical type"	Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma	Cervix	NCIT:C3453	Uterine Neoplasm
+"Endometrial stromal sarcoma, low grade"	Complex Mixed and Stromal Neoplasms	Corpus uteri	NCIT:C3454	Uterine Neoplasm
+"Tumor, NOS"	"Neoplasms, NOS"	Corpus uteri	NCIT:C3455	Uterine Neoplasm
+"Mesenchymoma, NOS"	Complex Mixed and Stromal Neoplasms	"Uterus, NOS"	NCIT:C3456	Uterine Neoplasm
+Glassy cell carcinoma	"Epithelial Neoplasms, NOS"	Cervix uteri	NCIT:C3457	Uterine Neoplasm
+"Tumor, NOS"	"Epithelial Neoplasms, NOS"	Cervix uteri	NCIT:C3435	Uterine Neoplasm
+"Mesonephroma, malignant"	Mesonephromas	"Uterus, NOS"	NCIT:C3436	Uterine Neoplasm
+Adenosarcoma	Complex Mixed and Stromal Neoplasms	"Uterus, NOS"	NCIT:C3437	Uterine Neoplasm
+Papillary serous cystadenocarcinoma	Uterine Corpus Endometrial Carcinoma	Uterus	NCIT:C3438	Uterine Neoplasm
+Papillary serous cystadenocarcinoma	"Cystic, Mucinous and Serous Neoplasms"	Corpus uteri	NCIT:C3439	Uterine Neoplasm
+"Neoplasm, uncertain whether benign or malignant"	"Neoplasms, NOS"	"Uterus, NOS"	NCIT:C3440	Uterine Neoplasm
+Mucinous adenocarcinoma	"Cystic, Mucinous and Serous Neoplasms"	Cervix uteri	NCIT:C3441	Uterine Neoplasm
+"Adenocarcinoma, NOS"	Adenomas and Adenocarcinomas	Corpus uteri	NCIT:C3442	Uterine Neoplasm
+"Adenocarcinoma, NOS"	Uterine Corpus Endometrial Carcinoma	Uterus	NCIT:C3443	Uterine Neoplasm
+"Adenocarcinoma, NOS"	Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma	Cervix	NCIT:C3444	Uterine Neoplasm
+"Carcinoma, undifferentiated, NOS"	Uterine Corpus Endometrial Carcinoma	Uterus	NCIT:C3445	Uterine Neoplasm
+"Carcinoma, undifferentiated, NOS"	"Epithelial Neoplasms, NOS"	Corpus uteri	NCIT:C3446	Uterine Neoplasm
+"Mucinous adenocarcinoma, endocervical type"	Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma	Cervix	NCIT:C3447	Uterine Neoplasm
+"Mucinous adenocarcinoma, endocervical type"	"Cystic, Mucinous and Serous Neoplasms"	Cervix uteri	NCIT:C3448	Uterine Neoplasm
+"Leiomyosarcoma, NOS"	Myomatous Neoplasms	Corpus uteri	NCIT:C3449	Uterine Neoplasm
+Adenosquamous carcinoma	Complex Epithelial Neoplasms	"Uterus, NOS"	NCIT:C3450	Uterine Neoplasm
+"Malignant tumor, small cell type"	"Neoplasms, NOS"	Cervix uteri	NCIT:C3451	Uterine Neoplasm
+"Serous adenocarcinoma, NOS"	"Cystic, Mucinous and Serous Neoplasms"	Corpus uteri	NCIT:C3452	Uterine Neoplasm
+"Leiomyoma, NOS"	Myomatous Neoplasms	"Uterus, NOS"	NCIT:C3453	Uterine Neoplasm
+Smooth muscle tumor of uncertain malignant potential	Myomatous Neoplasms	"Uterus, NOS"	NCIT:C3454	Uterine Neoplasm
+"Serous cystadenocarcinoma, NOS"	Complex Mixed and Stromal Neoplasms	"Uterus, NOS"	NCIT:C3455	Uterine Neoplasm
+"Adenocarcinoma in situ, NOS"	Adenomas and Adenocarcinomas	Cervix uteri	NCIT:C3456	Uterine Neoplasm
+"Trophoblastic tumor, epithelioid"	Trophoblastic neoplasms	"Uterus, NOS"	NCIT:C3457	Uterine Neoplasm
+"Endometrioid adenocarcinoma, secretory variant"	Uterine Corpus Endometrial Carcinoma	Uterus	NCIT:C3458	Uterine Neoplasm
+"Endometrioid adenocarcinoma, secretory variant"	Adenomas and Adenocarcinomas	Corpus uteri	NCIT:C3459	Uterine Neoplasm
+"Clear cell adenocarcinoma, NOS"	Adenomas and Adenocarcinomas	Corpus uteri	NCIT:C3460	Uterine Neoplasm
+"Clear cell adenocarcinoma, NOS"	Uterine Corpus Endometrial Carcinoma	Uterus	NCIT:C3461	Uterine Neoplasm
+Adenosquamous carcinoma	Squamous Cell Neoplasms	Cervix uteri	NCIT:C3462	Uterine Neoplasm
+"Mesonephroma, malignant"	Mesonephromas	Cervix uteri	NCIT:C3463	Uterine Neoplasm
+"Carcinoid tumor, NOS"	Adenomas and Adenocarcinomas	Cervix uteri	NCIT:C3464	Uterine Neoplasm
+"Serous adenocarcinoma, NOS"	Squamous Cell Neoplasms	Cervix uteri	NCIT:C3465	Uterine Neoplasm
+"Neuroblastoma, NOS"	Neuroepitheliomatous Neoplasms	"Uterus, NOS"	NCIT:C3466	Uterine Neoplasm
+Lymphoepithelial carcinoma	Squamous Cell Neoplasms	Cervix uteri	NCIT:C3467	Uterine Neoplasm
+Squamotransitional cell carcinoma	Squamous Cell Neoplasms	Cervix uteri	NCIT:C3468	Uterine Neoplasm
+Adenoid cystic carcinoma	Adenomas and Adenocarcinomas	Cervix uteri	NCIT:C3469	Uterine Neoplasm
+"Carcinoma, NOS"	"Epithelial Neoplasms, NOS"	Cervix uteri	NCIT:C3470	Uterine Neoplasm
+Mesodermal mixed tumor	Uterine Carcinosarcoma	Uterus	NCIT:C3471	Uterine Neoplasm
+Mesodermal mixed tumor	Complex Mixed and Stromal Neoplasms	"Uterus, NOS"	NCIT:C3472	Uterine Neoplasm
+"Neoplasm, malignant"	"Neoplasms, NOS"	"Uterus, NOS"	NCIT:C3473	Uterine Neoplasm
+Villous adenocarcinoma	Adenomas and Adenocarcinomas	Cervix uteri	NCIT:C3474	Uterine Neoplasm
+Mucinous adenocarcinoma	"Cystic, Mucinous and Serous Neoplasms"	"Uterus, NOS"	NCIT:C3475	Uterine Neoplasm
+Basaloid squamous cell carcinoma	Squamous Cell Neoplasms	Cervix uteri	NCIT:C3476	Uterine Neoplasm
+"Serous cystadenocarcinoma, NOS"	"Cystic, Mucinous and Serous Neoplasms"	Cervix uteri	NCIT:C3477	Uterine Neoplasm
+"Small cell carcinoma, NOS"	"Epithelial Neoplasms, NOS"	Cervix uteri	NCIT:C3478	Uterine Neoplasm
+Warty carcinoma	Squamous Cell Neoplasms	Cervix uteri	NCIT:C3479	Uterine Neoplasm
+Not Reported		Cervix uteri	NCIT:C3480	Uterine Neoplasm
+Basaloid squamous cell carcinoma	Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma	Cervix	NCIT:C3481	Uterine Neoplasm
+"Carcinosarcoma, NOS"	Complex Mixed and Stromal Neoplasms	Corpus uteri	NCIT:C3482	Uterine Neoplasm
+Serous surface papillary carcinoma	Uterine Corpus Endometrial Carcinoma	Uterus	NCIT:C3483	Uterine Neoplasm
+Serous surface papillary carcinoma	"Cystic, Mucinous and Serous Neoplasms"	Corpus uteri	NCIT:C3484	Uterine Neoplasm
+Adenosquamous carcinoma	Adenomas and Adenocarcinomas	Cervix uteri	NCIT:C3485	Uterine Neoplasm
+Signet ring cell carcinoma	"Cystic, Mucinous and Serous Neoplasms"	Cervix uteri	NCIT:C3486	Uterine Neoplasm
+"Neoplasm, malignant"	"Neoplasms, NOS"	Cervix uteri	NCIT:C3487	Uterine Neoplasm
+"Mesenchymoma, NOS"	Myomatous Neoplasms	"Uterus, NOS"	NCIT:C3488	Uterine Neoplasm
+"Hydatidiform mole, NOS"	Trophoblastic neoplasms	"Uterus, NOS"	NCIT:C3489	Uterine Neoplasm
