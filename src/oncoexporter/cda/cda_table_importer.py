@@ -1,4 +1,5 @@
 import os.path
+import warnings
 
 from cdapython import Q
 import phenopackets as PPkt
@@ -118,6 +119,15 @@ class CdaTableImporter(CdaImporter):
             pp = self._ppackt_d[individual_id]
             if len(pp.interpretations) == 0:
                 interpretation = PPkt.Interpretation()
+
+                if len(pp.diseases) == 0:
+                    warnings.warn("Couldn't find a disease for this individual{individual_id}, using neoplasm")
+                    disease = PPkt.Disease()
+                    # assign neoplasm ncit
+                    disease.term.id = "NCIT:C3262"
+                    disease.term.label = "Neoplasm"
+                    pp.diseases.append(disease)
+
                 disease = pp.diseases[0]
                 diagnosis = PPkt.Diagnosis()
                 diagnosis.disease.CopyFrom(disease.term)
