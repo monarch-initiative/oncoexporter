@@ -134,6 +134,7 @@ class CdaTableImporter(CdaImporter):
             genomic_interpretation.variant_interpretation.CopyFrom(variant_interpretation_message)
             diagnosis.genomic_interpretations.append(genomic_interpretation)
 
+
         # make_cda_medicalaction
         for idx, row in tqdm(treatment_df.iterrows(), total=len(treatment_df.index), desc="Treatment DF"):
             individual_id = row["subject_id"]
