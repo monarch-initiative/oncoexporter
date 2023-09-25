@@ -75,8 +75,7 @@ def _map_response_to_treatment(val: typing.Optional[str]=None) -> typing.Optiona
         return None
 
 
-
-def _map_response_to_treatment(val: typing.Optional[str]=None) -> typing.Optional[pp.OntologyClass]:
+def _map_therapeutic_agent(val: typing.Optional[str]=None) -> typing.Optional[pp.OntologyClass]:
     if val is not None:
         val = val.lower()
         if val == "carboplatin":
