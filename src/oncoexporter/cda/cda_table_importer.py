@@ -14,10 +14,10 @@ from .cda_mutation_factory import CdaMutationFactory
 from .cda_medicalaction_factory import make_cda_medicalaction
 from tqdm import tqdm
 
+
 class CdaTableImporter(CdaImporter):
 
-
-    def __init__(self, query:str=None, query_obj:Q=None, use_cache=False):
+    def __init__(self, cohort_name: str, query: str = None, query_obj: Q = None, use_cache=False):
         """
         :param query: A query for CDA such as 'primary_diagnosis_site = "Lung"'
 
@@ -35,6 +35,7 @@ class CdaTableImporter(CdaImporter):
             raise ValueError("Need to pass either query or query_obj argument but not both")
         self._ppackt_d = {} # key -- patient ID, value: PPkt.Phenopacket
         self._use_cache = use_cache
+        self._cohort_name = cohort_name
 
     def get_diagnosis_df(self, callable, cache_name: str):
         print(f"Retrieving dataframe {cache_name}")
@@ -82,14 +83,15 @@ class CdaTableImporter(CdaImporter):
 
         for idx, row in tqdm(individual_df.iterrows(),total=len(individual_df), desc= "individual dataframe"):
             individual_message = individual_factory.from_cancer_data_aggregator(row=row)
-            indivudal_id = individual_message.id
+            individual_id = individual_message.id
             interpretation = PPkt.Interpretation()
             interpretation.id = "id"
             interpretation.progress_status = PPkt.Interpretation.ProgressStatus.SOLVED
-            subject_id_to_interpretation[indivudal_id] = interpretation
+            subject_id_to_interpretation[individual_id] = interpretation
             ppackt = PPkt.Phenopacket()
+            ppackt.id = f'{self._cohort_name}-{individual_id}'
             ppackt.subject.CopyFrom(individual_message)
-            self._ppackt_d[indivudal_id] = ppackt
+            self._ppackt_d[individual_id] = ppackt
         merged_df = pd.merge(diagnosis_df, rsub_df, left_on='subject_id', right_on='subject_id',
                              suffixes=["_di", "_rs"])
         disease_factory = CdaDiseaseFactory()
@@ -114,8 +116,6 @@ class CdaTableImporter(CdaImporter):
         mutation_factory = CdaMutationFactory()
         for idx, row in tqdm(mutation_df.iterrows(), total=len(mutation_df.index), desc="mutation dataframe"):
             individual_id = row["cda_subject_id"]
-            if individual_id not in subject_id_to_interpretation:
-                raise ValueError(f"Could not find individual id {individual_id} in subject_id_to_interpretation")
             variant_interpretation_message = mutation_factory.from_cancer_data_aggregator(row)
             genomic_interpretation = PPkt.GenomicInterpretation()
             genomic_interpretation.subject_or_biosample_id = row["Tumor_Aliquot_UUID"]
@@ -137,6 +137,8 @@ class CdaTableImporter(CdaImporter):
                 diagnosis.genomic_interpretations.append(genomic_interpretation)
 
                 interpretation = PPkt.Interpretation()
+                interpretation.progress_status = PPkt.Interpretation.ProgressStatus.SOLVED
+                interpretation.id = "id"
                 interpretation.diagnosis.CopyFrom(diagnosis)
                 pp.interpretations.append(interpretation)
             else:
