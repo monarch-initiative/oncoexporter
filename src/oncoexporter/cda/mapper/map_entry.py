@@ -19,7 +19,7 @@ class MapEntry:
 
 
     def matches(self, row):
-        for k, v in self._d:
+        for k, v in self._d.items():
             if k not in row or row[k] != v:
                 return False
         return True
