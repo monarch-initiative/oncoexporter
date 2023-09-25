@@ -94,12 +94,12 @@ class CdaIndividualFactory(CdaFactory):
         """
         :param vital_status: "Alive or Dead"
         :type vital_status: str
-        :param days_to_death: 
+        :param days_to_death:
         """
         vital_status = self.get_item(row, "vital_status")
         days_to_death = self.get_item(row, "days_to_death")
         if vital_status is None:
-            return None 
+            return None
         valid_status = {"Alive", "Dead"}
         if vital_status not in valid_status:
             return None
@@ -160,5 +160,5 @@ class CdaIndividualFactory(CdaFactory):
         #     cause_of_death = status_object.cause_of_death
 
         # TODO figure out where to store project data
-        opi = OpIndividual(id=subject_id, iso8601duration=iso_age, sex=sex, vital_status=vstat, taxonomy=species)
+        opi = OpIndividual(id=subject_id, iso8601duration=iso_age, sex=sex, vital_status=vstat)
         return opi.to_ga4gh()
