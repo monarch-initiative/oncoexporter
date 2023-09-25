@@ -149,6 +149,7 @@ class CdaTableImporter(CdaImporter):
 
 
 
+
         # make_cda_medicalaction
         for idx, row in tqdm(treatment_df.iterrows(), total=len(treatment_df.index), desc="Treatment DF"):
             individual_id = row["subject_id"]
