@@ -116,33 +116,38 @@ class CdaTableImporter(CdaImporter):
             individual_id = row["cda_subject_id"]
             if individual_id not in subject_id_to_interpretation:
                 raise ValueError(f"Could not find individual id {individual_id} in subject_id_to_interpretation")
+            variant_interpretation_message = mutation_factory.from_cancer_data_aggregator(row)
+            genomic_interpretation = PPkt.GenomicInterpretation()
+            genomic_interpretation.subject_or_biosample_id = row["Tumor_Aliquot_UUID"]
+            genomic_interpretation.variant_interpretation.CopyFrom(variant_interpretation_message)
+
             pp = self._ppackt_d[individual_id]
             if len(pp.interpretations) == 0:
-                interpretation = PPkt.Interpretation()
-
+                diagnosis = PPkt.Diagnosis()
                 if len(pp.diseases) == 0:
-                    warnings.warn("Couldn't find a disease for this individual{individual_id}, using neoplasm")
+                    warnings.warn("Couldn't find a disease for this individual {individual_id}, so I'm using neoplasm")
                     disease = PPkt.Disease()
                     # assign neoplasm ncit
                     disease.term.id = "NCIT:C3262"
                     disease.term.label = "Neoplasm"
                     pp.diseases.append(disease)
-
-                disease = pp.diseases[0]
-                diagnosis = PPkt.Diagnosis()
+                else:
+                    disease = pp.diseases[0]
                 diagnosis.disease.CopyFrom(disease.term)
+                diagnosis.genomic_interpretations.append(genomic_interpretation)
+
+                interpretation = PPkt.Interpretation()
                 interpretation.diagnosis.CopyFrom(diagnosis)
                 pp.interpretations.append(interpretation)
             else:
-                diagnosis = pp.interpretations[0].diagnosis
-            variant_interpretation_message = mutation_factory.from_cancer_data_aggregator(row)
-            genomic_interpretation = PPkt.GenomicInterpretation()
+                pp.interpretations[0].diagnosis.genomic_interpretations.append(genomic_interpretation)
+
             # TODO -- CLEAN UP
-            genomic_interpretation.subject_or_biosample_id = row["Tumor_Aliquot_UUID"]
             # by assumption, variants passed to this package are all causative -- ASK CDA
             # genomic_interpretation.interpretation_status = PPkt.GenomicInterpretation.InterpretationStatus.CAUSATIVE
-            genomic_interpretation.variant_interpretation.CopyFrom(variant_interpretation_message)
-            diagnosis.genomic_interpretations.append(genomic_interpretation)
+
+
+
 
         # make_cda_medicalaction
         for idx, row in tqdm(treatment_df.iterrows(), total=len(treatment_df.index), desc="Treatment DF"):
