@@ -8,15 +8,18 @@ from .cda_factory import CdaFactory
 
 class CdaDiseaseFactory(CdaFactory):
     """
-        Create GA4GH Disease messages from CDA (Cancer Data Aggregator). The relevant table in the
-        CDA is diagnosis - 'diagnosis_id', 'diagnosis_identifier', 'primary_diagnosis',
-       'age_at_diagnosis', 'morphology', 'stage', 'grade',
-       'method_of_diagnosis', 'subject_id', 'researchsubject_id'.
+    Create GA4GH Disease messages from CDA (Cancer Data Aggregator). The relevant table in the
+    CDA is diagnosis - 'diagnosis_id', 'diagnosis_identifier', 'primary_diagnosis',
+    'age_at_diagnosis', 'morphology', 'stage', 'grade',
+    'method_of_diagnosis', 'subject_id', 'researchsubject_id'.
+
+    :param op_mapper: An object that is able to map free text to Ontology terns
+    :type op_mapper: OpMapper
+    """
+
+    def __init__(self, op_mapper:OpMapper=None) -> None:
         """
 
-    def __init__(self, op_mapper=None) -> None:
-        """
-        :param OpMapper: An object that is able to map free text to Ontology terns
         """
         super().__init__()
         if op_mapper is None:

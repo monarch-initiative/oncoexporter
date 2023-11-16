@@ -51,7 +51,7 @@ class CdaTableImporter(CdaImporter):
                     pickle.dump(individual_df, f)
         return individual_df
 
-    def get_ga4gh_phenopackets(self, page_size: int = 100) -> typing.List[PPkt.Phenopacket]:
+    def get_ga4gh_phenopackets(self, page_size: int = 10000) -> typing.List[PPkt.Phenopacket]:
         """
 
         1.

@@ -1,44 +1,26 @@
-name: Sphinx Documentation
+name: mkdocs-generation
 on:
   push:
-    branches: [ main ]
-
+    branches:
+      - master
+      - main
+permissions:
+  contents: write
 jobs:
-  build-docs:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@main
-      with:
-        fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
-        ref: ${{ github.ref }}
-
-    - name: Set up Python 3
-      uses: actions/setup-python@v4
-      with:
-        python-version: 3.9
-
-    - name: Install Python dependencies
-      run: pip3 install sphinx sphinx-rtd-theme sphinx-copybutton
-
-    - name: Build documentation
-      run: |
-        ## Init the target folder. 
-        # We will put all site documentation there.
-        mkdir -p gh-pages
-        touch gh-pages/.nojekyll
-        git checkout main
-        python3 -m pip install .
-        # Generate the HTML pages and move the generated content into the target folder.
-        sphinx-apidoc --separate --module-first -d 4 -H "API reference" --follow-links -o docs/apidocs src/oncoexporter
-        cd docs
-        make html   
-        mv _build/html/* ../gh-pages
-
-    - name: Deploy documentation
-      if: ${{ github.event_name == 'push' }}
-      uses: JamesIves/github-pages-deploy-action@v4.4.1
-      with:
-        branch: gh-pages
-        clean: true
-        folder: gh-pages
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - uses: actions/cache@v2
+        with:
+          key: ${{ github.ref }}
+          path: .cache
+      - run: pip install mkdocs-material
+      - run: pip install mkdocs-material[imaging]
+      - run: pip install mkdocs-material-extensions
+      - run: pip install pillow cairosvg
+      - run: pip install mkdocstrings[python]
+      - run: mkdocs gh-deploy --force
