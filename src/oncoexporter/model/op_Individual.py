@@ -5,8 +5,10 @@ class OpIndividual(OpMessage):
     """OncoPacket Individual
     This class should not be used by client code. It provides a DTO-like object to hold
     data that should be instantiated by various factory methods, and it can return
-    a GA4GH Individual message
+    a GA4GH Individual message.
 
+    Note that we assume the species is always human, so taxonomy is always set to
+    9606 Homo sapiens
 
     :param id: the individual identifier (application-specific)
     :type id: str
@@ -21,8 +23,7 @@ class OpIndividual(OpMessage):
     :param karyotypic_sex: the chromosomal sex (karyotypic sex), of the individual, e.g., XY or XX or XXY, optional
     :param karyotypic_sex: str (must correspond to the enumerotion in the Phenopacket Schema)
     :param gender: the self-described gender of the individual, optional
-    :param taxonomy: Ontology term representing the species of the individual
-    :type taxonomy: PPKt.OntologyClass
+
     """
     def __init__(self, id,
                  alternate_ids = [],
@@ -31,8 +32,7 @@ class OpIndividual(OpMessage):
                  vital_status=None,
                  sex=None,
                  karyotypic_sex=None,
-                 gender=None,
-                 taxonomy=None) -> None:
+                 gender=None) -> None:
         """Constructor method
         """
         self._id = id
@@ -46,14 +46,11 @@ class OpIndividual(OpMessage):
              self._sex = PPkt.FEMALE
         else:
             self._sex = PPkt.UNKNOWN_SEX
-        if taxonomy == 'Homo sapiens':
-            self._taxonomy = PPkt.OntologyClass()
-            self._taxonomy.id = "NCBITaxon:9606"
-            self._taxonomy.label = "homo sapiens sapiens"
-        elif taxonomy is not None:
-            raise ValueError(f"Unknown species {taxonomy}")
-        else:
-            self._taxonomy = None
+
+        self._taxonomy = PPkt.OntologyClass()
+        self._taxonomy.id = "NCBITaxon:9606"
+        self._taxonomy.label = "Homo sapiens"
+
         self._vital_status = vital_status
 
 

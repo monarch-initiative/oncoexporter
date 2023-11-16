@@ -53,7 +53,7 @@ class OpIndividualTestCase(TestCase):
         taxonomy = ga4gh_indi.taxonomy
         self.assertIsNotNone(taxonomy)
         self.assertEqual("NCBITaxon:9606", taxonomy.id)
-        self.assertEqual("homo sapiens sapiens", taxonomy.label)
+        self.assertEqual("Homo sapiens", taxonomy.label)
 
     def test_alive_vital_status(self):
         ifact = CdaIndividualFactory()
