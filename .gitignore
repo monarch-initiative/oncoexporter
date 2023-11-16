@@ -166,3 +166,9 @@ c2p_env/
 notebooks/Untitled.ipynb
 
 \.*.pkl
+
+*.pkl
+*.tsv
+.DS_Store
+src/phenopackets
+*.tar.gz
