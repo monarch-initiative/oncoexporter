@@ -36,7 +36,7 @@ class CdaTableImporter(CdaImporter):
         self._use_cache = use_cache
         self._cohort_name = cohort_name
 
-    def get_diagnosis_df(self, fallback, cache_name: str):
+    def get_diagnosis_df(self, callback_fxn, cache_name: str):
         print(f"Retrieving dataframe {cache_name}")
         if self._use_cache and os.path.isfile(cache_name):
             with open(cache_name, 'rb') as cachehandle:
@@ -44,7 +44,7 @@ class CdaTableImporter(CdaImporter):
                 individual_df = pickle.load(cachehandle)
         else:
             print(f"calling CDA function")
-            individual_df = fallback()
+            individual_df = callback_fxn()
             if self._use_cache:
                 print(f"Creating cached dataframe as {cache_name}")
                 with open(cache_name, 'wb') as f:
@@ -89,7 +89,7 @@ class CdaTableImporter(CdaImporter):
             ppackt.subject.CopyFrom(individual_message)
             ppackt_d[individual_id] = ppackt
         merged_df = pd.merge(diagnosis_df, rsub_df, left_on='researchsubject_id', right_on='researchsubject_id',
-                             suffixes=["_di", "_rs"])
+                                suffixes=["_di", "_rs"])
         disease_factory = CdaDiseaseFactory()
         for idx, row in tqdm(merged_df.iterrows(), total= len(merged_df.index), desc="merged diagnosis dataframe"):
             disease_message = disease_factory.from_cancer_data_aggregator(row)

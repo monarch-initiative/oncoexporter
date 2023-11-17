@@ -32,9 +32,9 @@ class CdaDiseaseFactory(CdaFactory):
         convert a row from the CDA subject table into an Individual message (GA4GH Phenopacket Schema)
         The row is a pd.core.series.Series and contains the columns
         ['diagnosis_id', 'diagnosis_identifier', 'primary_diagnosis',
-       'age_at_diagnosis', 'morphology', 'stage', 'grade',
-       'method_of_diagnosis', 'subject_id', 'researchsubject_id']
-       :param row: a row from the CDA subject table
+        'age_at_diagnosis', 'morphology', 'stage', 'grade',
+        'method_of_diagnosis', 'subject_id', 'researchsubject_id']
+        :param row: a row from the CDA subject table
         """
         if not isinstance(row, pd.core.series.Series):
             raise ValueError(f"Invalid argument. Expected pandas series but got {type(row)}")
