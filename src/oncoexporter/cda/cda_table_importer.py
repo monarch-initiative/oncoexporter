@@ -79,21 +79,38 @@ class CdaTableImporter(CdaImporter):
         return subject_df
 
 
-    def get_ga4gh_phenopackets(self, page_size: int = 10000) -> typing.List[PPkt.Phenopacket]:
+    def get_merged_diagnosis_research_subject_df(self, page_size=10000) -> pd.DataFrame:
+        """Retrieve a merged dataframe from CDA corresponding to the diagnosis and research subject tables
+
+        :param page_size: Number of pages to retrieve at once. Defaults to 10000.
+        :type page_size: int
         """
-
-        1.
-
-        """
-        ppackt_d = {}
-
-
         diagnosis_callable = lambda: self._query.diagnosis.run(page_size=page_size).get_all().to_dataframe()
         diagnosis_df = self._get_cda_df(diagnosis_callable, f".{self._cohort_name}_diagnosis_df.pkl")
         print("obtained diagnosis_df")
         rsub_callable = lambda: self._query.researchsubject.run(page_size=page_size).get_all().to_dataframe()
         rsub_df = self._get_cda_df(rsub_callable, f".{self._cohort_name}_rsub_df.pkl")
         print("obtained rsub_df")
+        merged_df = pd.merge(diagnosis_df, rsub_df, left_on='researchsubject_id', right_on='researchsubject_id',
+                                suffixes=["_di", "_rs"])
+        return merged_df
+
+
+
+    def get_ga4gh_phenopackets(self, page_size: int = 10000) -> typing.List[PPkt.Phenopacket]:
+        """Get a list of GA4GH phenopackets corresponding to the individuals returned by the query passed to the constructor.
+
+        :param page_size: Number of pages to retrieve at once. Defaults to 10000.
+        :type page_size: int
+        """
+        # Dictionary of phenopackets, keys are the phenopacket ids.
+        ppackt_d = {}
+
+        subject_df = self.get_subject_df(page_size=page_size)
+        merged_df  = self.get_merged_diagnosis_research_subject_df(page_size=page_size)
+
+
+        individual_factory = CdaIndividualFactory()
 
         specimen_callable = lambda: self._query.specimen.run(page_size=page_size).get_all().to_dataframe()
         specimen_df = self._get_cda_df(specimen_callable, f".{self._cohort_name}_specimen_df.pkl")
@@ -104,19 +121,17 @@ class CdaTableImporter(CdaImporter):
         mutation_callable = lambda: self._query.mutation.run(page_size=page_size).get_all().to_dataframe()
         mutation_df = self._get_cda_df(mutation_callable, f".{self._cohort_name}_mutation_df.pkl")
 
-        for idx, row in tqdm(individual_df.iterrows(),total=len(individual_df), desc= "individual dataframe"):
+        for _, row in tqdm(subject_df.iterrows(),total=len(subject_df), desc= "individual dataframe"):
             individual_message = individual_factory.from_cancer_data_aggregator(row=row)
             individual_id = individual_message.id
-
             ppackt = PPkt.Phenopacket()
             ppackt.id = f'{self._cohort_name}-{individual_id}'
             ppackt.subject.CopyFrom(individual_message)
             ppackt_d[individual_id] = ppackt
-        merged_df = pd.merge(diagnosis_df, rsub_df, left_on='researchsubject_id', right_on='researchsubject_id',
-                                suffixes=["_di", "_rs"])
+
         disease_factory = CdaDiseaseFactory()
         for idx, row in tqdm(merged_df.iterrows(), total= len(merged_df.index), desc="merged diagnosis dataframe"):
-            disease_message = disease_factory.to_ga4gh_individual(row)
+            disease_message = disease_factory.to_ga4gh_disease(row)
             pp = ppackt_d.get(row["subject_id_rs"])
 
             # Do not add the disease if it is already in the phenopacket.

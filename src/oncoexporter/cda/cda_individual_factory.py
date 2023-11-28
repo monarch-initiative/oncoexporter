@@ -85,7 +85,7 @@ class CdaIndividualFactory(CdaFactory):
             vstatus.cause_of_death.CopyFrom(cause)
         return vstatus
 
-    def to_ga4gh_individual(self, row:pd.Series):
+    def to_ga4gh(self, row:pd.Series):
         """
         convert a row from the CDA subject table into an Individual message (GA4GH Phenopacket Schema)
         The row is a pd.core.series.Series and contains the columns

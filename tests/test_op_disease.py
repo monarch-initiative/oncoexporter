@@ -59,12 +59,12 @@ class OpDiseaseTestCase(TestCase):
     def test_creation(self):
         dfact = CdaDiseaseFactory()
         self.assertIsNotNone(dfact)
-        ga4gh_disease = dfact.to_ga4gh_individual(self._series)
+        ga4gh_disease = dfact.to_ga4gh_disease(self._series)
         self.assertIsNotNone(ga4gh_disease)
 
     def test_ontology_class_id(self):
         dfact = CdaDiseaseFactory()
-        ga4gh_disease = dfact.to_ga4gh_individual(self._series)
+        ga4gh_disease = dfact.to_ga4gh_disease(self._series)
         self.assertEquals(ga4gh_disease.term.id, 'NCIT:C3262')
         self.assertEquals(ga4gh_disease.term.label, 'Neoplasm')
 
@@ -75,7 +75,7 @@ class OpDiseaseTestCase(TestCase):
             this_series = self._create_series(primary_diagnosis=d['primary_diagnosis'],
                                               primary_diagnosis_condition=d['primary_diagnosis_condition'],
                                               primary_diagnosis_site=d['primary_diagnosis_site'])
-            ga4gh_disease = dfact.to_ga4gh_individual(this_series)
+            ga4gh_disease = dfact.to_ga4gh_disease(this_series)
             self.assertEqual(d['id'], ga4gh_disease.term.id)
             self.assertEqual(d['label'], ga4gh_disease.term.label)
             pass

@@ -4,7 +4,7 @@ import abc
 class CdaFactory(metaclass=abc.ABCMeta):
 
     @abc.abstractmethod
-    def to_ga4gh_individual(self, row):
+    def to_ga4gh(self, row):
         pass
 
     def get_item(self, row, column_name):
