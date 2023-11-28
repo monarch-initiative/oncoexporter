@@ -10,6 +10,19 @@ class CdaIndividualFactory(CdaFactory):
     """This class is reposible for creating GA4GH individual messages from CDA data.
 
     The class uses information from the *subject* table in CDA to create GA4GH Phenopacket Individual messages.
+    The structure of the CDA subject table is as follows. TODO add more documentation
+
+        - subject_id
+        - subject_identifier
+        - species
+        - sex
+        - race
+        - ethnicity
+        - days_to_birth
+        - subject_associated_project
+        - vital_status
+        - days_to_death
+        - cause_of_death
     """
     def __init__(self) -> None:
         """
@@ -88,10 +101,7 @@ class CdaIndividualFactory(CdaFactory):
     def to_ga4gh(self, row:pd.Series):
         """
         convert a row from the CDA subject table into an Individual message (GA4GH Phenopacket Schema)
-        The row is a pd.core.series.Series and contains the columns
-        ['subject_id', 'subject_identifier', 'species', 'sex', 'race',
-        'ethnicity', 'days_to_birth', 'subject_associated_project',
-        'vital_status', 'days_to_death', 'cause_of_death']
+
         :param row: a row from the CDA subject table
         :type row: pd.Series
         :returns: A GA4GH Phenopacket Schema Individual object that corresponds to the subject in this row.
