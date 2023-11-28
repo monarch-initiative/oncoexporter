@@ -29,7 +29,7 @@ class CdaBiosampleFactory(CdaFactory):
     Class for creating a `Biosample` element from a row of the `specimen` CDA table.
     """
 
-    def from_cancer_data_aggregator(self, row) -> pp.Biosample:
+    def to_ga4gh_individual(self, row) -> pp.Biosample:
         biosample = pp.Biosample()
 
         biosample.id = row['specimen_id']
@@ -89,7 +89,7 @@ def _map_primary_disease_type(val: typing.Optional[str]) -> typing.Optional[pp.O
             return None
     else:
         return None
-    
+
 def _map_specimen_type(val: typing.Optional[str]) -> typing.Optional[pp.OntologyClass]:
     if val is not None:
         val = val.lower()
@@ -107,7 +107,7 @@ def _map_specimen_type(val: typing.Optional[str]) -> typing.Optional[pp.Ontology
             return None
     else:
         return None
-    
+
 
 def _map_source_material_type(val: typing.Optional[str]) -> typing.Optional[pp.OntologyClass]:
     if val is not None:

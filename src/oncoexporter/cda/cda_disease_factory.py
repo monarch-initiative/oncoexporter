@@ -27,7 +27,7 @@ class CdaDiseaseFactory(CdaFactory):
         else:
             self._opMapper = op_mapper
 
-    def from_cancer_data_aggregator(self, row):
+    def to_ga4gh_individual(self, row):
         """
         convert a row from the CDA subject table into an Individual message (GA4GH Phenopacket Schema)
         The row is a pd.core.series.Series and contains the columns

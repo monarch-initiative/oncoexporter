@@ -60,12 +60,23 @@ class CdaTableImporter(CdaImporter):
         return individual_df
 
 
-    def get_individual_df(self, page_size=10000) -> pd.DataFrame:
-        individual_factory = CdaIndividualFactory()
-        callable = lambda: self._query.subject.run(page_size=page_size).get_all().to_dataframe()
-        print("getting individual_df")
-        individual_df = self._get_cda_df(callable, f".{self._cohort_name}_individual_df.pkl")
-        print("obtained individual_df")
+    def get_subject_df(self, page_size=10000) -> pd.DataFrame:
+        """Retrieve the subject dataframe from CDA
+
+        This method uses the Query that was passed to the constructor to retrieve data from the CDA subject table
+
+        :param page_size: Number of pages to retrieve at once. Defaults to 10000.
+        :type page_size: int
+
+        :raises: raises an exception if the query object was not properly initialized
+        :returns: pandas DataFrame that corresponds to the CDA subject table.
+        :rtype: pd.DataFrame
+        """
+        if self._query is None:
+            raise Exception(f"Could not retrieve subject dataframe because query object was None")
+        callable = lambda: self._query.subject.run(page_size=page_size).get_all().to_dataframe();
+        subject_df = self._get_cda_df(callable, f".{self._cohort_name}_individual_df.pkl");
+        return subject_df
 
 
     def get_ga4gh_phenopackets(self, page_size: int = 10000) -> typing.List[PPkt.Phenopacket]:
@@ -105,7 +116,7 @@ class CdaTableImporter(CdaImporter):
                                 suffixes=["_di", "_rs"])
         disease_factory = CdaDiseaseFactory()
         for idx, row in tqdm(merged_df.iterrows(), total= len(merged_df.index), desc="merged diagnosis dataframe"):
-            disease_message = disease_factory.from_cancer_data_aggregator(row)
+            disease_message = disease_factory.to_ga4gh_individual(row)
             pp = ppackt_d.get(row["subject_id_rs"])
 
             # Do not add the disease if it is already in the phenopacket.
@@ -114,7 +125,7 @@ class CdaTableImporter(CdaImporter):
 
         specimen_factory = CdaBiosampleFactory()
         for idx, row in tqdm(specimen_df.iterrows(),total= len(specimen_df.index), desc="specimen/biosample dataframe"):
-            biosample_message = specimen_factory.from_cancer_data_aggregator(row)
+            biosample_message = specimen_factory.to_ga4gh_individual(row)
             individual_id = row["subject_id"]
             if individual_id not in ppackt_d:
                 raise ValueError(f"Attempt to enter unknown individual ID from biosample factory: \"{individual_id}\"")
@@ -123,7 +134,7 @@ class CdaTableImporter(CdaImporter):
         mutation_factory = CdaMutationFactory()
         for idx, row in tqdm(mutation_df.iterrows(), total=len(mutation_df.index), desc="mutation dataframe"):
             individual_id = row["cda_subject_id"]
-            variant_interpretation_message = mutation_factory.from_cancer_data_aggregator(row)
+            variant_interpretation_message = mutation_factory.to_ga4gh_individual(row)
             genomic_interpretation = PPkt.GenomicInterpretation()
             genomic_interpretation.subject_or_biosample_id = row["Tumor_Aliquot_UUID"]
             genomic_interpretation.variant_interpretation.CopyFrom(variant_interpretation_message)

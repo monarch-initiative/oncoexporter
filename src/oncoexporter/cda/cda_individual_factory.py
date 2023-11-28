@@ -1,6 +1,6 @@
 import phenopackets as PPkt
 import pandas as pd
-from typing import Option
+from typing import Union
 
 from oncoexporter.model.op_Individual import OpIndividual
 from  .mapper.op_cause_of_death_mapper import OpCauseOfDeathMapper
@@ -19,13 +19,13 @@ class CdaIndividualFactory(CdaFactory):
         self._cause_of_death_mapper = OpCauseOfDeathMapper()
 
     @staticmethod
-    def days_to_iso(days: Option[int,str]):
+    def days_to_iso(days: Union[int,str]):
         """Convert the number of days of life into an ISO 8601 period representing the age of an individual (e.g., P42Y7M is 42 years and 7 months).
 
         FYI there is a library for working with iso8601: https://pypi.org/project/iso8601/
 
         :param days: number of days of life (str or int)
-        :type days: Option[int,str]
+        :type days: Union[int,str]
         :returns: ISO8601 period (age) string, e.g. P42Y5M3D for 42 years, 5 months, and 3 days.
         :rtype: str
         """
@@ -85,7 +85,7 @@ class CdaIndividualFactory(CdaFactory):
             vstatus.cause_of_death.CopyFrom(cause)
         return vstatus
 
-    def from_cancer_data_aggregator(self, row:pd.Series):
+    def to_ga4gh_individual(self, row:pd.Series):
         """
         convert a row from the CDA subject table into an Individual message (GA4GH Phenopacket Schema)
         The row is a pd.core.series.Series and contains the columns

@@ -4,7 +4,7 @@ import abc
 class CdaFactory(metaclass=abc.ABCMeta):
 
     @abc.abstractmethod
-    def from_cancer_data_aggregator(self, row):
+    def to_ga4gh_individual(self, row):
         pass
 
     def get_item(self, row, column_name):
