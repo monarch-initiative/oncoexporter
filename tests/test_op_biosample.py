@@ -30,7 +30,7 @@ class TestMakeBiosample(unittest.TestCase):
             'PDC000219.P067'
         ]
         row = pd.Series({key: val for key, val in zip(cols, vals)})
-        biosample = self.factory.to_ga4gh_individual(row)
+        biosample = self.factory.to_ga4gh(row)
 
         self.assertEqual(biosample.id, "PDC000219.P067.P067 - 2 - 1")
 

@@ -3,6 +3,11 @@ import pandas as pd
 
 
 class CdaFactory(metaclass=abc.ABCMeta):
+    """Superclass for the CDA Factory Classes
+
+    Each subclass must implement the to_ga4gh method, which transforms a row of a table from CDA to a GA4GH Message.
+    """
+
 
     @abc.abstractmethod
     def to_ga4gh(self, row:pd.Series):

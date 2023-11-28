@@ -42,7 +42,7 @@ class CdaMutationFactory(CdaFactory):
             'Mutation_Status', 'HGVSc', 'HGVSp', 'HGVSp_Short', 'Transcript_ID', 'ENSP'
         ]
 
-    def to_ga4gh_individual(self, row):
+    def to_ga4gh(self, row):
         """
         convert a row from the CDA subject table into an Individual message (GA4GH Phenopacket Schema)
         The row is a pd.core.series.Series and contains the columns
