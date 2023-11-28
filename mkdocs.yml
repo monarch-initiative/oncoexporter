@@ -27,6 +27,7 @@ nav:
   - API:
     - cda:
       - cda_table_importer: 'cda/cda_table_importer.md'
+      - cda_factory: 'cda/cda_factory.md'
       - cda_individual_factory: 'cda/cda_individual_factory.md'
       - cda_disease_factory: 'cda/cda_disease_factory.md'
       - cda_biosample_factory: 'cda/cda_biosample_factory.md'

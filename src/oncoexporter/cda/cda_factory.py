@@ -1,10 +1,17 @@
 import abc
+import pandas as pd
 
 
 class CdaFactory(metaclass=abc.ABCMeta):
 
     @abc.abstractmethod
-    def to_ga4gh(self, row):
+    def to_ga4gh(self, row:pd.Series):
+        """Return a message from the GA4GH Phenopacket Schema that corresponds to this row.
+
+        :param row: A row from the CDA
+        :type row: pd.Series
+        :returns: a message from the GA4GH Phenopacket Schema
+        """
         pass
 
     def get_item(self, row, column_name):
