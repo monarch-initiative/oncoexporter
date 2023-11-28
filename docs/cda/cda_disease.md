@@ -41,7 +41,7 @@ This field represents the main cancer diagnosis of this individual
 - age_at_diagnosis
 This field represents the number of days of life of the individual on the day during which the cancer diagnosis was made.
 - morphology
-Question: What do entries such as `8071/3` mean? Is there a data dictionary for morphology?
+Entries such as `8071/3` are ICD-O codes. TODO - translate into ontology codes.
 - stage
 Cancer stage.
 - grade
@@ -86,3 +86,19 @@ Question: This seems to be duplicative with the field `primary_diagnosis` in the
 Todo - we can map this to uberon
 - subject_id
 This relates to the subject_id in other tables.
+
+
+# Mapping strategy
+
+We merge the *diagnosis* and *researchsubject* tables to retrieve all needed information about the disease diagnosis.
+
+```python title="Merging diagnosis and researchsubject via the researchsubject_id"
+merged_df = pd.merge(diagnosis_df,
+                    rsub_df,
+                    left_on='researchsubject_id',
+                    right_on='researchsubject_id',
+                    suffixes=["_di", "_rs"])
+```
+
+
+
