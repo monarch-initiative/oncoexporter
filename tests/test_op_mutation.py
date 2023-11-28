@@ -29,7 +29,7 @@ class OpMutationTestCase(TestCase):
         d['Entrez_Gene_Id'] = "42"
         series = pd.Series(d)
         factory = CdaMutationFactory()
-        vinterpretation = factory.from_cancer_data_aggregator(series)
+        vinterpretation = factory.to_ga4gh_individual(series)
         self.assertIsNotNone(vinterpretation)
         self.assertIsNotNone(vinterpretation.variation_descriptor)
         vdescriptor = vinterpretation.variation_descriptor
@@ -49,7 +49,7 @@ class OpMutationTestCase(TestCase):
         d['HGVSp'] = "p.Tyr1842Ter"
         series = pd.Series(d)
         factory = CdaMutationFactory()
-        vinterpretation = factory.from_cancer_data_aggregator(series)
+        vinterpretation = factory.to_ga4gh_individual(series)
 
         self.assertIsNotNone(vinterpretation)
         self.assertIsNotNone(vinterpretation.variation_descriptor)

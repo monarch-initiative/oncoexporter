@@ -27,12 +27,12 @@ class OpIndividualTestCase(TestCase):
     def test_creation(self):
         ifact = CdaIndividualFactory()
         self.assertIsNotNone(ifact)
-        ga4gh_indi = ifact.from_cancer_data_aggregator(self._series)
+        ga4gh_indi = ifact.to_ga4gh_individual(self._series)
         self.assertIsNotNone(ga4gh_indi)
 
     def test_id(self):
         ifact = CdaIndividualFactory()
-        ga4gh_indi = ifact.from_cancer_data_aggregator(self._series)
+        ga4gh_indi = ifact.to_ga4gh_individual(self._series)
         expected_id = 'CGCI.HTMCP-03-06-02007'
         self.assertEqual(expected_id, ga4gh_indi.id)
 
@@ -42,14 +42,14 @@ class OpIndividualTestCase(TestCase):
         is approximately correct.
         """
         ifact = CdaIndividualFactory()
-        ga4gh_indi = ifact.from_cancer_data_aggregator(self._series)
+        ga4gh_indi = ifact.to_ga4gh_individual(self._series)
         expected_iso = 'P43Y9M'
         calculated_iso = ga4gh_indi.time_at_last_encounter.age.iso8601duration
         self.assertEqual(expected_iso, calculated_iso)
 
     def test_taxonomy(self):
         ifact = CdaIndividualFactory()
-        ga4gh_indi = ifact.from_cancer_data_aggregator(self._series)
+        ga4gh_indi = ifact.to_ga4gh_individual(self._series)
         taxonomy = ga4gh_indi.taxonomy
         self.assertIsNotNone(taxonomy)
         self.assertEqual("NCBITaxon:9606", taxonomy.id)
@@ -57,7 +57,7 @@ class OpIndividualTestCase(TestCase):
 
     def test_alive_vital_status(self):
         ifact = CdaIndividualFactory()
-        ga4gh_indi = ifact.from_cancer_data_aggregator(self._series)
+        ga4gh_indi = ifact.to_ga4gh_individual(self._series)
         vs = ga4gh_indi.vital_status
         self.assertIsNotNone(vs)
         self.assertEqual(PPkt.VitalStatus.ALIVE, vs.status)
@@ -76,7 +76,7 @@ class OpIndividualTestCase(TestCase):
                 "Cancer Related"]
         series =  pd.Series(data, index=self._column_names)
         ifact = CdaIndividualFactory()
-        ga4gh_indi = ifact.from_cancer_data_aggregator(series)
+        ga4gh_indi = ifact.to_ga4gh_individual(series)
         vs = ga4gh_indi.vital_status
         self.assertIsNotNone(vs)
         self.assertEqual(PPkt.VitalStatus.DECEASED, vs.status)

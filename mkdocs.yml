@@ -27,11 +27,15 @@ nav:
   - API:
     - cda:
       - cda_table_importer: 'cda/cda_table_importer.md'
+      - cda_factory: 'cda/cda_factory.md'
       - cda_individual_factory: 'cda/cda_individual_factory.md'
-      - cda_disease: 'cda/cda_disease.md'
+      - cda_disease_factory: 'cda/cda_disease_factory.md'
+      - cda_biosample_factory: 'cda/cda_biosample_factory.md'
     - model:
       - "overview": "index.md"
       - "op_individual": "model/op_individual.md"
+  - explanations:
+    - cda_disease: 'explanations/cda_disease.md'
 
 
 plugins:
