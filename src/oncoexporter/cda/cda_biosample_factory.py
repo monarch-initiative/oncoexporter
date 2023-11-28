@@ -1,36 +1,52 @@
 import typing
 
-import phenopackets as pp
+import phenopackets as PPKt
 
 from .cda_factory import CdaFactory
 
-HOMO_SAPIENS = pp.OntologyClass(id='NCBITaxon:9606', label='Homo sapiens')
-LUNG = pp.OntologyClass(id='UBERON:0002048', label='lung')
+HOMO_SAPIENS = PPKt.OntologyClass(id='NCBITaxon:9606', label='Homo sapiens')
+LUNG = PPKt.OntologyClass(id='UBERON:0002048', label='lung')
 
-LUNG_ADENOCARCINOMA = pp.OntologyClass(id='NCIT:C3512', label='Lung Adenocarcinoma')
-LUNG_SQUAMOUS_CELL_CARCINOMA = pp.OntologyClass(id='NCIT:C3493', label='Lung Squamous Cell Carcinoma')
+LUNG_ADENOCARCINOMA = PPKt.OntologyClass(id='NCIT:C3512', label='Lung Adenocarcinoma')
+LUNG_SQUAMOUS_CELL_CARCINOMA = PPKt.OntologyClass(id='NCIT:C3493', label='Lung Squamous Cell Carcinoma')
 
-BLOOD_DERIVED_NORMAL = pp.OntologyClass(id='NCIT:C17610', label='Blood Derived Sample')
-NORMAL_ADJACENT_TISSUE = pp.OntologyClass(id='NCIT:C164032', label='Tumor-Adjacent Normal Specimen')
-PRIMARY_SOLID_TUMOR = pp.OntologyClass(id='NCIT:C162622', label='Tumor Segment')
-PRIMARY_TUMOR = pp.OntologyClass(id='NCIT:C162622', label='Tumor Segment')
-SOLID_TISSUE_NORMAL = pp.OntologyClass(id='NCIT:C164014', label='Solid Tissue Specimen')
-TUMOR = pp.OntologyClass(id='NCIT:C18009', label='Tumor Tissue')
+BLOOD_DERIVED_NORMAL = PPKt.OntologyClass(id='NCIT:C17610', label='Blood Derived Sample')
+NORMAL_ADJACENT_TISSUE = PPKt.OntologyClass(id='NCIT:C164032', label='Tumor-Adjacent Normal Specimen')
+PRIMARY_SOLID_TUMOR = PPKt.OntologyClass(id='NCIT:C162622', label='Tumor Segment')
+PRIMARY_TUMOR = PPKt.OntologyClass(id='NCIT:C162622', label='Tumor Segment')
+SOLID_TISSUE_NORMAL = PPKt.OntologyClass(id='NCIT:C164014', label='Solid Tissue Specimen')
+TUMOR = PPKt.OntologyClass(id='NCIT:C18009', label='Tumor Tissue')
 
-ANALYTE = pp.OntologyClass(id='NCIT:C128639', label='Analyte')
-ALIQUOT = pp.OntologyClass(id='NCIT:C25414', label='Aliquot')
-PORTION = pp.OntologyClass(id='NCIT:C103166', label='Portion or Totality')
-SAMPLE = pp.OntologyClass(id='NCIT:C70699', label='Sample')
-SLIDE = pp.OntologyClass(id='NCIT:C165218', label='Diagnostic Slide')
+ANALYTE = PPKt.OntologyClass(id='NCIT:C128639', label='Analyte')
+ALIQUOT = PPKt.OntologyClass(id='NCIT:C25414', label='Aliquot')
+PORTION = PPKt.OntologyClass(id='NCIT:C103166', label='Portion or Totality')
+SAMPLE = PPKt.OntologyClass(id='NCIT:C70699', label='Sample')
+SLIDE = PPKt.OntologyClass(id='NCIT:C165218', label='Diagnostic Slide')
 
 
 class CdaBiosampleFactory(CdaFactory):
     """
     Class for creating a `Biosample` element from a row of the `specimen` CDA table.
+
+    The class returns a GA4GH Biosample object that corresponds to a row of the speciment table.
+    The CDA specimen table has the following fields.
+
+        - specimen_id: identifier
+        - specimen_identifier: structured field with additional information
+        - specimen_associated_project: e.g., CGCI-HTMCP-CC
+        - days_to_collection: age in days at time specimen was collected
+        - primary_disease_type: to be clarified
+        - anatomical_site: body location at which specimen was collected
+        - source_material_type: todo
+        - specimen_type: todo
+        - derived_from_specimen: todo
+        - derived_from_subject: todo
+        - subject_id: todo
+        - researchsubject_id: todo
     """
 
-    def to_ga4gh_individual(self, row) -> pp.Biosample:
-        biosample = pp.Biosample()
+    def to_ga4gh(self, row) -> PPKt.Biosample:
+        biosample = PPKt.Biosample()
 
         biosample.id = row['specimen_id']
 
@@ -69,7 +85,7 @@ class CdaBiosampleFactory(CdaFactory):
         return biosample
 
 
-def _map_anatomical_site(val: typing.Optional[str]) -> typing.Optional[pp.OntologyClass]:
+def _map_anatomical_site(val: typing.Optional[str]) -> typing.Optional[PPKt.OntologyClass]:
     if val is None:
         return None
     if val.lower() == 'lung':
@@ -78,7 +94,7 @@ def _map_anatomical_site(val: typing.Optional[str]) -> typing.Optional[pp.Ontolo
         return None
 
 
-def _map_primary_disease_type(val: typing.Optional[str]) -> typing.Optional[pp.OntologyClass]:
+def _map_primary_disease_type(val: typing.Optional[str]) -> typing.Optional[PPKt.OntologyClass]:
     if val is not None:
         val = val.lower()
         if val == 'lung adenocarcinoma':
@@ -90,7 +106,7 @@ def _map_primary_disease_type(val: typing.Optional[str]) -> typing.Optional[pp.O
     else:
         return None
 
-def _map_specimen_type(val: typing.Optional[str]) -> typing.Optional[pp.OntologyClass]:
+def _map_specimen_type(val: typing.Optional[str]) -> typing.Optional[PPKt.OntologyClass]:
     if val is not None:
         val = val.lower()
         if val == "analyte":
@@ -109,7 +125,7 @@ def _map_specimen_type(val: typing.Optional[str]) -> typing.Optional[pp.Ontology
         return None
 
 
-def _map_source_material_type(val: typing.Optional[str]) -> typing.Optional[pp.OntologyClass]:
+def _map_source_material_type(val: typing.Optional[str]) -> typing.Optional[PPKt.OntologyClass]:
     if val is not None:
         val = val.lower()
         if val == "blood derived normal":
