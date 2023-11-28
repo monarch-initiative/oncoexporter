@@ -67,3 +67,25 @@ jupyter-notebook
 
 At this point, a Jupyter page should open in the system browser. Navigate to the notebook or create one and be sure
 to activate the ``oncoexporter_env`` kernel.
+
+
+
+## mkdocs for documentation.
+
+To run the mkdocs server locally, enter the following code to install prerequisites in the virtual environment
+
+```bash
+pip install mkdocs-material
+pip install mkdocs-material[imaging]
+pip install mkdocs-material-extensions
+pip install pillow cairosvg
+pip install mkdocstrings[python]
+```
+
+and then enter
+
+```bash
+mkdocs serve
+```
+
+This will serve the documentation site at http://127.0.0.1:8000/ and dynamically show changes. Merging to main will update the site on github IO.

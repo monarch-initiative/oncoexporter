@@ -20,7 +20,18 @@ theme:
       accent: white
 
 
-# nav:
+nav:
+  - Home: 'index.md'
+  - Installation: 'installation.md'
+  - Workplan: 'workplan.md'
+  - API:
+    - cda:
+      - cda_table_importer: 'cda/cda_table_importer.md'
+      - cda_individual_factory: 'cda/cda_individual_factory.md'
+      - cda_disease: 'cda/cda_disease.md'
+    - model:
+      - "overview": "index.md"
+      - "op_individual": "model/op_individual.md"
 
 
 plugins:

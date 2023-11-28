@@ -1,5 +1,6 @@
 import abc
 from typing import Optional
+import pandas as pd
 import phenopackets as PPkt
 
 
@@ -12,7 +13,7 @@ class OpMapper(metaclass=abc.ABCMeta):
     """
 
     @abc.abstractmethod
-    def get_ontology_term(self, row) ->Optional[PPkt.OntologyClass]:
+    def get_ontology_term(self, row:pd.Series) ->Optional[PPkt.OntologyClass]:
         """
         The factory classes take pandas table rows (Series) as input and transform them into messages in the
         GA4GH Phenopacket Schema. For the CDA, we often need to transform combinations of strings in multiple
@@ -28,5 +29,5 @@ class OpMapper(metaclass=abc.ABCMeta):
 
     """
     def get_nci_term(self, string) -> Optional[PPkt.OntologyClass]:
-        
+
     """
