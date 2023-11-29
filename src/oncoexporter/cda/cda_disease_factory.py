@@ -1,6 +1,8 @@
 import phenopackets as PPkt
 import pandas as pd
 
+from oncoexporter.model.op_disease import OpDisease
+
 from .mapper.op_mapper import OpMapper
 from .mapper.op_diagnosis_mapper import OpDiagnosisMapper
 from .cda_factory import CdaFactory
@@ -59,14 +61,14 @@ class CdaDiseaseFactory(CdaFactory):
         if not isinstance(row, pd.core.series.Series):
             raise ValueError(f"Invalid argument. Expected pandas series but got {type(row)}")
 
-        disease = PPkt.Disease()
-
-        disease.term.CopyFrom(self._parse_diagnosis_into_ontology_term(
+        disease_term  = self._parse_diagnosis_into_ontology_term(
             primary_diagnosis=row["primary_diagnosis"],
             primary_diagnosis_condition=row["primary_diagnosis_condition"],
             primary_diagnosis_site=row["primary_diagnosis_site"]
-        ))
-        return disease
+        )
+        ## Collect other piences of data to add to the constructor on the next line
+        diseaseModel = OpDisease(disease_term=disease_term)
+        return diseaseModel.to_ga4gh()
 
     def _parse_diagnosis_into_ontology_term(self,
                                             primary_diagnosis: str,

@@ -176,6 +176,7 @@ class CdaTableImporter(CdaImporter):
                 raise ValueError(f"Attempt to enter unknown individual ID from biosample factory: \"{individual_id}\"")
             ppackt_d.get(individual_id).biosamples.append(biosample_message)
 
+
         # Retrieve GA4GH Genomic Interpretation messages (for mutation)
         for idx, row in tqdm(mutation_df.iterrows(), total=len(mutation_df.index), desc="mutation dataframe"):
             individual_id = row["cda_subject_id"]
