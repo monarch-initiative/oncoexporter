@@ -40,7 +40,7 @@ class OpDisease(OpMessage):
         if disease_stage_term_list is not None:
             if not isinstance(disease_stage_term_list, list):
                 raise ValueError(f"If passed, argument \"disease_stage_term_list\" must be a list but was {type(disease_stage_term_list)}")
-        if not disease_stage_term_list or len(disease_stage_term_list) == 0:
+        if disease_stage_term_list and len(disease_stage_term_list) == 0:
             raise ValueError(f"If passed, argument \"disease_stage_term_list\" cannot be an empty list")
 
 
