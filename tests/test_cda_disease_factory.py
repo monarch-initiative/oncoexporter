@@ -1,5 +1,7 @@
 import unittest
 import os
+from typing import List
+
 import pandas as pd
 import phenopackets as PPKt
 
@@ -9,6 +11,7 @@ from oncoexporter.cda import CdaDiseaseFactory
 MERGED_DIAG_RESEARCH_DF_FILE = os.path.join(os.path.dirname(__file__), 'data', 'merged_diagnosis_researchsubject_tiny.tsv')
 ALL_STAGE_VALUES_TEST_DF_FILE = os.path.join(os.path.dirname(__file__), 'data', 'merged_diagnosis_researchsubject_unique_stages_lung_cervix.tsv')
 
+
 class TestCdaDiseaseFactory(unittest.TestCase):
 
     @classmethod
@@ -16,6 +19,14 @@ class TestCdaDiseaseFactory(unittest.TestCase):
         cls.factory = CdaDiseaseFactory()
         cls.merged_diag_research_test_df = pd.read_csv(MERGED_DIAG_RESEARCH_DF_FILE, sep="\t")
         cls.stage_values_test_df = pd.read_csv(ALL_STAGE_VALUES_TEST_DF_FILE, sep="\t")
+
+        cls.disease_objs = {}
+        for i, row in cls.stage_values_test_df.iterrows():
+            cls.disease_objs[row['subject_id_rs']] = cls.factory.to_ga4gh(row)
+
+    def test_disease_stage_is_ontology_term(self):
+        self.assertEqual(self.disease_objs['s1'].disease_stage[0].__class__,
+                         PPKt.OntologyClass)
 
     def test_correct_stage_parsing(self):
         # maybe this should be a parameterized test, but I don't see an elegant way of
