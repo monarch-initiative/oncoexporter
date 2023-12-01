@@ -126,15 +126,33 @@ class CdaDiseaseFactory(CdaFactory):
         ontology_term.id ='NCIT:C92207'  # Stage unknown
         ontology_term.label = 'Stage Unknown'
 
-        if stage_str in ['IA', 'IB', 'Stage I', 'Stage IA', 'Stage IB', 'Stage 1']:
+        if stage_str in ['Stage I', 'Stage 1', 'stage 1', 'stage I']:
             ontology_term.id = 'NCIT:C27966'
             ontology_term.label = 'Stage I'
-        elif stage_str in ['IIA', 'IIB', 'Stage II', 'Stage IIA', 'Stage IIB', 'Stage 2']:
+        elif stage_str in ['IA', 'Stage IA', 'stage IA']:
+            ontology_term.id = 'NCIT:C27975'
+            ontology_term.label = 'Stage IA'
+        elif stage_str in ['IB', 'Stage IB', 'stage IB']:
+            ontology_term.id = 'NCIT:C27976'
+            ontology_term.label = 'Stage IB'
+        elif stage_str in ['Stage II', 'Stage 2', 'stage 2', 'stage II']:
             ontology_term.id = 'NCIT:C28054'
             ontology_term.label = 'Stage II'
-        elif stage_str in ['IIIA', 'IIIB', 'Stage IIIA', 'Stage 3']:
+        elif stage_str in ['IIA', 'Stage IIA', 'stage IIA']:
+            ontology_term.id = 'NCIT:C27967'
+            ontology_term.label = 'Stage IIA'
+        elif stage_str in ['IIB', 'Stage IIB', 'stage IIB']:
+            ontology_term.id = 'NCIT:C27968'
+            ontology_term.label = 'Stage IIB'
+        elif stage_str in ['Stage 3', 'stage 3']:
             ontology_term.id = 'NCIT:C27970'
             ontology_term.label = 'Stage III'
+        elif stage_str in ['IIIA', 'Stage IIIA', 'Stage 3A', 'stage 3A']:
+            ontology_term.id = 'NCIT:C27977'
+            ontology_term.label = 'Stage IIIA'
+        elif stage_str in ['IIIB', 'Stage IIIB', 'Stage 3B', 'stage 3B']:
+            ontology_term.id = 'NCIT:C27978'
+            ontology_term.label = 'Stage IIIB'
         elif stage_str in ['IV', 'Stage 4']:
             ontology_term.id = 'NCIT:C27971'
             ontology_term.label = 'Stage IV'
