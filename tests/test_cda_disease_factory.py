@@ -1,17 +1,25 @@
 import unittest
 import os
-from typing import List
-
 import pandas as pd
 from parameterized import parameterized
 import phenopackets as PPKt
-
 from oncoexporter.cda import CdaDiseaseFactory
 
 
 MERGED_DIAG_RESEARCH_DF_FILE = os.path.join(os.path.dirname(__file__), 'data', 'merged_diagnosis_researchsubject_tiny.tsv')
 ALL_STAGE_VALUES_TEST_DF_FILE = os.path.join(os.path.dirname(__file__), 'data', 'merged_diagnosis_researchsubject_unique_stages_lung_cervix.tsv')
 
+# Global variables for NCIT ontology terms
+STAGE_IA = ('NCIT:C27975', 'Stage IA')
+STAGE_IB = ('NCIT:C27976', 'Stage IB')
+STAGE_IIA = ('NCIT:C27967', 'Stage IIA')
+STAGE_IIB = ('NCIT:C27968', 'Stage IIB')
+STAGE_IIIA = ('NCIT:C27977', 'Stage IIIA')
+STAGE_IIIB = ('NCIT:C27978', 'Stage IIIB')
+STAGE_IV = ('NCIT:C27971', 'Stage IV')
+STAGE_UNKNOWN = ('NCIT:C92207', 'Stage Unknown')
+STAGE_I = ('NCIT:C27966', 'Stage I')
+STAGE_II = ('NCIT:C28054', 'Stage II')
 
 class TestCdaDiseaseFactory(unittest.TestCase):
 
@@ -30,21 +38,21 @@ class TestCdaDiseaseFactory(unittest.TestCase):
                          PPKt.OntologyClass)
 
     @parameterized.expand([
-        ('s1', ('NCIT:C27975', 'Stage IA')),         # IA == stage IA
-        ('s2', ('NCIT:C27976', 'Stage IB')),         # IB == stage IB
-        ('s3', ('NCIT:C27967', 'Stage IIA')),        # IIA == stage IIA
-        ('s4', ('NCIT:C27968', 'Stage IIB')),        # IIB == stage IIB
-        ('s5', ('NCIT:C27977', 'Stage IIIA')),       # IIIA == stage IIIA
-        ('s6', ('NCIT:C27978', 'Stage IIIB')),       # IIIB == stage IIIB
-        ('s7', ('NCIT:C27971', 'Stage IV')),        # IV == stage IV
-        ('s8', ('NCIT:C27975', 'Stage IA')),         # Stage IA
-        ('s9', ('NCIT:C27976', 'Stage IB')),         # Stage IB
-        ('s10', ('NCIT:C27967', 'Stage IIA')),       # Stage IIA
-        ('s11', ('NCIT:C27968', 'Stage IIB')),       # Stage IIB
-        ('s12', ('NCIT:C27977', 'Stage IIIA')),      # Stage IIIA
-        ('s13', ('NCIT:C92207', 'Stage Unknown')),  # None == Stage Unknown = C92207
-        ('s14', ('NCIT:C27966', 'Stage I')),        # Stage I
-        ('s15', ('NCIT:C28054', 'Stage II'))        # Stage II
+        ('s1', STAGE_IA),
+        ('s2', STAGE_IB),
+        ('s3', STAGE_IIA),
+        ('s4', STAGE_IIB),
+        ('s5', STAGE_IIIA),
+        ('s6', STAGE_IIIB),
+        ('s7', STAGE_IV),
+        ('s8', STAGE_IA),
+        ('s9', STAGE_IB),
+        ('s10', STAGE_IIA),
+        ('s11', STAGE_IIB),
+        ('s12', STAGE_IIIA),
+        ('s13', STAGE_UNKNOWN),
+        ('s14', STAGE_I),
+        ('s15', STAGE_II)
     ])
     def test_correct_stage_parsing(self, subject_id, expected_ncit_ontology):
         this_row = self.stage_values_test_df[
