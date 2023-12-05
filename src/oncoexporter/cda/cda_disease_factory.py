@@ -1,3 +1,5 @@
+from typing import List
+
 import phenopackets as PPkt
 import pandas as pd
 
@@ -61,13 +63,18 @@ class CdaDiseaseFactory(CdaFactory):
         if not isinstance(row, pd.core.series.Series):
             raise ValueError(f"Invalid argument. Expected pandas series but got {type(row)}")
 
-        disease_term  = self._parse_diagnosis_into_ontology_term(
+        disease_term = self._parse_diagnosis_into_ontology_term(
             primary_diagnosis=row["primary_diagnosis"],
             primary_diagnosis_condition=row["primary_diagnosis_condition"],
             primary_diagnosis_site=row["primary_diagnosis_site"]
         )
-        ## Collect other piences of data to add to the constructor on the next line
-        diseaseModel = OpDisease(disease_term=disease_term)
+        ## Collect other pieces of data to add to the constructor on the next line
+
+        # Deal with stage
+        stage_term_list = self._parse_stage_into_ontology_terms(row['stage'])
+
+        diseaseModel = OpDisease(disease_term=disease_term,
+                                 disease_stage_term_list=stage_term_list)
         return diseaseModel.to_ga4gh()
 
     def _parse_diagnosis_into_ontology_term(self,
@@ -113,3 +120,40 @@ class CdaDiseaseFactory(CdaFactory):
             ontology_term.id = 'NCIT:C9133'
             ontology_term.label = 'Lung Adenosquamous Carcinoma'
         return ontology_term
+
+    def _parse_stage_into_ontology_terms(self, stage_str: str) -> List[PPkt.OntologyClass]:
+        ontology_term = PPkt.OntologyClass()
+        ontology_term.id ='NCIT:C92207'  # Stage unknown
+        ontology_term.label = 'Stage Unknown'
+
+        if stage_str in ['Stage I', 'Stage 1', 'stage 1', 'stage I']:
+            ontology_term.id = 'NCIT:C27966'
+            ontology_term.label = 'Stage I'
+        elif stage_str in ['IA', 'Stage IA', 'stage IA']:
+            ontology_term.id = 'NCIT:C27975'
+            ontology_term.label = 'Stage IA'
+        elif stage_str in ['IB', 'Stage IB', 'stage IB']:
+            ontology_term.id = 'NCIT:C27976'
+            ontology_term.label = 'Stage IB'
+        elif stage_str in ['Stage II', 'Stage 2', 'stage 2', 'stage II']:
+            ontology_term.id = 'NCIT:C28054'
+            ontology_term.label = 'Stage II'
+        elif stage_str in ['IIA', 'Stage IIA', 'stage IIA']:
+            ontology_term.id = 'NCIT:C27967'
+            ontology_term.label = 'Stage IIA'
+        elif stage_str in ['IIB', 'Stage IIB', 'stage IIB']:
+            ontology_term.id = 'NCIT:C27968'
+            ontology_term.label = 'Stage IIB'
+        elif stage_str in ['Stage 3', 'stage 3']:
+            ontology_term.id = 'NCIT:C27970'
+            ontology_term.label = 'Stage III'
+        elif stage_str in ['IIIA', 'Stage IIIA', 'Stage 3A', 'stage 3A']:
+            ontology_term.id = 'NCIT:C27977'
+            ontology_term.label = 'Stage IIIA'
+        elif stage_str in ['IIIB', 'Stage IIIB', 'Stage 3B', 'stage 3B']:
+            ontology_term.id = 'NCIT:C27978'
+            ontology_term.label = 'Stage IIIB'
+        elif stage_str in ['IV', 'Stage 4']:
+            ontology_term.id = 'NCIT:C27971'
+            ontology_term.label = 'Stage IV'
+        return [ontology_term]
