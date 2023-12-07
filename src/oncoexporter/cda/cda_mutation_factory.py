@@ -1,6 +1,6 @@
 import pandas as pd
 from .cda_factory import CdaFactory
-from .model.op_mutation import OpMutation
+from oncoexporter.model.op_mutation import OpMutation
 
 class CdaMutationFactory(CdaFactory):
     """
