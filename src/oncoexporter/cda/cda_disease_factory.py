@@ -43,6 +43,9 @@ class CdaDiseaseFactory(CdaFactory):
             primary_diagnosis_condition=row["primary_diagnosis_condition"],
             primary_diagnosis_site=row["primary_diagnosis_site"]
         ))
+
+        disease.onset = CdaFactory.days_to_iso(row["age_at_diagnosis"])
+        
         return disease
 
     def _parse_diagnosis_into_ontology_term(self,

@@ -17,79 +17,6 @@ class CdaIndividualFactory(CdaFactory):
         super().__init__()
         self._cause_of_death_mapper = OpCauseOfDeathMapper()
 
-    @staticmethod
-    def days_to_iso(days: int):
-        """
-        Convert the number of days of life into an ISO 8601 period representing the age of an individual
-        (e.g., P42Y7M is 42 years and 7 months).
-        # FYI this exists:
-        # https://pypi.org/project/iso8601/
-
-        :param days: number of days of life (str or int)
-        """
-        if isinstance(days, str):
-            days = int(str)
-        if not isinstance(days, int):
-            raise ValueError(f"days argument must be int or str but was {type(days)}")
-        # slight simplification
-        days_in_year = 365.2425
-        y = int(days/days_in_year)
-        days = days - int(y*days_in_year)
-        m = int(days/12)
-        days = days - int(m*12)
-        w = int(days/7)
-        days = days - int(w*7)
-        d = days
-        iso = "P"
-        if y > 0:
-            iso = f"{iso}{y}Y"
-        if m > 0:
-            iso = f"{iso}{m}M"
-        if w > 0:
-            iso = f"{iso}{w}W"
-        if d > 0:
-            iso = f"{iso}{d}D"
-        return iso
-
-
-    @staticmethod
-    def days_to_iso(days:int):
-        """
-        Convert the number of days of life into an ISO 8601 period representing the age of an individual
-        (e.g., P42Y7M is 42 years and 7 months).
-        # FYI this exists:
-        # https://pypi.org/project/iso8601/
-
-        :param days: number of days of life (str or int)
-        """
-        if isinstance(days, str):
-            days = int(str)
-        if not isinstance(days, int):
-            raise ValueError(f"days argument must be int or str but was {type(days)}")
-        # slight simplification
-        days_in_year = 365.2425
-        y = int(days/days_in_year)
-        days = days - int(y*days_in_year)
-        m = int(days/30.437)
-        # average number of days in a month: 30.437
-        days = days - int(m*30.437)
-        w = int(days/7)
-        days = days - int(w*7)
-        d = days
-        iso = "P"
-        if y > 0:
-            iso = f"{iso}{y}Y"
-        if m > 0:
-            iso = f"{iso}{m}M"
-        """
-        if w > 0:
-            iso = f"{iso}{w}W"
-        if d > 0:
-            iso = f"{iso}{d}D"
-        """
-        return iso
-
-
     def process_vital_status(self, row):
         """
         :param vital_status: "Alive or Dead"
@@ -146,7 +73,7 @@ class CdaIndividualFactory(CdaFactory):
         try:
             # we need to parse '15987.0' first as a float and then transform to int
             d_to_b = int(float(days_to_birth))
-            iso_age = CdaIndividualFactory.days_to_iso(days=d_to_b)
+            iso_age = CdaFactory.days_to_iso(days=d_to_b)
             vstat = self.process_vital_status(row)
         except:
             pass

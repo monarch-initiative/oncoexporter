@@ -1,9 +1,12 @@
 import pandas as pd
 from .cda_factory import CdaFactory
-from ..model.op_mutation import OpMutation
+from .model.op_mutation import OpMutation
 
 class CdaMutationFactory(CdaFactory):
     """
+    https://cda.readthedocs.io/en/latest/Schema/fields_mutation/
+    153 fields - need to decide which to keep
+
     cda_subject_id
     primary_site
     Hugo_Symbol
@@ -28,8 +31,7 @@ class CdaMutationFactory(CdaFactory):
     HGVSp
     HGVSp_Short
     Transcript_ID
-
-
+    ENSP
 
     """
 
@@ -44,11 +46,10 @@ class CdaMutationFactory(CdaFactory):
 
     def from_cancer_data_aggregator(self, row):
         """
-        convert a row from the CDA subject table into an Individual message (GA4GH Phenopacket Schema)
+        convert a row from the CDA mutation table into an 
+        Individual message (GA4GH Phenopacket Schema)
         The row is a pd.core.series.Series and contains the columns
-        ['diagnosis_id', 'diagnosis_identifier', 'primary_diagnosis',
-       'age_at_diagnosis', 'morphology', 'stage', 'grade',
-       'method_of_diagnosis', 'subject_id', 'researchsubject_id']
+        
        :param row: a row from the CDA subject table
         """
         if not isinstance(row, pd.core.series.Series):
