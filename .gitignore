@@ -1,3 +1,4 @@
+phenopackets/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -166,5 +167,9 @@ c2p_env/
 notebooks/Untitled.ipynb
 
 \.*.pkl
-phenopackets
-scratch
+
+*.pkl
+*.tsv
+.DS_Store
+src/phenopackets
+*.tar.gz

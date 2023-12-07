@@ -1,6 +1,6 @@
 from .cda_disease_factory import CdaDiseaseFactory
 from .cda_individual_factory import CdaIndividualFactory
-from .cda_biosample import CdaBiosampleFactory
+from .cda_biosample_factory import CdaBiosampleFactory
 from .cda_mutation_factory import CdaMutationFactory
 from .cda_table_importer import CdaTableImporter
 from .cda_medicalaction_factory import make_cda_medicalaction

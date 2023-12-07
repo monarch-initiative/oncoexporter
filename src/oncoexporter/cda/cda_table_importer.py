@@ -9,21 +9,29 @@ import pickle
 from .cda_disease_factory import CdaDiseaseFactory
 from .cda_importer import CdaImporter
 from .cda_individual_factory import CdaIndividualFactory
-from .cda_biosample import CdaBiosampleFactory
+from .cda_biosample_factory import CdaBiosampleFactory
 from .cda_mutation_factory import CdaMutationFactory
 from .cda_medicalaction_factory import make_cda_medicalaction
 from tqdm import tqdm
 
 
 class CdaTableImporter(CdaImporter):
+    """This class is the entry point for transforming CDA data into GA4GH Phenopackets. Client code only needs to initialize it with a CDA query and it can return phenopackets with the **get_ga4gh_phenopackets** method. It also returns individual tables for that can be used for testing or visualizing data.
+
+    The CDA query determines the cohort that will be retrieved from CDA. This class then retrieves data for this cohort in form of pandas DataFrames and extracts data for phenopacket construction using the data in the tables
+
+    :param cohort_name: A user-chosen name for the cohort
+    :type cohort_name: str
+    :param query: A query for CDA such as 'primary_diagnosis_site = "Lung"'
+    :type query: str
+    :param query_obj: a query object created by CDA. Note that either this argument or the query (string) argument must be provided, but not both.
+    :type query_obj: Q
+    :param use_cache: if True, cache/retrieve from cache
+    :type use_cache: bool
+    """
 
     def __init__(self, cohort_name: str, query: str = None, query_obj: Q = None, use_cache=False):
-        """
-        :param query: A query for CDA such as 'primary_diagnosis_site = "Lung"'
-
-        The CDA query determines the cohort that will be retrieved from CDA.
-        This class then retrieves data for this cohort in form of pandas DataFrames
-        and extracts data for phenopacket construction using the data in the tables
+        """Constructor
         """
         if query is not None and query_obj is None:
             self._query = Q(query)
@@ -36,7 +44,7 @@ class CdaTableImporter(CdaImporter):
         self._use_cache = use_cache
         self._cohort_name = cohort_name
 
-    def get_diagnosis_df(self, fallback, cache_name: str):
+    def _get_cda_df(self, callback_fxn, cache_name: str):
         print(f"Retrieving dataframe {cache_name}")
         if self._use_cache and os.path.isfile(cache_name):
             with open(cache_name, 'rb') as cachehandle:
@@ -44,73 +52,135 @@ class CdaTableImporter(CdaImporter):
                 individual_df = pickle.load(cachehandle)
         else:
             print(f"calling CDA function")
-            individual_df = fallback()
+            individual_df = callback_fxn()
             if self._use_cache:
                 print(f"Creating cached dataframe as {cache_name}")
                 with open(cache_name, 'wb') as f:
                     pickle.dump(individual_df, f)
         return individual_df
 
-    def get_ga4gh_phenopackets(self, page_size: int = 100) -> typing.List[PPkt.Phenopacket]:
+
+    def get_subject_df(self, page_size=10000) -> pd.DataFrame:
+        """Retrieve the subject dataframe from CDA
+
+        This method uses the Query that was passed to the constructor to retrieve data from the CDA subject table
+
+        :param page_size: Number of pages to retrieve at once. Defaults to 10000.
+        :type page_size: int
+
+        :raises: raises an exception if the query object was not properly initialized
+        :returns: pandas DataFrame that corresponds to the CDA subject table.
+        :rtype: pd.DataFrame
         """
+        if self._query is None:
+            raise Exception(f"Could not retrieve subject dataframe because query object was None")
+        callable = lambda: self._query.subject.run(page_size=page_size).get_all().to_dataframe();
+        subject_df = self._get_cda_df(callable, f".{self._cohort_name}_individual_df.pkl");
+        return subject_df
 
-        1.
 
+    def get_merged_diagnosis_research_subject_df(self, page_size=10000) -> pd.DataFrame:
+        """Retrieve a merged dataframe from CDA corresponding to the diagnosis and research subject tables
+
+        :param page_size: Number of pages to retrieve at once. Defaults to 10000.
+        :type page_size: int
         """
-        ppackt_d = {}
-
-        individual_factory = CdaIndividualFactory()
-        callable = lambda: self._query.subject.run(page_size=page_size).get_all().to_dataframe()
-        print("getting individual_df")
-        individual_df = self.get_diagnosis_df(callable, f".{self._cohort_name}_individual_df.pkl")
-        print("obtained individual_df")
         diagnosis_callable = lambda: self._query.diagnosis.run(page_size=page_size).get_all().to_dataframe()
-        diagnosis_df = self.get_diagnosis_df(diagnosis_callable, f".{self._cohort_name}_diagnosis_df.pkl")
+        diagnosis_df = self._get_cda_df(diagnosis_callable, f".{self._cohort_name}_diagnosis_df.pkl")
         print("obtained diagnosis_df")
         rsub_callable = lambda: self._query.researchsubject.run(page_size=page_size).get_all().to_dataframe()
-        rsub_df = self.get_diagnosis_df(rsub_callable, f".{self._cohort_name}_rsub_df.pkl")
+        rsub_df = self._get_cda_df(rsub_callable, f".{self._cohort_name}_rsub_df.pkl")
         print("obtained rsub_df")
+        merged_df = pd.merge(diagnosis_df, rsub_df, left_on='researchsubject_id', right_on='researchsubject_id',
+                                suffixes=["_di", "_rs"])
+        return merged_df
 
+    def get_specimen_df(self, page_size=10000) -> pd.DataFrame:
+        """Retrieve the subject dataframe from CDA
+
+        This method uses the Query that was passed to the constructor to retrieve data from the CDA subject table
+
+        :param page_size: Number of pages to retrieve at once. Defaults to 10000.
+        :type page_size: int
+
+        :raises: raises an exception if the query object was not properly initialized
+        :returns: pandas DataFrame that corresponds to the CDA subject table.
+        :rtype: pd.DataFrame
+        """
         specimen_callable = lambda: self._query.specimen.run(page_size=page_size).get_all().to_dataframe()
-        specimen_df = self.get_diagnosis_df(specimen_callable, f".{self._cohort_name}_specimen_df.pkl")
+        specimen_df = self._get_cda_df(specimen_callable, f".{self._cohort_name}_specimen_df.pkl")
+        return specimen_df
 
+    def get_treatment_df(self, page_size=10000) -> pd.DataFrame:
         treatment_callable = lambda: self._query.treatment.run(page_size=page_size).get_all().to_dataframe()
-        treatment_df = self.get_diagnosis_df(treatment_callable, f".{self._cohort_name}_treatment_df.pkl")
+        treatment_df = self._get_cda_df(treatment_callable, f".{self._cohort_name}_treatment_df.pkl")
+        return treatment_df
 
+    def get_mutation_df(self, page_size=10000) -> pd.DataFrame:
         mutation_callable = lambda: self._query.mutation.run(page_size=page_size).get_all().to_dataframe()
-        mutation_df = self.get_diagnosis_df(mutation_callable, f".{self._cohort_name}_mutation_df.pkl")
+        mutation_df = self._get_cda_df(mutation_callable, f".{self._cohort_name}_mutation_df.pkl")
+        return mutation_df
 
-        for idx, row in tqdm(individual_df.iterrows(),total=len(individual_df), desc= "individual dataframe"):
+
+    def get_ga4gh_phenopackets(self, page_size: int = 10000) -> typing.List[PPkt.Phenopacket]:
+        """Get a list of GA4GH phenopackets corresponding to the individuals returned by the query passed to the constructor.
+
+        :param page_size: Number of pages to retrieve at once. Defaults to 10000.
+        :type page_size: int
+        :returns: A list of GA4GH phenopackets corresponding to the individuals selected by the query passed to the constructor.
+        :rtype: typing.List[PPkt.Phenopacket]
+        """
+        # Dictionary of phenopackets, keys are the phenopacket ids.
+        ppackt_d = {}
+
+        # First obtain the pandas DataFrames from the CDA tables with rows that correspond to the Query
+        subject_df = self.get_subject_df(page_size=page_size)
+        merged_df = self.get_merged_diagnosis_research_subject_df(page_size=page_size)
+        specimen_df = self.get_specimen_df(page_size=page_size)
+        treatment_df = self.get_treatment_df(page_size=page_size)
+        mutation_df = self.get_mutation_df(page_size=page_size)
+
+        # Now use the CdaFactory classes to transform the information from the DataFrames into
+        # components of the GA4GH Phenopacket Schema
+        # Add these components one at a time to Phenopacket objects.
+
+        individual_factory = CdaIndividualFactory()
+        disease_factory = CdaDiseaseFactory()
+        specimen_factory = CdaBiosampleFactory()
+        mutation_factory = CdaMutationFactory()
+        # treatment_factory = TODO
+
+        # Retrieve GA4GH Individual messages
+        for _, row in tqdm(subject_df.iterrows(),total=len(subject_df), desc= "individual dataframe"):
             individual_message = individual_factory.from_cancer_data_aggregator(row=row)
             individual_id = individual_message.id
-
             ppackt = PPkt.Phenopacket()
             ppackt.id = f'{self._cohort_name}-{individual_id}'
             ppackt.subject.CopyFrom(individual_message)
             ppackt_d[individual_id] = ppackt
-        merged_df = pd.merge(diagnosis_df, rsub_df, left_on='researchsubject_id', right_on='researchsubject_id',
-                             suffixes=["_di", "_rs"])
-        disease_factory = CdaDiseaseFactory()
-        for idx, row in tqdm(merged_df.iterrows(), total= len(merged_df.index), desc="merged diagnosis dataframe"):
-            disease_message = disease_factory.from_cancer_data_aggregator(row)
+
+        # Retrieve GA4GH Disease messages
+        for _, row in tqdm(merged_df.iterrows(), total= len(merged_df.index), desc="merged diagnosis dataframe"):
+            disease_message = disease_factory.to_ga4gh_disease(row)
             pp = ppackt_d.get(row["subject_id_rs"])
 
             # Do not add the disease if it is already in the phenopacket.
             if not any(disease.term.id == disease_message.term.id for disease in pp.diseases):
                 pp.diseases.append(disease_message)
 
-        specimen_factory = CdaBiosampleFactory()
+        # Retrieve GA4GH Biospecimen messages
         for idx, row in tqdm(specimen_df.iterrows(),total= len(specimen_df.index), desc="specimen/biosample dataframe"):
-            biosample_message = specimen_factory.from_cancer_data_aggregator(row)
+            biosample_message = specimen_factory.to_ga4gh_individual(row)
             individual_id = row["subject_id"]
             if individual_id not in ppackt_d:
                 raise ValueError(f"Attempt to enter unknown individual ID from biosample factory: \"{individual_id}\"")
             ppackt_d.get(individual_id).biosamples.append(biosample_message)
 
-        mutation_factory = CdaMutationFactory()
+
+        # Retrieve GA4GH Genomic Interpretation messages (for mutation)
         for idx, row in tqdm(mutation_df.iterrows(), total=len(mutation_df.index), desc="mutation dataframe"):
             individual_id = row["cda_subject_id"]
-            variant_interpretation_message = mutation_factory.from_cancer_data_aggregator(row)
+            variant_interpretation_message = mutation_factory.to_ga4gh_individual(row)
             genomic_interpretation = PPkt.GenomicInterpretation()
             genomic_interpretation.subject_or_biosample_id = row["Tumor_Aliquot_UUID"]
             genomic_interpretation.variant_interpretation.CopyFrom(variant_interpretation_message)
@@ -138,14 +208,7 @@ class CdaTableImporter(CdaImporter):
             else:
                 pp.interpretations[0].diagnosis.genomic_interpretations.append(genomic_interpretation)
 
-            # TODO -- CLEAN UP
-            # by assumption, variants passed to this package are all causative -- ASK CDA
-            # genomic_interpretation.interpretation_status = PPkt.GenomicInterpretation.InterpretationStatus.CAUSATIVE
-
-
-
-
-
+        # TODO Treatment
         # make_cda_medicalaction
         for idx, row in tqdm(treatment_df.iterrows(), total=len(treatment_df.index), desc="Treatment DF"):
             individual_id = row["subject_id"]
@@ -154,5 +217,6 @@ class CdaTableImporter(CdaImporter):
                 raise ValueError(f"Attempt to enter unknown individual ID from treatemtn factory: \"{individual_id}\"")
             ppackt_d.get(individual_id).medical_actions.append(medical_action_message)
 
+        # When we get here, we have constructed GA4GH Phenopackets with Individual, Disease, Biospecimen, MedicalAction, and GenomicInterpretations
         return list(ppackt_d.values())
 

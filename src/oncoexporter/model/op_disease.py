@@ -1,4 +1,6 @@
 from .op_message import OpMessage
+import phenopackets as PPKt
+from typing import List
 
 class OpDisease(OpMessage):
     """OncoPacket Individual
@@ -16,15 +18,32 @@ class OpDisease(OpMessage):
         laterality OntologyClass
         """
 
-    def __init__(self, disease_term_id,
-                 disease_term_label,
-                 excluded:bool=None,
-                 iso8601duration_onset_age:str=None,
-                 iso8601duration_resolution_age: str = None,
-                 disease_stage_term_id:str=None,
-                 disease_stage_term_label:str=None,
-                 clinical_tnm_finding_list:list=None,
-                 primary_site_id:str=None,
-                 primary_site_label: str = None,
-                 laterality:str=None) -> None:
-        pass
+    def __init__(self, disease_term:PPKt.OntologyClass,
+                excluded:bool=None,
+                iso8601duration_onset_age:str=None,
+                iso8601duration_resolution_age: str = None,
+                disease_stage_term_list:List[PPKt.OntologyClass]=None,
+                clinical_tnm_finding_list:list=None,
+                primary_site_id:str=None,
+                primary_site_label: str = None,
+                laterality:str=None) -> None:
+
+        disease_obj = PPKt.Disease()
+        disease_obj.term.CopyFrom(disease_term)
+        if excluded is not None:
+            disease_obj.excluded = excluded
+        if iso8601duration_onset_age is not None:
+            disease_obj.onset.age.iso8601duration = iso8601duration_onset_age
+        if iso8601duration_resolution_age is not None:
+            disease_obj.resolution.age.iso8601duration = iso8601duration_resolution_age
+        if disease_stage_term_list is not None:
+            if not isinstance(disease_stage_term_list, list):
+                raise ValueError(f"If passed, argument \"disease_stage_term_list\" must be a list but was {type(disease_stage_term_list)}")
+            if len(disease_stage_term_list) == 0:
+                raise ValueError(f"If passed, argument \"disease_stage_term_list\" cannot be an empty list")
+            for term in disease_stage_term_list:
+                disease_obj.disease_stage.append(term)
+        self._disease = disease_obj
+
+    def to_ga4gh(self):
+        return self._disease

@@ -3,9 +3,20 @@ import pandas as pd
 
 
 class CdaFactory(metaclass=abc.ABCMeta):
+    """Superclass for the CDA Factory Classes
+
+    Each subclass must implement the to_ga4gh method, which transforms a row of a table from CDA to a GA4GH Message.
+    """
+
 
     @abc.abstractmethod
-    def from_cancer_data_aggregator(self, row):
+    def to_ga4gh(self, row:pd.Series):
+        """Return a message from the GA4GH Phenopacket Schema that corresponds to this row.
+
+        :param row: A row from the CDA
+        :type row: pd.Series
+        :returns: a message from the GA4GH Phenopacket Schema
+        """
         pass
 
     def get_item(self, row, column_name):

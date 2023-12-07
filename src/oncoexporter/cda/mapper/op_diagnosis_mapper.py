@@ -3,6 +3,7 @@ import os
 from .op_mapper import OpMapper
 from .map_entry import MapEntry
 from typing import Optional
+import pandas as pd
 import phenopackets as PPkt
 
 class OpDiagnosisMapper(OpMapper):
@@ -30,8 +31,10 @@ class OpDiagnosisMapper(OpMapper):
                     d[header_fields[i]] = fields[i]
                 me = MapEntry(dictionary = d)
                 self._map_entries.append(me)
+        # TODO also import stages
+        # Todo consider
 
-    def get_ontology_term(self, row) -> Optional[PPkt.OntologyClass]:
+    def get_ontology_term(self, row:pd.Series) -> Optional[PPkt.OntologyClass]:
         for me in self._map_entries:
             if me.matches(row):
                 id, label = me.get_id_and_label()

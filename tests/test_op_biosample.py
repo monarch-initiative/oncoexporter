@@ -30,8 +30,8 @@ class TestMakeBiosample(unittest.TestCase):
             'PDC000219.P067'
         ]
         row = pd.Series({key: val for key, val in zip(cols, vals)})
-        biosample = self.factory.from_cancer_data_aggregator(row)
-        
+        biosample = self.factory.to_ga4gh(row)
+
         self.assertEqual(biosample.id, "PDC000219.P067.P067 - 2 - 1")
 
         self.assertEqual(biosample.sample_type.id, "NCIT:C25414")
@@ -46,4 +46,3 @@ class TestMakeBiosample(unittest.TestCase):
         self.assertEqual(biosample.individual_id, "Academia Sinica LUAD - 100.P067")
 
         self.assertEqual(biosample.derived_from_id, "PDC000220.P067.P067-2")
-        

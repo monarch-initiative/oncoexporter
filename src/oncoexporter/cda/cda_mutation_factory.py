@@ -44,7 +44,7 @@ class CdaMutationFactory(CdaFactory):
             'Mutation_Status', 'HGVSc', 'HGVSp', 'HGVSp_Short', 'Transcript_ID', 'ENSP'
         ]
 
-    def from_cancer_data_aggregator(self, row):
+    def to_ga4gh(self, row):
         """
         convert a row from the CDA mutation table into an 
         Individual message (GA4GH Phenopacket Schema)
