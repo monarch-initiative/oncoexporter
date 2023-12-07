@@ -166,3 +166,5 @@ c2p_env/
 notebooks/Untitled.ipynb
 
 \.*.pkl
+phenopackets
+scratch
