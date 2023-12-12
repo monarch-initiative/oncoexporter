@@ -177,7 +177,7 @@ class CdaTableImporter(CdaImporter):
 
         # Retrieve GA4GH Individual messages
         for _, row in tqdm(subject_df.iterrows(),total=len(subject_df), desc= "individual dataframe"):
-            individual_message = individual_factory.from_cancer_data_aggregator(row=row)
+            individual_message = individual_factory.to_ga4gh(row=row)
             individual_id = individual_message.id
             ppackt = PPkt.Phenopacket()
             ppackt.id = f'{self._cohort_name}-{individual_id}'
@@ -186,7 +186,7 @@ class CdaTableImporter(CdaImporter):
 
         # Retrieve GA4GH Disease messages
         for _, row in tqdm(merged_df.iterrows(), total= len(merged_df.index), desc="merged diagnosis dataframe"):
-            disease_message = disease_factory.to_ga4gh_disease(row)
+            disease_message = disease_factory.to_ga4gh(row)
             pp = ppackt_d.get(row["subject_id_rs"])
 
             # Do not add the disease if it is already in the phenopacket.
@@ -195,7 +195,7 @@ class CdaTableImporter(CdaImporter):
 
         # Retrieve GA4GH Biospecimen messages
         for idx, row in tqdm(specimen_df.iterrows(),total= len(specimen_df.index), desc="specimen/biosample dataframe"):
-            biosample_message = specimen_factory.to_ga4gh_individual(row)
+            biosample_message = specimen_factory.to_ga4gh(row)
             individual_id = row["subject_id"]
             if individual_id not in ppackt_d:
                 raise ValueError(f"Attempt to enter unknown individual ID from biosample factory: \"{individual_id}\"")
@@ -204,7 +204,7 @@ class CdaTableImporter(CdaImporter):
         # Retrieve GA4GH Genomic Interpretation messages (for mutation)
         for idx, row in tqdm(mutation_df.iterrows(), total=len(mutation_df.index), desc="mutation dataframe"):
             individual_id = row["cda_subject_id"]
-            variant_interpretation_message = mutation_factory.to_ga4gh_individual(row)
+            variant_interpretation_message = mutation_factory.to_ga4gh(row)
             genomic_interpretation = PPkt.GenomicInterpretation()
             genomic_interpretation.subject_or_biosample_id = row["Tumor_Aliquot_UUID"]
             genomic_interpretation.variant_interpretation.CopyFrom(variant_interpretation_message)
