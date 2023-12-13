@@ -1,7 +1,5 @@
 import os
 import warnings
-import requests
-import csv
 from cdapython import Q
 import phenopackets as PPkt
 import typing
@@ -32,8 +30,7 @@ class CdaTableImporter(CdaImporter):
     """
 
     def __init__(self, cohort_name: str, query: str = None, query_obj: Q = None,
-                 use_cache=False,
-                 icdo_to_ncit_map_url='https://evs.nci.nih.gov/ftp1/NCI_Thesaurus/Mappings/ICD-O-3_Mappings/ICD-O-3.1-NCIt_Morphology_Mapping.txt'):
+                 use_cache=False):
         """Constructor
         """
         if query is not None and query_obj is None:
@@ -46,28 +43,6 @@ class CdaTableImporter(CdaImporter):
             raise ValueError("Need to pass either query or query_obj argument but not both")
         self._use_cache = use_cache
         self._cohort_name = cohort_name
-        self._icdo_to_ncit = self._download_and_icdo_to_ncit_tsv(icdo_to_ncit_map_url)
-        pass
-
-    def _download_and_icdo_to_ncit_tsv(self, url: str, key_column: str = 'ICD-O Code') -> dict:
-        """
-        Helper function to download a TSV file, parse it, and create a dict of dicts.
-        """
-        response = requests.get(url)
-        response.raise_for_status()  # This will raise an error if the download failed
-
-        tsv_data = csv.DictReader(response.text.splitlines(), delimiter='\t')
-
-        result_dict = {}
-        if key_column not in tsv_data.fieldnames:
-            warnings.warn(f"Couldn't find key_column {key_column} in fieldnames "
-                          f"{tsv_data.fieldnames} of file downloaded from {url}")
-        for row in tsv_data:
-            key = row.pop(key_column, None)
-            if key:
-                result_dict[key] = row
-
-        return result_dict
 
     def _get_cda_df(self, callback_fxn, cache_name: str):
         print(f"Retrieving dataframe {cache_name}")

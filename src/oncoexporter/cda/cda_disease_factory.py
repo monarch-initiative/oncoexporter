@@ -1,5 +1,8 @@
 import phenopackets as PPkt
 import pandas as pd
+import requests
+import csv
+import warnings
 
 from .mapper.op_mapper import OpMapper
 from .mapper.op_diagnosis_mapper import OpDiagnosisMapper
@@ -37,7 +40,9 @@ class CdaDiseaseFactory(CdaFactory):
     :type op_mapper: OpMapper
     """
 
-    def __init__(self, op_mapper:OpMapper=None) -> None:
+    def __init__(self, op_mapper:OpMapper=None,
+                 icdo_to_ncit_map_url='https://evs.nci.nih.gov/ftp1/NCI_Thesaurus/Mappings/ICD-O-3_Mappings/ICD-O-3.1-NCIt_Morphology_Mapping.txt'
+                 ) -> None:
         """
 
         """
@@ -46,6 +51,27 @@ class CdaDiseaseFactory(CdaFactory):
             self._opMapper = OpDiagnosisMapper()
         else:
             self._opMapper = op_mapper
+        self._icdo_to_ncit = self._download_and_icdo_to_ncit_tsv(icdo_to_ncit_map_url)
+
+    def _download_and_icdo_to_ncit_tsv(self, url: str, key_column: str = 'ICD-O Code') -> dict:
+        """
+        Helper function to download a TSV file, parse it, and create a dict of dicts.
+        """
+        response = requests.get(url)
+        response.raise_for_status()  # This will raise an error if the download failed
+
+        tsv_data = csv.DictReader(response.text.splitlines(), delimiter='\t')
+
+        result_dict = {}
+        if key_column not in tsv_data.fieldnames:
+            warnings.warn(f"Couldn't find key_column {key_column} in fieldnames "
+                          f"{tsv_data.fieldnames} of file downloaded from {url}")
+        for row in tsv_data:
+            key = row.pop(key_column, None)
+            if key:
+                result_dict[key] = row
+
+        return result_dict
 
     def to_ga4gh(self, row):
         """Convert a row from the CDA subject table into an Individual message (GA4GH Phenopacket Schema)
@@ -67,6 +93,10 @@ class CdaDiseaseFactory(CdaFactory):
             primary_diagnosis_site=row["primary_diagnosis_site"]
         ))
         return disease
+
+    def _get_icdo_to_ncit(self, row):
+        if row['morphology'] in self._icdo_to_ncit:
+            return self._icdo_to_ncit[row['morphology']]
 
     def _parse_diagnosis_into_ontology_term(self,
                                             primary_diagnosis: str,
