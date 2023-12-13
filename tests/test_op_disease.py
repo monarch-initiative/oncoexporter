@@ -11,7 +11,7 @@ class OpDiseaseTestCase(TestCase):
                 "[{'system': 'PDC', 'field_name': 'Diagnosis.diagnosis_id', 'value': '24b7022a-8beb-11ea-b1fd-0aad30af8a83'}, {'system': 'PDC', 'field_name': 'Diagnosis.diagnosis_submitter_id', 'value': 'P065-DX'}]",
                 "None",
                 "NaN",
-                "None",
+                "8000/3",
                 "None",
                 "None",
                 "None",
@@ -80,6 +80,12 @@ class OpDiseaseTestCase(TestCase):
             self.assertEqual(d['label'], ga4gh_disease.term.label)
             pass
 
+    def test_morphology_term_in_tnm_findings(self):
+        dfact = CdaDiseaseFactory()
+        ga4gh_disease = dfact.to_ga4gh(self._series)
+        self.assertEqual(len(ga4gh_disease.clinical_tnm_finding), 1)
+        self.assertEqual(ga4gh_disease.clinical_tnm_finding[0].id, 'NCIT:C9305')
+        self.assertEqual(ga4gh_disease.clinical_tnm_finding[0].label, 'Malignant Neoplasm')
 
 def get_disease_test_data():
     data = [

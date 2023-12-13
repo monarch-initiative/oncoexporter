@@ -1,6 +1,5 @@
 import os
 import warnings
-
 from cdapython import Q
 import phenopackets as PPkt
 import typing
@@ -30,7 +29,8 @@ class CdaTableImporter(CdaImporter):
     :type use_cache: bool
     """
 
-    def __init__(self, cohort_name: str, query: str = None, query_obj: Q = None, use_cache=False):
+    def __init__(self, cohort_name: str, query: str = None, query_obj: Q = None,
+                 use_cache=False):
         """Constructor
         """
         if query is not None and query_obj is None:
