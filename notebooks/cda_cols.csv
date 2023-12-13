@@ -1,0 +1,226 @@
+,fieldName,endpoint,description,type,mode
+0,ThousG_EUR_AF,mutation,Non-reference allele and frequency of existing variant in 1000 Genomes combined European population,FLOAT,NULLABLE
+1,PICK,mutation,Indicates if this block of consequence data was picked by VEP's   pick feature (1 or null),STRING,NULLABLE
+2,days_to_treatment_start,treatment,The timepoint at which the treatment started.,INTEGER,NULLABLE
+3,gnomAD_AFR_AF,mutation,Frequency of existing variant in gnomAD exomes African/American population,FLOAT,NULLABLE
+4,Feature,mutation,"Stable Ensembl ID of feature (transcript, regulatory, motif)",STRING,NULLABLE
+5,CONTEXT,mutation,"The reference allele per VCF specs, and its five flanking base pairs",STRING,NULLABLE
+6,BAM_File,mutation,Not in use,STRING,NULLABLE
+7,gnomAD_AF,mutation,Frequency of existing variant in gnomAD exomes combined population,FLOAT,NULLABLE
+8,age_at_diagnosis,diagnosis,The age in days of the individual at the time of diagnosis.,INTEGER,NULLABLE
+9,HGNC_ID,mutation,Gene identifier from the HUGO Gene Nomenclature Committee if applicable,STRING,NULLABLE
+10,gnomAD_ASJ_AF,mutation,Frequency of existing variant in gnomAD exomes Ashkenazi Jewish population,FLOAT,NULLABLE
+11,Strand,mutation,Either + or - to denote whether read mapped to the sense (+) or anti-sense (-) strand,STRING,NULLABLE
+12,file_gdc_id,mutation,|-delimited list of unique GDC identifiers for underlying MAF file,STRING,NULLABLE
+13,DISTANCE,mutation,Shortest distance from the variant to transcript,STRING,NULLABLE
+14,MAX_AF,mutation,"Maximum observed allele frequency in 1000 Genomes, ESP and ExAC/gnomAD",FLOAT,NULLABLE
+15,SYMBOL_SOURCE,mutation,"The source of the gene symbol, usually HGNC, rarely blank, other sources include Uniprot_gn, EntrezGene, etc",STRING,NULLABLE
+16,APPRIS,mutation,Annotates alternatively spliced transcripts as primary or alternate based on a range of computational methods,STRING,NULLABLE
+17,specimen_type,specimen,"The high-level type of the specimen, based on its how it has been derived from the original extracted sample. 
+",STRING,NULLABLE
+18,Existing_variation,mutation,Known identifier of existing variation,STRING,NULLABLE
+19,grade,diagnosis,"The degree of abnormality of cancer cells, a measure of differentiation, the extent to which cancer cells are similar in appearance and function to healthy cells of the same tissue type. The degree of differentiation often relates to the clinical behavior of the particular tumor. Based on the microscopic findings, tumor grade is commonly described by one of four degrees of severity. Histopathologic grade of a tumor may be used to plan treatment and estimate the future course, outcome, and overall prognosis of disease. Certain types of cancers, such as soft tissue sarcoma, primary brain tumors, lymphomas, and breast have special grading systems.",STRING,NULLABLE
+20,GENE_PHENO,mutation,"Indicates if gene that the variant maps to is associated with a phenotype, disease or trait (0, 1, or null)",STRING,NULLABLE
+21,file_associated_project,file,A reference to the Project(s) of which this ResearchSubject is a member. The associated_project may be embedded using the $ref definition or may be a reference to the id for the Project - or a URI expressed as a string to an existing entity.,STRING,REPEATED
+22,primary_diagnosis_condition,researchsubject,"The text term used to describe the type of malignant disease, as categorized by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).   This attribute represents the disease that qualified the subject for inclusion on the ResearchProject.",STRING,NULLABLE
+23,Match_Norm_Seq_Allele1,mutation,Primary data genotype. Matched normal sequencing allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases (cleared in somatic MAF),STRING,NULLABLE
+24,dbgap_accession_number,file,The dbgap accession number for the project.,STRING,NULLABLE
+25,ethnicity,subject,"An individual's self-described social and cultural grouping, specifically whether an individual describes themselves as Hispanic or Latino. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.",STRING,NULLABLE
+26,Match_Norm_Seq_Allele2,mutation,Matched normal sequencing allele 2,STRING,NULLABLE
+27,gnomAD_non_cancer_AFR_AF,mutation,Frequency of exisiting variant in gnomAD genomes non-cancer African/American population,FLOAT,NULLABLE
+28,BIOTYPE,mutation,Biotype of transcript,STRING,NULLABLE
+29,researchsubject_identifier_system,researchsubject,The system or namespace that defines the identifier.,STRING,NULLABLE
+30,file_identifier_value,file,"The value of the identifier, as defined by the system.",STRING,NULLABLE
+31,miRNA,mutation,SO terms of overlapped miRNA secondary structure feature(s),STRING,NULLABLE
+32,days_to_collection,specimen,"The number of days from the index date to either the date a sample was collected for a specific study or project, or the date a subject underwent a procedure (e.g. surgical resection) yielding a sample that was eventually used for research.",INTEGER,NULLABLE
+33,gnomAD_non_cancer_FIN_AF,mutation,Frequency of exisiting variant in gnomAD genomes non-cancer Finnish population,FLOAT,NULLABLE
+34,DOMAINS,mutation,The source and identifier of any overlapping protein domains,STRING,NULLABLE
+35,Center,mutation,One or more genome sequencing center reporting the variant,STRING,NULLABLE
+36,anatomical_site,specimen,"Per GDC Dictionary, the text term that represents the name of the primary disease site of the submitted tumor sample; recommend dropping tumor; biospecimen_anatomic_site.",STRING,NULLABLE
+37,sex,subject,"The biologic character or quality that distinguishes male and female from one another as expressed by analysis of the person's gonadal, morphologic (internal and external), chromosomal, and hormonal characteristics.",STRING,NULLABLE
+38,MANE,mutation,MANE (Matched Annotation by NCBI and EMBL-EBI) Transcript,STRING,NULLABLE
+39,number_of_cycles,treatment,The number of treatment cycles the subject received.,INTEGER,NULLABLE
+40,Amino_acids,mutation,Amino acid substitution caused by the mutation. Only given if the variation affects the protein-coding sequence,STRING,NULLABLE
+41,gnomAD_SAS_AF,mutation,Frequency of existing variant in gnomAD exomes South Asian population,FLOAT,NULLABLE
+42,Allele,mutation,The variant allele used to calculate the consequence,STRING,NULLABLE
+43,gnomAD_non_cancer_AMR_AF,mutation,Frequency of exisiting variant in gnomAD genomes non-cancer Latino population,FLOAT,NULLABLE
+44,stage,diagnosis,"The extent of a cancer in the body. Staging is usually based on the size of the tumor, whether lymph nodes contain cancer, and whether the cancer has spread from the original site to other parts of the body.",STRING,NULLABLE
+45,diagnosis_id,diagnosis,"The 'logical' identifier of the entity in the repository, e.g. a UUID.  This 'id' is unique within a given system. The identified entity may have a different 'id' in a different system.",STRING,REQUIRED
+46,subject_identifier_field_name,subject,The name of the data object in the originating namespace from which the identifier was loaded.,STRING,NULLABLE
+47,cda_subject_id,mutation,CDA subject ID corresponding to value in case_barcode,STRING,REQUIRED
+48,Sequence_Source,mutation,Molecular assay type used to produce the analytes used for sequencing. Allowed values are a subset of the SRA 1.5 library_strategy field values. This subset matches those used at CGHub,STRING,NULLABLE
+49,source_material_type,specimen,"The general kind of material from which the specimen was derived, indicating the physical nature of the source material. ",STRING,NULLABLE
+50,One_Consequence,mutation,"The single consequence of the canonical transcript in  sequence ontology terms, eg missense_variant",STRING,NULLABLE
+51,aliquot_barcode_normal,mutation,"TCGA aliquot barcode for the normal control, eg TCGA-12-1089-01A-01D-0517-01]",STRING,NULLABLE
+52,specimen_identifier_system,specimen,The system or namespace that defines the identifier.,STRING,NULLABLE
+53,INTRON,mutation,The intron number (out of total number),STRING,NULLABLE
+54,n_ref_count,mutation,Read depth supporting the reference allele in normal BAM (cleared in somatic MAF),STRING,NULLABLE
+55,gnomAD_FIN_AF,mutation,Frequency of existing variant in gnomAD exomes Finnish population,FLOAT,NULLABLE
+56,derived_from_subject,specimen,"The Patient/ResearchSubject, or Biologically Derived Materal (e.g. a cell line, tissue culture, organoid) from which the specimen was directly or indirectly derived.",STRING,NULLABLE
+57,Variant_Classification,mutation,Translational effect of variant allele,STRING,NULLABLE
+58,Mutation_Status,mutation,"An assessment of the mutation as somatic, germline, LOH, post transcriptional modification, unknown, or none. The values allowed in this field are constrained by the value in the Validation_Status field",STRING,NULLABLE
+59,normal_submitter_uuid,mutation,Unique GDC identifier for the normal file submitter,STRING,NULLABLE
+60,varscan2,mutation,Varscan2 caller identified the variant at this position,STRING,NULLABLE
+61,ThousG_EAS_AF,mutation,Non-reference allele and frequency of existing variant in 1000 Genomes combined East Asian population,FLOAT,NULLABLE
+62,TRANSCRIPT_STRAND,mutation,The DNA strand (1 or -1) on which the transcript/feature lies,STRING,NULLABLE
+63,Consequence,mutation,Consequence type of this variant; sequence ontology terms,STRING,NULLABLE
+64,data_category,file,Broad categorization of the contents of the data file.,STRING,NULLABLE
+65,MOTIF_NAME,mutation,The source and identifier of a transcription factor binding profile aligned at this position,STRING,NULLABLE
+66,SOMATIC,mutation,"Somatic status of each ID reported under Existing_variation (0, 1, or null)",STRING,NULLABLE
+67,Score,mutation,Not in use,STRING,NULLABLE
+68,MOTIF_POS,mutation,The relative position of the variation in the aligned TFBP,STRING,NULLABLE
+69,CDS_position,mutation,Relative position of base pair in coding sequence. A - symbol is displayed as the numerator if the variant does not appear in coding sequence,STRING,NULLABLE
+70,Sequencing_Phase,mutation,TCGA sequencing phase (if applicable). Phase should change under any circumstance that the targets under consideration change,STRING,NULLABLE
+71,gnomAD_OTH_AF,mutation,Frequency of existing variant in gnomAD exomes other combined population,FLOAT,NULLABLE
+72,treatment_anatomic_site,treatment,The anatomical site that the treatment targets.,STRING,NULLABLE
+73,primary_diagnosis_site,researchsubject,"The text term used to describe the primary site of disease, as categorized by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O). This categorization groups cases into general categories.  This attribute represents the primary site of disease that qualified the subject for inclusion on the ResearchProject.",STRING,NULLABLE
+74,Protein_position,mutation,Relative position of affected amino acid in protein. A - symbol is displayed as the numerator if the variant does not appear in coding sequence,STRING,NULLABLE
+75,Codons,mutation,The alternative codons with the variant base in upper case,STRING,NULLABLE
+76,diagnosis_identifier_field_name,diagnosis,The name of the data object in the originating namespace from which the identifier was loaded.,STRING,NULLABLE
+77,subject_id,subject,"The 'logical' identifier of the entity in the system of record, e.g. a UUID.  This 'id' is unique within a given system. The identified entity may have a different 'id' in a different system.",STRING,REQUIRED
+78,cause_of_death,subject,Coded value indicating the circumstance or condition that results in the death of the subject.,STRING,NULLABLE
+79,Matched_Norm_Aliquot_UUID,mutation,Unique GDC identifier for normal aliquot (10189 unique),STRING,NULLABLE
+80,primary_disease_type,specimen,"The text term used to describe the type of malignant disease, as categorized by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).   This attribute represents the disease that qualified the subject for inclusion on the ResearchProject.",STRING,NULLABLE
+81,RNA_Support,mutation,"Indicates if the variant is found and alleles (Match), simply (Overlap), or is not supported (No) by tumor RNA-Seq. If it has not been checked against RNA-Seq data, the value will be 'Unknown'.",STRING,NULLABLE
+82,RNA_alt_count,mutation,Read depth supporting the variant allele at this locus if the variant is supported by tumor RNA-seq data.,STRING,NULLABLE
+83,gnomAD_non_cancer_ASJ_AF,mutation,Frequency of exisiting variant in gnomAD genomes non-cancer Ashkenazi Jewish population,FLOAT,NULLABLE
+84,Feature_type,mutation,"Type of feature. Currently one of Transcript, RegulatoryFeature, MotifFeature (or blank)",STRING,NULLABLE
+85,n_alt_count,mutation,Read depth supporting the variant allele in normal BAM (cleared in somatic MAF),STRING,NULLABLE
+86,gnomAD_non_cancer_NFE_AF,mutation,Frequency of exisiting variant in gnomAD genomes non-cancer Non-Finnish European population,FLOAT,NULLABLE
+87,race,subject,"An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.",STRING,NULLABLE
+88,ENSP,mutation,The Ensembl protein identifier of the affected transcript,STRING,NULLABLE
+89,Chromosome,mutation,"Chromosome, possible values: chr1-22, and chrX",STRING,NULLABLE
+90,t_ref_count,mutation,Read depth supporting the reference allele in tumor BAM,INTEGER,NULLABLE
+91,label,file,Short name or abbreviation for dataset. Maps to rdfs:label.,STRING,NULLABLE
+92,treatment_effect,treatment,The effect of a treatment on the diagnosis or tumor.,STRING,NULLABLE
+93,MAX_AF_POPS,mutation,Populations in which maximum allele frequency was observed,STRING,NULLABLE
+94,data_modality,file,"Data modality describes the biological nature of the information gathered as the result of an Activity, independent of the technology or methods used to produce the information.",STRING,NULLABLE
+95,specimen_identifier_value,specimen,"The value of the identifier, as defined by the system.",STRING,NULLABLE
+96,CCDS,mutation,"The  CCDS identifier for this transcript, where applicable",STRING,NULLABLE
+97,primary_site,mutation,Anatomical site of the cancer under investigation or review,STRING,NULLABLE
+98,gnomAD_non_cancer_MID_AF,mutation,Frequency of exisiting variant in gnomAD genomes non-cancer Middle Eastern population,FLOAT,NULLABLE
+99,file_identifier_system,file,The system or namespace that defines the identifier.,STRING,NULLABLE
+100,NCBI_Build,mutation,The reference genome used for the alignment (GRCh38),STRING,NULLABLE
+101,data_type,file,Specific content type of the data file.,STRING,NULLABLE
+102,callers,mutation,"|-delimited list of mutation caller(s) that agreed on this particular call, always in alphabetical order: muse, mutect, somaticsniper, varscan",STRING,NULLABLE
+103,Tumor_Aliquot_UUID,mutation,Unique GDC identifier for tumor aliquot (10189 unique),STRING,NULLABLE
+104,gnomAD_AMR_AF,mutation,Frequency of existing variant in gnomAD exomes American population,FLOAT,NULLABLE
+105,PUBMED,mutation,Pubmed ID(s) of publications that cite existing variant,STRING,NULLABLE
+106,gnomAD_non_cancer_MAX_AF_POPS_adj,mutation,Non-cancer gnomAD genomes populations in which the maximum allele frequency was observed after removing those with less than 2 allele counts,STRING,NULLABLE
+107,subject_associated_project,subject,The list of Projects associated with the Subject.,STRING,REPEATED
+108,UNIPARC,mutation,UniParc identifier of protein product,STRING,NULLABLE
+109,n_depth,mutation,Read depth across this locus in normal BAM,INTEGER,NULLABLE
+110,ThousG_AF,mutation,Non-reference allele and frequency of existing variant in 1000 Genomes,FLOAT,NULLABLE
+111,t_alt_count,mutation,Read depth supporting the variant allele in tumor BAM,INTEGER,NULLABLE
+112,CLIN_SIG,mutation,Clinical significance of variant from dbSNP,STRING,NULLABLE
+113,Transcript_ID,mutation,Ensembl ID of the transcript affected by the variant,STRING,NULLABLE
+114,RNA_ref_count,mutation,Read depth supporting the reference allele at this locus if the variant is supported by tumor RNA-seq data.,STRING,NULLABLE
+115,Gene,mutation,"The gene symbol. In this table, gene symbol is gene name e.g. ACADVL",STRING,NULLABLE
+116,t_depth,mutation,Read depth across this locus in tumor BAM,INTEGER,NULLABLE
+117,HGVSp_Short,mutation,"Same as the HGVSp column, but using 1-letter amino-acid codes",STRING,NULLABLE
+118,Reference_Allele,mutation,The plus strand reference allele at this position. Includes the deleted sequence for a deletion or - for an insertion,STRING,NULLABLE
+119,imaging_modality,file,An imaging modality describes the imaging equipment and/or method used to acquire certain structural or functional information about the body. These include but are not limited to computed tomography (CT) and magnetic resonance imaging (MRI). Taken from the DICOM standard.,STRING,NULLABLE
+120,gnomAD_non_cancer_AMI_AF,mutation,Frequency of exisiting variant in gnomAD genomes non-cancer Amish population,FLOAT,NULLABLE
+121,morphology,diagnosis,"Code that represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology, published in 2000, used principally in tumor and cancer registries for coding the site (topography) and the histology (morphology) of neoplasms.",STRING,NULLABLE
+122,drs_uri,file,A string of characters used to identify a resource on the Data Repo Service(DRS).,STRING,NULLABLE
+123,diagnosis_identifier_system,diagnosis,The system or namespace that defines the identifier.,STRING,NULLABLE
+124,treatment_identifier_value,treatment,"The value of the identifier, as defined by the system.",STRING,NULLABLE
+125,Start_Position,mutation,Lowest numeric position of the reported variant on the genomic reference sequence. Mutation start coordinate,INTEGER,NULLABLE
+126,member_of_research_project,researchsubject,A reference to the Study(s) of which this ResearchSubject is a member.,STRING,NULLABLE
+127,SYMBOL,mutation,"Eg TP53, LRP1B, etc (same as Hugo_Symbol field except blank instead of Unknown",STRING,NULLABLE
+128,researchsubject_id,researchsubject,"The 'logical' identifier of the entity in the system of record, e.g. a UUID.  This 'id' is unique within a given system. The identified entity may have a different 'id' in a different system. For CDA, this is case_id.",STRING,REQUIRED
+129,VARIANT_CLASS,mutation,Sequence Ontology variant class,STRING,NULLABLE
+130,treatment_identifier_field_name,treatment,The name of the data object in the originating namespace from which the identifier was loaded.,STRING,NULLABLE
+131,project_short_name,mutation,"Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc.",STRING,NULLABLE
+132,days_to_death,subject,Number of days between the date used for index and the date from a person's date of death represented as a calculated number of days.,INTEGER,NULLABLE
+133,HIGH_INF_POS,mutation,"A flag indicating if the variant falls in a high information position of a transcription factor binding profile (TFBP) (Y, N, or null)",STRING,NULLABLE
+134,researchsubject_identifier_field_name,researchsubject,The name of the data object in the originating namespace from which the identifier was loaded.,STRING,NULLABLE
+135,Entrez_Gene_Id,mutation,Entrez gene ID (an integer). 0 is used for regions that do not correspond to a gene region or Ensembl ID,INTEGER,NULLABLE
+136,RefSeq,mutation,RefSeq identifier for this transcript,STRING,NULLABLE
+137,RNA_depth,mutation,Read depth at this locus if the variant is supported by tumor RNA-seq data.,STRING,NULLABLE
+138,dbSNP_RS,mutation,"The rs-IDs from the   dbSNP database, novel if not found in any database used, or null if there is no dbSNP record, but it is found in other databases",STRING,NULLABLE
+139,Validation_Method,mutation,The assay platforms used for the validation call,STRING,NULLABLE
+140,hotspot,mutation,"A flag indicating if the variant is a known hotspot (Y, N, or null)",BOOLEAN,NULLABLE
+141,PHENO,mutation,"Indicates if existing variant is associated with a phenotype, disease or trait (0, 1, or null)",STRING,NULLABLE
+142,pindel,mutation,pindel caller identified the variant at this position,STRING,NULLABLE
+143,dbSNP_Val_Status,mutation,The dbSNP validation status is reported as a semicolon-separated list of statuses. The union of all rs-IDs is taken when there are multiple,STRING,NULLABLE
+144,Validation_Status,mutation,Second pass results from orthogonal technology,STRING,NULLABLE
+145,Tumor_Aliquot_Barcode,mutation,Aliquot barcode for the tumor sample,STRING,NULLABLE
+146,GDC_FILTER,mutation,GDC filters applied universally across all MAFs,STRING,NULLABLE
+147,Variant_Type,mutation,"Type of mutation. TNP (tri-nucleotide polymorphism) is analogous to DNP (di-nucleotide polymorphism) but for three consecutive nucleotides. ONP (oligo-nucleotide polymorphism) is analogous to TNP but for consecutive runs of four or more (SNP, DNP, TNP, ONP, INS, DEL, or Consolidated)",STRING,NULLABLE
+148,ThousG_AMR_AF,mutation,Non-reference allele and frequency of existing variant in 1000 Genomes combined American population,FLOAT,NULLABLE
+149,MOTIF_SCORE_CHANGE,mutation,The difference in motif score of the reference and variant sequences for the TFBP,STRING,NULLABLE
+150,method_of_diagnosis,diagnosis,The method used to confirm the subjects malignant diagnosis.,STRING,NULLABLE
+151,specimen_associated_project,specimen,The Project associated with the specimen.,STRING,NULLABLE
+152,byte_size,file,Size of the file in bytes. Maps to dcat:byteSize.,INTEGER,NULLABLE
+153,sample_barcode_tumor,mutation,"TCGA sample barcode for the tumor, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries",STRING,NULLABLE
+154,mutect2,mutation,Mutect2 caller identified the variant at this position,STRING,NULLABLE
+155,days_to_birth,subject,Number of days between the date used for index and the date from a person's date of birth represented as a calculated negative number of days.,INTEGER,NULLABLE
+156,gnomAD_non_cancer_EAS_AF,mutation,Frequency of exisiting variant in gnomAD genomes non-cancer East Asian population,FLOAT,NULLABLE
+157,cDNA_position,mutation,Relative position of base pair in the cDNA sequence as a fraction. A - symbol is displayed as the numerator if the variant does not appear in cDNA,STRING,NULLABLE
+158,case_barcode,mutation,"Original case barcode, eg TCGA-DX-A8BN",STRING,NULLABLE
+159,species,subject,"The taxonomic group (e.g. species) of the patient. For MVP, since taxonomy vocabulary is consistent between GDC and PDC, using text.  Ultimately, this will be a term returned by the vocabulary service.",STRING,NULLABLE
+160,derived_from_specimen,specimen,A source/parent specimen from which this one was directly derived.,STRING,NULLABLE
+161,ThousG_AFR_AF,mutation,Non-reference allele and frequency of existing variant in 1000 Genomes combined African population,FLOAT,NULLABLE
+162,treatment_outcome,treatment,The final outcome of the treatment.,STRING,NULLABLE
+163,gnomAD_NFE_AF,mutation,tFrequency of existing variant in gnomAD exomes Non-Finnish European population,FLOAT,NULLABLE
+164,SIFT,mutation,"The SIFT prediction and/or score, with both given as prediction (score)",STRING,NULLABLE
+165,days_to_treatment_end,treatment, The timepoint at which the treatment ended.,INTEGER,NULLABLE
+166,treatment_type,treatment,The treatment type including medication/therapeutics or other procedures.,STRING,NULLABLE
+167,TREMBL,mutation,UniProtKB/TrEMBL identifier of protein product,STRING,NULLABLE
+168,specimen_id,specimen,"The 'logical' identifier of the entity in the system of record, e.g. a UUID.  This 'id' is unique within a given system. The identified entity may have a different 'id' in a different system.",STRING,REQUIRED
+169,treatment_end_reason,treatment,The reason the treatment ended.,STRING,NULLABLE
+170,therapeutic_agent,treatment,One or more therapeutic agents as part of this treatment.,STRING,NULLABLE
+171,case_id,mutation,Unique GDC identifier for the underlying case,STRING,NULLABLE
+172,imaging_series,file,The 'logical' identifier of the series or grouping of imaging files in the system of record which the file is a part of.,STRING,NULLABLE
+173,FLAGS,mutation,Transcript quality flags,STRING,NULLABLE
+174,Hugo_Symbol,mutation,HUGO symbol for the gene (HUGO symbols are always in all caps). Unknown is used for regions that do not correspond to a gene,STRING,NULLABLE
+175,specimen_identifier_field_name,specimen,The name of the data object in the originating namespace from which the identifier was loaded.,STRING,NULLABLE
+176,Sequencer,mutation,Instrument used to produce primary sequence data,STRING,NULLABLE
+177,UNIPROT_ISOFORM,mutation,Direct mappings to UniProtKB isoforms,STRING,NULLABLE
+178,CANONICAL,mutation,"A flag (YES) indicating that the VEP-based canonical transcript, the longest translation, was used for this gene. If not, the value is null",STRING,NULLABLE
+179,vital_status,subject,Coded value indicating the state or condition of being living or deceased; also includes the case where the vital status is unknown.,STRING,NULLABLE
+180,diagnosis_identifier_value,diagnosis,"The value of the identifier, as defined by the system.",STRING,NULLABLE
+181,all_effects,mutation,"A semicolon delimited list of all possible variant effects, sorted by priority ([Symbol,Consequence,HGVSp_Short,Transcript_ID,RefSeq,HGVSc,Impact,Canonical,Sift,PolyPhen,Strand])",STRING,NULLABLE
+182,treatment_id,treatment,"The 'logical' identifier of the entity in the repository, e.g. a UUID.  This 'id' is unique within a given system. The identified entity may have a different 'id' in a different system.",STRING,REQUIRED
+183,TSL,mutation,"Transcript support level, which is based on independent RNA analyses",STRING,NULLABLE
+184,ESP_AA_AF,mutation,Non-reference allele and frequency of existing variant in NHLBI-ESP African American population,FLOAT,NULLABLE
+185,IMPACT,mutation,The impact modifier for the consequence type,STRING,NULLABLE
+186,COSMIC,mutation,Overlapping COSMIC variants,STRING,NULLABLE
+187,file_id,file,"The 'logical' identifier of the entity in the repository, e.g. a UUID.  This 'id' is unique within a given system. The identified entity may have a different 'id' in a different system.",STRING,REQUIRED
+188,sample_barcode_normal,mutation,"TCGA sample barcode for the normal control, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries",STRING,NULLABLE
+189,tumor_submitter_uuid,mutation,Unique GDC identifier for the tumor file submitter,STRING,NULLABLE
+190,gnomAD_non_cancer_OTH_AF,mutation,Frequency of exisiting variant in gnomAD genomes non-cancer Other population,FLOAT,NULLABLE
+191,muse,mutation,Muse caller identified the variant at this position,STRING,NULLABLE
+192,primary_diagnosis,diagnosis,The diagnosis instance that qualified a subject for inclusion on a ResearchProject.,STRING,NULLABLE
+193,TRANSCRIPTION_FACTORS,mutation,List of transcription factors which bind to the transcription factor binding profile,STRING,NULLABLE
+194,checksum,file,"A digit representing the sum of the correct digits in a piece of stored or transmitted digital data, against which later comparisons can be made to detect errors in the data.",STRING,NULLABLE
+195,aliquot_barcode_tumor,mutation,"TCGA aliquot barcode for the tumor, eg TCGA-12-1089-01A-01D-0517-01",STRING,NULLABLE
+196,SWISSPROT,mutation,UniProtKB/Swiss-Prot accession,STRING,NULLABLE
+197,file_identifier_field_name,file,The name of the data object in the originating namespace from which the identifier was loaded.,STRING,NULLABLE
+198,file_format,file,Format of the data files.,STRING,NULLABLE
+199,HGVS_OFFSET,mutation,Indicates by how many bases the HGVS notations for this variant have been shifted,STRING,NULLABLE
+200,gnomAD_non_cancer_SAS_AF,mutation,Frequency of exisiting variant in gnomAD genomes non-cancer South Asian population,FLOAT,NULLABLE
+201,Matched_Norm_Aliquot_Barcode,mutation,Aliquot barcode for the matched normal sample,STRING,NULLABLE
+202,PolyPhen,mutation,The PolyPhen prediction and/or score,STRING,NULLABLE
+203,Match_Norm_Validation_Allele2,mutation,Secondary data from orthogonal technology. Matched normal genotyping (validation) for allele 2 (cleared in somatic MAF),STRING,NULLABLE
+204,treatment_identifier_system,treatment,The system or namespace that defines the identifier.,STRING,NULLABLE
+205,gnomAD_non_cancer_MAX_AF_adj,mutation,Maximum observed allele frequency in non-cancer gnomAD genomes populations after removing subpopulations with less than 2 allele counts,FLOAT,NULLABLE
+206,End_Position,mutation,Highest numeric genomic position of the reported variant on the genomic reference sequence. Mutation end coordinate,INTEGER,NULLABLE
+207,Verification_Status,mutation,Second pass results from independent attempt using same methods as primary data source. Generally reserved for 3730 Sanger Sequencing,STRING,NULLABLE
+208,ESP_EA_AF,mutation,Non-reference allele and frequency of existing variant in NHLBI-ESP European American population,FLOAT,NULLABLE
+209,subject_identifier_system,subject,The system or namespace that defines the identifier.,STRING,NULLABLE
+210,subject_identifier_value,subject,"The value of the identifier, as defined by the system.",STRING,NULLABLE
+211,Tumor_Seq_Allele2,mutation,Primary data genotype for tumor sequencing (discovery) allele 2. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases,STRING,NULLABLE
+212,Match_Norm_Validation_Allele1,mutation,Secondary data from orthogonal technology. Matched normal genotyping (validation) for allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases (cleared in somatic MAF),STRING,NULLABLE
+213,HGVSp,mutation,The protein sequence of the variant in HGVS recommended format. p.= signifies no change in the protein,STRING,NULLABLE
+214,researchsubject_identifier_value,researchsubject,"The value of the identifier, as defined by the system.",STRING,NULLABLE
+215,Tumor_Seq_Allele1,mutation,Primary data genotype for tumor sequencing (discovery) allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases,STRING,NULLABLE
+216,gnomAD_EAS_AF,mutation,Frequency of existing variant in gnomAD exomes East Asian population,FLOAT,NULLABLE
+217,gnomAD_non_cancer_AF,mutation,Frequency of exisiting variant in gnomAD genomes combined non-cancer population,FLOAT,NULLABLE
+218,EXON,mutation,The exon number (out of total number),STRING,NULLABLE
+219,ThousG_SAS_AF,mutation,Non-reference allele and frequency of existing variant in 1000 Genomes combined South Asian population,FLOAT,NULLABLE
+220,Tumor_Validation_Allele2,mutation,Secondary data from orthogonal technology. Tumor genotyping (validation) for allele 2,STRING,NULLABLE
+221,Tumor_Validation_Allele1,mutation,Secondary data from orthogonal technology. Tumor genotyping (validation) for allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases,STRING,NULLABLE
+222,Exon_Number,mutation,The exon number (out of total number),STRING,NULLABLE
+223,HGVSc,mutation,The coding sequence of the variant in HGVS recommended format,STRING,NULLABLE

@@ -41,7 +41,7 @@ dependencies = [
     "tqdm"
 ]
 [project.optional-dependencies]
-test = ["pytest"]
+test = ["pytest", "parameterized"]
 
 
 
