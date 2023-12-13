@@ -103,14 +103,14 @@ class CdaDiseaseFactory(CdaFactory):
 
         # Deal with morphology - clinical_tnm_finding_list seems like the most
         # appropriate place to put this
-        clinical_tnm_finding_list = self._get_morphology_ncit_term_from_icdo(row)
+        clinical_tnm_finding_list = self._parse_morphology_into_ontology_term(row)
 
         diseaseModel = OpDisease(disease_term=disease_term,
                                  disease_stage_term_list=stage_term_list,
                                  clinical_tnm_finding_list=clinical_tnm_finding_list)
         return diseaseModel.to_ga4gh()
 
-    def _get_morphology_ncit_term_from_icdo(self, row) -> Optional[List[PPkt.OntologyClass]]:
+    def _parse_morphology_into_ontology_term(self, row) -> Optional[List[PPkt.OntologyClass]]:
         if row['morphology'] in self._icdo_to_ncit:
             ncit_record = self._icdo_to_ncit.get(row['morphology'])
             ontology_term = PPkt.OntologyClass()
