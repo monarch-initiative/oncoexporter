@@ -135,7 +135,7 @@ class CdaTableImporter(CdaImporter):
 
         # First obtain the pandas DataFrames from the CDA tables with rows that correspond to the Query
         subject_df = self.get_subject_df(page_size=page_size)
-        merged_df  = self.get_merged_diagnosis_research_subject_df(page_size=page_size)
+        merged_df = self.get_merged_diagnosis_research_subject_df(page_size=page_size)
         specimen_df = self.get_specimen_df(page_size=page_size)
         treatment_df = self.get_treatment_df(page_size=page_size)
         mutation_df = self.get_mutation_df(page_size=page_size)
@@ -175,6 +175,7 @@ class CdaTableImporter(CdaImporter):
             if individual_id not in ppackt_d:
                 raise ValueError(f"Attempt to enter unknown individual ID from biosample factory: \"{individual_id}\"")
             ppackt_d.get(individual_id).biosamples.append(biosample_message)
+
 
         # Retrieve GA4GH Genomic Interpretation messages (for mutation)
         for idx, row in tqdm(mutation_df.iterrows(), total=len(mutation_df.index), desc="mutation dataframe"):

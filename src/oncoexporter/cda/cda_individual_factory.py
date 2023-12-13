@@ -125,7 +125,7 @@ class CdaIndividualFactory(CdaFactory):
         try:
             # we need to parse '15987.0' first as a float and then transform to int
             d_to_b = int(float(days_to_birth))
-            iso_age = CdaIndividualFactory.days_to_iso(days=d_to_b)
+            iso_age = CdaFactory.days_to_iso(days=d_to_b)
             vstat = self.process_vital_status(row)
         except:
             pass
