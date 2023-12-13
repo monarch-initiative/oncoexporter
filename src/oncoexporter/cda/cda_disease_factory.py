@@ -115,7 +115,10 @@ class CdaDiseaseFactory(CdaFactory):
             ncit_record = self._icdo_to_ncit.get(row['morphology'])
             ontology_term = PPkt.OntologyClass()
             if 'NCIt Code (if present)' not in ncit_record:
-                warnings.warn(f"Couldn't find NCIt Code (if present) in record for ICD-O code {row['morphology']}")
+                warnings.warn(f"Couldn't find 'NCIt Code (if present)' entry in record for ICD-O code {row['morphology']}")
+                return None
+            elif ncit_record['NCIt Code (if present)'] == '':
+                warnings.warn(f"Found empty 'NCIt Code (if present)' entry in record for ICD-O code {row['morphology']}")
                 return None
             else:
                 ontology_term.id = "NCIT:" + ncit_record['NCIt Code (if present)']
