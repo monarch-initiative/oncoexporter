@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - develop
+      - ontology
       - main
 permissions:
   contents: write
