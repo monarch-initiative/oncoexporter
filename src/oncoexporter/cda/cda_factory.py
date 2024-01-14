@@ -1,4 +1,7 @@
 import abc
+import platform
+import os
+
 import pandas as pd
 
 
@@ -48,5 +51,21 @@ class CdaFactory(metaclass=abc.ABCMeta):
         td = pd.Timedelta(days=days)
         iso = td.isoformat() # returns ISO 8601 duration string: td = pd.Timedelta(days=10350); td.isoformat(); 'P10350DT0H0M0S'
         return iso
+
+    def get_local_share_directory(self, local_dir=None):
+        my_platform = platform.platform()
+        my_system = platform.system()
+        if local_dir is None and ("macOS" in my_platform or "Darwin" in my_system):
+            local_dir = os.path.expanduser('~')
+        if local_dir is None and ("linux" in my_platform or "Linux" in my_system):
+            local_dir = os.path.expanduser('~')
+        if local_dir is None and my_platform == "Windows":
+            local_dir = os.path.expanduser('~')
+        if local_dir is None:
+            raise ValueError("Could not create local directory to store downloaded files for oncoexporter. Specify the local_dir argument to fix this")
+        if not os.path.exists(local_dir):
+            os.makedirs(local_dir)
+            print(f"Created new directory for oncoexporter at {local_dir}")
+        return local_dir
 
 
