@@ -3,14 +3,17 @@ import platform
 import os
 
 import pandas as pd
-
+from .cda_downloader import CdaDownloader
 
 class CdaFactory(metaclass=abc.ABCMeta):
     """Superclass for the CDA Factory Classes
 
     Each subclass must implement the to_ga4gh method, which transforms a row of a table from CDA to a GA4GH Message.
     """
-
+    def __init__(self, overwrite_downloads:bool=False):
+        downloader = CdaDownloader()
+        downloader.download_if_needed(overwrite_downloads)
+        self._icdo_to_ncit_path = downloader.get_icdo_to_ncit_path()
 
     @abc.abstractmethod
     def to_ga4gh(self, row:pd.Series):
@@ -55,17 +58,11 @@ class CdaFactory(metaclass=abc.ABCMeta):
     def get_local_share_directory(self, local_dir=None):
         my_platform = platform.platform()
         my_system = platform.system()
-        if local_dir is None and ("macOS" in my_platform or "Darwin" in my_system):
-            local_dir = os.path.expanduser('~')
-        if local_dir is None and ("linux" in my_platform or "Linux" in my_system):
-            local_dir = os.path.expanduser('~')
-        if local_dir is None and my_platform == "Windows":
-            local_dir = os.path.expanduser('~')
         if local_dir is None:
-            raise ValueError("Could not create local directory to store downloaded files for oncoexporter. Specify the local_dir argument to fix this")
+            local_dir = os.path.join(os.path.expanduser('~'), ".oncoexporter")
         if not os.path.exists(local_dir):
             os.makedirs(local_dir)
-            print(f"Created new directory for oncoexporter at {local_dir}")
+            print(f"[INFO] Created new directory for oncoexporter at {local_dir}")
         return local_dir
 
 

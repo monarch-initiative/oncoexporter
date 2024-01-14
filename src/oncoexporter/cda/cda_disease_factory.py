@@ -3,7 +3,7 @@ from typing import List, Optional
 import phenopackets as PPkt
 import pandas as pd
 import os
-import pkg_resources
+
 import requests
 import csv
 import warnings
@@ -58,37 +58,26 @@ class CdaDiseaseFactory(CdaFactory):
             self._opMapper = OpDiagnosisMapper()
         else:
             self._opMapper = op_mapper
-        self._icdo_to_ncit = self.load_icdo_to_ncit_tsv()
+       # self._icdo_to_ncit = self.load_icdo_to_ncit_tsv()
             #self._download_and_icdo_to_ncit_tsv(icdo_to_ncit_map_url, key_column=key_column)
 
 
     def load_icdo_to_ncit_tsv(self, overwrite:bool=False, local_dir:str=None):
         """
-        Download if necessary the NCIT ICD-O mapping file and store it in the package downloaded_files folder
+        Download if necessary the NCIT ICD-O mapping file and store it in the package ncit_files folder
         :param overwrite: whether to overwrite an existing file (otherwise we skip downloading)
         :type overwrite: bool
         :param local_dir: Path to a directory to write downloaded file
         """
-        icdo_to_ncit_map_url = 'https://evs.nci.nih.gov/ftp1/NCI_Thesaurus/Mappings/ICD-O-3_Mappings/ICD-O-3.1-NCIt_Morphology_Mapping.txt',
         key_column = 'ICD-O Code'
-        local_dir = self.get_local_share_directory()
-        icd_path = os.path.join(local_dir, 'ICD-O-3.1-NCIt_Morphology_Mapping.txt')
-        if not os.path.isfile(icd_path):
-            print(f"Downloading {icdo_to_ncit_map_url}")
-            response = requests.get(icdo_to_ncit_map_url)
-            response.raise_for_status()  # This will raise an error if the download failed
-            tsv_data = csv.DictReader(response.text.splitlines(), delimiter='\t')
-            with open(icd_path, 'w', newline='\n') as f:
-                writer = csv.writer(f)
-                writer.writerows(tsv_data)
-            print(f"Downloaded {icdo_to_ncit_map_url}")
         # When we get here, either we have just downloaded the ICD-O file or it was already available locally.
-        stream = pkg_resources.resource_stream(icd_path)
-        df = pd.read_csv(stream, encoding='latin-1')
+        # stream = pkg_resources.resource_stream("", icd_path)
+        icd_path = self._icdo_to_ncit_path
+        df = pd.read_csv(icd_path, encoding='latin-1')
         result_dict = {}
         if key_column not in df.columns:
             raise ValueError(f"Couldn't find key_column {key_column} in fieldnames "
-                          f"{df.columns} of file downloaded from {icdo_to_ncit_map_url}")
+                          f"{df.columns} of file at {icd_path}")
         for idx, row in df.iterrows():
             key = row[key_column]
             if key:
@@ -116,6 +105,9 @@ class CdaDiseaseFactory(CdaFactory):
                 result_dict[key] = row
 
         return result_dict
+
+    def temp_get_load_icdo_to_ncit_tsv(self):
+        return self._icdo_to_ncit
 
     def to_ga4gh(self, row):
         """Convert a row from the CDA subject table into an Individual message (GA4GH Phenopacket Schema)
