@@ -44,7 +44,9 @@ class CdaTableImporter(CdaImporter):
         self._cohort_name = cohort_name
 
         if cache_dir is None:
-            self._cache_dir = os.getcwd()
+            self._cache_dir = os.path.join(os.getcwd(), '.oncoexporter_cache')
+            if not os.path.isdir(self._cache_dir):
+                os.makedirs(self._cache_dir, exist_ok=True)
         else:
             if not os.path.isdir(cache_dir) or not os.access(cache_dir, os.W_OK):
                 raise ValueError(f'`cache_dir` must be a writable directory: {cache_dir}')
