@@ -14,7 +14,7 @@ exclude = ["notebooks", "test"]
 [project]
 name = "oncoexporter"
 dynamic = ["version"]
-requires-python = ">=3.5"
+requires-python = ">=3.8"
 description = "Generate and work with GA4GH phenopackets for NCI"
 readme = "README.md"
 authors = [
