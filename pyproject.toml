@@ -36,6 +36,7 @@ keywords = [
 dependencies = [
     "hpo-toolkit>=0.3.0,<0.4.0",
     "phenopackets>=2.0.2",
+    "importlib_resources",
     "requests",
     "cdapython@git+https://github.com/CancerDataAggregator/cda-python",
     "tqdm"
