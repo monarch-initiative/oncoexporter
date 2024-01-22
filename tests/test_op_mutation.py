@@ -9,19 +9,6 @@ from oncoexporter.cda import CdaMutationFactory
 TESTDATA_FILENAME = os.path.join(os.path.dirname(__file__), 'data', 'mutation_excerpt.tsv')
 
 
-def get_column_dict():
-    d = {}
-    for column_name in [
-            'cda_subject_id', 'primary_site', 'Hugo_Symbol', 'Entrez_Gene_Id', 'NCBI_Build', 'Chromosome',
-            'Start_Position', 'End_Position', 'Reference_Allele', 'Tumor_Seq_Allele1', 'Tumor_Seq_Allele2', 'dbSNP_RS',
-            'dbSNP_Val_Status', 'Match_Norm_Seq_Allele1', 'Match_Norm_Seq_Allele2', 'Tumor_Validation_Allele1',
-            'Tumor_Validation_Allele2', 'Match_Norm_Validation_Allele1', 'Match_Norm_Validation_Allele2',
-            'Mutation_Status', 'HGVSc', 'HGVSp', 'HGVSp_Short', 'Transcript_ID', 'ENSP'
-        ]:
-        d[column_name] = "n/a"
-    return d
-
-
 def get_vcf_ref(vinterpretation):
     if not isinstance(vinterpretation, PPkt.VariantInterpretation):
         raise ValueError(F"expected GA4GH VariantInterpretation but got {type(vinterpretation)}")
@@ -45,7 +32,7 @@ class TestOpMutation:
         return CdaMutationFactory()
 
     @pytest.fixture
-    def a1mi(self) -> pd.Series:
+    def payload(self) -> pd.Series:
         df = pd.read_csv(TESTDATA_FILENAME, sep="\t")
         # TCGA.TCGA-C5-A1MI -- subject is on the first row
         df_a1mi = df[df['cda_subject_id'].str.contains("TCGA.TCGA-C5-A1MI")]
@@ -53,19 +40,18 @@ class TestOpMutation:
         return df_a1mi.iloc[0]
 
     def test_a1mi(self, mutation_factory: CdaMutationFactory,
-                  a1mi: pd.Series):
-        vinterpretation = mutation_factory.to_ga4gh(a1mi)
+                  payload: pd.Series):
+        vinterpretation = mutation_factory.to_ga4gh(payload)
         assert vinterpretation is not None
         genome_assembly, ref, alt, pos = get_vcf_ref(vinterpretation=vinterpretation)
         assert genome_assembly == "GRCh38"
 
-    def test_gene(self, mutation_factory: CdaMutationFactory):
-        d = get_column_dict()
-        d['Hugo_Symbol'] = "MFG42"
-        d['Entrez_Gene_Id'] = "42"
-        series = pd.Series(d)
+    def test_gene(self, mutation_factory: CdaMutationFactory,
+                  payload: pd.Series):
+        payload['Hugo_Symbol'] = "MFG42"
+        payload['Entrez_Gene_Id'] = "42"
 
-        vinterpretation = mutation_factory.to_ga4gh(series)
+        vinterpretation = mutation_factory.to_ga4gh(payload)
         assert vinterpretation is not None
         assert vinterpretation.variation_descriptor is not None
 
@@ -77,15 +63,14 @@ class TestOpMutation:
         assert gcontext.value_id == "NCBIGene:42"
         assert gcontext.symbol == "MFG42"
 
-    def test_hgvs(self, mutation_factory: CdaMutationFactory):
-        d = get_column_dict()
-        d['Transcript_ID'] = "ENST00000380152"
-        d['ENSP'] = "ENSP00000369497"
-        d['HGVSc'] = "c.5526T>G"
-        d['HGVSp'] = "p.Tyr1842Ter"
-        series = pd.Series(d)
+    def test_hgvs(self, mutation_factory: CdaMutationFactory,
+                  payload: pd.Series):
+        payload['Transcript_ID'] = "ENST00000380152"
+        payload['ENSP'] = "ENSP00000369497"
+        payload['HGVSc'] = "c.5526T>G"
+        payload['HGVSp_Short'] = "p.Tyr1842Ter"
 
-        vinterpretation = mutation_factory.to_ga4gh(series)
+        vinterpretation = mutation_factory.to_ga4gh(payload)
 
         assert vinterpretation is not None
         assert vinterpretation.variation_descriptor is not None

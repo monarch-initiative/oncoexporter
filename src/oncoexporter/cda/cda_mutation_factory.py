@@ -69,6 +69,6 @@ class CdaMutationFactory(CdaFactory):
         mutation = OpMutation(Hugo_Symbol=Hugo_Symbol, Entrez_Gene_Id=Entrez_Gene_Id, NCBI_Build=NCBI_Build,
                               Chromosome=Chromosome, Start_Position=Start_Position, Reference_Allele=Reference_Allele,
                               Tumor_Seq_Allele2=Tumor_Seq_Allele2,
-                              HGVSc=HGVSc, HGVSp=HGVSp_Short, Transcript_ID=Transcript_ID, ENSP=ENSP)
+                              HGVSc=HGVSc, HGVSp_Short=HGVSp_Short, Transcript_ID=Transcript_ID, ENSP=ENSP)
         return mutation.to_ga4gh()
 
