@@ -5,7 +5,7 @@ from cdapython import Q
 from oncoexporter.cda import CdaTableImporter
 
 Tsite = Q('primary_diagnosis_site = "%uter%" OR primary_diagnosis_site = "%cerv%"', )
-table_importer = CdaTableImporter(query_obj=Tsite, use_cache=True, cohort_name='Cervix')
+table_importer = CdaTableImporter(query=Tsite, use_cache=True, cohort_name='Cervix')
 p = table_importer.get_ga4gh_phenopackets(page_size=10000)
 
 print("Created {} phenopackets".format(len(p)))

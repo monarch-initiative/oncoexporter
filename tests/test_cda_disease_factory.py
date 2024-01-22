@@ -1,8 +1,9 @@
 import unittest
 import os
 import pandas as pd
-from parameterized import parameterized
 import phenopackets as PPKt
+import pytest
+
 from oncoexporter.cda import CdaDiseaseFactory
 
 
@@ -38,7 +39,7 @@ class TestCdaDiseaseFactory(unittest.TestCase):
         self.assertEqual(self.disease_objs['s1'].disease_stage[0].__class__,
                          PPKt.OntologyClass)
 
-    @parameterized.expand([
+    @pytest.mark.parametrize('subject_id, expected_ncit_ontology', [
         ('s1', STAGE_IA),          # IA
         ('s2', STAGE_IB),          # IB
         ('s3', STAGE_IIA),         # IIA
