@@ -1,6 +1,7 @@
 import typing
 
 import phenopackets as PPKt
+import pandas as pd
 
 from .cda_factory import CdaFactory
 
@@ -54,6 +55,16 @@ class CdaBiosampleFactory(CdaFactory):
         if derived_from_subj is not None:
             biosample.individual_id = derived_from_subj
 
+        # TODO: Biosample time_of_collection: Age at time sample was collected
+        #  -> need subject age + days to collection 
+        days_to_collection = row['days_to_collection'] # number of days from index date to sample collection date
+        if days_to_collection is not None:
+            pass
+            # need PPKt.iso8601duration where PPKt.OpIndividual.id = biosample.individual_id
+            # days_to_coll_td = pd.Timedelta(days=days_to_collection)
+            # time_of_coll = PPkt.iso8601duration + days_to_coll_td
+            # biosample.time_of_collection = time_of_coll.isoformat()
+
         # derived_from_specimen -> derived_from_id
         derived_from = row['derived_from_specimen']
         if derived_from is not None:
@@ -86,6 +97,7 @@ class CdaBiosampleFactory(CdaFactory):
 
 
 def _map_anatomical_site(val: typing.Optional[str]) -> typing.Optional[PPKt.OntologyClass]:
+    # not clear if we need a mapping from NCIt -> UBERON ?
     if val is None:
         return None
     if val.lower() == 'lung':
