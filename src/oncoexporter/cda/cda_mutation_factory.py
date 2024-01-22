@@ -46,10 +46,10 @@ class CdaMutationFactory(CdaFactory):
 
     def to_ga4gh(self, row):
         """
-        convert a row from the CDA mutation table into an 
+        convert a row from the CDA mutation table into an
         Individual message (GA4GH Phenopacket Schema)
         The row is a pd.core.series.Series and contains the columns
-        
+
        :param row: a row from the CDA subject table
         """
         if not isinstance(row, pd.core.series.Series):
@@ -63,6 +63,6 @@ class CdaMutationFactory(CdaFactory):
             = self.get_items_from_row(row, self._column_names)
 
         mutation = OpMutation(Hugo_Symbol=Hugo_Symbol, Entrez_Gene_Id=Entrez_Gene_Id,
-                              HGVSc=HGVSc, HGVSp=HGVSp, Transcript_ID=Transcript_ID, ENSP=ENSP)
+                            HGVSc=HGVSc, HGVSp=HGVSp_Short, Transcript_ID=Transcript_ID, ENSP=ENSP)
         return mutation.to_ga4gh()
 

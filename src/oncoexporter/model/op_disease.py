@@ -23,7 +23,7 @@ class OpDisease(OpMessage):
                 iso8601duration_onset_age:str=None,
                 iso8601duration_resolution_age: str = None,
                 disease_stage_term_list:List[PPKt.OntologyClass]=None,
-                clinical_tnm_finding_list:list=None,
+                clinical_tnm_finding_list:List[PPKt.OntologyClass]=None,
                 primary_site_id:str=None,
                 primary_site_label: str = None,
                 laterality:str=None) -> None:
@@ -43,6 +43,13 @@ class OpDisease(OpMessage):
                 raise ValueError(f"If passed, argument \"disease_stage_term_list\" cannot be an empty list")
             for term in disease_stage_term_list:
                 disease_obj.disease_stage.append(term)
+        if clinical_tnm_finding_list is not None:
+            if not isinstance(clinical_tnm_finding_list, list):
+                raise ValueError(f"If passed, argument \"clinical_tnm_finding_list\" must be a list but was {type(clinical_tnm_finding_list)}")
+            if len(clinical_tnm_finding_list) == 0:
+                raise ValueError(f"If passed, argument \"clinical_tnm_finding_list\" cannot be an empty list")
+            for term in clinical_tnm_finding_list:
+                disease_obj.clinical_tnm_finding.append(term)
         self._disease = disease_obj
 
     def to_ga4gh(self):
