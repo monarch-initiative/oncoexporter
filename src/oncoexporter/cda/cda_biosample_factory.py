@@ -65,12 +65,18 @@ class CdaBiosampleFactory(CdaFactory):
             # time_of_coll = PPkt.iso8601duration + days_to_coll_td
             # biosample.time_of_collection = time_of_coll.isoformat()
 
-        # derived_from_specimen -> derived_from_id
-        derived_from = row['derived_from_specimen']
-        if derived_from is not None:
-            if derived_from == 'initial specimen':
-                biosample.derived_from_id = derived_from_subj
-            else:
+        # derived_from_specimen -> derived_from_id 
+        '''
+        Under mapping specimen it says (for GDC): "'specimen_type' is "'sample' or 'portion' or 'slide' 
+         or 'analyte' or 'aliquot'" and 
+         'derived_from_specimen' is "'initial specimen' if specimen_type is 'sample'; 
+         otherwise Specimen.id for parent Specimen record".
+
+         Note: may want to add a check that specimen_type from CDA is 'sample' if derived_from is 'initial specimen'
+        '''
+        derived_from = row['derived_from_specimen']    
+        if derived_from is not None:  
+            if derived_from != 'initial specimen':  
                 biosample.derived_from_id = derived_from
 
         # anatomical_site -> sampled_tissue
