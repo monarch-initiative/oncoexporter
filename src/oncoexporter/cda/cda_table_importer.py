@@ -7,6 +7,7 @@ import pandas as pd
 import pickle
 from .cda_disease_factory import CdaDiseaseFactory
 from .cda_importer import CdaImporter
+from .cda_factory import CdaFactory
 from .cda_individual_factory import CdaIndividualFactory
 from .cda_biosample_factory import CdaBiosampleFactory
 from .cda_mutation_factory import CdaMutationFactory
@@ -180,6 +181,15 @@ class CdaTableImporter(CdaImporter):
             individual_id = row["subject_id"]
             if individual_id not in ppackt_d:
                 raise ValueError(f"Attempt to enter unknown individual ID from biosample factory: \"{individual_id}\"")
+            
+            # convert CDA days_to_collection to PPKt time_of_collection
+            #         days_to_collection: number of days from index date to sample collection date
+            #         time_of_collection: Age of subject at time sample was collected 
+            days_to_coll_iso = CdaFactory.days_to_iso(row["days_to_collection"])
+            # this should work if both are pd.Timedelta: 
+            time_of_collection = ppackt_d[individual_id]["iso8601duration"] + days_to_coll_iso # should it be 'Age' or 'iso8601duration'?
+            biosample_message["time_of_collection"] = time_of_collection
+
             ppackt_d.get(individual_id).biosamples.append(biosample_message)
 
 
@@ -220,7 +230,7 @@ class CdaTableImporter(CdaImporter):
             individual_id = row["subject_id"]
             medical_action_message = make_cda_medicalaction(row)
             if individual_id not in ppackt_d:
-                raise ValueError(f"Attempt to enter unknown individual ID from treatemtn factory: \"{individual_id}\"")
+                raise ValueError(f"Attempt to enter unknown individual ID from treatment factory: \"{individual_id}\"")
             ppackt_d.get(individual_id).medical_actions.append(medical_action_message)
 
         # When we get here, we have constructed GA4GH Phenopackets with Individual, Disease, Biospecimen, MedicalAction, and GenomicInterpretations

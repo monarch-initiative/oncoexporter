@@ -128,8 +128,8 @@ class CdaDiseaseFactory(CdaFactory):
         )
         ## Collect other pieces of data to add to the constructor on the next line
 
-        # Not sure if onset and age_at_diagnosis are the same thing?
-        # onset = days_to_iso(row['age_at_diagnosis'])
+        # For now we are considering onset and age_at_diagnosis as the same
+        onset = days_to_iso(row["age_at_diagnosis"])
 
         # Deal with stage
         stage_term_list = self._parse_stage_into_ontology_terms(row['stage'])
@@ -139,6 +139,7 @@ class CdaDiseaseFactory(CdaFactory):
         clinical_tnm_finding_list = self._parse_morphology_into_ontology_term(row)
 
         diseaseModel = OpDisease(disease_term=disease_term,
+                                 onset=onset,
                                  disease_stage_term_list=stage_term_list,
                                  clinical_tnm_finding_list=clinical_tnm_finding_list)
         return diseaseModel.to_ga4gh()
