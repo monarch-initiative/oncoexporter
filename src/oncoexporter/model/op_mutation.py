@@ -23,7 +23,7 @@ class OpMutation(OpMessage):
             self._alt = Tumor_Seq_Allele2
             self._mutation_status = Mutation_Status
 
-    def to_ga4gh(self, acmg=None):
+    def to_ga4gh(self) -> PPkt.VariationDescriptor:
         """
         Transform this Variant object into a "variantInterpretation" message of the GA4GH Phenopacket schema
         """
