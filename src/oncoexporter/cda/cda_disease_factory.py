@@ -64,7 +64,7 @@ class CdaDiseaseFactory(CdaFactory):
 
     def load_icdo_to_ncit_tsv(self, overwrite:bool=False, local_dir:str=None):
         """
-        Download if necessary the NCIT ICD-O mapping file and store it in the package ncit_files folder
+        Download if necessary the NCIT ICD-O mapping file and store it in the package ncit_mapping_files folder
         :param overwrite: whether to overwrite an existing file (otherwise we skip downloading)
         :type overwrite: bool
         :param local_dir: Path to a directory to write downloaded file
