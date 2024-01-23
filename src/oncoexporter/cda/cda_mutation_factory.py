@@ -1,6 +1,10 @@
 import pandas as pd
-from .cda_factory import CdaFactory
+import phenopackets as pp
+
 from oncoexporter.model.op_mutation import OpMutation
+
+from .cda_factory import CdaFactory
+
 
 class CdaMutationFactory(CdaFactory):
     """
@@ -44,7 +48,7 @@ class CdaMutationFactory(CdaFactory):
             'Mutation_Status', 'HGVSc', 'HGVSp', 'HGVSp_Short', 'Transcript_ID', 'ENSP'
         ]
 
-    def to_ga4gh(self, row):
+    def to_ga4gh(self, row) -> pp.VariationDescriptor:
         """
         convert a row from the CDA mutation table into an
         Individual message (GA4GH Phenopacket Schema)
@@ -52,7 +56,7 @@ class CdaMutationFactory(CdaFactory):
 
        :param row: a row from the CDA subject table
         """
-        if not isinstance(row, pd.core.series.Series):
+        if not isinstance(row, pd.Series):
             raise ValueError(f"Invalid argument. Expected pandas series but got {type(row)}")
 
         cda_subject_id, primary_site, Hugo_Symbol, Entrez_Gene_Id, NCBI_Build, Chromosome, \
@@ -62,7 +66,9 @@ class CdaMutationFactory(CdaFactory):
         Mutation_Status, HGVSc, HGVSp, HGVSp_Short, Transcript_ID, ENSP \
             = self.get_items_from_row(row, self._column_names)
 
-        mutation = OpMutation(Hugo_Symbol=Hugo_Symbol, Entrez_Gene_Id=Entrez_Gene_Id,
-                            HGVSc=HGVSc, HGVSp=HGVSp_Short, Transcript_ID=Transcript_ID, ENSP=ENSP)
+        mutation = OpMutation(Hugo_Symbol=Hugo_Symbol, Entrez_Gene_Id=Entrez_Gene_Id, NCBI_Build=NCBI_Build,
+                              Chromosome=Chromosome, Start_Position=Start_Position, Reference_Allele=Reference_Allele,
+                              Tumor_Seq_Allele2=Tumor_Seq_Allele2,
+                              HGVSc=HGVSc, HGVSp_Short=HGVSp_Short, Transcript_ID=Transcript_ID, ENSP=ENSP)
         return mutation.to_ga4gh()
 

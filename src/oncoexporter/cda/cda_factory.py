@@ -3,17 +3,13 @@ import platform
 import os
 
 import pandas as pd
-from .cda_downloader import CdaDownloader
+
 
 class CdaFactory(metaclass=abc.ABCMeta):
     """Superclass for the CDA Factory Classes
 
     Each subclass must implement the to_ga4gh method, which transforms a row of a table from CDA to a GA4GH Message.
     """
-    def __init__(self, overwrite_downloads:bool=False):
-        downloader = CdaDownloader()
-        downloader.download_if_needed(overwrite_downloads)
-        self._icdo_to_ncit_path = downloader.get_icdo_to_ncit_path()
 
     @abc.abstractmethod
     def to_ga4gh(self, row:pd.Series):
