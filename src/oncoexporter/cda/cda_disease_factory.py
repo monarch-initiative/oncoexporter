@@ -118,7 +118,7 @@ class CdaDiseaseFactory(CdaFactory):
         'method_of_diagnosis', 'subject_id', 'researchsubject_id']
         :param row: a row from the CDA subject table
         """
-        if not isinstance(row, pd.core.series.Series):
+        if not isinstance(row, pd.Series):
             raise ValueError(f"Invalid argument. Expected pandas series but got {type(row)}")
 
         disease_term = self._parse_diagnosis_into_ontology_term(

@@ -15,4 +15,3 @@ class OpCauseOfDeathMapper(OpMapper):
             return oterm
         else:
             return None
-        return None
