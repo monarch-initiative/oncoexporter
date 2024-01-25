@@ -1,6 +1,7 @@
 import abc
 import platform
 import os
+import typing
 
 import pandas as pd
 
@@ -18,6 +19,7 @@ class CdaFactory(metaclass=abc.ABCMeta):
         :param row: A row from the CDA
         :type row: pd.Series
         :returns: a message from the GA4GH Phenopacket Schema
+        :raises ValueError: if unable to parse
         """
         pass
 
@@ -33,8 +35,9 @@ class CdaFactory(metaclass=abc.ABCMeta):
         for name in column_names:
             results.append(self.get_item(row, name))
         return results
-    
-    def days_to_iso(days: int):
+
+    @staticmethod
+    def days_to_iso(days: typing.Union[int, str]):
         """
         Convert the number of days of life into an ISO 8601 period representing the age of an individual
         (e.g., P42Y7M is 42 years and 7 months).
@@ -42,13 +45,16 @@ class CdaFactory(metaclass=abc.ABCMeta):
         :param days: number of days of life (str or int)
         """
         if isinstance(days, str):
-            days = int(str)
-        if not isinstance(days, int):
+            days = int(days)
+        elif isinstance(days, int):
+            pass
+        else:
             raise ValueError(f"days argument must be int or str but was {type(days)}")
         
         # pandas does this conversion automatically: https://pandas.pydata.org/docs/reference/api/pandas.Timedelta.isoformat.html
-        td = pd.Timedelta(days=days)
-        iso = td.isoformat() # returns ISO 8601 duration string: td = pd.Timedelta(days=10350); td.isoformat(); 'P10350DT0H0M0S'
+        iso = f'P{abs(days)}D'
+        # td = pd.Timedelta(days=days)
+        # iso = td.isoformat() # returns ISO 8601 duration string: td = pd.Timedelta(days=10350); td.isoformat(); 'P10350D'
         return iso
 
     def get_local_share_directory(self, local_dir=None):
