@@ -39,8 +39,11 @@ class CdaFactory(metaclass=abc.ABCMeta):
     @staticmethod
     def days_to_iso(days: typing.Union[int, str]):
         """
-        Convert the number of days of life into an ISO 8601 period representing the age of an individual
-        (e.g., P42Y7M is 42 years and 7 months).
+        Convert the number of days of life into an ISO 8601 period representing the age of an individual.
+
+        Note, we only use the `D` designator as transformation to years or months would be lossy.
+
+        The `days` can be negative, leading to the duration of the same length.
 
         :param days: number of days of life (str or int)
         """
@@ -50,12 +53,8 @@ class CdaFactory(metaclass=abc.ABCMeta):
             pass
         else:
             raise ValueError(f"days argument must be int or str but was {type(days)}")
-        
-        # pandas does this conversion automatically: https://pandas.pydata.org/docs/reference/api/pandas.Timedelta.isoformat.html
-        iso = f'P{abs(days)}D'
-        # td = pd.Timedelta(days=days)
-        # iso = td.isoformat() # returns ISO 8601 duration string: td = pd.Timedelta(days=10350); td.isoformat(); 'P10350D'
-        return iso
+
+        return f'P{abs(days)}D'
 
     def get_local_share_directory(self, local_dir=None):
         my_platform = platform.platform()
