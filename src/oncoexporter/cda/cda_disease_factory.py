@@ -76,7 +76,7 @@ class CdaDiseaseFactory(CdaFactory):
         ## Collect other pieces of data to add to the constructor on the next line
 
         # We will interpret age_at_diagnosis as age of onset
-        iso8601_age_of_onset = self._iso_age_mapper.from_days((row['age_at_diagnosis']))
+        iso8601_age_of_onset = self._iso_age_mapper.from_days(row['age_at_diagnosis'])
 
         # Deal with stage
         stage_term = self._stageMapper.get_ontology_term(row=row)

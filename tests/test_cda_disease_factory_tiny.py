@@ -9,18 +9,6 @@ from oncoexporter.cda import CdaDiseaseFactory
 # has ten lines
 MERGED_DIAG_RESEARCH_DF_FILE = os.path.join(os.path.dirname(__file__), 'data', 'merged_diagnosis_researchsubject_tiny.tsv')
 
-# Global variables for NCIT ontology terms
-STAGE_I = ('NCIT:C27966', 'Stage I')
-STAGE_IA = ('NCIT:C27975', 'Stage IA')
-STAGE_IB = ('NCIT:C27976', 'Stage IB')
-STAGE_II = ('NCIT:C28054', 'Stage II')
-STAGE_IIA = ('NCIT:C27967', 'Stage IIA')
-STAGE_IIB = ('NCIT:C27968', 'Stage IIB')
-STAGE_IIIA = ('NCIT:C27977', 'Stage IIIA')
-STAGE_IIIB = ('NCIT:C27978', 'Stage IIIB')
-STAGE_IV = ('NCIT:C27971', 'Stage IV')
-STAGE_UNKNOWN = ('NCIT:C92207', 'Stage Unknown')
-
 
 class TestCdaDiseaseFactoryTiny(unittest.TestCase):
     @classmethod

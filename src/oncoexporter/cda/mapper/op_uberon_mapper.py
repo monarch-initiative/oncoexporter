@@ -25,7 +25,7 @@ class OpUberonMapper(OpMapper):
                             "uterine cervix":"UBERON:0000002",
                             "uterus":"UBERON:0000995",
                             "body of uterus":"UBERON:0009853",
-                           "lower respiratory tract": "UBERON:0001558"
+                            "lower respiratory tract": "UBERON:0001558"
                             }
 
         site_to_uberon_label_d = {
