@@ -28,8 +28,8 @@ class OpDiseaseStageMapper(OpMapper):
                             'Stage IV': 'NCIT:C27971'
                             }
         stage_d = {'Stage I': 'Stage I',
-                'Stage 1': 'Stage I'
-                'stage I': 'Stage I'
+                'Stage 1': 'Stage I',
+                'stage I': 'Stage I',
                 'stage 1': 'Stage I',
                 'IA':'Stage IA',
                 'Stage IA':'Stage IA',

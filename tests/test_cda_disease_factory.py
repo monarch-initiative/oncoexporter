@@ -28,7 +28,6 @@ class TestCdaDiseaseFactory(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.factory = CdaDiseaseFactory()
-        cls.merged_diag_research_test_df = pd.read_csv(MERGED_DIAG_RESEARCH_DF_FILE, sep="\t")
         cls.stage_values_test_df = pd.read_csv(ALL_STAGE_VALUES_TEST_DF_FILE, sep="\t")
 
         cls.disease_objs = {}
