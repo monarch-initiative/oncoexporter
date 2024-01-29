@@ -38,22 +38,22 @@ class TestCdaDiseaseFactory(unittest.TestCase):
         self.assertEqual(self.disease_objs['s1'].disease_stage[0].__class__,
                          PPKt.OntologyClass)
 
-    @pytest.mark.parametrize('subject_id, expected_ncit_ontology', [
-        ('s1', STAGE_IA),          # IA
-        ('s2', STAGE_IB),          # IB
-        ('s3', STAGE_IIA),         # IIA
-        ('s4', STAGE_IIB),         # IIB
-        ('s5', STAGE_IIIA),        # IIIA
-        ('s6', STAGE_IIIB),        # IIIB
-        ('s7', STAGE_IV),          # IV
-        ('s8', STAGE_IA),          # Stage IA
-        ('s9', STAGE_IB),          # Stage IB
-        ('s10', STAGE_IIA),        # Stage IIA
-        ('s11', STAGE_IIB),        # Stage IIB
-        ('s12', STAGE_IIIA),       # Stage IIIA
-        ('s13', STAGE_UNKNOWN),    # None
-        ('s14', STAGE_I),          # Stage I
-        ('s15', STAGE_II)          # Stage II
+    @pytest.mark.parametrize( [
+        ['s1', STAGE_IA],          # IA
+        ['s2', STAGE_IB],          # IB
+        ['s3', STAGE_IIA],         # IIA
+        ['s4', STAGE_IIB],         # IIB
+        ['s5', STAGE_IIIA],        # IIIA
+        ['s6', STAGE_IIIB],        # IIIB
+        ['s7', STAGE_IV],          # IV
+        ['s8', STAGE_IA],          # Stage IA
+        ['s9', STAGE_IB],          # Stage IB
+        ['s10', STAGE_IIA],        # Stage IIA
+        ['s11', STAGE_IIB],        # Stage IIB
+        ['s12', STAGE_IIIA],       # Stage IIIA
+        ['s13', STAGE_UNKNOWN],    # None
+        ['s14', STAGE_I],          # Stage I
+        ['s15', STAGE_II]          # Stage II
     ])
     def test_correct_stage_parsing(self, subject_id, expected_ncit_ontology):
         this_row = self.stage_values_test_df[
