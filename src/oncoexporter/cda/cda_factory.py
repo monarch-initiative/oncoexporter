@@ -1,7 +1,8 @@
 import abc
 import platform
 import os
-import typing
+import math
+from typing import Optional, Union
 
 import pandas as pd
 
@@ -36,8 +37,7 @@ class CdaFactory(metaclass=abc.ABCMeta):
             results.append(self.get_item(row, name))
         return results
 
-    @staticmethod
-    def days_to_iso(days: typing.Union[int, str]):
+    def days_to_iso(self, days: Union[int,str]) -> Optional[str]:
         """
         Convert the number of days of life into an ISO 8601 period representing the age of an individual.
 
@@ -46,15 +46,17 @@ class CdaFactory(metaclass=abc.ABCMeta):
         The `days` can be negative, leading to the duration of the same length.
 
         :param days: number of days of life (str or int)
+        :type days: Union[int,str]
+        :returns: ISO8601 string representing age or None if the parse fails
+        :rtype: Optional[str]
+        TODO -- PROBABLY DELETE
         """
         if isinstance(days, str):
-            days = int(days)
-        elif isinstance(days, int):
-            pass
-        else:
-            raise ValueError(f"days argument must be int or str but was {type(days)}")
-
-        return f'P{abs(days)}D'
+            days = int(str)
+        if isinstance(days, float) and not math.isnan(days):
+            days = int(days) # this is because some values are like 73.0
+        if not isinstance(days, int):
+            raise ValueError(f"days argument ({days}) must be int or str but was {type(days)}"
 
     def get_local_share_directory(self, local_dir=None):
         my_platform = platform.platform()

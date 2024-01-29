@@ -21,7 +21,7 @@ class CdaDownloader:
 
     def load_icdo_to_ncit_tsv(self, overwrite: bool, local_dir: str):
         """
-        Download if necessary the NCIT ICD-O mapping file and store it in the package ncit_files folder
+        Download if necessary the NCIT ICD-O mapping file and store it in the package ncit_mapping_files folder
         :param overwrite: whether to overwrite an existing file (otherwise we skip downloading)
         :type overwrite: bool
         :param local_dir: Path to a directory to write downloaded file
@@ -44,7 +44,7 @@ class CdaDownloader:
 
     def get_ncit_neoplasm_core(self):
         # Reads contents with UTF-8 encoding and returns str.
-        neo_core = files('oncoexporter.ncit_files').joinpath('Neoplasm_Core.csv').read_text()
+        neo_core = files('oncoexporter.ncit_mapping_files').joinpath('Neoplasm_Core.csv').read_text()
         print("NEO CORE", neo_core)
 
     def get_local_share_directory(self, local_dir=None):

@@ -3,31 +3,38 @@ import phenopackets as PPKt
 from typing import List
 
 class OpDisease(OpMessage):
-    """OncoPacket Individual
-        This class should not be used by client code. It provides a DTO-like object to hold
-        data that should be instantiated by various factory methods, and it can return
-        a GA4GH Individual message
-        THe fields of GA4GHDisease are:
-        term 	OntologyClass 	REQUIRED.
-        excluded 	boolean 	0..1 	Flag to indicate whether the disease was observed or not.
-        onset 	TimeElement 	0..1 	an element representing the age of onset of the disease
-        resolution 	TimeElement 	0..1 	an element representing the age of resolution (abatement) of the disease
-        disease_stage 	OntologyClass (List) 	0..* 	List of terms representing the disease stage e.g. AJCC stage group.
-        clinical_tnm_finding 	OntologyClass (List) 	0..* 	List of terms representing the tumor TNM score
-        primary_site 	OntologyClass 	0..1 	the primary site of disease
-        laterality OntologyClass
-        """
+    """OncoPacket representing the disease diagnosis
 
+    This class should not be used by client code. It provides a DTO-like object to hold data that should be
+    instantiated by various factory methods, and it can return a GA4GH Individual message
+
+    :param  disease_term: An Ontology class that represents the disease diagnosis (corresponds to the term field in GA4GH Disease)
+    :type disease_term: PPKt.OntologyClass
+    :param excluded:   Flag to indicate whether the disease was explicitly excluded (default: false).
+    :type excluded: bool
+    :param iso8601duration_onset_age:  age of onset of the disease, enocded as an iso8601 duration
+    :type iso8601duration_onset_age: str
+    :param iso8601duration_resolution_age:age of resolution of the disease, enocded as an iso8601 duration
+    :type iso8601duration_resolution_age: str
+    :param disease_stage_term_list:List of terms representing the disease stage e.g. AJCC stage group.
+    :type disease_stage_term_list:List[PPKt.OntologyClass]
+    :param clinical_tnm_finding_list:List of terms representing the tumor TNM
+    :type clinical_tnm_finding_list:List[PPKt.OntologyClass]
+    :param primary_site: the primary site of disease
+    :type primary_site:PPKt.OntologyClass
+    :param laterality: Right/left (site of disease)
+    :type laterality: PPKt.OntologyClass
+    """
     def __init__(self, disease_term:PPKt.OntologyClass,
                 excluded:bool=None,
                 iso8601duration_onset_age:str=None,
                 iso8601duration_resolution_age: str = None,
                 disease_stage_term_list:List[PPKt.OntologyClass]=None,
                 clinical_tnm_finding_list:List[PPKt.OntologyClass]=None,
-                primary_site_id:str=None,
-                primary_site_label: str = None,
+                primary_site:PPKt.OntologyClass=None,
                 laterality:str=None) -> None:
-
+        """Constructor
+        """
         disease_obj = PPKt.Disease()
         disease_obj.term.CopyFrom(disease_term)
         if excluded is not None:
@@ -50,7 +57,17 @@ class OpDisease(OpMessage):
                 raise ValueError(f"If passed, argument \"clinical_tnm_finding_list\" cannot be an empty list")
             for term in clinical_tnm_finding_list:
                 disease_obj.clinical_tnm_finding.append(term)
+        if primary_site is not None:
+            disease_obj.primary_site.CopyFrom(primary_site)
+        if laterality is not None:
+            disease_obj.laterality.CopyFrom(laterality)
         self._disease = disease_obj
 
-    def to_ga4gh(self):
+
+    def to_ga4gh(self) -> PPKt.Disease:
+        """_summary_
+
+        :returns: A GA4GH protobof message representing the disease
+        :rtype: PPKt.Disease
+        """
         return self._disease
