@@ -175,3 +175,4 @@ notebooks/Untitled.ipynb
 .DS_Store
 src/phenopackets
 *.tar.gz
+/phenopackets/

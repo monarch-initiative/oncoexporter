@@ -12,6 +12,7 @@ from oncoexporter.model.op_disease import OpDisease
 
 from .mapper.op_mapper import OpMapper
 from .mapper.op_diagnosis_mapper import OpDiagnosisMapper
+from .mapper.op_disease_stage_mapper import OpDiseaseStageMapper
 from .cda_factory import CdaFactory
 
 
@@ -58,6 +59,7 @@ class CdaDiseaseFactory(CdaFactory):
             self._opMapper = OpDiagnosisMapper()
         else:
             self._opMapper = op_mapper
+        self._stageMapper = OpDiseaseStageMapper()
        # self._icdo_to_ncit = self.load_icdo_to_ncit_tsv()
             #self._download_and_icdo_to_ncit_tsv(icdo_to_ncit_map_url, key_column=key_column)
 
@@ -120,27 +122,24 @@ class CdaDiseaseFactory(CdaFactory):
         """
         if not isinstance(row, pd.core.series.Series):
             raise ValueError(f"Invalid argument. Expected pandas series but got {type(row)}")
-
-        disease_term = self._parse_diagnosis_into_ontology_term(
-            primary_diagnosis=row["primary_diagnosis"],
-            primary_diagnosis_condition=row["primary_diagnosis_condition"],
-            primary_diagnosis_site=row["primary_diagnosis_site"]
-        )
+        disease_term = self._opMapper.get_ontology_term(row=row)
         ## Collect other pieces of data to add to the constructor on the next line
 
-        # Not sure if onset and age_at_diagnosis are the same thing?
-        # onset = days_to_iso(row['age_at_diagnosis'])
+        # We will interpret age_at_diagnosis as age of onset
+        iso8601_age_of_onset = self.days_to_iso(row['age_at_diagnosis'])
 
         # Deal with stage
-        stage_term_list = self._parse_stage_into_ontology_terms(row['stage'])
+        stage_term = self._stageMapper.get_ontology_term(row=row)
+        stage_term_list = [stage_term] # required to be list by API-TODO is this necessary
 
         # Deal with morphology - clinical_tnm_finding_list seems like the most
         # appropriate place to put this
         clinical_tnm_finding_list = self._parse_morphology_into_ontology_term(row)
 
         diseaseModel = OpDisease(disease_term=disease_term,
-                                 disease_stage_term_list=stage_term_list,
-                                 clinical_tnm_finding_list=clinical_tnm_finding_list)
+                                disease_stage_term_list=stage_term_list,
+                                clinical_tnm_finding_list=clinical_tnm_finding_list,
+                                iso8601duration_onset_age=iso8601_age_of_onset)
         return diseaseModel.to_ga4gh()
 
     def _parse_morphology_into_ontology_term(self, row) -> Optional[List[PPkt.OntologyClass]]:
@@ -161,83 +160,5 @@ class CdaDiseaseFactory(CdaFactory):
         else:
             return None
 
-    def _parse_diagnosis_into_ontology_term(self,
-                                            primary_diagnosis: str,
-                                            primary_diagnosis_condition: str,
-                                            primary_diagnosis_site=str) -> PPkt.OntologyClass:
 
-        # primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,id,label
-        # ,,Lung,NCIT:C3200,Lung Neoplasm
-        # Adenocarcinoma,Lung Adenocarcinoma,Lung,NCIT:C3512,Lung Adenocarcinoma
-        # Acantholytic squamous cell carcinoma,Lung Squamous Cell Carcinoma,Lung,NCIT:C3493,Lung Squamous Cell Carcinoma
-        # "Adenocarcinoma, NOS",Lung Adenocarcinoma,Lung,NCIT:C3512,Lung Adenocarcinoma
-        # Squamous Cell Carcinoma,Lung Squamous Cell Carcinoma,Lung,NCIT:C3493,Lung Squamous Cell Carcinoma
-        # "Clear cell adenocarcinoma, NOS",Lung Adenocarcinoma,Lung,NCIT:C45516,Lung Adenocarcinoma
-        # Squamous Cell Carcinoma,Lung Adenocarcinoma,Lung,NCIT:C9133,Lung Adenosquamous Carcinoma
-        # Adenosquamous carcinoma,Lung Adenocarcinoma,Lung,NCIT:C9133,Lung Adenosquamous Carcinoma
 
-        ontology_term = PPkt.OntologyClass()
-        ontology_term.id ='NCIT:C3262'
-        ontology_term.label = 'Neoplasm'
-        if primary_diagnosis == "" and primary_diagnosis_condition == "" and primary_diagnosis_site == "Lung":
-            ontology_term.id = 'NCIT:C3200'
-            ontology_term.label = 'Lung Neoplasm'
-        elif primary_diagnosis == "Adenocarcinoma" and primary_diagnosis_condition == "Lung Adenocarcinoma" and primary_diagnosis_site == "Lung":
-            ontology_term.id = 'NCIT:C3512'
-            ontology_term.label = 'Lung Adenocarcinoma'
-        elif primary_diagnosis == "Acantholytic squamous cell carcinoma" and primary_diagnosis_condition == "Lung Squamous Cell Carcinoma" and primary_diagnosis_site == "Lung":
-            ontology_term.id = 'NCIT:C3493'
-            ontology_term.label = 'Lung Squamous Cell Carcinoma'
-        elif primary_diagnosis == "Adenocarcinoma, NOS" and primary_diagnosis_condition == "Lung Adenocarcinoma" and primary_diagnosis_site == "Lung":
-            ontology_term.id = 'NCIT:C3512'
-            ontology_term.label = 'Lung Adenocarcinoma'
-        elif primary_diagnosis == "Squamous Cell Carcinoma" and primary_diagnosis_condition == "Lung Squamous Cell Carcinoma" and primary_diagnosis_site == "Lung":
-            ontology_term.id = 'NCIT:C3493'
-            ontology_term.label = 'Lung Squamous Cell Carcinoma'
-        elif primary_diagnosis == "Clear cell adenocarcinoma, NOS" and primary_diagnosis_condition == "Lung Adenocarcinoma" and primary_diagnosis_site == "Lung":
-            ontology_term.id = 'NCIT:C45516'
-            ontology_term.label = 'Lung Adenocarcinoma'
-        elif primary_diagnosis == "Squamous Cell Carcinoma" and primary_diagnosis_condition == "Lung Adenocarcinoma" and primary_diagnosis_site == "Lung":
-            ontology_term.id = 'NCIT:C9133'
-            ontology_term.label = 'Lung Adenosquamous Carcinoma'
-        elif primary_diagnosis == "Adenosquamous carcinoma" and primary_diagnosis_condition == "Lung Adenocarcinoma" and primary_diagnosis_site == "Lung":
-            ontology_term.id = 'NCIT:C9133'
-            ontology_term.label = 'Lung Adenosquamous Carcinoma'
-        return ontology_term
-
-    def _parse_stage_into_ontology_terms(self, stage_str: str) -> List[PPkt.OntologyClass]:
-        ontology_term = PPkt.OntologyClass()
-        ontology_term.id ='NCIT:C92207'  # Stage unknown
-        ontology_term.label = 'Stage Unknown'
-
-        if stage_str in ['Stage I', 'Stage 1', 'stage 1', 'stage I']:
-            ontology_term.id = 'NCIT:C27966'
-            ontology_term.label = 'Stage I'
-        elif stage_str in ['IA', 'Stage IA', 'stage IA']:
-            ontology_term.id = 'NCIT:C27975'
-            ontology_term.label = 'Stage IA'
-        elif stage_str in ['IB', 'Stage IB', 'stage IB']:
-            ontology_term.id = 'NCIT:C27976'
-            ontology_term.label = 'Stage IB'
-        elif stage_str in ['Stage II', 'Stage 2', 'stage 2', 'stage II']:
-            ontology_term.id = 'NCIT:C28054'
-            ontology_term.label = 'Stage II'
-        elif stage_str in ['IIA', 'Stage IIA', 'stage IIA']:
-            ontology_term.id = 'NCIT:C27967'
-            ontology_term.label = 'Stage IIA'
-        elif stage_str in ['IIB', 'Stage IIB', 'stage IIB']:
-            ontology_term.id = 'NCIT:C27968'
-            ontology_term.label = 'Stage IIB'
-        elif stage_str in ['Stage 3', 'stage 3']:
-            ontology_term.id = 'NCIT:C27970'
-            ontology_term.label = 'Stage III'
-        elif stage_str in ['IIIA', 'Stage IIIA', 'Stage 3A', 'stage 3A']:
-            ontology_term.id = 'NCIT:C27977'
-            ontology_term.label = 'Stage IIIA'
-        elif stage_str in ['IIIB', 'Stage IIIB', 'Stage 3B', 'stage 3B']:
-            ontology_term.id = 'NCIT:C27978'
-            ontology_term.label = 'Stage IIIB'
-        elif stage_str in ['IV', 'Stage 4']:
-            ontology_term.id = 'NCIT:C27971'
-            ontology_term.label = 'Stage IV'
-        return [ontology_term]
