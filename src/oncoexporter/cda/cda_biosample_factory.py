@@ -57,6 +57,7 @@ class CdaBiosampleFactory(CdaFactory):
 
         # TODO: Biosample time_of_collection: Age at time sample was collected
         #  -> need subject age + days to collection 
+        #     perform this in cda_table_importer.py under "Retrieve GA4GH Biospecimen messages"
         days_to_collection = row['days_to_collection'] # number of days from index date to sample collection date
         if days_to_collection is not None:
             pass

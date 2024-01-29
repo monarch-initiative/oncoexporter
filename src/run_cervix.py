@@ -4,9 +4,9 @@ from google.protobuf.json_format import MessageToJson
 from cdapython import Q
 from oncoexporter.cda import CdaTableImporter
 
+table_importer = CdaTableImporter(use_cache=True, page_size=10000)
 Tsite = Q('primary_diagnosis_site = "%uter%" OR primary_diagnosis_site = "%cerv%"', )
-table_importer = CdaTableImporter(query=Tsite, use_cache=True, cohort_name='Cervix')
-p = table_importer.get_ga4gh_phenopackets(page_size=10000)
+p = table_importer.get_ga4gh_phenopackets(Tsite, cohort_name='Cervix')
 
 print("Created {} phenopackets".format(len(p)))
 

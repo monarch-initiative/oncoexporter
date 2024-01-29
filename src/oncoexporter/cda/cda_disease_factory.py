@@ -70,13 +70,13 @@ class CdaDiseaseFactory(CdaFactory):
         'method_of_diagnosis', 'subject_id', 'researchsubject_id']
         :param row: a row from the CDA subject table
         """
-        if not isinstance(row, pd.core.series.Series):
+        if not isinstance(row, pd.Series):
             raise ValueError(f"Invalid argument. Expected pandas series but got {type(row)}")
         disease_term = self._opMapper.get_ontology_term(row=row)
         ## Collect other pieces of data to add to the constructor on the next line
 
         # We will interpret age_at_diagnosis as age of onset
-        iso8601_age_of_onset = self._iso_age_mapper.from_days(row['age_at_diagnosis'])
+        iso8601_age_of_onset = self._iso_age_mapper.from_days(row['age_at_diagnosis']
 
         # Deal with stage
         stage_term = self._stageMapper.get_ontology_term(row=row)
@@ -95,6 +95,7 @@ class CdaDiseaseFactory(CdaFactory):
                                 clinical_tnm_finding_list=clinical_tnm_finding_list,
                                 iso8601duration_onset_age=iso8601_age_of_onset,
                                 primary_site=primary_site)
+
         return diseaseModel.to_ga4gh()
 
 
