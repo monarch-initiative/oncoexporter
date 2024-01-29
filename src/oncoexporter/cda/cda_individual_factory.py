@@ -5,6 +5,7 @@ import pandas as pd
 
 from  .mapper.op_cause_of_death_mapper import OpCauseOfDeathMapper
 from .cda_factory import CdaFactory
+from .mapper.iso8601_mapper import Iso8601Mapper
 
 
 class CdaIndividualFactory(CdaFactory):
@@ -32,6 +33,7 @@ class CdaIndividualFactory(CdaFactory):
         self._cause_of_death_mapper = OpCauseOfDeathMapper()
         self._male_sex = {'m', 'male'}
         self._female_sex = {'f', 'female'}
+        self._iso_age_mapper = Iso8601Mapper()
 
     def _process_vital_status(self, row: pd.Series):
         """
@@ -94,7 +96,7 @@ class CdaIndividualFactory(CdaFactory):
         try:
             # we need to parse '15987.0' first as a float and then transform to int
             d_to_b = int(float(days_to_birth))
-            iso_age = self.days_to_iso(days=d_to_b)
+            iso_age = self._iso_age_mapper.from_days(days=d_to_b)
             vstat = self._process_vital_status(row)
         except Exception:
             # TODO: handle in a better way

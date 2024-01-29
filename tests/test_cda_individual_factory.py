@@ -1,11 +1,12 @@
 import pandas as pd
 import phenopackets as PPkt
+import unittest
 import pytest
 
 from oncoexporter.cda import CdaIndividualFactory
 
 
-class TestCdaIndividualFactory:
+class TestCdaIndividualFactory(unittest.TestCase):
 
     @pytest.fixture
     def individual_factory(self) -> CdaIndividualFactory:
@@ -67,8 +68,8 @@ class TestCdaIndividualFactory:
         is approximately correct.
         """
         ga4gh_indi = individual_factory.to_ga4gh(alive_row)
-
-        assert ga4gh_indi.time_at_last_encounter.age.iso8601duration == 'P15987D'
+        expected_age = 'P43Y9M9D'
+        self.assertEqual(expected_age, ga4gh_indi.time_at_last_encounter.age.iso8601duration)
 
     def test_taxonomy(self, individual_factory: CdaIndividualFactory,
                       alive_row: pd.Series):
