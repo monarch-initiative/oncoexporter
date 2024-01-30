@@ -1,4 +1,5 @@
-import math
+import logging
+import typing
 
 import pandas as pd
 import phenopackets as pp
@@ -42,6 +43,7 @@ class CdaMutationFactory(CdaFactory):
             't_depth', 't_ref_count', 't_alt_count',
             'n_depth', 'n_ref_count', 'n_alt_count'
         ]
+        self._logger = logging.getLogger(__name__)
 
     def to_ga4gh(self, row: pd.Series) -> pp.VariantInterpretation:
         """
@@ -86,7 +88,9 @@ class CdaMutationFactory(CdaFactory):
 
         # TODO: consider adding HGVS.g
 
-        vdescriptor.vcf_record.CopyFrom(self._create_vcf_record(row))
+        vcf_record = self._create_vcf_record(row)
+        if vcf_record is not None:
+            vdescriptor.vcf_record.CopyFrom(vcf_record)
 
         # Tumor/normal depths
         for name in ('t_depth', 't_ref_count', 't_alt_count',
@@ -112,15 +116,22 @@ class CdaMutationFactory(CdaFactory):
         vinterpretation.variation_descriptor.CopyFrom(vdescriptor)
         return vinterpretation
 
-    @staticmethod
-    def _create_vcf_record(row: pd.Series) -> pp.VcfRecord:
+    def _create_vcf_record(self, row: pd.Series) -> typing.Optional[pp.VcfRecord]:
+        ref = row['Reference_Allele']
+        alt = row['Tumor_Seq_Allele2']
+        if ref == '-' or alt == '-':
+            self._logger.debug(
+                'Cannot create a VCF record due to missing bases in the Reference_Allele/Tumor_Seq_Allele2 alleles: %s',
+                row)
+            return None
+
         vcf_record = pp.VcfRecord()
         vcf_record.genome_assembly = row['NCBI_Build']
         vcf_record.chrom = row['Chromosome']
         vcf_record.id = row['dbSNP_RS']
         vcf_record.pos = row['Start_Position']
-        vcf_record.ref = row['Reference_Allele']
-        vcf_record.alt = row['Tumor_Seq_Allele2']
+        vcf_record.ref = ref
+        vcf_record.alt = alt
         return vcf_record
 
     @staticmethod
