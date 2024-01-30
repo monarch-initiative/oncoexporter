@@ -23,7 +23,7 @@ class OpMutation(OpMessage):
             self._alt = Tumor_Seq_Allele2
             self._mutation_status = Mutation_Status
 
-    def to_ga4gh(self) -> PPkt.VariationDescriptor:
+    def to_ga4gh(self) -> PPkt.VariantInterpretation:
         """
         Transform this Variant object into a "variantInterpretation" message of the GA4GH Phenopacket schema
         """
@@ -59,6 +59,7 @@ class OpMutation(OpMessage):
         vcf_record.ref = self._ref
         vcf_record.alt = self._alt
         vdescriptor.vcf_record.CopyFrom(vcf_record)
+
         vinterpretation = PPkt.VariantInterpretation()
         vinterpretation.variation_descriptor.CopyFrom(vdescriptor)
         return vinterpretation

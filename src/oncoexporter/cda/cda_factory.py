@@ -56,7 +56,7 @@ class CdaFactory(metaclass=abc.ABCMeta):
         if isinstance(days, float) and not math.isnan(days):
             days = int(days) # this is because some values are like 73.0
         if not isinstance(days, int):
-            raise ValueError(f"days argument ({days}) must be int or str but was {type(days)}"
+            raise ValueError(f"days argument ({days}) must be int or str but was {type(days)}")
 
     def get_local_share_directory(self, local_dir=None):
         my_platform = platform.platform()
