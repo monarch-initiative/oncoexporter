@@ -140,11 +140,11 @@ class CdaTableImporter(CdaImporter[Q]):
         ppackt_d = {}
 
         # First obtain the pandas DataFrames from the CDA tables with rows that correspond to the Query
-        subject_df = self._get_subject_df(source)
-        merged_df = self.get_merged_diagnosis_research_subject_df(source)
-        specimen_df = self.get_specimen_df(source)
-        treatment_df = self.get_treatment_df(source)
-        mutation_df = self.get_mutation_df(source)
+        subject_df = self._get_subject_df(source, cohort_name)
+        merged_df = self.get_merged_diagnosis_research_subject_df(source, cohort_name)
+        specimen_df = self.get_specimen_df(source, cohort_name)
+        treatment_df = self.get_treatment_df(source, cohort_name)
+        mutation_df = self.get_mutation_df(source, cohort_name)
 
         # Now use the CdaFactory classes to transform the information from the DataFrames into
         # components of the GA4GH Phenopacket Schema
