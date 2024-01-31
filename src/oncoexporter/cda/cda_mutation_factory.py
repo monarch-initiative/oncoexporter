@@ -4,32 +4,40 @@ from ..model.op_mutation import OpMutation
 
 class CdaMutationFactory(CdaFactory):
     """
-    cda_subject_id
-    primary_site
-    Hugo_Symbol
-    Entrez_Gene_Id
-    NCBI_Build
-    Chromosome
-    Start_Position
-    End_Position
-    Reference_Allele
-    Tumor_Seq_Allele1
-    Tumor_Seq_Allele2
-    dbSNP_RS
-    dbSNP_Val_Status
-    Match_Norm_Seq_Allele1
-    Match_Norm_Seq_Allele2
-    Tumor_Validation_Allele1
-    Tumor_Validation_Allele2
-    Match_Norm_Validation_Allele1
-    Match_Norm_Validation_Allele2
-    Mutation_Status
-    HGVSc
-    HGVSp
-    HGVSp_Short
-    Transcript_ID
+    Initial fields to map to phenopackets:
+        cda_subject_id
+        Hugo_Symbol
+        Entrez_Gene_Id
+        NCBI_Build
+        Chromosome
+        Start_Position
+        End_Position
+        Reference_Allele
+        Tumor_Seq_Allele1
+        Tumor_Seq_Allele2
+        dbSNP_RS
+        Mutation_Status
+        HGVSc
+        HGVSp_Short
+        Transcript_ID
+        ENSP
+        t_depth
+        t_ref_count
+        t_alt_count
+        n_depth
+        n_ref_count
+        n_alt_count
 
-
+    Additional fields to map, not required for pilot:
+        primary_site
+        dbSNP_Val_Status
+        HGVSp
+        Match_Norm_Seq_Allele1
+        Match_Norm_Seq_Allele2
+        Tumor_Validation_Allele1
+        Tumor_Validation_Allele2
+        Match_Norm_Validation_Allele1
+        Match_Norm_Validation_Allele2
 
     """
 
