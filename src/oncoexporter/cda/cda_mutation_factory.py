@@ -47,11 +47,10 @@ class CdaMutationFactory(CdaFactory):
 
     def to_ga4gh(self, row: pd.Series) -> pp.VariantInterpretation:
         """
-        convert a row from the CDA mutation table into an
-        Individual message (GA4GH Phenopacket Schema)
-        The row is a pd.core.series.Series and contains the columns
+        Convert a row from the CDA mutation table
+        into a VariantInterpretation message (GA4GH Phenopacket Schema).
 
-       :param row: a row from the CDA subject table
+       :param row: a :class:`pd.Series` with the row of the CDA mutation table.
         """
         if not isinstance(row, pd.Series):
             raise ValueError(f"Invalid argument. Expected pandas series but got {type(row)}")
