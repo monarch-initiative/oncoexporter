@@ -11,7 +11,7 @@ class CdaMutationFactory(CdaFactory):
     """
     https://cda.readthedocs.io/en/latest/Schema/fields_mutation/
     153 fields - need to decide which to keep
-
+    'cda_subject_id',
     'Entrez_Gene_Id',
     'Hugo_Symbol',
     'NCBI_Build',
