@@ -1,15 +1,11 @@
-from typing import List, Optional
-
 import phenopackets as PPkt
 import pandas as pd
-import os
 
 
 
 from oncoexporter.model.op_disease import OpDisease
 
 from .mapper.op_mapper import OpMapper
-from .mapper.iso8601_mapper import Iso8601Mapper
 from .mapper.op_diagnosis_mapper import OpDiagnosisMapper
 from .mapper.op_disease_stage_mapper import OpDiseaseStageMapper
 from .mapper.op_uberon_mapper import OpUberonMapper
@@ -57,11 +53,10 @@ class CdaDiseaseFactory(CdaFactory):
             self._opMapper = op_mapper
         self._stageMapper = OpDiseaseStageMapper()
         self._uberonMaper = OpUberonMapper()
-        self._iso_age_mapper = Iso8601Mapper()
         # todo -- add in ICCDO Mapper
 
 
-    def to_ga4gh(self, row):
+    def to_ga4gh(self, row: pd.Series) -> PPkt.Disease:
         """Convert a row from the CDA subject table into an Individual message (GA4GH Phenopacket Schema)
 
         The row is a pd.core.series.Series and contains the columns. TODO check if up to date.
@@ -76,7 +71,7 @@ class CdaDiseaseFactory(CdaFactory):
         ## Collect other pieces of data to add to the constructor on the next line
 
         # We will interpret age_at_diagnosis as age of onset
-        iso8601_age_of_onset = self._iso_age_mapper.from_days(row['age_at_diagnosis'])
+        iso8601_age_of_onset = self.days_to_iso(row['age_at_diagnosis'])
 
         # Deal with stage
         stage_term = self._stageMapper.get_ontology_term(row=row)
