@@ -104,3 +104,6 @@ Basaloid squamous cell carcinoma	Cervical Squamous Cell Carcinoma and Endocervic
 Serous surface papillary carcinoma	"Cystic, Mucinous and Serous Neoplasms"	Corpus uteri			-
 Serous surface papillary carcinoma	Uterine Corpus Endometrial Carcinoma	Uterus			-
 "Adenocarcinoma, NOS"	Adenomas and Adenocarcinomas	Bronchus and lung	NCIT:C3512	Lung Adenocarcinoma	
+Adenocarcinoma	Lung Adenocarcinoma	Lung	NCIT:C3512	Lung Adenocarcinoma	
+Acantholytic squamous cell carcinoma	Lung Squamous Cell Carcinoma	Lung	NCIT:C3493	Lung Squamous Cell Carcinoma	
+Squamous Cell Carcinoma	Lung Squamous Cell Carcinoma	Lung	NCIT:C3493	Lung Squamous Cell Carcinoma	
