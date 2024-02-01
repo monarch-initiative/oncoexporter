@@ -22,14 +22,14 @@ class OpDiseaseTestCase(TestCase):
                 "PDC000219",
                 "None",
                 "Lung"]
-        cls._column_names = ['diagnosis_id', 'diagnosis_identifier', 'primary_diagnosis',
-                            'age_at_diagnosis', 'morphology', 'stage', 'grade',
-                            'method_of_diagnosis', 'subject_id', 'researchsubject_id_di',
-                            'researchsubject_id_rs', 'researchsubject_identifier',
-                            'member_of_research_project', 'primary_diagnosis_condition',
-                            'primary_diagnosis_site']
-        assert len(data_1) == len(cls._column_names)
-        cls._series = pd.Series(data_1, index=cls._column_names)
+        column_names = ['diagnosis_id', 'diagnosis_identifier', 'primary_diagnosis',
+                        'age_at_diagnosis', 'morphology', 'stage', 'grade',
+                        'method_of_diagnosis', 'subject_id', 'researchsubject_id_di',
+                        'researchsubject_id_rs', 'researchsubject_identifier',
+                        'member_of_research_project', 'primary_diagnosis_condition',
+                        'primary_diagnosis_site']
+        assert len(data_1) == len(column_names)
+        cls.row = pd.Series(data_1, index=column_names)
 
     def _create_series(self,
                     primary_diagnosis=None,
@@ -39,7 +39,7 @@ class OpDiseaseTestCase(TestCase):
                     morphology=None,
                     stage=None,
                     grade=None):
-        series = self._series.copy()
+        series = self.row.copy()
         if primary_diagnosis is not None:
             series["primary_diagnosis"] = primary_diagnosis
         if primary_diagnosis_condition is not None:
@@ -59,12 +59,12 @@ class OpDiseaseTestCase(TestCase):
     def test_creation(self):
         dfact = CdaDiseaseFactory()
         self.assertIsNotNone(dfact)
-        ga4gh_disease = dfact.to_ga4gh(self._series)
+        ga4gh_disease = dfact.to_ga4gh(self.row)
         self.assertIsNotNone(ga4gh_disease)
 
     def test_ontology_class_id(self):
         dfact = CdaDiseaseFactory()
-        ga4gh_disease = dfact.to_ga4gh(self._series)
+        ga4gh_disease = dfact.to_ga4gh(self.row)
         self.assertEqual(ga4gh_disease.term.id, 'NCIT:C3262')
         self.assertEqual(ga4gh_disease.term.label, 'Neoplasm')
 
@@ -78,11 +78,10 @@ class OpDiseaseTestCase(TestCase):
             ga4gh_disease = dfact.to_ga4gh(this_series)
             self.assertEqual(d['id'], ga4gh_disease.term.id)
             self.assertEqual(d['label'], ga4gh_disease.term.label)
-            pass
 
     def test_morphology_term_in_tnm_findings(self):
         dfact = CdaDiseaseFactory()
-        ga4gh_disease = dfact.to_ga4gh(self._series)
+        ga4gh_disease = dfact.to_ga4gh(self.row)
         self.assertEqual(len(ga4gh_disease.clinical_tnm_finding), 1)
         self.assertEqual(ga4gh_disease.clinical_tnm_finding[0].id, 'NCIT:C9305')
         self.assertEqual(ga4gh_disease.clinical_tnm_finding[0].label, 'Malignant Neoplasm')
