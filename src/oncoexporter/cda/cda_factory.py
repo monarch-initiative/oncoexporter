@@ -1,10 +1,13 @@
 import abc
-import math
 import os
 import platform
+import re
 import typing
 
 import pandas as pd
+
+
+int_pattern = re.compile(r'^-?\d+$')
 
 
 class CdaFactory(metaclass=abc.ABCMeta):
@@ -38,7 +41,7 @@ class CdaFactory(metaclass=abc.ABCMeta):
         return results
 
     @staticmethod
-    def days_to_iso(days: typing.Union[int, float, str]) -> typing.Optional[str]:
+    def days_to_iso(days: typing.Union[int, str]) -> typing.Optional[str]:
         """
         Convert the number of days of life into an ISO 8601 period representing the age of an individual.
 
@@ -46,21 +49,22 @@ class CdaFactory(metaclass=abc.ABCMeta):
 
         The `days` can be negative, leading to the duration of the same length.
 
-        `None` is returned if the input does not represent a number (NaN) or positive/negative infinity.
+        `None` is returned if the input `str` cannot be parsed into an integer.
 
-        :param days: number of days of life (str, float or int)
-        :raises ValueError: if `days` is not `float`, `int`, or `str`, or if `str` cannot be parsed into a number.
+        :param days: a `str` or `int` with a number of days of life.
+        :raises ValueError: if `days` is not an `int` or a `str`.
         """
-        if isinstance(days, (float, int)):
+        if type(days) is int:
+            # In Python, `isinstance(True, int) == True`.
+            # However, we don't want that here.
             pass
         elif isinstance(days, str):
-            days = float(days)
+            if int_pattern.match(days):
+                days = int(days)
+            else:
+                return None
         else:
-            raise ValueError(f"days argument must be a str, float or int but was {type(days)}")
-
-        if not math.isfinite(days):
-            # The number of days must not be NaN or positive/negative infinity.
-            return None
+            raise ValueError(f"days argument must be an int or a str but was {type(days)}")
 
         return f'P{abs(days)}D'
 
