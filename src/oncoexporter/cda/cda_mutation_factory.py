@@ -9,39 +9,56 @@ from .cda_factory import CdaFactory
 
 class CdaMutationFactory(CdaFactory):
     """
-    https://cda.readthedocs.io/en/latest/Schema/fields_mutation/
-    153 fields - need to decide which to keep
-    'cda_subject_id',
-    'Entrez_Gene_Id',
-    'Hugo_Symbol',
-    'NCBI_Build',
-    'Chromosome',
-    'Start_Position',
-    'Reference_Allele',
-    'Tumor_Seq_Allele2',
-    'dbSNP_RS',
-    'Transcript_ID',
-    'HGVSc',
-    'ENSP',
-    'HGVSp_Short',
-    'Mutation_Status',
-    't_depth',
-    't_ref_count',
-    't_alt_count',
-    'n_depth',
-    'n_ref_count',
-    'n_alt_count',
+    `CdaMutationFactory` maps a row of the CDA mutation table into `VariantInterpretation`
+    element of the Phenopacket Schema.
+
+    See `here <https://cda.readthedocs.io/en/latest/Schema/fields_mutation/>`_ for
+    the mutation table schema.
+
+    Initial fields to map to phenopackets:
+    - cda_subject_id
+    - Entrez_Gene_Id
+    - Hugo_Symbol
+    - NCBI_Build
+    - Chromosome
+    - Start_Position
+    - End_Position
+    - Reference_Allele
+    - Tumor_Seq_Allele2
+    - dbSNP_RS
+    - Transcript_ID
+    - HGVSc
+    - ENSP
+    - HGVSp_Short
+    - Mutation_Status
+    - t_depth
+    - t_ref_count
+    - t_alt_count
+    - n_depth
+    - n_ref_count
+    - n_alt_count
+
+    Additional fields to map, not required for pilot:
+    - primary_site
+    - dbSNP_Val_Status
+    - HGVSp
+    - Match_Norm_Seq_Allele1
+    - Match_Norm_Seq_Allele2
+    - Tumor_Validation_Allele1
+    - Tumor_Validation_Allele2
+    - Match_Norm_Validation_Allele1
+    - Match_Norm_Validation_Allele2
     """
 
     def __init__(self):
         self._column_names = [
             'Entrez_Gene_Id', 'Hugo_Symbol',
-            'NCBI_Build', 'Chromosome', 'Start_Position', 'Reference_Allele', 'Tumor_Seq_Allele2',
+            'NCBI_Build', 'Chromosome', 'Start_Position', 'End_Position', 'Reference_Allele', 'Tumor_Seq_Allele2',
             'dbSNP_RS',
             'Transcript_ID', 'HGVSc', 'ENSP', 'HGVSp_Short',
             'Mutation_Status',
             't_depth', 't_ref_count', 't_alt_count',
-            'n_depth', 'n_ref_count', 'n_alt_count'
+            'n_depth', 'n_ref_count', 'n_alt_count',
         ]
         self._logger = logging.getLogger(__name__)
 
@@ -50,7 +67,7 @@ class CdaMutationFactory(CdaFactory):
         Convert a row from the CDA mutation table
         into a VariantInterpretation message (GA4GH Phenopacket Schema).
 
-       :param row: a :class:`pd.Series` with the row of the CDA mutation table.
+        :param row: a :class:`pd.Series` with the row of the CDA mutation table.
         """
         if not isinstance(row, pd.Series):
             raise ValueError(f"Invalid argument. Expected pandas series but got {type(row)}")
@@ -136,4 +153,3 @@ class CdaMutationFactory(CdaFactory):
     @staticmethod
     def _generate_id(row: pd.Series) -> str:
         return str(hash(''.join(str(x) for x in row.values)))
-
