@@ -172,6 +172,9 @@ notebooks/Untitled.ipynb
 
 *.pkl
 *.tsv
+!src/oncoexporter/ncit_mapping_files/*.tsv
+!src/oncoexporter/ncit_mapping_files/*.csv
+
 .DS_Store
 src/phenopackets
 *.tar.gz
