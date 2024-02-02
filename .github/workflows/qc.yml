@@ -31,6 +31,8 @@ jobs:
         
         pdir=$(find /opt/hostedtoolcache/Python -name "oncoexporter" -type d)
         ls -R $pdir
+        echo $(pwd)
+        ls -R build
         
         python3 -m pytest
         
