@@ -1,4 +1,4 @@
-name: QC
+name: CI
 
 on:
   push:
@@ -21,14 +21,11 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Install and test
+    - name: Install Oncoexporter
       run: |
         python3 -m pip install --upgrade pip
         python3 -m pip install .[test]
-        
-        pdir=$(find /opt/hostedtoolcache/Python -name "oncoexporter" -type d)
-        ls -R $pdir
-        echo $(pwd)
-        ls -R build
-        
+
+    - name: Run unit and integration tests
+      run: |
         pytest
