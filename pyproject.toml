@@ -5,11 +5,7 @@ requires = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-where = ["./src"]
-exclude = ["notebooks", "test"]
-
-[tool.setuptools.package-data]
-"oncoexporter.cda.mapper" = ["*.tsv"]
+where = ["src"]
 
 [project]
 name = "oncoexporter"
@@ -38,15 +34,11 @@ dependencies = [
     "phenopackets>=2.0.2",
     "requests>=2.25.0,<3.0",
     "cdapython@git+https://github.com/CancerDataAggregator/cda-python",
-    "tqdm>=4.60"
+    "tqdm>=4.60",
 ]
 [project.optional-dependencies]
 test = ["pytest>=7.0.0,<8.0.0"]
 
-
-
-#[project.optional-dependencies]
-#dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
 
 [project.urls]
 homepage = "https://github.com/monarch-initiative/oncoexporter"

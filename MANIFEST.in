@@ -1,2 +1,0 @@
-# Mappings for diagnosis
-include src/oncoexporter/ncit_mapping_files/*.tsv
