@@ -7,30 +7,28 @@ on:
     branches: [ main, develop ]
   workflow_dispatch:
 
-permissions:
-  contents: write
-  pull-requests: write
+#permissions:
+#  contents: write
+#  pull-requests: write
 
 
 jobs:
 
-  test-linux:
+  build:
     name: Test for Linux
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: [ '3.9', '3.10' ]
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v4.3.1
       with:
         python-version: ${{ matrix.python-version }}
         architecture: x64
     - name: Install and test
       run: |
+#        python3 -m pip install --upgrade pip
         python3 -m pip install .[test]
-        echo "Searching for files"
-        find /opt/ -name "*cda_to_ncit*"
-        echo "Yess"
         python3 -m pytest
 
