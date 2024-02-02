@@ -1,10 +1,8 @@
-import os
-
 from .op_mapper import OpMapper
 from typing import Optional
 import pandas as pd
-from collections import defaultdict
 import phenopackets as PPkt
+
 
 class OpDiseaseStageMapper(OpMapper):
 
@@ -12,7 +10,7 @@ class OpDiseaseStageMapper(OpMapper):
         """
         This is a simple map from the 'stage' field of the diagnosis row
         """
-        super().__init__()
+        super().__init__(('stage',))
 
     def get_ontology_term(self, row:pd.Series) -> Optional[PPkt.OntologyClass]:
         stage_str = row["stage"]

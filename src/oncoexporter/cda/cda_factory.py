@@ -1,4 +1,5 @@
 import abc
+import math
 import os
 import platform
 import re
@@ -6,8 +7,8 @@ import typing
 
 import pandas as pd
 
-
-int_pattern = re.compile(r'^-?\d+$')
+# matches payloads like `1.23`, `34`, `-0.`, ...
+simple_float_pattern = re.compile(r'^-?\d+(?P<decimal>\.\d*)?$')
 
 
 class CdaFactory(metaclass=abc.ABCMeta):
@@ -41,7 +42,7 @@ class CdaFactory(metaclass=abc.ABCMeta):
         return results
 
     @staticmethod
-    def days_to_iso(days: typing.Union[int, str]) -> typing.Optional[str]:
+    def days_to_iso(days: typing.Union[int, float, str]) -> typing.Optional[str]:
         """
         Convert the number of days of life into an ISO 8601 period representing the age of an individual.
 
@@ -59,8 +60,13 @@ class CdaFactory(metaclass=abc.ABCMeta):
             # However, we don't want that here.
             pass
         elif isinstance(days, str):
-            if int_pattern.match(days):
-                days = int(days)
+            if simple_float_pattern.match(days):
+                days = round(float(days))
+            else:
+                return None
+        elif isinstance(days, float):
+            if math.isfinite(days):
+                days: int = round(days)
             else:
                 return None
         else:

@@ -1,13 +1,13 @@
-import os
+from typing import Optional
 
 from .op_mapper import OpMapper
-from typing import Optional
 import pandas as pd
-from collections import defaultdict
 import phenopackets as PPkt
 
+
 class OpUberonMapper(OpMapper):
-    """A simple mapper for string represeintg anatomical locations to UBERON terms
+    """
+    A simple mapper for string representing anatomical locations to UBERON terms.
 
     TODO -- replace this with file based version covering all of the strings we need in CDA
     """
@@ -16,10 +16,10 @@ class OpUberonMapper(OpMapper):
         """
         This is a simple map from the 'primary_diagnosis_site = row["primary_diagnosis_site"]' field of the diagnosis row
         """
-        super().__init__()
+        super().__init__(('primary_diagnosis_site',))
 
 
-    def get_ontology_term(self, row:pd.Series) -> Optional[PPkt.OntologyClass]:
+    def get_ontology_term(self, row: pd.Series) -> Optional[PPkt.OntologyClass]:
         primary_site = row["primary_diagnosis_site"]
         uberon_label_to_id_d = {'lung': 'UBERON:0002048',
                             "uterine cervix":"UBERON:0000002",
