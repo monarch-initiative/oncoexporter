@@ -28,6 +28,7 @@ jobs:
         architecture: x64
     - name: Install and test
       run: |
-        pip install .[test]
+        python3 -m pip install .[test]
+        find /opt/hostedtoolcache/Python -name "*cda_to_ncit*"
         python3 -m pytest
 
