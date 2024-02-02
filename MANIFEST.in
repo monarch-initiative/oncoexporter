@@ -1,1 +1,2 @@
-graft src/oncoexporter/ncit_mapping_files
+# Include the TSV mapping files.
+include src/oncoexporter/ncit_mapping_files/*.tsv
