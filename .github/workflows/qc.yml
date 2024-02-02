@@ -2,13 +2,9 @@ name: QC
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ develop ]
   pull_request:
     branches: [ main, develop ]
-
-#permissions:
-#  contents: write
-#  pull-requests: write
 
 
 jobs:
@@ -20,13 +16,13 @@ jobs:
         python-version: [ '3.9', '3.10' ]
     steps:
     - uses: actions/checkout@v4
+
     - uses: actions/setup-python@v4.3.1
       with:
         python-version: ${{ matrix.python-version }}
-        architecture: x64
+
     - name: Install and test
       run: |
-        git branch
         python3 -m pip install --upgrade pip
         python3 -m pip install .[test]
         
@@ -35,6 +31,4 @@ jobs:
         echo $(pwd)
         ls -R build
         
-        python3 -m pytest
-        
-
+        pytest
