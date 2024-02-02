@@ -28,6 +28,10 @@ jobs:
       run: |
         python3 -m pip install --upgrade pip
         python3 -m pip install .[test]
+        
+        pdir=$(find /opt/hostedtoolcache/Python -name "oncoexporter" -type d)
+        ls -R $pdir
+        
         python3 -m pytest
         
 
