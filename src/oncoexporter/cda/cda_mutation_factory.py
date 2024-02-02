@@ -144,7 +144,9 @@ class CdaMutationFactory(CdaFactory):
         vcf_record = pp.VcfRecord()
         vcf_record.genome_assembly = row['NCBI_Build']
         vcf_record.chrom = row['Chromosome']
-        vcf_record.id = row['dbSNP_RS']
+        rs_id = row['dbSNP_RS']
+        if rs_id is not None:
+            vcf_record.id = rs_id
         vcf_record.pos = row['Start_Position']
         vcf_record.ref = ref
         vcf_record.alt = alt
