@@ -119,7 +119,7 @@ class CdaIndividualFactory(CdaFactory):
         elif sex in self._female_sex:
             individual.sex = PPkt.FEMALE
         else:
-            individual.sex = PPkt.UKNOWN_SEX
+            individual.sex = PPkt.UNKNOWN_SEX
 
         # taxonomy, always Homo here
         individual.taxonomy.id = "NCBITaxon:9606"

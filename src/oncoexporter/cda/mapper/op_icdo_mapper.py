@@ -1,16 +1,16 @@
-import requests
 import csv
+import requests
+import typing
 import warnings
 
-from .op_mapper import OpMapper
-from typing import Optional
 import pandas as pd
-import warnings
-from collections import defaultdict
-import phenopackets as PPkt
+import phenopackets as pp
+
+from .op_mapper import OpMapper
 
 icdo_to_ncit_map_url='https://evs.nci.nih.gov/ftp1/NCI_Thesaurus/Mappings/ICD-O-3_Mappings/ICD-O-3.1-NCIt_Morphology_Mapping.txt',
 key_column='ICD-O Code'
+
 
 class OpICDOMapper(OpMapper):
 
@@ -18,8 +18,12 @@ class OpICDOMapper(OpMapper):
         """
         This is a simple map from the 'stage' field of the diagnosis row
         """
-        super().__init__()
+        super().__init__(())
         self._icdo_to_ncit = {}
+
+    def get_ontology_term(self, row: pd.Series) -> typing.Optional[pp.OntologyClass]:
+        # TODO: implement!
+        raise NotImplementedError
 
 
     def load_icdo_to_ncit_tsv(self, overwrite:bool=False, local_dir:str=None):
@@ -68,10 +72,10 @@ class OpICDOMapper(OpMapper):
         return result_dict
 
 
-    def _parse_morphology_into_ontology_term(self, row) -> Optional[List[PPkt.OntologyClass]]:
+    def _parse_morphology_into_ontology_term(self, row) -> typing.Optional[typing.List[pp.OntologyClass]]:
         if row['morphology'] in self._icdo_to_ncit:
             ncit_record = self._icdo_to_ncit.get(row['morphology'])
-            ontology_term = PPkt.OntologyClass()
+            ontology_term = pp.OntologyClass()
             if 'NCIt Code (if present)' not in ncit_record:
                 warnings.warn(f"Couldn't find 'NCIt Code (if present)' entry in record for ICD-O code {row['morphology']}")
                 return None

@@ -26,21 +26,23 @@ class CdaTableImporter(CdaImporter[Q]):
     for this cohort in form of pandas DataFrames and extracts data for phenopacket construction using the data
     in the tables
 
-    :param use_cache: if True, cache/retrieve from cache
-    :type use_cache: bool
+    :param disease_factory: the component for mapping CDA table into Disease element of the Phenopacket Schema.
     :param cache_dir: a `str` with path to the folder to store the cache files
-    :param page_size: Number of pages to retrieve at once. Defaults to 10000.
-    :type page_size: int
+    :param use_cache: if True, cache/retrieve from cache
+    :param page_size: Number of pages to retrieve at once. Defaults to `10000`
     """
 
-    def __init__(self, use_cache: bool = False,
+    def __init__(self,
+                 disease_factory: CdaDiseaseFactory,
+                 use_cache: bool = False,
                  cache_dir: typing.Optional[str] = None,
-                 page_size: int = 10000):
+                 page_size: int = 10000,
+                 ):
         self._use_cache = use_cache
         self._page_size = page_size
 
         self._individual_factory = CdaIndividualFactory()
-        self._disease_factory = CdaDiseaseFactory()
+        self._disease_factory = disease_factory
         self._specimen_factory = CdaBiosampleFactory()
         self._mutation_factory = CdaMutationFactory()
 
@@ -187,9 +189,10 @@ class CdaTableImporter(CdaImporter[Q]):
             #         days_to_collection: number of days from index date to sample collection date
             #         time_of_collection: Age of subject at time sample was collected 
             days_to_coll_iso = CdaFactory.days_to_iso(row["days_to_collection"])
-            # this should work if both are pd.Timedelta: 
-            time_of_collection = ppackt_d[individual_id]["iso8601duration"] + days_to_coll_iso # should it be 'Age' or 'iso8601duration'?
-            biosample_message["time_of_collection"] = time_of_collection
+            # this should work if both are pd.Timedelta:
+            # TODO: fix the code below!
+            # time_of_collection = ppackt_d[individual_id]["iso8601duration"] + days_to_coll_iso # should it be 'Age' or 'iso8601duration'?
+            # biosample_message["time_of_collection"] = time_of_collection
 
             ppackt_d.get(individual_id).biosamples.append(biosample_message)
 

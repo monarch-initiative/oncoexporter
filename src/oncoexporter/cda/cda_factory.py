@@ -1,10 +1,14 @@
 import abc
-import platform
-import os
 import math
-from typing import Optional, Union
+import os
+import platform
+import re
+import typing
 
 import pandas as pd
+
+# matches payloads like `1.23`, `34`, `-0.`, ...
+simple_float_pattern = re.compile(r'^-?\d+(?P<decimal>\.\d*)?$')
 
 
 class CdaFactory(metaclass=abc.ABCMeta):
@@ -14,7 +18,7 @@ class CdaFactory(metaclass=abc.ABCMeta):
     """
 
     @abc.abstractmethod
-    def to_ga4gh(self, row:pd.Series):
+    def to_ga4gh(self, row: pd.Series):
         """Return a message from the GA4GH Phenopacket Schema that corresponds to this row.
 
         :param row: A row from the CDA
@@ -37,7 +41,8 @@ class CdaFactory(metaclass=abc.ABCMeta):
             results.append(self.get_item(row, name))
         return results
 
-    def days_to_iso(self, days: Union[int,str]) -> Optional[str]:
+    @staticmethod
+    def days_to_iso(days: typing.Union[int, float, str]) -> typing.Optional[str]:
         """
         Convert the number of days of life into an ISO 8601 period representing the age of an individual.
 
@@ -45,18 +50,29 @@ class CdaFactory(metaclass=abc.ABCMeta):
 
         The `days` can be negative, leading to the duration of the same length.
 
-        :param days: number of days of life (str or int)
-        :type days: Union[int,str]
-        :returns: ISO8601 string representing age or None if the parse fails
-        :rtype: Optional[str]
-        TODO -- PROBABLY DELETE
+        `None` is returned if the input `str` cannot be parsed into an integer.
+
+        :param days: a `str` or `int` with a number of days of life.
+        :raises ValueError: if `days` is not an `int` or a `str`.
         """
-        if isinstance(days, str):
-            days = int(str)
-        if isinstance(days, float) and not math.isnan(days):
-            days = int(days) # this is because some values are like 73.0
-        if not isinstance(days, int):
-            raise ValueError(f"days argument ({days}) must be int or str but was {type(days)}")
+        if type(days) is int:
+            # In Python, `isinstance(True, int) == True`.
+            # However, we don't want that here.
+            pass
+        elif isinstance(days, str):
+            if simple_float_pattern.match(days):
+                days = round(float(days))
+            else:
+                return None
+        elif isinstance(days, float):
+            if math.isfinite(days):
+                days: int = round(days)
+            else:
+                return None
+        else:
+            raise ValueError(f"days argument must be an int or a str but was {type(days)}")
+
+        return f'P{abs(days)}D'
 
     def get_local_share_directory(self, local_dir=None):
         my_platform = platform.platform()
@@ -67,5 +83,3 @@ class CdaFactory(metaclass=abc.ABCMeta):
             os.makedirs(local_dir)
             print(f"[INFO] Created new directory for oncoexporter at {local_dir}")
         return local_dir
-
-
