@@ -17,29 +17,11 @@ class CdaDiseaseFactory(CdaFactory):
 
     Note, `CdaDiseaseFactory` interprets the `age_at_diagnosis` as the age of onset.
 
-    TODO: The field list below may be inaccurate. Check!
-
-    We need these fields from the `diagnosis` table:
-
-        - diagnosis_id: identifier
-        - diagnosis_identifier: a structured field that can have information from GDC
-        - primary_diagnosis: the main cancer diagnosis of this individual
-        - age_at_diagnosis: the number of days of life on day when the cancer diagnosis was made.
-        - morphology: ICD-O codes representing the cancer diagnosis
-        - stage: cancer stage
-        - grade: cancer grade
-        - method_of_diagnosis: free text with entries such as 'Biospy'
-        - subject_id: key to the subject table
-        - researchsubject_id: key to the researchsubject table
-
-    The required fields from the `researchsubject` table include:
-
-        - researchsubject_id: identifier
-        - researchsubject_identifier: a structured field that can have information from GDC
-        - member_of_research_project: unclear
-        - primary_diagnosis_condition: unclear difference to primary_diagnosis above
-        - primary_diagnosis_site: anatomical site of tumor
-        - subject_id: key to the subject table
+    - 'primary_diagnosis'
+    - 'primary_diagnosis_site'
+    - 'primary_diagnosis_condition'
+    - 'stage'
+    - 'age_at_diagnosis'
 
     :param disease_term_mapper: an :class:`OpMapper` for finding the disease term in the row fields.
     """
@@ -52,7 +34,8 @@ class CdaDiseaseFactory(CdaFactory):
         self._required_fields = tuple(set(itertools.chain(
             self._disease_term_mapper.get_fields(),
             self._stage_mapper.get_fields(),
-            self._uberon_mapper.get_fields()
+            self._uberon_mapper.get_fields(),
+            ('age_at_diagnosis',),
         )))
         # todo -- add in ICCDO Mapper
 
@@ -63,16 +46,10 @@ class CdaDiseaseFactory(CdaFactory):
          message of the Phenopacket Schema.
 
         The row is expected to contain the following columns:
-        - 'subject_id',
-        - 'researchsubject_id'
-        - 'diagnosis_id',
-        - 'diagnosis_identifier',
-        - 'primary_diagnosis',
-        - 'age_at_diagnosis',
-        - 'morphology',
-        - 'stage',
-        - 'grade',
-        - 'method_of_diagnosis',
+        - 'stage'
+        - 'primary_diagnosis_condition'
+        - 'primary_diagnosis_site'
+        - 'primary_diagnosis'
 
         :param row: a :class:`pd.Series` with a row from the merged CDA table.
         """
