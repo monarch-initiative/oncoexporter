@@ -49,11 +49,11 @@ class CdaDiseaseFactory(CdaFactory):
         self._stage_mapper = OpDiseaseStageMapper()
         self._uberon_mapper = OpUberonMapper()
 
-        self._required_fields = tuple(itertools.chain(
+        self._required_fields = tuple(set(itertools.chain(
             self._disease_term_mapper.get_fields(),
             self._stage_mapper.get_fields(),
             self._uberon_mapper.get_fields()
-        ))
+        )))
         # todo -- add in ICCDO Mapper
 
 
