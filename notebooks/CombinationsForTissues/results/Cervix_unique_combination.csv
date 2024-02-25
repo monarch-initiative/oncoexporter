@@ -1,0 +1,88 @@
+,primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site
+0,"Squamous cell carcinoma, keratinizing, NOS",Squamous Cell Neoplasms,Cervix uteri
+1,"Squamous cell carcinoma, nonkeratinizing, NOS",Squamous Cell Neoplasms,Cervix uteri
+2,"Endometrioid adenocarcinoma, NOS",Adenomas and Adenocarcinomas,"Uterus, NOS"
+3,Papillary serous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms","Uterus, NOS"
+4,"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,"Uterus, NOS"
+5,"Squamous cell carcinoma, NOS",Squamous Cell Neoplasms,Cervix uteri
+6,"Serous cystadenocarcinoma, NOS","Cystic, Mucinous and Serous Neoplasms","Uterus, NOS"
+7,"Carcinoma, NOS","Epithelial Neoplasms, NOS",Corpus uteri
+8,"Clear cell adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Cervix uteri
+9,"Carcinosarcoma, NOS",Complex Mixed and Stromal Neoplasms,"Uterus, NOS"
+10,"Carcinoma, undifferentiated, NOS","Epithelial Neoplasms, NOS","Uterus, NOS"
+11,"Serous adenocarcinoma, NOS","Cystic, Mucinous and Serous Neoplasms",Corpus uteri
+12,"Endometrioid adenocarcinoma, NOS",Uterine Corpus Endometrial Carcinoma,"Uterus, NOS"
+13,"Adenocarcinoma, endocervical type",Adenomas and Adenocarcinomas,Cervix uteri
+14,"Endometrioid adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Corpus uteri
+15,Not specified in data,Unknown,"Cervix Uteri, Unknown"
+16,Not specified in data,Unknown,Corpus Uteri
+17,Not specified in data,Unknown,"Corpus Uteri, Unknown"
+18,"Clear cell adenocarcinoma, NOS",Adenomas and Adenocarcinomas,"Uterus, NOS"
+19,"Leiomyosarcoma, NOS",Myomatous Neoplasms,"Uterus, NOS"
+20,"Mesonephroma, malignant",Mesonephromas,Cervix uteri
+21,Signet ring cell carcinoma,"Cystic, Mucinous and Serous Neoplasms",Cervix uteri
+22,"Squamous cell carcinoma, large cell, nonkeratinizing, NOS",Squamous Cell Neoplasms,Cervix uteri
+23,"Serous cystadenocarcinoma, NOS","Cystic, Mucinous and Serous Neoplasms",Corpus uteri
+24,Mullerian mixed tumor,Complex Mixed and Stromal Neoplasms,"Uterus, NOS"
+25,"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Cervix uteri
+26,Adenosquamous carcinoma,Complex Epithelial Neoplasms,"Uterus, NOS"
+27,"Endometrial stromal sarcoma, NOS",Complex Mixed and Stromal Neoplasms,"Uterus, NOS"
+28,Not specified in data,Unknown,Cervix Uteri
+29,"Endometrial stromal sarcoma, NOS",Complex Mixed and Stromal Neoplasms,Corpus uteri
+30,Adenosarcoma,Complex Mixed and Stromal Neoplasms,"Uterus, NOS"
+31,"Serous cystadenocarcinoma, NOS",Complex Mixed and Stromal Neoplasms,"Uterus, NOS"
+32,Adenosquamous carcinoma,Complex Epithelial Neoplasms,Cervix uteri
+33,"Adenocarcinoma in situ, NOS",Adenomas and Adenocarcinomas,Cervix uteri
+34,"Tumor, NOS","Neoplasms, NOS",Corpus uteri
+35,"Mesenchymoma, NOS",Complex Mixed and Stromal Neoplasms,"Uterus, NOS"
+36,"Hydatidiform mole, NOS",Trophoblastic neoplasms,"Uterus, NOS"
+37,Papillary serous cystadenocarcinoma,"Cystic, Mucinous and Serous Neoplasms",Corpus uteri
+38,"Neuroendocrine carcinoma, NOS",Adenomas and Adenocarcinomas,Cervix uteri
+39,"Mesenchymoma, NOS",Myomatous Neoplasms,"Uterus, NOS"
+40,Mucinous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms",Cervix uteri
+41,"Mucinous adenocarcinoma, endocervical type","Cystic, Mucinous and Serous Neoplasms",Cervix uteri
+42,"Neoplasm, uncertain whether benign or malignant","Neoplasms, NOS","Uterus, NOS"
+43,"Choriocarcinoma, NOS",Trophoblastic neoplasms,"Uterus, NOS"
+44,"Endometrial stromal sarcoma, low grade",Complex Mixed and Stromal Neoplasms,Corpus uteri
+45,Adenosquamous carcinoma,Adenomas and Adenocarcinomas,Cervix uteri
+46,"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Corpus uteri
+47,"Carcinoma, NOS","Epithelial Neoplasms, NOS","Uterus, NOS"
+48,"Endometrioid adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Cervix uteri
+49,"Carcinoid tumor, NOS",Adenomas and Adenocarcinomas,Cervix uteri
+50,"Leiomyosarcoma, NOS",Myomatous Neoplasms,Corpus uteri
+51,Myxoid leiomyosarcoma,Myomatous Neoplasms,"Uterus, NOS"
+52,"Tumor, NOS","Neoplasms, NOS",Cervix uteri
+53,Epithelioid leiomyosarcoma,Myomatous Neoplasms,"Uterus, NOS"
+54,"Neuroendocrine carcinoma, NOS",Adenomas and Adenocarcinomas,"Uterus, NOS"
+55,"Small cell carcinoma, NOS","Epithelial Neoplasms, NOS",Cervix uteri
+56,Papillary squamous cell carcinoma,Squamous Cell Neoplasms,Cervix uteri
+57,"Clear cell adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Corpus uteri
+58,"Leiomyoma, NOS",Myomatous Neoplasms,"Uterus, NOS"
+59,"Mesonephroma, malignant",Mesonephromas,"Uterus, NOS"
+60,Smooth muscle tumor of uncertain malignant potential,Myomatous Neoplasms,"Uterus, NOS"
+61,Glassy cell carcinoma,"Epithelial Neoplasms, NOS",Cervix uteri
+62,"Sarcoma, NOS","Soft Tissue Tumors and Sarcomas, NOS","Uterus, NOS"
+63,"Neoplasm, malignant","Neoplasms, NOS",Cervix uteri
+64,Adenosquamous carcinoma,Squamous Cell Neoplasms,Cervix uteri
+65,"Carcinoma, NOS","Epithelial Neoplasms, NOS",Cervix uteri
+66,"Malignant tumor, small cell type","Neoplasms, NOS",Cervix uteri
+67,"Carcinoma, undifferentiated, NOS","Epithelial Neoplasms, NOS",Corpus uteri
+68,"Carcinosarcoma, NOS",Complex Mixed and Stromal Neoplasms,Corpus uteri
+69,Not Reported,,Cervix uteri
+70,Basaloid squamous cell carcinoma,Squamous Cell Neoplasms,Cervix uteri
+71,"Serous cystadenocarcinoma, NOS","Cystic, Mucinous and Serous Neoplasms",Cervix uteri
+72,"Endometrioid adenocarcinoma, secretory variant",Adenomas and Adenocarcinomas,Corpus uteri
+73,Mucinous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms","Uterus, NOS"
+74,Myxoid leiomyosarcoma,Myomatous Neoplasms,Corpus uteri
+75,Mesodermal mixed tumor,Complex Mixed and Stromal Neoplasms,"Uterus, NOS"
+76,Adenoid cystic carcinoma,Adenomas and Adenocarcinomas,Cervix uteri
+77,Serous surface papillary carcinoma,"Cystic, Mucinous and Serous Neoplasms",Corpus uteri
+78,Lymphoepithelial carcinoma,Squamous Cell Neoplasms,Cervix uteri
+79,"Neoplasm, malignant","Neoplasms, NOS","Uterus, NOS"
+80,"Serous adenocarcinoma, NOS",Squamous Cell Neoplasms,Cervix uteri
+81,"Trophoblastic tumor, epithelioid",Trophoblastic neoplasms,"Uterus, NOS"
+82,Warty carcinoma,Squamous Cell Neoplasms,Cervix uteri
+83,"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,"Uterus, NOS"
+84,"Tumor, NOS","Epithelial Neoplasms, NOS",Cervix uteri
+85,Squamotransitional cell carcinoma,Squamous Cell Neoplasms,Cervix uteri
+86,Villous adenocarcinoma,Adenomas and Adenocarcinomas,Cervix uteri
