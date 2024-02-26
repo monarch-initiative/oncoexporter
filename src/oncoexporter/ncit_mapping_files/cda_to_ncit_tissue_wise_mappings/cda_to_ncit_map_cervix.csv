@@ -1,0 +1,75 @@
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+"Squamous cell carcinoma, keratinizing, NOS",Squamous Cell Neoplasms,Cervix uteri,Cervical Keratinizing Squamous Cell Carcinoma,NCIT:C40187
+"Squamous cell carcinoma, nonkeratinizing, NOS",Squamous Cell Neoplasms,Cervix uteri,Cervical Non-Keratinizing Squamous Cell Carcinoma,NCIT:C40188
+"Endometrioid adenocarcinoma, NOS",Adenomas and Adenocarcinomas,"Uterus, NOS",Cervical Endometrioid Adenocarcinoma,NCIT:C6343
+Papillary serous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms","Uterus, NOS",Papillary Serous Cystadenocarcinoma,NCIT:C8377
+"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,"Uterus, NOS","Cervical Adenocarcinoma, Not Otherwise Specified",NCIT:C180870
+"Squamous cell carcinoma, NOS",Squamous Cell Neoplasms,Cervix uteri,"Cervical Squamous Cell Carcinoma, Not Otherwise Specified",NCIT:C180839
+"Serous cystadenocarcinoma, NOS","Cystic, Mucinous and Serous Neoplasms","Uterus, NOS",Cervical Serous Adenocarcinoma,NCIT:C40201
+"Clear cell adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Cervix uteri,"Human Papillomavirus-Independent Cervical Adenocarcinoma, Clear Cell-Type",NCIT:C6344
+"Carcinosarcoma, NOS",Complex Mixed and Stromal Neoplasms,"Uterus, NOS",Cervical Carcinosarcoma,NCIT:C36097
+"Carcinoma, undifferentiated, NOS","Epithelial Neoplasms, NOS","Uterus, NOS",Cervical Undifferentiated Carcinoma,NCIT:C6345
+"Serous adenocarcinoma, NOS","Cystic, Mucinous and Serous Neoplasms",Corpus uteri,Endometrial Serous Adenocarcinoma,NCIT:C27838
+"Endometrioid adenocarcinoma, NOS",Uterine Corpus Endometrial Carcinoma,"Uterus, NOS",Cervical Endometrioid Adenocarcinoma,NCIT:C6343
+"Adenocarcinoma, endocervical type",Adenomas and Adenocarcinomas,Cervix uteri,Cervical Adenocarcinoma,NCIT:C4029
+"Endometrioid adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Corpus uteri,Endometrial Endometrioid Adenocarcinoma,NCIT:C6287
+Not specified in data,Unknown,"Cervix Uteri, Unknown",Cervix Uteri,NCIT:C12311
+"Clear cell adenocarcinoma, NOS",Adenomas and Adenocarcinomas,"Uterus, NOS","Human Papillomavirus-Independent Cervical Adenocarcinoma, Clear Cell-Type",NCIT:C6344
+"Leiomyosarcoma, NOS",Myomatous Neoplasms,"Uterus, NOS",Uterine Corpus Leiomyosarcoma,NCIT:C6340
+"Mesonephroma, malignant",Mesonephromas,Cervix uteri,Cervical Mesonephric Adenocarcinoma,NCIT:C40254
+Signet ring cell carcinoma,"Cystic, Mucinous and Serous Neoplasms",Cervix uteri,"Cervical Mucinous Adenocarcinoma, Signet Ring Cell-Type",NCIT:C40205
+"Squamous cell carcinoma, large cell, nonkeratinizing, NOS",Squamous Cell Neoplasms,Cervix uteri,Cervical Non-Keratinizing Squamous Cell Carcinoma,NCIT:C40188
+Mullerian mixed tumor,Complex Mixed and Stromal Neoplasms,"Uterus, NOS",Uterine Corpus Carcinosarcoma,NCIT:C9180
+"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Cervix uteri,"Cervical Adenocarcinoma, Not Otherwise Specified",NCIT:C180870
+Adenosquamous carcinoma,Complex Epithelial Neoplasms,"Uterus, NOS",Cervical Adenosquamous Carcinoma,NCIT:C4519
+"Endometrial stromal sarcoma, NOS",Complex Mixed and Stromal Neoplasms,"Uterus, NOS",Uterine Corpus Endometrial Stromal Sarcoma,NCIT:C40219
+Not specified in data,Unknown,Cervix Uteri,Cervix Uteri,NCIT:C12311
+"Endometrial stromal sarcoma, NOS",Complex Mixed and Stromal Neoplasms,Corpus uteri,Uterine Corpus Endometrial Stromal Sarcoma,NCIT:C40219
+Adenosarcoma,Complex Mixed and Stromal Neoplasms,"Uterus, NOS",Cervical Adenosarcoma,NCIT:C40229
+Adenosquamous carcinoma,Complex Epithelial Neoplasms,Cervix uteri,Cervical Adenosquamous Carcinoma,NCIT:C4519
+"Adenocarcinoma in situ, NOS",Adenomas and Adenocarcinomas,Cervix uteri,Cervical Adenocarcinoma In Situ,NCIT:C4520
+"Tumor, NOS","Neoplasms, NOS",Corpus uteri,Cervical Neoplasm,NCIT:C2940
+"Hydatidiform mole, NOS",Trophoblastic neoplasms,"Uterus, NOS",Uterine Corpus Gestational Choriocarcinoma,NCIT:C7374
+Papillary serous cystadenocarcinoma,"Cystic, Mucinous and Serous Neoplasms",Corpus uteri,Papillary Serous Cystadenocarcinoma,NCIT:C8377
+"Neuroendocrine carcinoma, NOS",Adenomas and Adenocarcinomas,Cervix uteri,Cervical Neuroendocrine Carcinoma,NCIT:C128045
+Mucinous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms",Cervix uteri,Cervical Mucinous Adenocarcinoma,NCIT:C36095
+"Mucinous adenocarcinoma, endocervical type","Cystic, Mucinous and Serous Neoplasms",Cervix uteri,"Cervical Mucinous Adenocarcinoma, Endocervical-Type",NCIT:C40202
+"Neoplasm, uncertain whether benign or malignant","Neoplasms, NOS","Uterus, NOS",Cervical Neoplasm,NCIT:C2940
+"Choriocarcinoma, NOS",Trophoblastic neoplasms,"Uterus, NOS",Uterine Corpus Choriocarcinoma,NCIT:C27246
+"Endometrial stromal sarcoma, low grade",Complex Mixed and Stromal Neoplasms,Corpus uteri,Uterine Corpus Low Grade Endometrial Stromal Sarcoma,NCIT:C40223
+Adenosquamous carcinoma,Adenomas and Adenocarcinomas,Cervix uteri,Cervical Adenosquamous Carcinoma,NCIT:C4519
+"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Corpus uteri,"Cervical Adenocarcinoma, Not Otherwise Specified",NCIT:C180870
+"Carcinoma, NOS","Epithelial Neoplasms, NOS","Uterus, NOS",Cervical Carcinoma,NCIT:C9039
+"Endometrioid adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Cervix uteri,Cervical Endometrioid Adenocarcinoma,NCIT:C6343
+"Carcinoid tumor, NOS",Adenomas and Adenocarcinomas,Cervix uteri,Cervical Neoplasm,NCIT:C2940
+"Leiomyosarcoma, NOS",Myomatous Neoplasms,Corpus uteri,Uterine Corpus Leiomyosarcoma,NCIT:C6340
+Myxoid leiomyosarcoma,Myomatous Neoplasms,"Uterus, NOS",Myxoid Leiomyosarcoma,NCIT:C3701
+"Tumor, NOS","Neoplasms, NOS",Cervix uteri,Cervical Neoplasm,NCIT:C2940
+Epithelioid leiomyosarcoma,Myomatous Neoplasms,"Uterus, NOS",Uterine Corpus Epithelioid Leiomyosarcoma,NCIT:C40174
+"Neuroendocrine carcinoma, NOS",Adenomas and Adenocarcinomas,"Uterus, NOS",Cervical Neuroendocrine Carcinoma,NCIT:C128045
+"Small cell carcinoma, NOS","Epithelial Neoplasms, NOS",Cervix uteri,Cervical Small Cell Neuroendocrine Carcinoma,NCIT:C7982
+Papillary squamous cell carcinoma,Squamous Cell Neoplasms,Cervix uteri,Cervical Papillary Squamous Cell Carcinoma,NCIT:C40192
+"Clear cell adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Corpus uteri,"Human Papillomavirus-Independent Cervical Adenocarcinoma, Clear Cell-Type",NCIT:C6344
+"Leiomyoma, NOS",Myomatous Neoplasms,"Uterus, NOS",Uterine Corpus Leiomyoma,NCIT:C3434
+"Mesonephroma, malignant",Mesonephromas,"Uterus, NOS",Mesonephric Adenocarcinoma,NCIT:C4072
+Smooth muscle tumor of uncertain malignant potential,Myomatous Neoplasms,"Uterus, NOS",Uterine Corpus Smooth Muscle Tumor of Uncertain Malignant Potential,NCIT:C40177
+Glassy cell carcinoma,"Epithelial Neoplasms, NOS",Cervix uteri,Cervical Carcinoma,NCIT:C9039
+"Sarcoma, NOS","Soft Tissue Tumors and Sarcomas, NOS","Uterus, NOS",Sarcoma,NCIT:C9118
+"Neoplasm, malignant","Neoplasms, NOS",Cervix uteri,Malignant Cervical Neoplasm,NCIT:C9311
+Adenosquamous carcinoma,Squamous Cell Neoplasms,Cervix uteri,Cervical Adenosquamous Carcinoma,NCIT:C4519
+"Carcinoma, NOS","Epithelial Neoplasms, NOS",Cervix uteri,Cervical Carcinoma,NCIT:C9039
+"Malignant tumor, small cell type","Neoplasms, NOS",Cervix uteri,Cervical Small Cell Neuroendocrine Carcinoma,NCIT:C7982
+"Carcinoma, undifferentiated, NOS","Epithelial Neoplasms, NOS",Corpus uteri,Cervical Undifferentiated Carcinoma,NCIT:C6345
+"Carcinosarcoma, NOS",Complex Mixed and Stromal Neoplasms,Corpus uteri,Uterine Corpus Carcinosarcoma,NCIT:C9180
+Basaloid squamous cell carcinoma,Squamous Cell Neoplasms,Cervix uteri,Cervical Basaloid Squamous Cell Carcinoma,NCIT:C40189
+"Serous cystadenocarcinoma, NOS","Cystic, Mucinous and Serous Neoplasms",Cervix uteri,Cervical Serous Adenocarcinoma,NCIT:C40201
+"Endometrioid adenocarcinoma, secretory variant",Adenomas and Adenocarcinomas,Corpus uteri,"Endometrial Endometrioid Adenocarcinoma, Secretory Variant",NCIT:C27839
+Mucinous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms","Uterus, NOS",Cervical Mucinous Adenocarcinoma,NCIT:C36095
+Myxoid leiomyosarcoma,Myomatous Neoplasms,Corpus uteri,Uterine Corpus Myxoid Leiomyosarcoma,NCIT:C40175
+Adenoid cystic carcinoma,Adenomas and Adenocarcinomas,Cervix uteri,Cervical Adenoid Cystic Carcinoma,NCIT:C6346
+"Neoplasm, malignant","Neoplasms, NOS","Uterus, NOS",Malignant Cervical Neoplasm,NCIT:C9311
+"Serous adenocarcinoma, NOS",Squamous Cell Neoplasms,Cervix uteri,Cervical Serous Adenocarcinoma,NCIT:C40201
+"Trophoblastic tumor, epithelioid",Trophoblastic neoplasms,"Uterus, NOS",Epithelioid Trophoblastic Tumor,NCIT:C6900
+Warty carcinoma,Squamous Cell Neoplasms,Cervix uteri,Cervical Warty Carcinoma,NCIT:C40191
+"Tumor, NOS","Epithelial Neoplasms, NOS",Cervix uteri,Cervical Neoplasm,NCIT:C2940
+Villous adenocarcinoma,Adenomas and Adenocarcinomas,Cervix uteri,Cervical Villoglandular Adenocarcinoma,NCIT:C40208
