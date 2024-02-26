@@ -1,0 +1,35 @@
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Colon,Colon Adenocarcinoma,NCIT:C4349
+Mucinous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms",Colon,Colon Mucinous Adenocarcinoma,NCIT:C7966
+Goblet cell carcinoid,Adenomas and Adenocarcinomas,Colon,Goblet Cell Adenocarcinoma,NCIT:C201135
+"Medullary carcinoma, NOS",Ductal and Lobular Neoplasms,Colon,Colon Medullary Carcinoma,NCIT:C60641
+"Adenocarcinoma, NOS",Colon Adenocarcinoma,Colon,Colon Adenocarcinoma,NCIT:C4349
+Mucinous carcinoma,"Cystic, Mucinous and Serous Neoplasms",Colon,Colon Mucinous Adenocarcinoma,NCIT:C7966
+Signet ring cell carcinoma,"Cystic, Mucinous and Serous Neoplasms",Colon,Colon Signet Ring Cell Adenocarcinoma,NCIT:C7967
+"Neuroendocrine carcinoma, NOS",Adenomas and Adenocarcinomas,Colon,Colon Neuroendocrine Carcinoma,NCIT:C203384
+"Adenocarcinoma, metastatic, NOS",Adenomas and Adenocarcinomas,Colon,Advanced Colon Adenocarcinoma,NCIT:C162152
+"Papillary adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Colon,Colon Adenocarcinoma,NCIT:C4349
+"Adenocarcinoma, NOS","Neoplasms, NOS",Colon,Colon Adenocarcinoma,NCIT:C4349
+Not specified in data,"Adenocarcinoma, NOS","Colon, NOS",Colon Adenocarcinoma,NCIT:C4349
+Mucinous adenocarcinoma,Colon Adenocarcinoma,Colon,Colon Mucinous Adenocarcinoma,NCIT:C7966
+"Tubulovillous adenoma, NOS",Adenomas and Adenocarcinomas,Colon,Colon Tubulovillous Adenoma,NCIT:C5496
+"Tubular adenoma, NOS",Adenomas and Adenocarcinomas,Colon,Colon Tubular Adenoma,NCIT:C7041
+"Carcinoid tumor, NOS",Adenomas and Adenocarcinomas,Colon,"Malignant Carcinoid Tumor of the Large Intestine, Unspecified Portion",NCIT:C194477
+"Tumor, NOS","Neoplasms, NOS",Colon,Colon Neoplasm,NCIT:C2953
+Adenocarcinoma,Epithelial Neoplasm,Colon,Colon Adenocarcinoma,NCIT:C4349
+Adenocarcinoma with mixed subtypes,Adenomas and Adenocarcinomas,Colon,Colon Adenocarcinoma,NCIT:C4349
+Serrated adenoma,Adenomas and Adenocarcinomas,Colon,Colon Traditional Serrated Adenoma,NCIT:C43577
+Neoplasm,Neoplasm,Colon,Colon Neoplasm,NCIT:C2953
+Not Reported,"Neoplasms, NOS",Colon,Colon Neoplasm,NCIT:C2953
+"Carcinoma, NOS","Epithelial Neoplasms, NOS",Colon,Colon Carcinoma,NCIT:C4910
+"Small cell carcinoma, NOS","Neoplasms, NOS",Colon,Colon Small Cell Neuroendocrine Carcinoma,NCIT:C6761
+Mucinous adenocarcinoma,"Neoplasms, NOS",Colon,Colon Mucinous Adenocarcinoma,NCIT:C7966
+Well to moderately differentiated colonic adenocarcinoma,"Adenocarcinoma, NOS","Colon, NOS",Grade 2 Colon Adenocarcinoma,NCIT:C9453
+"Adenocarcinoma in situ, NOS",Adenomas and Adenocarcinomas,Colon,Adenoma of the Colon with Intramucosal Adenocarcinoma,NCIT:C27413
+"Adenocarcinoma, intestinal type",Adenomas and Adenocarcinomas,Colon,Colon Adenocarcinoma,NCIT:C4349
+"Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,Colon,Colon Diffuse Large B-Cell Lymphoma,NCIT:C96504
+Adenocarcinoma with neuroendocrine differentiation,Complex Epithelial Neoplasms,Colon,Colorectal Mixed Adenoneuroendocrine Carcinoma,NCIT:C96158
+"Adenocarcinoma, NOS","Cystic, Mucinous and Serous Neoplasms",Colon,Colon Mucinous Adenocarcinoma,NCIT:C7966
+Dedifferentiated liposarcoma,Lipomatous Neoplasms,Colon,Dedifferentiated Liposarcoma,NCIT:C3704
+Adenosquamous carcinoma,Complex Epithelial Neoplasms,Colon,Colon Adenosquamous Carcinoma,NCIT:C5491
+Adenosquamous carcinoma,Colon Adenocarcinoma,Colon,Colon Adenosquamous Carcinoma,NCIT:C5491
