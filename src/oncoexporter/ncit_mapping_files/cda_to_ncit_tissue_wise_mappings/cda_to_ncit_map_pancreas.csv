@@ -1,0 +1,30 @@
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+"Infiltrating duct carcinoma, NOS",Ductal and Lobular Neoplasms,Pancreas,Pancreatic Ductal Adenocarcinoma,NCIT:C9120
+"Carcinoma, NOS","Epithelial Neoplasms, NOS",Pancreas,Pancreatic Carcinoma,NCIT:C3850
+"Duct adenocarcinoma, NOS",Ductal and Lobular Neoplasms,Pancreas,Pancreatic Ductal Adenocarcinoma,NCIT:C9120
+"Neuroendocrine carcinoma, NOS",Adenomas and Adenocarcinomas,Pancreas,Pancreatic Neuroendocrine Carcinoma,NCIT:C3770
+"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Pancreas,Pancreatic Adenocarcinoma,NCIT:C8294
+"Pancreatic endocrine tumor, NOS",Adenomas and Adenocarcinomas,Pancreas,Pancreatic Neuroendocrine Neoplasm,NCIT:C27031
+Solid pseudopapillary tumor,"Cystic, Mucinous and Serous Neoplasms",Pancreas,Solid Pseudopapillary Neoplasm of the Pancreas,NCIT:C37212
+"Infiltrating duct carcinoma, NOS",Pancreatic Ductal Adenocarcinoma,Pancreas,Pancreatic Ductal Adenocarcinoma,NCIT:C9120
+Pancreatoblastoma,Complex Mixed and Stromal Neoplasms,Pancreas,Pancreatoblastoma,NCIT:C4265
+"Intraductal papillary-mucinous carcinoma, invasive","Cystic, Mucinous and Serous Neoplasms",Pancreas,Pancreatic Intraductal Papillary-Mucinous Neoplasm with an Associated Invasive Carcinoma,NCIT:C5726
+Acinar cell carcinoma,Acinar Cell Neoplasms,Pancreas,Pancreatic Acinar Cell Carcinoma,NCIT:C7977
+Adenosquamous carcinoma,Complex Epithelial Neoplasms,Pancreas,Pancreatic Adenosquamous Carcinoma,NCIT:C5721
+Adenocarcinoma,Epithelial Neoplasm,Pancreas,Pancreatic Adenocarcinoma,NCIT:C8294
+"Carcinoma, undifferentiated, NOS","Epithelial Neoplasms, NOS",Pancreas,Pancreatic Undifferentiated Carcinoma,NCIT:C5722
+"Duct adenocarcinoma, NOS","Neoplasms, NOS",Pancreas,Pancreatic Ductal Adenocarcinoma,NCIT:C9120
+"Adenocarcinoma, NOS","Neoplasms, NOS",Pancreas,Pancreatic Adenocarcinoma,NCIT:C8294
+Mucinous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms",Pancreas,Pancreatic Mucinous Cystadenocarcinoma,NCIT:C5713
+Not specified in data,Unknown,Pancreas,Pancreas,NCIT:C12393
+Not specified in data,"Neuroendocrine carcinoma, NOS","Pancreas, NOS",Pancreatic Neuroendocrine Carcinoma,NCIT:C3770
+"Neoplasm, malignant","Neoplasms, NOS",Pancreas,Malignant Pancreatic Neoplasm,NCIT:C9005
+"Mucinous cystadenoma, NOS","Cystic, Mucinous and Serous Neoplasms",Pancreas,Pancreatic Mucinous Cystadenoma,NCIT:C5718
+Not Reported,"Neoplasms, NOS",Pancreas,Pancreatic Neoplasm,NCIT:C3305
+Adenocarcinoma with mixed subtypes,Adenomas and Adenocarcinomas,Pancreas,Pancreatic Mixed Acinar-Ductal Carcinoma,NCIT:C95458
+"Serous cystadenoma, NOS","Cystic, Mucinous and Serous Neoplasms",Pancreas,Pancreatic Serous Cystadenoma,NCIT:C5712
+"Carcinoma, NOS",Adenomas and Adenocarcinomas,Pancreas,Pancreatic Adenocarcinoma,NCIT:C8294
+"Adenocarcinoma, metastatic, NOS","Cystic, Mucinous and Serous Neoplasms",Pancreas,Metastatic Pancreatic Adenocarcinoma,NCIT:C8933
+"Intraductal papillary-mucinous carcinoma, invasive",Ductal and Lobular Neoplasms,Pancreas,Pancreatic Intraductal Papillary-Mucinous Neoplasm with an Associated Invasive Carcinoma,NCIT:C5726
+Well differentiated neuroendocrine tumor,"Neuroendocrine carcinoma, NOS","Pancreas, NOS",Pancreatic Neuroendocrine Tumor G2,NCIT:C45835
+Not specified in data,"Adenocarcinoma, metastatic, NOS",Pancreatic duct,Metastatic Pancreatic Ductal Adenocarcinoma,NCIT:C158960
