@@ -1,0 +1,154 @@
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+Apocrine adenocarcinoma,Adnexal and Skin Appendage Neoplasms,Skin,Adnexal Carcinoma,NCIT:C3775
+"Clear cell sarcoma, NOS",Synovial-like Neoplasms,"Connective, subcutaneous and other soft tissues",Clear Cell Sarcoma of Soft Tissue,NCIT:C3745
+"Fibrosarcoma, NOS",Fibromatous Neoplasms,"Connective, subcutaneous and other soft tissues",Soft Tissue Fibrosarcoma,NCIT:C6605
+"Dermatofibrosarcoma, NOS",Fibromatous Neoplasms,Skin,Dermatofibrosarcoma Protuberans,NCIT:C4683
+Glomangiosarcoma,Paragangliomas and Glomus Tumors,"Connective, subcutaneous and other soft tissues",Malignant Glomus Tumor,NCIT:C4221
+"Desmoplastic melanoma, malignant",Nevi and Melanomas,Skin,Desmoplastic Melanoma,NCIT:C37257
+"Epithelioid hemangioendothelioma, malignant",Blood Vessel Tumors,"Connective, subcutaneous and other soft tissues",Skin Hemangioendothelioma,NCIT:C4494
+Lentigo maligna melanoma,Nevi and Melanomas,Skin,Lentigo Maligna Melanoma,NCIT:C9151
+Epithelioid cell melanoma,Nevi and Melanomas,Skin,Epithelioid Cell Melanoma,NCIT:C4236
+Superficial spreading melanoma,Nevi and Melanomas,Skin,Low-CSD Melanoma,NCIT:C9152
+Pleomorphic liposarcoma,Lipomatous Neoplasms,"Connective, subcutaneous and other soft tissues",Skin Pleomorphic Liposarcoma,NCIT:C170473
+Malignant myoepithelioma,Complex Mixed and Stromal Neoplasms,"Connective, subcutaneous and other soft tissues",Myoepithelial Tumor,NCIT:C40392
+"Synovial sarcoma, spindle cell",Synovial-like Neoplasms,"Connective, subcutaneous and other soft tissues",Spindle Cell Synovial Sarcoma,NCIT:C4277
+Nodular melanoma,Nevi and Melanomas,Skin,Cutaneous Nodular Melanoma,NCIT:C4225
+"Leiomyoma, NOS",Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues",Skin Leiomyoma,NCIT:C4482
+"Paget disease, extramammary",Ductal and Lobular Neoplasms,Skin,Extramammary Paget Disease,NCIT:C3302
+"Mesenchymoma, NOS",Complex Mixed and Stromal Neoplasms,"Connective, subcutaneous and other soft tissues",Mesenchymoma,NCIT:C3233
+"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,"Connective, subcutaneous and other soft tissues",Neuroepithelial Neoplasm,NCIT:C3787
+Mixed epithelioid and spindle cell melanoma,Nevi and Melanomas,Skin,Mixed Epithelioid and Spindle Cell Melanoma,NCIT:C66756
+Amelanotic melanoma,Nevi and Melanomas,Skin,Amelanotic Cutaneous Melanoma,NCIT:C4633
+"Hemangioma, NOS",Blood Vessel Tumors,"Connective, subcutaneous and other soft tissues",Skin Hemangioma,NCIT:C4905
+"Extra-adrenal paraganglioma, NOS",Paragangliomas and Glomus Tumors,"Connective, subcutaneous and other soft tissues",Extra-Adrenal Paraganglioma,NCIT:C3309
+Spindle cell rhabdomyosarcoma,Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues",Spindle Cell Rhabdomyosarcoma,NCIT:C6519
+Angiosarcoma,"Soft Tissue Tumors and Sarcomas, NOS",Skin,Skin Angiosarcoma,NCIT:C4489
+Sebaceous adenocarcinoma,Adnexal and Skin Appendage Neoplasms,Skin,Sebaceous Adenocarcinoma,NCIT:C3767
+Myxosarcoma,Myxomatous Neoplasms,"Connective, subcutaneous and other soft tissues",Myxosarcoma,NCIT:C3255
+"Eccrine poroma, malignant",Adnexal and Skin Appendage Neoplasms,Skin,Porocarcinoma,NCIT:C5560
+Alveolar soft part sarcoma,Granular Cell Tumors and Alveolar Soft Part Sarcomas,"Connective, subcutaneous and other soft tissues",Soft Tissue Sarcoma,NCIT:C9306
+Small cell sarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues",Small Cell Sarcoma,NCIT:C3746
+Not Reported,Nevi and Melanomas,Skin,Cutaneous Melanoma,NCIT:C3510
+"Malignant melanoma, NOS",Nevi and Melanomas,Skin,Cutaneous Melanoma,NCIT:C3510
+Ganglioneuroblastoma,Neuroepitheliomatous Neoplasms,"Connective, subcutaneous and other soft tissues",Neuroepithelial Neoplasm,NCIT:C3787
+"Myxoma, NOS",Myxomatous Neoplasms,"Connective, subcutaneous and other soft tissues",Skin Myxoma,NCIT:C6578
+"Squamous cell carcinoma, NOS",Squamous Cell Neoplasms,Skin,Skin Squamous Cell Carcinoma,NCIT:C4819
+Interdigitating dendritic cell sarcoma,Neoplasms of Histiocytes and Accessory Lymphoid Cells,"Connective, subcutaneous and other soft tissues",Interdigitating Dendritic Cell Sarcoma,NCIT:C9282
+"Neoplasm, malignant","Neoplasms, NOS","Connective, subcutaneous and other soft tissues","Malignant Neoplasm of Connective and Soft Tissue, Unspecified",NCIT:C194257
+"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,"Connective, subcutaneous and other soft tissues",Skin Adenosquamous Carcinoma,NCIT:C54250
+Giant cell sarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues",Soft Tissue Sarcoma,NCIT:C9306
+Tenosynovial giant cell tumor,Giant Cell Tumors,"Connective, subcutaneous and other soft tissues",Tenosynovial Giant Cell Tumor,NCIT:C3402
+Not Reported,Blood Vessel Tumors,"Connective, subcutaneous and other soft tissues",Skin Vascular Neoplasm,NCIT:C5354
+"Giant pigmented nevus, NOS",Nevi and Melanomas,Skin,Giant Congenital Nevus,NCIT:C4234
+"Dermatofibroma, NOS",Fibromatous Neoplasms,Skin,Skin Fibrous Histiocytoma,NCIT:C6801
+"Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,"Connective, subcutaneous and other soft tissues","Diffuse Large B-Cell Lymphoma, Not Otherwise Specified",NCIT:C80280
+Epithelioid sarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues",Soft Tissue Sarcoma,NCIT:C9306
+Ossifying fibromyxoid tumor,Myxomatous Neoplasms,"Connective, subcutaneous and other soft tissues",Connective and Soft Tissue Neoplasm,NCIT:C3810
+Eccrine spiradenoma,Adnexal and Skin Appendage Neoplasms,Skin,Skin Appendage Neoplasm,NCIT:C4463
+Spindle cell sarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues",Soft Tissue Sarcoma,NCIT:C9306
+Malignant peripheral nerve sheath tumor,Nerve Sheath Tumors,"Connective, subcutaneous and other soft tissues",Malignant Peripheral Nerve Sheath Tumor of the Skin,NCIT:C172624
+Sweat gland adenocarcinoma,Adnexal and Skin Appendage Neoplasms,Skin,Adnexal Adenocarcinoma,NCIT:C5571
+"Spindle cell melanoma, NOS",Nevi and Melanomas,Skin,Spindle Cell Melanoma,NCIT:C4237
+Spindle cell sarcoma,"Soft Tissue Tumors and Sarcomas, NOS",Skin,Skin Sarcoma,NCIT:C5585
+"Neoplasm, malignant","Neoplasms, NOS",Skin,Malignant Skin Neoplasm,NCIT:C2920
+"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,Skin,Neuroepithelial Neoplasm,NCIT:C3787
+Fibromyxosarcoma,Fibromatous Neoplasms,"Connective, subcutaneous and other soft tissues",Myxofibrosarcoma,NCIT:C6496
+"Synovial sarcoma, biphasic",Synovial-like Neoplasms,"Connective, subcutaneous and other soft tissues",Biphasic Synovial Sarcoma,NCIT:C4279
+"Acral lentiginous melanoma, malignant","Neoplasms, NOS",Skin,Acral Lentiginous Melanoma,NCIT:C4022
+Epithelioid sarcoma,Blood Vessel Tumors,"Connective, subcutaneous and other soft tissues",Epithelioid Sarcoma,NCIT:C3714
+Sarcoma,Miscellaneous Tumors,"Connective, subcutaneous and other soft tissues",Soft Tissue Sarcoma,NCIT:C9306
+Not specified in data,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of pelvis",Pelvic Rhabdomyosarcoma,NCIT:C151981
+Infantile fibrosarcoma,Infantile fibrosarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip",Infantile Fibrosarcoma,NCIT:C4244
+Not specified in data,Pigmented dermatofibrosarcoma protuberans,"Connective, subcutaneous and other soft tissues of lower limb and hip",Pigmented Dermatofibrosarcoma Protuberans,NCIT:C9430
+High-grade Synovial Sarcoma,"Synovial sarcoma, NOS","Connective, subcutaneous and other soft tissues, NOS",Synovial Sarcoma,NCIT:C3400
+Embryonal Rhabdomyosarcoma,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of pelvis",Embryonal Rhabdomyosarcoma,NCIT:C8971
+Ewing sarcoma,Miscellaneous Tumors,"Connective, subcutaneous and other soft tissues",Skin Ewing Sarcoma,NCIT:C172634
+Not specified in data,Myxoid liposarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip",Myxoid Liposarcoma,NCIT:C27781
+Cellular neoplasm,"Synovial sarcoma, NOS","Connective, subcutaneous and other soft tissues of upper limb and shoulder",Synovial Sarcoma,NCIT:C3400
+Melanoma,Neoplasm,Skin,Cutaneous Melanoma,NCIT:C3510
+Not specified in data,Aggressive fibromatosis,"Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)",Non-Neoplastic Connective and Soft Tissue Disorder,NCIT:C26326
+Round cell sarcoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues, NOS",Soft Tissue Sarcoma,NCIT:C9306
+Not specified in data,"Synovial sarcoma, NOS","Connective, subcutaneous and other soft tissues, NOS",Soft Tissue Sarcoma,NCIT:C9306
+Spindle Cell Sarcoma,Spindle cell sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip",Spindle Cell Sarcoma,NCIT:C27005
+Not specified in data,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)","Malignant Neoplasm of Connective and Soft Tissue of Head, Face and Neck",NCIT:C194245
+Not specified in data,"Synovial sarcoma, spindle cell","Connective, subcutaneous and other soft tissues of lower limb and hip",Spindle Cell Synovial Sarcoma,NCIT:C4277
+Low grade spindle cell neoplasm,Aggressive fibromatosis,"Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)",Connective and Soft Tissue Neoplasm,NCIT:C3810
+Not specified in data,"Synovial sarcoma, NOS","Connective, subcutaneous and other soft tissues of upper limb and shoulder","Malignant Neoplasm of Connective and Soft Tissue of Unspecified Upper Limb, Including Shoulder",NCIT:C194246
+Alveolar Rhabdomyosarcoma,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of pelvis",Pelvic Rhabdomyosarcoma,NCIT:C151981
+Not specified in data,"Dermatofibroma, NOS",Skin of scalp and neck,Skin Fibrous Histiocytoma,NCIT:C6801
+Not specified in data,Undifferentiated sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip",Sarcoma,NCIT:C9118
+Possible Synovial Sarcoma,"Synovial sarcoma, spindle cell","Connective, subcutaneous and other soft tissues of upper limb and shoulder",Spindle Cell Synovial Sarcoma,NCIT:C4277
+Not specified in data,"Spindle cell carcinoma, NOS","Connective, subcutaneous and other soft tissues of lower limb and hip",Skin Spindle Cell Squamous Carcinoma,NCIT:C4666
+Not specified in data,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues, NOS",Soft Tissue Sarcoma,NCIT:C9306
+Not specified in data,"Malignant tumor, spindle cell type","Connective, subcutaneous and other soft tissues of thorax (excludes thymus C37.9, heart and mediastinum C38._)",Malignant Neoplasm of Connective and Soft Tissue of Thorax,NCIT:C194252
+Not specified in data,"Malignant melanoma, NOS",Skin of lower limb and hip,"Malignant Melanoma of Unspecified Lower Limb, Including Hip",NCIT:C194163
+Residual Dermatofibrosarcoma protuberans,Pigmented dermatofibrosarcoma protuberans,"Connective, subcutaneous and other soft tissues of lower limb and hip",Pigmented Dermatofibrosarcoma Protuberans,NCIT:C9430
+Not specified in data,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues, NOS",Rhabdomyosarcoma,NCIT:C3359
+Desmoplastic/Nodular Medulloblastoma,Pigmented dermatofibrosarcoma protuberans,"Connective, subcutaneous and other soft tissues of abdomen",Pigmented Dermatofibrosarcoma Protuberans,NCIT:C9430
+Not specified in data,Epithelioid sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip",Soft Tissue Sarcoma of the Trunk and Extremities,NCIT:C165190
+Biphasic Synovial Sarcoma,"Synovial sarcoma, biphasic","Connective, subcutaneous and other soft tissues of pelvis",Biphasic Synovial Sarcoma,NCIT:C4279
+Not specified in data,Ewing sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip",Skin Ewing Sarcoma,NCIT:C172634
+Angiomatoid fibrous histiocytoma,Angiomatoid fibrous histiocytoma,"Connective, subcutaneous and other soft tissues of pelvis",Angiomatoid Fibrous Histiocytoma,NCIT:C6494
+Merkel Cell Tumor,Neuroepithelial Neoplasm,Skin,Cutaneous Merkel Cell Carcinoma,NCIT:C173385
+Undifferentiated small round cell sarcoma,Undifferentiated sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip",Undifferentiated Soft Tissue Sarcoma,NCIT:C121793
+Alveolar Rhabdomyosarcoma,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)","Malignant Neoplasm of Connective and Soft Tissue of Head, Face and Neck",NCIT:C194245
+Not specified in data,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of upper limb and shoulder","Malignant Neoplasm of Connective and Soft Tissue of Unspecified Upper Limb, Including Shoulder",NCIT:C194246
+Not specified in data,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of lower limb and hip",Rhabdomyosarcoma,NCIT:C3359
+Not specified in data,Spindle cell sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip",Soft Tissue Sarcoma of the Trunk and Extremities,NCIT:C165190
+Not specified in data,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of pelvis",Pelvic Rhabdomyosarcoma,NCIT:C151981
+Not specified in data,"Dermatofibroma, NOS","Connective, subcutaneous and other soft tissues of pelvis",Skin Fibrous Histiocytoma,NCIT:C6801
+Rhabdomyosarcoma,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)",Head and Neck Rhabdomyosarcoma,NCIT:C202859
+Sarcoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues, NOS",Soft Tissue Sarcoma,NCIT:C9306
+Not specified in data,"Myofibroblastic tumor, NOS","Connective, subcutaneous and other soft tissues of pelvis",Connective and Soft Tissue Neoplasm,NCIT:C3810
+Synovial sarcoma,"Synovial sarcoma, spindle cell","Connective, subcutaneous and other soft tissues of lower limb and hip",Spindle Cell Synovial Sarcoma,NCIT:C4277
+Spindle cell rhabdomyosarcoma,Smooth muscle tumor of uncertain malignant potential,"Connective, subcutaneous and other soft tissues of trunk, NOS",Spindle Cell Rhabdomyosarcoma,NCIT:C6519
+Not specified in data,Smooth muscle tumor of uncertain malignant potential,"Connective, subcutaneous and other soft tissues of trunk, NOS",Skin Smooth Muscle Neoplasm,NCIT:C4480
+Rhabdomyosarcoma,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues, NOS",Rhabdomyosarcoma,NCIT:C3359
+Not specified in data,"Synovial sarcoma, spindle cell","Connective, subcutaneous and other soft tissues of upper limb and shoulder",Spindle Cell Synovial Sarcoma,NCIT:C4277
+Alveolar Rhabdomyosarcoma,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip",Alveolar Rhabdomyosarcoma,NCIT:C3749
+Alveolar Rhabdomyosarcoma,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of upper limb and shoulder",Alveolar Rhabdomyosarcoma,NCIT:C3749
+Fibromatosis,Aggressive fibromatosis,"Connective, subcutaneous and other soft tissues of pelvis",Pelvic Fibromatosis,NCIT:C126358
+Desmoplastic/Nodular Medulloblastoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of thorax (excludes thymus C37.9, heart and mediastinum C38._)",Malignant Neoplasm of Connective and Soft Tissue of Thorax,NCIT:C194252
+Not specified in data,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of trunk, NOS",Rhabdomyosarcoma,NCIT:C3359
+Anaplastic rhabdomyosarcoma,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of trunk, NOS",Childhood Rhabdomyosarcoma,NCIT:C7705
+Not specified in data,Myofibromatosis,"Connective, subcutaneous and other soft tissues of upper limb and shoulder",Non-Neoplastic Connective and Soft Tissue Disorder,NCIT:C26326
+Epitheloid sarcoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of upper limb and shoulder",Sarcoma of the Extremity,NCIT:C155647
+Sarcoma,Undifferentiated sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip",Soft Tissue Sarcoma,NCIT:C9306
+Embryonal Rhabdomyosarcoma,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of lower limb and hip",Embryonal Rhabdomyosarcoma,NCIT:C8971
+Not specified in data,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)",Head and Neck Rhabdomyosarcoma,NCIT:C202859
+Not specified in data,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of thorax (excludes thymus C37.9, heart and mediastinum C38._)",Malignant Neoplasm of Connective and Soft Tissue of Thorax,NCIT:C194252
+Not specified in data,Infantile fibrosarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip",Soft Tissue Fibrosarcoma,NCIT:C6605
+Not specified in data,"Synovial sarcoma, biphasic","Connective, subcutaneous and other soft tissues of pelvis",Soft Tissue Sarcoma,NCIT:C9306
+Synovial sarcoma,"Synovial sarcoma, biphasic","Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)",Head and Neck Synovial Sarcoma,NCIT:C202884
+Not specified in data,Undifferentiated sarcoma,"Connective, subcutaneous and other soft tissues, NOS","Undifferentiated Sarcoma, Not Otherwise Specified",NCIT:C121804
+Not specified in data,"Synovial sarcoma, biphasic","Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)",Head and Neck Synovial Sarcoma,NCIT:C202884
+Epitheloid Sarcoma,Epithelioid sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip",Epithelioid Sarcoma,NCIT:C3714
+Myxoid liposarcoma,Myxoid liposarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip",Myxoid Liposarcoma,NCIT:C27781
+Not specified in data,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of lower limb and hip",Soft Tissue Sarcoma,NCIT:C9306
+Not specified in data,Undifferentiated sarcoma,"Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)","Malignant Neoplasm of Connective and Soft Tissue of Head, Face and Neck",NCIT:C194245
+Poorly differentiated sarcoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of lower limb and hip",Soft Tissue Sarcoma,NCIT:C9306
+Alveolar soft part sarcoma,Alveolar soft part sarcoma,"Connective, subcutaneous and other soft tissues of upper limb and shoulder",Alveolar Soft Part Sarcoma,NCIT:C3750
+Not specified in data,Pigmented dermatofibrosarcoma protuberans,"Connective, subcutaneous and other soft tissues of abdomen",Pigmented Dermatofibrosarcoma Protuberans,NCIT:C9430
+Not specified in data,Desmoplastic small round cell tumor,"Connective, subcutaneous and other soft tissues of lower limb and hip",Connective and Soft Tissue Neoplasm,NCIT:C3810
+"Basal cell carcinoma, NOS",Basal Cell Neoplasms,Skin,Skin Basal Cell Carcinoma,NCIT:C2921
+Merkel cell carcinoma,Adenomas and Adenocarcinomas,Skin,Cutaneous Merkel Cell Carcinoma,NCIT:C173385
+Adnexal carcinoma,Adnexal and Skin Appendage Neoplasms,Skin,Adnexal Carcinoma,NCIT:C3775
+Skin appendage carcinoma,Adnexal and Skin Appendage Neoplasms,Skin,Adnexal Carcinoma,NCIT:C3775
+"Paraganglioma, NOS",Paragangliomas and Glomus Tumors,"Connective, subcutaneous and other soft tissues",Paraganglioma,NCIT:C3308
+"Melanoma, NOS",Nevi and Melanomas,Skin,Cutaneous Melanoma,NCIT:C3510
+"Melanoma, NOS","Neoplasms, NOS",Skin,Cutaneous Melanoma,NCIT:C3510
+"Acral lentiginous melanoma, malignant",Nevi and Melanomas,Skin,Acral Lentiginous Melanoma,NCIT:C4022
+"Sarcoma, NOS","Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues",Soft Tissue Sarcoma,NCIT:C9306
+"Sarcoma, NOS","Neoplasms, NOS","Connective, subcutaneous and other soft tissues","Malignant Neoplasm of Connective and Soft Tissue, Unspecified",NCIT:C194257
+Undifferentiated sarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues",Undifferentiated Soft Tissue Sarcoma,NCIT:C121793
+Desmoplastic small round cell tumor,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues",Soft Tissue Sarcoma,NCIT:C9306
+Solitary fibrous tumor,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues",Connective and Soft Tissue Neoplasm,NCIT:C3810
+"Liposarcoma, NOS",Lipomatous Neoplasms,"Connective, subcutaneous and other soft tissues",Skin Liposarcoma,NCIT:C5615
+"Liposarcoma, well differentiated",Lipomatous Neoplasms,"Connective, subcutaneous and other soft tissues",Skin Atypical Lipomatous Tumor/Well Differentiated Liposarcoma,NCIT:C170472
+Myxoid liposarcoma,Lipomatous Neoplasms,"Connective, subcutaneous and other soft tissues",Myxoid Liposarcoma,NCIT:C27781
+Dedifferentiated liposarcoma,Lipomatous Neoplasms,"Connective, subcutaneous and other soft tissues",Dedifferentiated Liposarcoma,NCIT:C3704
+"Leiomyosarcoma, NOS",Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues",Leiomyosarcoma,NCIT:C3158
+"Rhabdomyosarcoma, NOS",Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues",Rhabdomyosarcoma,NCIT:C3359
+"Embryonal rhabdomyosarcoma, NOS",Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues",Rhabdomyosarcoma,NCIT:C3359
+"Synovial sarcoma, NOS",Synovial-like Neoplasms,"Connective, subcutaneous and other soft tissues",Synovial Sarcoma,NCIT:C3400
+Haemangiosarcoma,Blood Vessel Tumors,"Connective, subcutaneous and other soft tissues",Skin Angiosarcoma,NCIT:C4489
