@@ -1,0 +1,25 @@
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+"Neoplasm, malignant","Neoplasms, NOS",Thyroid gland,Thyroid Gland Neoplasm,NCIT:C3414
+Hurthle cell tumor,Adenomas and Adenocarcinomas,Thyroid gland,Thyroid Gland Oncocytic Neoplasm,NCIT:C46068
+"Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,Thyroid gland,Thyroid Gland Diffuse Large B-Cell Lymphoma,NCIT:C6046
+Nonencapsulated sclerosing carcinoma,Adenomas and Adenocarcinomas,Thyroid gland,Diffuse Sclerosing Variant Thyroid Gland Papillary Carcinoma,NCIT:C7427
+"Follicular carcinoma, minimally invasive",Adenomas and Adenocarcinomas,Thyroid gland,"Thyroid Gland Follicular Carcinoma, Minimally Invasive",NCIT:C65200
+Hyalinizing trabecular adenoma,Adenomas and Adenocarcinomas,Thyroid gland,Thyroid Gland Hyalinizing Trabecular Tumor,NCIT:C6846
+Not specified in data,"Papillary carcinoma, NOS",Thyroid Gland,Thyroid Gland Papillary Carcinoma,NCIT:C4035
+Not specified in data,Unknown,Thyroid Gland,Thyroid Gland,NCIT:C12400
+Papillary Thyroid Carcinoma,"Papillary carcinoma, NOS",Thyroid Gland,Thyroid Gland Papillary Carcinoma,NCIT:C4035
+Not specified in data,"Papillary adenocarcinoma, NOS",Thyroid Gland,Thyroid Gland Papillary Carcinoma,NCIT:C4035
+Follicular hyperplasia/metastatic papillary thyroid cancer,"Papillary adenocarcinoma, NOS",Thyroid Gland,Differentiated Thyroid Gland Carcinoma,NCIT:C7153
+Metastatic papillary thyroid carcinoma,"Papillary carcinoma, NOS",Thyroid Gland,Metastatic Thyroid Gland Papillary Carcinoma,NCIT:C156100
+"Carcinoma, NOS","Epithelial Neoplasms, NOS",Thyroid gland,Thyroid Gland Carcinoma,NCIT:C4815
+"Carcinoma, anaplastic, NOS","Epithelial Neoplasms, NOS",Thyroid gland,Thyroid Gland Anaplastic Carcinoma,NCIT:C3878
+"Papillary carcinoma, NOS",Squamous Cell Neoplasms,Thyroid gland,Thyroid Gland Papillary Carcinoma,NCIT:C4035
+"Papillary adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Thyroid gland,Thyroid Gland Papillary Carcinoma,NCIT:C4035
+Oxyphilic adenocarcinoma,Adenomas and Adenocarcinomas,Thyroid gland,Oncocytic Adenocarcinoma,NCIT:C3679
+"Follicular carcinoma, NOS",Adenomas and Adenocarcinomas,Thyroid gland,Thyroid Gland Follicular Carcinoma,NCIT:C8054
+"Follicular adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Thyroid gland,Thyroid Gland Follicular Carcinoma,NCIT:C8054
+"Follicular adenocarcinoma, well differentiated",Adenomas and Adenocarcinomas,Thyroid gland,Thyroid Gland Follicular Carcinoma,NCIT:C8054
+Insular carcinoma,Adenomas and Adenocarcinomas,Thyroid gland,Thyroid Gland Adenocarcinoma,NCIT:C27380
+"Papillary carcinoma, follicular variant",Adenomas and Adenocarcinomas,Thyroid gland,Follicular Variant Thyroid Gland Papillary Carcinoma,NCIT:C126594
+"Papillary carcinoma, columnar cell",Adenomas and Adenocarcinomas,Thyroid gland,Columnar Cell Variant Thyroid Gland Papillary Carcinoma,NCIT:C35830
+"Medullary carcinoma, NOS",Ductal and Lobular Neoplasms,Thyroid gland,Thyroid Gland Medullary Carcinoma,NCIT:C3879
