@@ -1,0 +1,29 @@
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+Ewing sarcoma,Miscellaneous Bone Tumors,"Bones, joints and articular cartilage of other and unspecified sites",Ewing Sarcoma of Bone,NCIT:C4835
+"Osteosarcoma, NOS",Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of limbs",Osteosarcoma,NCIT:C9145
+High grade surface osteosarcoma,Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites",High Grade Osteosarcoma,NCIT:C197813
+Undifferentiated sarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Bones, joints and articular cartilage of other and unspecified sites",Bone Sarcoma,NCIT:C9312
+Rhabdomyosarcoma,"Rhabdomyosarcoma, NOS","Bone, NOS",Rhabdomyosarcoma,NCIT:C3359
+"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites",Peripheral Primitive Neuroectodermal Tumor of Bone,NCIT:C8776
+Round to spindle cell sarcoma,Spindle cell sarcoma,Long bones of lower limb and associated joints,Spindle Cell Sarcoma,NCIT:C27005
+Not specified in data,"Rhabdomyosarcoma, NOS","Bone, NOS",Rhabdomyosarcoma,NCIT:C3359
+Clear cell odontogenic carcinoma,Odontogenic Tumors,"Bones, joints and articular cartilage of other and unspecified sites",Clear Cell Odontogenic Carcinoma,NCIT:C54300
+Not specified in data,Spindle cell sarcoma,Long bones of lower limb and associated joints,Spindle Cell Sarcoma,NCIT:C27005
+Not specified in data,"Osteosarcoma, NOS","Long bones of upper limb, scapula and  associated joints",Osteosarcoma,NCIT:C9145
+Fibroblastic osteosarcoma,Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites",Extraskeletal Cartilaginous and Osseous Neoplasm,NCIT:C6570
+Myofibroma,Myofibroma,Bones of skull and face and associated joints (excludes mandible C41.1),Myofibroma,NCIT:C7052
+Not specified in data,"Synovial sarcoma, NOS",Long bones of lower limb and associated joints,Synovial Sarcoma,NCIT:C3400
+"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,"Bones, joints and articular cartilage of limbs",Neuroblastoma,NCIT:C3270
+Osteosarcoma in Paget disease of bone,Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites",Osteosarcoma Arising in Paget Disease of Bone,NCIT:C6469
+"Leiomyosarcoma, NOS",Myomatous Neoplasms,"Bones, joints and articular cartilage of limbs",Bone Leiomyosarcoma,NCIT:C7154
+Not specified in data,"Chordoma, NOS",Bones of skull and face and associated joints (excludes mandible C41.1),Skull Base Chordoma,NCIT:C5453
+"Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,"Bones, joints and articular cartilage of other and unspecified sites",Primary Bone Diffuse Large B-Cell Lymphoma,NCIT:C173811
+Not Reported,"Soft Tissue Tumors and Sarcomas, NOS","Bones, joints and articular cartilage of other and unspecified sites",Connective and Soft Tissue Neoplasm,NCIT:C3810
+Not specified in data,"Precursor cell lymphoblastic leukemia, NOS",Bone marrow,Acute Lymphoblastic Leukemia,NCIT:C3167
+Small cell osteosarcoma,Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites",Small Cell Osteosarcoma,NCIT:C4023
+Not specified in data,Pleomorphic liposarcoma,Long bones of lower limb and associated joints,Pleomorphic Liposarcoma,NCIT:C3705
+"Tumor, NOS","Neoplasms, NOS","Bones, joints and articular cartilage of other and unspecified sites","NCI CTEP SDC Bone Neoplasm, Miscellaneous Sub-Category Terminology",NCIT:C103036
+Not specified in data,Undifferentiated sarcoma,Bones of skull and face and associated joints (excludes mandible C41.1),Malignant Neoplasm of Bones of Skull and Face,NCIT:C194138
+Pleomorphic Sarcoma,Pleomorphic liposarcoma,Long bones of lower limb and associated joints,Pleomorphic Liposarcoma,NCIT:C3705
+Undifferential small round blue cell tumor,Undifferentiated sarcoma,Bones of skull and face and associated joints (excludes mandible C41.1),Undifferentiated Round Cell Sarcoma,NCIT:C121799
+"Giant cell tumor of bone, NOS",Giant Cell Tumors,"Bones, joints and articular cartilage of other and unspecified sites",Giant Cell Tumor of Bone,NCIT:C121932
