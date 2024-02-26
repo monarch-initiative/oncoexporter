@@ -1,0 +1,26 @@
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+"Germ cell tumor, NOS",Germ Cell Neoplasms,"Heart, mediastinum, and pleura",Malignant Cardiac Germ Cell Tumor,NCIT:C5371
+"Mesothelioma, NOS",Mesothelial Neoplasms,"Heart, mediastinum, and pleura",Pericardial Malignant Mesothelioma,NCIT:C7631
+"Epithelioid mesothelioma, malignant",Mesothelial Neoplasms,"Heart, mediastinum, and pleura",Pericardial Malignant Mesothelioma,NCIT:C7631
+"Mesothelioma, biphasic, malignant",Mesothelial Neoplasms,"Heart, mediastinum, and pleura",Pericardial Malignant Mesothelioma,NCIT:C7631
+"Mesothelioma, malignant",Mesothelial Neoplasms,"Heart, mediastinum, and pleura",Pericardial Malignant Mesothelioma,NCIT:C7631
+"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,"Heart, mediastinum, and pleura",Mediastinal Neuroblastoma,NCIT:C6628
+"Thymoma, type B2, malignant",Thymic Epithelial Neoplasms,"Heart, mediastinum, and pleura",Malignant Type B2 Thymoma,NCIT:C6889
+Neuroblastoma,"Neuroblastoma, NOS","Heart, mediastinum, and pleura",Mediastinal Neuroblastoma,NCIT:C6628
+"Thymoma, type A, malignant",Thymic Epithelial Neoplasms,"Heart, mediastinum, and pleura",Malignant Type A Thymoma,NCIT:C7999
+Ganglioneuroblastoma,Neuroepitheliomatous Neoplasms,"Heart, mediastinum, and pleura",Mediastinal Ganglioneuroblastoma,NCIT:C6627
+"Thymoma, type AB, NOS",Thymic Epithelial Neoplasms,"Heart, mediastinum, and pleura",Thymoma Type AB,NCIT:C6885
+"Thymoma, type AB, malignant",Thymic Epithelial Neoplasms,"Heart, mediastinum, and pleura",Malignant Type AB Thymoma,NCIT:C6886
+Desmoplastic/Nodular Medulloblastoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of thorax (excludes thymus C37.9, heart and mediastinum C38._)",Malignant Neoplasm of Connective and Soft Tissue of Thorax,NCIT:C194252
+Not specified in data,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of thorax (excludes thymus C37.9, heart and mediastinum C38._)",Malignant Neoplasm of Connective and Soft Tissue of Thorax,NCIT:C194252
+Neuroblastoma,Miscellaneous Tumors,"Heart, mediastinum, and pleura",Heart Neoplasm,NCIT:C3081
+"Extra-adrenal paraganglioma, malignant",Paragangliomas and Glomus Tumors,"Heart, mediastinum, and pleura",Metastatic Cardiac Paraganglioma,NCIT:C5392
+"Thymoma, type B1, malignant",Thymic Epithelial Neoplasms,"Heart, mediastinum, and pleura",Malignant Type B1 Thymoma,NCIT:C7996
+"Thymoma, type B3, malignant",Thymic Epithelial Neoplasms,"Heart, mediastinum, and pleura",Thymoma Type B3,NCIT:C7997
+"Thymic carcinoma, NOS",Thymic Epithelial Neoplasms,"Heart, mediastinum, and pleura","Thymic Carcinoma, Not Otherwise Specified",NCIT:C183316
+"Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,"Heart, mediastinum, and pleura",Cardiac Diffuse Large B-Cell Lymphoma,NCIT:C183146
+"Extra-adrenal paraganglioma, NOS",Paragangliomas and Glomus Tumors,"Heart, mediastinum, and pleura",Cardiac Paraganglioma,NCIT:C6410
+Angiosarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Heart, mediastinum, and pleura",Cardiac Angiosarcoma,NCIT:C147097
+"Thymoma, type B2, NOS",Thymic Epithelial Neoplasms,"Heart, mediastinum, and pleura",Thymoma Type B2,NCIT:C6888
+"Fibrous mesothelioma, malignant",Mesothelial Neoplasms,"Heart, mediastinum, and pleura",Pericardial Malignant Mesothelioma,NCIT:C7631
+Not specified in data,"Malignant tumor, spindle cell type","Connective, subcutaneous and other soft tissues of thorax (excludes thymus C37.9, heart and mediastinum C38._)",Malignant Neoplasm of Connective and Soft Tissue of Thorax,NCIT:C194252
