@@ -1,0 +1,272 @@
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+Yolk sac tumor,Germ Cell Neoplasms,Brain,Childhood Brain Germ Cell Tumor,NCIT:C5795
+Low grade glial neoplasm,Pilocytic astrocytoma,"Brain, NOS",Brain Pilocytic Astrocytoma,NCIT:C201975
+Cerebellopontine angle tumor,"Neoplasm, benign","Brain, NOS",Cerebellopontine Angle Neoplasm,NCIT:C5414
+Embryonal tumor,"Glioblastoma, NOS",Overlapping lesion of brain and central nervous system,Glioblastoma,NCIT:C3058
+Atypical Teratoid/Rhabdoid Tumor,Miscellaneous Tumors,Brain,Atypical Teratoid/Rhabdoid Tumor,NCIT:C6906
+Brain Tumor,"Neoplasm, malignant","Brain, NOS",Malignant Brain Neoplasm,NCIT:C3568
+Poorly differentiated malignant neoplasm with sarcomatoid features,"Neoplasm, malignant","Brain, NOS",Central Nervous System Undifferentiated Pleomorphic Sarcoma,NCIT:C129566
+Neoplasm,"Sarcoma, NOS",Overlapping lesion of brain,Malignant Neoplasm of Overlapping Sites of Brain,NCIT:C194419
+Germinoma,Germ Cell Neoplasms,Brain,Central Nervous System Germ Cell Tumor,NCIT:C5461
+"Neoplasm, uncertain whether benign or malignant","Neoplasms, NOS",Brain,"Neoplasm of Uncertain Behavior of Brain, Unspecified",NCIT:C197795
+Glial Neoplasm,"Glioma, malignant","Brain, NOS",Malignant Brain Glioma,NCIT:C162993
+Anaplastic Ganglioglioma,Gliomas,Brain,Anaplastic Ganglioglioma,NCIT:C4717
+Low-grade glial/glioneuronal tumor,"Ganglioglioma, NOS","Brain, NOS",Ganglioglioma,NCIT:C3788
+Ganglioglioma,"Ganglioglioma, NOS","Brain, NOS",Ganglioglioma,NCIT:C3788
+Diffuse Glioma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS",Diffuse Glioma,NCIT:C129325
+"Malignant lymphoma, NOS","Malignant Lymphomas, NOS or Diffuse",Brain,Primary Cerebral Diffuse Large B-Cell Lymphoma,NCIT:C5054
+Dysembryoplastic Neuroepithelial Tumor,Dysembryoplastic neuroepithelial tumor,"Brain, NOS",Dysembryoplastic Neuroepithelial Tumor,NCIT:C9505
+Glioblastoma multiforme,"Neoplasms, NOS",Brain,Brain Glioblastoma,NCIT:C4642
+Papillary glioneuronal tumor,Neuroepitheliomatous Neoplasms,Brain,Papillary Glioneuronal Tumor,NCIT:C92554
+Adamantinomatous Craniopharyngioma,Craniopharyngioma,"Brain, NOS",Adamantinomatous Craniopharyngioma,NCIT:C4726
+Diffuse Glioma,"Glioma, malignant","Brain, NOS",Diffuse Glioma,NCIT:C129325
+Brain Tumor,"Neoplasm, uncertain whether benign or malignant","Brain, NOS","Neoplasm of Uncertain Behavior of Brain, Unspecified",NCIT:C197795
+Non-WNT/non-SHH medulloblastoma,"Medulloblastoma, NOS","Brain, NOS","Medulloblastoma, Non-WNT/Non-SHH",NCIT:C129444
+Atypical Teratoid/Rhabdoid Tumor,Atypical teratoid/rhabdoid tumor,"Brain, NOS",Atypical Teratoid/Rhabdoid Tumor,NCIT:C6906
+Choroid Plexus Papillary Tumor,"Choroid plexus papilloma, NOS","Brain, NOS",Choroid Plexus Papilloma,NCIT:C3698
+Glial tumor,"Glioma, malignant","Brain, NOS",Malignant Glioma,NCIT:C4822
+Glial Neoplasm,Pilocytic astrocytoma,"Brain, NOS",Brain Pilocytic Astrocytoma,NCIT:C201975
+Diffuse astrocytoma,"Astrocytoma, NOS","Brain, NOS","Diffuse Astrocytoma, Not Otherwise Specified",NCIT:C129277
+"Teratoma, benign",Germ Cell Neoplasms,Brain,Central Nervous System Teratoma,NCIT:C5441
+Choroid plexus carcinoma,Choroid plexus carcinoma,"Brain, NOS",Choroid Plexus Carcinoma,NCIT:C4715
+Low grade neuroepithelial tumor,Astroblastoma,"Brain, NOS","Astroblastoma, MN1-Altered",NCIT:C4324
+Neoplasm,"Glioblastoma, NOS","Brain, NOS","Glioblastoma, Not Otherwise Specified",NCIT:C129295
+Supratentorial choroid plexus papilloma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS",Choroid Plexus Papilloma,NCIT:C3698
+Neoplasm,"Neoplasm, uncertain whether benign or malignant","Brain, NOS","Neoplasm of Uncertain Behavior of Brain, Unspecified",NCIT:C197795
+"Embryonal carcinoma, NOS",Germ Cell Neoplasms,Brain,Childhood Brain Germ Cell Tumor,NCIT:C5795
+Primary central nervous system neoplasm consistent with high grade glioma,"Glioma, malignant","Brain, NOS",Malignant Brain Glioma,NCIT:C162993
+High-grade Central Nervous System Neoplasm Favor Embryonal,"Medulloblastoma, NOS",Brain stem,Medulloblastoma,NCIT:C3222
+Neuroepithelial Tumor,"Glioma, malignant","Brain, NOS",Malignant Glioma,NCIT:C4822
+Glioneuronal lesion,"Neoplasm, uncertain whether benign or malignant","Brain, NOS",Glioneuronal and Neuronal Tumors,NCIT:C4747
+Glioneuronal tumor,"Glioma, malignant","Brain, NOS",Malignant Glioma,NCIT:C4822
+Astrocytoma,Pilocytic astrocytoma,"Brain, NOS",Brain Pilocytic Astrocytoma,NCIT:C201975
+Adamantinomatous Craniopharyngioma,"Craniopharyngioma, adamantinomatous","Brain, NOS",Adamantinomatous Craniopharyngioma,NCIT:C4726
+Glial-neuronal neoplasm,"Neoplasm, uncertain whether benign or malignant","Brain, NOS",Glioneuronal and Neuronal Tumors,NCIT:C4747
+"Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,Brain,Primary Diffuse Large B-Cell Lymphoma of the Central Nervous System,NCIT:C71720
+Malignant glioma,Gliomas,Brain,Malignant Brain Glioma,NCIT:C162993
+Neuroepithelial Tumor,"Neoplasm, malignant","Brain, NOS",Neuroepithelial Neoplasm,NCIT:C3787
+Small round blue cell tumor,"Medulloblastoma, NOS","Brain, NOS","Medulloblastoma, Not Otherwise Specified",NCIT:C129447
+Low grade glioneuronal neoplasm,Dysembryoplastic neuroepithelial tumor,"Brain, NOS",Dysembryoplastic Neuroepithelial Tumor,NCIT:C9505
+Anaplastic medulloblastoma,"Medulloblastoma, NOS","Brain, NOS",Anaplastic Medulloblastoma,NCIT:C92625
+Atypical Teratoid/Rhabdoid Tumor,"Rhabdoid tumor, NOS",Brain stem,Atypical Teratoid/Rhabdoid Tumor,NCIT:C6906
+Diffuse Glioma,"Astrocytoma, NOS","Brain, NOS","Diffuse Astrocytoma, Not Otherwise Specified",NCIT:C129277
+Brain Tumor,"Glioma, malignant","Brain, NOS",Malignant Brain Glioma,NCIT:C162993
+Low grade neuroglial tumor,"Neoplasm, benign","Brain, NOS",Brain Low Grade Glioma,NCIT:C201977
+Neuroepithelial neoplasm,"Glioma, malignant","Brain, NOS",Malignant Glioma,NCIT:C4822
+Low grade glial neoplasm,"Neoplasm, uncertain whether benign or malignant","Brain, NOS",Low Grade Glioma,NCIT:C132067
+Brain Tumor,Pilocytic astrocytoma,"Brain, NOS",Pilocytic Astrocytoma,NCIT:C4047
+Posterior fossa group A ependymoma,"Ependymoma, NOS","Brain, NOS","Posterior Fossa Ependymoma, Group A (PFA)",NCIT:C186450
+Astrocytoma,"Astrocytoma, NOS","Brain, NOS","Astrocytoma, Not Otherwise Specified",NCIT:C185185
+Embryonal Neoplasm,"Neoplasm, malignant","Brain, NOS","Central Nervous System Embryonal Tumor, Not Otherwise Specified",NCIT:C5398
+Suprasellar mass,Pilocytic astrocytoma,"Brain, NOS",Brain Pilocytic Astrocytoma,NCIT:C201975
+Myxoid Glioneuronal tumor,"Neoplasm, benign","Brain, NOS",Myxoid Glioneuronal Tumor,NCIT:C179229
+Angiocentric Glioma,"Glioma, malignant","Brain, NOS",Angiocentric Glioma,NCIT:C92552
+Pure germinoma,Mixed germ cell tumor,"Brain, NOS",Childhood Central Nervous System Mixed Germ Cell Tumor,NCIT:C27403
+Atypical choroid plexus papilloma,Atypical choroid plexus papilloma,"Brain, NOS",Atypical Choroid Plexus Papilloma,NCIT:C53686
+Unknown,Gliomas,Brain,Glioma,NCIT:C3059
+CNS Embryonal Tumor,Miscellaneous Tumors,Brain,"Central Nervous System Embryonal Tumor, Not Otherwise Specified",NCIT:C5398
+High-grade tumor,"Neoplasm, malignant","Brain, NOS",Malignant Brain Glioma,NCIT:C162993
+Embryonal Neoplasm,"Medulloblastoma, NOS","Brain, NOS","Medulloblastoma, Not Otherwise Specified",NCIT:C129447
+"Malignant embryonal tumor, favor medulloblastoma",Large cell medulloblastoma,"Brain, NOS",Large Cell Medulloblastoma,NCIT:C6904
+Glial Neoplasm,Subependymal giant cell astrocytoma,"Brain, NOS",Subependymal Giant Cell Astrocytoma,NCIT:C3696
+Glial Neoplasm,"Astrocytoma, NOS","Brain, NOS","Astrocytoma, Not Otherwise Specified",NCIT:C185185
+Neoplasm,"Neoplasm, malignant","Brain, NOS",Brain Neoplasm,NCIT:C2907
+Anaplastic Ependymoma,"Ependymoma, anaplastic","Brain, NOS",Anaplastic Ependymoma,NCIT:C4049
+Astrocytoma,"Glioma, malignant","Brain, NOS",Malignant Brain Glioma,NCIT:C162993
+Glial Neoplasm,"Neoplasm, uncertain whether benign or malignant","Brain, NOS","Neoplasm of Uncertain Behavior of Brain, Unspecified",NCIT:C197795
+Oligoastrocytoma,Gliomas,Brain,"Oligoastrocytoma, Not Otherwise Specified",NCIT:C129323
+High-grade Central Nervous System Neoplasm Favor Embryonal,"Neoplasm, uncertain whether benign or malignant","Brain, NOS","Central Nervous System Embryonal Tumor, Not Otherwise Specified",NCIT:C5398
+Choroid Plexus Papillary Tumor,"Neoplasm, uncertain whether benign or malignant","Brain, NOS",Choroid Plexus Neoplasm,NCIT:C3473
+Cerebellopontine angle tumor,"Astrocytoma, NOS","Brain, NOS",Cerebellopontine Angle Neoplasm,NCIT:C5414
+Astrocytoma,"Astrocytoma, anaplastic","Brain, NOS","Anaplastic Astrocytoma, Not Otherwise Specified",NCIT:C129292
+Anaplastic Ependymoma,"Unknown, to be completed later","Brain, NOS",Anaplastic Ependymoma,NCIT:C4049
+Glial-neuronal neoplasm,"Glioma, malignant","Brain, NOS",Malignant Glioma,NCIT:C4822
+Atypical Teratoid/Rhabdoid Tumor,Atypical teratoid/rhabdoid tumor,Brain stem,Atypical Teratoid/Rhabdoid Tumor,NCIT:C6906
+Atypical epithelial neoplasm,Choroid plexus carcinoma,"Brain, NOS",Choroid Plexus Carcinoma,NCIT:C4715
+Glial Neoplasm,"Ependymoma, NOS","Brain, NOS",Brain Ependymoma,NCIT:C156462
+4th ventricular brain tumor,"CNS embryonal tumor, NOS","Brain, NOS","Central Nervous System Embryonal Tumor, Not Otherwise Specified",NCIT:C5398
+Glial Neoplasm,"Tumor cells, uncertain whether benign or malignant","Brain, NOS",Glioma,NCIT:C3059
+High-grade Ependymal Neoplasm,"Ependymoma, NOS","Brain, NOS",Brain Ependymoma,NCIT:C156462
+Infant hemispheric glioma,"Glioma, malignant","Brain, NOS",Infant-Type Hemispheric Glioma,NCIT:C185471
+Posterior fossa ependymoma,"Tumor cells, uncertain whether benign or malignant","Brain, NOS","Posterior Fossa Ependymoma, Not Otherwise Specified",NCIT:C186449
+Low-grade glial neoplasm,"Neoplasm, uncertain whether benign or malignant","Brain, NOS",Low Grade Glioma,NCIT:C132067
+Germinoma,Germinoma,"Brain, NOS",Brain Germinoma,NCIT:C6284
+Pleomorphic xanthoastrocytoma,Pleomorphic xanthoastrocytoma,"Brain, NOS",Pleomorphic Xanthoastrocytoma,NCIT:C4323
+Clear cell meningioma,Miscellaneous Tumors,Brain,Clear Cell Meningioma,NCIT:C4722
+Mesenchymal Neoplasm,"Neoplasm, uncertain whether benign or malignant","Brain, NOS","Central Nervous System Mesenchymal, Non-Meningothelial Neoplasm",NCIT:C5449
+Glioblastoma multiforme,Gliomas,Brain,Brain Glioblastoma,NCIT:C4642
+Brain Tumor,"Neoplasm, benign","Brain, NOS",Benign Brain Neoplasm,NCIT:C4781
+Mixed germ cell w/ matrue teratoma,Mixed germ cell tumor,"Brain, NOS",Central Nervous System Mixed Germ Cell Tumor,NCIT:C7016
+Cellular ependymoma,"Ependymoma, NOS","Brain, NOS",Cellular Ependymoma,NCIT:C4713
+Posterior fossa ependymoma,"Ependymoma, NOS","Brain, NOS","Posterior Fossa Ependymoma, Not Otherwise Specified",NCIT:C186449
+Pituitary tumor,"Craniopharyngioma, adamantinomatous","Brain, NOS",Adamantinomatous Craniopharyngioma,NCIT:C4726
+Low-grade Glioma,"Glioma, malignant","Brain, NOS",Brain Low Grade Glioma,NCIT:C201977
+Brain Tumor,"Ependymoma, NOS",Overlapping lesion of brain and central nervous system,Ependymoma,NCIT:C3017
+Brain Tumor,"Glioma, malignant",Overlapping lesion of brain,Malignant Brain Glioma,NCIT:C162993
+Posterior fossa ependymoma,"Neoplasm, malignant","Brain, NOS",Posterior Fossa Ependymoma,NCIT:C186443
+Embryonal tumor,"Medulloblastoma, NOS","Brain, NOS","Medulloblastoma, Not Otherwise Specified",NCIT:C129447
+Cerebellar mass,Pineoblastoma,"Brain, NOS",Pineoblastoma,NCIT:C9344
+Neuroepithelial neoplasm,"Glioma, malignant",Overlapping lesion of brain,Malignant Brain Glioma,NCIT:C162993
+Primitive neuroectoderma tumor,"Tumor cells, uncertain whether benign or malignant","Brain, NOS",Primitive Neuroectodermal Tumor,NCIT:C3716
+Pleomorphic xanthoastrocytoma,"Astrocytoma, NOS","Brain, NOS",Pleomorphic Xanthoastrocytoma,NCIT:C4323
+Neoplasm,"Glioma, malignant","Brain, NOS",Malignant Brain Glioma,NCIT:C162993
+Posterior fossa tumor,"Medulloblastoma, NOS","Brain, NOS","Medulloblastoma, Not Otherwise Specified",NCIT:C129447
+Meningioma,"Meningioma, malignant","Brain, NOS",Intracranial Meningioma,NCIT:C4656
+Low grade glioneuronal tumor,Dysembryoplastic neuroepithelial tumor,"Brain, NOS",Dysembryoplastic Neuroepithelial Tumor,NCIT:C9505
+Atypical central neurocytoma,Central neurocytoma,"Brain, NOS",Central Neurocytoma,NCIT:C3791
+CNS primative neuroectodermal tumor (PNET),Miscellaneous Tumors,Brain,"Central Nervous System Embryonal Tumor, Not Otherwise Specified",NCIT:C5398
+Low-grade glial/glioneuronal neoplasm,"Unknown, to be completed later","Brain, NOS",Brain Low Grade Glioma,NCIT:C201977
+High-grade blue cell tumor,"Medulloblastoma, NOS","Brain, NOS","Medulloblastoma, Not Otherwise Specified",NCIT:C129447
+Schwannoma,"Neurofibromatosis, NOS","Brain, NOS",Neurofibromatosis,NCIT:C6727
+Supratentorial choroid plexus papilloma,"Ependymoma, NOS","Brain, NOS",Choroid Plexus Papilloma,NCIT:C3698
+Posterior fossa ependymoma,"Ependymoma, NOS",Brain stem,"Posterior Fossa Ependymoma, Not Otherwise Specified",NCIT:C186449
+Posterior fossa tumor,"Astrocytoma, NOS","Brain, NOS","Astrocytoma, Not Otherwise Specified",NCIT:C185185
+Posterior fossa ependymoma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS",Posterior Fossa Ependymoma,NCIT:C186443
+Neuroepithelial neoplasm,"Medulloblastoma, NOS","Brain, NOS","Medulloblastoma, Not Otherwise Specified",NCIT:C129447
+Embryonal tumor,"CNS embryonal tumor, NOS","Brain, NOS","Central Nervous System Embryonal Tumor, Not Otherwise Specified",NCIT:C5398
+Low grade glial neoplasm,"Astrocytoma, NOS","Brain, NOS",Low Grade Astrocytoma,NCIT:C116342
+Ganglioglioma,"Neoplasm, malignant","Brain, NOS",Ganglioglioma,NCIT:C3788
+Atypical Teratoid/Rhabdoid Tumor,Atypical teratoid/rhabdoid tumor,Overlapping lesion of brain,Atypical Teratoid/Rhabdoid Tumor,NCIT:C6906
+Subependymal giant cell astrocytoma,"Glioma, malignant","Brain, NOS",Subependymal Giant Cell Astrocytoma,NCIT:C3696
+Diffuse Glioma,"Glioma, malignant",Brain stem,Brain Stem Glioma,NCIT:C8501
+Cerebellar tumor,Pilocytic astrocytoma,"Brain, NOS",Cerebellar Pilocytic Astrocytoma,NCIT:C6809
+Brain Tumor,"Glioma, malignant",Brain stem,Brain Stem Glioma,NCIT:C8501
+Low-grade Glial Neoplasm,"Glioma, malignant","Brain, NOS",Brain Low Grade Glioma,NCIT:C201977
+Atypical Teratoid/Rhabdoid Tumor,"Neoplasm, malignant","Brain, NOS",Atypical Teratoid/Rhabdoid Tumor,NCIT:C6906
+Neuroepithelial Tumor,Pilocytic astrocytoma,"Brain, NOS",Brain Pilocytic Astrocytoma,NCIT:C201975
+Polymorphous low grade neuroepithelial tumor,"Ganglioglioma, NOS","Brain, NOS",Ganglioglioma,NCIT:C3788
+"Teratoma, malignant, NOS",Germ Cell Neoplasms,Brain,Central Nervous System Teratoma,NCIT:C5441
+Central Nervous System Tumor with High Grade Histological Features,Astroblastoma,Overlapping lesion of brain,"Anaplastic Astroblastoma, MN1-Altered",NCIT:C84347
+Neoplasm,"Unknown, to be completed later","Brain, NOS",Brain Neoplasm,NCIT:C2907
+Intraventricular tumor,"Glioma, malignant","Brain, NOS",Malignant Brain Glioma,NCIT:C162993
+Neurofibromatosis; Moderately cellular neoplasm,"Glioma, malignant","Brain, NOS",Malignant Brain Glioma,NCIT:C162993
+Low-grade glial neoplasm,"Glioma, malignant","Brain, NOS",Brain Low Grade Glioma,NCIT:C201977
+Glial Neoplasm,"Glioma, malignant",Brain stem,Brain Stem Glioma,NCIT:C8501
+Supratentorial Ependymoma,"Neoplasm, malignant","Brain, NOS","Supratentorial Ependymoma, Not Otherwise Specified",NCIT:C186349
+Infiltrating glioma,"Glioma, malignant","Brain, NOS",Malignant Brain Glioma,NCIT:C162993
+Brain Tumor,"Medulloblastoma, NOS","Brain, NOS","Medulloblastoma, Not Otherwise Specified",NCIT:C129447
+Small Round Blue Cell Sarcoma,"CNS embryonal tumor, NOS","Brain, NOS","Central Nervous System Embryonal Tumor, Not Otherwise Specified",NCIT:C5398
+Round blue cell tumor,"Medulloblastoma, NOS","Brain, NOS","Medulloblastoma, Not Otherwise Specified",NCIT:C129447
+Astrocytic Glioma,Pilocytic astrocytoma,"Brain, NOS",Brain Pilocytic Astrocytoma,NCIT:C201975
+Supratentorial choroid plexus papilloma,"Choroid plexus papilloma, NOS","Brain, NOS",Choroid Plexus Papilloma,NCIT:C3698
+Astrocytoma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS","Astrocytoma, Not Otherwise Specified",NCIT:C185185
+Embryonal tumor,"Neoplasm, metastatic","Brain, NOS","Intracranial Embryonal Tumor, Not Otherwise Specified",NCIT:C5817
+Brain Tumor,"Unknown, to be completed later","Brain, NOS",Brain Neoplasm,NCIT:C2907
+Classic Medulloblastoma,"Tumor cells, uncertain whether benign or malignant","Brain, NOS",Medulloblastoma,NCIT:C3222
+Pineal parenchymal tumor,Pinealoma,"Brain, NOS",Pineal Parenchymal Cell Neoplasm,NCIT:C6965
+Neuroepithelial Tumor,"Neoplasm, uncertain whether benign or malignant","Brain, NOS",Neuroepithelial Neoplasm,NCIT:C3787
+Posterior fossa ependymoma,"Ependymoma, anaplastic","Brain, NOS","Posterior Fossa Ependymoma, Not Otherwise Specified",NCIT:C186449
+Diffuse Glioma,"Neoplasm, malignant","Brain, NOS",Diffuse Glioma,NCIT:C129325
+Low grade glial neoplasm,Pleomorphic xanthoastrocytoma,"Brain, NOS",Pleomorphic Xanthoastrocytoma,NCIT:C4323
+Low-grade circumscribed glial/glioneuronal tumor,"Ganglioglioma, NOS","Brain, NOS",Ganglioglioma,NCIT:C3788
+Anaplastic Ependymoma,Gliomas,Brain,Anaplastic Ependymoma,NCIT:C4049
+Glioma,"Glioma, malignant","Brain, NOS",Malignant Brain Glioma,NCIT:C162993
+Glioma,Astroblastoma,"Brain, NOS","Astroblastoma, MN1-Altered",NCIT:C4324
+Glioma,Pilocytic astrocytoma,"Brain, NOS",Brain Pilocytic Astrocytoma,NCIT:C201975
+Glioma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS","Neoplasm of Uncertain Behavior of Brain, Unspecified",NCIT:C197795
+Glioma,"Neoplasm, malignant","Brain, NOS",Malignant Brain Glioma,NCIT:C162993
+Glioma,"Glioma, malignant",Brain stem,Malignant Brain Glioma,NCIT:C162993
+Glioma,"Astrocytoma, NOS",Brain stem,Brain Stem Astrocytoma,NCIT:C7445
+"Glioma, NOS",Pediatric/AYA Brain Tumors,Brain,Childhood Brain Neoplasm,NCIT:C7703
+Glioblastoma,Glioblastoma,Brain,Brain Glioblastoma,NCIT:C4642
+Glioblastoma,Gliomas,Brain,Brain Glioblastoma,NCIT:C4642
+Glioblastoma,"Glioblastoma, NOS","Brain, NOS","Glioblastoma, Not Otherwise Specified",NCIT:C129295
+Mixed glioma,Gliomas,Brain,Mixed Glioma,NCIT:C3903
+Neuroblastoma,"Neuroblastoma, NOS",Brain,Childhood Brain Neuroblastoma,NCIT:C198500
+Neuroblastoma,"CNS embryonal tumor, NOS","Brain, NOS","Central Nervous System Embryonal Tumor, Not Otherwise Specified",NCIT:C5398
+Ependymoma NOS,"Ependymoma, anaplastic","Brain, NOS",Anaplastic Ependymoma,NCIT:C4049
+Ependymoma NOS,"Medulloblastoma, NOS","Brain, NOS","Medulloblastoma, Not Otherwise Specified",NCIT:C129447
+Ependymoma NOS,"Ependymoma, NOS","Brain, NOS",Brain Ependymoma,NCIT:C156462
+Ependymoma NOS,"Ependymoma, NOS",Brain stem,Brain Stem Ependymoma,NCIT:C5098
+Ependymoma NOS,"Medulloblastoma, NOS",Brain stem,Brain Stem Ependymoma,NCIT:C5098
+Ependymoma NOS,"Ependymoma, anaplastic",Brain stem,Brain Stem Ependymoma,NCIT:C5098
+Ependymoma NOS,"Neoplasm, uncertain whether benign or malignant","Brain, NOS",Ependymoma,NCIT:C3017
+Ependymoma NOS,"Neoplasm, uncertain whether benign or malignant",Brain stem,Brain Stem Ependymoma,NCIT:C5098
+"Ependymoma, NOS",Pediatric/AYA Brain Tumors,Brain,Ependymoma,NCIT:C3017
+Medulloblastoma,"Medulloblastoma, NOS","Brain, NOS","Medulloblastoma, Not Otherwise Specified",NCIT:C129447
+Medulloblastoma,Miscellaneous Tumors,Brain,Medulloblastoma,NCIT:C3222
+Medulloblastoma,"Medulloblastoma, NOS",Overlapping lesion of brain and central nervous system,"Medulloblastoma, Not Otherwise Specified",NCIT:C129447
+Medulloblastoma,"Medulloblastoma, NOS",Brain stem,"Medulloblastoma, Not Otherwise Specified",NCIT:C129447
+Medulloblastoma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS","Medulloblastoma, Not Otherwise Specified",NCIT:C129447
+Medulloblastoma,Desmoplastic nodular medulloblastoma,"Brain, NOS",Desmoplastic/Nodular Medulloblastoma,NCIT:C4956
+Medulloblastoma,"Tumor cells, uncertain whether benign or malignant","Brain, NOS","Medulloblastoma, Not Otherwise Specified",NCIT:C129447
+"Astrocytoma, NOS",Gliomas,Brain,"Astrocytoma, Not Otherwise Specified",NCIT:C185185
+Craniopharyngioma,Pediatric/AYA Brain Tumors,Brain,Childhood Craniopharyngioma,NCIT:C7816
+Craniopharyngioma,Craniopharyngioma,"Brain, NOS",Craniopharyngioma,NCIT:C2964
+"Glioma, malignant",Pediatric/AYA Brain Tumors,Brain,Childhood Malignant Glioma,NCIT:C202298
+"Ganglioglioma, NOS",Pediatric/AYA Brain Tumors,Brain,Ganglioglioma,NCIT:C3788
+"Neoplasm, malignant","Neoplasms, NOS",Brain,Brain Neoplasm,NCIT:C2907
+"Medulloblastoma, NOS",Pediatric/AYA Brain Tumors,Brain,"Medulloblastoma, Not Otherwise Specified",NCIT:C129447
+Mixed germ cell tumor,Germ Cell Neoplasms,Brain,Central Nervous System Mixed Germ Cell Tumor,NCIT:C7016
+Mixed germ cell tumor,Mixed germ cell tumor,"Brain, NOS",Central Nervous System Mixed Germ Cell Tumor,NCIT:C7016
+Not specified in data,Pineoblastoma,"Brain, NOS",Pineoblastoma,NCIT:C9344
+Not specified in data,Mixed germ cell tumor,"Brain, NOS",Central Nervous System Mixed Germ Cell Tumor,NCIT:C7016
+Not specified in data,"Neoplasm, malignant","Brain, NOS",Brain Neoplasm,NCIT:C2907
+Not specified in data,"Medulloblastoma, NOS",Overlapping lesion of brain and central nervous system,"Medulloblastoma, Not Otherwise Specified",NCIT:C129447
+Not specified in data,"Neoplasm, benign","Brain, NOS",Benign Brain Neoplasm,NCIT:C4781
+Not specified in data,"Glioma, malignant","Brain, NOS",Malignant Glioma,NCIT:C4822
+Not specified in data,"Astrocytoma, NOS","Brain, NOS","Astrocytoma, Not Otherwise Specified",NCIT:C185185
+Not specified in data,"Medulloblastoma, NOS","Brain, NOS","Medulloblastoma, Not Otherwise Specified",NCIT:C129447
+Not specified in data,"Glioma, malignant",Overlapping lesion of brain,Malignant Brain Glioma,NCIT:C162993
+Not specified in data,Pilocytic astrocytoma,"Brain, NOS",Brain Pilocytic Astrocytoma,NCIT:C201975
+Not specified in data,"Ganglioglioma, NOS","Brain, NOS",Ganglioglioma,NCIT:C3788
+Not specified in data,Atypical teratoid/rhabdoid tumor,Brain stem,Childhood Atypical Teratoid/Rhabdoid Tumor,NCIT:C68634
+Not specified in data,"Medulloblastoma, NOS",Brain stem,"Medulloblastoma, Not Otherwise Specified",NCIT:C129447
+Not specified in data,"Ependymoma, NOS","Brain, NOS",Ependymoma,NCIT:C3017
+Not specified in data,"Neoplasm, uncertain whether benign or malignant","Brain, NOS","Neoplasm of Uncertain Behavior of Brain, Unspecified",NCIT:C197795
+Not specified in data,"Schwannoma, NOS","Brain, NOS",Schwannoma,NCIT:C3269
+Not specified in data,"Craniopharyngioma, adamantinomatous","Brain, NOS",Adamantinomatous Craniopharyngioma,NCIT:C4726
+Not specified in data,"Unknown, to be completed later","Brain, NOS",Brain,NCIT:C12439
+Not specified in data,Atypical teratoid/rhabdoid tumor,"Brain, NOS",Atypical Teratoid/Rhabdoid Tumor,NCIT:C6906
+Not specified in data,Atypical teratoid/rhabdoid tumor,Overlapping lesion of brain,Atypical Teratoid/Rhabdoid Tumor,NCIT:C6906
+Not specified in data,Dysembryoplastic neuroepithelial tumor,"Brain, NOS",Dysembryoplastic Neuroepithelial Tumor,NCIT:C9505
+Not specified in data,"Choroid plexus papilloma, NOS","Brain, NOS",Choroid Plexus Papilloma,NCIT:C3698
+Not specified in data,"Tumor cells, uncertain whether benign or malignant","Brain, NOS","Neoplasm of Uncertain Behavior of Brain, Unspecified",NCIT:C197795
+Not specified in data,"Glioma, malignant",Brain stem,Brain Stem Glioma,NCIT:C8501
+Not specified in data,"CNS embryonal tumor, NOS","Brain, NOS","Central Nervous System Embryonal Tumor, Not Otherwise Specified",NCIT:C5398
+Not specified in data,Craniopharyngioma,"Brain, NOS",Craniopharyngioma,NCIT:C2964
+Not specified in data,"Neoplasm, uncertain whether benign or malignant",Brain stem,Brain Stem Neoplasm,NCIT:C4869
+Not specified in data,"Neuroblastoma, NOS","Brain, NOS",Central Nervous System Neuroblastoma,NCIT:C4826
+Not specified in data,Germinoma,"Brain, NOS",Brain Germinoma,NCIT:C6284
+Not specified in data,Pinealoma,"Brain, NOS",Pineal Region Neoplasm,NCIT:C3328
+Not specified in data,"Pituitary adenoma, NOS","Brain, NOS",Pituitary Neuroendocrine Tumor,NCIT:C3329
+Not specified in data,Astroblastoma,"Brain, NOS","Astroblastoma, MN1-Altered",NCIT:C4324
+Not specified in data,Central neurocytoma,"Brain, NOS",Central Neurocytoma,NCIT:C3791
+Not specified in data,Malignant histiocytosis,"Brain, NOS",Histiocytosis,NCIT:C3106
+Not specified in data,Choroid plexus carcinoma,"Brain, NOS",Choroid Plexus Carcinoma,NCIT:C4715
+Not specified in data,"Ependymoma, anaplastic","Brain, NOS",Anaplastic Ependymoma,NCIT:C4049
+Not specified in data,"Neoplasm, metastatic","Brain, NOS",Metastatic Malignant Neoplasm in the Brain,NCIT:C3813
+Not specified in data,"Glioblastoma, NOS",Overlapping lesion of brain and central nervous system,"Glioblastoma, Not Otherwise Specified",NCIT:C129295
+Not specified in data,Pleomorphic xanthoastrocytoma,"Brain, NOS",Pleomorphic Xanthoastrocytoma,NCIT:C4323
+Not specified in data,Atypical choroid plexus papilloma,"Brain, NOS",Atypical Choroid Plexus Papilloma,NCIT:C53686
+Not specified in data,"Ependymoma, NOS",Brain stem,Brain Stem Ependymoma,NCIT:C5098
+Not specified in data,"Astrocytoma, anaplastic","Brain, NOS","Anaplastic Astrocytoma, Not Otherwise Specified",NCIT:C129292
+Not specified in data,"Germ cell tumor, nonseminomatous","Brain, NOS",Central Nervous System Nongerminomatous Germ Cell Tumor,NCIT:C100093
+Not specified in data,"Glioblastoma, NOS","Brain, NOS","Glioblastoma, Not Otherwise Specified",NCIT:C129295
+Not specified in data,"Neurofibromatosis, NOS","Brain, NOS",Neurofibromatosis,NCIT:C6727
+Not specified in data,"Ependymoma, anaplastic",Brain stem,Brain Stem Ependymoma,NCIT:C5098
+Not specified in data,"Rhabdoid tumor, NOS",Brain stem,Atypical Teratoid/Rhabdoid Tumor,NCIT:C6906
+Not specified in data,"Astrocytoma, NOS",Brain stem,Brain Stem Astrocytoma,NCIT:C7445
+Not specified in data,"Sarcoma, NOS",Overlapping lesion of brain,Brain Sarcoma,NCIT:C5154
+Not specified in data,Desmoplastic nodular medulloblastoma,"Brain, NOS",Desmoplastic/Nodular Medulloblastoma,NCIT:C4956
+Not specified in data,Subependymal giant cell astrocytoma,"Brain, NOS",Subependymal Giant Cell Astrocytoma,NCIT:C3696
+Not specified in data,"Neoplasm, malignant, uncertain whether primary or metastatic","Brain, NOS",Malignant Brain Neoplasm,NCIT:C3568
+Not specified in data,"Teratoma, malignant, NOS","Brain, NOS",Central Nervous System Teratoma,NCIT:C5441
+Not specified in data,"Meningioma, malignant","Brain, NOS",Cerebral Meningioma,NCIT:C4807
+Not specified in data,"Ependymoma, NOS",Overlapping lesion of brain and central nervous system,Ependymoma,NCIT:C3017
+Not specified in data,"Sarcoma, NOS","Brain, NOS",Brain Sarcoma,NCIT:C5154
+Not specified in data,Astroblastoma,Overlapping lesion of brain,"Astroblastoma, MN1-Altered",NCIT:C4324
+Not specified in data,"Oligodendroglioma, NOS","Brain, NOS","Oligodendroglioma, Not Otherwise Specified",NCIT:C129319
+Not specified in data,Large cell medulloblastoma,"Brain, NOS",Large Cell Medulloblastoma,NCIT:C6904
+Pilocytic Astrocytoma,Gliomas,Brain,Brain Pilocytic Astrocytoma,NCIT:C201975
+Pilocytic Astrocytoma,"Unknown, to be completed later","Brain, NOS",Brain Pilocytic Astrocytoma,NCIT:C201975
+Pilocytic Astrocytoma,Pilocytic astrocytoma,"Brain, NOS",Brain Pilocytic Astrocytoma,NCIT:C201975
+Pilocytic Astrocytoma,Pilocytic astrocytoma,Brain stem,Brain Stem Astrocytoma,NCIT:C7445
+Pilocytic Astrocytoma,"Astrocytoma, NOS","Brain, NOS",Brain Pilocytic Astrocytoma,NCIT:C201975
+Pilocytic Astrocytoma,"Glioma, malignant","Brain, NOS",Brain Pilocytic Astrocytoma,NCIT:C201975
+Pilocytic Astrocytoma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS",Brain Pilocytic Astrocytoma,NCIT:C201975
+Pilocytic Astrocytoma,"Neoplasm, malignant","Brain, NOS",Brain Pilocytic Astrocytoma,NCIT:C201975
+"Oligodendroglioma, NOS",Gliomas,Brain,"Oligodendroglioma, Not Otherwise Specified",NCIT:C129319
+"Astrocytoma, anaplastic",Gliomas,Brain,Anaplastic Astrocytoma,NCIT:C9477
+"Oligodendroglioma, anaplastic",Gliomas,Brain,Anaplastic Oligodendroglioma,NCIT:C4326
+Atypical teratoid/rhabdoid tumor,Pediatric/AYA Brain Tumors,Brain,Childhood Atypical Teratoid/Rhabdoid Tumor,NCIT:C68634
