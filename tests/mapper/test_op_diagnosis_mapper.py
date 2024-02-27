@@ -8,7 +8,7 @@ class TestOpDiagnosisMapper:
 
     @pytest.fixture
     def mapper(self) -> OpDiagnosisMapper:
-        return OpDiagnosisMapper.default_mapper()
+        return OpDiagnosisMapper.multitissue_mapper()
 
     # Tests conceived by Justin in `test_op_diagnosis_mapper` and moved here to be closer to the `OpDiagnosisMapper`.
     @pytest.mark.parametrize(
