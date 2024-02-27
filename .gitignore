@@ -1,7 +1,6 @@
 phenopackets/
 
 # Cache files
-src/fetch_tissue_data/.oncoexporter_cache/
 .oncoexporter_cache/
 
 # Byte-compiled / optimized / DLL files
