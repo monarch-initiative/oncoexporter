@@ -168,17 +168,13 @@ cython_debug/
 .vscode/
 .idea/
 c2p_env/
-notebooks/Untitled.ipynb
 
 *.pkl
 *.tsv
 !src/oncoexporter/ncit_mapping_files/*.tsv
 !src/oncoexporter/ncit_mapping_files/*.csv
 
-src/phenopackets
 *.tar.gz
-/phenopackets/
-phenopackets/
 
 
 # Mac General
