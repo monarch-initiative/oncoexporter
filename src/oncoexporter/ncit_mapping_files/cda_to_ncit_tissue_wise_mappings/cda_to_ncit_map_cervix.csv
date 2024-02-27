@@ -13,7 +13,6 @@ Papillary serous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms","Uterus,
 "Endometrioid adenocarcinoma, NOS",Uterine Corpus Endometrial Carcinoma,"Uterus, NOS",Cervical Endometrioid Adenocarcinoma,NCIT:C6343
 "Adenocarcinoma, endocervical type",Adenomas and Adenocarcinomas,Cervix uteri,Cervical Adenocarcinoma,NCIT:C4029
 "Endometrioid adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Corpus uteri,Endometrial Endometrioid Adenocarcinoma,NCIT:C6287
-Not specified in data,Unknown,"Cervix Uteri, Unknown",Cervix Uteri,NCIT:C12311
 "Clear cell adenocarcinoma, NOS",Adenomas and Adenocarcinomas,"Uterus, NOS","Human Papillomavirus-Independent Cervical Adenocarcinoma, Clear Cell-Type",NCIT:C6344
 "Leiomyosarcoma, NOS",Myomatous Neoplasms,"Uterus, NOS",Uterine Corpus Leiomyosarcoma,NCIT:C6340
 "Mesonephroma, malignant",Mesonephromas,Cervix uteri,Cervical Mesonephric Adenocarcinoma,NCIT:C40254
@@ -23,7 +22,6 @@ Mullerian mixed tumor,Complex Mixed and Stromal Neoplasms,"Uterus, NOS",Uterine 
 "Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Cervix uteri,"Cervical Adenocarcinoma, Not Otherwise Specified",NCIT:C180870
 Adenosquamous carcinoma,Complex Epithelial Neoplasms,"Uterus, NOS",Cervical Adenosquamous Carcinoma,NCIT:C4519
 "Endometrial stromal sarcoma, NOS",Complex Mixed and Stromal Neoplasms,"Uterus, NOS",Uterine Corpus Endometrial Stromal Sarcoma,NCIT:C40219
-Not specified in data,Unknown,Cervix Uteri,Cervix Uteri,NCIT:C12311
 "Endometrial stromal sarcoma, NOS",Complex Mixed and Stromal Neoplasms,Corpus uteri,Uterine Corpus Endometrial Stromal Sarcoma,NCIT:C40219
 Adenosarcoma,Complex Mixed and Stromal Neoplasms,"Uterus, NOS",Cervical Adenosarcoma,NCIT:C40229
 Adenosquamous carcinoma,Complex Epithelial Neoplasms,Cervix uteri,Cervical Adenosquamous Carcinoma,NCIT:C4519
@@ -54,7 +52,6 @@ Papillary squamous cell carcinoma,Squamous Cell Neoplasms,Cervix uteri,Cervical 
 "Mesonephroma, malignant",Mesonephromas,"Uterus, NOS",Mesonephric Adenocarcinoma,NCIT:C4072
 Smooth muscle tumor of uncertain malignant potential,Myomatous Neoplasms,"Uterus, NOS",Uterine Corpus Smooth Muscle Tumor of Uncertain Malignant Potential,NCIT:C40177
 Glassy cell carcinoma,"Epithelial Neoplasms, NOS",Cervix uteri,Cervical Carcinoma,NCIT:C9039
-"Sarcoma, NOS","Soft Tissue Tumors and Sarcomas, NOS","Uterus, NOS",Sarcoma,NCIT:C9118
 "Neoplasm, malignant","Neoplasms, NOS",Cervix uteri,Malignant Cervical Neoplasm,NCIT:C9311
 Adenosquamous carcinoma,Squamous Cell Neoplasms,Cervix uteri,Cervical Adenosquamous Carcinoma,NCIT:C4519
 "Carcinoma, NOS","Epithelial Neoplasms, NOS",Cervix uteri,Cervical Carcinoma,NCIT:C9039

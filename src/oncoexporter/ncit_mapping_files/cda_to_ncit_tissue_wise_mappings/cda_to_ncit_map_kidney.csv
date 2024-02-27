@@ -13,13 +13,11 @@ Wilms tumor,Complex Mixed and Stromal Neoplasms,Kidney,Mixed Cell Type Kidney Wi
 "Renal cell carcinoma, chromophobe type",Adenomas and Adenocarcinomas,Kidney,Chromophobe Renal Cell Carcinoma,NCIT:C4146
 "Papillary adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Kidney,Renal Cell Carcinoma,NCIT:C9385
 "Pheochromocytoma, malignant",Paragangliomas and Glomus Tumors,Adrenal gland,Metastatic Adrenal Gland Pheochromocytoma,NCIT:C4220
-Not specified in data,Unknown,Kidney,Kidney,NCIT:C12415
 Clear cell sarcoma,Epithelial Neoplasm,Kidney,Clear Cell Sarcoma of the Kidney,NCIT:C4264
 Neuroblastoma,"Neuroblastoma, NOS",Adrenal Gland,Adrenal Gland Neuroblastoma,NCIT:C4827
 Clear cell carcinoma,"Neoplasms, NOS",Kidney,Clear Cell Renal Cell Carcinoma,NCIT:C4033
 Clear cell carcinoma,Adenomas and Adenocarcinomas,Kidney,Clear Cell Renal Cell Carcinoma,NCIT:C4033
 "Pheochromocytoma, NOS",Paragangliomas and Glomus Tumors,Adrenal gland,Adrenal Gland Pheochromocytoma,NCIT:C3326
-Not specified in data,Unknown,"Kidney, Unknown",Kidney,NCIT:C12415
 Papillary renal cell carcinoma,Adenomas and Adenocarcinomas,Kidney,Papillary Renal Cell Carcinoma,NCIT:C6975
 "Nephroblastoma, NOS",Complex Mixed and Stromal Neoplasms,Kidney,Wilms Tumor,NCIT:C3267
 Angiomyolipoma,Lipomatous Neoplasms,Kidney,Kidney Angiomyolipoma,NCIT:C3888
@@ -42,14 +40,12 @@ Benign cystic nephroma,Adenomas and Adenocarcinomas,Kidney,Benign Cystic Nephrom
 "Synovial sarcoma, spindle cell",Synovial-like Neoplasms,Kidney,Spindle Cell Synovial Sarcoma,NCIT:C4277
 "Adrenal cortical adenoma, NOS",Adenomas and Adenocarcinomas,Adrenal gland,Adrenal Cortical Adenoma,NCIT:C9003
 Clear cell RCC,Clear Cell Renal Cell Carcinoma,Kidney,Clear Cell Renal Cell Carcinoma,NCIT:C4033
-Neuroblastoma,"Neuroblastoma, NOS",Renal Pelvis,Neuroblastoma,NCIT:C3270
 "Rhabdoid tumor, malignant",Miscellaneous Tumors,Kidney,Rhabdoid Tumor of the Kidney,NCIT:C8715
 Adrenal Cortical Tumor,Miscellaneous Tumors,Adrenal Gland,Adrenal Cortical Neoplasm,NCIT:C2858
 Not specified in data,Ewing sarcoma,"Kidney, NOS",Kidney Ewing Sarcoma,NCIT:C159208
 Poorly differentiated sarcoma,"Sarcoma, NOS","Adrenal gland, NOS",Adrenal Gland Sarcoma,NCIT:C156956
 Not specified in data,Adrenal cortical carcinoma,"Adrenal gland, NOS",Adrenal Cortical Carcinoma,NCIT:C9325
 "Papillary carcinoma, NOS",Squamous Cell Neoplasms,Kidney,Papillary Renal Cell Carcinoma,NCIT:C6975
-Neuroblastoma,"Neuroblastoma, NOS",Kidney,Neuroblastoma,NCIT:C3270
 "Malignant tumor, small cell type","Neoplasms, NOS",Kidney,Kidney Small Cell Neuroendocrine Carcinoma,NCIT:C116317
 Renal medullary carcinoma,"Medullary carcinoma, NOS","Kidney, NOS",Kidney Medullary Carcinoma,NCIT:C7572
 Not specified in data,"Neoplasm, malignant","Adrenal gland, NOS",Malignant Adrenal Gland Neoplasm,NCIT:C9338
