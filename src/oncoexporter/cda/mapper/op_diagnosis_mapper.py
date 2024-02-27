@@ -28,8 +28,8 @@ def prepare_ncit_map(ncit_map_df: pd.DataFrame) -> typing.Mapping[str, pp.Ontolo
         primary_diagnosis = row["primary_diagnosis"]
         primary_diagnosis_condition = row["primary_diagnosis_condition"]
         primary_diagnosis_site = row["primary_diagnosis_site"]
-        NCIT_id = str(row["NCIT_id"])  # enforce string because empty cell can be represented as float.NaN
-        NCIT_label = row["NCIT_label"]
+        NCIT_id = row["ncit_id"]
+        NCIT_label = row["ncit_label"]
         if NCIT_id is None or not NCIT_id.startswith("NCIT"):
             continue
 

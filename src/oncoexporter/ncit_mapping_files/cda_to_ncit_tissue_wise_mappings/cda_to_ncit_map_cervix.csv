@@ -1,4 +1,4 @@
-primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_label,ncit_id
 "Squamous cell carcinoma, keratinizing, NOS",Squamous Cell Neoplasms,Cervix uteri,Cervical Keratinizing Squamous Cell Carcinoma,NCIT:C40187
 "Squamous cell carcinoma, nonkeratinizing, NOS",Squamous Cell Neoplasms,Cervix uteri,Cervical Non-Keratinizing Squamous Cell Carcinoma,NCIT:C40188
 "Endometrioid adenocarcinoma, NOS",Adenomas and Adenocarcinomas,"Uterus, NOS",Cervical Endometrioid Adenocarcinoma,NCIT:C6343

@@ -1,4 +1,4 @@
-primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_label,ncit_id
 "Neoplasm, malignant","Neoplasms, NOS",Thyroid gland,Thyroid Gland Neoplasm,NCIT:C3414
 Hurthle cell tumor,Adenomas and Adenocarcinomas,Thyroid gland,Thyroid Gland Oncocytic Neoplasm,NCIT:C46068
 "Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,Thyroid gland,Thyroid Gland Diffuse Large B-Cell Lymphoma,NCIT:C6046

@@ -1,4 +1,4 @@
-primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_label,ncit_id
 Yolk sac tumor,Germ Cell Neoplasms,Brain,Childhood Brain Germ Cell Tumor,NCIT:C5795
 Low grade glial neoplasm,Pilocytic astrocytoma,"Brain, NOS",Brain Pilocytic Astrocytoma,NCIT:C201975
 Cerebellopontine angle tumor,"Neoplasm, benign","Brain, NOS",Cerebellopontine Angle Neoplasm,NCIT:C5414

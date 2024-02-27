@@ -1,4 +1,4 @@
-primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_label,ncit_id
 "Renal cell carcinoma, NOS",Adenomas and Adenocarcinomas,Kidney,"Renal Cell Carcinoma, Not Otherwise Specified",NCIT:C191370
 "Urothelial carcinoma, NOS",Transitional Cell Papillomas and Carcinomas,Kidney,Urothelial Carcinoma,NCIT:C4030
 "Carcinoma, NOS","Epithelial Neoplasms, NOS",Kidney,Kidney Carcinoma,NCIT:C9384

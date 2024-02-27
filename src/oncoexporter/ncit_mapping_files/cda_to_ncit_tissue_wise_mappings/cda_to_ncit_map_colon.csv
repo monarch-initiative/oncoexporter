@@ -1,4 +1,4 @@
-primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_label,ncit_id
 "Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Colon,Colon Adenocarcinoma,NCIT:C4349
 Mucinous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms",Colon,Colon Mucinous Adenocarcinoma,NCIT:C7966
 Goblet cell carcinoid,Adenomas and Adenocarcinomas,Colon,Goblet Cell Adenocarcinoma,NCIT:C201135

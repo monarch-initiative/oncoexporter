@@ -1,4 +1,4 @@
-primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_label,ncit_id
 Ewing sarcoma,Miscellaneous Bone Tumors,"Bones, joints and articular cartilage of other and unspecified sites",Ewing Sarcoma of Bone,NCIT:C4835
 "Osteosarcoma, NOS",Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of limbs",Osteosarcoma,NCIT:C9145
 High grade surface osteosarcoma,Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites",High Grade Osteosarcoma,NCIT:C197813

@@ -1,4 +1,4 @@
-primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_label,ncit_id
 "Squamous cell carcinoma, NOS",Squamous Cell Neoplasms,Bronchus and lung,Lung Squamous Cell Carcinoma,NCIT:C3493
 "Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung,Lung Adenocarcinoma,NCIT:C3512
 "Small cell carcinoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung,Lung Small Cell Carcinoma,NCIT:C4917

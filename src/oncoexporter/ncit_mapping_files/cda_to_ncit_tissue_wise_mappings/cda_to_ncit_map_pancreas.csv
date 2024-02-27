@@ -1,4 +1,4 @@
-primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_label,ncit_id
 "Infiltrating duct carcinoma, NOS",Ductal and Lobular Neoplasms,Pancreas,Pancreatic Ductal Adenocarcinoma,NCIT:C9120
 "Carcinoma, NOS","Epithelial Neoplasms, NOS",Pancreas,Pancreatic Carcinoma,NCIT:C3850
 "Duct adenocarcinoma, NOS",Ductal and Lobular Neoplasms,Pancreas,Pancreatic Ductal Adenocarcinoma,NCIT:C9120

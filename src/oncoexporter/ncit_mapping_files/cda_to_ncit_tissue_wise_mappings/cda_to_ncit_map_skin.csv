@@ -1,4 +1,4 @@
-primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_label,ncit_id
 Apocrine adenocarcinoma,Adnexal and Skin Appendage Neoplasms,Skin,Adnexal Carcinoma,NCIT:C3775
 "Clear cell sarcoma, NOS",Synovial-like Neoplasms,"Connective, subcutaneous and other soft tissues",Clear Cell Sarcoma of Soft Tissue,NCIT:C3745
 "Fibrosarcoma, NOS",Fibromatous Neoplasms,"Connective, subcutaneous and other soft tissues",Soft Tissue Fibrosarcoma,NCIT:C6605

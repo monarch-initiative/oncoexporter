@@ -1,4 +1,4 @@
-primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_label,ncit_id
 "Infiltrating duct carcinoma, NOS",Ductal and Lobular Neoplasms,Breast,Invasive Breast Carcinoma of No Special Type,NCIT:C4194
 "Carcinoma, NOS","Epithelial Neoplasms, NOS",Breast,Breast Carcinoma,NCIT:C4872
 "Lobular carcinoma, NOS",Ductal and Lobular Neoplasms,Breast,Breast Lobular Carcinoma,NCIT:C3771

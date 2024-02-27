@@ -1,4 +1,4 @@
-primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_term,ncit_id
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_label,ncit_id
 Malignant rhabdoid tumor,Complex Mixed and Stromal Neoplasms,Liver and intrahepatic bile ducts,Extrarenal Rhabdoid Tumor of the Liver,NCIT:C96847
 "Clear cell adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Liver and intrahepatic bile ducts,Clear Cell Hepatocellular Carcinoma,NCIT:C5754
 Not specified in data,"Sarcoma, NOS",Liver,Liver Sarcoma,NCIT:C4437
