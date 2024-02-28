@@ -10,7 +10,7 @@ def configure_cda_table_importer(
         use_cache: bool = True,
         page_size: int = 10000,
 ) -> CdaTableImporter:
-    disease_stage_mapper = OpDiagnosisMapper.default_mapper()
+    disease_stage_mapper = OpDiagnosisMapper.multitissue_mapper()
     disease_factory = CdaDiseaseFactory(disease_stage_mapper)
     return CdaTableImporter(disease_factory,
                             cache_dir=cache_dir,

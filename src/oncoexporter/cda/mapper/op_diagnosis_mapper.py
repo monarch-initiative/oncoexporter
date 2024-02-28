@@ -1,5 +1,5 @@
 import typing
-
+import warnings
 from collections import defaultdict
 from importlib.resources import open_text
 
@@ -28,8 +28,8 @@ def prepare_ncit_map(ncit_map_df: pd.DataFrame) -> typing.Mapping[str, pp.Ontolo
         primary_diagnosis = row["primary_diagnosis"]
         primary_diagnosis_condition = row["primary_diagnosis_condition"]
         primary_diagnosis_site = row["primary_diagnosis_site"]
-        NCIT_id = str(row["NCIT_id"])  # enforce string because empty cell can be represented as float.NaN
-        NCIT_label = row["NCIT_label"]
+        NCIT_id = row["ncit_id"]
+        NCIT_label = row["ncit_label"]
         if NCIT_id is None or not NCIT_id.startswith("NCIT"):
             continue
 
@@ -62,29 +62,79 @@ def prepare_uberon(uberon_df: pd.DataFrame) -> typing.Mapping[str, pp.OntologyCl
     return uberon_map
 
 
+# We treat the values as `str`s.
+CONVERTERS = {
+    'primary_diagnosis': str,
+    'primary_diagnosis_condition': str,
+    'primary_diagnosis_site': str,
+    'ncit_id': str,
+    'ncit_label': str,
+}
+
+
 class OpDiagnosisMapper(OpMapper):
 
     @staticmethod
+    def multitissue_mapper():
+        module_with_tissue_mapping_tables = 'oncoexporter.ncit_mapping_files.cda_to_ncit_tissue_wise_mappings'
+        tissue_tables = (
+            'cda_to_ncit_map_bone.csv',
+            'cda_to_ncit_map_brain.csv',
+            'cda_to_ncit_map_breast.csv',
+            'cda_to_ncit_map_cervix.csv',
+            'cda_to_ncit_map_colon.csv',
+            'cda_to_ncit_map_heart.csv',
+            'cda_to_ncit_map_kidney.csv',
+            'cda_to_ncit_map_liver.csv',
+            'cda_to_ncit_map_lung.csv',
+            'cda_to_ncit_map_pancreas.csv',
+            'cda_to_ncit_map_skin.csv',
+            'cda_to_ncit_map_thyroid.csv',
+        )
+        frames = []
+        for tissue in tissue_tables:
+            with open_text(module_with_tissue_mapping_tables, tissue) as fh:
+                df = pd.read_csv(
+                    fh,
+                    converters=CONVERTERS,
+                )
+                frames.append(df)
+        ncit_map_df = pd.concat(frames)
+        ncit_map = prepare_ncit_map(ncit_map_df)
+
+        module_with_uberon_table = 'oncoexporter.ncit_mapping_files'
+        uberon_map = OpDiagnosisMapper._read_uberon_mappings(
+            module_with_uberon_table,
+            'uberon_to_ncit_diagnosis.tsv',
+        )
+
+        return OpDiagnosisMapper(ncit_map, uberon_map)
+
+    @staticmethod
     def default_mapper():
+        warnings.warn(
+            'Use `multitissue_mapper()` instead',
+            DeprecationWarning, stacklevel=2,
+        )
         # Use the mapping tables bundled in the package.
         module = 'oncoexporter.ncit_mapping_files'
         # TODO: decide which file to use
         with open_text(module, 'cda_to_ncit_map_old.tsv') as fh:
-            ncit_map_df = pd.read_csv(fh, sep='\t',
-                                      converters={
-                                          'primary_diagnosis': str,
-                                          'primary_diagnosis_condition': str,
-                                          'primary_diagnosis_site': str,
-                                          'NCIT_id': str,
-                                          'NCIT_label': str,
-                                      })
+            ncit_map_df = pd.read_csv(
+                fh, sep='\t',
+                converters=CONVERTERS,
+            )
         ncit_map = prepare_ncit_map(ncit_map_df)
 
-        with open_text(module, 'uberon_to_ncit_diagnosis.tsv') as fh:
-            uberon_df = pd.read_csv(fh, sep='\t')
-        uberon_map = prepare_uberon(uberon_df)
+        uberon_map = OpDiagnosisMapper._read_uberon_mappings(module, 'uberon_to_ncit_diagnosis.tsv')
 
         return OpDiagnosisMapper(ncit_map, uberon_map)
+
+    @staticmethod
+    def _read_uberon_mappings(module: str, fname: str):
+        with open_text(module, fname) as fh:
+            uberon_df = pd.read_csv(fh, sep='\t')
+        return prepare_uberon(uberon_df)
 
     def __init__(self, ncit_map: typing.Mapping[str, pp.OntologyClass],
                  uberon_map: typing.Mapping[str, pp.OntologyClass]):

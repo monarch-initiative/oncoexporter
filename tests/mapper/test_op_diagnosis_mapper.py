@@ -8,7 +8,7 @@ class TestOpDiagnosisMapper:
 
     @pytest.fixture
     def mapper(self) -> OpDiagnosisMapper:
-        return OpDiagnosisMapper.default_mapper()
+        return OpDiagnosisMapper.multitissue_mapper()
 
     # Tests conceived by Justin in `test_op_diagnosis_mapper` and moved here to be closer to the `OpDiagnosisMapper`.
     @pytest.mark.parametrize(
@@ -20,10 +20,7 @@ class TestOpDiagnosisMapper:
             ('Adenocarcinoma, NOS', 'Lung Adenocarcinoma', 'Lung', 'NCIT:C3512', 'Lung Adenocarcinoma'),
             ('Squamous Cell Carcinoma', 'Lung Squamous Cell Carcinoma', 'Lung', 'NCIT:C3493', 'Lung Squamous Cell Carcinoma'),
 
-            # TODO: the case below fails because we don't have the `primary_diagnosis` in the lookup table.
-            #  However, I am unsure about adding the table record. Investigate..
-            #('cell adenocarcinoma, NOS', 'Lung Adenocarcinoma', 'Lung', 'NCIT:C45516', 'Lung Adenocarcinoma'),
-            ('Squamous Cell Carcinoma', 'Lung Adenocarcinoma', 'Lung', 'NCIT:C9133', 'Lung Adenosquamous Carcinoma'),
+            ('Squamous Cell Carcinoma', 'Lung Adenocarcinoma', 'Lung', 'NCIT:C3493', 'Lung Squamous Cell Carcinoma'),
             ('Adenosquamous carcinoma', 'Lung Adenocarcinoma', 'Lung', 'NCIT:C9133', 'Lung Adenosquamous Carcinoma'),
         ])
     def test_get_ontology_term(self, mapper: OpDiagnosisMapper,
