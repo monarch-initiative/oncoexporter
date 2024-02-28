@@ -7,7 +7,7 @@ Input data from sources such as Cancer Data Aggregator (CDA) are
 transformed into collections of
 [GA4GH Phenopackets](https://github.com/phenopackets/phenopacket-schema){:target="\_blank"}.
 
-
+The source code is available in the oncoexporter [GitHub repository](https://github.com/monarch-initiative/oncoexporter).
 
 ### Feedback
 

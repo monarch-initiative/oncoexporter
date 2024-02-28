@@ -1,0 +1,4 @@
+uberon_label	uberon_id	NCIT_id	NCIT_label	synonyms
+uterine cervix	UBERON:0000002	NCIT:C2940	Cervical Neoplasm	Cervix uteri;Cervix
+uterus	UBERON:0000995	NCIT:C3435	Uterine Neoplasm	"Uterus, NOS;Uterus;"
+lung	UBERON:0002048	NCIT:C3200	Lung Neoplasm	"Lung"

@@ -1,0 +1,984 @@
+,key,primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site
+0,colon,"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Colon
+1,colon,Mucinous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms",Colon
+2,colon,Goblet cell carcinoid,Adenomas and Adenocarcinomas,Colon
+3,colon,"Medullary carcinoma, NOS",Ductal and Lobular Neoplasms,Colon
+4,colon,"Adenocarcinoma, NOS",Colon Adenocarcinoma,Colon
+5,colon,Mucinous carcinoma,"Cystic, Mucinous and Serous Neoplasms",Colon
+6,colon,Signet ring cell carcinoma,"Cystic, Mucinous and Serous Neoplasms",Colon
+7,colon,"Neuroendocrine carcinoma, NOS",Adenomas and Adenocarcinomas,Colon
+8,colon,"Adenocarcinoma, metastatic, NOS",Adenomas and Adenocarcinomas,Colon
+9,colon,"Papillary adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Colon
+10,colon,"Adenocarcinoma, NOS","Neoplasms, NOS",Colon
+11,colon,Not specified in data,"Adenocarcinoma, NOS","Colon, NOS"
+12,colon,Mucinous adenocarcinoma,Colon Adenocarcinoma,Colon
+13,colon,"Tubulovillous adenoma, NOS",Adenomas and Adenocarcinomas,Colon
+14,colon,"Tubular adenoma, NOS",Adenomas and Adenocarcinomas,Colon
+15,colon,"Carcinoid tumor, NOS",Adenomas and Adenocarcinomas,Colon
+16,colon,"Tumor, NOS","Neoplasms, NOS",Colon
+17,colon,Adenocarcinoma,Epithelial Neoplasm,Colon
+18,colon,Adenocarcinoma with mixed subtypes,Adenomas and Adenocarcinomas,Colon
+19,colon,Serrated adenoma,Adenomas and Adenocarcinomas,Colon
+20,colon,Neoplasm,Neoplasm,Colon
+21,colon,Not Reported,"Neoplasms, NOS",Colon
+22,colon,"Carcinoma, NOS","Epithelial Neoplasms, NOS",Colon
+23,colon,"Small cell carcinoma, NOS","Neoplasms, NOS",Colon
+24,colon,Mucinous adenocarcinoma,"Neoplasms, NOS",Colon
+25,colon,Well to moderately differentiated colonic adenocarcinoma,"Adenocarcinoma, NOS","Colon, NOS"
+26,colon,Transitional cell carcinoma,Adenomas and Adenocarcinomas,Colon
+27,colon,"Adenocarcinoma in situ, NOS",Adenomas and Adenocarcinomas,Colon
+28,colon,"Adenocarcinoma, intestinal type",Adenomas and Adenocarcinomas,Colon
+29,colon,"Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,Colon
+30,colon,Adenocarcinoma with neuroendocrine differentiation,Complex Epithelial Neoplasms,Colon
+31,colon,Not Reported,Adenomas and Adenocarcinomas,Colon
+32,colon,"Adenocarcinoma, NOS","Cystic, Mucinous and Serous Neoplasms",Colon
+33,colon,Dedifferentiated liposarcoma,Lipomatous Neoplasms,Colon
+34,colon,Adenosquamous carcinoma,Complex Epithelial Neoplasms,Colon
+35,colon,Adenosquamous carcinoma,Colon Adenocarcinoma,Colon
+36,breast,"Infiltrating duct carcinoma, NOS",Ductal and Lobular Neoplasms,Breast
+37,breast,"Carcinoma, NOS","Epithelial Neoplasms, NOS",Breast
+38,breast,"Lobular carcinoma, NOS",Ductal and Lobular Neoplasms,Breast
+39,breast,"Metaplastic carcinoma, NOS",Complex Epithelial Neoplasms,Breast
+40,breast,Infiltrating ductular carcinoma,Ductal and Lobular Neoplasms,Breast
+41,breast,Adenomyoepithelioma,Complex Mixed and Stromal Neoplasms,Breast
+42,breast,Infiltrating duct and lobular carcinoma,Ductal and Lobular Neoplasms,Breast
+43,breast,"Neoplasm, malignant","Neoplasms, NOS",Breast
+44,breast,"Infiltrating duct carcinoma, NOS",Breast Invasive Carcinoma,Breast
+45,breast,Infiltrating duct and lobular carcinoma,Breast Invasive Carcinoma,Breast
+46,breast,"Lobular carcinoma, NOS",Breast Invasive Carcinoma,Breast
+47,breast,,Breast Invasive Carcinoma,Breast
+48,breast,Intraductal papillary adenocarcinoma with invasion,Ductal and Lobular Neoplasms,Breast
+49,breast,"Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,Breast
+50,breast,Not specified in data,Unknown,"Breast, Unknown"
+51,breast,Not specified in data,Unknown,Breast
+52,breast,"Ductal carcinoma in situ, NOS",Ductal and Lobular Neoplasms,Breast
+53,breast,Haemangiosarcoma,Blood Vessel Tumors,Breast
+54,breast,Inflammatory carcinoma,Ductal and Lobular Neoplasms,Breast
+55,breast,"Medullary carcinoma, NOS",Ductal and Lobular Neoplasms,Breast
+56,breast,"Infiltrating lobular carcinoma, NOS",Ductal and Lobular Neoplasms,Breast
+57,breast,"Infiltrating lobular carcinoma, NOS",Breast Invasive Carcinoma,Breast
+58,breast,Angiosarcoma,"Soft Tissue Tumors and Sarcomas, NOS",Breast
+59,breast,"Intraductal carcinoma, noninfiltrating, NOS",Ductal and Lobular Neoplasms,Breast
+60,breast,"Phyllodes tumor, malignant",Fibroepithelial Neoplasms,Breast
+61,breast,"Carcinoma, NOS",Ductal and Lobular Neoplasms,Breast
+62,breast,Carcinoma NOS,Epithelial Neoplasm,Breast
+63,breast,Invasive lobular carcinoma,Ductal and Lobular Neoplasms,Breast
+64,breast,Invasive mammary carcinoma,Ductal and Lobular Neoplasms,Breast
+65,breast,Mucinous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms",Breast
+66,breast,Invasive lobular carcinoma,Breast Invasive Carcinoma,Breast
+67,breast,Secretory carcinoma of breast,Ductal and Lobular Neoplasms,Breast
+68,breast,Intraductal micropapillary carcinoma,Ductal and Lobular Neoplasms,Breast
+69,breast,Not Reported,Not Reported,Breast
+70,breast,Adenoid cystic carcinoma,Adenomas and Adenocarcinomas,Breast
+71,breast,Tubular adenocarcinoma,Adenomas and Adenocarcinomas,Breast
+72,breast,"Adenocarcinoma, NOS",Breast Invasive Carcinoma,Breast
+73,breast,Infiltrating duct mixed with other types of carcinoma,Ductal and Lobular Neoplasms,Breast
+74,breast,Not Reported,Ductal and Lobular Neoplasms,Breast
+75,breast,"Neuroendocrine carcinoma, NOS",Adenomas and Adenocarcinomas,Breast
+76,breast,Paget disease and infiltrating duct carcinoma of breast,Ductal and Lobular Neoplasms,Breast
+77,breast,Intraductal papillary carcinoma,Breast Invasive Carcinoma,Breast
+78,breast,Signet ring cell carcinoma,"Cystic, Mucinous and Serous Neoplasms",Breast
+79,breast,"Papillary carcinoma, NOS",Squamous Cell Neoplasms,Breast
+80,breast,Large cell neuroendocrine carcinoma,"Epithelial Neoplasms, NOS",Breast
+81,breast,Infiltrating ductular carcinoma,"Epithelial Neoplasms, NOS",Breast
+82,breast,"Sarcoma, NOS","Soft Tissue Tumors and Sarcomas, NOS",Breast
+83,breast,Not specified in data,Angiomyosarcoma,"Breast, NOS"
+84,breast,Infiltrating duct and mucinous carcinoma,Breast Invasive Carcinoma,Breast
+85,breast,"Ductal carcinoma in situ, NOS","Neoplasms, NOS",Breast
+86,breast,"Lobular carcinoma, NOS","Epithelial Neoplasms, NOS",Breast
+87,breast,Infiltrating lobular mixed with other types of carcinoma,Ductal and Lobular Neoplasms,Breast
+88,breast,"Phyllodes tumor, borderline",Fibroepithelial Neoplasms,Breast
+89,breast,"Basal cell carcinoma, NOS",Basal Cell Neoplasms,Breast
+90,breast,"Infiltrating duct carcinoma, NOS","Neoplasms, NOS",Breast
+91,breast,"Carcinosarcoma, NOS",Complex Mixed and Stromal Neoplasms,Breast
+92,breast,Not Reported,"Neoplasms, NOS",Breast
+93,breast,"Paget disease, mammary",Ductal and Lobular Neoplasms,Breast
+94,breast,"Carcinoma, NOS","Neoplasms, NOS",Breast
+95,breast,"Ductal carcinoma, NOS","Neoplasms, NOS",Breast
+96,breast,"Lobular carcinoma in situ, NOS",Ductal and Lobular Neoplasms,Breast
+97,breast,High-grade Angiosarcoma,Angiomyosarcoma,"Breast, NOS"
+98,breast,"Cribriform carcinoma, NOS",Adenomas and Adenocarcinomas,Breast
+99,breast,"Squamous cell carcinoma, NOS",Breast Invasive Carcinoma,Breast
+100,breast,Infiltrating duct and mucinous carcinoma,Ductal and Lobular Neoplasms,Breast
+101,breast,Pleomorphic carcinoma,"Epithelial Neoplasms, NOS",Breast
+102,breast,"Langerhans cell histiocytosis, unifocal",Ductal and Lobular Neoplasms,Breast
+103,breast,Mucinous carcinoma,Breast Invasive Carcinoma,Breast
+104,breast,Unknown,Ductal and Lobular Neoplasms,Breast
+105,breast,Intraductal papillary carcinoma,Ductal and Lobular Neoplasms,Breast
+106,breast,"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Breast
+107,breast,Apocrine adenocarcinoma,Adnexal and Skin Appendage Neoplasms,Breast
+108,breast,"Neoplasm, malignant","Epithelial Neoplasms, NOS",Breast
+109,breast,"Squamous cell carcinoma, NOS",Squamous Cell Neoplasms,Breast
+110,breast,Mucinous carcinoma,"Cystic, Mucinous and Serous Neoplasms",Breast
+111,lung,"Squamous cell carcinoma, NOS",Squamous Cell Neoplasms,Bronchus and lung
+112,lung,"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+113,lung,"Small cell carcinoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung
+114,lung,Non-small cell carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung
+115,lung,Large cell neuroendocrine carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung
+116,lung,Atypical carcinoid tumor,Adenomas and Adenocarcinomas,Bronchus and lung
+117,lung,Adenosquamous carcinoma,Complex Epithelial Neoplasms,Bronchus and lung
+118,lung,"Carcinoid tumor, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+119,lung,"Adenocarcinoma, NOS",Lung Adenocarcinoma,Bronchus and lung
+120,lung,Adenocarcinoma,Lung Adenocarcinoma,Lung
+121,lung,"Squamous cell carcinoma, NOS",Lung Squamous Cell Carcinoma,Bronchus and lung
+122,lung,,Lung Adenocarcinoma,Bronchus and lung
+123,lung,"Solid carcinoma, NOS",Lung Adenocarcinoma,Bronchus and lung
+124,lung,"Papillary adenocarcinoma, NOS",Lung Adenocarcinoma,Bronchus and lung
+125,lung,"Micropapillary carcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+126,lung,Adenocarcinoma with mixed subtypes,Adenomas and Adenocarcinomas,Bronchus and lung
+127,lung,Papillary squamous cell carcinoma,Squamous Cell Neoplasms,Bronchus and lung
+128,lung,"Solid carcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+129,lung,Acinar cell carcinoma,Adenomas and Adenocarcinomas,Bronchus and lung
+130,lung,Sarcomatoid carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung
+131,lung,Acinar cell carcinoma,Lung Adenocarcinoma,Bronchus and lung
+132,lung,Lepidic adenocarcinoma,Lung Adenocarcinoma,Bronchus and lung
+133,lung,Combined small cell carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung
+134,lung,"Large cell carcinoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung
+135,lung,Pseudosarcomatous carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung
+136,lung,"Neoplasm, malignant","Neoplasms, NOS",Bronchus and lung
+137,lung,Invasive mucinous adenocarcinoma,Lung Adenocarcinoma,Bronchus and lung
+138,lung,Neuroblastoma,"Neuroblastoma, NOS",Bronchus and lung
+139,lung,"Papillary adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+140,lung,"Adenocarcinoma in situ, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+141,lung,"Squamous cell carcinoma, keratinizing, NOS",Squamous Cell Neoplasms,Bronchus and lung
+142,lung,Not Reported,Not Reported,Bronchus and lung
+143,lung,"Adenocarcinoma, NOS",Complex Epithelial Neoplasms,Bronchus and lung
+144,lung,"Bronchiolo-alveolar adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+145,lung,Not specified in data,Unknown,"Lung/Bronchus, Unknown"
+146,lung,Not specified in data,"Malignant tumor, spindle cell type","Lung, NOS"
+147,lung,Lepidic adenocarcinoma,Adenomas and Adenocarcinomas,Bronchus and lung
+148,lung,"Bronchiolo-alveolar carcinoma, non-mucinous",Adenomas and Adenocarcinomas,Bronchus and lung
+149,lung,"Squamous cell carcinoma, large cell, nonkeratinizing, NOS",Squamous Cell Neoplasms,Bronchus and lung
+150,lung,"Carcinosarcoma, NOS",Complex Mixed and Stromal Neoplasms,Bronchus and lung
+151,lung,,,Lung
+152,lung,Not specified in data,Unknown,Lung/Bronchus
+153,lung,Neoplasm,Neoplasm,Lung/Bronchus
+154,lung,"Clear cell adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+155,lung,Not Reported,"Neoplasms, NOS",Bronchus and lung
+156,lung,Giant cell carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung
+157,lung,"Malignant melanoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung
+158,lung,Pleomorphic carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung
+159,lung,Angiosarcoma,"Soft Tissue Tumors and Sarcomas, NOS",Bronchus and lung
+160,lung,Squamous Cell Carcinoma,Lung Adenocarcinoma,Lung
+161,lung,Basaloid squamous cell carcinoma,Squamous Cell Neoplasms,Bronchus and lung
+162,lung,Invasive mucinous adenocarcinoma,Adenomas and Adenocarcinomas,Bronchus and lung
+163,lung,Lepidic predominant adenocarcinoma,Adenomas and Adenocarcinomas,Bronchus and lung
+164,lung,"Adenocarcinoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung
+165,lung,Infiltrating ductular carcinoma,Adenomas and Adenocarcinomas,Bronchus and lung
+166,lung,Mucinous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms",Bronchus and lung
+167,lung,Acantholytic squamous cell carcinoma,Lung Squamous Cell Carcinoma,Lung
+168,lung,Acinar cell carcinoma,Acinar Cell Neoplasms,Bronchus and lung
+169,lung,Squamous Cell Carcinoma,Lung Squamous Cell Carcinoma,Lung
+170,lung,"Adenocarcinoma, NOS",Lung Adenocarcinoma,Lung
+171,lung,Adenocarcinoma with mixed subtypes,"Neoplasms, NOS",Bronchus and lung
+172,lung,Infiltrating ductular carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung
+173,lung,"Epithelioid mesothelioma, malignant",Mesothelial Neoplasms,Bronchus and lung
+174,lung,"Adenocarcinoma, NOS","Neoplasms, NOS",Bronchus and lung
+175,lung,"Bronchio-alveolar carcinoma, mucinous",Adenomas and Adenocarcinomas,Bronchus and lung
+176,lung,Adenoid cystic carcinoma,Adenomas and Adenocarcinomas,Bronchus and lung
+177,lung,Adenosquamous carcinoma,Lung Adenocarcinoma,Lung
+178,lung,Pleuropulmonary blastoma,Complex Mixed and Stromal Neoplasms,Bronchus and lung
+179,lung,"Follicular lymphoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+180,lung,"Carcinoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung
+181,lung,"Squamous cell carcinoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung
+182,lung,Adenocarcinoma,Epithelial Neoplasm,Lung/Bronchus
+183,lung,"Carcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+184,lung,"Clear cell adenocarcinoma, NOS",Lung Adenocarcinoma,Lung
+185,lung,Mucoepidermoid carcinoma,Mucoepidermoid Neoplasms,Bronchus and lung
+186,lung,"Neoplasm, NOS",Paragangliomas and Glomus Tumors,Bronchus and lung
+187,lung,"Squamous cell carcinoma, nonkeratinizing, NOS",Squamous Cell Neoplasms,Bronchus and lung
+188,lung,Not Reported,Adenomas and Adenocarcinomas,Bronchus and lung
+189,lung,Spindle cell sarcoma,"Soft Tissue Tumors and Sarcomas, NOS",Bronchus and lung
+190,lung,Signet ring cell carcinoma,"Cystic, Mucinous and Serous Neoplasms",Bronchus and lung
+191,lung,Not Reported,Squamous Cell Neoplasms,Bronchus and lung
+192,lung,"Adenocarcinoma, NOS",Squamous Cell Neoplasms,Bronchus and lung
+193,lung,"Tumor, NOS","Neoplasms, NOS",Bronchus and lung
+194,lung,"Papillary carcinoma, NOS",Squamous Cell Neoplasms,Bronchus and lung
+195,lung,Squamous cell carcinoma NOS,Squamous Cell Neoplasm,Lung/Bronchus
+196,lung,"Myofibroblastic tumor, peribronchial",Fibromatous Neoplasms,Bronchus and lung
+197,lung,"Bronchiolo-alveolar carcinoma, NOS",Lung Adenocarcinoma,Bronchus and lung
+198,lung,Left thoracic tumor,"Malignant tumor, spindle cell type","Lung, NOS"
+199,lung,"Hepatocellular carcinoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung
+200,lung,"Meningioma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+201,lung,"Small cell carcinoma, NOS","Neoplasms, NOS",Bronchus and lung
+202,lung,"Pheochromocytoma, malignant",Paragangliomas and Glomus Tumors,Bronchus and lung
+203,lung,Lymphoepithelial carcinoma,Squamous Cell Neoplasms,Bronchus and lung
+204,lung,"Neoplasm, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+205,lung,"Myxoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+206,lung,Non-small cell carcinoma,Adenomas and Adenocarcinomas,Bronchus and lung
+207,lung,"Neoplasm, NOS",Squamous Cell Neoplasms,Bronchus and lung
+208,lung,"Lymphoma, NOS",Squamous Cell Neoplasms,Bronchus and lung
+209,lung,"Squamous cell carcinoma, small cell, nonkeratinizing",Squamous Cell Neoplasms,Bronchus and lung
+210,lung,Not specified in data,"Adenocarcinoma, NOS","Lung, NOS"
+211,lung,Large cell neuroendocrine carcinoma,"Neoplasms, NOS",Bronchus and lung
+212,lung,Mixed type rhabdomyosarcoma,Myomatous Neoplasms,Bronchus and lung
+213,lung,Lymphangiomyomatosis,Lymphatic Vessel Tumors,Bronchus and lung
+214,lung,Poorly differentiated pulmonary adenocarcinoma,"Adenocarcinoma, NOS","Lung, NOS"
+215,lung,"Carcinoma, undifferentiated, NOS",,Bronchus and lung
+216,skin,Apocrine adenocarcinoma,Adnexal and Skin Appendage Neoplasms,Skin
+217,skin,"Clear cell sarcoma, NOS",Synovial-like Neoplasms,"Connective, subcutaneous and other soft tissues"
+218,skin,"Fibrosarcoma, NOS",Fibromatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+219,skin,"Dermatofibrosarcoma, NOS",Fibromatous Neoplasms,Skin
+220,skin,Glomangiosarcoma,Paragangliomas and Glomus Tumors,"Connective, subcutaneous and other soft tissues"
+221,skin,"Desmoplastic melanoma, malignant",Nevi and Melanomas,Skin
+222,skin,"Epithelioid hemangioendothelioma, malignant",Blood Vessel Tumors,"Connective, subcutaneous and other soft tissues"
+223,skin,Lentigo maligna melanoma,Nevi and Melanomas,Skin
+224,skin,Alveolar rhabdomyosarcoma,Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+225,skin,Epithelioid cell melanoma,Nevi and Melanomas,Skin
+226,skin,Superficial spreading melanoma,Nevi and Melanomas,Skin
+227,skin,Pleomorphic liposarcoma,Lipomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+228,skin,Malignant myoepithelioma,Complex Mixed and Stromal Neoplasms,"Connective, subcutaneous and other soft tissues"
+229,skin,"Pleomorphic rhabdomyosarcoma, adult type",Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+230,skin,"Synovial sarcoma, spindle cell",Synovial-like Neoplasms,"Connective, subcutaneous and other soft tissues"
+231,skin,Nodular melanoma,Nevi and Melanomas,Skin
+232,skin,"Leiomyoma, NOS",Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+233,skin,"Paget disease, extramammary",Ductal and Lobular Neoplasms,Skin
+234,skin,"Mesenchymoma, NOS",Complex Mixed and Stromal Neoplasms,"Connective, subcutaneous and other soft tissues"
+235,skin,"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+236,skin,Mixed epithelioid and spindle cell melanoma,Nevi and Melanomas,Skin
+237,skin,Amelanotic melanoma,Nevi and Melanomas,Skin
+238,skin,"Hemangioma, NOS",Blood Vessel Tumors,"Connective, subcutaneous and other soft tissues"
+239,skin,"Extra-adrenal paraganglioma, NOS",Paragangliomas and Glomus Tumors,"Connective, subcutaneous and other soft tissues"
+240,skin,Spindle cell rhabdomyosarcoma,Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+241,skin,Angiosarcoma,"Soft Tissue Tumors and Sarcomas, NOS",Skin
+242,skin,Sebaceous adenocarcinoma,Adnexal and Skin Appendage Neoplasms,Skin
+243,skin,Myxosarcoma,Myxomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+244,skin,Intimal sarcoma,Blood Vessel Tumors,"Connective, subcutaneous and other soft tissues"
+245,skin,"Eccrine poroma, malignant",Adnexal and Skin Appendage Neoplasms,Skin
+246,skin,Alveolar soft part sarcoma,Granular Cell Tumors and Alveolar Soft Part Sarcomas,"Connective, subcutaneous and other soft tissues"
+247,skin,Small cell sarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+248,skin,"Myofibroblastic tumor, NOS",Fibromatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+249,skin,Not Reported,Nevi and Melanomas,Skin
+250,skin,"Malignant melanoma, NOS",Nevi and Melanomas,Skin
+251,skin,Ganglioneuroblastoma,Neuroepitheliomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+252,skin,"Myxoma, NOS",Myxomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+253,skin,"Squamous cell carcinoma, NOS",Squamous Cell Neoplasms,Skin
+254,skin,Interdigitating dendritic cell sarcoma,Neoplasms of Histiocytes and Accessory Lymphoid Cells,"Connective, subcutaneous and other soft tissues"
+255,skin,"Neoplasm, malignant","Neoplasms, NOS","Connective, subcutaneous and other soft tissues"
+256,skin,"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,"Connective, subcutaneous and other soft tissues"
+257,skin,Giant cell sarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+258,skin,Tenosynovial giant cell tumor,Giant Cell Tumors,"Connective, subcutaneous and other soft tissues"
+259,skin,Not Reported,Blood Vessel Tumors,"Connective, subcutaneous and other soft tissues"
+260,skin,"Giant pigmented nevus, NOS",Nevi and Melanomas,Skin
+261,skin,"Dermatofibroma, NOS",Fibromatous Neoplasms,Skin
+262,skin,"Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,"Connective, subcutaneous and other soft tissues"
+263,skin,Epithelioid sarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+264,skin,Ossifying fibromyxoid tumor,Myxomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+265,skin,Eccrine spiradenoma,Adnexal and Skin Appendage Neoplasms,Skin
+266,skin,Spindle cell sarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+267,skin,Malignant peripheral nerve sheath tumor,Nerve Sheath Tumors,"Connective, subcutaneous and other soft tissues"
+268,skin,Sweat gland adenocarcinoma,Adnexal and Skin Appendage Neoplasms,Skin
+269,skin,"Spindle cell melanoma, NOS",Nevi and Melanomas,Skin
+270,skin,Spindle cell sarcoma,"Soft Tissue Tumors and Sarcomas, NOS",Skin
+271,skin,"Neoplasm, malignant","Neoplasms, NOS",Skin
+272,skin,"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,Skin
+273,skin,Fibromyxosarcoma,Fibromatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+274,skin,"Synovial sarcoma, biphasic",Synovial-like Neoplasms,"Connective, subcutaneous and other soft tissues"
+275,skin,"Acral lentiginous melanoma, malignant","Neoplasms, NOS",Skin
+276,skin,Epithelioid sarcoma,Blood Vessel Tumors,"Connective, subcutaneous and other soft tissues"
+277,skin,Not specified in data,Unknown,Skin
+278,skin,Not specified in data,Unknown,"Skin, Unknown"
+279,skin,Sarcoma,Miscellaneous Tumors,"Connective, subcutaneous and other soft tissues"
+280,skin,Not specified in data,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of pelvis"
+281,skin,Infantile fibrosarcoma,Infantile fibrosarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+282,skin,Not specified in data,Pigmented dermatofibrosarcoma protuberans,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+283,skin,High-grade Synovial Sarcoma,"Synovial sarcoma, NOS","Connective, subcutaneous and other soft tissues, NOS"
+284,skin,Embryonal Rhabdomyosarcoma,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of pelvis"
+285,skin,Ewing sarcoma,Miscellaneous Tumors,"Connective, subcutaneous and other soft tissues"
+286,skin,Small Round Blue Cell Sarcoma,Ewing sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+287,skin,Not specified in data,Myxoid liposarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+288,skin,Cellular neoplasm,"Synovial sarcoma, NOS","Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+289,skin,Not specified in data,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+290,skin,Melanoma,Neoplasm,Skin
+291,skin,Not specified in data,Aggressive fibromatosis,"Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)"
+292,skin,Round cell sarcoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues, NOS"
+293,skin,Not specified in data,"Synovial sarcoma, NOS","Connective, subcutaneous and other soft tissues, NOS"
+294,skin,Not specified in data,Aggressive fibromatosis,"Connective, subcutaneous and other soft tissues of pelvis"
+295,skin,Spindle Cell Sarcoma,Spindle cell sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+296,skin,Not specified in data,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)"
+297,skin,Not specified in data,"Synovial sarcoma, spindle cell","Connective, subcutaneous and other soft tissues of lower limb and hip"
+298,skin,Low grade spindle cell neoplasm,Aggressive fibromatosis,"Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)"
+299,skin,Not specified in data,"Synovial sarcoma, NOS","Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+300,skin,Alveolar Rhabdomyosarcoma,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of pelvis"
+301,skin,Not specified in data,"Dermatofibroma, NOS",Skin of scalp and neck
+302,skin,Not specified in data,Undifferentiated sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+303,skin,Desmoplastic/Nodular Medulloblastoma,Myofibromatosis,"Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+304,skin,Possible Synovial Sarcoma,"Synovial sarcoma, spindle cell","Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+305,skin,Residual CIC-rearranged sarcoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+306,skin,Not specified in data,"Spindle cell carcinoma, NOS","Connective, subcutaneous and other soft tissues of lower limb and hip"
+307,skin,Not specified in data,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues, NOS"
+308,skin,Not specified in data,"Malignant tumor, spindle cell type","Connective, subcutaneous and other soft tissues of thorax (excludes thymus C37.9, heart and mediastinum C38._)"
+309,skin,Not specified in data,"Malignant melanoma, NOS",Skin of lower limb and hip
+310,skin,Residual Dermatofibrosarcoma protuberans,Pigmented dermatofibrosarcoma protuberans,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+311,skin,Not specified in data,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues, NOS"
+312,skin,Desmoplastic/Nodular Medulloblastoma,Pigmented dermatofibrosarcoma protuberans,"Connective, subcutaneous and other soft tissues of abdomen"
+313,skin,Not specified in data,Epithelioid sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+314,skin,Not specified in data,Aggressive fibromatosis,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+315,skin,Low grade spindle cell neoplasm,"Spindle cell carcinoma, NOS","Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+316,skin,Biphasic Synovial Sarcoma,"Synovial sarcoma, biphasic","Connective, subcutaneous and other soft tissues of pelvis"
+317,skin,Not specified in data,Ewing sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+318,skin,Angiomatoid fibrous histiocytoma,Angiomatoid fibrous histiocytoma,"Connective, subcutaneous and other soft tissues of pelvis"
+319,skin,Merkel Cell Tumor,Neuroepithelial Neoplasm,Skin
+320,skin,Undifferentiated small round cell sarcoma,Undifferentiated sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+321,skin,Alveolar Rhabdomyosarcoma,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)"
+322,skin,Not specified in data,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+323,skin,Not specified in data,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of lower limb and hip"
+324,skin,Not specified in data,Spindle cell sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+325,skin,Not specified in data,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of pelvis"
+326,skin,Not specified in data,"Dermatofibroma, NOS","Connective, subcutaneous and other soft tissues of pelvis"
+327,skin,Not specified in data,Alveolar soft part sarcoma,"Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+328,skin,Rhabdomyosarcoma,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)"
+329,skin,Sarcoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues, NOS"
+330,skin,Not specified in data,"Myofibroblastic tumor, NOS","Connective, subcutaneous and other soft tissues of pelvis"
+331,skin,Synovial sarcoma,"Synovial sarcoma, spindle cell","Connective, subcutaneous and other soft tissues of lower limb and hip"
+332,skin,Spindle cell rhabdomyosarcoma,Smooth muscle tumor of uncertain malignant potential,"Connective, subcutaneous and other soft tissues of trunk, NOS"
+333,skin,Not specified in data,Smooth muscle tumor of uncertain malignant potential,"Connective, subcutaneous and other soft tissues of trunk, NOS"
+334,skin,Not specified in data,"Spindle cell carcinoma, NOS","Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+335,skin,Rhabdomyosarcoma,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues, NOS"
+336,skin,Not specified in data,"Synovial sarcoma, spindle cell","Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+337,skin,Rhabdomyosarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+338,skin,Alveolar Rhabdomyosarcoma,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+339,skin,Not specified in data,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+340,skin,Alveolar Rhabdomyosarcoma,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+341,skin,Not specified in data,Angiomatoid fibrous histiocytoma,"Connective, subcutaneous and other soft tissues of pelvis"
+342,skin,Embryonal Rhabdomyosarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+343,skin,Not specified in data,"Rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of lower limb and hip"
+344,skin,Fibromatosis,Aggressive fibromatosis,"Connective, subcutaneous and other soft tissues of pelvis"
+345,skin,Desmoplastic/Nodular Medulloblastoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of thorax (excludes thymus C37.9, heart and mediastinum C38._)"
+346,skin,Not specified in data,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of trunk, NOS"
+347,skin,Anaplastic rhabdomyosarcoma,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of trunk, NOS"
+348,skin,Not specified in data,Myofibromatosis,"Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+349,skin,Epitheloid sarcoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+350,skin,Sarcoma,Undifferentiated sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+351,skin,Embryonal Rhabdomyosarcoma,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of lower limb and hip"
+352,skin,Not specified in data,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)"
+353,skin,Not specified in data,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of thorax (excludes thymus C37.9, heart and mediastinum C38._)"
+354,skin,Not specified in data,Infantile fibrosarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+355,skin,Not specified in data,"Synovial sarcoma, biphasic","Connective, subcutaneous and other soft tissues of pelvis"
+356,skin,Synovial sarcoma,"Synovial sarcoma, biphasic","Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)"
+357,skin,Not specified in data,Melanoma in situ,"Skin, NOS (excludes skin of labia majora C51.0, skin of vulva C51.9, skin of penis C60.9 and skin of scrotum C63.2)"
+358,skin,Not specified in data,Undifferentiated sarcoma,"Connective, subcutaneous and other soft tissues, NOS"
+359,skin,Not specified in data,"Synovial sarcoma, biphasic","Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)"
+360,skin,Epitheloid Sarcoma,Epithelioid sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+361,skin,Myxoid liposarcoma,Myxoid liposarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+362,skin,Not specified in data,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of lower limb and hip"
+363,skin,Not specified in data,Undifferentiated sarcoma,"Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)"
+364,skin,Poorly differentiated sarcoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of lower limb and hip"
+365,skin,Alveolar soft part sarcoma,Alveolar soft part sarcoma,"Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+366,skin,Not specified in data,Pigmented dermatofibrosarcoma protuberans,"Connective, subcutaneous and other soft tissues of abdomen"
+367,skin,Not specified in data,Desmoplastic small round cell tumor,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+368,skin,"Basal cell carcinoma, NOS",Basal Cell Neoplasms,Skin
+369,skin,Merkel cell carcinoma,Adenomas and Adenocarcinomas,Skin
+370,skin,Adnexal carcinoma,Adnexal and Skin Appendage Neoplasms,Skin
+371,skin,Skin appendage carcinoma,Adnexal and Skin Appendage Neoplasms,Skin
+372,skin,"Paraganglioma, NOS",Paragangliomas and Glomus Tumors,"Connective, subcutaneous and other soft tissues"
+373,skin,"Melanoma, NOS",Nevi and Melanomas,Skin
+374,skin,"Melanoma, NOS","Neoplasms, NOS",Skin
+375,skin,"Acral lentiginous melanoma, malignant",Nevi and Melanomas,Skin
+376,skin,"Sarcoma, NOS","Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+377,skin,"Sarcoma, NOS","Neoplasms, NOS","Connective, subcutaneous and other soft tissues"
+378,skin,Undifferentiated sarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+379,skin,Desmoplastic small round cell tumor,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+380,skin,Solitary fibrous tumor,Fibromatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+381,skin,Solitary fibrous tumor,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+382,skin,Aggressive fibromatosis,Fibromatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+383,skin,Malignant fibrous histiocytoma,Fibromatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+384,skin,"Liposarcoma, NOS",Lipomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+385,skin,"Liposarcoma, well differentiated",Lipomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+386,skin,Myxoid liposarcoma,Lipomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+387,skin,Dedifferentiated liposarcoma,Lipomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+388,skin,"Leiomyosarcoma, NOS",Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+389,skin,"Rhabdomyosarcoma, NOS",Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+390,skin,"Embryonal rhabdomyosarcoma, NOS",Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+391,skin,"Synovial sarcoma, NOS",Synovial-like Neoplasms,"Connective, subcutaneous and other soft tissues"
+392,skin,Haemangiosarcoma,Blood Vessel Tumors,"Connective, subcutaneous and other soft tissues"
+393,cervix,"Squamous cell carcinoma, keratinizing, NOS",Squamous Cell Neoplasms,Cervix uteri
+394,cervix,"Squamous cell carcinoma, nonkeratinizing, NOS",Squamous Cell Neoplasms,Cervix uteri
+395,cervix,"Endometrioid adenocarcinoma, NOS",Adenomas and Adenocarcinomas,"Uterus, NOS"
+396,cervix,Papillary serous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms","Uterus, NOS"
+397,cervix,"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,"Uterus, NOS"
+398,cervix,"Squamous cell carcinoma, NOS",Squamous Cell Neoplasms,Cervix uteri
+399,cervix,"Serous cystadenocarcinoma, NOS","Cystic, Mucinous and Serous Neoplasms","Uterus, NOS"
+400,cervix,"Carcinoma, NOS","Epithelial Neoplasms, NOS",Corpus uteri
+401,cervix,"Clear cell adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Cervix uteri
+402,cervix,"Carcinosarcoma, NOS",Complex Mixed and Stromal Neoplasms,"Uterus, NOS"
+403,cervix,"Carcinoma, undifferentiated, NOS","Epithelial Neoplasms, NOS","Uterus, NOS"
+404,cervix,"Serous adenocarcinoma, NOS","Cystic, Mucinous and Serous Neoplasms",Corpus uteri
+405,cervix,"Endometrioid adenocarcinoma, NOS",Uterine Corpus Endometrial Carcinoma,"Uterus, NOS"
+406,cervix,"Adenocarcinoma, endocervical type",Adenomas and Adenocarcinomas,Cervix uteri
+407,cervix,"Endometrioid adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Corpus uteri
+408,cervix,Not specified in data,Unknown,"Cervix Uteri, Unknown"
+409,cervix,Not specified in data,Unknown,Corpus Uteri
+410,cervix,Not specified in data,Unknown,"Corpus Uteri, Unknown"
+411,cervix,"Clear cell adenocarcinoma, NOS",Adenomas and Adenocarcinomas,"Uterus, NOS"
+412,cervix,"Leiomyosarcoma, NOS",Myomatous Neoplasms,"Uterus, NOS"
+413,cervix,"Mesonephroma, malignant",Mesonephromas,Cervix uteri
+414,cervix,Signet ring cell carcinoma,"Cystic, Mucinous and Serous Neoplasms",Cervix uteri
+415,cervix,"Squamous cell carcinoma, large cell, nonkeratinizing, NOS",Squamous Cell Neoplasms,Cervix uteri
+416,cervix,"Serous cystadenocarcinoma, NOS","Cystic, Mucinous and Serous Neoplasms",Corpus uteri
+417,cervix,Mullerian mixed tumor,Complex Mixed and Stromal Neoplasms,"Uterus, NOS"
+418,cervix,"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Cervix uteri
+419,cervix,Adenosquamous carcinoma,Complex Epithelial Neoplasms,"Uterus, NOS"
+420,cervix,"Endometrial stromal sarcoma, NOS",Complex Mixed and Stromal Neoplasms,"Uterus, NOS"
+421,cervix,Not specified in data,Unknown,Cervix Uteri
+422,cervix,"Endometrial stromal sarcoma, NOS",Complex Mixed and Stromal Neoplasms,Corpus uteri
+423,cervix,Adenosarcoma,Complex Mixed and Stromal Neoplasms,"Uterus, NOS"
+424,cervix,"Serous cystadenocarcinoma, NOS",Complex Mixed and Stromal Neoplasms,"Uterus, NOS"
+425,cervix,Adenosquamous carcinoma,Complex Epithelial Neoplasms,Cervix uteri
+426,cervix,"Adenocarcinoma in situ, NOS",Adenomas and Adenocarcinomas,Cervix uteri
+427,cervix,"Tumor, NOS","Neoplasms, NOS",Corpus uteri
+428,cervix,"Mesenchymoma, NOS",Complex Mixed and Stromal Neoplasms,"Uterus, NOS"
+429,cervix,"Hydatidiform mole, NOS",Trophoblastic neoplasms,"Uterus, NOS"
+430,cervix,Papillary serous cystadenocarcinoma,"Cystic, Mucinous and Serous Neoplasms",Corpus uteri
+431,cervix,"Neuroendocrine carcinoma, NOS",Adenomas and Adenocarcinomas,Cervix uteri
+432,cervix,"Mesenchymoma, NOS",Myomatous Neoplasms,"Uterus, NOS"
+433,cervix,Mucinous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms",Cervix uteri
+434,cervix,"Mucinous adenocarcinoma, endocervical type","Cystic, Mucinous and Serous Neoplasms",Cervix uteri
+435,cervix,"Neoplasm, uncertain whether benign or malignant","Neoplasms, NOS","Uterus, NOS"
+436,cervix,"Choriocarcinoma, NOS",Trophoblastic neoplasms,"Uterus, NOS"
+437,cervix,"Endometrial stromal sarcoma, low grade",Complex Mixed and Stromal Neoplasms,Corpus uteri
+438,cervix,Adenosquamous carcinoma,Adenomas and Adenocarcinomas,Cervix uteri
+439,cervix,"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Corpus uteri
+440,cervix,"Carcinoma, NOS","Epithelial Neoplasms, NOS","Uterus, NOS"
+441,cervix,"Endometrioid adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Cervix uteri
+442,cervix,"Carcinoid tumor, NOS",Adenomas and Adenocarcinomas,Cervix uteri
+443,cervix,"Leiomyosarcoma, NOS",Myomatous Neoplasms,Corpus uteri
+444,cervix,Myxoid leiomyosarcoma,Myomatous Neoplasms,"Uterus, NOS"
+445,cervix,"Tumor, NOS","Neoplasms, NOS",Cervix uteri
+446,cervix,Epithelioid leiomyosarcoma,Myomatous Neoplasms,"Uterus, NOS"
+447,cervix,"Neuroendocrine carcinoma, NOS",Adenomas and Adenocarcinomas,"Uterus, NOS"
+448,cervix,"Small cell carcinoma, NOS","Epithelial Neoplasms, NOS",Cervix uteri
+449,cervix,Papillary squamous cell carcinoma,Squamous Cell Neoplasms,Cervix uteri
+450,cervix,"Clear cell adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Corpus uteri
+451,cervix,"Leiomyoma, NOS",Myomatous Neoplasms,"Uterus, NOS"
+452,cervix,"Mesonephroma, malignant",Mesonephromas,"Uterus, NOS"
+453,cervix,Smooth muscle tumor of uncertain malignant potential,Myomatous Neoplasms,"Uterus, NOS"
+454,cervix,Glassy cell carcinoma,"Epithelial Neoplasms, NOS",Cervix uteri
+455,cervix,"Sarcoma, NOS","Soft Tissue Tumors and Sarcomas, NOS","Uterus, NOS"
+456,cervix,"Neoplasm, malignant","Neoplasms, NOS",Cervix uteri
+457,cervix,Adenosquamous carcinoma,Squamous Cell Neoplasms,Cervix uteri
+458,cervix,"Carcinoma, NOS","Epithelial Neoplasms, NOS",Cervix uteri
+459,cervix,"Malignant tumor, small cell type","Neoplasms, NOS",Cervix uteri
+460,cervix,"Carcinoma, undifferentiated, NOS","Epithelial Neoplasms, NOS",Corpus uteri
+461,cervix,"Carcinosarcoma, NOS",Complex Mixed and Stromal Neoplasms,Corpus uteri
+462,cervix,Not Reported,,Cervix uteri
+463,cervix,Basaloid squamous cell carcinoma,Squamous Cell Neoplasms,Cervix uteri
+464,cervix,"Serous cystadenocarcinoma, NOS","Cystic, Mucinous and Serous Neoplasms",Cervix uteri
+465,cervix,"Endometrioid adenocarcinoma, secretory variant",Adenomas and Adenocarcinomas,Corpus uteri
+466,cervix,Mucinous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms","Uterus, NOS"
+467,cervix,Myxoid leiomyosarcoma,Myomatous Neoplasms,Corpus uteri
+468,cervix,Mesodermal mixed tumor,Complex Mixed and Stromal Neoplasms,"Uterus, NOS"
+469,cervix,Adenoid cystic carcinoma,Adenomas and Adenocarcinomas,Cervix uteri
+470,cervix,Serous surface papillary carcinoma,"Cystic, Mucinous and Serous Neoplasms",Corpus uteri
+471,cervix,Lymphoepithelial carcinoma,Squamous Cell Neoplasms,Cervix uteri
+472,cervix,"Neoplasm, malignant","Neoplasms, NOS","Uterus, NOS"
+473,cervix,"Serous adenocarcinoma, NOS",Squamous Cell Neoplasms,Cervix uteri
+474,cervix,"Trophoblastic tumor, epithelioid",Trophoblastic neoplasms,"Uterus, NOS"
+475,cervix,Warty carcinoma,Squamous Cell Neoplasms,Cervix uteri
+476,cervix,"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,"Uterus, NOS"
+477,cervix,"Tumor, NOS","Epithelial Neoplasms, NOS",Cervix uteri
+478,cervix,Squamotransitional cell carcinoma,Squamous Cell Neoplasms,Cervix uteri
+479,cervix,Villous adenocarcinoma,Adenomas and Adenocarcinomas,Cervix uteri
+480,brain,Yolk sac tumor,Germ Cell Neoplasms,Brain
+481,brain,Low grade glial neoplasm,Pilocytic astrocytoma,"Brain, NOS"
+482,brain,Cerebellopontine angle tumor,"Neoplasm, benign","Brain, NOS"
+483,brain,Embryonal tumor,"Glioblastoma, NOS",Overlapping lesion of brain and central nervous system
+484,brain,Atypical Teratoid/Rhabdoid Tumor,Miscellaneous Tumors,Brain
+485,brain,Brain Tumor,"Neoplasm, malignant","Brain, NOS"
+486,brain,Poorly differentiated malignant neoplasm with sarcomatoid features,"Neoplasm, malignant","Brain, NOS"
+487,brain,Neoplasm,"Sarcoma, NOS",Overlapping lesion of brain
+488,brain,Germinoma,Germ Cell Neoplasms,Brain
+489,brain,"Neoplasm, uncertain whether benign or malignant","Neoplasms, NOS",Brain
+490,brain,Glial Neoplasm,"Glioma, malignant","Brain, NOS"
+491,brain,Anaplastic Ganglioglioma,Gliomas,Brain
+492,brain,Low-grade glial/glioneuronal tumor,"Ganglioglioma, NOS","Brain, NOS"
+493,brain,Ganglioglioma,"Ganglioglioma, NOS","Brain, NOS"
+494,brain,Diffuse Glioma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+495,brain,Pineoblastoma,"Glioma, malignant","Brain, NOS"
+496,brain,"Malignant lymphoma, NOS","Malignant Lymphomas, NOS or Diffuse",Brain
+497,brain,Dysembryoplastic Neuroepithelial Tumor,Dysembryoplastic neuroepithelial tumor,"Brain, NOS"
+498,brain,Glioblastoma multiforme,"Neoplasms, NOS",Brain
+499,brain,Papillary glioneuronal tumor,Neuroepitheliomatous Neoplasms,Brain
+500,brain,Adamantinomatous Craniopharyngioma,Craniopharyngioma,"Brain, NOS"
+501,brain,Diffuse Glioma,"Glioma, malignant","Brain, NOS"
+502,brain,Glial Neoplasm,Craniopharyngioma,"Brain, NOS"
+503,brain,Brain Tumor,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+504,brain,Non-WNT/non-SHH medulloblastoma,"Medulloblastoma, NOS","Brain, NOS"
+505,brain,Atypical Teratoid/Rhabdoid Tumor,Atypical teratoid/rhabdoid tumor,"Brain, NOS"
+506,brain,Choroid Plexus Papillary Tumor,"Choroid plexus papilloma, NOS","Brain, NOS"
+507,brain,Glial tumor,"Glioma, malignant","Brain, NOS"
+508,brain,Glial Neoplasm,Pilocytic astrocytoma,"Brain, NOS"
+509,brain,Diffuse astrocytoma,"Astrocytoma, NOS","Brain, NOS"
+510,brain,"Teratoma, benign",Germ Cell Neoplasms,Brain
+511,brain,Choroid plexus carcinoma,Choroid plexus carcinoma,"Brain, NOS"
+512,brain,Low grade neuroepithelial tumor,Astroblastoma,"Brain, NOS"
+513,brain,Neoplasm,"Glioblastoma, NOS","Brain, NOS"
+514,brain,Supratentorial choroid plexus papilloma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+515,brain,Neoplasm,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+516,brain,"Embryonal carcinoma, NOS",Germ Cell Neoplasms,Brain
+517,brain,Primary central nervous system neoplasm consistent with high grade glioma,"Glioma, malignant","Brain, NOS"
+518,brain,High-grade Central Nervous System Neoplasm Favor Embryonal,"Medulloblastoma, NOS",Brain stem
+519,brain,Neuroepithelial Tumor,"Glioma, malignant","Brain, NOS"
+520,brain,Glioneuronal lesion,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+521,brain,Glioneuronal tumor,"Glioma, malignant","Brain, NOS"
+522,brain,Astrocytoma,Pilocytic astrocytoma,"Brain, NOS"
+523,brain,Adamantinomatous Craniopharyngioma,"Craniopharyngioma, adamantinomatous","Brain, NOS"
+524,brain,Glial-neuronal neoplasm,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+525,brain,"Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,Brain
+526,brain,Malignant glioma,Gliomas,Brain
+527,brain,Neuroepithelial Tumor,"Neoplasm, malignant","Brain, NOS"
+528,brain,Small round blue cell tumor,"Medulloblastoma, NOS","Brain, NOS"
+529,brain,Low grade glioneuronal neoplasm,Dysembryoplastic neuroepithelial tumor,"Brain, NOS"
+530,brain,Anaplastic medulloblastoma,"Medulloblastoma, NOS","Brain, NOS"
+531,brain,Atypical Teratoid/Rhabdoid Tumor,"Rhabdoid tumor, NOS",Brain stem
+532,brain,Diffuse Glioma,"Astrocytoma, NOS","Brain, NOS"
+533,brain,Brain Tumor,"Glioma, malignant","Brain, NOS"
+534,brain,Low grade neuroglial tumor,"Neoplasm, benign","Brain, NOS"
+535,brain,Neuroepithelial neoplasm,"Glioma, malignant","Brain, NOS"
+536,brain,Low grade glial neoplasm,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+537,brain,Brain Tumor,Pilocytic astrocytoma,"Brain, NOS"
+538,brain,Posterior fossa group A ependymoma,"Ependymoma, NOS","Brain, NOS"
+539,brain,Astrocytoma,"Astrocytoma, NOS","Brain, NOS"
+540,brain,Embryonal Neoplasm,"Neoplasm, malignant","Brain, NOS"
+541,brain,Suprasellar mass,Pilocytic astrocytoma,"Brain, NOS"
+542,brain,Myxoid Glioneuronal tumor,"Neoplasm, benign","Brain, NOS"
+543,brain,Angiocentric Glioma,"Glioma, malignant","Brain, NOS"
+544,brain,Pure germinoma,Mixed germ cell tumor,"Brain, NOS"
+545,brain,Atypical choroid plexus papilloma,Atypical choroid plexus papilloma,"Brain, NOS"
+546,brain,Unknown,Gliomas,Brain
+547,brain,CNS Embryonal Tumor,Miscellaneous Tumors,Brain
+548,brain,High-grade tumor,"Neoplasm, malignant","Brain, NOS"
+549,brain,Embryonal Neoplasm,"Medulloblastoma, NOS","Brain, NOS"
+550,brain,"Malignant embryonal tumor, favor medulloblastoma",Large cell medulloblastoma,"Brain, NOS"
+551,brain,Glial Neoplasm,Subependymal giant cell astrocytoma,"Brain, NOS"
+552,brain,Glial Neoplasm,"Astrocytoma, NOS","Brain, NOS"
+553,brain,Neoplasm,"Neoplasm, malignant","Brain, NOS"
+554,brain,Anaplastic Ependymoma,"Ependymoma, anaplastic","Brain, NOS"
+555,brain,Astrocytoma,"Glioma, malignant","Brain, NOS"
+556,brain,Glial Neoplasm,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+557,brain,Oligoastrocytoma,Gliomas,Brain
+558,brain,High-grade Central Nervous System Neoplasm Favor Embryonal,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+559,brain,Choroid Plexus Papillary Tumor,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+560,brain,Cerebellopontine angle tumor,"Astrocytoma, NOS","Brain, NOS"
+561,brain,Astrocytoma,"Astrocytoma, anaplastic","Brain, NOS"
+562,brain,Anaplastic Ependymoma,"Unknown, to be completed later","Brain, NOS"
+563,brain,Thalamic brain tumor,"Glioma, malignant",Brain stem
+564,brain,Glial-neuronal neoplasm,"Glioma, malignant","Brain, NOS"
+565,brain,Atypical Teratoid/Rhabdoid Tumor,Atypical teratoid/rhabdoid tumor,Brain stem
+566,brain,Atypical epithelial neoplasm,Choroid plexus carcinoma,"Brain, NOS"
+567,brain,Glial Neoplasm,"Ependymoma, NOS","Brain, NOS"
+568,brain,4th ventricular brain tumor,"CNS embryonal tumor, NOS","Brain, NOS"
+569,brain,Glial Neoplasm,"Tumor cells, uncertain whether benign or malignant","Brain, NOS"
+570,brain,High-grade Ependymal Neoplasm,"Ependymoma, NOS","Brain, NOS"
+571,brain,Infant hemispheric glioma,"Glioma, malignant","Brain, NOS"
+572,brain,Posterior fossa ependymoma,"Tumor cells, uncertain whether benign or malignant","Brain, NOS"
+573,brain,Low-grade glial neoplasm,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+574,brain,Germinoma,Germinoma,"Brain, NOS"
+575,brain,Pleomorphic xanthoastrocytoma,Pleomorphic xanthoastrocytoma,"Brain, NOS"
+576,brain,Clear cell meningioma,Miscellaneous Tumors,Brain
+577,brain,Mesenchymal Neoplasm,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+578,brain,Glioblastoma multiforme,Gliomas,Brain
+579,brain,Brain Tumor,"Neoplasm, benign","Brain, NOS"
+580,brain,Mixed germ cell w/ matrue teratoma,Mixed germ cell tumor,"Brain, NOS"
+581,brain,Cellular ependymoma,"Ependymoma, NOS","Brain, NOS"
+582,brain,Posterior fossa ependymoma,"Ependymoma, NOS","Brain, NOS"
+583,brain,Pituitary tumor,"Craniopharyngioma, adamantinomatous","Brain, NOS"
+584,brain,Low-grade Glioma,"Glioma, malignant","Brain, NOS"
+585,brain,Brain Tumor,"Ependymoma, NOS",Overlapping lesion of brain and central nervous system
+586,brain,Brain Tumor,"Glioma, malignant",Overlapping lesion of brain
+587,brain,Posterior fossa ependymoma,"Neoplasm, malignant","Brain, NOS"
+588,brain,Embryonal tumor,"Medulloblastoma, NOS","Brain, NOS"
+589,brain,Cerebellar mass,Pineoblastoma,"Brain, NOS"
+590,brain,Neuroepithelial neoplasm,"Glioma, malignant",Overlapping lesion of brain
+591,brain,Primitive neuroectoderma tumor,"Tumor cells, uncertain whether benign or malignant","Brain, NOS"
+592,brain,Pleomorphic xanthoastrocytoma,"Astrocytoma, NOS","Brain, NOS"
+593,brain,Neoplasm,"Glioma, malignant","Brain, NOS"
+594,brain,Posterior fossa tumor,"Medulloblastoma, NOS","Brain, NOS"
+595,brain,Meningioma,"Meningioma, malignant","Brain, NOS"
+596,brain,Low grade glioneuronal tumor,Dysembryoplastic neuroepithelial tumor,"Brain, NOS"
+597,brain,Atypical central neurocytoma,Central neurocytoma,"Brain, NOS"
+598,brain,CNS primative neuroectodermal tumor (PNET),Miscellaneous Tumors,Brain
+599,brain,Low-grade glial/glioneuronal neoplasm,"Unknown, to be completed later","Brain, NOS"
+600,brain,High-grade blue cell tumor,"Medulloblastoma, NOS","Brain, NOS"
+601,brain,Schwannoma,"Neurofibromatosis, NOS","Brain, NOS"
+602,brain,Supratentorial choroid plexus papilloma,"Ependymoma, NOS","Brain, NOS"
+603,brain,Posterior fossa ependymoma,"Ependymoma, NOS",Brain stem
+604,brain,Posterior fossa tumor,"Astrocytoma, NOS","Brain, NOS"
+605,brain,Posterior fossa ependymoma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+606,brain,Neuroepithelial neoplasm,"Medulloblastoma, NOS","Brain, NOS"
+607,brain,Embryonal tumor,"CNS embryonal tumor, NOS","Brain, NOS"
+608,brain,Low grade glial neoplasm,"Astrocytoma, NOS","Brain, NOS"
+609,brain,Ganglioglioma,"Neoplasm, malignant","Brain, NOS"
+610,brain,Atypical Teratoid/Rhabdoid Tumor,Atypical teratoid/rhabdoid tumor,Overlapping lesion of brain
+611,brain,Subependymal giant cell astrocytoma,"Glioma, malignant","Brain, NOS"
+612,brain,Embryonal tumor,"Neoplasm, benign","Brain, NOS"
+613,brain,Diffuse Glioma,"Glioma, malignant",Brain stem
+614,brain,Cerebellar tumor,Pilocytic astrocytoma,"Brain, NOS"
+615,brain,Brain Tumor,"Glioma, malignant",Brain stem
+616,brain,Low-grade Glial Neoplasm,"Glioma, malignant","Brain, NOS"
+617,brain,Atypical Teratoid/Rhabdoid Tumor,"Neoplasm, malignant","Brain, NOS"
+618,brain,Neuroepithelial Tumor,Pilocytic astrocytoma,"Brain, NOS"
+619,brain,Piloid glial proliferation,"Glioma, malignant",Brain stem
+620,brain,Polymorphous low grade neuroepithelial tumor,"Ganglioglioma, NOS","Brain, NOS"
+621,brain,"Teratoma, malignant, NOS",Germ Cell Neoplasms,Brain
+622,brain,Central Nervous System Tumor with High Grade Histological Features,Astroblastoma,Overlapping lesion of brain
+623,brain,Neoplasm,"Unknown, to be completed later","Brain, NOS"
+624,brain,Intraventricular tumor,"Glioma, malignant","Brain, NOS"
+625,brain,Neurofibromatosis; Moderately cellular neoplasm,"Glioma, malignant","Brain, NOS"
+626,brain,Low-grade glial neoplasm,"Glioma, malignant","Brain, NOS"
+627,brain,Glial Neoplasm,"Glioma, malignant",Brain stem
+628,brain,Supratentorial Ependymoma,"Neoplasm, malignant","Brain, NOS"
+629,brain,Infiltrating glioma,"Glioma, malignant","Brain, NOS"
+630,brain,Brain Tumor,"Medulloblastoma, NOS","Brain, NOS"
+631,brain,Small Round Blue Cell Sarcoma,"CNS embryonal tumor, NOS","Brain, NOS"
+632,brain,Round blue cell tumor,"Medulloblastoma, NOS","Brain, NOS"
+633,brain,Astrocytic Glioma,Pilocytic astrocytoma,"Brain, NOS"
+634,brain,Supratentorial choroid plexus papilloma,"Choroid plexus papilloma, NOS","Brain, NOS"
+635,brain,Astrocytoma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+636,brain,Embryonal tumor,"Neoplasm, metastatic","Brain, NOS"
+637,brain,Brain Tumor,"Unknown, to be completed later","Brain, NOS"
+638,brain,Histiocytic malignancy,"Neoplasm, benign","Brain, NOS"
+639,brain,Gliosarcoma,Gliomas,Brain
+640,brain,Classic Medulloblastoma,"Tumor cells, uncertain whether benign or malignant","Brain, NOS"
+641,brain,Pineal parenchymal tumor,Pinealoma,"Brain, NOS"
+642,brain,Neuroepithelial Tumor,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+643,brain,Posterior fossa ependymoma,"Ependymoma, anaplastic","Brain, NOS"
+644,brain,Diffuse Glioma,"Neoplasm, malignant","Brain, NOS"
+645,brain,Astrocytic Glioma,"Unknown, to be completed later","Brain, NOS"
+646,brain,Low grade glial neoplasm,Pleomorphic xanthoastrocytoma,"Brain, NOS"
+647,brain,Low-grade circumscribed glial/glioneuronal tumor,"Ganglioglioma, NOS","Brain, NOS"
+648,brain,Anaplastic Ependymoma,Gliomas,Brain
+649,brain,Low-cellularity glioma,"Glioma, malignant","Brain, NOS"
+650,brain,,,Brain
+651,brain,Glioma,"Glioma, malignant","Brain, NOS"
+652,brain,Glioma,Astroblastoma,"Brain, NOS"
+653,brain,Glioma,Pilocytic astrocytoma,"Brain, NOS"
+654,brain,Glioma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+655,brain,Glioma,"Neoplasm, malignant","Brain, NOS"
+656,brain,Glioma,"Glioma, malignant",Brain stem
+657,brain,Glioma,"Astrocytoma, NOS",Brain stem
+658,brain,"Glioma, NOS",Pediatric/AYA Brain Tumors,Brain
+659,brain,Glioblastoma,Glioblastoma,Brain
+660,brain,Glioblastoma,Gliomas,Brain
+661,brain,Glioblastoma,"Glioblastoma, NOS","Brain, NOS"
+662,brain,Mixed glioma,Gliomas,Brain
+663,brain,Neuroblastoma,"Neuroblastoma, NOS",Brain
+664,brain,Neuroblastoma,"CNS embryonal tumor, NOS","Brain, NOS"
+665,brain,Ependymoma NOS,"Ependymoma, anaplastic","Brain, NOS"
+666,brain,Ependymoma NOS,"Medulloblastoma, NOS","Brain, NOS"
+667,brain,Ependymoma NOS,"Ependymoma, NOS","Brain, NOS"
+668,brain,Ependymoma NOS,"Ependymoma, NOS",Brain stem
+669,brain,Ependymoma NOS,"Medulloblastoma, NOS",Brain stem
+670,brain,Ependymoma NOS,"Ependymoma, anaplastic",Brain stem
+671,brain,Ependymoma NOS,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+672,brain,Ependymoma NOS,"Neoplasm, uncertain whether benign or malignant",Brain stem
+673,brain,"Ependymoma, NOS",Pediatric/AYA Brain Tumors,Brain
+674,brain,Medulloblastoma,"Medulloblastoma, NOS","Brain, NOS"
+675,brain,Medulloblastoma,Miscellaneous Tumors,Brain
+676,brain,Medulloblastoma,"Medulloblastoma, NOS",Overlapping lesion of brain and central nervous system
+677,brain,Medulloblastoma,"Medulloblastoma, NOS",Brain stem
+678,brain,Medulloblastoma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+679,brain,Medulloblastoma,Desmoplastic nodular medulloblastoma,"Brain, NOS"
+680,brain,Medulloblastoma,"Tumor cells, uncertain whether benign or malignant","Brain, NOS"
+681,brain,"Astrocytoma, NOS",Gliomas,Brain
+682,brain,Craniopharyngioma,Pediatric/AYA Brain Tumors,Brain
+683,brain,Craniopharyngioma,Craniopharyngioma,"Brain, NOS"
+684,brain,"Glioma, malignant",Pediatric/AYA Brain Tumors,Brain
+685,brain,"Ganglioglioma, NOS",Pediatric/AYA Brain Tumors,Brain
+686,brain,"Neoplasm, malignant","Neoplasms, NOS",Brain
+687,brain,"Medulloblastoma, NOS",Pediatric/AYA Brain Tumors,Brain
+688,brain,Mixed germ cell tumor,Germ Cell Neoplasms,Brain
+689,brain,Mixed germ cell tumor,Mixed germ cell tumor,"Brain, NOS"
+690,brain,Not specified in data,Pineoblastoma,"Brain, NOS"
+691,brain,Not specified in data,Mixed germ cell tumor,"Brain, NOS"
+692,brain,Not specified in data,"Neoplasm, malignant","Brain, NOS"
+693,brain,Not specified in data,"Medulloblastoma, NOS",Overlapping lesion of brain and central nervous system
+694,brain,Not specified in data,"Neoplasm, benign","Brain, NOS"
+695,brain,Not specified in data,"Glioma, malignant","Brain, NOS"
+696,brain,Not specified in data,"Astrocytoma, NOS","Brain, NOS"
+697,brain,Not specified in data,"Medulloblastoma, NOS","Brain, NOS"
+698,brain,Not specified in data,"Glioma, malignant",Overlapping lesion of brain
+699,brain,Not specified in data,Pilocytic astrocytoma,"Brain, NOS"
+700,brain,Not specified in data,"Ganglioglioma, NOS","Brain, NOS"
+701,brain,Not specified in data,Atypical teratoid/rhabdoid tumor,Brain stem
+702,brain,Not specified in data,"Medulloblastoma, NOS",Brain stem
+703,brain,Not specified in data,"Ependymoma, NOS","Brain, NOS"
+704,brain,Not specified in data,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+705,brain,Not specified in data,"Schwannoma, NOS","Brain, NOS"
+706,brain,Not specified in data,"Craniopharyngioma, adamantinomatous","Brain, NOS"
+707,brain,Not specified in data,"Unknown, to be completed later","Brain, NOS"
+708,brain,Not specified in data,Atypical teratoid/rhabdoid tumor,"Brain, NOS"
+709,brain,Not specified in data,Pilocytic astrocytoma,Brain stem
+710,brain,Not specified in data,Atypical teratoid/rhabdoid tumor,Overlapping lesion of brain
+711,brain,Not specified in data,Dysembryoplastic neuroepithelial tumor,"Brain, NOS"
+712,brain,Not specified in data,"Choroid plexus papilloma, NOS","Brain, NOS"
+713,brain,Not specified in data,"Tumor cells, uncertain whether benign or malignant","Brain, NOS"
+714,brain,Not specified in data,"Glioma, malignant",Brain stem
+715,brain,Not specified in data,"CNS embryonal tumor, NOS","Brain, NOS"
+716,brain,Not specified in data,Craniopharyngioma,"Brain, NOS"
+717,brain,Not specified in data,"Neoplasm, uncertain whether benign or malignant",Brain stem
+718,brain,Not specified in data,"Neuroblastoma, NOS","Brain, NOS"
+719,brain,Not specified in data,Germinoma,"Brain, NOS"
+720,brain,Not specified in data,Pinealoma,"Brain, NOS"
+721,brain,Not specified in data,"Pituitary adenoma, NOS","Brain, NOS"
+722,brain,Not specified in data,Astroblastoma,"Brain, NOS"
+723,brain,Not specified in data,Central neurocytoma,"Brain, NOS"
+724,brain,Not specified in data,Malignant histiocytosis,"Brain, NOS"
+725,brain,Not specified in data,Choroid plexus carcinoma,"Brain, NOS"
+726,brain,Not specified in data,"Ependymoma, anaplastic","Brain, NOS"
+727,brain,Not specified in data,"Neoplasm, metastatic","Brain, NOS"
+728,brain,Not specified in data,"Glioblastoma, NOS",Overlapping lesion of brain and central nervous system
+729,brain,Not specified in data,Pleomorphic xanthoastrocytoma,"Brain, NOS"
+730,brain,Not specified in data,Atypical choroid plexus papilloma,"Brain, NOS"
+731,brain,Not specified in data,"Ependymoma, NOS",Brain stem
+732,brain,Not specified in data,"Astrocytoma, anaplastic","Brain, NOS"
+733,brain,Not specified in data,"Germ cell tumor, nonseminomatous","Brain, NOS"
+734,brain,Not specified in data,"Glioblastoma, NOS","Brain, NOS"
+735,brain,Not specified in data,"Neurofibromatosis, NOS","Brain, NOS"
+736,brain,Not specified in data,"Ependymoma, anaplastic",Brain stem
+737,brain,Not specified in data,"Rhabdoid tumor, NOS",Brain stem
+738,brain,Not specified in data,"Astrocytoma, NOS",Brain stem
+739,brain,Not specified in data,"Sarcoma, NOS",Overlapping lesion of brain
+740,brain,Not specified in data,Desmoplastic nodular medulloblastoma,"Brain, NOS"
+741,brain,Not specified in data,Subependymal giant cell astrocytoma,"Brain, NOS"
+742,brain,Not specified in data,"Embryonal carcinoma, NOS",Brain stem
+743,brain,Not specified in data,"Neoplasm, malignant, uncertain whether primary or metastatic","Brain, NOS"
+744,brain,Not specified in data,"Teratoma, malignant, NOS","Brain, NOS"
+745,brain,Not specified in data,"Meningioma, malignant","Brain, NOS"
+746,brain,Not specified in data,"Ependymoma, NOS",Overlapping lesion of brain and central nervous system
+747,brain,Not specified in data,"Sarcoma, NOS","Brain, NOS"
+748,brain,Not specified in data,Astroblastoma,Overlapping lesion of brain
+749,brain,Not specified in data,"Oligodendroglioma, NOS","Brain, NOS"
+750,brain,Not specified in data,Large cell medulloblastoma,"Brain, NOS"
+751,brain,Pilocytic Astrocytoma,Gliomas,Brain
+752,brain,Pilocytic Astrocytoma,"Unknown, to be completed later","Brain, NOS"
+753,brain,Pilocytic Astrocytoma,Pilocytic astrocytoma,"Brain, NOS"
+754,brain,Pilocytic Astrocytoma,Pilocytic astrocytoma,Brain stem
+755,brain,Pilocytic Astrocytoma,"Astrocytoma, NOS","Brain, NOS"
+756,brain,Pilocytic Astrocytoma,"Glioma, malignant","Brain, NOS"
+757,brain,Pilocytic Astrocytoma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+758,brain,Pilocytic Astrocytoma,"Neoplasm, malignant","Brain, NOS"
+759,brain,"Oligodendroglioma, NOS",Gliomas,Brain
+760,brain,"Astrocytoma, anaplastic",Gliomas,Brain
+761,brain,"Oligodendroglioma, anaplastic",Gliomas,Brain
+762,brain,Atypical teratoid/rhabdoid tumor,Pediatric/AYA Brain Tumors,Brain
+763,bone,"Chondrosarcoma, NOS",Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites"
+764,bone,"Osteosarcoma, NOS",Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites"
+765,bone,Ewing sarcoma,Miscellaneous Bone Tumors,"Bones, joints and articular cartilage of other and unspecified sites"
+766,bone,"Osteosarcoma, NOS",Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of limbs"
+767,bone,"Chordoma, NOS",Miscellaneous Tumors,"Bones, joints and articular cartilage of other and unspecified sites"
+768,bone,Not specified in data,"Neoplasm, uncertain whether benign or malignant","Pelvic bones, sacrum, coccyx and associated joints"
+769,bone,High grade surface osteosarcoma,Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites"
+770,bone,Undifferentiated sarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Bones, joints and articular cartilage of other and unspecified sites"
+771,bone,Rhabdomyosarcoma,"Rhabdomyosarcoma, NOS","Bone, NOS"
+772,bone,Myxoid chondrosarcoma,Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites"
+773,bone,"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites"
+774,bone,Chondroblastic osteosarcoma,Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites"
+775,bone,Round to spindle cell sarcoma,Spindle cell sarcoma,Long bones of lower limb and associated joints
+776,bone,Intraosseous well differentiated osteosarcoma,Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites"
+777,bone,Not specified in data,"Rhabdomyosarcoma, NOS","Bone, NOS"
+778,bone,Clear cell odontogenic carcinoma,Odontogenic Tumors,"Bones, joints and articular cartilage of other and unspecified sites"
+779,bone,Mesenchymal chondrosarcoma,Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites"
+780,bone,Dedifferentiated chondrosarcoma,Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites"
+781,bone,Not specified in data,Spindle cell sarcoma,Long bones of lower limb and associated joints
+782,bone,Not specified in data,"Osteosarcoma, NOS","Long bones of upper limb, scapula and  associated joints"
+783,bone,Fibroblastic osteosarcoma,Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites"
+784,bone,"Odontogenic tumor, malignant",Odontogenic Tumors,"Bones, joints and articular cartilage of other and unspecified sites"
+785,bone,"Neoplasm, malignant","Neoplasms, NOS","Bones, joints and articular cartilage of other and unspecified sites"
+786,bone,Myofibroma,Myofibroma,Bones of skull and face and associated joints (excludes mandible C41.1)
+787,bone,"Sarcoma, NOS",Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites"
+788,bone,Not specified in data,"Synovial sarcoma, NOS",Long bones of lower limb and associated joints
+789,bone,"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,"Bones, joints and articular cartilage of limbs"
+790,bone,"Squamous cell carcinoma, NOS",Squamous Cell Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites"
+791,bone,Osteosarcoma in Paget disease of bone,Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites"
+792,bone,"Leiomyosarcoma, NOS",Myomatous Neoplasms,"Bones, joints and articular cartilage of limbs"
+793,bone,Not specified in data,"Chordoma, NOS",Bones of skull and face and associated joints (excludes mandible C41.1)
+794,bone,"Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,"Bones, joints and articular cartilage of other and unspecified sites"
+795,bone,Not Reported,"Soft Tissue Tumors and Sarcomas, NOS","Bones, joints and articular cartilage of other and unspecified sites"
+796,bone,Not specified in data,"Precursor cell lymphoblastic leukemia, NOS",Bone marrow
+797,bone,Small cell osteosarcoma,Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites"
+798,bone,Not specified in data,Myofibroma,Bones of skull and face and associated joints (excludes mandible C41.1)
+799,bone,Not specified in data,Pleomorphic liposarcoma,Long bones of lower limb and associated joints
+800,bone,"Tumor, NOS","Neoplasms, NOS","Bones, joints and articular cartilage of other and unspecified sites"
+801,bone,Not specified in data,Undifferentiated sarcoma,Bones of skull and face and associated joints (excludes mandible C41.1)
+802,bone,Pleomorphic Sarcoma,Pleomorphic liposarcoma,Long bones of lower limb and associated joints
+803,bone,"Chondroblastoma, NOS",Osseous and Chondromatous Neoplasms,"Bones, joints and articular cartilage of other and unspecified sites"
+804,bone,Undifferential small round blue cell tumor,Undifferentiated sarcoma,Bones of skull and face and associated joints (excludes mandible C41.1)
+805,bone,"Giant cell tumor of bone, NOS",Giant Cell Tumors,"Bones, joints and articular cartilage of other and unspecified sites"
+806,thyroid,"Neoplasm, malignant","Neoplasms, NOS",Thyroid gland
+807,thyroid,Hurthle cell tumor,Adenomas and Adenocarcinomas,Thyroid gland
+808,thyroid,"Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,Thyroid gland
+809,thyroid,Nonencapsulated sclerosing carcinoma,Adenomas and Adenocarcinomas,Thyroid gland
+810,thyroid,"Follicular carcinoma, minimally invasive",Adenomas and Adenocarcinomas,Thyroid gland
+811,thyroid,Hyalinizing trabecular adenoma,Adenomas and Adenocarcinomas,Thyroid gland
+812,thyroid,Not specified in data,Unknown,"Thyroid Gland, Unknown"
+813,thyroid,Not specified in data,"Papillary carcinoma, NOS",Thyroid Gland
+814,thyroid,Not specified in data,Unknown,Thyroid Gland
+815,thyroid,Papillary Thyroid Carcinoma,"Papillary carcinoma, NOS",Thyroid Gland
+816,thyroid,Not specified in data,"Papillary adenocarcinoma, NOS",Thyroid Gland
+817,thyroid,Follicular hyperplasia/metastatic papillary thyroid cancer,"Papillary adenocarcinoma, NOS",Thyroid Gland
+818,thyroid,Metastatic papillary thyroid carcinoma,"Papillary carcinoma, NOS",Thyroid Gland
+819,thyroid,"Carcinoma, NOS","Epithelial Neoplasms, NOS",Thyroid gland
+820,thyroid,"Carcinoma, anaplastic, NOS","Epithelial Neoplasms, NOS",Thyroid gland
+821,thyroid,"Papillary carcinoma, NOS",Squamous Cell Neoplasms,Thyroid gland
+822,thyroid,"Papillary adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Thyroid gland
+823,thyroid,Oxyphilic adenocarcinoma,Adenomas and Adenocarcinomas,Thyroid gland
+824,thyroid,"Follicular carcinoma, NOS",Adenomas and Adenocarcinomas,Thyroid gland
+825,thyroid,"Follicular adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Thyroid gland
+826,thyroid,"Follicular adenocarcinoma, well differentiated",Adenomas and Adenocarcinomas,Thyroid gland
+827,thyroid,Insular carcinoma,Adenomas and Adenocarcinomas,Thyroid gland
+828,thyroid,Insular carcinoma,"Epithelial Neoplasms, NOS",Thyroid gland
+829,thyroid,"Papillary carcinoma, follicular variant",Adenomas and Adenocarcinomas,Thyroid gland
+830,thyroid,"Papillary carcinoma, columnar cell",Adenomas and Adenocarcinomas,Thyroid gland
+831,thyroid,"Medullary carcinoma, NOS",Ductal and Lobular Neoplasms,Thyroid gland
+832,pancreas,"Infiltrating duct carcinoma, NOS",Ductal and Lobular Neoplasms,Pancreas
+833,pancreas,"Carcinoma, NOS","Epithelial Neoplasms, NOS",Pancreas
+834,pancreas,"Duct adenocarcinoma, NOS",Ductal and Lobular Neoplasms,Pancreas
+835,pancreas,"Neuroendocrine carcinoma, NOS",Adenomas and Adenocarcinomas,Pancreas
+836,pancreas,"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Pancreas
+837,pancreas,"Pancreatic endocrine tumor, NOS",Adenomas and Adenocarcinomas,Pancreas
+838,pancreas,Solid pseudopapillary tumor,"Cystic, Mucinous and Serous Neoplasms",Pancreas
+839,pancreas,"Pancreatic endocrine tumor, malignant",Pancreatic Ductal Adenocarcinoma,Pancreas
+840,pancreas,"Infiltrating duct carcinoma, NOS",Pancreatic Ductal Adenocarcinoma,Pancreas
+841,pancreas,Pancreatoblastoma,Complex Mixed and Stromal Neoplasms,Pancreas
+842,pancreas,Unknown,Unknown,Pancreas
+843,pancreas,"Intraductal papillary-mucinous carcinoma, invasive","Cystic, Mucinous and Serous Neoplasms",Pancreas
+844,pancreas,Acinar cell carcinoma,Acinar Cell Neoplasms,Pancreas
+845,pancreas,Adenosquamous carcinoma,Complex Epithelial Neoplasms,Pancreas
+846,pancreas,Adenocarcinoma,Epithelial Neoplasm,Pancreas
+847,pancreas,"Carcinoma, undifferentiated, NOS","Epithelial Neoplasms, NOS",Pancreas
+848,pancreas,Not specified in data,Unknown,"Pancreas, Unknown"
+849,pancreas,"Duct adenocarcinoma, NOS","Neoplasms, NOS",Pancreas
+850,pancreas,"Adenocarcinoma, NOS","Neoplasms, NOS",Pancreas
+851,pancreas,Mucinous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms",Pancreas
+852,pancreas,Not specified in data,Unknown,Pancreas
+853,pancreas,Not specified in data,"Neuroendocrine carcinoma, NOS","Pancreas, NOS"
+854,pancreas,"Neoplasm, malignant","Neoplasms, NOS",Pancreas
+855,pancreas,"Mucinous cystadenoma, NOS","Cystic, Mucinous and Serous Neoplasms",Pancreas
+856,pancreas,Not Reported,"Neoplasms, NOS",Pancreas
+857,pancreas,,Pancreatic Ductal Adenocarcinoma,Pancreas
+858,pancreas,Adenocarcinoma with mixed subtypes,Adenomas and Adenocarcinomas,Pancreas
+859,pancreas,"Serous cystadenoma, NOS","Cystic, Mucinous and Serous Neoplasms",Pancreas
+860,pancreas,"Carcinoma, NOS",Adenomas and Adenocarcinomas,Pancreas
+861,pancreas,"Adenocarcinoma, metastatic, NOS","Cystic, Mucinous and Serous Neoplasms",Pancreas
+862,pancreas,"Intraductal papillary-mucinous carcinoma, invasive",Ductal and Lobular Neoplasms,Pancreas
+863,pancreas,Well differentiated neuroendocrine tumor,"Neuroendocrine carcinoma, NOS","Pancreas, NOS"
+864,pancreas,Not specified in data,"Adenocarcinoma, metastatic, NOS",Pancreatic duct
+865,heart,"Germ cell tumor, NOS",Germ Cell Neoplasms,"Heart, mediastinum, and pleura"
+866,heart,"Mesothelioma, NOS",Mesothelial Neoplasms,"Heart, mediastinum, and pleura"
+867,heart,"Epithelioid mesothelioma, malignant",Mesothelial Neoplasms,"Heart, mediastinum, and pleura"
+868,heart,"Mesothelioma, biphasic, malignant",Mesothelial Neoplasms,"Heart, mediastinum, and pleura"
+869,heart,"Mesothelioma, malignant",Mesothelial Neoplasms,"Heart, mediastinum, and pleura"
+870,heart,"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,"Heart, mediastinum, and pleura"
+871,heart,"Thymoma, type B2, malignant",Thymic Epithelial Neoplasms,"Heart, mediastinum, and pleura"
+872,heart,Neuroblastoma,"Neuroblastoma, NOS","Heart, mediastinum, and pleura"
+873,heart,"Thymoma, type A, malignant",Thymic Epithelial Neoplasms,"Heart, mediastinum, and pleura"
+874,heart,Ganglioneuroblastoma,Neuroepitheliomatous Neoplasms,"Heart, mediastinum, and pleura"
+875,heart,"Thymoma, type AB, NOS",Thymic Epithelial Neoplasms,"Heart, mediastinum, and pleura"
+876,heart,"Thymoma, type AB, malignant",Thymic Epithelial Neoplasms,"Heart, mediastinum, and pleura"
+877,heart,Desmoplastic/Nodular Medulloblastoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of thorax (excludes thymus C37.9, heart and mediastinum C38._)"
+878,heart,Not specified in data,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of thorax (excludes thymus C37.9, heart and mediastinum C38._)"
+879,heart,Neuroblastoma,Miscellaneous Tumors,"Heart, mediastinum, and pleura"
+880,heart,"Extra-adrenal paraganglioma, malignant",Paragangliomas and Glomus Tumors,"Heart, mediastinum, and pleura"
+881,heart,"Thymoma, type B1, malignant",Thymic Epithelial Neoplasms,"Heart, mediastinum, and pleura"
+882,heart,"Thymoma, type B3, malignant",Thymic Epithelial Neoplasms,"Heart, mediastinum, and pleura"
+883,heart,"Thymic carcinoma, NOS",Thymic Epithelial Neoplasms,"Heart, mediastinum, and pleura"
+884,heart,"Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,"Heart, mediastinum, and pleura"
+885,heart,"Extra-adrenal paraganglioma, NOS",Paragangliomas and Glomus Tumors,"Heart, mediastinum, and pleura"
+886,heart,Angiosarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Heart, mediastinum, and pleura"
+887,heart,"Thymoma, type B2, NOS",Thymic Epithelial Neoplasms,"Heart, mediastinum, and pleura"
+888,heart,"Fibrous mesothelioma, malignant",Mesothelial Neoplasms,"Heart, mediastinum, and pleura"
+889,heart,Not specified in data,"Malignant tumor, spindle cell type","Connective, subcutaneous and other soft tissues of thorax (excludes thymus C37.9, heart and mediastinum C38._)"
+890,kidney,"Renal cell carcinoma, NOS",Adenomas and Adenocarcinomas,Kidney
+891,kidney,"Urothelial carcinoma, NOS",Transitional Cell Papillomas and Carcinomas,Kidney
+892,kidney,"Carcinoma, NOS","Epithelial Neoplasms, NOS",Kidney
+893,kidney,"Clear cell adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Kidney
+894,kidney,Adrenal cortical carcinoma,Adenomas and Adenocarcinomas,Adrenal gland
+895,kidney,"Medullary carcinoma, NOS",Ductal and Lobular Neoplasms,Kidney
+896,kidney,"Nephroblastoma, NOS","Neoplasms, NOS",Kidney
+897,kidney,"Renal cell carcinoma, NOS",Clear Cell Renal Cell Carcinoma,Kidney
+898,kidney,"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,Adrenal gland
+899,kidney,Malignant rhabdoid tumor,Complex Mixed and Stromal Neoplasms,Kidney
+900,kidney,Wilms tumor,Complex Mixed and Stromal Neoplasms,Kidney
+901,kidney,"Renal cell carcinoma, chromophobe type",Adenomas and Adenocarcinomas,Kidney
+902,kidney,"Papillary adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Kidney
+903,kidney,"Pheochromocytoma, malignant",Paragangliomas and Glomus Tumors,Adrenal gland
+904,kidney,Not specified in data,Unknown,Kidney
+905,kidney,Clear cell sarcoma,Epithelial Neoplasm,Kidney
+906,kidney,Neuroblastoma,"Neuroblastoma, NOS",Adrenal Gland
+907,kidney,Clear cell carcinoma,"Neoplasms, NOS",Kidney
+908,kidney,Clear cell carcinoma,Adenomas and Adenocarcinomas,Kidney
+909,kidney,"Pheochromocytoma, NOS",Paragangliomas and Glomus Tumors,Adrenal gland
+910,kidney,Not specified in data,Unknown,"Kidney, Unknown"
+911,kidney,Papillary renal cell carcinoma,Adenomas and Adenocarcinomas,Kidney
+912,kidney,"Nephroblastoma, NOS",Complex Mixed and Stromal Neoplasms,Kidney
+913,kidney,Angiomyolipoma,Lipomatous Neoplasms,Kidney
+914,kidney,"Renal cell carcinoma, NOS",Non-Clear Cell Renal Cell Carcinoma,Kidney
+915,kidney,Ganglioneuroblastoma,Neuroepitheliomatous Neoplasms,Adrenal gland
+916,kidney,Collecting duct carcinoma,Adenomas and Adenocarcinomas,Kidney
+917,kidney,"Renal cell carcinoma, sarcomatoid",Adenomas and Adenocarcinomas,Kidney
+918,kidney,Clear cell sarcoma of kidney,Complex Mixed and Stromal Neoplasms,Kidney
+919,kidney,Oncocytoma,Adenomas and Adenocarcinomas,Kidney
+920,kidney,Unknown,Adenomas and Adenocarcinomas,Kidney
+921,kidney,Oxyphilic adenoma,Adenomas and Adenocarcinomas,Kidney
+922,kidney,"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,Kidney
+923,kidney,Angiomyolipoma,Adenomas and Adenocarcinomas,Kidney
+924,kidney,Sarcomatoid carcinoma,"Epithelial Neoplasms, NOS",Kidney
+925,kidney,"Urothelial carcinoma, NOS",Transitional Cell Papillomas and Carcinomas,Renal pelvis
+926,kidney,Malignant Rhabdoid Tumor,"Rhabdoid tumor, NOS","Kidney, NOS"
+927,kidney,Neuroblastoma,Miscellaneous Tumors,Adrenal Gland
+928,kidney,Nephroblastoma (Wilms Tumor),Miscellaneous Tumors,Kidney
+929,kidney,Benign cystic nephroma,Adenomas and Adenocarcinomas,Kidney
+930,kidney,"Synovial sarcoma, spindle cell",Synovial-like Neoplasms,Kidney
+931,kidney,"Spindle cell carcinoma, NOS","Epithelial Neoplasms, NOS",Kidney
+932,kidney,"Adrenal cortical adenoma, NOS",Adenomas and Adenocarcinomas,Adrenal gland
+933,kidney,Clear cell RCC,Clear Cell Renal Cell Carcinoma,Kidney
+934,kidney,Neuroblastoma,"Neuroblastoma, NOS",Renal Pelvis
+935,kidney,"Rhabdoid tumor, malignant",Miscellaneous Tumors,Kidney
+936,kidney,Adrenal Cortical Tumor,Miscellaneous Tumors,Adrenal Gland
+937,kidney,Not specified in data,Ewing sarcoma,"Kidney, NOS"
+938,kidney,Poorly differentiated sarcoma,"Sarcoma, NOS","Adrenal gland, NOS"
+939,kidney,Not specified in data,Adrenal cortical carcinoma,"Adrenal gland, NOS"
+940,kidney,"Papillary carcinoma, NOS",Squamous Cell Neoplasms,Kidney
+941,kidney,Neuroblastoma,"Neuroblastoma, NOS",Kidney
+942,kidney,"Malignant tumor, small cell type","Neoplasms, NOS",Kidney
+943,kidney,Renal medullary carcinoma,"Medullary carcinoma, NOS","Kidney, NOS"
+944,kidney,Not specified in data,"Neoplasm, malignant","Adrenal gland, NOS"
+945,kidney,Papillary RCC,Papillary Renal Cell Carcinoma,Kidney
+946,kidney,Malignant Rhabdoid Tumor,Miscellaneous Tumors,Kidney
+947,kidney,Ganglioneuroblastoma,Neuroepitheliomatous Neoplasms,Kidney
+948,kidney,Giant cell sarcoma,"Soft Tissue Tumors and Sarcomas, NOS",Kidney
+949,kidney,"Paraganglioma, malignant",Paragangliomas and Glomus Tumors,Adrenal gland
+950,kidney,Adrenal Cortical Tumor,"Neoplasm, malignant","Adrenal gland, NOS"
+951,kidney,Adrenal Cortical Carcinoma,Adrenal cortical carcinoma,"Adrenal gland, NOS"
+952,kidney,Carcinoma NOS,Neoplasm,Kidney
+953,kidney,"Urothelial carcinoma, NOS",Adenomas and Adenocarcinomas,Kidney
+954,kidney,Ganglioneuroma,Paragangliomas and Glomus Tumors,Adrenal Gland
+955,kidney,Ganglioneuroblastoma,Miscellaneous Tumors,Adrenal Gland
+956,kidney,Hereditary leiomyomatosis & RCC-associated renal cell carcinoma,Adenomas and Adenocarcinomas,Kidney
+957,kidney,Not specified in data,"Medullary carcinoma, NOS","Kidney, NOS"
+958,kidney,Not specified in data,"Rhabdoid tumor, NOS","Kidney, NOS"
+959,kidney,"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,Renal pelvis
+960,kidney,Not specified in data,"Sarcoma, NOS","Adrenal gland, NOS"
+961,kidney,"Renal cell carcinoma, NOS","Neoplasms, NOS",Kidney
+962,kidney,Ewing sarcoma,Ewing sarcoma,"Kidney, NOS"
+963,kidney,"Neoplasm, malignant","Neoplasms, NOS",Kidney
+964,kidney,Chromophobe RCC,Chromophobe Renal Cell Carcinoma,Kidney
+965,liver,Malignant rhabdoid tumor,Complex Mixed and Stromal Neoplasms,Liver and intrahepatic bile ducts
+966,liver,"Clear cell adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Liver and intrahepatic bile ducts
+967,liver,Not specified in data,"Sarcoma, NOS",Liver
+968,liver,"Hepatocellular carcinoma, clear cell type",Adenomas and Adenocarcinomas,Liver and intrahepatic bile ducts
+969,liver,"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,Liver and intrahepatic bile ducts
+970,liver,Kupffer cell sarcoma,Blood Vessel Tumors,Liver and intrahepatic bile ducts
+971,liver,Not specified in data,Embryonal sarcoma,Liver
+972,liver,Embryonal Rhabdomyosarcoma,Embryonal sarcoma,Liver
+973,liver,"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Liver and intrahepatic bile ducts
+974,liver,"Hepatocellular carcinoma, spindle cell variant",Adenomas and Adenocarcinomas,Liver and intrahepatic bile ducts
+975,liver,,Hepatocellular Carcinoma ,Liver
+976,liver,Neuroblastoma,"Neuroblastoma, NOS",Liver
+977,liver,Hepatoblastoma,Complex Mixed and Stromal Neoplasms,Liver and intrahepatic bile ducts
+978,liver,Hepatoblastoma,Miscellaneous Tumors,Liver and intrahepatic bile ducts
+979,liver,Cholangiocarcinoma,Adenomas and Adenocarcinomas,Liver and intrahepatic bile ducts
+980,liver,"Hepatocellular carcinoma, NOS",Adenomas and Adenocarcinomas,Liver and intrahepatic bile ducts
+981,liver,"Hepatocellular carcinoma, fibrolamellar",Adenomas and Adenocarcinomas,Liver and intrahepatic bile ducts
+982,liver,Combined hepatocellular carcinoma and cholangiocarcinoma,Adenomas and Adenocarcinomas,Liver and intrahepatic bile ducts

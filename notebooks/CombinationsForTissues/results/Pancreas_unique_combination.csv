@@ -1,0 +1,34 @@
+,primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site
+0,"Infiltrating duct carcinoma, NOS",Ductal and Lobular Neoplasms,Pancreas
+1,"Carcinoma, NOS","Epithelial Neoplasms, NOS",Pancreas
+2,"Duct adenocarcinoma, NOS",Ductal and Lobular Neoplasms,Pancreas
+3,"Neuroendocrine carcinoma, NOS",Adenomas and Adenocarcinomas,Pancreas
+4,"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Pancreas
+5,"Pancreatic endocrine tumor, NOS",Adenomas and Adenocarcinomas,Pancreas
+6,Solid pseudopapillary tumor,"Cystic, Mucinous and Serous Neoplasms",Pancreas
+7,"Pancreatic endocrine tumor, malignant",Pancreatic Ductal Adenocarcinoma,Pancreas
+8,"Infiltrating duct carcinoma, NOS",Pancreatic Ductal Adenocarcinoma,Pancreas
+9,Pancreatoblastoma,Complex Mixed and Stromal Neoplasms,Pancreas
+10,Unknown,Unknown,Pancreas
+11,"Intraductal papillary-mucinous carcinoma, invasive","Cystic, Mucinous and Serous Neoplasms",Pancreas
+12,Acinar cell carcinoma,Acinar Cell Neoplasms,Pancreas
+13,Adenosquamous carcinoma,Complex Epithelial Neoplasms,Pancreas
+14,Adenocarcinoma,Epithelial Neoplasm,Pancreas
+15,"Carcinoma, undifferentiated, NOS","Epithelial Neoplasms, NOS",Pancreas
+16,Not specified in data,Unknown,"Pancreas, Unknown"
+17,"Duct adenocarcinoma, NOS","Neoplasms, NOS",Pancreas
+18,"Adenocarcinoma, NOS","Neoplasms, NOS",Pancreas
+19,Mucinous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms",Pancreas
+20,Not specified in data,Unknown,Pancreas
+21,Not specified in data,"Neuroendocrine carcinoma, NOS","Pancreas, NOS"
+22,"Neoplasm, malignant","Neoplasms, NOS",Pancreas
+23,"Mucinous cystadenoma, NOS","Cystic, Mucinous and Serous Neoplasms",Pancreas
+24,Not Reported,"Neoplasms, NOS",Pancreas
+25,,Pancreatic Ductal Adenocarcinoma,Pancreas
+26,Adenocarcinoma with mixed subtypes,Adenomas and Adenocarcinomas,Pancreas
+27,"Serous cystadenoma, NOS","Cystic, Mucinous and Serous Neoplasms",Pancreas
+28,"Carcinoma, NOS",Adenomas and Adenocarcinomas,Pancreas
+29,"Adenocarcinoma, metastatic, NOS","Cystic, Mucinous and Serous Neoplasms",Pancreas
+30,"Intraductal papillary-mucinous carcinoma, invasive",Ductal and Lobular Neoplasms,Pancreas
+31,Well differentiated neuroendocrine tumor,"Neuroendocrine carcinoma, NOS","Pancreas, NOS"
+32,Not specified in data,"Adenocarcinoma, metastatic, NOS",Pancreatic duct

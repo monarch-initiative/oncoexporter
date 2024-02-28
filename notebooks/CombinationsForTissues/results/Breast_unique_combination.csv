@@ -1,0 +1,76 @@
+,primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site
+0,"Infiltrating duct carcinoma, NOS",Ductal and Lobular Neoplasms,Breast
+1,"Carcinoma, NOS","Epithelial Neoplasms, NOS",Breast
+2,"Lobular carcinoma, NOS",Ductal and Lobular Neoplasms,Breast
+3,"Metaplastic carcinoma, NOS",Complex Epithelial Neoplasms,Breast
+4,Infiltrating ductular carcinoma,Ductal and Lobular Neoplasms,Breast
+5,Adenomyoepithelioma,Complex Mixed and Stromal Neoplasms,Breast
+6,Infiltrating duct and lobular carcinoma,Ductal and Lobular Neoplasms,Breast
+7,"Neoplasm, malignant","Neoplasms, NOS",Breast
+8,"Infiltrating duct carcinoma, NOS",Breast Invasive Carcinoma,Breast
+9,Infiltrating duct and lobular carcinoma,Breast Invasive Carcinoma,Breast
+10,"Lobular carcinoma, NOS",Breast Invasive Carcinoma,Breast
+11,,Breast Invasive Carcinoma,Breast
+12,Intraductal papillary adenocarcinoma with invasion,Ductal and Lobular Neoplasms,Breast
+13,"Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,Breast
+14,Not specified in data,Unknown,"Breast, Unknown"
+15,Not specified in data,Unknown,Breast
+16,"Ductal carcinoma in situ, NOS",Ductal and Lobular Neoplasms,Breast
+17,Haemangiosarcoma,Blood Vessel Tumors,Breast
+18,Inflammatory carcinoma,Ductal and Lobular Neoplasms,Breast
+19,"Medullary carcinoma, NOS",Ductal and Lobular Neoplasms,Breast
+20,"Infiltrating lobular carcinoma, NOS",Ductal and Lobular Neoplasms,Breast
+21,"Infiltrating lobular carcinoma, NOS",Breast Invasive Carcinoma,Breast
+22,Angiosarcoma,"Soft Tissue Tumors and Sarcomas, NOS",Breast
+23,"Intraductal carcinoma, noninfiltrating, NOS",Ductal and Lobular Neoplasms,Breast
+24,"Phyllodes tumor, malignant",Fibroepithelial Neoplasms,Breast
+25,"Carcinoma, NOS",Ductal and Lobular Neoplasms,Breast
+26,Carcinoma NOS,Epithelial Neoplasm,Breast
+27,Invasive lobular carcinoma,Ductal and Lobular Neoplasms,Breast
+28,Invasive mammary carcinoma,Ductal and Lobular Neoplasms,Breast
+29,Mucinous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms",Breast
+30,Invasive lobular carcinoma,Breast Invasive Carcinoma,Breast
+31,Secretory carcinoma of breast,Ductal and Lobular Neoplasms,Breast
+32,Intraductal micropapillary carcinoma,Ductal and Lobular Neoplasms,Breast
+33,Not Reported,Not Reported,Breast
+34,Adenoid cystic carcinoma,Adenomas and Adenocarcinomas,Breast
+35,Tubular adenocarcinoma,Adenomas and Adenocarcinomas,Breast
+36,"Adenocarcinoma, NOS",Breast Invasive Carcinoma,Breast
+37,Infiltrating duct mixed with other types of carcinoma,Ductal and Lobular Neoplasms,Breast
+38,Not Reported,Ductal and Lobular Neoplasms,Breast
+39,"Neuroendocrine carcinoma, NOS",Adenomas and Adenocarcinomas,Breast
+40,Paget disease and infiltrating duct carcinoma of breast,Ductal and Lobular Neoplasms,Breast
+41,Intraductal papillary carcinoma,Breast Invasive Carcinoma,Breast
+42,Signet ring cell carcinoma,"Cystic, Mucinous and Serous Neoplasms",Breast
+43,"Papillary carcinoma, NOS",Squamous Cell Neoplasms,Breast
+44,Large cell neuroendocrine carcinoma,"Epithelial Neoplasms, NOS",Breast
+45,Infiltrating ductular carcinoma,"Epithelial Neoplasms, NOS",Breast
+46,"Sarcoma, NOS","Soft Tissue Tumors and Sarcomas, NOS",Breast
+47,Not specified in data,Angiomyosarcoma,"Breast, NOS"
+48,Infiltrating duct and mucinous carcinoma,Breast Invasive Carcinoma,Breast
+49,"Ductal carcinoma in situ, NOS","Neoplasms, NOS",Breast
+50,"Lobular carcinoma, NOS","Epithelial Neoplasms, NOS",Breast
+51,Infiltrating lobular mixed with other types of carcinoma,Ductal and Lobular Neoplasms,Breast
+52,"Phyllodes tumor, borderline",Fibroepithelial Neoplasms,Breast
+53,"Basal cell carcinoma, NOS",Basal Cell Neoplasms,Breast
+54,"Infiltrating duct carcinoma, NOS","Neoplasms, NOS",Breast
+55,"Carcinosarcoma, NOS",Complex Mixed and Stromal Neoplasms,Breast
+56,Not Reported,"Neoplasms, NOS",Breast
+57,"Paget disease, mammary",Ductal and Lobular Neoplasms,Breast
+58,"Carcinoma, NOS","Neoplasms, NOS",Breast
+59,"Ductal carcinoma, NOS","Neoplasms, NOS",Breast
+60,"Lobular carcinoma in situ, NOS",Ductal and Lobular Neoplasms,Breast
+61,High-grade Angiosarcoma,Angiomyosarcoma,"Breast, NOS"
+62,"Cribriform carcinoma, NOS",Adenomas and Adenocarcinomas,Breast
+63,"Squamous cell carcinoma, NOS",Breast Invasive Carcinoma,Breast
+64,Infiltrating duct and mucinous carcinoma,Ductal and Lobular Neoplasms,Breast
+65,Pleomorphic carcinoma,"Epithelial Neoplasms, NOS",Breast
+66,"Langerhans cell histiocytosis, unifocal",Ductal and Lobular Neoplasms,Breast
+67,Mucinous carcinoma,Breast Invasive Carcinoma,Breast
+68,Unknown,Ductal and Lobular Neoplasms,Breast
+69,Intraductal papillary carcinoma,Ductal and Lobular Neoplasms,Breast
+70,"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Breast
+71,Apocrine adenocarcinoma,Adnexal and Skin Appendage Neoplasms,Breast
+72,"Neoplasm, malignant","Epithelial Neoplasms, NOS",Breast
+73,"Squamous cell carcinoma, NOS",Squamous Cell Neoplasms,Breast
+74,Mucinous carcinoma,"Cystic, Mucinous and Serous Neoplasms",Breast

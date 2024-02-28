@@ -1,0 +1,106 @@
+,primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site
+0,"Squamous cell carcinoma, NOS",Squamous Cell Neoplasms,Bronchus and lung
+1,"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+2,"Small cell carcinoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung
+3,Non-small cell carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung
+4,Large cell neuroendocrine carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung
+5,Atypical carcinoid tumor,Adenomas and Adenocarcinomas,Bronchus and lung
+6,Adenosquamous carcinoma,Complex Epithelial Neoplasms,Bronchus and lung
+7,"Carcinoid tumor, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+8,"Adenocarcinoma, NOS",Lung Adenocarcinoma,Bronchus and lung
+9,Adenocarcinoma,Lung Adenocarcinoma,Lung
+10,"Squamous cell carcinoma, NOS",Lung Squamous Cell Carcinoma,Bronchus and lung
+11,,Lung Adenocarcinoma,Bronchus and lung
+12,"Solid carcinoma, NOS",Lung Adenocarcinoma,Bronchus and lung
+13,"Papillary adenocarcinoma, NOS",Lung Adenocarcinoma,Bronchus and lung
+14,"Micropapillary carcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+15,Adenocarcinoma with mixed subtypes,Adenomas and Adenocarcinomas,Bronchus and lung
+16,Papillary squamous cell carcinoma,Squamous Cell Neoplasms,Bronchus and lung
+17,"Solid carcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+18,Acinar cell carcinoma,Adenomas and Adenocarcinomas,Bronchus and lung
+19,Sarcomatoid carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung
+20,Acinar cell carcinoma,Lung Adenocarcinoma,Bronchus and lung
+21,Lepidic adenocarcinoma,Lung Adenocarcinoma,Bronchus and lung
+22,Combined small cell carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung
+23,"Large cell carcinoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung
+24,Pseudosarcomatous carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung
+25,"Neoplasm, malignant","Neoplasms, NOS",Bronchus and lung
+26,Invasive mucinous adenocarcinoma,Lung Adenocarcinoma,Bronchus and lung
+27,Neuroblastoma,"Neuroblastoma, NOS",Bronchus and lung
+28,"Papillary adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+29,"Adenocarcinoma in situ, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+30,"Squamous cell carcinoma, keratinizing, NOS",Squamous Cell Neoplasms,Bronchus and lung
+31,Not Reported,Not Reported,Bronchus and lung
+32,"Adenocarcinoma, NOS",Complex Epithelial Neoplasms,Bronchus and lung
+33,"Bronchiolo-alveolar adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+34,Not specified in data,Unknown,"Lung/Bronchus, Unknown"
+35,Not specified in data,"Malignant tumor, spindle cell type","Lung, NOS"
+36,Lepidic adenocarcinoma,Adenomas and Adenocarcinomas,Bronchus and lung
+37,"Bronchiolo-alveolar carcinoma, non-mucinous",Adenomas and Adenocarcinomas,Bronchus and lung
+38,"Squamous cell carcinoma, large cell, nonkeratinizing, NOS",Squamous Cell Neoplasms,Bronchus and lung
+39,"Carcinosarcoma, NOS",Complex Mixed and Stromal Neoplasms,Bronchus and lung
+40,,,Lung
+41,Not specified in data,Unknown,Lung/Bronchus
+42,Neoplasm,Neoplasm,Lung/Bronchus
+43,"Clear cell adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+44,Not Reported,"Neoplasms, NOS",Bronchus and lung
+45,Giant cell carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung
+46,"Malignant melanoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung
+47,Pleomorphic carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung
+48,Angiosarcoma,"Soft Tissue Tumors and Sarcomas, NOS",Bronchus and lung
+49,Squamous Cell Carcinoma,Lung Adenocarcinoma,Lung
+50,Basaloid squamous cell carcinoma,Squamous Cell Neoplasms,Bronchus and lung
+51,Invasive mucinous adenocarcinoma,Adenomas and Adenocarcinomas,Bronchus and lung
+52,Lepidic predominant adenocarcinoma,Adenomas and Adenocarcinomas,Bronchus and lung
+53,"Adenocarcinoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung
+54,Infiltrating ductular carcinoma,Adenomas and Adenocarcinomas,Bronchus and lung
+55,Mucinous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms",Bronchus and lung
+56,Acantholytic squamous cell carcinoma,Lung Squamous Cell Carcinoma,Lung
+57,Acinar cell carcinoma,Acinar Cell Neoplasms,Bronchus and lung
+58,Squamous Cell Carcinoma,Lung Squamous Cell Carcinoma,Lung
+59,"Adenocarcinoma, NOS",Lung Adenocarcinoma,Lung
+60,Adenocarcinoma with mixed subtypes,"Neoplasms, NOS",Bronchus and lung
+61,Infiltrating ductular carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung
+62,"Epithelioid mesothelioma, malignant",Mesothelial Neoplasms,Bronchus and lung
+63,"Adenocarcinoma, NOS","Neoplasms, NOS",Bronchus and lung
+64,"Bronchio-alveolar carcinoma, mucinous",Adenomas and Adenocarcinomas,Bronchus and lung
+65,Adenoid cystic carcinoma,Adenomas and Adenocarcinomas,Bronchus and lung
+66,Adenosquamous carcinoma,Lung Adenocarcinoma,Lung
+67,Pleuropulmonary blastoma,Complex Mixed and Stromal Neoplasms,Bronchus and lung
+68,"Follicular lymphoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+69,"Carcinoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung
+70,"Squamous cell carcinoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung
+71,Adenocarcinoma,Epithelial Neoplasm,Lung/Bronchus
+72,"Carcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+73,"Clear cell adenocarcinoma, NOS",Lung Adenocarcinoma,Lung
+74,Mucoepidermoid carcinoma,Mucoepidermoid Neoplasms,Bronchus and lung
+75,"Neoplasm, NOS",Paragangliomas and Glomus Tumors,Bronchus and lung
+76,"Squamous cell carcinoma, nonkeratinizing, NOS",Squamous Cell Neoplasms,Bronchus and lung
+77,Not Reported,Adenomas and Adenocarcinomas,Bronchus and lung
+78,Spindle cell sarcoma,"Soft Tissue Tumors and Sarcomas, NOS",Bronchus and lung
+79,Signet ring cell carcinoma,"Cystic, Mucinous and Serous Neoplasms",Bronchus and lung
+80,Not Reported,Squamous Cell Neoplasms,Bronchus and lung
+81,"Adenocarcinoma, NOS",Squamous Cell Neoplasms,Bronchus and lung
+82,"Tumor, NOS","Neoplasms, NOS",Bronchus and lung
+83,"Papillary carcinoma, NOS",Squamous Cell Neoplasms,Bronchus and lung
+84,Squamous cell carcinoma NOS,Squamous Cell Neoplasm,Lung/Bronchus
+85,"Myofibroblastic tumor, peribronchial",Fibromatous Neoplasms,Bronchus and lung
+86,"Bronchiolo-alveolar carcinoma, NOS",Lung Adenocarcinoma,Bronchus and lung
+87,Left thoracic tumor,"Malignant tumor, spindle cell type","Lung, NOS"
+88,"Hepatocellular carcinoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung
+89,"Meningioma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+90,"Small cell carcinoma, NOS","Neoplasms, NOS",Bronchus and lung
+91,"Pheochromocytoma, malignant",Paragangliomas and Glomus Tumors,Bronchus and lung
+92,Lymphoepithelial carcinoma,Squamous Cell Neoplasms,Bronchus and lung
+93,"Neoplasm, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+94,"Myxoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung
+95,Non-small cell carcinoma,Adenomas and Adenocarcinomas,Bronchus and lung
+96,"Neoplasm, NOS",Squamous Cell Neoplasms,Bronchus and lung
+97,"Lymphoma, NOS",Squamous Cell Neoplasms,Bronchus and lung
+98,"Squamous cell carcinoma, small cell, nonkeratinizing",Squamous Cell Neoplasms,Bronchus and lung
+99,Not specified in data,"Adenocarcinoma, NOS","Lung, NOS"
+100,Large cell neuroendocrine carcinoma,"Neoplasms, NOS",Bronchus and lung
+101,Mixed type rhabdomyosarcoma,Myomatous Neoplasms,Bronchus and lung
+102,Lymphangiomyomatosis,Lymphatic Vessel Tumors,Bronchus and lung
+103,Poorly differentiated pulmonary adenocarcinoma,"Adenocarcinoma, NOS","Lung, NOS"
+104,"Carcinoma, undifferentiated, NOS",,Bronchus and lung

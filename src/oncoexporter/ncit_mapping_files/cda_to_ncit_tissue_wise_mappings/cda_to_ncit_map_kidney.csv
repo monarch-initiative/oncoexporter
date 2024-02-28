@@ -1,0 +1,68 @@
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_label,ncit_id
+"Renal cell carcinoma, NOS",Adenomas and Adenocarcinomas,Kidney,"Renal Cell Carcinoma, Not Otherwise Specified",NCIT:C191370
+"Urothelial carcinoma, NOS",Transitional Cell Papillomas and Carcinomas,Kidney,Urothelial Carcinoma,NCIT:C4030
+"Carcinoma, NOS","Epithelial Neoplasms, NOS",Kidney,Kidney Carcinoma,NCIT:C9384
+"Clear cell adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Kidney,Clear Cell Renal Cell Carcinoma,NCIT:C4033
+Adrenal cortical carcinoma,Adenomas and Adenocarcinomas,Adrenal gland,Adrenal Cortical Carcinoma,NCIT:C9325
+"Medullary carcinoma, NOS",Ductal and Lobular Neoplasms,Kidney,Kidney Medullary Carcinoma,NCIT:C7572
+"Nephroblastoma, NOS","Neoplasms, NOS",Kidney,Kidney Wilms Tumor,NCIT:C40407
+"Renal cell carcinoma, NOS",Clear Cell Renal Cell Carcinoma,Kidney,Clear Cell Renal Cell Carcinoma,NCIT:C4033
+"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,Adrenal gland,Adrenal Gland Neuroblastoma,NCIT:C4827
+Malignant rhabdoid tumor,Complex Mixed and Stromal Neoplasms,Kidney,Rhabdoid Tumor of the Kidney,NCIT:C8715
+Wilms tumor,Complex Mixed and Stromal Neoplasms,Kidney,Mixed Cell Type Kidney Wilms Tumor,NCIT:C9149
+"Renal cell carcinoma, chromophobe type",Adenomas and Adenocarcinomas,Kidney,Chromophobe Renal Cell Carcinoma,NCIT:C4146
+"Papillary adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Kidney,Renal Cell Carcinoma,NCIT:C9385
+"Pheochromocytoma, malignant",Paragangliomas and Glomus Tumors,Adrenal gland,Metastatic Adrenal Gland Pheochromocytoma,NCIT:C4220
+Clear cell sarcoma,Epithelial Neoplasm,Kidney,Clear Cell Sarcoma of the Kidney,NCIT:C4264
+Neuroblastoma,"Neuroblastoma, NOS",Adrenal Gland,Adrenal Gland Neuroblastoma,NCIT:C4827
+Clear cell carcinoma,"Neoplasms, NOS",Kidney,Clear Cell Renal Cell Carcinoma,NCIT:C4033
+Clear cell carcinoma,Adenomas and Adenocarcinomas,Kidney,Clear Cell Renal Cell Carcinoma,NCIT:C4033
+"Pheochromocytoma, NOS",Paragangliomas and Glomus Tumors,Adrenal gland,Adrenal Gland Pheochromocytoma,NCIT:C3326
+Papillary renal cell carcinoma,Adenomas and Adenocarcinomas,Kidney,Papillary Renal Cell Carcinoma,NCIT:C6975
+"Nephroblastoma, NOS",Complex Mixed and Stromal Neoplasms,Kidney,Wilms Tumor,NCIT:C3267
+Angiomyolipoma,Lipomatous Neoplasms,Kidney,Kidney Angiomyolipoma,NCIT:C3888
+"Renal cell carcinoma, NOS",Non-Clear Cell Renal Cell Carcinoma,Kidney,"Renal Cell Carcinoma, Not Otherwise Specified",NCIT:C191370
+Ganglioneuroblastoma,Neuroepitheliomatous Neoplasms,Adrenal gland,Adrenal Gland Ganglioneuroblastoma,NCIT:C7646
+Collecting duct carcinoma,Adenomas and Adenocarcinomas,Kidney,Collecting Duct Carcinoma,NCIT:C6194
+"Renal cell carcinoma, sarcomatoid",Adenomas and Adenocarcinomas,Kidney,Sarcomatoid Renal Cell Carcinoma,NCIT:C27893
+Clear cell sarcoma of kidney,Complex Mixed and Stromal Neoplasms,Kidney,Clear Cell Sarcoma of the Kidney,NCIT:C4264
+Oncocytoma,Adenomas and Adenocarcinomas,Kidney,Kidney Oncocytoma,NCIT:C4526
+Unknown,Adenomas and Adenocarcinomas,Kidney,"Renal Cell Carcinoma, Not Otherwise Specified",NCIT:C191370
+Oxyphilic adenoma,Adenomas and Adenocarcinomas,Kidney,Oncocytic Adenoma,NCIT:C3759
+"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,Kidney,Peripheral Primitive Neuroectodermal Tumor of the Kidney,NCIT:C67214
+Angiomyolipoma,Adenomas and Adenocarcinomas,Kidney,Kidney Angiomyolipoma,NCIT:C3888
+Sarcomatoid carcinoma,"Epithelial Neoplasms, NOS",Kidney,Sarcomatoid Renal Cell Carcinoma,NCIT:C27893
+"Urothelial carcinoma, NOS",Transitional Cell Papillomas and Carcinomas,Renal pelvis,Renal Pelvis Urothelial Carcinoma,NCIT:C7355
+Malignant Rhabdoid Tumor,"Rhabdoid tumor, NOS","Kidney, NOS",Rhabdoid Tumor of the Kidney,NCIT:C8715
+Neuroblastoma,Miscellaneous Tumors,Adrenal Gland,Adrenal Gland Neuroblastoma,NCIT:C4827
+Nephroblastoma (Wilms Tumor),Miscellaneous Tumors,Kidney,Kidney Wilms Tumor,NCIT:C40407
+Benign cystic nephroma,Adenomas and Adenocarcinomas,Kidney,Benign Cystic Nephroma,NCIT:C6896
+"Synovial sarcoma, spindle cell",Synovial-like Neoplasms,Kidney,Spindle Cell Synovial Sarcoma,NCIT:C4277
+"Adrenal cortical adenoma, NOS",Adenomas and Adenocarcinomas,Adrenal gland,Adrenal Cortical Adenoma,NCIT:C9003
+Clear cell RCC,Clear Cell Renal Cell Carcinoma,Kidney,Clear Cell Renal Cell Carcinoma,NCIT:C4033
+"Rhabdoid tumor, malignant",Miscellaneous Tumors,Kidney,Rhabdoid Tumor of the Kidney,NCIT:C8715
+Adrenal Cortical Tumor,Miscellaneous Tumors,Adrenal Gland,Adrenal Cortical Neoplasm,NCIT:C2858
+Not specified in data,Ewing sarcoma,"Kidney, NOS",Kidney Ewing Sarcoma,NCIT:C159208
+Poorly differentiated sarcoma,"Sarcoma, NOS","Adrenal gland, NOS",Adrenal Gland Sarcoma,NCIT:C156956
+Not specified in data,Adrenal cortical carcinoma,"Adrenal gland, NOS",Adrenal Cortical Carcinoma,NCIT:C9325
+"Papillary carcinoma, NOS",Squamous Cell Neoplasms,Kidney,Papillary Renal Cell Carcinoma,NCIT:C6975
+"Malignant tumor, small cell type","Neoplasms, NOS",Kidney,Kidney Small Cell Neuroendocrine Carcinoma,NCIT:C116317
+Renal medullary carcinoma,"Medullary carcinoma, NOS","Kidney, NOS",Kidney Medullary Carcinoma,NCIT:C7572
+Not specified in data,"Neoplasm, malignant","Adrenal gland, NOS",Malignant Adrenal Gland Neoplasm,NCIT:C9338
+Papillary RCC,Papillary Renal Cell Carcinoma,Kidney,Papillary Renal Cell Carcinoma,NCIT:C6975
+Malignant Rhabdoid Tumor,Miscellaneous Tumors,Kidney,Rhabdoid Tumor of the Kidney,NCIT:C8715
+"Paraganglioma, malignant",Paragangliomas and Glomus Tumors,Adrenal gland,Adrenal Gland Pheochromocytoma,NCIT:C3326
+Adrenal Cortical Tumor,"Neoplasm, malignant","Adrenal gland, NOS",Malignant Adrenal Cortical Neoplasm,NCIT:C9327
+Adrenal Cortical Carcinoma,Adrenal cortical carcinoma,"Adrenal gland, NOS",Adrenal Cortical Carcinoma,NCIT:C9325
+Carcinoma NOS,Neoplasm,Kidney,Kidney Carcinoma,NCIT:C9384
+"Urothelial carcinoma, NOS",Adenomas and Adenocarcinomas,Kidney,Urothelial Carcinoma,NCIT:C4030
+Ganglioneuroblastoma,Miscellaneous Tumors,Adrenal Gland,Adrenal Gland Ganglioneuroblastoma,NCIT:C7646
+Hereditary leiomyomatosis & RCC-associated renal cell carcinoma,Adenomas and Adenocarcinomas,Kidney,Hereditary Leiomyomatosis and Renal Cell Carcinoma,NCIT:C51302
+Not specified in data,"Medullary carcinoma, NOS","Kidney, NOS",Kidney Medullary Carcinoma,NCIT:C7572
+Not specified in data,"Rhabdoid tumor, NOS","Kidney, NOS",Rhabdoid Tumor of the Kidney,NCIT:C8715
+"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,Renal pelvis,Peripheral Primitive Neuroectodermal Tumor of the Kidney,NCIT:C67214
+Not specified in data,"Sarcoma, NOS","Adrenal gland, NOS",Adrenal Gland Sarcoma,NCIT:C156956
+"Renal cell carcinoma, NOS","Neoplasms, NOS",Kidney,"Renal Cell Carcinoma, Not Otherwise Specified",NCIT:C191370
+Ewing sarcoma,Ewing sarcoma,"Kidney, NOS",Kidney Ewing Sarcoma,NCIT:C159208
+"Neoplasm, malignant","Neoplasms, NOS",Kidney,Malignant Kidney Neoplasm,NCIT:C7548
+Chromophobe RCC,Chromophobe Renal Cell Carcinoma,Kidney,Chromophobe Renal Cell Carcinoma,NCIT:C4146

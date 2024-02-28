@@ -1,0 +1,92 @@
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_label,ncit_id
+"Squamous cell carcinoma, NOS",Squamous Cell Neoplasms,Bronchus and lung,Lung Squamous Cell Carcinoma,NCIT:C3493
+"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung,Lung Adenocarcinoma,NCIT:C3512
+"Small cell carcinoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung,Lung Small Cell Carcinoma,NCIT:C4917
+Non-small cell carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung,Lung Non-Small Cell Carcinoma,NCIT:C2926
+Large cell neuroendocrine carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung,Lung Large Cell Neuroendocrine Carcinoma,NCIT:C5672
+Atypical carcinoid tumor,Adenomas and Adenocarcinomas,Bronchus and lung,Lung Neuroendocrine Tumor G2,NCIT:C45551
+Adenosquamous carcinoma,Complex Epithelial Neoplasms,Bronchus and lung,Lung Adenosquamous Carcinoma,NCIT:C9133
+"Carcinoid tumor, NOS",Adenomas and Adenocarcinomas,Bronchus and lung,Lung Neuroendocrine Tumor,NCIT:C4038
+"Adenocarcinoma, NOS",Lung Adenocarcinoma,Bronchus and lung,Lung Adenocarcinoma,NCIT:C3512
+Adenocarcinoma,Lung Adenocarcinoma,Lung,Lung Adenocarcinoma,NCIT:C3512
+"Squamous cell carcinoma, NOS",Lung Squamous Cell Carcinoma,Bronchus and lung,Lung Squamous Cell Carcinoma,NCIT:C3493
+"Solid carcinoma, NOS",Lung Adenocarcinoma,Bronchus and lung,Solid Lung Adenocarcinoma,NCIT:C5651
+"Papillary adenocarcinoma, NOS",Lung Adenocarcinoma,Bronchus and lung,Lung Papillary Adenocarcinoma,NCIT:C5650
+"Micropapillary carcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung,Lung Micropapillary Adenocarcinoma,NCIT:C128847
+Adenocarcinoma with mixed subtypes,Adenomas and Adenocarcinomas,Bronchus and lung,"Lung Adenocarcinoma, Mixed Subtype",NCIT:C45508
+Papillary squamous cell carcinoma,Squamous Cell Neoplasms,Bronchus and lung,"Lung Squamous Cell Carcinoma, Papillary Variant",NCIT:C45502
+"Solid carcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung,Solid Lung Adenocarcinoma,NCIT:C5651
+Sarcomatoid carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung,Lung Sarcomatoid Carcinoma,NCIT:C45540
+Lepidic adenocarcinoma,Lung Adenocarcinoma,Bronchus and lung,Lepidic Adenocarcinoma,NCIT:C123160
+Combined small cell carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung,Combined Small and Large Cell Lung Carcinoma,NCIT:C9424
+"Large cell carcinoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung,Lung Large Cell Carcinoma,NCIT:C4450
+Pseudosarcomatous carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung,Lung Sarcomatoid Carcinoma,NCIT:C45540
+"Neoplasm, malignant","Neoplasms, NOS",Bronchus and lung,Malignant Lung Neoplasm,NCIT:C7377
+Invasive mucinous adenocarcinoma,Lung Adenocarcinoma,Bronchus and lung,Invasive Lung Mucinous Adenocarcinoma,NCIT:C136709
+Neuroblastoma,"Neuroblastoma, NOS",Bronchus and lung,Neuroblastoma,NCIT:C3270
+"Papillary adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung,Lung Papillary Adenocarcinoma,NCIT:C5650
+"Adenocarcinoma in situ, NOS",Adenomas and Adenocarcinomas,Bronchus and lung,Lung Adenocarcinoma In Situ,NCIT:C136486
+"Squamous cell carcinoma, keratinizing, NOS",Squamous Cell Neoplasms,Bronchus and lung,Lung Keratinizing Squamous Cell Carcinoma,NCIT:C136713
+"Adenocarcinoma, NOS",Complex Epithelial Neoplasms,Bronchus and lung,Lung Adenocarcinoma,NCIT:C3512
+"Bronchiolo-alveolar adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung,Minimally Invasive Lung Adenocarcinoma,NCIT:C2923
+Not specified in data,"Malignant tumor, spindle cell type","Lung, NOS",Lung Spindle Cell Carcinoma,NCIT:C45541
+Lepidic adenocarcinoma,Adenomas and Adenocarcinomas,Bronchus and lung,Minimally Invasive Lung Adenocarcinoma,NCIT:C2923
+"Bronchiolo-alveolar carcinoma, non-mucinous",Adenomas and Adenocarcinomas,Bronchus and lung,Minimally Invasive Lung Non-Mucinous Adenocarcinoma,NCIT:C7269
+"Squamous cell carcinoma, large cell, nonkeratinizing, NOS",Squamous Cell Neoplasms,Bronchus and lung,Lung Non-Keratinizing Squamous Cell Carcinoma,NCIT:C136714
+"Carcinosarcoma, NOS",Complex Mixed and Stromal Neoplasms,Bronchus and lung,Lung Carcinosarcoma,NCIT:C45543
+Neoplasm,Neoplasm,Lung/Bronchus,Lung Neoplasm,NCIT:C3200
+"Clear cell adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung,Lung Clear Cell Adenocarcinoma,NCIT:C45516
+Not Reported,"Neoplasms, NOS",Bronchus and lung,Lung Neoplasm,NCIT:C3200
+Giant cell carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung,Lung Giant Cell Carcinoma,NCIT:C4452
+"Malignant melanoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung,Lung Melanoma,NCIT:C45652
+Pleomorphic carcinoma,"Epithelial Neoplasms, NOS",Bronchus and lung,Lung Pleomorphic Carcinoma,NCIT:C45542
+Squamous Cell Carcinoma,Lung Adenocarcinoma,Lung,Lung Squamous Cell Carcinoma,NCIT:C3493
+Basaloid squamous cell carcinoma,Squamous Cell Neoplasms,Bronchus and lung,Lung Basaloid Squamous Cell Carcinoma,NCIT:C45507
+Invasive mucinous adenocarcinoma,Adenomas and Adenocarcinomas,Bronchus and lung,Invasive Lung Mucinous Adenocarcinoma,NCIT:C136709
+Lepidic predominant adenocarcinoma,Adenomas and Adenocarcinomas,Bronchus and lung,Lepidic Adenocarcinoma,NCIT:C123160
+"Adenocarcinoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung,Lung Adenocarcinoma,NCIT:C3512
+Mucinous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms",Bronchus and lung,Invasive Lung Mucinous Adenocarcinoma,NCIT:C136709
+Acantholytic squamous cell carcinoma,Lung Squamous Cell Carcinoma,Lung,Lung Squamous Cell Carcinoma,NCIT:C3493
+Acinar cell carcinoma,Acinar Cell Neoplasms,Bronchus and lung,Lung Acinar Adenocarcinoma,NCIT:C5649
+Squamous Cell Carcinoma,Lung Squamous Cell Carcinoma,Lung,Lung Squamous Cell Carcinoma,NCIT:C3493
+"Adenocarcinoma, NOS",Lung Adenocarcinoma,Lung,Lung Adenocarcinoma,NCIT:C3512
+Adenocarcinoma with mixed subtypes,"Neoplasms, NOS",Bronchus and lung,"Lung Adenocarcinoma, Mixed Subtype",NCIT:C45508
+"Epithelioid mesothelioma, malignant",Mesothelial Neoplasms,Bronchus and lung,Epithelioid Mesothelioma,NCIT:C7985
+"Adenocarcinoma, NOS","Neoplasms, NOS",Bronchus and lung,Lung Adenocarcinoma,NCIT:C3512
+"Bronchio-alveolar carcinoma, mucinous",Adenomas and Adenocarcinomas,Bronchus and lung,Minimally Invasive Lung Mucinous Adenocarcinoma,NCIT:C7268
+Adenoid cystic carcinoma,Adenomas and Adenocarcinomas,Bronchus and lung,Lung Adenoid Cystic Carcinoma,NCIT:C5666
+Adenosquamous carcinoma,Lung Adenocarcinoma,Lung,Lung Adenosquamous Carcinoma,NCIT:C9133
+Pleuropulmonary blastoma,Complex Mixed and Stromal Neoplasms,Bronchus and lung,Pleuropulmonary Blastoma,NCIT:C5669
+"Follicular lymphoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung,Lung Follicular Lymphoma,NCIT:C181211
+"Carcinoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung,Bronchogenic Carcinoma,NCIT:C35875
+"Squamous cell carcinoma, NOS","Epithelial Neoplasms, NOS",Bronchus and lung,Lung Squamous Cell Carcinoma,NCIT:C3493
+Adenocarcinoma,Epithelial Neoplasm,Lung/Bronchus,Lung Adenocarcinoma,NCIT:C3512
+"Carcinoma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung,Lung Adenocarcinoma,NCIT:C3512
+"Clear cell adenocarcinoma, NOS",Lung Adenocarcinoma,Lung,Lung Clear Cell Adenocarcinoma,NCIT:C45516
+Mucoepidermoid carcinoma,Mucoepidermoid Neoplasms,Bronchus and lung,Lung Mucoepidermoid Carcinoma,NCIT:C45544
+"Squamous cell carcinoma, nonkeratinizing, NOS",Squamous Cell Neoplasms,Bronchus and lung,Lung Non-Keratinizing Squamous Cell Carcinoma,NCIT:C136714
+Not Reported,Adenomas and Adenocarcinomas,Bronchus and lung,Lung Adenocarcinoma,NCIT:C3512
+Spindle cell sarcoma,"Soft Tissue Tumors and Sarcomas, NOS",Bronchus and lung,Spindle Cell Sarcoma,NCIT:C27005
+Signet ring cell carcinoma,"Cystic, Mucinous and Serous Neoplasms",Bronchus and lung,Lung Signet Ring Cell Carcinoma,NCIT:C45514
+Not Reported,Squamous Cell Neoplasms,Bronchus and lung,Lung Squamous Cell Carcinoma,NCIT:C3493
+"Adenocarcinoma, NOS",Squamous Cell Neoplasms,Bronchus and lung,Lung Adenocarcinoma,NCIT:C3512
+"Tumor, NOS","Neoplasms, NOS",Bronchus and lung,Malignant Lung Neoplasm,NCIT:C7377
+"Papillary carcinoma, NOS",Squamous Cell Neoplasms,Bronchus and lung,"Lung Squamous Cell Carcinoma, Papillary Variant",NCIT:C45502
+Squamous cell carcinoma NOS,Squamous Cell Neoplasm,Lung/Bronchus,Lung Squamous Cell Carcinoma,NCIT:C3493
+"Myofibroblastic tumor, peribronchial",Fibromatous Neoplasms,Bronchus and lung,Lung Inflammatory Myofibroblastic Tumor,NCIT:C39740
+"Bronchiolo-alveolar carcinoma, NOS",Lung Adenocarcinoma,Bronchus and lung,Minimally Invasive Lung Adenocarcinoma,NCIT:C2923
+Left thoracic tumor,"Malignant tumor, spindle cell type","Lung, NOS",Lung Spindle Cell Carcinoma,NCIT:C45541
+"Meningioma, NOS",Adenomas and Adenocarcinomas,Bronchus and lung,Lung Meningioma,NCIT:C5668
+"Small cell carcinoma, NOS","Neoplasms, NOS",Bronchus and lung,Lung Small Cell Carcinoma,NCIT:C4917
+"Pheochromocytoma, malignant",Paragangliomas and Glomus Tumors,Bronchus and lung,Paraganglioma,NCIT:C3308
+Lymphoepithelial carcinoma,Squamous Cell Neoplasms,Bronchus and lung,Lung Lymphoepithelial Carcinoma,NCIT:C45519
+"Neoplasm, NOS",Adenomas and Adenocarcinomas,Bronchus and lung,Lung Adenocarcinoma,NCIT:C3512
+Non-small cell carcinoma,Adenomas and Adenocarcinomas,Bronchus and lung,Lung Non-Small Cell Carcinoma,NCIT:C2926
+"Neoplasm, NOS",Squamous Cell Neoplasms,Bronchus and lung,Lung Squamous Cell Carcinoma,NCIT:C3493
+"Lymphoma, NOS",Squamous Cell Neoplasms,Bronchus and lung,Lung Lymphoma,NCIT:C4794
+"Squamous cell carcinoma, small cell, nonkeratinizing",Squamous Cell Neoplasms,Bronchus and lung,Combined Lung Small Cell and Squamous Cell Carcinoma,NCIT:C9423
+Not specified in data,"Adenocarcinoma, NOS","Lung, NOS",Lung Adenocarcinoma,NCIT:C3512
+Large cell neuroendocrine carcinoma,"Neoplasms, NOS",Bronchus and lung,Lung Large Cell Neuroendocrine Carcinoma,NCIT:C5672
+Mixed type rhabdomyosarcoma,Myomatous Neoplasms,Bronchus and lung,Lung Rhabdomyosarcoma,NCIT:C181201
+Lymphangiomyomatosis,Lymphatic Vessel Tumors,Bronchus and lung,Lung Lymphangioleiomyomatosis,NCIT:C38153
+Poorly differentiated pulmonary adenocarcinoma,"Adenocarcinoma, NOS","Lung, NOS",Lung Adenocarcinoma,NCIT:C3512

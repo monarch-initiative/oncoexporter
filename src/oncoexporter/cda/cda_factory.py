@@ -1,5 +1,14 @@
 import abc
+import math
+import os
+import platform
+import re
+import typing
+
 import pandas as pd
+
+# matches payloads like `1.23`, `34`, `-0.`, ...
+simple_float_pattern = re.compile(r'^-?\d+(?P<decimal>\.\d*)?$')
 
 
 class CdaFactory(metaclass=abc.ABCMeta):
@@ -8,14 +17,14 @@ class CdaFactory(metaclass=abc.ABCMeta):
     Each subclass must implement the to_ga4gh method, which transforms a row of a table from CDA to a GA4GH Message.
     """
 
-
     @abc.abstractmethod
-    def to_ga4gh(self, row:pd.Series):
+    def to_ga4gh(self, row: pd.Series):
         """Return a message from the GA4GH Phenopacket Schema that corresponds to this row.
 
         :param row: A row from the CDA
         :type row: pd.Series
         :returns: a message from the GA4GH Phenopacket Schema
+        :raises ValueError: if unable to parse
         """
         pass
 
@@ -32,3 +41,45 @@ class CdaFactory(metaclass=abc.ABCMeta):
             results.append(self.get_item(row, name))
         return results
 
+    @staticmethod
+    def days_to_iso(days: typing.Union[int, float, str]) -> typing.Optional[str]:
+        """
+        Convert the number of days of life into an ISO 8601 period representing the age of an individual.
+
+        Note, we only use the `D` designator as transformation to years or months would be lossy.
+
+        The `days` can be negative, leading to the duration of the same length.
+
+        `None` is returned if the input `str` cannot be parsed into an integer.
+
+        :param days: a `str` or `int` with a number of days of life.
+        :raises ValueError: if `days` is not an `int` or a `str`.
+        """
+        if type(days) is int:
+            # In Python, `isinstance(True, int) == True`.
+            # However, we don't want that here.
+            pass
+        elif isinstance(days, str):
+            if simple_float_pattern.match(days):
+                days = round(float(days))
+            else:
+                return None
+        elif isinstance(days, float):
+            if math.isfinite(days):
+                days: int = round(days)
+            else:
+                return None
+        else:
+            raise ValueError(f"days argument must be an int or a str but was {type(days)}")
+
+        return f'P{abs(days)}D'
+
+    def get_local_share_directory(self, local_dir=None):
+        my_platform = platform.platform()
+        my_system = platform.system()
+        if local_dir is None:
+            local_dir = os.path.join(os.path.expanduser('~'), ".oncoexporter")
+        if not os.path.exists(local_dir):
+            os.makedirs(local_dir)
+            print(f"[INFO] Created new directory for oncoexporter at {local_dir}")
+        return local_dir

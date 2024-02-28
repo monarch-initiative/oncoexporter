@@ -1,0 +1,68 @@
+primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site,ncit_label,ncit_id
+"Infiltrating duct carcinoma, NOS",Ductal and Lobular Neoplasms,Breast,Invasive Breast Carcinoma of No Special Type,NCIT:C4194
+"Carcinoma, NOS","Epithelial Neoplasms, NOS",Breast,Breast Carcinoma,NCIT:C4872
+"Lobular carcinoma, NOS",Ductal and Lobular Neoplasms,Breast,Breast Lobular Carcinoma,NCIT:C3771
+"Metaplastic carcinoma, NOS",Complex Epithelial Neoplasms,Breast,Breast Metaplastic Carcinoma,NCIT:C5164
+Infiltrating ductular carcinoma,Ductal and Lobular Neoplasms,Breast,Invasive Breast Ductal Carcinoma and Lobular Carcinoma,NCIT:C7688
+Adenomyoepithelioma,Complex Mixed and Stromal Neoplasms,Breast,Breast Adenomyoepithelioma,NCIT:C6899
+Infiltrating duct and lobular carcinoma,Ductal and Lobular Neoplasms,Breast,Invasive Breast Ductal Carcinoma and Lobular Carcinoma,NCIT:C7688
+"Neoplasm, malignant","Neoplasms, NOS",Breast,Malignant Breast Neoplasm,NCIT:C9335
+"Infiltrating duct carcinoma, NOS",Breast Invasive Carcinoma,Breast,Invasive Breast Carcinoma of No Special Type,NCIT:C4194
+Infiltrating duct and lobular carcinoma,Breast Invasive Carcinoma,Breast,Invasive Breast Ductal Carcinoma and Lobular Carcinoma,NCIT:C7688
+"Lobular carcinoma, NOS",Breast Invasive Carcinoma,Breast,Invasive Breast Lobular Carcinoma,NCIT:C7950
+Intraductal papillary adenocarcinoma with invasion,Ductal and Lobular Neoplasms,Breast,Breast Papillary Ductal Carcinoma In Situ with Invasion,NCIT:C7439
+"Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,Breast,Breast Diffuse Large B-Cell Lymphoma,NCIT:C40375
+"Ductal carcinoma in situ, NOS",Ductal and Lobular Neoplasms,Breast,Breast Ductal Carcinoma In Situ,NCIT:C2924
+Haemangiosarcoma,Blood Vessel Tumors,Breast,Breast Angiosarcoma,NCIT:C5184
+Inflammatory carcinoma,Ductal and Lobular Neoplasms,Breast,Breast Inflammatory Carcinoma,NCIT:C4001
+"Medullary carcinoma, NOS",Ductal and Lobular Neoplasms,Breast,Breast Medullary Carcinoma,NCIT:C9119
+"Infiltrating lobular carcinoma, NOS",Ductal and Lobular Neoplasms,Breast,Invasive Breast Lobular Carcinoma,NCIT:C7950
+"Infiltrating lobular carcinoma, NOS",Breast Invasive Carcinoma,Breast,Invasive Breast Lobular Carcinoma,NCIT:C7950
+Angiosarcoma,"Soft Tissue Tumors and Sarcomas, NOS",Breast,Breast Angiosarcoma,NCIT:C5184
+"Intraductal carcinoma, noninfiltrating, NOS",Ductal and Lobular Neoplasms,Breast,Breast Ductal Carcinoma In Situ,NCIT:C2924
+"Phyllodes tumor, malignant",Fibroepithelial Neoplasms,Breast,Breast Phyllodes Tumor,NCIT:C7575
+Carcinoma NOS,Epithelial Neoplasm,Breast,Breast Carcinoma,NCIT:C4872
+Invasive lobular carcinoma,Ductal and Lobular Neoplasms,Breast,Invasive Breast Ductal Carcinoma and Invasive Lobular Carcinoma,NCIT:C6393
+Invasive mammary carcinoma,Ductal and Lobular Neoplasms,Breast,Invasive Breast Ductal Carcinoma and Invasive Lobular Carcinoma,NCIT:C6393
+Mucinous adenocarcinoma,"Cystic, Mucinous and Serous Neoplasms",Breast,Breast Mucinous Cystadenocarcinoma,NCIT:C40354
+Invasive lobular carcinoma,Breast Invasive Carcinoma,Breast,Invasive Breast Lobular Carcinoma,NCIT:C7950
+Secretory carcinoma of breast,Ductal and Lobular Neoplasms,Breast,Breast Secretory Carcinoma,NCIT:C4189
+Intraductal micropapillary carcinoma,Ductal and Lobular Neoplasms,Breast,Breast Micropapillary Ductal Carcinoma In Situ,NCIT:C5139
+Adenoid cystic carcinoma,Adenomas and Adenocarcinomas,Breast,Breast Adenoid Cystic Carcinoma,NCIT:C5130
+Tubular adenocarcinoma,Adenomas and Adenocarcinomas,Breast,Adenocarcinoma in Tubular Adenoma,NCIT:C7677
+"Adenocarcinoma, NOS",Breast Invasive Carcinoma,Breast,Invasive Breast Carcinoma,NCIT:C9245
+Infiltrating duct mixed with other types of carcinoma,Ductal and Lobular Neoplasms,Breast,Invasive Breast Ductal Carcinoma and Lobular Carcinoma,NCIT:C7688
+Not Reported,Ductal and Lobular Neoplasms,Breast,Breast Ductal Carcinoma In Situ and Lobular Carcinoma In Situ,NCIT:C4195
+"Neuroendocrine carcinoma, NOS",Adenomas and Adenocarcinomas,Breast,Breast Neuroendocrine Carcinoma,NCIT:C175581
+Paget disease and infiltrating duct carcinoma of breast,Ductal and Lobular Neoplasms,Breast,Breast Paget Disease with Invasive Ductal Carcinoma,NCIT:C7951
+Intraductal papillary carcinoma,Breast Invasive Carcinoma,Breast,Breast Papillary Ductal Carcinoma In Situ with Invasion,NCIT:C7439
+Signet ring cell carcinoma,"Cystic, Mucinous and Serous Neoplasms",Breast,Breast Signet Ring Cell Carcinoma,NCIT:C5175
+"Papillary carcinoma, NOS",Squamous Cell Neoplasms,Breast,Breast Papillary Carcinoma,NCIT:C9134
+Large cell neuroendocrine carcinoma,"Epithelial Neoplasms, NOS",Breast,Breast Large Cell Neuroendocrine Carcinoma,NCIT:C40356
+Infiltrating ductular carcinoma,"Epithelial Neoplasms, NOS",Breast,Invasive Breast Carcinoma of No Special Type,NCIT:C4194
+"Sarcoma, NOS","Soft Tissue Tumors and Sarcomas, NOS",Breast,Breast Sarcoma,NCIT:C4670
+Not specified in data,Angiomyosarcoma,"Breast, NOS",Breast Angiosarcoma,NCIT:C5184
+Infiltrating duct and mucinous carcinoma,Breast Invasive Carcinoma,Breast,Breast Mixed Carcinoma,NCIT:C40347
+"Ductal carcinoma in situ, NOS","Neoplasms, NOS",Breast,Breast Ductal Carcinoma In Situ,NCIT:C2924
+"Lobular carcinoma, NOS","Epithelial Neoplasms, NOS",Breast,Invasive Breast Lobular Carcinoma,NCIT:C7950
+Infiltrating lobular mixed with other types of carcinoma,Ductal and Lobular Neoplasms,Breast,Breast Ductal Carcinoma In Situ and Invasive Lobular Carcinoma,NCIT:C6939
+"Phyllodes tumor, borderline",Fibroepithelial Neoplasms,Breast,Borderline Breast Phyllodes Tumor,NCIT:C5316
+"Infiltrating duct carcinoma, NOS","Neoplasms, NOS",Breast,Invasive Breast Carcinoma of No Special Type,NCIT:C4194
+"Carcinosarcoma, NOS",Complex Mixed and Stromal Neoplasms,Breast,Breast Mixed Epithelial/Mesenchymal Metaplastic Carcinoma,NCIT:C40364
+Not Reported,"Neoplasms, NOS",Breast,Breast Neoplasm,NCIT:C2910
+"Paget disease, mammary",Ductal and Lobular Neoplasms,Breast,Breast Paget Disease,NCIT:C47857
+"Carcinoma, NOS","Neoplasms, NOS",Breast,Breast Carcinoma,NCIT:C4872
+"Ductal carcinoma, NOS","Neoplasms, NOS",Breast,Invasive Breast Carcinoma of No Special Type,NCIT:C4194
+"Lobular carcinoma in situ, NOS",Ductal and Lobular Neoplasms,Breast,Breast Lobular Carcinoma In Situ,NCIT:C4018
+High-grade Angiosarcoma,Angiomyosarcoma,"Breast, NOS",Primary Breast Angiosarcoma,NCIT:C176251
+"Cribriform carcinoma, NOS",Adenomas and Adenocarcinomas,Breast,Invasive Breast Cribriform Carcinoma,NCIT:C5142
+"Squamous cell carcinoma, NOS",Breast Invasive Carcinoma,Breast,Breast Squamous Cell Carcinoma,NCIT:C5177
+Pleomorphic carcinoma,"Epithelial Neoplasms, NOS",Breast,Breast Pleomorphic Carcinoma,NCIT:C5161
+"Langerhans cell histiocytosis, unifocal",Ductal and Lobular Neoplasms,Breast,Unifocal Langerhans Cell Histiocytosis,NCIT:C66848
+Mucinous carcinoma,Breast Invasive Carcinoma,Breast,Breast Mucinous Carcinoma,NCIT:C9131
+Intraductal papillary carcinoma,Ductal and Lobular Neoplasms,Breast,Breast Papillary Ductal Carcinoma In Situ,NCIT:C4190
+"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Breast,Breast Adenocarcinoma,NCIT:C5214
+Apocrine adenocarcinoma,Adnexal and Skin Appendage Neoplasms,Breast,Apocrine Breast Carcinoma,NCIT:C5174
+"Neoplasm, malignant","Epithelial Neoplasms, NOS",Breast,Breast Neoplasm,NCIT:C2910
+"Squamous cell carcinoma, NOS",Squamous Cell Neoplasms,Breast,Breast Squamous Cell Carcinoma,NCIT:C5177
+Mucinous carcinoma,"Cystic, Mucinous and Serous Neoplasms",Breast,Breast Mucinous Carcinoma,NCIT:C9131

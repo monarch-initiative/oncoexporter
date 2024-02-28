@@ -1,0 +1,76 @@
+,primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site
+0,"Renal cell carcinoma, NOS",Adenomas and Adenocarcinomas,Kidney
+1,"Urothelial carcinoma, NOS",Transitional Cell Papillomas and Carcinomas,Kidney
+2,"Carcinoma, NOS","Epithelial Neoplasms, NOS",Kidney
+3,"Clear cell adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Kidney
+4,Adrenal cortical carcinoma,Adenomas and Adenocarcinomas,Adrenal gland
+5,"Medullary carcinoma, NOS",Ductal and Lobular Neoplasms,Kidney
+6,"Nephroblastoma, NOS","Neoplasms, NOS",Kidney
+7,"Renal cell carcinoma, NOS",Clear Cell Renal Cell Carcinoma,Kidney
+8,"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,Adrenal gland
+9,Malignant rhabdoid tumor,Complex Mixed and Stromal Neoplasms,Kidney
+10,Wilms tumor,Complex Mixed and Stromal Neoplasms,Kidney
+11,"Renal cell carcinoma, chromophobe type",Adenomas and Adenocarcinomas,Kidney
+12,"Papillary adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Kidney
+13,"Pheochromocytoma, malignant",Paragangliomas and Glomus Tumors,Adrenal gland
+14,Not specified in data,Unknown,Kidney
+15,Clear cell sarcoma,Epithelial Neoplasm,Kidney
+16,Neuroblastoma,"Neuroblastoma, NOS",Adrenal Gland
+17,Clear cell carcinoma,"Neoplasms, NOS",Kidney
+18,Clear cell carcinoma,Adenomas and Adenocarcinomas,Kidney
+19,"Pheochromocytoma, NOS",Paragangliomas and Glomus Tumors,Adrenal gland
+20,Not specified in data,Unknown,"Kidney, Unknown"
+21,Papillary renal cell carcinoma,Adenomas and Adenocarcinomas,Kidney
+22,"Nephroblastoma, NOS",Complex Mixed and Stromal Neoplasms,Kidney
+23,Angiomyolipoma,Lipomatous Neoplasms,Kidney
+24,"Renal cell carcinoma, NOS",Non-Clear Cell Renal Cell Carcinoma,Kidney
+25,Ganglioneuroblastoma,Neuroepitheliomatous Neoplasms,Adrenal gland
+26,Collecting duct carcinoma,Adenomas and Adenocarcinomas,Kidney
+27,"Renal cell carcinoma, sarcomatoid",Adenomas and Adenocarcinomas,Kidney
+28,Clear cell sarcoma of kidney,Complex Mixed and Stromal Neoplasms,Kidney
+29,Oncocytoma,Adenomas and Adenocarcinomas,Kidney
+30,Unknown,Adenomas and Adenocarcinomas,Kidney
+31,Oxyphilic adenoma,Adenomas and Adenocarcinomas,Kidney
+32,"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,Kidney
+33,Angiomyolipoma,Adenomas and Adenocarcinomas,Kidney
+34,Sarcomatoid carcinoma,"Epithelial Neoplasms, NOS",Kidney
+35,"Urothelial carcinoma, NOS",Transitional Cell Papillomas and Carcinomas,Renal pelvis
+36,Malignant Rhabdoid Tumor,"Rhabdoid tumor, NOS","Kidney, NOS"
+37,Neuroblastoma,Miscellaneous Tumors,Adrenal Gland
+38,Nephroblastoma (Wilms Tumor),Miscellaneous Tumors,Kidney
+39,Benign cystic nephroma,Adenomas and Adenocarcinomas,Kidney
+40,"Synovial sarcoma, spindle cell",Synovial-like Neoplasms,Kidney
+41,"Spindle cell carcinoma, NOS","Epithelial Neoplasms, NOS",Kidney
+42,"Adrenal cortical adenoma, NOS",Adenomas and Adenocarcinomas,Adrenal gland
+43,Clear cell RCC,Clear Cell Renal Cell Carcinoma,Kidney
+44,Neuroblastoma,"Neuroblastoma, NOS",Renal Pelvis
+45,"Rhabdoid tumor, malignant",Miscellaneous Tumors,Kidney
+46,Adrenal Cortical Tumor,Miscellaneous Tumors,Adrenal Gland
+47,Not specified in data,Ewing sarcoma,"Kidney, NOS"
+48,Poorly differentiated sarcoma,"Sarcoma, NOS","Adrenal gland, NOS"
+49,Not specified in data,Adrenal cortical carcinoma,"Adrenal gland, NOS"
+50,"Papillary carcinoma, NOS",Squamous Cell Neoplasms,Kidney
+51,Neuroblastoma,"Neuroblastoma, NOS",Kidney
+52,"Malignant tumor, small cell type","Neoplasms, NOS",Kidney
+53,Renal medullary carcinoma,"Medullary carcinoma, NOS","Kidney, NOS"
+54,Not specified in data,"Neoplasm, malignant","Adrenal gland, NOS"
+55,Papillary RCC,Papillary Renal Cell Carcinoma,Kidney
+56,Malignant Rhabdoid Tumor,Miscellaneous Tumors,Kidney
+57,Ganglioneuroblastoma,Neuroepitheliomatous Neoplasms,Kidney
+58,Giant cell sarcoma,"Soft Tissue Tumors and Sarcomas, NOS",Kidney
+59,"Paraganglioma, malignant",Paragangliomas and Glomus Tumors,Adrenal gland
+60,Adrenal Cortical Tumor,"Neoplasm, malignant","Adrenal gland, NOS"
+61,Adrenal Cortical Carcinoma,Adrenal cortical carcinoma,"Adrenal gland, NOS"
+62,Carcinoma NOS,Neoplasm,Kidney
+63,"Urothelial carcinoma, NOS",Adenomas and Adenocarcinomas,Kidney
+64,Ganglioneuroma,Paragangliomas and Glomus Tumors,Adrenal Gland
+65,Ganglioneuroblastoma,Miscellaneous Tumors,Adrenal Gland
+66,Hereditary leiomyomatosis & RCC-associated renal cell carcinoma,Adenomas and Adenocarcinomas,Kidney
+67,Not specified in data,"Medullary carcinoma, NOS","Kidney, NOS"
+68,Not specified in data,"Rhabdoid tumor, NOS","Kidney, NOS"
+69,"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,Renal pelvis
+70,Not specified in data,"Sarcoma, NOS","Adrenal gland, NOS"
+71,"Renal cell carcinoma, NOS","Neoplasms, NOS",Kidney
+72,Ewing sarcoma,Ewing sarcoma,"Kidney, NOS"
+73,"Neoplasm, malignant","Neoplasms, NOS",Kidney
+74,Chromophobe RCC,Chromophobe Renal Cell Carcinoma,Kidney

@@ -1,33 +1,40 @@
 import abc
-from typing import Optional
+import typing
+
 import pandas as pd
-import phenopackets as PPkt
-
-
+import phenopackets as pp
 
 
 class OpMapper(metaclass=abc.ABCMeta):
     """
-    Superclass for mapper objects that map input data to Ontology classes.
-    Subclasses may create state in the constructor
+    `OpMapper` finds an ontology term based on a table row.
+
+    `OpMapper` transforms a row formatted into :class:`pd.Series` into an ontology term
+    of the GA4GH Phenopacket Schema.
+    For the CDA, we often need to transform combinations of strings in multiple columns into ontology terms.
+    Implementing subclasses check one or more columns, and create ontology terms, if possible,
+    based on this information. `None` is returned if a transformation is not possible.
+
+    The mapper uses a subset of the row fields and advertises the names of the required fields through
+    the :func:`get_fields` method. Absence of a required field will most likely raise an exception during parsing,
+    or return of `None`.
     """
+
+    def __init__(self, required_fields: typing.Iterable[str]):
+        # a `set` to deduplicate.
+        self._fields = tuple(set(required_fields))
 
     @abc.abstractmethod
-    def get_ontology_term(self, row:pd.Series) ->Optional[PPkt.OntologyClass]:
+    def get_ontology_term(self, row: pd.Series) -> typing.Optional[pp.OntologyClass]:
         """
-        The factory classes take pandas table rows (Series) as input and transform them into messages in the
-        GA4GH Phenopacket Schema. For the CDA, we often need to transform combinations of strings in multiple
-        columns into Ontology terms. Implementing subclasses check one or more columns and create ontology
-        terms if possible based on this information. They return None if a transformation is not possible.
+        Map the `row` into an ontology term.
 
-        :param row: a table row with information that we will transform into an ontology term
-        :type row: pd.core.Series
-        :return: A GA4GH Phenopacket Schema OntologyClass message or None
-        :rtype
+        :param row: a table row with information that we will transform into an ontology term.
         """
-        raise NotImplementedError("method needs to be implemented in subclass")
+        pass
 
-    """
-    def get_nci_term(self, string) -> Optional[PPkt.OntologyClass]:
-
-    """
+    def get_fields(self) -> typing.Sequence[str]:
+        """
+        Get a sequence of field names required by this mapper.
+        """
+        return self._fields

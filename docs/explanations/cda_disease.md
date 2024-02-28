@@ -7,18 +7,18 @@ We extract information about the disease diagnosis from two CDA tables, `diagnos
 ## diagnosis
 
 
-| Column          | Example        | Explanation |
-|:----------------|:---------------|:----------------|
-| diagnosis_id | CGCI-HTMCP-CC.HTMCP-03-06-02424.HTMCP-03-06-02424_diagnosis| y |
-| diagnosis_identifier | see below | y |
-| primary_diagnosis | Squamous cell carcinoma, keratinizing, NOS | y |
-| age_at_diagnosis | 13085.0 | y |
-| morphology | 8071/3 | y |
-| stage | None | y |
-| grade | G3 | y |
-| method_of_diagnosis | Biopsy | y |
-| subject_id | CGCI.HTMCP-03-06-02424 | y |
-| researchsubject_id | CGCI-HTMCP-CC.HTMCP-03-06-02424| y |
+| Column               | Example                                                     | Explanation |
+|:---------------------|:------------------------------------------------------------|:------------|
+| diagnosis_id         | CGCI-HTMCP-CC.HTMCP-03-06-02424.HTMCP-03-06-02424_diagnosis | y           |
+| diagnosis_identifier | see below                                                   | y           |
+| primary_diagnosis    | Squamous cell carcinoma, keratinizing, NOS                  | y           |
+| age_at_diagnosis     | 13085.0                                                     | y           |
+| morphology           | 8071/3                                                      | y           |
+| stage                | None                                                        | y           |
+| grade                | G3                                                          | y           |
+| method_of_diagnosis  | Biopsy                                                      | y           |
+| subject_id           | CGCI.HTMCP-03-06-02424                                      | y           |
+| researchsubject_id   | CGCI-HTMCP-CC.HTMCP-03-06-02424                             | y           |
 
 
 The fields of the table have the following meaning.
@@ -57,14 +57,14 @@ Identifier for the researchsubject (which can be a sample or an individaul - Que
 ## researchsubject
 
 
-| Column          | Example        | Explanation |
-|:----------------|:---------------|:----------------|
-| researchsubject_id | CPTAC-3.C3L-00563 | y |
-|  researchsubject_identifier     | see below | y |
-|   member_of_research_project    | CPTAC-3 | y |
-|  primary_diagnosis_condition     | Adenomas and Adenocarcinomas | y |
-|  primary_diagnosis_site     | Uterus, NOS  | y |
-|   subject_id    | CPTAC.C3L-00563 | y |
+| Column                         | Example                      | Explanation |
+|:-------------------------------|:-----------------------------|:------------|
+| researchsubject_id             | CPTAC-3.C3L-00563            | y           |
+| researchsubject_identifier     | see below                    | y           |
+| member_of_research_project     | CPTAC-3                      | y           |
+| primary_diagnosis_condition    | Adenomas and Adenocarcinomas | y           |
+| primary_diagnosis_site         | Uterus, NOS                  | y           |
+| subject_id                     | CPTAC.C3L-00563              | y           |
 
 
 - researchsubject_id

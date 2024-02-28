@@ -1,0 +1,27 @@
+,primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site
+0,"Neoplasm, malignant","Neoplasms, NOS",Thyroid gland
+1,Hurthle cell tumor,Adenomas and Adenocarcinomas,Thyroid gland
+2,"Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,Thyroid gland
+3,Nonencapsulated sclerosing carcinoma,Adenomas and Adenocarcinomas,Thyroid gland
+4,"Follicular carcinoma, minimally invasive",Adenomas and Adenocarcinomas,Thyroid gland
+5,Hyalinizing trabecular adenoma,Adenomas and Adenocarcinomas,Thyroid gland
+6,Not specified in data,Unknown,"Thyroid Gland, Unknown"
+7,Not specified in data,"Papillary carcinoma, NOS",Thyroid Gland
+8,Not specified in data,Unknown,Thyroid Gland
+9,Papillary Thyroid Carcinoma,"Papillary carcinoma, NOS",Thyroid Gland
+10,Not specified in data,"Papillary adenocarcinoma, NOS",Thyroid Gland
+11,Follicular hyperplasia/metastatic papillary thyroid cancer,"Papillary adenocarcinoma, NOS",Thyroid Gland
+12,Metastatic papillary thyroid carcinoma,"Papillary carcinoma, NOS",Thyroid Gland
+13,"Carcinoma, NOS","Epithelial Neoplasms, NOS",Thyroid gland
+14,"Carcinoma, anaplastic, NOS","Epithelial Neoplasms, NOS",Thyroid gland
+15,"Papillary carcinoma, NOS",Squamous Cell Neoplasms,Thyroid gland
+16,"Papillary adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Thyroid gland
+17,Oxyphilic adenocarcinoma,Adenomas and Adenocarcinomas,Thyroid gland
+18,"Follicular carcinoma, NOS",Adenomas and Adenocarcinomas,Thyroid gland
+19,"Follicular adenocarcinoma, NOS",Adenomas and Adenocarcinomas,Thyroid gland
+20,"Follicular adenocarcinoma, well differentiated",Adenomas and Adenocarcinomas,Thyroid gland
+21,Insular carcinoma,Adenomas and Adenocarcinomas,Thyroid gland
+22,Insular carcinoma,"Epithelial Neoplasms, NOS",Thyroid gland
+23,"Papillary carcinoma, follicular variant",Adenomas and Adenocarcinomas,Thyroid gland
+24,"Papillary carcinoma, columnar cell",Adenomas and Adenocarcinomas,Thyroid gland
+25,"Medullary carcinoma, NOS",Ductal and Lobular Neoplasms,Thyroid gland
