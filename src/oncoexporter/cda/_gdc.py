@@ -78,6 +78,7 @@ class GdcMutationService:
         vcf_record = self._parse_vcf_record(mutation)
 
         vd = pp.VariationDescriptor()
+        vd.id = mutation['id']
         if vcf_record is not None:
             vd.vcf_record.CopyFrom(vcf_record)
 
