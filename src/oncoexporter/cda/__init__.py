@@ -6,10 +6,11 @@ from .cda_individual_factory import CdaIndividualFactory
 from .cda_mutation_factory import CdaMutationFactory
 from .cda_table_importer import CdaTableImporter
 from .cda_medicalaction_factory import make_cda_medicalaction
-
+from ._gdc import GdcMutationService
 
 __all__ = [
     "CdaFactory",
     "CdaDiseaseFactory", "CdaIndividualFactory", "CdaBiosampleFactory", "CdaMutationFactory",
     "CdaTableImporter", "make_cda_medicalaction", "configure_cda_table_importer",
+    'GdcMutationService',
 ]
