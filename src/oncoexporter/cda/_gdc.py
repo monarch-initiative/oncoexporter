@@ -62,7 +62,7 @@ class GdcMutationService:
         filters = {
             "op": "in",
             "content": {
-                "field": "cases.case_id",
+                "field": "cases.submitter_id",
                 "value": [subject_id]
             }
         }
