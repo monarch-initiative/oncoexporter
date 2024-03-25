@@ -11,6 +11,7 @@ from .cda_factory import CdaFactory
 from .cda_individual_factory import CdaIndividualFactory
 from .cda_biosample_factory import CdaBiosampleFactory
 from .cda_mutation_factory import CdaMutationFactory
+from ._gdc import GdcMutationService
 from .cda_medicalaction_factory import make_cda_medicalaction
 from tqdm import tqdm
 
@@ -45,6 +46,7 @@ class CdaTableImporter(CdaImporter[Q]):
         self._disease_factory = disease_factory
         self._specimen_factory = CdaBiosampleFactory()
         self._mutation_factory = CdaMutationFactory()
+        self.gdc_mutation_service = GdcMutationService(timeout=100000)
 
         if cache_dir is None:
             self._cache_dir = os.path.join(os.getcwd(), '.oncoexporter_cache')
@@ -92,10 +94,23 @@ class CdaTableImporter(CdaImporter[Q]):
         diagnosis_df = self._get_cda_df(diagnosis_callable, f"{cohort_name}_diagnosis_df.pkl")
         print("obtained diagnosis_df")
         rsub_callable = lambda: q.researchsubject.run(page_size=self._page_size).get_all().to_dataframe()
-        rsub_df = self._get_cda_df(rsub_callable, f"{cohort_name}_rsub_df.pkl")
-        print("obtained rsub_df")
-        merged_df = pd.merge(diagnosis_df, rsub_df, left_on='researchsubject_id', right_on='researchsubject_id',
+        research_subject_df = self._get_cda_df(rsub_callable, f"{cohort_name}_research_subject_df.pkl")
+        print("obtained research_subject_df")
+        merged_df = pd.merge(diagnosis_df, research_subject_df, left_on='researchsubject_id', right_on='researchsubject_id',
                                 suffixes=["_di", "_rs"])
+        return merged_df
+
+    def get_merged_subject_research_subject_df(self, q: Q, cohort_name: str) -> pd.DataFrame:
+        """Retrieve a merged dataframe from CDA corresponding to the subject and research subject tables
+        """
+        subject_callable = lambda: q.subject.run(page_size=self._page_size).get_all().to_dataframe()
+        subject_df = self._get_cda_df(subject_callable, f"{cohort_name}_subject_df.pkl")
+        print("obtained subject_df")
+        rsub_callable = lambda: q.researchsubject.run(page_size=self._page_size).get_all().to_dataframe()
+        research_subject_df = self._get_cda_df(rsub_callable, f"{cohort_name}_research_subject_df.pkl")
+        print("obtained research_subject_df")
+        merged_df = pd.merge(subject_df, research_subject_df, left_on='subject_id', right_on='subject_id',
+                                suffixes=["_subj", "_rs"])
         return merged_df
 
     def get_specimen_df(self, q: Q, cohort_name: str) -> pd.DataFrame:
@@ -147,6 +162,7 @@ class CdaTableImporter(CdaImporter[Q]):
         specimen_df = self.get_specimen_df(source, cohort_name)
         treatment_df = self.get_treatment_df(source, cohort_name)
         mutation_df = self.get_mutation_df(source, cohort_name)
+        subj_rsub_df = self.get_merged_subject_research_subject_df(source, cohort_name)
 
         # Now use the CdaFactory classes to transform the information from the DataFrames into
         # components of the GA4GH Phenopacket Schema
@@ -196,37 +212,49 @@ class CdaTableImporter(CdaImporter[Q]):
 
             ppackt_d.get(individual_id).biosamples.append(biosample_message)
 
+        # Get variant data for each ResearchSubject in Subject
+        for _, row in tqdm(subj_rsub_df.iterrows(), total=subj_rsub_df.shape[0], desc="subject research subject dataframe"):
+            individual_id = row["subject_id"]
+            for rsub_subj in row["subject_identifier"]:
+                if rsub_subj["system"] == "GDC":
+                    variant_interpretations = self.gdc_mutation_service.fetch_variants(rsub_subj["value"])
+                    # TODO: plug above variant_interpretations into the phenopacket
 
-        # Retrieve GA4GH Genomic Interpretation messages (for mutation)
-        for idx, row in tqdm(mutation_df.iterrows(), total=len(mutation_df.index), desc="mutation dataframe"):
-            individual_id = row["cda_subject_id"]
-            variant_interpretation_message = self._mutation_factory.to_ga4gh(row)
-            genomic_interpretation = PPkt.GenomicInterpretation()
-            genomic_interpretation.subject_or_biosample_id = row["Tumor_Aliquot_UUID"]
-            genomic_interpretation.variant_interpretation.CopyFrom(variant_interpretation_message)
+        # TODO: remove below block of code that pulls mutation data from CDA instead of GDC
+        # # Retrieve GA4GH Genomic Interpretation messages (for mutation)
+        # for idx, row in tqdm(mutation_df.iterrows(), total=len(mutation_df.index), desc="mutation dataframe"):
+        #     individual_id = row["cda_subject_id"]
+        #     print(row["case_id"])
+        #     # variant_interpretation_message = self._mutation_factory.to_ga4gh(row)
+        #     variant_interpretation_messages = self.gdc_mutation_service.fetch_variants(row["case_id"])
 
-            pp = ppackt_d[individual_id]
-            if len(pp.interpretations) == 0:
-                diagnosis = PPkt.Diagnosis()
-                if len(pp.diseases) == 0:
-                    warnings.warn("Couldn't find a disease for this individual {individual_id}, so I'm using neoplasm")
-                    disease = PPkt.Disease()
-                    # assign neoplasm ncit
-                    disease.term.id = "NCIT:C3262"
-                    disease.term.label = "Neoplasm"
-                    pp.diseases.append(disease)
-                else:
-                    disease = pp.diseases[0]
-                diagnosis.disease.CopyFrom(disease.term)
-                diagnosis.genomic_interpretations.append(genomic_interpretation)
+        #     for variant_interpretation_message in variant_interpretation_messages:
+        #         genomic_interpretation = PPkt.GenomicInterpretation()
+        #         genomic_interpretation.subject_or_biosample_id = row["Tumor_Aliquot_UUID"]
+        #         genomic_interpretation.variant_interpretation.CopyFrom(variant_interpretation_message)
 
-                interpretation = PPkt.Interpretation()
-                interpretation.progress_status = PPkt.Interpretation.ProgressStatus.SOLVED
-                interpretation.id = "id"
-                interpretation.diagnosis.CopyFrom(diagnosis)
-                pp.interpretations.append(interpretation)
-            else:
-                pp.interpretations[0].diagnosis.genomic_interpretations.append(genomic_interpretation)
+        #     pp = ppackt_d[individual_id]
+        #     if len(pp.interpretations) == 0:
+        #         diagnosis = PPkt.Diagnosis()
+        #         if len(pp.diseases) == 0:
+        #             warnings.warn("Couldn't find a disease for this individual {individual_id}, so I'm using neoplasm")
+        #             disease = PPkt.Disease()
+        #             # assign neoplasm ncit
+        #             disease.term.id = "NCIT:C3262"
+        #             disease.term.label = "Neoplasm"
+        #             pp.diseases.append(disease)
+        #         else:
+        #             disease = pp.diseases[0]
+        #         diagnosis.disease.CopyFrom(disease.term)
+        #         diagnosis.genomic_interpretations.append(genomic_interpretation)
+
+        #         interpretation = PPkt.Interpretation()
+        #         interpretation.progress_status = PPkt.Interpretation.ProgressStatus.SOLVED
+        #         interpretation.id = "id"
+        #         interpretation.diagnosis.CopyFrom(diagnosis)
+        #         pp.interpretations.append(interpretation)
+        #     else:
+        #         pp.interpretations[0].diagnosis.genomic_interpretations.append(genomic_interpretation)
 
         # TODO Treatment
         # make_cda_medicalaction
