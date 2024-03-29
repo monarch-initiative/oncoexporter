@@ -62,7 +62,7 @@ class GdcMutationService:
         filters = {
             "op": "in",
             "content": {
-                "field": "cases.case_id",
+                "field": "cases.submitter_id",
                 "value": [subject_id]
             }
         }
@@ -71,10 +71,9 @@ class GdcMutationService:
             "filters": json.dumps(filters),
             "format": "JSON",
             "size": self._page_size,
-            "from": (self._page - 1) * self._page_size + 1,
         }
 
-    def _map_mutation_to_variant_interpretation(self, mutation) -> typing.Optional[pp.VariantInterpretation]:
+    def _map_mutation_to_variant_interpretation(self, mutation) -> pp.VariantInterpretation:
         vcf_record = self._parse_vcf_record(mutation)
 
         vd = pp.VariationDescriptor()
