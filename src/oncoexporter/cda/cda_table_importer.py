@@ -220,41 +220,28 @@ class CdaTableImporter(CdaImporter[Q]):
                     variant_interpretations = self.gdc_mutation_service.fetch_variants(rsub_subj["value"])
                     # TODO: plug above variant_interpretations into the phenopacket
 
-        # TODO: remove below block of code that pulls mutation data from CDA instead of GDC
-        # # Retrieve GA4GH Genomic Interpretation messages (for mutation)
-        # for idx, row in tqdm(mutation_df.iterrows(), total=len(mutation_df.index), desc="mutation dataframe"):
-        #     individual_id = row["cda_subject_id"]
-        #     print(row["case_id"])
-        #     # variant_interpretation_message = self._mutation_factory.to_ga4gh(row)
-        #     variant_interpretation_messages = self.gdc_mutation_service.fetch_variants(row["case_id"])
+                    if len(variant_interpretations) == 0:
+                        continue
 
-        #     for variant_interpretation_message in variant_interpretation_messages:
-        #         genomic_interpretation = PPkt.GenomicInterpretation()
-        #         genomic_interpretation.subject_or_biosample_id = row["Tumor_Aliquot_UUID"]
-        #         genomic_interpretation.variant_interpretation.CopyFrom(variant_interpretation_message)
+                    # TODO: improve/enhance diagnosis term annotations
+                    diagnosis = PPkt.Diagnosis()
+                    diagnosis.disease.id = "NCIT:C3262"
+                    diagnosis.disease.label = "Neoplasm"
 
-        #     pp = ppackt_d[individual_id]
-        #     if len(pp.interpretations) == 0:
-        #         diagnosis = PPkt.Diagnosis()
-        #         if len(pp.diseases) == 0:
-        #             warnings.warn("Couldn't find a disease for this individual {individual_id}, so I'm using neoplasm")
-        #             disease = PPkt.Disease()
-        #             # assign neoplasm ncit
-        #             disease.term.id = "NCIT:C3262"
-        #             disease.term.label = "Neoplasm"
-        #             pp.diseases.append(disease)
-        #         else:
-        #             disease = pp.diseases[0]
-        #         diagnosis.disease.CopyFrom(disease.term)
-        #         diagnosis.genomic_interpretations.append(genomic_interpretation)
+                    for variant in variant_interpretations:
+                        genomic_interpretation = PPkt.GenomicInterpretation()
+                        genomic_interpretation.subject_or_biosample_id = rsub_subj["value"]
+                        genomic_interpretation.interpretation_status = PPkt.GenomicInterpretation.InterpretationStatus.UNKNOWN_STATUS
+                        genomic_interpretation.variant_interpretation.CopyFrom(variant)
+                        
+                        diagnosis.genomic_interpretations.append(genomic_interpretation)
 
-        #         interpretation = PPkt.Interpretation()
-        #         interpretation.progress_status = PPkt.Interpretation.ProgressStatus.SOLVED
-        #         interpretation.id = "id"
-        #         interpretation.diagnosis.CopyFrom(diagnosis)
-        #         pp.interpretations.append(interpretation)
-        #     else:
-        #         pp.interpretations[0].diagnosis.genomic_interpretations.append(genomic_interpretation)
+                    interpretation = PPkt.Interpretation()
+                    interpretation.id = f"{individual_id}-{rsub_subj['value']}"
+                    interpretation.progress_status = PPkt.Interpretation.ProgressStatus.IN_PROGRESS 
+                    interpretation.diagnosis.CopyFrom(diagnosis)
+
+                    ppackt_d.get(individual_id).interpretations.append(interpretation)
 
         # TODO Treatment
         # make_cda_medicalaction

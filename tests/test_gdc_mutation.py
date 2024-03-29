@@ -3,7 +3,7 @@ import pytest
 from oncoexporter.cda import GdcMutationService
 
 
-# @pytest.mark.skip('Requires internet connection')
+@pytest.mark.skip('Requires internet connection')
 class TestGdcMutationService:
 
     @pytest.fixture
