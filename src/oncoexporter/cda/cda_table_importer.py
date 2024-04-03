@@ -38,6 +38,7 @@ class CdaTableImporter(CdaImporter[Q]):
                  use_cache: bool = False,
                  cache_dir: typing.Optional[str] = None,
                  page_size: int = 10000,
+                 gdc_timeout: int = 100_000,
                  ):
         self._use_cache = use_cache
         self._page_size = page_size
@@ -46,7 +47,7 @@ class CdaTableImporter(CdaImporter[Q]):
         self._disease_factory = disease_factory
         self._specimen_factory = CdaBiosampleFactory()
         self._mutation_factory = CdaMutationFactory()
-        self.gdc_mutation_service = GdcMutationService(timeout=100000)
+        self.gdc_mutation_service = GdcMutationService(timeout=gdc_timeout)
 
         if cache_dir is None:
             self._cache_dir = os.path.join(os.getcwd(), '.oncoexporter_cache')
