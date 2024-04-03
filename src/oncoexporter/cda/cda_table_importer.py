@@ -1,5 +1,4 @@
 import os
-import warnings
 from cdapython import Q
 import phenopackets as PPkt
 import typing
@@ -47,7 +46,7 @@ class CdaTableImporter(CdaImporter[Q]):
         self._disease_factory = disease_factory
         self._specimen_factory = CdaBiosampleFactory()
         self._mutation_factory = CdaMutationFactory()
-        self.gdc_mutation_service = GdcMutationService(timeout=gdc_timeout)
+        self._gdc_mutation_service = GdcMutationService(timeout=gdc_timeout)
 
         if cache_dir is None:
             self._cache_dir = os.path.join(os.getcwd(), '.oncoexporter_cache')
@@ -218,8 +217,7 @@ class CdaTableImporter(CdaImporter[Q]):
             individual_id = row["subject_id"]
             for rsub_subj in row["subject_identifier"]:
                 if rsub_subj["system"] == "GDC":
-                    variant_interpretations = self.gdc_mutation_service.fetch_variants(rsub_subj["value"])
-                    # TODO: plug above variant_interpretations into the phenopacket
+                    variant_interpretations = self._gdc_mutation_service.fetch_variants(rsub_subj["value"])
 
                     if len(variant_interpretations) == 0:
                         continue
