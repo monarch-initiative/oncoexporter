@@ -33,12 +33,12 @@ class CdaTableImporter(CdaImporter[Q]):
     """
 
     def __init__(self,
-                 disease_factory: CdaDiseaseFactory,
-                 use_cache: bool = False,
-                 cache_dir: typing.Optional[str] = None,
-                 page_size: int = 10000,
-                 gdc_timeout: int = 100_000,
-                 ):
+                disease_factory: CdaDiseaseFactory,
+                use_cache: bool = False,
+                cache_dir: typing.Optional[str] = None,
+                page_size: int = 10000,
+                gdc_timeout: int = 100000,
+                ):
         self._use_cache = use_cache
         self._page_size = page_size
 
@@ -218,9 +218,12 @@ class CdaTableImporter(CdaImporter[Q]):
             for rsub_subj in row["subject_identifier"]:
                 if rsub_subj["system"] == "GDC":
                     variant_interpretations = self._gdc_mutation_service.fetch_variants(rsub_subj["value"])
+                    vital_status = self._gdc_mutation_service.fetch_vital_status(rsub_subj["value"])
 
                     if len(variant_interpretations) == 0:
                         continue
+
+                    ppackt_d.get(individual_id).subject.vital_status.CopyFrom(vital_status)
 
                     # TODO: improve/enhance diagnosis term annotations
                     diagnosis = PPkt.Diagnosis()
