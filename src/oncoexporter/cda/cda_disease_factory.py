@@ -57,9 +57,17 @@ class CdaDiseaseFactory(CdaFactory):
             raise ValueError(f"Invalid argument. Expected pandas Series but got {type(row)}")
 
         if any(field not in row for field in self._required_fields):
-            missing = row.index.difference(self._required_fields)
-            raise ValueError(f'Required field(s) are missing: {missing.values}')
+            #missing = row.index.difference(self._required_fields) # this gets items in row not in _required_fields but we want the opposite
+            missing = []
+            print(row.index)
+            for i in self._required_fields:
+                print('i:', i)
+                if i not in row.index:
+                    print('not in row.index')
+                    missing.append(i)
 
+            raise ValueError(f'Required field(s) are missing: {missing}')
+            
         # This is the component we build here.
         disease = pp.Disease()
 
@@ -70,7 +78,10 @@ class CdaDiseaseFactory(CdaFactory):
         disease.term.CopyFrom(term)
 
         # We will interpret age_at_diagnosis as age of onset
-        iso8601_age_of_onset = self.days_to_iso(row['age_at_diagnosis'])
+        
+        # raise ValueError(f"days argument must be an int or a str but was {type(days)}")
+        # ValueError: days argument must be an int or a str but was <class 'pandas._libs.missing.NAType'>
+        iso8601_age_of_onset = self.days_to_iso(str(row['age_at_diagnosis']))
         if iso8601_age_of_onset is not None:
             disease.onset.age.iso8601duration = iso8601_age_of_onset
 

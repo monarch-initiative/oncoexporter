@@ -1,0 +1,2443 @@
+	treatment_id	days_to_treatment_end	days_to_treatment_start	number_of_cycles	therapeutic_agent	treatment_anatomic_site	treatment_effect	treatment_end_reason	treatment_outcome	treatment_type
+0	APOLLO-LUAD.AP-27JZ.AP-27JZ-Diagnosis-treat-1									Radiation Therapy
+1	APOLLO-LUAD.AP-27JZ.AP-27JZ-Diagnosis-treat-2									Chemotherapy
+2	APOLLO-LUAD.AP-352Q.AP-352Q-Diagnosis-treat-1									Radiation Therapy
+3	APOLLO-LUAD.AP-352Q.AP-352Q-Diagnosis-treat-2									Chemotherapy
+4	APOLLO-LUAD.AP-3FY5.AP-3FY5-Diagnosis-treat-1									Chemotherapy
+5	APOLLO-LUAD.AP-4LRG.AP-4LRG-Diagnosis-treat-1									Radiation Therapy
+6	APOLLO-LUAD.AP-5JDU.AP-5JDU-Diagnosis-treat-1									Radiation Therapy
+7	APOLLO-LUAD.AP-5JDU.AP-5JDU-Diagnosis-treat-2									Chemotherapy
+8	APOLLO-LUAD.AP-5L2V.AP-5L2V-Diagnosis-treat-1									Radiation Therapy
+9	APOLLO-LUAD.AP-5MX6.AP-5MX6-Diagnosis-treat-1									Radiation Therapy
+10	APOLLO-LUAD.AP-5MX6.AP-5MX6-Diagnosis-treat-2									Chemotherapy
+11	APOLLO-LUAD.AP-62LT.AP-62LT-Diagnosis-treat-1									Chemotherapy
+12	APOLLO-LUAD.AP-62LT.AP-62LT-Diagnosis-treat-2									Radiation Therapy
+13	APOLLO-LUAD.AP-67ZV.AP-67ZV-Diagnosis-treat-1									Radiation Therapy
+14	APOLLO-LUAD.AP-67ZV.AP-67ZV-Diagnosis-treat-2									Chemotherapy
+15	APOLLO-LUAD.AP-8MWD.AP-8MWD-Diagnosis-treat-1									Chemotherapy
+16	APOLLO-LUAD.AP-8PRJ.AP-8PRJ-Diagnosis-treat-1									Chemotherapy
+17	APOLLO-LUAD.AP-8PRJ.AP-8PRJ-Diagnosis-treat-2									Radiation Therapy
+18	APOLLO-LUAD.AP-8PRJ.AP-8PRJ-Diagnosis-treat-3									Chemotherapy
+19	APOLLO-LUAD.AP-9UHJ.AP-9UHJ-Diagnosis-treat-1									Chemotherapy
+20	APOLLO-LUAD.AP-AJWE.AP-AJWE-Diagnosis-treat-1									Radiation Therapy
+21	APOLLO-LUAD.AP-AJWE.AP-AJWE-Diagnosis-treat-2									Chemotherapy
+22	APOLLO-LUAD.AP-B9CH.AP-B9CH-Diagnosis-treat-1									Chemotherapy
+23	APOLLO-LUAD.AP-CT3G.AP-CT3G-Diagnosis-treat-1									Radiation Therapy
+24	APOLLO-LUAD.AP-D35H.AP-D35H-Diagnosis-treat-1									Radiation Therapy
+25	APOLLO-LUAD.AP-D35H.AP-D35H-Diagnosis-treat-2									Chemotherapy
+26	APOLLO-LUAD.AP-DM87.AP-DM87-Diagnosis-treat-1									Chemotherapy
+27	APOLLO-LUAD.AP-DMUM.AP-DMUM-Diagnosis-treat-1									Chemotherapy
+28	APOLLO-LUAD.AP-DT88.AP-DT88-Diagnosis-treat-1									Chemotherapy
+29	APOLLO-LUAD.AP-EFHT.AP-EFHT-Diagnosis-treat-1									Radiation Therapy
+30	APOLLO-LUAD.AP-EZEX.AP-EZEX-Diagnosis-treat-1									Radiation Therapy
+31	APOLLO-LUAD.AP-EZEX.AP-EZEX-Diagnosis-treat-2									Chemotherapy
+32	APOLLO-LUAD.AP-FX68.AP-FX68-Diagnosis-treat-1									Chemotherapy
+33	APOLLO-LUAD.AP-G79N.AP-G79N-Diagnosis-treat-1									Radiation Therapy
+34	APOLLO-LUAD.AP-G79N.AP-G79N-Diagnosis-treat-2									Chemotherapy
+35	APOLLO-LUAD.AP-HKYN.AP-HKYN-Diagnosis-treat-1									Radiation Therapy
+36	APOLLO-LUAD.AP-HKYN.AP-HKYN-Diagnosis-treat-2									Chemotherapy
+37	APOLLO-LUAD.AP-HMFR.AP-HMFR-Diagnosis-treat-1									Radiation Therapy
+38	APOLLO-LUAD.AP-HMFR.AP-HMFR-Diagnosis-treat-2									Chemotherapy
+39	APOLLO-LUAD.AP-JBET.AP-JBET-Diagnosis-treat-1									Radiation Therapy
+40	APOLLO-LUAD.AP-JBET.AP-JBET-Diagnosis-treat-2									Chemotherapy
+41	APOLLO-LUAD.AP-JDN4.AP-JDN4-Diagnosis-treat-1									Radiation Therapy
+42	APOLLO-LUAD.AP-JDN4.AP-JDN4-Diagnosis-treat-2									Chemotherapy
+43	APOLLO-LUAD.AP-JK59.AP-JK59-Diagnosis-treat-1									Radiation Therapy
+44	APOLLO-LUAD.AP-JK59.AP-JK59-Diagnosis-treat-2									Chemotherapy
+45	APOLLO-LUAD.AP-JKPX.AP-JKPX-Diagnosis-treat-1									Radiation Therapy
+46	APOLLO-LUAD.AP-JKPX.AP-JKPX-Diagnosis-treat-2									Chemotherapy
+47	APOLLO-LUAD.AP-KGMR.AP-KGMR-Diagnosis-treat-1									Chemotherapy
+48	APOLLO-LUAD.AP-KX5B.AP-KX5B-Diagnosis-treat-1									Chemotherapy
+49	APOLLO-LUAD.AP-KXUT.AP-KXUT-Diagnosis-treat-1									Radiation Therapy
+50	APOLLO-LUAD.AP-KXUT.AP-KXUT-Diagnosis-treat-2									Chemotherapy
+51	APOLLO-LUAD.AP-MAZ4.AP-MAZ4-Diagnosis-treat-1									Radiation Therapy
+52	APOLLO-LUAD.AP-MAZ4.AP-MAZ4-Diagnosis-treat-2									Chemotherapy
+53	APOLLO-LUAD.AP-MGNN.AP-MGNN-Diagnosis-treat-1									Chemotherapy
+54	APOLLO-LUAD.AP-QAHT.AP-QAHT-Diagnosis-treat-1									Chemotherapy
+55	APOLLO-LUAD.AP-QAHT.AP-QAHT-Diagnosis-treat-2									Chemotherapy
+56	APOLLO-LUAD.AP-QUHC.AP-QUHC-Diagnosis-treat-1									Radiation Therapy
+57	APOLLO-LUAD.AP-QUHC.AP-QUHC-Diagnosis-treat-2									Chemotherapy
+58	APOLLO-LUAD.AP-RA2G.AP-RA2G-Diagnosis-treat-1									Radiation Therapy
+59	APOLLO-LUAD.AP-RBLG.AP-RBLG-Diagnosis-treat-1									Radiation Therapy
+60	APOLLO-LUAD.AP-SJVE.AP-SJVE-Diagnosis-treat-1									Chemotherapy
+61	APOLLO-LUAD.AP-SJVE.AP-SJVE-Diagnosis-treat-2									Radiation Therapy
+62	APOLLO-LUAD.AP-SS2L.AP-SS2L-Diagnosis-treat-1									Chemotherapy
+63	APOLLO-LUAD.AP-TBFQ.AP-TBFQ-Diagnosis-treat-1									Radiation Therapy
+64	APOLLO-LUAD.AP-TBFQ.AP-TBFQ-Diagnosis-treat-2									Chemotherapy
+65	APOLLO-LUAD.AP-U8MP.AP-U8MP-Diagnosis-treat-1									Radiation Therapy
+66	APOLLO-LUAD.AP-U8MP.AP-U8MP-Diagnosis-treat-2									Chemotherapy
+67	APOLLO-LUAD.AP-V6UJ.AP-V6UJ-Diagnosis-treat-1									Chemotherapy
+68	APOLLO-LUAD.AP-VLXG.AP-VLXG-Diagnosis-treat-1									Radiation Therapy
+69	APOLLO-LUAD.AP-VLXG.AP-VLXG-Diagnosis-treat-2									Chemotherapy
+70	APOLLO-LUAD.AP-WDKZ.AP-WDKZ-Diagnosis-treat-1									Radiation Therapy
+71	APOLLO-LUAD.AP-WDKZ.AP-WDKZ-Diagnosis-treat-2									Chemotherapy
+72	APOLLO-LUAD.AP-WPAM.AP-WPAM-Diagnosis-treat-1									Radiation Therapy
+73	APOLLO-LUAD.AP-WPAM.AP-WPAM-Diagnosis-treat-2									Chemotherapy
+74	APOLLO-LUAD.AP-WTXJ.AP-WTXJ-Diagnosis-treat-1									Radiation Therapy
+75	APOLLO-LUAD.AP-WTXJ.AP-WTXJ-Diagnosis-treat-2									Chemotherapy
+76	APOLLO-LUAD.AP-XCJX.AP-XCJX-Diagnosis-treat-1									Radiation Therapy
+77	APOLLO-LUAD.AP-XCJX.AP-XCJX-Diagnosis-treat-2									Chemotherapy
+78	APOLLO-LUAD.AP-XVLY.AP-XVLY-Diagnosis-treat-1									Radiation Therapy
+79	APOLLO-LUAD.AP-XVLY.AP-XVLY-Diagnosis-treat-2									Chemotherapy
+80	APOLLO-LUAD.AP-YF3B.AP-YF3B-Diagnosis-treat-1									Radiation Therapy
+81	APOLLO-LUAD.AP-YF3B.AP-YF3B-Diagnosis-treat-2									Chemotherapy
+82	APOLLO-LUAD.AP-ZLDH.AP-ZLDH-Diagnosis-treat-1									Radiation Therapy
+83	APOLLO-LUAD.AP-ZLDH.AP-ZLDH-Diagnosis-treat-2									Chemotherapy
+84	CDDP_EAGLE-1.CDDP-A8B0.CDDP-A8B0_treatment									Radiation Therapy
+85	CDDP_EAGLE-1.CDDP-A8B0.CDDP-A8B0_treatment_1									Pharmacotherapy
+86	CDDP_EAGLE-1.CDDP-A8B5.CDDP-A8B5_treatment									Radiation Therapy
+87	CDDP_EAGLE-1.CDDP-A8B5.CDDP-A8B5_treatment_1									Pharmacotherapy
+88	CDDP_EAGLE-1.CDDP-A8B6.CDDP-A8B6_treatment									Radiation Therapy
+89	CDDP_EAGLE-1.CDDP-A8B6.CDDP-A8B6_treatment_1									Pharmacotherapy
+90	CDDP_EAGLE-1.CDDP-A8B7.CDDP-A8B7_treatment									Radiation Therapy
+91	CDDP_EAGLE-1.CDDP-A8B7.CDDP-A8B7_treatment_1									Pharmacotherapy
+92	CDDP_EAGLE-1.CDDP-A8B9.CDDP-A8B9_treatment									Radiation Therapy
+93	CDDP_EAGLE-1.CDDP-A8B9.CDDP-A8B9_treatment_1									Pharmacotherapy
+94	CDDP_EAGLE-1.CDDP-ABIW.CDDP-ABIW_treatment									Radiation Therapy
+95	CDDP_EAGLE-1.CDDP-ABIW.CDDP-ABIW_treatment_1									Pharmacotherapy
+96	CDDP_EAGLE-1.CDDP-ABIX.CDDP-ABIX_treatment									Radiation Therapy
+97	CDDP_EAGLE-1.CDDP-ABIX.CDDP-ABIX_treatment_1									Pharmacotherapy
+98	CDDP_EAGLE-1.CDDP-ABIZ.CDDP-ABIZ_treatment									Radiation Therapy
+99	CDDP_EAGLE-1.CDDP-ABIZ.CDDP-ABIZ_treatment_1									Pharmacotherapy
+100	CDDP_EAGLE-1.CDDP-ABJ3.CDDP-ABJ3_treatment									Radiation Therapy
+101	CDDP_EAGLE-1.CDDP-ABJ3.CDDP-ABJ3_treatment_1									Pharmacotherapy
+102	CDDP_EAGLE-1.CDDP-ABJ4.CDDP-ABJ4_treatment									Radiation Therapy
+103	CDDP_EAGLE-1.CDDP-ABJ4.CDDP-ABJ4_treatment_1									Pharmacotherapy
+104	CDDP_EAGLE-1.CDDP-ABJ9.CDDP-ABJ9_treatment									Radiation Therapy
+105	CDDP_EAGLE-1.CDDP-ABJ9.CDDP-ABJ9_treatment_1									Pharmacotherapy
+106	CDDP_EAGLE-1.CDDP-ABJH.CDDP-ABJH_treatment									Radiation Therapy
+107	CDDP_EAGLE-1.CDDP-ABJH.CDDP-ABJH_treatment_1									Pharmacotherapy
+108	CDDP_EAGLE-1.CDDP-ABJI.CDDP-ABJI_treatment									Radiation Therapy
+109	CDDP_EAGLE-1.CDDP-ABJI.CDDP-ABJI_treatment_1									Pharmacotherapy
+110	CDDP_EAGLE-1.CDDP-ABJO.CDDP-ABJO_treatment									Radiation Therapy
+111	CDDP_EAGLE-1.CDDP-ABJO.CDDP-ABJO_treatment_1									Pharmacotherapy
+112	CDDP_EAGLE-1.CDDP-ABJP.CDDP-ABJP_treatment									Radiation Therapy
+113	CDDP_EAGLE-1.CDDP-ABJP.CDDP-ABJP_treatment_1									Pharmacotherapy
+114	CDDP_EAGLE-1.CDDP-ABJZ.CDDP-ABJZ_treatment									Radiation Therapy
+115	CDDP_EAGLE-1.CDDP-ABJZ.CDDP-ABJZ_treatment_1									Pharmacotherapy
+116	CDDP_EAGLE-1.CDDP-ABK0.CDDP-ABK0_treatment									Radiation Therapy
+117	CDDP_EAGLE-1.CDDP-ABK0.CDDP-ABK0_treatment_1									Pharmacotherapy
+118	CDDP_EAGLE-1.CDDP-ABK3.CDDP-ABK3_treatment									Radiation Therapy
+119	CDDP_EAGLE-1.CDDP-ABK3.CDDP-ABK3_treatment_1									Pharmacotherapy
+120	CDDP_EAGLE-1.CDDP-ABK4.CDDP-ABK4_treatment									Radiation Therapy
+121	CDDP_EAGLE-1.CDDP-ABK4.CDDP-ABK4_treatment_1									Pharmacotherapy
+122	CDDP_EAGLE-1.CDDP-ABK9.CDDP-ABK9_treatment									Radiation Therapy
+123	CDDP_EAGLE-1.CDDP-ABK9.CDDP-ABK9_treatment_1									Pharmacotherapy
+124	CDDP_EAGLE-1.CDDP-ABKD.CDDP-ABKD_treatment									Radiation Therapy
+125	CDDP_EAGLE-1.CDDP-ABKD.CDDP-ABKD_treatment_1									Pharmacotherapy
+126	CDDP_EAGLE-1.CDDP-ABKE.CDDP-ABKE_treatment									Radiation Therapy
+127	CDDP_EAGLE-1.CDDP-ABKE.CDDP-ABKE_treatment_1									Pharmacotherapy
+128	CDDP_EAGLE-1.CDDP-ABKI.CDDP-ABKI_treatment									Radiation Therapy
+129	CDDP_EAGLE-1.CDDP-ABKI.CDDP-ABKI_treatment_1									Pharmacotherapy
+130	CDDP_EAGLE-1.CDDP-ABKU.CDDP-ABKU_treatment									Radiation Therapy
+131	CDDP_EAGLE-1.CDDP-ABKU.CDDP-ABKU_treatment_1									Pharmacotherapy
+132	CDDP_EAGLE-1.CDDP-ABKV.CDDP-ABKV_treatment									Radiation Therapy
+133	CDDP_EAGLE-1.CDDP-ABKV.CDDP-ABKV_treatment_1									Pharmacotherapy
+134	CDDP_EAGLE-1.CDDP-ABL4.CDDP-ABL4_treatment									Radiation Therapy
+135	CDDP_EAGLE-1.CDDP-ABL4.CDDP-ABL4_treatment_1									Pharmacotherapy
+136	CDDP_EAGLE-1.CDDP-ABL8.CDDP-ABL8_treatment									Radiation Therapy
+137	CDDP_EAGLE-1.CDDP-ABL8.CDDP-ABL8_treatment_1									Pharmacotherapy
+138	CDDP_EAGLE-1.CDDP-ABLE.CDDP-ABLE_treatment									Radiation Therapy
+139	CDDP_EAGLE-1.CDDP-ABLE.CDDP-ABLE_treatment_1									Pharmacotherapy
+140	CDDP_EAGLE-1.CDDP-ABLL.CDDP-ABLL_treatment									Radiation Therapy
+141	CDDP_EAGLE-1.CDDP-ABLL.CDDP-ABLL_treatment_1									Pharmacotherapy
+142	CDDP_EAGLE-1.CDDP-ABLQ.CDDP-ABLQ_treatment									Radiation Therapy
+143	CDDP_EAGLE-1.CDDP-ABLQ.CDDP-ABLQ_treatment_1									Pharmacotherapy
+144	CDDP_EAGLE-1.CDDP-ABM9.CDDP-ABM9_treatment									Radiation Therapy
+145	CDDP_EAGLE-1.CDDP-ABM9.CDDP-ABM9_treatment_1									Pharmacotherapy
+146	CDDP_EAGLE-1.CDDP-ACIT.CDDP-ACIT_treatment									Radiation Therapy
+147	CDDP_EAGLE-1.CDDP-ACIT.CDDP-ACIT_treatment_1									Pharmacotherapy
+148	CDDP_EAGLE-1.CDDP-ACIV.CDDP-ACIV_treatment									Radiation Therapy
+149	CDDP_EAGLE-1.CDDP-ACIV.CDDP-ACIV_treatment_1									Pharmacotherapy
+150	CDDP_EAGLE-1.CDDP-ACJ1.CDDP-ACJ1_treatment									Radiation Therapy
+151	CDDP_EAGLE-1.CDDP-ACJ1.CDDP-ACJ1_treatment_1									Pharmacotherapy
+152	CDDP_EAGLE-1.CDDP-ACK4.CDDP-ACK4_treatment									Radiation Therapy
+153	CDDP_EAGLE-1.CDDP-ACK4.CDDP-ACK4_treatment_1									Pharmacotherapy
+154	CDDP_EAGLE-1.CDDP-ACL2.CDDP-ACL2_treatment									Radiation Therapy
+155	CDDP_EAGLE-1.CDDP-ACL2.CDDP-ACL2_treatment_1									Pharmacotherapy
+156	CDDP_EAGLE-1.CDDP-ACLV.CDDP-ACLV_treatment									Radiation Therapy
+157	CDDP_EAGLE-1.CDDP-ACLV.CDDP-ACLV_treatment_1									Pharmacotherapy
+158	CDDP_EAGLE-1.CDDP-ACM1.CDDP-ACM1_treatment									Radiation Therapy
+159	CDDP_EAGLE-1.CDDP-ACM1.CDDP-ACM1_treatment_1									Pharmacotherapy
+160	CDDP_EAGLE-1.CDDP-ACM9.CDDP-ACM9_treatment									Radiation Therapy
+161	CDDP_EAGLE-1.CDDP-ACM9.CDDP-ACM9_treatment_1									Pharmacotherapy
+162	CDDP_EAGLE-1.CDDP-ACMK.CDDP-ACMK_treatment									Radiation Therapy
+163	CDDP_EAGLE-1.CDDP-ACMK.CDDP-ACMK_treatment_1									Pharmacotherapy
+164	CDDP_EAGLE-1.CDDP-ACNN.CDDP-ACNN_treatment									Radiation Therapy
+165	CDDP_EAGLE-1.CDDP-ACNN.CDDP-ACNN_treatment_1									Pharmacotherapy
+166	CDDP_EAGLE-1.CDDP-ACO6.CDDP-ACO6_treatment									Radiation Therapy
+167	CDDP_EAGLE-1.CDDP-ACO6.CDDP-ACO6_treatment_1									Pharmacotherapy
+168	CDDP_EAGLE-1.CDDP-ACPV.CDDP-ACPV_treatment									Radiation Therapy
+169	CDDP_EAGLE-1.CDDP-ACPV.CDDP-ACPV_treatment_1									Pharmacotherapy
+170	CDDP_EAGLE-1.CDDP-ACQ7.CDDP-ACQ7_treatment									Radiation Therapy
+171	CDDP_EAGLE-1.CDDP-ACQ7.CDDP-ACQ7_treatment_1									Pharmacotherapy
+172	CDDP_EAGLE-1.CDDP-ACQA.CDDP-ACQA_treatment									Radiation Therapy
+173	CDDP_EAGLE-1.CDDP-ACQA.CDDP-ACQA_treatment_1									Pharmacotherapy
+174	CDDP_EAGLE-1.CDDP-ACQQ.CDDP-ACQQ_treatment									Radiation Therapy
+175	CDDP_EAGLE-1.CDDP-ACQQ.CDDP-ACQQ_treatment_1									Pharmacotherapy
+176	CDDP_EAGLE-1.CDDP-ACR2.CDDP-ACR2_treatment									Radiation Therapy
+177	CDDP_EAGLE-1.CDDP-ACR2.CDDP-ACR2_treatment_1									Pharmacotherapy
+178	CDDP_EAGLE-1.CDDP-ACR8.CDDP-ACR8_treatment									Radiation Therapy
+179	CDDP_EAGLE-1.CDDP-ACR8.CDDP-ACR8_treatment_1									Pharmacotherapy
+180	CDDP_EAGLE-1.CDDP-ACRK.CDDP-ACRK_treatment									Radiation Therapy
+181	CDDP_EAGLE-1.CDDP-ACRK.CDDP-ACRK_treatment_1									Pharmacotherapy
+182	CDDP_EAGLE-1.CDDP-ACRT.CDDP-ACRT_treatment									Radiation Therapy
+183	CDDP_EAGLE-1.CDDP-ACRT.CDDP-ACRT_treatment_1									Pharmacotherapy
+184	CGCI-HTMCP-LC.HTMCP-02-01-01022.HTMCP-02-01-01022_treatment									
+185	CGCI-HTMCP-LC.HTMCP-02-01-01022.HTMCP-02-01-01022_treatment_1									Pharmacotherapy
+186	CGCI-HTMCP-LC.HTMCP-02-01-01022.HTMCP-02-01-01022_treatment_2									Radiation Therapy
+187	CGCI-HTMCP-LC.HTMCP-02-01-01248.HTMCP-02-01-01248_treatment									
+188	CGCI-HTMCP-LC.HTMCP-02-01-01248.HTMCP-02-01-01248_treatment_1									Pharmacotherapy
+189	CGCI-HTMCP-LC.HTMCP-02-01-01248.HTMCP-02-01-01248_treatment_2									Radiation Therapy
+190	CGCI-HTMCP-LC.HTMCP-02-01-01250.HTMCP-02-01-01250_treatment									
+191	CGCI-HTMCP-LC.HTMCP-02-01-01250.HTMCP-02-01-01250_treatment_1									Pharmacotherapy
+192	CGCI-HTMCP-LC.HTMCP-02-01-01250.HTMCP-02-01-01250_treatment_2									Radiation Therapy
+193	CGCI-HTMCP-LC.HTMCP-02-01-01251.HTMCP-02-01-01251_treatment									
+194	CGCI-HTMCP-LC.HTMCP-02-01-01251.HTMCP-02-01-01251_treatment_1									Pharmacotherapy
+195	CGCI-HTMCP-LC.HTMCP-02-01-01251.HTMCP-02-01-01251_treatment_2									Radiation Therapy
+196	CGCI-HTMCP-LC.HTMCP-02-01-01252.HTMCP-02-01-01252_treatment									
+197	CGCI-HTMCP-LC.HTMCP-02-01-01252.HTMCP-02-01-01252_treatment_1									Pharmacotherapy
+198	CGCI-HTMCP-LC.HTMCP-02-01-01252.HTMCP-02-01-01252_treatment_2									Radiation Therapy
+199	CGCI-HTMCP-LC.HTMCP-02-01-01254.HTMCP-02-01-01254_treatment									
+200	CGCI-HTMCP-LC.HTMCP-02-01-01254.HTMCP-02-01-01254_treatment_1									Pharmacotherapy
+201	CGCI-HTMCP-LC.HTMCP-02-01-01254.HTMCP-02-01-01254_treatment_2									Radiation Therapy
+202	CGCI-HTMCP-LC.HTMCP-02-01-01255.HTMCP-02-01-01255_treatment									
+203	CGCI-HTMCP-LC.HTMCP-02-01-01255.HTMCP-02-01-01255_treatment_1									Pharmacotherapy
+204	CGCI-HTMCP-LC.HTMCP-02-01-01255.HTMCP-02-01-01255_treatment_2									Radiation Therapy
+205	CGCI-HTMCP-LC.HTMCP-02-01-01256.HTMCP-02-01-01256_treatment									
+206	CGCI-HTMCP-LC.HTMCP-02-01-01256.HTMCP-02-01-01256_treatment_1									Pharmacotherapy
+207	CGCI-HTMCP-LC.HTMCP-02-01-01256.HTMCP-02-01-01256_treatment_2									Radiation Therapy
+208	CGCI-HTMCP-LC.HTMCP-02-03-01002.HTMCP-02-03-01002_treatment									
+209	CGCI-HTMCP-LC.HTMCP-02-03-01002.HTMCP-02-03-01002_treatment_1									Pharmacotherapy
+210	CGCI-HTMCP-LC.HTMCP-02-03-01002.HTMCP-02-03-01002_treatment_2									Radiation Therapy
+211	CGCI-HTMCP-LC.HTMCP-02-03-01003.HTMCP-02-03-01003_treatment									
+212	CGCI-HTMCP-LC.HTMCP-02-03-01003.HTMCP-02-03-01003_treatment_1									Pharmacotherapy
+213	CGCI-HTMCP-LC.HTMCP-02-03-01003.HTMCP-02-03-01003_treatment_2									Radiation Therapy
+214	CGCI-HTMCP-LC.HTMCP-02-03-01004.HTMCP-02-03-01004_treatment									
+215	CGCI-HTMCP-LC.HTMCP-02-03-01004.HTMCP-02-03-01004_treatment_1									Pharmacotherapy
+216	CGCI-HTMCP-LC.HTMCP-02-03-01004.HTMCP-02-03-01004_treatment_2									Radiation Therapy
+217	CGCI-HTMCP-LC.HTMCP-02-03-01005.HTMCP-02-03-01005_treatment									
+218	CGCI-HTMCP-LC.HTMCP-02-03-01005.HTMCP-02-03-01005_treatment_1									Pharmacotherapy
+219	CGCI-HTMCP-LC.HTMCP-02-03-01005.HTMCP-02-03-01005_treatment_2								Progressive Disease	Radiation Therapy
+220	CGCI-HTMCP-LC.HTMCP-02-03-01005.HTMCP-02-03-01005_treatment_3									
+221	CGCI-HTMCP-LC.HTMCP-02-03-01005.HTMCP-02-03-01005_treatment_4									Radiation Therapy
+222	CGCI-HTMCP-LC.HTMCP-02-03-01005.HTMCP-02-03-01005_treatment_5									Pharmacotherapy
+223	CGCI-HTMCP-LC.HTMCP-02-03-01006.HTMCP-02-03-01006_treatment									
+224	CGCI-HTMCP-LC.HTMCP-02-03-01006.HTMCP-02-03-01006_treatment_1									Pharmacotherapy
+225	CGCI-HTMCP-LC.HTMCP-02-03-01006.HTMCP-02-03-01006_treatment_2									Radiation Therapy
+226	CGCI-HTMCP-LC.HTMCP-02-03-01007.HTMCP-02-03-01007_treatment									
+227	CGCI-HTMCP-LC.HTMCP-02-03-01007.HTMCP-02-03-01007_treatment_1									Pharmacotherapy
+228	CGCI-HTMCP-LC.HTMCP-02-03-01007.HTMCP-02-03-01007_treatment_2									Radiation Therapy
+229	CGCI-HTMCP-LC.HTMCP-02-03-01010.HTMCP-02-03-01010_treatment									
+230	CGCI-HTMCP-LC.HTMCP-02-03-01010.HTMCP-02-03-01010_treatment_1									Pharmacotherapy
+231	CGCI-HTMCP-LC.HTMCP-02-03-01010.HTMCP-02-03-01010_treatment_2								Progressive Disease	Radiation Therapy
+232	CGCI-HTMCP-LC.HTMCP-02-03-01010.HTMCP-02-03-01010_treatment_3									Radiation Therapy
+233	CGCI-HTMCP-LC.HTMCP-02-03-01010.HTMCP-02-03-01010_treatment_4									Pharmacotherapy
+234	CGCI-HTMCP-LC.HTMCP-02-03-01010.HTMCP-02-03-01010_treatment_5	329	304						Progressive Disease	Radiation Therapy
+235	CGCI-HTMCP-LC.HTMCP-02-03-01016.HTMCP-02-03-01016_treatment									
+236	CGCI-HTMCP-LC.HTMCP-02-03-01016.HTMCP-02-03-01016_treatment_1									Pharmacotherapy
+237	CGCI-HTMCP-LC.HTMCP-02-03-01016.HTMCP-02-03-01016_treatment_2									Radiation Therapy
+238	CGCI-HTMCP-LC.HTMCP-02-03-01017.HTMCP-02-03-01017_treatment									
+239	CGCI-HTMCP-LC.HTMCP-02-03-01017.HTMCP-02-03-01017_treatment_1								Complete Response	Pharmacotherapy
+240	CGCI-HTMCP-LC.HTMCP-02-03-01017.HTMCP-02-03-01017_treatment_2								Complete Response	Radiation Therapy
+241	CGCI-HTMCP-LC.HTMCP-02-03-01018.HTMCP-02-03-01018_treatment									
+242	CGCI-HTMCP-LC.HTMCP-02-03-01018.HTMCP-02-03-01018_treatment_1									Pharmacotherapy
+243	CGCI-HTMCP-LC.HTMCP-02-03-01018.HTMCP-02-03-01018_treatment_2									Radiation Therapy
+244	CGCI-HTMCP-LC.HTMCP-02-03-01018.HTMCP-02-03-01018_treatment_3									
+245	CGCI-HTMCP-LC.HTMCP-02-03-01018.HTMCP-02-03-01018_treatment_4									Radiation Therapy
+246	CGCI-HTMCP-LC.HTMCP-02-03-01018.HTMCP-02-03-01018_treatment_5									Pharmacotherapy
+247	CGCI-HTMCP-LC.HTMCP-02-06-01032.HTMCP-02-06-01032_treatment									
+248	CGCI-HTMCP-LC.HTMCP-02-06-01032.HTMCP-02-06-01032_treatment_1									Pharmacotherapy
+249	CGCI-HTMCP-LC.HTMCP-02-06-01032.HTMCP-02-06-01032_treatment_2									Radiation Therapy
+250	CGCI-HTMCP-LC.HTMCP-02-06-01037.HTMCP-02-06-01037_treatment									
+251	CGCI-HTMCP-LC.HTMCP-02-06-01037.HTMCP-02-06-01037_treatment_1								Progressive Disease	Pharmacotherapy
+252	CGCI-HTMCP-LC.HTMCP-02-06-01037.HTMCP-02-06-01037_treatment_2									Radiation Therapy
+253	CGCI-HTMCP-LC.HTMCP-02-06-01037.HTMCP-02-06-01037_treatment_3									
+254	CGCI-HTMCP-LC.HTMCP-02-06-01037.HTMCP-02-06-01037_treatment_4									Radiation Therapy
+255	CGCI-HTMCP-LC.HTMCP-02-06-01037.HTMCP-02-06-01037_treatment_5									Pharmacotherapy
+256	CGCI-HTMCP-LC.HTMCP-02-06-01037.HTMCP-02-06-01037_treatment_6	134	8	6	Paclitaxel				Progressive Disease	Chemotherapy
+257	CGCI-HTMCP-LC.HTMCP-02-06-01037.HTMCP-02-06-01037_treatment_7	134	8	6	Carboplatin				Progressive Disease	Chemotherapy
+258	CGCI-HTMCP-LC.HTMCP-02-06-01037.HTMCP-02-06-01037_treatment_8		221		Erlotinib				Progressive Disease	Chemotherapy
+259	CGCI-HTMCP-LC.HTMCP-02-06-01050.HTMCP-02-06-01050_treatment									
+260	CGCI-HTMCP-LC.HTMCP-02-06-01050.HTMCP-02-06-01050_treatment_1									Pharmacotherapy
+261	CGCI-HTMCP-LC.HTMCP-02-06-01050.HTMCP-02-06-01050_treatment_2									Radiation Therapy
+262	CGCI-HTMCP-LC.HTMCP-02-06-01157.HTMCP-02-06-01157_treatment									
+263	CGCI-HTMCP-LC.HTMCP-02-06-01157.HTMCP-02-06-01157_treatment_1									Pharmacotherapy
+264	CGCI-HTMCP-LC.HTMCP-02-06-01157.HTMCP-02-06-01157_treatment_2									Radiation Therapy
+265	CGCI-HTMCP-LC.HTMCP-02-06-01158.HTMCP-02-06-01158_treatment									
+266	CGCI-HTMCP-LC.HTMCP-02-06-01158.HTMCP-02-06-01158_treatment_1									Pharmacotherapy
+267	CGCI-HTMCP-LC.HTMCP-02-06-01158.HTMCP-02-06-01158_treatment_2									Radiation Therapy
+268	CGCI-HTMCP-LC.HTMCP-02-06-01158.HTMCP-02-06-01158_treatment_3	21	21	1	Paclitaxel					Chemotherapy
+269	CGCI-HTMCP-LC.HTMCP-02-06-01158.HTMCP-02-06-01158_treatment_4	21	21	1	Carboplatin					Chemotherapy
+270	CGCI-HTMCP-LC.HTMCP-02-06-01162.HTMCP-02-06-01162_treatment									
+271	CGCI-HTMCP-LC.HTMCP-02-06-01162.HTMCP-02-06-01162_treatment_1								Progressive Disease	Pharmacotherapy
+272	CGCI-HTMCP-LC.HTMCP-02-06-01162.HTMCP-02-06-01162_treatment_2									Radiation Therapy
+273	CGCI-HTMCP-LC.HTMCP-02-06-01162.HTMCP-02-06-01162_treatment_3		9		Erlotinib				Progressive Disease	Chemotherapy
+274	CGCI-HTMCP-LC.HTMCP-02-06-01163.HTMCP-02-06-01163_treatment									
+275	CGCI-HTMCP-LC.HTMCP-02-06-01163.HTMCP-02-06-01163_treatment_1									Pharmacotherapy
+276	CGCI-HTMCP-LC.HTMCP-02-06-01163.HTMCP-02-06-01163_treatment_2									Radiation Therapy
+277	CGCI-HTMCP-LC.HTMCP-02-06-01163.HTMCP-02-06-01163_treatment_3	57	57	1	Not Otherwise Specified					Chemotherapy
+278	CGCI-HTMCP-LC.HTMCP-02-06-01163.HTMCP-02-06-01163_treatment_4	57	9	1	Erlotinib					Chemotherapy
+279	CGCI-HTMCP-LC.HTMCP-02-06-01164.HTMCP-02-06-01164_treatment									
+280	CGCI-HTMCP-LC.HTMCP-02-06-01164.HTMCP-02-06-01164_treatment_1									Pharmacotherapy
+281	CGCI-HTMCP-LC.HTMCP-02-06-01164.HTMCP-02-06-01164_treatment_2									Radiation Therapy
+282	CGCI-HTMCP-LC.HTMCP-02-07-01065.HTMCP-02-07-01065_treatment									
+283	CGCI-HTMCP-LC.HTMCP-02-07-01065.HTMCP-02-07-01065_treatment_1									Pharmacotherapy
+284	CGCI-HTMCP-LC.HTMCP-02-07-01065.HTMCP-02-07-01065_treatment_2									Radiation Therapy
+285	CGCI-HTMCP-LC.HTMCP-02-07-01066.HTMCP-02-07-01066_treatment									
+286	CGCI-HTMCP-LC.HTMCP-02-07-01066.HTMCP-02-07-01066_treatment_1									Pharmacotherapy
+287	CGCI-HTMCP-LC.HTMCP-02-07-01066.HTMCP-02-07-01066_treatment_2									Radiation Therapy
+288	CGCI-HTMCP-LC.HTMCP-02-07-01066.HTMCP-02-07-01066_treatment_3									
+289	CGCI-HTMCP-LC.HTMCP-02-07-01066.HTMCP-02-07-01066_treatment_4									Radiation Therapy
+290	CGCI-HTMCP-LC.HTMCP-02-07-01066.HTMCP-02-07-01066_treatment_5									Pharmacotherapy
+291	CGCI-HTMCP-LC.HTMCP-02-15-01090.HTMCP-02-15-01090_treatment									
+292	CGCI-HTMCP-LC.HTMCP-02-15-01090.HTMCP-02-15-01090_treatment_1								Progressive Disease	Pharmacotherapy
+293	CGCI-HTMCP-LC.HTMCP-02-15-01090.HTMCP-02-15-01090_treatment_2								Progressive Disease	Radiation Therapy
+294	CGCI-HTMCP-LC.HTMCP-02-15-01098.HTMCP-02-15-01098_treatment									
+295	CGCI-HTMCP-LC.HTMCP-02-15-01098.HTMCP-02-15-01098_treatment_1									Pharmacotherapy
+296	CGCI-HTMCP-LC.HTMCP-02-15-01098.HTMCP-02-15-01098_treatment_2									Radiation Therapy
+297	CGCI-HTMCP-LC.HTMCP-02-15-01099.HTMCP-02-15-01099_treatment									
+298	CGCI-HTMCP-LC.HTMCP-02-15-01099.HTMCP-02-15-01099_treatment_1									Pharmacotherapy
+299	CGCI-HTMCP-LC.HTMCP-02-15-01099.HTMCP-02-15-01099_treatment_2									Radiation Therapy
+300	CGCI-HTMCP-LC.HTMCP-02-25-01216.HTMCP-02-25-01216_treatment									
+301	CGCI-HTMCP-LC.HTMCP-02-25-01216.HTMCP-02-25-01216_treatment_1								Progressive Disease	Pharmacotherapy
+302	CGCI-HTMCP-LC.HTMCP-02-25-01216.HTMCP-02-25-01216_treatment_2									Radiation Therapy
+303	CGCI-HTMCP-LC.HTMCP-02-25-01217.HTMCP-02-25-01217_treatment									
+304	CGCI-HTMCP-LC.HTMCP-02-25-01217.HTMCP-02-25-01217_treatment_1									Pharmacotherapy
+305	CGCI-HTMCP-LC.HTMCP-02-25-01217.HTMCP-02-25-01217_treatment_2									Radiation Therapy
+306	CGCI-HTMCP-LC.HTMCP-02-25-01235.HTMCP-02-25-01235_treatment									
+307	CGCI-HTMCP-LC.HTMCP-02-25-01235.HTMCP-02-25-01235_treatment_1									Pharmacotherapy
+308	CGCI-HTMCP-LC.HTMCP-02-25-01235.HTMCP-02-25-01235_treatment_2									Radiation Therapy
+309	CGCI-HTMCP-LC.HTMCP-02-28-01225.HTMCP-02-28-01225_treatment									
+310	CGCI-HTMCP-LC.HTMCP-02-28-01225.HTMCP-02-28-01225_treatment_1								Complete Response	Pharmacotherapy
+311	CGCI-HTMCP-LC.HTMCP-02-28-01225.HTMCP-02-28-01225_treatment_2									Radiation Therapy
+312	CGCI-HTMCP-LC.HTMCP-02-31-01244.HTMCP-02-31-01244_treatment									
+313	CGCI-HTMCP-LC.HTMCP-02-31-01244.HTMCP-02-31-01244_treatment_1									Pharmacotherapy
+314	CGCI-HTMCP-LC.HTMCP-02-31-01244.HTMCP-02-31-01244_treatment_2								Complete Response	Radiation Therapy
+315	EXCEPTIONAL_RESPONDERS-ER.ER-ABOM.ER-ABOM_treatment		435		Afatinib					
+316	EXCEPTIONAL_RESPONDERS-ER.ER-ABOM.ER-ABOM_treatment2		424		Zoledronic Acid					
+317	EXCEPTIONAL_RESPONDERS-ER.ER-ABOT.ER-ABOT_treatment	131	19		Pemetrexed					
+318	EXCEPTIONAL_RESPONDERS-ER.ER-ABOT.ER-ABOT_treatment2	931	19		Carboplatin					
+319	EXCEPTIONAL_RESPONDERS-ER.ER-ABSF.ER-ABSF_treatment	131	19		Etoposide					
+320	EXCEPTIONAL_RESPONDERS-ER.ER-ABSF.ER-ABSF_treatment2	131	19		Cisplatin					
+321	EXCEPTIONAL_RESPONDERS-ER.ER-ABSF.ER-ABSF_treatment3		19		Zoledronic Acid					
+322	EXCEPTIONAL_RESPONDERS-ER.ER-ABV2.ER-ABV2_treatment	601	489		Docetaxel					
+323	EXCEPTIONAL_RESPONDERS-ER.ER-ABV2.ER-ABV2_treatment2	601	489		Bevacizumab					
+324	EXCEPTIONAL_RESPONDERS-ER.ER-AC6N.ER-AC6N_treatment	117	34		Cisplatin					
+325	EXCEPTIONAL_RESPONDERS-ER.ER-AC6N.ER-AC6N_treatment2	1953	34		Pemetrexed					
+326	EXCEPTIONAL_RESPONDERS-ER.ER-AC8A.ER-AC8A_treatment	140	14		Carboplatin					
+327	EXCEPTIONAL_RESPONDERS-ER.ER-AC8A.ER-AC8A_treatment2	142	15		Etoposide					
+328	EXCEPTIONAL_RESPONDERS-ER.ER-ACGR.ER-ACGR_treatment	139	34		Carboplatin					
+329	EXCEPTIONAL_RESPONDERS-ER.ER-ACGR.ER-ACGR_treatment2	160	34		Pemetrexed					
+330	EXCEPTIONAL_RESPONDERS-ER.ER-AD3D.ER-AD3D_treatment	352	84		Pemetrexed					
+331	EXCEPTIONAL_RESPONDERS-ER.ER-AD3D.ER-AD3D_treatment2	352	84		Cisplatin					
+332	EXCEPTIONAL_RESPONDERS-ER.ER-AD3D.ER-AD3D_treatment3	352	84		Bevacizumab					
+333	EXCEPTIONAL_RESPONDERS-ER.ER-ADRU.ER-ADRU_treatment	1107	736		Bevacizumab					
+334	EXCEPTIONAL_RESPONDERS-ER.ER-ADRU.ER-ADRU_treatment2	995	736		Pemetrexed					
+335	EXCEPTIONAL_RESPONDERS-ER.ER-ADRU.ER-ADRU_treatment3	953	736		Paclitaxel					
+336	EXCEPTIONAL_RESPONDERS-ER.ER-B0BP.ER-B0BP_treatment	317	13		Carboplatin					
+337	EXCEPTIONAL_RESPONDERS-ER.ER-B0BP.ER-B0BP_treatment2	317	13		Paclitaxel					
+338	EXCEPTIONAL_RESPONDERS-ER.ER-B0GM.ER-B0GM_treatment	589	111		Erlotinib					
+339	HCMI-CMDC.HCM-BROD-0007-C49.HCM-BROD-0007-C49_treatment				Vincristine					Chemotherapy
+340	HCMI-CMDC.HCM-BROD-0007-C49.HCM-BROD-0007-C49_treatment10				Doxorubicin				Progressive Disease	
+341	HCMI-CMDC.HCM-BROD-0007-C49.HCM-BROD-0007-C49_treatment11				Etoposide				Progressive Disease	
+342	HCMI-CMDC.HCM-BROD-0007-C49.HCM-BROD-0007-C49_treatment12								Progressive Disease	
+343	HCMI-CMDC.HCM-BROD-0007-C49.HCM-BROD-0007-C49_treatment13									Targeted Molecular Therapy
+344	HCMI-CMDC.HCM-BROD-0007-C49.HCM-BROD-0007-C49_treatment14									Chemotherapy
+345	HCMI-CMDC.HCM-BROD-0007-C49.HCM-BROD-0007-C49_treatment15									Immunotherapy
+346	HCMI-CMDC.HCM-BROD-0007-C49.HCM-BROD-0007-C49_treatment16									
+347	HCMI-CMDC.HCM-BROD-0007-C49.HCM-BROD-0007-C49_treatment17	519	488		Not Otherwise Specified					Targeted Molecular Therapy
+348	HCMI-CMDC.HCM-BROD-0007-C49.HCM-BROD-0007-C49_treatment18									Radiation Therapy
+349	HCMI-CMDC.HCM-BROD-0007-C49.HCM-BROD-0007-C49_treatment2				Ifosfamide					Chemotherapy
+350	HCMI-CMDC.HCM-BROD-0007-C49.HCM-BROD-0007-C49_treatment3				Cyclophosphamide					Chemotherapy
+351	HCMI-CMDC.HCM-BROD-0007-C49.HCM-BROD-0007-C49_treatment4				Doxorubicin					Chemotherapy
+352	HCMI-CMDC.HCM-BROD-0007-C49.HCM-BROD-0007-C49_treatment5				Etoposide					Chemotherapy
+353	HCMI-CMDC.HCM-BROD-0007-C49.HCM-BROD-0007-C49_treatment6									Chemotherapy
+354	HCMI-CMDC.HCM-BROD-0007-C49.HCM-BROD-0007-C49_treatment7				Vincristine				Progressive Disease	
+355	HCMI-CMDC.HCM-BROD-0007-C49.HCM-BROD-0007-C49_treatment8				Ifosfamide				Progressive Disease	
+356	HCMI-CMDC.HCM-BROD-0007-C49.HCM-BROD-0007-C49_treatment9				Cyclophosphamide				Progressive Disease	
+357	HCMI-CMDC.HCM-BROD-0027-C34.HCM-BROD-0027-C34_treatment									
+358	HCMI-CMDC.HCM-BROD-0027-C34.HCM-BROD-0027-C34_treatment2									Chemotherapy
+359	HCMI-CMDC.HCM-BROD-0027-C34.HCM-BROD-0027-C34_treatment3	1065	1022		Pembrolizumab				Treatment Ongoing	Immunotherapy
+360	HCMI-CMDC.HCM-BROD-0027-C34.HCM-BROD-0027-C34_treatment4									
+361	HCMI-CMDC.HCM-BROD-0027-C34.HCM-BROD-0027-C34_treatment5									Targeted Molecular Therapy
+362	HCMI-CMDC.HCM-BROD-0027-C34.HCM-BROD-0027-C34_treatment6	252	246							Stereotactic Radiosurgery
+363	HCMI-CMDC.HCM-BROD-0449-C34.HCM-BROD-0449-C34_treatment	232	232						Progressive Disease	
+364	HCMI-CMDC.HCM-BROD-0449-C34.HCM-BROD-0449-C34_treatment2		232							Stereotactic Radiosurgery
+365	HCMI-CMDC.HCM-BROD-0449-C34.HCM-BROD-0449-C34_treatment3		-14							
+366	HCMI-CMDC.HCM-BROD-0449-C34.HCM-BROD-0449-C34_treatment4									Pharmacotherapy
+367	HCMI-CMDC.HCM-BROD-0449-C34.HCM-BROD-0449-C34_treatment5	406	400							
+368	HCMI-CMDC.HCM-CSHL-0058-C34.HCM-CSHL-0058-C34_treatment									
+369	HCMI-CMDC.HCM-CSHL-0058-C34.HCM-CSHL-0058-C34_treatment2		8							
+370	HCMI-CMDC.HCM-CSHL-0058-C34.HCM-CSHL-0058-C34_treatment3									Pharmacotherapy
+371	HCMI-CMDC.HCM-CSHL-0058-C34.HCM-CSHL-0058-C34_treatment4									Radiation Therapy
+372	HCMI-CMDC.HCM-WCMC-0749-C34.HCM-WCMC-0749-C34_treatment									
+373	HCMI-CMDC.HCM-WCMC-0749-C34.HCM-WCMC-0749-C34_treatment2		262							
+374	HCMI-CMDC.HCM-WCMC-0749-C34.HCM-WCMC-0749-C34_treatment3									Pharmacotherapy
+375	HCMI-CMDC.HCM-WCMC-0749-C34.HCM-WCMC-0749-C34_treatment4									Radiation Therapy
+376	HCMI-CMDC.HCM-WCMC-0789-C34.HCM-WCMC-0789-C34_treatment									
+377	HCMI-CMDC.HCM-WCMC-0789-C34.HCM-WCMC-0789-C34_treatment2		25							
+378	HCMI-CMDC.HCM-WCMC-0789-C34.HCM-WCMC-0789-C34_treatment3									Pharmacotherapy
+379	HCMI-CMDC.HCM-WCMC-0789-C34.HCM-WCMC-0789-C34_treatment4									Radiation Therapy
+380	TCGA-LUAD.TCGA-05-4244.TCGA-05-4244_treatment									Radiation Therapy
+381	TCGA-LUAD.TCGA-05-4244.TCGA-05-4244_treatment_1									Pharmacotherapy
+382	TCGA-LUAD.TCGA-05-4245.TCGA-05-4245_treatment									Radiation Therapy
+383	TCGA-LUAD.TCGA-05-4245.TCGA-05-4245_treatment_1									Pharmacotherapy
+384	TCGA-LUAD.TCGA-05-4249.TCGA-05-4249_treatment									Radiation Therapy
+385	TCGA-LUAD.TCGA-05-4249.TCGA-05-4249_treatment_1									Pharmacotherapy
+386	TCGA-LUAD.TCGA-05-4250.TCGA-05-4250_treatment									Radiation Therapy
+387	TCGA-LUAD.TCGA-05-4250.TCGA-05-4250_treatment_1									Pharmacotherapy
+388	TCGA-LUAD.TCGA-05-4382.TCGA-05-4382_treatment									Radiation Therapy
+389	TCGA-LUAD.TCGA-05-4382.TCGA-05-4382_treatment_1									Pharmacotherapy
+390	TCGA-LUAD.TCGA-05-4384.TCGA-05-4384_treatment									Radiation Therapy
+391	TCGA-LUAD.TCGA-05-4384.TCGA-05-4384_treatment_1									Pharmacotherapy
+392	TCGA-LUAD.TCGA-05-4389.TCGA-05-4389_treatment									Radiation Therapy
+393	TCGA-LUAD.TCGA-05-4389.TCGA-05-4389_treatment_1									Pharmacotherapy
+394	TCGA-LUAD.TCGA-05-4390.TCGA-05-4390_treatment									Radiation Therapy
+395	TCGA-LUAD.TCGA-05-4390.TCGA-05-4390_treatment_1									Pharmacotherapy
+396	TCGA-LUAD.TCGA-05-4395.TCGA-05-4395_treatment									Radiation Therapy
+397	TCGA-LUAD.TCGA-05-4395.TCGA-05-4395_treatment_1									Pharmacotherapy
+398	TCGA-LUAD.TCGA-05-4396.TCGA-05-4396_treatment									Radiation Therapy
+399	TCGA-LUAD.TCGA-05-4396.TCGA-05-4396_treatment_1									Pharmacotherapy
+400	TCGA-LUAD.TCGA-05-4397.TCGA-05-4397_treatment									Radiation Therapy
+401	TCGA-LUAD.TCGA-05-4397.TCGA-05-4397_treatment_1									Pharmacotherapy
+402	TCGA-LUAD.TCGA-05-4398.TCGA-05-4398_treatment									Radiation Therapy
+403	TCGA-LUAD.TCGA-05-4398.TCGA-05-4398_treatment_1									Pharmacotherapy
+404	TCGA-LUAD.TCGA-05-4402.TCGA-05-4402_treatment									Radiation Therapy
+405	TCGA-LUAD.TCGA-05-4402.TCGA-05-4402_treatment_1									Pharmacotherapy
+406	TCGA-LUAD.TCGA-05-4403.TCGA-05-4403_treatment									Radiation Therapy
+407	TCGA-LUAD.TCGA-05-4403.TCGA-05-4403_treatment_1									Pharmacotherapy
+408	TCGA-LUAD.TCGA-05-4405.TCGA-05-4405_treatment									Radiation Therapy
+409	TCGA-LUAD.TCGA-05-4405.TCGA-05-4405_treatment_1									Pharmacotherapy
+410	TCGA-LUAD.TCGA-05-4410.TCGA-05-4410_treatment									Radiation Therapy
+411	TCGA-LUAD.TCGA-05-4410.TCGA-05-4410_treatment_1									Pharmacotherapy
+412	TCGA-LUAD.TCGA-05-4415.TCGA-05-4415_treatment									Radiation Therapy
+413	TCGA-LUAD.TCGA-05-4415.TCGA-05-4415_treatment_1									Pharmacotherapy
+414	TCGA-LUAD.TCGA-05-4417.TCGA-05-4417_treatment									Radiation Therapy
+415	TCGA-LUAD.TCGA-05-4417.TCGA-05-4417_treatment_1									Pharmacotherapy
+416	TCGA-LUAD.TCGA-05-4418.TCGA-05-4418_treatment									Radiation Therapy
+417	TCGA-LUAD.TCGA-05-4418.TCGA-05-4418_treatment_1									Pharmacotherapy
+418	TCGA-LUAD.TCGA-05-4420.TCGA-05-4420_treatment									Radiation Therapy
+419	TCGA-LUAD.TCGA-05-4420.TCGA-05-4420_treatment_1									Pharmacotherapy
+420	TCGA-LUAD.TCGA-05-4422.TCGA-05-4422_treatment									Radiation Therapy
+421	TCGA-LUAD.TCGA-05-4422.TCGA-05-4422_treatment_1									Pharmacotherapy
+422	TCGA-LUAD.TCGA-05-4424.TCGA-05-4424_treatment									Radiation Therapy
+423	TCGA-LUAD.TCGA-05-4424.TCGA-05-4424_treatment_1									Pharmacotherapy
+424	TCGA-LUAD.TCGA-05-4425.TCGA-05-4425_treatment									Radiation Therapy
+425	TCGA-LUAD.TCGA-05-4425.TCGA-05-4425_treatment_1									Pharmacotherapy
+426	TCGA-LUAD.TCGA-05-4426.TCGA-05-4426_treatment									Radiation Therapy
+427	TCGA-LUAD.TCGA-05-4426.TCGA-05-4426_treatment_1									Pharmacotherapy
+428	TCGA-LUAD.TCGA-05-4427.TCGA-05-4427_treatment									Radiation Therapy
+429	TCGA-LUAD.TCGA-05-4427.TCGA-05-4427_treatment_1									Pharmacotherapy
+430	TCGA-LUAD.TCGA-05-4430.TCGA-05-4430_treatment									Radiation Therapy
+431	TCGA-LUAD.TCGA-05-4430.TCGA-05-4430_treatment_1									Pharmacotherapy
+432	TCGA-LUAD.TCGA-05-4432.TCGA-05-4432_treatment									Radiation Therapy
+433	TCGA-LUAD.TCGA-05-4432.TCGA-05-4432_treatment_1									Pharmacotherapy
+434	TCGA-LUAD.TCGA-05-4433.TCGA-05-4433_treatment									Radiation Therapy
+435	TCGA-LUAD.TCGA-05-4433.TCGA-05-4433_treatment_1									Pharmacotherapy
+436	TCGA-LUAD.TCGA-05-4434.TCGA-05-4434_treatment									Radiation Therapy
+437	TCGA-LUAD.TCGA-05-4434.TCGA-05-4434_treatment_1									Pharmacotherapy
+438	TCGA-LUAD.TCGA-05-5420.TCGA-05-5420_treatment									Radiation Therapy
+439	TCGA-LUAD.TCGA-05-5420.TCGA-05-5420_treatment_1									Pharmacotherapy
+440	TCGA-LUAD.TCGA-05-5423.TCGA-05-5423_treatment									Radiation Therapy
+441	TCGA-LUAD.TCGA-05-5423.TCGA-05-5423_treatment_1									Pharmacotherapy
+442	TCGA-LUAD.TCGA-05-5425.TCGA-05-5425_treatment									Radiation Therapy
+443	TCGA-LUAD.TCGA-05-5425.TCGA-05-5425_treatment_1									Pharmacotherapy
+444	TCGA-LUAD.TCGA-05-5428.TCGA-05-5428_treatment									Radiation Therapy
+445	TCGA-LUAD.TCGA-05-5428.TCGA-05-5428_treatment_1									Pharmacotherapy
+446	TCGA-LUAD.TCGA-05-5429.TCGA-05-5429_treatment									Radiation Therapy
+447	TCGA-LUAD.TCGA-05-5429.TCGA-05-5429_treatment_1									Pharmacotherapy
+448	TCGA-LUAD.TCGA-05-5715.TCGA-05-5715_treatment									Radiation Therapy
+449	TCGA-LUAD.TCGA-05-5715.TCGA-05-5715_treatment_1									Pharmacotherapy
+450	TCGA-LUAD.TCGA-35-3615.TCGA-35-3615_treatment									Radiation Therapy
+451	TCGA-LUAD.TCGA-35-3615.TCGA-35-3615_treatment_1									Pharmacotherapy
+452	TCGA-LUAD.TCGA-35-4122.TCGA-35-4122_treatment									Radiation Therapy
+453	TCGA-LUAD.TCGA-35-4122.TCGA-35-4122_treatment_1									Pharmacotherapy
+454	TCGA-LUAD.TCGA-35-4123.TCGA-35-4123_treatment									Radiation Therapy
+455	TCGA-LUAD.TCGA-35-4123.TCGA-35-4123_treatment_1									Pharmacotherapy
+456	TCGA-LUAD.TCGA-35-5375.TCGA-35-5375_treatment									Radiation Therapy
+457	TCGA-LUAD.TCGA-35-5375.TCGA-35-5375_treatment_1									Pharmacotherapy
+458	TCGA-LUAD.TCGA-38-4625.TCGA-38-4625_treatment									Radiation Therapy
+459	TCGA-LUAD.TCGA-38-4625.TCGA-38-4625_treatment_1									Pharmacotherapy
+460	TCGA-LUAD.TCGA-38-4626.TCGA-38-4626_treatment									Radiation Therapy
+461	TCGA-LUAD.TCGA-38-4626.TCGA-38-4626_treatment_1									Pharmacotherapy
+462	TCGA-LUAD.TCGA-38-4627.TCGA-38-4627_treatment									Radiation Therapy
+463	TCGA-LUAD.TCGA-38-4627.TCGA-38-4627_treatment_1									Pharmacotherapy
+464	TCGA-LUAD.TCGA-38-4628.TCGA-38-4628_treatment									Radiation Therapy
+465	TCGA-LUAD.TCGA-38-4628.TCGA-38-4628_treatment_1									Pharmacotherapy
+466	TCGA-LUAD.TCGA-38-4629.TCGA-38-4629_treatment									Radiation Therapy
+467	TCGA-LUAD.TCGA-38-4629.TCGA-38-4629_treatment_1									Pharmacotherapy
+468	TCGA-LUAD.TCGA-38-4630.TCGA-38-4630_treatment									Radiation Therapy
+469	TCGA-LUAD.TCGA-38-4630.TCGA-38-4630_treatment_1									Pharmacotherapy
+470	TCGA-LUAD.TCGA-38-4631.TCGA-38-4631_treatment									Radiation Therapy
+471	TCGA-LUAD.TCGA-38-4631.TCGA-38-4631_treatment_1									Pharmacotherapy
+472	TCGA-LUAD.TCGA-38-4632.TCGA-38-4632_treatment									Radiation Therapy
+473	TCGA-LUAD.TCGA-38-4632.TCGA-38-4632_treatment_1									Pharmacotherapy
+474	TCGA-LUAD.TCGA-38-6178.TCGA-38-6178_treatment									Radiation Therapy
+475	TCGA-LUAD.TCGA-38-6178.TCGA-38-6178_treatment_1									Pharmacotherapy
+476	TCGA-LUAD.TCGA-38-7271.TCGA-38-7271_treatment									Radiation Therapy
+477	TCGA-LUAD.TCGA-38-7271.TCGA-38-7271_treatment_1									Pharmacotherapy
+478	TCGA-LUAD.TCGA-38-A44F.TCGA-38-A44F_treatment									Radiation Therapy
+479	TCGA-LUAD.TCGA-38-A44F.TCGA-38-A44F_treatment_1									Pharmacotherapy
+480	TCGA-LUAD.TCGA-44-2655.TCGA-44-2655_treatment									Radiation Therapy
+481	TCGA-LUAD.TCGA-44-2655.TCGA-44-2655_treatment_1									Pharmacotherapy
+482	TCGA-LUAD.TCGA-44-2656.TCGA-44-2656_treatment									Radiation Therapy
+483	TCGA-LUAD.TCGA-44-2656.TCGA-44-2656_treatment_1									Pharmacotherapy
+484	TCGA-LUAD.TCGA-44-2657.TCGA-44-2657_treatment									Radiation Therapy
+485	TCGA-LUAD.TCGA-44-2657.TCGA-44-2657_treatment_1									Pharmacotherapy
+486	TCGA-LUAD.TCGA-44-2659.TCGA-44-2659_treatment									Radiation Therapy
+487	TCGA-LUAD.TCGA-44-2659.TCGA-44-2659_treatment_1									Pharmacotherapy
+488	TCGA-LUAD.TCGA-44-2661.TCGA-44-2661_treatment									Radiation Therapy
+489	TCGA-LUAD.TCGA-44-2661.TCGA-44-2661_treatment_1									Pharmacotherapy
+490	TCGA-LUAD.TCGA-44-2662.TCGA-44-2662_treatment									Radiation Therapy
+491	TCGA-LUAD.TCGA-44-2662.TCGA-44-2662_treatment_1									Pharmacotherapy
+492	TCGA-LUAD.TCGA-44-2664.TCGA-44-2664_treatment									Radiation Therapy
+493	TCGA-LUAD.TCGA-44-2664.TCGA-44-2664_treatment_1									Pharmacotherapy
+494	TCGA-LUAD.TCGA-44-2665.TCGA-44-2665_treatment									Radiation Therapy
+495	TCGA-LUAD.TCGA-44-2665.TCGA-44-2665_treatment_1									Pharmacotherapy
+496	TCGA-LUAD.TCGA-44-2666.TCGA-44-2666_treatment									Radiation Therapy
+497	TCGA-LUAD.TCGA-44-2666.TCGA-44-2666_treatment_1									Pharmacotherapy
+498	TCGA-LUAD.TCGA-44-2668.TCGA-44-2668_treatment									Radiation Therapy
+499	TCGA-LUAD.TCGA-44-2668.TCGA-44-2668_treatment_1									Pharmacotherapy
+500	TCGA-LUAD.TCGA-44-3396.TCGA-44-3396_treatment									Radiation Therapy
+501	TCGA-LUAD.TCGA-44-3396.TCGA-44-3396_treatment_1									Pharmacotherapy
+502	TCGA-LUAD.TCGA-44-3398.TCGA-44-3398_treatment									Radiation Therapy
+503	TCGA-LUAD.TCGA-44-3398.TCGA-44-3398_treatment_1									Pharmacotherapy
+504	TCGA-LUAD.TCGA-44-3917.TCGA-44-3917_treatment									Radiation Therapy
+505	TCGA-LUAD.TCGA-44-3917.TCGA-44-3917_treatment_1									Pharmacotherapy
+506	TCGA-LUAD.TCGA-44-3918.TCGA-44-3918_treatment									Radiation Therapy
+507	TCGA-LUAD.TCGA-44-3918.TCGA-44-3918_treatment_1									Pharmacotherapy
+508	TCGA-LUAD.TCGA-44-3919.TCGA-44-3919_treatment									Radiation Therapy
+509	TCGA-LUAD.TCGA-44-3919.TCGA-44-3919_treatment_1									Pharmacotherapy
+510	TCGA-LUAD.TCGA-44-4112.TCGA-44-4112_treatment									Radiation Therapy
+511	TCGA-LUAD.TCGA-44-4112.TCGA-44-4112_treatment_1									Pharmacotherapy
+512	TCGA-LUAD.TCGA-44-5643.TCGA-44-5643_treatment									Radiation Therapy
+513	TCGA-LUAD.TCGA-44-5643.TCGA-44-5643_treatment_1									Pharmacotherapy
+514	TCGA-LUAD.TCGA-44-5644.TCGA-44-5644_treatment									Radiation Therapy
+515	TCGA-LUAD.TCGA-44-5644.TCGA-44-5644_treatment_1									Pharmacotherapy
+516	TCGA-LUAD.TCGA-44-5645.TCGA-44-5645_treatment									Radiation Therapy
+517	TCGA-LUAD.TCGA-44-5645.TCGA-44-5645_treatment_1									Pharmacotherapy
+518	TCGA-LUAD.TCGA-44-6144.TCGA-44-6144_treatment									Radiation Therapy
+519	TCGA-LUAD.TCGA-44-6144.TCGA-44-6144_treatment_1									Pharmacotherapy
+520	TCGA-LUAD.TCGA-44-6145.TCGA-44-6145_treatment									Radiation Therapy
+521	TCGA-LUAD.TCGA-44-6145.TCGA-44-6145_treatment_1									Pharmacotherapy
+522	TCGA-LUAD.TCGA-44-6146.TCGA-44-6146_treatment									Radiation Therapy
+523	TCGA-LUAD.TCGA-44-6146.TCGA-44-6146_treatment_1									Pharmacotherapy
+524	TCGA-LUAD.TCGA-44-6147.TCGA-44-6147_treatment									Radiation Therapy
+525	TCGA-LUAD.TCGA-44-6147.TCGA-44-6147_treatment_1									Pharmacotherapy
+526	TCGA-LUAD.TCGA-44-6148.TCGA-44-6148_treatment									Radiation Therapy
+527	TCGA-LUAD.TCGA-44-6148.TCGA-44-6148_treatment_1									Pharmacotherapy
+528	TCGA-LUAD.TCGA-44-6774.TCGA-44-6774_treatment									Radiation Therapy
+529	TCGA-LUAD.TCGA-44-6774.TCGA-44-6774_treatment_1									Pharmacotherapy
+530	TCGA-LUAD.TCGA-44-6775.TCGA-44-6775_treatment									Radiation Therapy
+531	TCGA-LUAD.TCGA-44-6775.TCGA-44-6775_treatment_1									Pharmacotherapy
+532	TCGA-LUAD.TCGA-44-6776.TCGA-44-6776_treatment									Radiation Therapy
+533	TCGA-LUAD.TCGA-44-6776.TCGA-44-6776_treatment_1									Pharmacotherapy
+534	TCGA-LUAD.TCGA-44-6777.TCGA-44-6777_treatment									Radiation Therapy
+535	TCGA-LUAD.TCGA-44-6777.TCGA-44-6777_treatment_1									Pharmacotherapy
+536	TCGA-LUAD.TCGA-44-6778.TCGA-44-6778_treatment									Radiation Therapy
+537	TCGA-LUAD.TCGA-44-6778.TCGA-44-6778_treatment_1									Pharmacotherapy
+538	TCGA-LUAD.TCGA-44-6779.TCGA-44-6779_treatment									Radiation Therapy
+539	TCGA-LUAD.TCGA-44-6779.TCGA-44-6779_treatment_1									Pharmacotherapy
+540	TCGA-LUAD.TCGA-44-7659.TCGA-44-7659_treatment									Radiation Therapy
+541	TCGA-LUAD.TCGA-44-7659.TCGA-44-7659_treatment_1									Pharmacotherapy
+542	TCGA-LUAD.TCGA-44-7660.TCGA-44-7660_treatment									Radiation Therapy
+543	TCGA-LUAD.TCGA-44-7660.TCGA-44-7660_treatment_1									Pharmacotherapy
+544	TCGA-LUAD.TCGA-44-7661.TCGA-44-7661_treatment									Radiation Therapy
+545	TCGA-LUAD.TCGA-44-7661.TCGA-44-7661_treatment_1									Pharmacotherapy
+546	TCGA-LUAD.TCGA-44-7662.TCGA-44-7662_treatment									Radiation Therapy
+547	TCGA-LUAD.TCGA-44-7662.TCGA-44-7662_treatment_1									Pharmacotherapy
+548	TCGA-LUAD.TCGA-44-7667.TCGA-44-7667_treatment									Radiation Therapy
+549	TCGA-LUAD.TCGA-44-7667.TCGA-44-7667_treatment_1									Pharmacotherapy
+550	TCGA-LUAD.TCGA-44-7669.TCGA-44-7669_treatment									Radiation Therapy
+551	TCGA-LUAD.TCGA-44-7669.TCGA-44-7669_treatment_1									Pharmacotherapy
+552	TCGA-LUAD.TCGA-44-7670.TCGA-44-7670_treatment									Radiation Therapy
+553	TCGA-LUAD.TCGA-44-7670.TCGA-44-7670_treatment_1									Pharmacotherapy
+554	TCGA-LUAD.TCGA-44-7671.TCGA-44-7671_treatment									Radiation Therapy
+555	TCGA-LUAD.TCGA-44-7671.TCGA-44-7671_treatment_1									Pharmacotherapy
+556	TCGA-LUAD.TCGA-44-7672.TCGA-44-7672_treatment									Radiation Therapy
+557	TCGA-LUAD.TCGA-44-7672.TCGA-44-7672_treatment_1									Pharmacotherapy
+558	TCGA-LUAD.TCGA-44-8117.TCGA-44-8117_treatment									Radiation Therapy
+559	TCGA-LUAD.TCGA-44-8117.TCGA-44-8117_treatment_1									Pharmacotherapy
+560	TCGA-LUAD.TCGA-44-8119.TCGA-44-8119_treatment									Radiation Therapy
+561	TCGA-LUAD.TCGA-44-8119.TCGA-44-8119_treatment_1									Pharmacotherapy
+562	TCGA-LUAD.TCGA-44-8120.TCGA-44-8120_treatment									Radiation Therapy
+563	TCGA-LUAD.TCGA-44-8120.TCGA-44-8120_treatment_1									Pharmacotherapy
+564	TCGA-LUAD.TCGA-44-A479.TCGA-44-A479_treatment									Radiation Therapy
+565	TCGA-LUAD.TCGA-44-A479.TCGA-44-A479_treatment_1									Pharmacotherapy
+566	TCGA-LUAD.TCGA-44-A47A.TCGA-44-A47A_treatment									Radiation Therapy
+567	TCGA-LUAD.TCGA-44-A47A.TCGA-44-A47A_treatment_1									Pharmacotherapy
+568	TCGA-LUAD.TCGA-44-A47B.TCGA-44-A47B_treatment									Radiation Therapy
+569	TCGA-LUAD.TCGA-44-A47B.TCGA-44-A47B_treatment_1									Pharmacotherapy
+570	TCGA-LUAD.TCGA-44-A47F.TCGA-44-A47F_treatment									Radiation Therapy
+571	TCGA-LUAD.TCGA-44-A47F.TCGA-44-A47F_treatment_1									Pharmacotherapy
+572	TCGA-LUAD.TCGA-44-A47G.TCGA-44-A47G_treatment									Radiation Therapy
+573	TCGA-LUAD.TCGA-44-A47G.TCGA-44-A47G_treatment_1									Pharmacotherapy
+574	TCGA-LUAD.TCGA-44-A4SS.TCGA-44-A4SS_treatment									Radiation Therapy
+575	TCGA-LUAD.TCGA-44-A4SS.TCGA-44-A4SS_treatment_1									Pharmacotherapy
+576	TCGA-LUAD.TCGA-44-A4SU.TCGA-44-A4SU_treatment									Radiation Therapy
+577	TCGA-LUAD.TCGA-44-A4SU.TCGA-44-A4SU_treatment_1									Pharmacotherapy
+578	TCGA-LUAD.TCGA-49-4486.TCGA-49-4486_treatment									Radiation Therapy
+579	TCGA-LUAD.TCGA-49-4486.TCGA-49-4486_treatment_1									Pharmacotherapy
+580	TCGA-LUAD.TCGA-49-4487.TCGA-49-4487_treatment									Radiation Therapy
+581	TCGA-LUAD.TCGA-49-4487.TCGA-49-4487_treatment_1									Pharmacotherapy
+582	TCGA-LUAD.TCGA-49-4488.TCGA-49-4488_treatment									Radiation Therapy
+583	TCGA-LUAD.TCGA-49-4488.TCGA-49-4488_treatment_1									Pharmacotherapy
+584	TCGA-LUAD.TCGA-49-4490.TCGA-49-4490_treatment									Radiation Therapy
+585	TCGA-LUAD.TCGA-49-4490.TCGA-49-4490_treatment_1									Pharmacotherapy
+586	TCGA-LUAD.TCGA-49-4494.TCGA-49-4494_treatment									Radiation Therapy
+587	TCGA-LUAD.TCGA-49-4494.TCGA-49-4494_treatment_1									Pharmacotherapy
+588	TCGA-LUAD.TCGA-49-4501.TCGA-49-4501_treatment									Radiation Therapy
+589	TCGA-LUAD.TCGA-49-4501.TCGA-49-4501_treatment_1									Pharmacotherapy
+590	TCGA-LUAD.TCGA-49-4505.TCGA-49-4505_treatment									Radiation Therapy
+591	TCGA-LUAD.TCGA-49-4505.TCGA-49-4505_treatment_1									Pharmacotherapy
+592	TCGA-LUAD.TCGA-49-4506.TCGA-49-4506_treatment									Radiation Therapy
+593	TCGA-LUAD.TCGA-49-4506.TCGA-49-4506_treatment_1									Pharmacotherapy
+594	TCGA-LUAD.TCGA-49-4507.TCGA-49-4507_treatment									Radiation Therapy
+595	TCGA-LUAD.TCGA-49-4507.TCGA-49-4507_treatment_1									Pharmacotherapy
+596	TCGA-LUAD.TCGA-49-4510.TCGA-49-4510_treatment									Radiation Therapy
+597	TCGA-LUAD.TCGA-49-4510.TCGA-49-4510_treatment_1									Pharmacotherapy
+598	TCGA-LUAD.TCGA-49-4512.TCGA-49-4512_treatment									Radiation Therapy
+599	TCGA-LUAD.TCGA-49-4512.TCGA-49-4512_treatment_1									Pharmacotherapy
+600	TCGA-LUAD.TCGA-49-4514.TCGA-49-4514_treatment									Radiation Therapy
+601	TCGA-LUAD.TCGA-49-4514.TCGA-49-4514_treatment_1									Pharmacotherapy
+602	TCGA-LUAD.TCGA-49-6742.TCGA-49-6742_treatment									Radiation Therapy
+603	TCGA-LUAD.TCGA-49-6742.TCGA-49-6742_treatment_1									Pharmacotherapy
+604	TCGA-LUAD.TCGA-49-6743.TCGA-49-6743_treatment									Radiation Therapy
+605	TCGA-LUAD.TCGA-49-6743.TCGA-49-6743_treatment_1									Pharmacotherapy
+606	TCGA-LUAD.TCGA-49-6744.TCGA-49-6744_treatment									Radiation Therapy
+607	TCGA-LUAD.TCGA-49-6744.TCGA-49-6744_treatment_1									Pharmacotherapy
+608	TCGA-LUAD.TCGA-49-6745.TCGA-49-6745_treatment									Radiation Therapy
+609	TCGA-LUAD.TCGA-49-6745.TCGA-49-6745_treatment_1									Pharmacotherapy
+610	TCGA-LUAD.TCGA-49-6761.TCGA-49-6761_treatment									Radiation Therapy
+611	TCGA-LUAD.TCGA-49-6761.TCGA-49-6761_treatment_1									Pharmacotherapy
+612	TCGA-LUAD.TCGA-49-6767.TCGA-49-6767_treatment									Radiation Therapy
+613	TCGA-LUAD.TCGA-49-6767.TCGA-49-6767_treatment_1									Pharmacotherapy
+614	TCGA-LUAD.TCGA-49-AAQV.TCGA-49-AAQV_treatment									Radiation Therapy
+615	TCGA-LUAD.TCGA-49-AAQV.TCGA-49-AAQV_treatment_1									Pharmacotherapy
+616	TCGA-LUAD.TCGA-49-AAR0.TCGA-49-AAR0_treatment									Radiation Therapy
+617	TCGA-LUAD.TCGA-49-AAR0.TCGA-49-AAR0_treatment_1									Pharmacotherapy
+618	TCGA-LUAD.TCGA-49-AAR2.TCGA-49-AAR2_treatment									Radiation Therapy
+619	TCGA-LUAD.TCGA-49-AAR2.TCGA-49-AAR2_treatment_1									Pharmacotherapy
+620	TCGA-LUAD.TCGA-49-AAR3.TCGA-49-AAR3_treatment									Radiation Therapy
+621	TCGA-LUAD.TCGA-49-AAR3.TCGA-49-AAR3_treatment_1									Pharmacotherapy
+622	TCGA-LUAD.TCGA-49-AAR4.TCGA-49-AAR4_treatment									Radiation Therapy
+623	TCGA-LUAD.TCGA-49-AAR4.TCGA-49-AAR4_treatment_1									Pharmacotherapy
+624	TCGA-LUAD.TCGA-49-AAR9.TCGA-49-AAR9_treatment									Radiation Therapy
+625	TCGA-LUAD.TCGA-49-AAR9.TCGA-49-AAR9_treatment_1									Pharmacotherapy
+626	TCGA-LUAD.TCGA-49-AARE.TCGA-49-AARE_treatment									Radiation Therapy
+627	TCGA-LUAD.TCGA-49-AARE.TCGA-49-AARE_treatment_1									Pharmacotherapy
+628	TCGA-LUAD.TCGA-49-AARN.TCGA-49-AARN_treatment									Radiation Therapy
+629	TCGA-LUAD.TCGA-49-AARN.TCGA-49-AARN_treatment_1									Pharmacotherapy
+630	TCGA-LUAD.TCGA-49-AARO.TCGA-49-AARO_treatment									Radiation Therapy
+631	TCGA-LUAD.TCGA-49-AARO.TCGA-49-AARO_treatment_1									Pharmacotherapy
+632	TCGA-LUAD.TCGA-49-AARQ.TCGA-49-AARQ_treatment									Radiation Therapy
+633	TCGA-LUAD.TCGA-49-AARQ.TCGA-49-AARQ_treatment_1									Pharmacotherapy
+634	TCGA-LUAD.TCGA-49-AARR.TCGA-49-AARR_treatment									Radiation Therapy
+635	TCGA-LUAD.TCGA-49-AARR.TCGA-49-AARR_treatment_1									Pharmacotherapy
+636	TCGA-LUAD.TCGA-4B-A93V.TCGA-4B-A93V_treatment									Radiation Therapy
+637	TCGA-LUAD.TCGA-4B-A93V.TCGA-4B-A93V_treatment_1									Pharmacotherapy
+638	TCGA-LUAD.TCGA-50-5044.TCGA-50-5044_treatment									Radiation Therapy
+639	TCGA-LUAD.TCGA-50-5044.TCGA-50-5044_treatment_1									Pharmacotherapy
+640	TCGA-LUAD.TCGA-50-5045.TCGA-50-5045_treatment									Radiation Therapy
+641	TCGA-LUAD.TCGA-50-5045.TCGA-50-5045_treatment_1									Pharmacotherapy
+642	TCGA-LUAD.TCGA-50-5049.TCGA-50-5049_treatment									Radiation Therapy
+643	TCGA-LUAD.TCGA-50-5049.TCGA-50-5049_treatment_1									Pharmacotherapy
+644	TCGA-LUAD.TCGA-50-5051.TCGA-50-5051_treatment									Radiation Therapy
+645	TCGA-LUAD.TCGA-50-5051.TCGA-50-5051_treatment_1									Pharmacotherapy
+646	TCGA-LUAD.TCGA-50-5055.TCGA-50-5055_treatment									Radiation Therapy
+647	TCGA-LUAD.TCGA-50-5055.TCGA-50-5055_treatment_1									Pharmacotherapy
+648	TCGA-LUAD.TCGA-50-5066.TCGA-50-5066_treatment									Radiation Therapy
+649	TCGA-LUAD.TCGA-50-5066.TCGA-50-5066_treatment_1									Pharmacotherapy
+650	TCGA-LUAD.TCGA-50-5068.TCGA-50-5068_treatment									Radiation Therapy
+651	TCGA-LUAD.TCGA-50-5068.TCGA-50-5068_treatment_1									Pharmacotherapy
+652	TCGA-LUAD.TCGA-50-5072.TCGA-50-5072_treatment									Radiation Therapy
+653	TCGA-LUAD.TCGA-50-5072.TCGA-50-5072_treatment_1									Pharmacotherapy
+654	TCGA-LUAD.TCGA-50-5930.TCGA-50-5930_treatment									Radiation Therapy
+655	TCGA-LUAD.TCGA-50-5930.TCGA-50-5930_treatment_1									Pharmacotherapy
+656	TCGA-LUAD.TCGA-50-5931.TCGA-50-5931_treatment									Radiation Therapy
+657	TCGA-LUAD.TCGA-50-5931.TCGA-50-5931_treatment_1									Pharmacotherapy
+658	TCGA-LUAD.TCGA-50-5932.TCGA-50-5932_treatment									Radiation Therapy
+659	TCGA-LUAD.TCGA-50-5932.TCGA-50-5932_treatment_1									Pharmacotherapy
+660	TCGA-LUAD.TCGA-50-5933.TCGA-50-5933_treatment									Radiation Therapy
+661	TCGA-LUAD.TCGA-50-5933.TCGA-50-5933_treatment_1									Pharmacotherapy
+662	TCGA-LUAD.TCGA-50-5935.TCGA-50-5935_treatment									Radiation Therapy
+663	TCGA-LUAD.TCGA-50-5935.TCGA-50-5935_treatment_1									Pharmacotherapy
+664	TCGA-LUAD.TCGA-50-5936.TCGA-50-5936_treatment									Radiation Therapy
+665	TCGA-LUAD.TCGA-50-5936.TCGA-50-5936_treatment_1									Pharmacotherapy
+666	TCGA-LUAD.TCGA-50-5939.TCGA-50-5939_treatment									Radiation Therapy
+667	TCGA-LUAD.TCGA-50-5939.TCGA-50-5939_treatment_1									Pharmacotherapy
+668	TCGA-LUAD.TCGA-50-5941.TCGA-50-5941_treatment									Radiation Therapy
+669	TCGA-LUAD.TCGA-50-5941.TCGA-50-5941_treatment_1									Pharmacotherapy
+670	TCGA-LUAD.TCGA-50-5942.TCGA-50-5942_treatment									Radiation Therapy
+671	TCGA-LUAD.TCGA-50-5942.TCGA-50-5942_treatment_1									Pharmacotherapy
+672	TCGA-LUAD.TCGA-50-5944.TCGA-50-5944_treatment									Radiation Therapy
+673	TCGA-LUAD.TCGA-50-5944.TCGA-50-5944_treatment_1									Pharmacotherapy
+674	TCGA-LUAD.TCGA-50-5946.TCGA-50-5946_treatment									Radiation Therapy
+675	TCGA-LUAD.TCGA-50-5946.TCGA-50-5946_treatment_1									Pharmacotherapy
+676	TCGA-LUAD.TCGA-50-6590.TCGA-50-6590_treatment									Radiation Therapy
+677	TCGA-LUAD.TCGA-50-6590.TCGA-50-6590_treatment_1									Pharmacotherapy
+678	TCGA-LUAD.TCGA-50-6591.TCGA-50-6591_treatment									Radiation Therapy
+679	TCGA-LUAD.TCGA-50-6591.TCGA-50-6591_treatment_1									Pharmacotherapy
+680	TCGA-LUAD.TCGA-50-6592.TCGA-50-6592_treatment									Radiation Therapy
+681	TCGA-LUAD.TCGA-50-6592.TCGA-50-6592_treatment_1									Pharmacotherapy
+682	TCGA-LUAD.TCGA-50-6593.TCGA-50-6593_treatment									Radiation Therapy
+683	TCGA-LUAD.TCGA-50-6593.TCGA-50-6593_treatment_1									Pharmacotherapy
+684	TCGA-LUAD.TCGA-50-6594.TCGA-50-6594_treatment									Radiation Therapy
+685	TCGA-LUAD.TCGA-50-6594.TCGA-50-6594_treatment_1									Pharmacotherapy
+686	TCGA-LUAD.TCGA-50-6595.TCGA-50-6595_treatment									Radiation Therapy
+687	TCGA-LUAD.TCGA-50-6595.TCGA-50-6595_treatment_1									Pharmacotherapy
+688	TCGA-LUAD.TCGA-50-6597.TCGA-50-6597_treatment									Radiation Therapy
+689	TCGA-LUAD.TCGA-50-6597.TCGA-50-6597_treatment_1									Pharmacotherapy
+690	TCGA-LUAD.TCGA-50-6673.TCGA-50-6673_treatment									Radiation Therapy
+691	TCGA-LUAD.TCGA-50-6673.TCGA-50-6673_treatment_1									Pharmacotherapy
+692	TCGA-LUAD.TCGA-50-7109.TCGA-50-7109_treatment									Radiation Therapy
+693	TCGA-LUAD.TCGA-50-7109.TCGA-50-7109_treatment_1									Pharmacotherapy
+694	TCGA-LUAD.TCGA-50-8457.TCGA-50-8457_treatment									Radiation Therapy
+695	TCGA-LUAD.TCGA-50-8457.TCGA-50-8457_treatment_1									Pharmacotherapy
+696	TCGA-LUAD.TCGA-50-8459.TCGA-50-8459_treatment									Radiation Therapy
+697	TCGA-LUAD.TCGA-50-8459.TCGA-50-8459_treatment_1									Pharmacotherapy
+698	TCGA-LUAD.TCGA-50-8460.TCGA-50-8460_treatment									Radiation Therapy
+699	TCGA-LUAD.TCGA-50-8460.TCGA-50-8460_treatment_1									Pharmacotherapy
+700	TCGA-LUAD.TCGA-53-7624.TCGA-53-7624_treatment									Radiation Therapy
+701	TCGA-LUAD.TCGA-53-7624.TCGA-53-7624_treatment_1									Pharmacotherapy
+702	TCGA-LUAD.TCGA-53-7626.TCGA-53-7626_treatment									Radiation Therapy
+703	TCGA-LUAD.TCGA-53-7626.TCGA-53-7626_treatment_1									Pharmacotherapy
+704	TCGA-LUAD.TCGA-53-7813.TCGA-53-7813_treatment									Radiation Therapy
+705	TCGA-LUAD.TCGA-53-7813.TCGA-53-7813_treatment_1									Pharmacotherapy
+706	TCGA-LUAD.TCGA-53-A4EZ.TCGA-53-A4EZ_treatment									Radiation Therapy
+707	TCGA-LUAD.TCGA-53-A4EZ.TCGA-53-A4EZ_treatment_1									Pharmacotherapy
+708	TCGA-LUAD.TCGA-55-1592.TCGA-55-1592_treatment									Radiation Therapy
+709	TCGA-LUAD.TCGA-55-1592.TCGA-55-1592_treatment_1									Pharmacotherapy
+710	TCGA-LUAD.TCGA-55-1594.TCGA-55-1594_treatment									Radiation Therapy
+711	TCGA-LUAD.TCGA-55-1594.TCGA-55-1594_treatment_1									Pharmacotherapy
+712	TCGA-LUAD.TCGA-55-1595.TCGA-55-1595_treatment									Radiation Therapy
+713	TCGA-LUAD.TCGA-55-1595.TCGA-55-1595_treatment_1									Pharmacotherapy
+714	TCGA-LUAD.TCGA-55-1596.TCGA-55-1596_treatment									Radiation Therapy
+715	TCGA-LUAD.TCGA-55-1596.TCGA-55-1596_treatment_1									Pharmacotherapy
+716	TCGA-LUAD.TCGA-55-5899.TCGA-55-5899_treatment									Radiation Therapy
+717	TCGA-LUAD.TCGA-55-5899.TCGA-55-5899_treatment_1									Pharmacotherapy
+718	TCGA-LUAD.TCGA-55-6543.TCGA-55-6543_treatment									Radiation Therapy
+719	TCGA-LUAD.TCGA-55-6543.TCGA-55-6543_treatment_1									Pharmacotherapy
+720	TCGA-LUAD.TCGA-55-6642.TCGA-55-6642_treatment									Radiation Therapy
+721	TCGA-LUAD.TCGA-55-6642.TCGA-55-6642_treatment_1									Pharmacotherapy
+722	TCGA-LUAD.TCGA-55-6712.TCGA-55-6712_treatment									Radiation Therapy
+723	TCGA-LUAD.TCGA-55-6712.TCGA-55-6712_treatment_1									Pharmacotherapy
+724	TCGA-LUAD.TCGA-55-6968.TCGA-55-6968_treatment									Radiation Therapy
+725	TCGA-LUAD.TCGA-55-6968.TCGA-55-6968_treatment_1									Pharmacotherapy
+726	TCGA-LUAD.TCGA-55-6969.TCGA-55-6969_treatment									Radiation Therapy
+727	TCGA-LUAD.TCGA-55-6969.TCGA-55-6969_treatment_1									Pharmacotherapy
+728	TCGA-LUAD.TCGA-55-6970.TCGA-55-6970_treatment									Radiation Therapy
+729	TCGA-LUAD.TCGA-55-6970.TCGA-55-6970_treatment_1									Pharmacotherapy
+730	TCGA-LUAD.TCGA-55-6971.TCGA-55-6971_treatment									Radiation Therapy
+731	TCGA-LUAD.TCGA-55-6971.TCGA-55-6971_treatment_1									Pharmacotherapy
+732	TCGA-LUAD.TCGA-55-6972.TCGA-55-6972_treatment									Radiation Therapy
+733	TCGA-LUAD.TCGA-55-6972.TCGA-55-6972_treatment_1									Pharmacotherapy
+734	TCGA-LUAD.TCGA-55-6975.TCGA-55-6975_treatment									Radiation Therapy
+735	TCGA-LUAD.TCGA-55-6975.TCGA-55-6975_treatment_1									Pharmacotherapy
+736	TCGA-LUAD.TCGA-55-6978.TCGA-55-6978_treatment									Radiation Therapy
+737	TCGA-LUAD.TCGA-55-6978.TCGA-55-6978_treatment_1									Pharmacotherapy
+738	TCGA-LUAD.TCGA-55-6979.TCGA-55-6979_treatment									Radiation Therapy
+739	TCGA-LUAD.TCGA-55-6979.TCGA-55-6979_treatment_1									Pharmacotherapy
+740	TCGA-LUAD.TCGA-55-6980.TCGA-55-6980_treatment									Radiation Therapy
+741	TCGA-LUAD.TCGA-55-6980.TCGA-55-6980_treatment_1									Pharmacotherapy
+742	TCGA-LUAD.TCGA-55-6981.TCGA-55-6981_treatment									Radiation Therapy
+743	TCGA-LUAD.TCGA-55-6981.TCGA-55-6981_treatment_1									Pharmacotherapy
+744	TCGA-LUAD.TCGA-55-6982.TCGA-55-6982_treatment									Radiation Therapy
+745	TCGA-LUAD.TCGA-55-6982.TCGA-55-6982_treatment_1									Pharmacotherapy
+746	TCGA-LUAD.TCGA-55-6983.TCGA-55-6983_treatment									Radiation Therapy
+747	TCGA-LUAD.TCGA-55-6983.TCGA-55-6983_treatment_1									Pharmacotherapy
+748	TCGA-LUAD.TCGA-55-6984.TCGA-55-6984_treatment									Radiation Therapy
+749	TCGA-LUAD.TCGA-55-6984.TCGA-55-6984_treatment_1									Pharmacotherapy
+750	TCGA-LUAD.TCGA-55-6985.TCGA-55-6985_treatment									Radiation Therapy
+751	TCGA-LUAD.TCGA-55-6985.TCGA-55-6985_treatment_1									Pharmacotherapy
+752	TCGA-LUAD.TCGA-55-6986.TCGA-55-6986_treatment									Radiation Therapy
+753	TCGA-LUAD.TCGA-55-6986.TCGA-55-6986_treatment_1									Pharmacotherapy
+754	TCGA-LUAD.TCGA-55-6987.TCGA-55-6987_treatment									Radiation Therapy
+755	TCGA-LUAD.TCGA-55-6987.TCGA-55-6987_treatment_1									Pharmacotherapy
+756	TCGA-LUAD.TCGA-55-7227.TCGA-55-7227_treatment									Radiation Therapy
+757	TCGA-LUAD.TCGA-55-7227.TCGA-55-7227_treatment_1									Pharmacotherapy
+758	TCGA-LUAD.TCGA-55-7281.TCGA-55-7281_treatment									Radiation Therapy
+759	TCGA-LUAD.TCGA-55-7281.TCGA-55-7281_treatment_1									Pharmacotherapy
+760	TCGA-LUAD.TCGA-55-7283.TCGA-55-7283_treatment									Radiation Therapy
+761	TCGA-LUAD.TCGA-55-7283.TCGA-55-7283_treatment_1									Pharmacotherapy
+762	TCGA-LUAD.TCGA-55-7284.TCGA-55-7284_treatment									Radiation Therapy
+763	TCGA-LUAD.TCGA-55-7284.TCGA-55-7284_treatment_1									Pharmacotherapy
+764	TCGA-LUAD.TCGA-55-7570.TCGA-55-7570_treatment									Radiation Therapy
+765	TCGA-LUAD.TCGA-55-7570.TCGA-55-7570_treatment_1									Pharmacotherapy
+766	TCGA-LUAD.TCGA-55-7573.TCGA-55-7573_treatment									Radiation Therapy
+767	TCGA-LUAD.TCGA-55-7573.TCGA-55-7573_treatment_1									Pharmacotherapy
+768	TCGA-LUAD.TCGA-55-7574.TCGA-55-7574_treatment									Radiation Therapy
+769	TCGA-LUAD.TCGA-55-7574.TCGA-55-7574_treatment_1									Pharmacotherapy
+770	TCGA-LUAD.TCGA-55-7576.TCGA-55-7576_treatment									Radiation Therapy
+771	TCGA-LUAD.TCGA-55-7576.TCGA-55-7576_treatment_1									Pharmacotherapy
+772	TCGA-LUAD.TCGA-55-7724.TCGA-55-7724_treatment									Radiation Therapy
+773	TCGA-LUAD.TCGA-55-7724.TCGA-55-7724_treatment_1									Pharmacotherapy
+774	TCGA-LUAD.TCGA-55-7725.TCGA-55-7725_treatment									Radiation Therapy
+775	TCGA-LUAD.TCGA-55-7725.TCGA-55-7725_treatment_1									Pharmacotherapy
+776	TCGA-LUAD.TCGA-55-7726.TCGA-55-7726_treatment									Radiation Therapy
+777	TCGA-LUAD.TCGA-55-7726.TCGA-55-7726_treatment_1									Pharmacotherapy
+778	TCGA-LUAD.TCGA-55-7727.TCGA-55-7727_treatment									Radiation Therapy
+779	TCGA-LUAD.TCGA-55-7727.TCGA-55-7727_treatment_1									Pharmacotherapy
+780	TCGA-LUAD.TCGA-55-7728.TCGA-55-7728_treatment									Radiation Therapy
+781	TCGA-LUAD.TCGA-55-7728.TCGA-55-7728_treatment_1									Pharmacotherapy
+782	TCGA-LUAD.TCGA-55-7815.TCGA-55-7815_treatment									Radiation Therapy
+783	TCGA-LUAD.TCGA-55-7815.TCGA-55-7815_treatment_1									Pharmacotherapy
+784	TCGA-LUAD.TCGA-55-7816.TCGA-55-7816_treatment									Radiation Therapy
+785	TCGA-LUAD.TCGA-55-7816.TCGA-55-7816_treatment_1									Pharmacotherapy
+786	TCGA-LUAD.TCGA-55-7903.TCGA-55-7903_treatment									Radiation Therapy
+787	TCGA-LUAD.TCGA-55-7903.TCGA-55-7903_treatment_1									Pharmacotherapy
+788	TCGA-LUAD.TCGA-55-7907.TCGA-55-7907_treatment									Radiation Therapy
+789	TCGA-LUAD.TCGA-55-7907.TCGA-55-7907_treatment_1									Pharmacotherapy
+790	TCGA-LUAD.TCGA-55-7910.TCGA-55-7910_treatment									Radiation Therapy
+791	TCGA-LUAD.TCGA-55-7910.TCGA-55-7910_treatment_1									Pharmacotherapy
+792	TCGA-LUAD.TCGA-55-7911.TCGA-55-7911_treatment									Radiation Therapy
+793	TCGA-LUAD.TCGA-55-7911.TCGA-55-7911_treatment_1									Pharmacotherapy
+794	TCGA-LUAD.TCGA-55-7913.TCGA-55-7913_treatment									Radiation Therapy
+795	TCGA-LUAD.TCGA-55-7913.TCGA-55-7913_treatment_1									Pharmacotherapy
+796	TCGA-LUAD.TCGA-55-7914.TCGA-55-7914_treatment									Radiation Therapy
+797	TCGA-LUAD.TCGA-55-7914.TCGA-55-7914_treatment_1									Pharmacotherapy
+798	TCGA-LUAD.TCGA-55-7994.TCGA-55-7994_treatment									Radiation Therapy
+799	TCGA-LUAD.TCGA-55-7994.TCGA-55-7994_treatment_1									Pharmacotherapy
+800	TCGA-LUAD.TCGA-55-7995.TCGA-55-7995_treatment									Radiation Therapy
+801	TCGA-LUAD.TCGA-55-7995.TCGA-55-7995_treatment_1									Pharmacotherapy
+802	TCGA-LUAD.TCGA-55-8085.TCGA-55-8085_treatment									Radiation Therapy
+803	TCGA-LUAD.TCGA-55-8085.TCGA-55-8085_treatment_1									Pharmacotherapy
+804	TCGA-LUAD.TCGA-55-8087.TCGA-55-8087_treatment									Radiation Therapy
+805	TCGA-LUAD.TCGA-55-8087.TCGA-55-8087_treatment_1									Pharmacotherapy
+806	TCGA-LUAD.TCGA-55-8089.TCGA-55-8089_treatment									Radiation Therapy
+807	TCGA-LUAD.TCGA-55-8089.TCGA-55-8089_treatment_1									Pharmacotherapy
+808	TCGA-LUAD.TCGA-55-8090.TCGA-55-8090_treatment									Radiation Therapy
+809	TCGA-LUAD.TCGA-55-8090.TCGA-55-8090_treatment_1									Pharmacotherapy
+810	TCGA-LUAD.TCGA-55-8091.TCGA-55-8091_treatment									Radiation Therapy
+811	TCGA-LUAD.TCGA-55-8091.TCGA-55-8091_treatment_1									Pharmacotherapy
+812	TCGA-LUAD.TCGA-55-8092.TCGA-55-8092_treatment									Radiation Therapy
+813	TCGA-LUAD.TCGA-55-8092.TCGA-55-8092_treatment_1									Pharmacotherapy
+814	TCGA-LUAD.TCGA-55-8094.TCGA-55-8094_treatment									Radiation Therapy
+815	TCGA-LUAD.TCGA-55-8094.TCGA-55-8094_treatment_1									Pharmacotherapy
+816	TCGA-LUAD.TCGA-55-8096.TCGA-55-8096_treatment									Radiation Therapy
+817	TCGA-LUAD.TCGA-55-8096.TCGA-55-8096_treatment_1									Pharmacotherapy
+818	TCGA-LUAD.TCGA-55-8097.TCGA-55-8097_treatment									Radiation Therapy
+819	TCGA-LUAD.TCGA-55-8097.TCGA-55-8097_treatment_1									Pharmacotherapy
+820	TCGA-LUAD.TCGA-55-8203.TCGA-55-8203_treatment									Radiation Therapy
+821	TCGA-LUAD.TCGA-55-8203.TCGA-55-8203_treatment_1									Pharmacotherapy
+822	TCGA-LUAD.TCGA-55-8204.TCGA-55-8204_treatment									Radiation Therapy
+823	TCGA-LUAD.TCGA-55-8204.TCGA-55-8204_treatment_1									Pharmacotherapy
+824	TCGA-LUAD.TCGA-55-8205.TCGA-55-8205_treatment									Radiation Therapy
+825	TCGA-LUAD.TCGA-55-8205.TCGA-55-8205_treatment_1									Pharmacotherapy
+826	TCGA-LUAD.TCGA-55-8206.TCGA-55-8206_treatment									Radiation Therapy
+827	TCGA-LUAD.TCGA-55-8206.TCGA-55-8206_treatment_1									Pharmacotherapy
+828	TCGA-LUAD.TCGA-55-8207.TCGA-55-8207_treatment									Radiation Therapy
+829	TCGA-LUAD.TCGA-55-8207.TCGA-55-8207_treatment_1									Pharmacotherapy
+830	TCGA-LUAD.TCGA-55-8208.TCGA-55-8208_treatment									Radiation Therapy
+831	TCGA-LUAD.TCGA-55-8208.TCGA-55-8208_treatment_1									Pharmacotherapy
+832	TCGA-LUAD.TCGA-55-8299.TCGA-55-8299_treatment									Radiation Therapy
+833	TCGA-LUAD.TCGA-55-8299.TCGA-55-8299_treatment_1									Pharmacotherapy
+834	TCGA-LUAD.TCGA-55-8301.TCGA-55-8301_treatment									Radiation Therapy
+835	TCGA-LUAD.TCGA-55-8301.TCGA-55-8301_treatment_1									Pharmacotherapy
+836	TCGA-LUAD.TCGA-55-8302.TCGA-55-8302_treatment									Radiation Therapy
+837	TCGA-LUAD.TCGA-55-8302.TCGA-55-8302_treatment_1									Pharmacotherapy
+838	TCGA-LUAD.TCGA-55-8505.TCGA-55-8505_treatment									Radiation Therapy
+839	TCGA-LUAD.TCGA-55-8505.TCGA-55-8505_treatment_1									Pharmacotherapy
+840	TCGA-LUAD.TCGA-55-8506.TCGA-55-8506_treatment									Radiation Therapy
+841	TCGA-LUAD.TCGA-55-8506.TCGA-55-8506_treatment_1									Pharmacotherapy
+842	TCGA-LUAD.TCGA-55-8507.TCGA-55-8507_treatment									Radiation Therapy
+843	TCGA-LUAD.TCGA-55-8507.TCGA-55-8507_treatment_1									Pharmacotherapy
+844	TCGA-LUAD.TCGA-55-8508.TCGA-55-8508_treatment									Radiation Therapy
+845	TCGA-LUAD.TCGA-55-8508.TCGA-55-8508_treatment_1									Pharmacotherapy
+846	TCGA-LUAD.TCGA-55-8510.TCGA-55-8510_treatment									Radiation Therapy
+847	TCGA-LUAD.TCGA-55-8510.TCGA-55-8510_treatment_1									Pharmacotherapy
+848	TCGA-LUAD.TCGA-55-8511.TCGA-55-8511_treatment									Radiation Therapy
+849	TCGA-LUAD.TCGA-55-8511.TCGA-55-8511_treatment_1									Pharmacotherapy
+850	TCGA-LUAD.TCGA-55-8512.TCGA-55-8512_treatment									Radiation Therapy
+851	TCGA-LUAD.TCGA-55-8512.TCGA-55-8512_treatment_1									Pharmacotherapy
+852	TCGA-LUAD.TCGA-55-8513.TCGA-55-8513_treatment									Radiation Therapy
+853	TCGA-LUAD.TCGA-55-8513.TCGA-55-8513_treatment_1									Pharmacotherapy
+854	TCGA-LUAD.TCGA-55-8514.TCGA-55-8514_treatment									Radiation Therapy
+855	TCGA-LUAD.TCGA-55-8514.TCGA-55-8514_treatment_1									Pharmacotherapy
+856	TCGA-LUAD.TCGA-55-8614.TCGA-55-8614_treatment									Radiation Therapy
+857	TCGA-LUAD.TCGA-55-8614.TCGA-55-8614_treatment_1									Pharmacotherapy
+858	TCGA-LUAD.TCGA-55-8615.TCGA-55-8615_treatment									Radiation Therapy
+859	TCGA-LUAD.TCGA-55-8615.TCGA-55-8615_treatment_1									Pharmacotherapy
+860	TCGA-LUAD.TCGA-55-8616.TCGA-55-8616_treatment									Radiation Therapy
+861	TCGA-LUAD.TCGA-55-8616.TCGA-55-8616_treatment_1									Pharmacotherapy
+862	TCGA-LUAD.TCGA-55-8619.TCGA-55-8619_treatment									Radiation Therapy
+863	TCGA-LUAD.TCGA-55-8619.TCGA-55-8619_treatment_1									Pharmacotherapy
+864	TCGA-LUAD.TCGA-55-8620.TCGA-55-8620_treatment									Radiation Therapy
+865	TCGA-LUAD.TCGA-55-8620.TCGA-55-8620_treatment_1									Pharmacotherapy
+866	TCGA-LUAD.TCGA-55-8621.TCGA-55-8621_treatment									Radiation Therapy
+867	TCGA-LUAD.TCGA-55-8621.TCGA-55-8621_treatment_1									Pharmacotherapy
+868	TCGA-LUAD.TCGA-55-A48X.TCGA-55-A48X_treatment									Radiation Therapy
+869	TCGA-LUAD.TCGA-55-A48X.TCGA-55-A48X_treatment_1									Pharmacotherapy
+870	TCGA-LUAD.TCGA-55-A48Y.TCGA-55-A48Y_treatment									Radiation Therapy
+871	TCGA-LUAD.TCGA-55-A48Y.TCGA-55-A48Y_treatment_1									Pharmacotherapy
+872	TCGA-LUAD.TCGA-55-A48Z.TCGA-55-A48Z_treatment									Radiation Therapy
+873	TCGA-LUAD.TCGA-55-A48Z.TCGA-55-A48Z_treatment_1									Pharmacotherapy
+874	TCGA-LUAD.TCGA-55-A490.TCGA-55-A490_treatment									Radiation Therapy
+875	TCGA-LUAD.TCGA-55-A490.TCGA-55-A490_treatment_1									Pharmacotherapy
+876	TCGA-LUAD.TCGA-55-A491.TCGA-55-A491_treatment									Radiation Therapy
+877	TCGA-LUAD.TCGA-55-A491.TCGA-55-A491_treatment_1									Pharmacotherapy
+878	TCGA-LUAD.TCGA-55-A492.TCGA-55-A492_treatment									Radiation Therapy
+879	TCGA-LUAD.TCGA-55-A492.TCGA-55-A492_treatment_1									Pharmacotherapy
+880	TCGA-LUAD.TCGA-55-A493.TCGA-55-A493_treatment									Radiation Therapy
+881	TCGA-LUAD.TCGA-55-A493.TCGA-55-A493_treatment_1									Pharmacotherapy
+882	TCGA-LUAD.TCGA-55-A494.TCGA-55-A494_treatment									Radiation Therapy
+883	TCGA-LUAD.TCGA-55-A494.TCGA-55-A494_treatment_1									Pharmacotherapy
+884	TCGA-LUAD.TCGA-55-A4DF.TCGA-55-A4DF_treatment									Radiation Therapy
+885	TCGA-LUAD.TCGA-55-A4DF.TCGA-55-A4DF_treatment_1									Pharmacotherapy
+886	TCGA-LUAD.TCGA-55-A4DG.TCGA-55-A4DG_treatment									Radiation Therapy
+887	TCGA-LUAD.TCGA-55-A4DG.TCGA-55-A4DG_treatment_1									Pharmacotherapy
+888	TCGA-LUAD.TCGA-55-A57B.TCGA-55-A57B_treatment									Radiation Therapy
+889	TCGA-LUAD.TCGA-55-A57B.TCGA-55-A57B_treatment_1									Pharmacotherapy
+890	TCGA-LUAD.TCGA-62-8394.TCGA-62-8394_treatment									Radiation Therapy
+891	TCGA-LUAD.TCGA-62-8394.TCGA-62-8394_treatment_1									Pharmacotherapy
+892	TCGA-LUAD.TCGA-62-8395.TCGA-62-8395_treatment									Radiation Therapy
+893	TCGA-LUAD.TCGA-62-8395.TCGA-62-8395_treatment_1									Pharmacotherapy
+894	TCGA-LUAD.TCGA-62-8397.TCGA-62-8397_treatment									Radiation Therapy
+895	TCGA-LUAD.TCGA-62-8397.TCGA-62-8397_treatment_1									Pharmacotherapy
+896	TCGA-LUAD.TCGA-62-8398.TCGA-62-8398_treatment									Radiation Therapy
+897	TCGA-LUAD.TCGA-62-8398.TCGA-62-8398_treatment_1									Pharmacotherapy
+898	TCGA-LUAD.TCGA-62-8399.TCGA-62-8399_treatment									Radiation Therapy
+899	TCGA-LUAD.TCGA-62-8399.TCGA-62-8399_treatment_1									Pharmacotherapy
+900	TCGA-LUAD.TCGA-62-8402.TCGA-62-8402_treatment									Radiation Therapy
+901	TCGA-LUAD.TCGA-62-8402.TCGA-62-8402_treatment_1									Pharmacotherapy
+902	TCGA-LUAD.TCGA-62-A46O.TCGA-62-A46O_treatment									Radiation Therapy
+903	TCGA-LUAD.TCGA-62-A46O.TCGA-62-A46O_treatment_1									Pharmacotherapy
+904	TCGA-LUAD.TCGA-62-A46P.TCGA-62-A46P_treatment									Radiation Therapy
+905	TCGA-LUAD.TCGA-62-A46P.TCGA-62-A46P_treatment_1									Pharmacotherapy
+906	TCGA-LUAD.TCGA-62-A46R.TCGA-62-A46R_treatment									Radiation Therapy
+907	TCGA-LUAD.TCGA-62-A46R.TCGA-62-A46R_treatment_1									Pharmacotherapy
+908	TCGA-LUAD.TCGA-62-A46S.TCGA-62-A46S_treatment									Radiation Therapy
+909	TCGA-LUAD.TCGA-62-A46S.TCGA-62-A46S_treatment_1									Pharmacotherapy
+910	TCGA-LUAD.TCGA-62-A46U.TCGA-62-A46U_treatment									Radiation Therapy
+911	TCGA-LUAD.TCGA-62-A46U.TCGA-62-A46U_treatment_1									Pharmacotherapy
+912	TCGA-LUAD.TCGA-62-A46V.TCGA-62-A46V_treatment									Radiation Therapy
+913	TCGA-LUAD.TCGA-62-A46V.TCGA-62-A46V_treatment_1									Pharmacotherapy
+914	TCGA-LUAD.TCGA-62-A46Y.TCGA-62-A46Y_treatment									Radiation Therapy
+915	TCGA-LUAD.TCGA-62-A46Y.TCGA-62-A46Y_treatment_1									Pharmacotherapy
+916	TCGA-LUAD.TCGA-62-A470.TCGA-62-A470_treatment									Radiation Therapy
+917	TCGA-LUAD.TCGA-62-A470.TCGA-62-A470_treatment_1									Pharmacotherapy
+918	TCGA-LUAD.TCGA-62-A471.TCGA-62-A471_treatment									Radiation Therapy
+919	TCGA-LUAD.TCGA-62-A471.TCGA-62-A471_treatment_1									Pharmacotherapy
+920	TCGA-LUAD.TCGA-62-A472.TCGA-62-A472_treatment									Radiation Therapy
+921	TCGA-LUAD.TCGA-62-A472.TCGA-62-A472_treatment_1									Pharmacotherapy
+922	TCGA-LUAD.TCGA-64-1676.TCGA-64-1676_treatment									Radiation Therapy
+923	TCGA-LUAD.TCGA-64-1676.TCGA-64-1676_treatment_1									Pharmacotherapy
+924	TCGA-LUAD.TCGA-64-1677.TCGA-64-1677_treatment									Radiation Therapy
+925	TCGA-LUAD.TCGA-64-1677.TCGA-64-1677_treatment_1									Pharmacotherapy
+926	TCGA-LUAD.TCGA-64-1678.TCGA-64-1678_treatment									Radiation Therapy
+927	TCGA-LUAD.TCGA-64-1678.TCGA-64-1678_treatment_1									Pharmacotherapy
+928	TCGA-LUAD.TCGA-64-1679.TCGA-64-1679_treatment									Radiation Therapy
+929	TCGA-LUAD.TCGA-64-1679.TCGA-64-1679_treatment_1									Pharmacotherapy
+930	TCGA-LUAD.TCGA-64-1680.TCGA-64-1680_treatment									Radiation Therapy
+931	TCGA-LUAD.TCGA-64-1680.TCGA-64-1680_treatment_1									Pharmacotherapy
+932	TCGA-LUAD.TCGA-64-1681.TCGA-64-1681_treatment									Radiation Therapy
+933	TCGA-LUAD.TCGA-64-1681.TCGA-64-1681_treatment_1									Pharmacotherapy
+934	TCGA-LUAD.TCGA-64-5774.TCGA-64-5774_treatment									Radiation Therapy
+935	TCGA-LUAD.TCGA-64-5774.TCGA-64-5774_treatment_1									Pharmacotherapy
+936	TCGA-LUAD.TCGA-64-5775.TCGA-64-5775_treatment									Radiation Therapy
+937	TCGA-LUAD.TCGA-64-5775.TCGA-64-5775_treatment_1									Pharmacotherapy
+938	TCGA-LUAD.TCGA-64-5778.TCGA-64-5778_treatment									Radiation Therapy
+939	TCGA-LUAD.TCGA-64-5778.TCGA-64-5778_treatment_1									Pharmacotherapy
+940	TCGA-LUAD.TCGA-64-5779.TCGA-64-5779_treatment									Radiation Therapy
+941	TCGA-LUAD.TCGA-64-5779.TCGA-64-5779_treatment_1									Pharmacotherapy
+942	TCGA-LUAD.TCGA-64-5781.TCGA-64-5781_treatment									Radiation Therapy
+943	TCGA-LUAD.TCGA-64-5781.TCGA-64-5781_treatment_1									Pharmacotherapy
+944	TCGA-LUAD.TCGA-64-5815.TCGA-64-5815_treatment									Radiation Therapy
+945	TCGA-LUAD.TCGA-64-5815.TCGA-64-5815_treatment_1									Pharmacotherapy
+946	TCGA-LUAD.TCGA-67-3770.TCGA-67-3770_treatment									Radiation Therapy
+947	TCGA-LUAD.TCGA-67-3770.TCGA-67-3770_treatment_1									Pharmacotherapy
+948	TCGA-LUAD.TCGA-67-3771.TCGA-67-3771_treatment									Radiation Therapy
+949	TCGA-LUAD.TCGA-67-3771.TCGA-67-3771_treatment_1									Pharmacotherapy
+950	TCGA-LUAD.TCGA-67-3772.TCGA-67-3772_treatment									Radiation Therapy
+951	TCGA-LUAD.TCGA-67-3772.TCGA-67-3772_treatment_1									Pharmacotherapy
+952	TCGA-LUAD.TCGA-67-3773.TCGA-67-3773_treatment									Radiation Therapy
+953	TCGA-LUAD.TCGA-67-3773.TCGA-67-3773_treatment_1									Pharmacotherapy
+954	TCGA-LUAD.TCGA-67-3774.TCGA-67-3774_treatment									Radiation Therapy
+955	TCGA-LUAD.TCGA-67-3774.TCGA-67-3774_treatment_1									Pharmacotherapy
+956	TCGA-LUAD.TCGA-67-3776.TCGA-67-3776_treatment									Radiation Therapy
+957	TCGA-LUAD.TCGA-67-3776.TCGA-67-3776_treatment_1									Pharmacotherapy
+958	TCGA-LUAD.TCGA-67-4679.TCGA-67-4679_treatment									Radiation Therapy
+959	TCGA-LUAD.TCGA-67-4679.TCGA-67-4679_treatment_1									Pharmacotherapy
+960	TCGA-LUAD.TCGA-67-6215.TCGA-67-6215_treatment									Radiation Therapy
+961	TCGA-LUAD.TCGA-67-6215.TCGA-67-6215_treatment_1									Pharmacotherapy
+962	TCGA-LUAD.TCGA-67-6216.TCGA-67-6216_treatment									Radiation Therapy
+963	TCGA-LUAD.TCGA-67-6216.TCGA-67-6216_treatment_1									Pharmacotherapy
+964	TCGA-LUAD.TCGA-67-6217.TCGA-67-6217_treatment									Radiation Therapy
+965	TCGA-LUAD.TCGA-67-6217.TCGA-67-6217_treatment_1									Pharmacotherapy
+966	TCGA-LUAD.TCGA-69-7760.TCGA-69-7760_treatment									Radiation Therapy
+967	TCGA-LUAD.TCGA-69-7760.TCGA-69-7760_treatment_1									Pharmacotherapy
+968	TCGA-LUAD.TCGA-69-7761.TCGA-69-7761_treatment									Radiation Therapy
+969	TCGA-LUAD.TCGA-69-7761.TCGA-69-7761_treatment_1									Pharmacotherapy
+970	TCGA-LUAD.TCGA-69-7763.TCGA-69-7763_treatment									Radiation Therapy
+971	TCGA-LUAD.TCGA-69-7763.TCGA-69-7763_treatment_1									Pharmacotherapy
+972	TCGA-LUAD.TCGA-69-7764.TCGA-69-7764_treatment									Radiation Therapy
+973	TCGA-LUAD.TCGA-69-7764.TCGA-69-7764_treatment_1									Pharmacotherapy
+974	TCGA-LUAD.TCGA-69-7765.TCGA-69-7765_treatment									Radiation Therapy
+975	TCGA-LUAD.TCGA-69-7765.TCGA-69-7765_treatment_1									Pharmacotherapy
+976	TCGA-LUAD.TCGA-69-7973.TCGA-69-7973_treatment									Radiation Therapy
+977	TCGA-LUAD.TCGA-69-7973.TCGA-69-7973_treatment_1									Pharmacotherapy
+978	TCGA-LUAD.TCGA-69-7974.TCGA-69-7974_treatment									Radiation Therapy
+979	TCGA-LUAD.TCGA-69-7974.TCGA-69-7974_treatment_1									Pharmacotherapy
+980	TCGA-LUAD.TCGA-69-7978.TCGA-69-7978_treatment									Radiation Therapy
+981	TCGA-LUAD.TCGA-69-7978.TCGA-69-7978_treatment_1									Pharmacotherapy
+982	TCGA-LUAD.TCGA-69-7979.TCGA-69-7979_treatment									Radiation Therapy
+983	TCGA-LUAD.TCGA-69-7979.TCGA-69-7979_treatment_1									Pharmacotherapy
+984	TCGA-LUAD.TCGA-69-7980.TCGA-69-7980_treatment									Radiation Therapy
+985	TCGA-LUAD.TCGA-69-7980.TCGA-69-7980_treatment_1									Pharmacotherapy
+986	TCGA-LUAD.TCGA-69-8253.TCGA-69-8253_treatment									Radiation Therapy
+987	TCGA-LUAD.TCGA-69-8253.TCGA-69-8253_treatment_1									Pharmacotherapy
+988	TCGA-LUAD.TCGA-69-8254.TCGA-69-8254_treatment									Radiation Therapy
+989	TCGA-LUAD.TCGA-69-8254.TCGA-69-8254_treatment_1									Pharmacotherapy
+990	TCGA-LUAD.TCGA-69-8255.TCGA-69-8255_treatment									Radiation Therapy
+991	TCGA-LUAD.TCGA-69-8255.TCGA-69-8255_treatment_1									Pharmacotherapy
+992	TCGA-LUAD.TCGA-69-8453.TCGA-69-8453_treatment									Radiation Therapy
+993	TCGA-LUAD.TCGA-69-8453.TCGA-69-8453_treatment_1									Pharmacotherapy
+994	TCGA-LUAD.TCGA-69-A59K.TCGA-69-A59K_treatment									Radiation Therapy
+995	TCGA-LUAD.TCGA-69-A59K.TCGA-69-A59K_treatment_1									Pharmacotherapy
+996	TCGA-LUAD.TCGA-71-6725.TCGA-71-6725_treatment									Radiation Therapy
+997	TCGA-LUAD.TCGA-71-6725.TCGA-71-6725_treatment_1									Pharmacotherapy
+998	TCGA-LUAD.TCGA-71-8520.TCGA-71-8520_treatment									Radiation Therapy
+999	TCGA-LUAD.TCGA-71-8520.TCGA-71-8520_treatment_1									Pharmacotherapy
+1000	TCGA-LUAD.TCGA-73-4658.TCGA-73-4658_treatment									Radiation Therapy
+1001	TCGA-LUAD.TCGA-73-4658.TCGA-73-4658_treatment_1									Pharmacotherapy
+1002	TCGA-LUAD.TCGA-73-4659.TCGA-73-4659_treatment									Radiation Therapy
+1003	TCGA-LUAD.TCGA-73-4659.TCGA-73-4659_treatment_1									Pharmacotherapy
+1004	TCGA-LUAD.TCGA-73-4662.TCGA-73-4662_treatment									Radiation Therapy
+1005	TCGA-LUAD.TCGA-73-4662.TCGA-73-4662_treatment_1									Pharmacotherapy
+1006	TCGA-LUAD.TCGA-73-4666.TCGA-73-4666_treatment									Radiation Therapy
+1007	TCGA-LUAD.TCGA-73-4666.TCGA-73-4666_treatment_1									Pharmacotherapy
+1008	TCGA-LUAD.TCGA-73-4668.TCGA-73-4668_treatment									Radiation Therapy
+1009	TCGA-LUAD.TCGA-73-4668.TCGA-73-4668_treatment_1									Pharmacotherapy
+1010	TCGA-LUAD.TCGA-73-4670.TCGA-73-4670_treatment									Radiation Therapy
+1011	TCGA-LUAD.TCGA-73-4670.TCGA-73-4670_treatment_1									Pharmacotherapy
+1012	TCGA-LUAD.TCGA-73-4675.TCGA-73-4675_treatment									Radiation Therapy
+1013	TCGA-LUAD.TCGA-73-4675.TCGA-73-4675_treatment_1									Pharmacotherapy
+1014	TCGA-LUAD.TCGA-73-4676.TCGA-73-4676_treatment									Radiation Therapy
+1015	TCGA-LUAD.TCGA-73-4676.TCGA-73-4676_treatment_1									Pharmacotherapy
+1016	TCGA-LUAD.TCGA-73-4677.TCGA-73-4677_treatment									Radiation Therapy
+1017	TCGA-LUAD.TCGA-73-4677.TCGA-73-4677_treatment_1									Pharmacotherapy
+1018	TCGA-LUAD.TCGA-73-7498.TCGA-73-7498_treatment									Radiation Therapy
+1019	TCGA-LUAD.TCGA-73-7498.TCGA-73-7498_treatment_1									Pharmacotherapy
+1020	TCGA-LUAD.TCGA-73-7499.TCGA-73-7499_treatment									Radiation Therapy
+1021	TCGA-LUAD.TCGA-73-7499.TCGA-73-7499_treatment_1									Pharmacotherapy
+1022	TCGA-LUAD.TCGA-73-A9RS.TCGA-73-A9RS_treatment									Radiation Therapy
+1023	TCGA-LUAD.TCGA-73-A9RS.TCGA-73-A9RS_treatment_1									Pharmacotherapy
+1024	TCGA-LUAD.TCGA-75-5122.TCGA-75-5122_treatment									Radiation Therapy
+1025	TCGA-LUAD.TCGA-75-5122.TCGA-75-5122_treatment_1									Pharmacotherapy
+1026	TCGA-LUAD.TCGA-75-5125.TCGA-75-5125_treatment									Radiation Therapy
+1027	TCGA-LUAD.TCGA-75-5125.TCGA-75-5125_treatment_1									Pharmacotherapy
+1028	TCGA-LUAD.TCGA-75-5126.TCGA-75-5126_treatment									Radiation Therapy
+1029	TCGA-LUAD.TCGA-75-5126.TCGA-75-5126_treatment_1									Pharmacotherapy
+1030	TCGA-LUAD.TCGA-75-5146.TCGA-75-5146_treatment									Radiation Therapy
+1031	TCGA-LUAD.TCGA-75-5146.TCGA-75-5146_treatment_1									Pharmacotherapy
+1032	TCGA-LUAD.TCGA-75-5147.TCGA-75-5147_treatment									Radiation Therapy
+1033	TCGA-LUAD.TCGA-75-5147.TCGA-75-5147_treatment_1									Pharmacotherapy
+1034	TCGA-LUAD.TCGA-75-6203.TCGA-75-6203_treatment									Radiation Therapy
+1035	TCGA-LUAD.TCGA-75-6203.TCGA-75-6203_treatment_1									Pharmacotherapy
+1036	TCGA-LUAD.TCGA-75-6205.TCGA-75-6205_treatment									Radiation Therapy
+1037	TCGA-LUAD.TCGA-75-6205.TCGA-75-6205_treatment_1									Pharmacotherapy
+1038	TCGA-LUAD.TCGA-75-6206.TCGA-75-6206_treatment									Radiation Therapy
+1039	TCGA-LUAD.TCGA-75-6206.TCGA-75-6206_treatment_1									Pharmacotherapy
+1040	TCGA-LUAD.TCGA-75-6207.TCGA-75-6207_treatment									Radiation Therapy
+1041	TCGA-LUAD.TCGA-75-6207.TCGA-75-6207_treatment_1									Pharmacotherapy
+1042	TCGA-LUAD.TCGA-75-6211.TCGA-75-6211_treatment									Radiation Therapy
+1043	TCGA-LUAD.TCGA-75-6211.TCGA-75-6211_treatment_1									Pharmacotherapy
+1044	TCGA-LUAD.TCGA-75-6212.TCGA-75-6212_treatment									Radiation Therapy
+1045	TCGA-LUAD.TCGA-75-6212.TCGA-75-6212_treatment_1									Pharmacotherapy
+1046	TCGA-LUAD.TCGA-75-6214.TCGA-75-6214_treatment									Radiation Therapy
+1047	TCGA-LUAD.TCGA-75-6214.TCGA-75-6214_treatment_1									Pharmacotherapy
+1048	TCGA-LUAD.TCGA-75-7025.TCGA-75-7025_treatment									Radiation Therapy
+1049	TCGA-LUAD.TCGA-75-7025.TCGA-75-7025_treatment_1									Pharmacotherapy
+1050	TCGA-LUAD.TCGA-75-7027.TCGA-75-7027_treatment									Radiation Therapy
+1051	TCGA-LUAD.TCGA-75-7027.TCGA-75-7027_treatment_1									Pharmacotherapy
+1052	TCGA-LUAD.TCGA-75-7030.TCGA-75-7030_treatment									Radiation Therapy
+1053	TCGA-LUAD.TCGA-75-7030.TCGA-75-7030_treatment_1									Pharmacotherapy
+1054	TCGA-LUAD.TCGA-75-7031.TCGA-75-7031_treatment									Radiation Therapy
+1055	TCGA-LUAD.TCGA-75-7031.TCGA-75-7031_treatment_1									Pharmacotherapy
+1056	TCGA-LUAD.TCGA-78-7143.TCGA-78-7143_treatment									Radiation Therapy
+1057	TCGA-LUAD.TCGA-78-7143.TCGA-78-7143_treatment_1									Pharmacotherapy
+1058	TCGA-LUAD.TCGA-78-7145.TCGA-78-7145_treatment									Radiation Therapy
+1059	TCGA-LUAD.TCGA-78-7145.TCGA-78-7145_treatment_1									Pharmacotherapy
+1060	TCGA-LUAD.TCGA-78-7146.TCGA-78-7146_treatment									Radiation Therapy
+1061	TCGA-LUAD.TCGA-78-7146.TCGA-78-7146_treatment_1									Pharmacotherapy
+1062	TCGA-LUAD.TCGA-78-7147.TCGA-78-7147_treatment									Radiation Therapy
+1063	TCGA-LUAD.TCGA-78-7147.TCGA-78-7147_treatment_1									Pharmacotherapy
+1064	TCGA-LUAD.TCGA-78-7148.TCGA-78-7148_treatment									Radiation Therapy
+1065	TCGA-LUAD.TCGA-78-7148.TCGA-78-7148_treatment_1									Pharmacotherapy
+1066	TCGA-LUAD.TCGA-78-7149.TCGA-78-7149_treatment									Radiation Therapy
+1067	TCGA-LUAD.TCGA-78-7149.TCGA-78-7149_treatment_1									Pharmacotherapy
+1068	TCGA-LUAD.TCGA-78-7150.TCGA-78-7150_treatment									Radiation Therapy
+1069	TCGA-LUAD.TCGA-78-7150.TCGA-78-7150_treatment_1									Pharmacotherapy
+1070	TCGA-LUAD.TCGA-78-7152.TCGA-78-7152_treatment									Radiation Therapy
+1071	TCGA-LUAD.TCGA-78-7152.TCGA-78-7152_treatment_1									Pharmacotherapy
+1072	TCGA-LUAD.TCGA-78-7153.TCGA-78-7153_treatment									Radiation Therapy
+1073	TCGA-LUAD.TCGA-78-7153.TCGA-78-7153_treatment_1									Pharmacotherapy
+1074	TCGA-LUAD.TCGA-78-7154.TCGA-78-7154_treatment									Radiation Therapy
+1075	TCGA-LUAD.TCGA-78-7154.TCGA-78-7154_treatment_1									Pharmacotherapy
+1076	TCGA-LUAD.TCGA-78-7155.TCGA-78-7155_treatment									Radiation Therapy
+1077	TCGA-LUAD.TCGA-78-7155.TCGA-78-7155_treatment_1									Pharmacotherapy
+1078	TCGA-LUAD.TCGA-78-7156.TCGA-78-7156_treatment									Radiation Therapy
+1079	TCGA-LUAD.TCGA-78-7156.TCGA-78-7156_treatment_1									Pharmacotherapy
+1080	TCGA-LUAD.TCGA-78-7158.TCGA-78-7158_treatment									Radiation Therapy
+1081	TCGA-LUAD.TCGA-78-7158.TCGA-78-7158_treatment_1									Pharmacotherapy
+1082	TCGA-LUAD.TCGA-78-7159.TCGA-78-7159_treatment									Radiation Therapy
+1083	TCGA-LUAD.TCGA-78-7159.TCGA-78-7159_treatment_1									Pharmacotherapy
+1084	TCGA-LUAD.TCGA-78-7160.TCGA-78-7160_treatment									Radiation Therapy
+1085	TCGA-LUAD.TCGA-78-7160.TCGA-78-7160_treatment_1									Pharmacotherapy
+1086	TCGA-LUAD.TCGA-78-7161.TCGA-78-7161_treatment									Radiation Therapy
+1087	TCGA-LUAD.TCGA-78-7161.TCGA-78-7161_treatment_1									Pharmacotherapy
+1088	TCGA-LUAD.TCGA-78-7162.TCGA-78-7162_treatment									Radiation Therapy
+1089	TCGA-LUAD.TCGA-78-7162.TCGA-78-7162_treatment_1									Pharmacotherapy
+1090	TCGA-LUAD.TCGA-78-7163.TCGA-78-7163_treatment									Radiation Therapy
+1091	TCGA-LUAD.TCGA-78-7163.TCGA-78-7163_treatment_1									Pharmacotherapy
+1092	TCGA-LUAD.TCGA-78-7166.TCGA-78-7166_treatment									Radiation Therapy
+1093	TCGA-LUAD.TCGA-78-7166.TCGA-78-7166_treatment_1									Pharmacotherapy
+1094	TCGA-LUAD.TCGA-78-7167.TCGA-78-7167_treatment									Radiation Therapy
+1095	TCGA-LUAD.TCGA-78-7167.TCGA-78-7167_treatment_1									Pharmacotherapy
+1096	TCGA-LUAD.TCGA-78-7220.TCGA-78-7220_treatment									Radiation Therapy
+1097	TCGA-LUAD.TCGA-78-7220.TCGA-78-7220_treatment_1									Pharmacotherapy
+1098	TCGA-LUAD.TCGA-78-7535.TCGA-78-7535_treatment									Radiation Therapy
+1099	TCGA-LUAD.TCGA-78-7535.TCGA-78-7535_treatment_1									Pharmacotherapy
+1100	TCGA-LUAD.TCGA-78-7536.TCGA-78-7536_treatment									Radiation Therapy
+1101	TCGA-LUAD.TCGA-78-7536.TCGA-78-7536_treatment_1									Pharmacotherapy
+1102	TCGA-LUAD.TCGA-78-7537.TCGA-78-7537_treatment									Radiation Therapy
+1103	TCGA-LUAD.TCGA-78-7537.TCGA-78-7537_treatment_1									Pharmacotherapy
+1104	TCGA-LUAD.TCGA-78-7539.TCGA-78-7539_treatment									Radiation Therapy
+1105	TCGA-LUAD.TCGA-78-7539.TCGA-78-7539_treatment_1									Pharmacotherapy
+1106	TCGA-LUAD.TCGA-78-7540.TCGA-78-7540_treatment									Radiation Therapy
+1107	TCGA-LUAD.TCGA-78-7540.TCGA-78-7540_treatment_1									Pharmacotherapy
+1108	TCGA-LUAD.TCGA-78-7542.TCGA-78-7542_treatment									Radiation Therapy
+1109	TCGA-LUAD.TCGA-78-7542.TCGA-78-7542_treatment_1									Pharmacotherapy
+1110	TCGA-LUAD.TCGA-78-7633.TCGA-78-7633_treatment									Radiation Therapy
+1111	TCGA-LUAD.TCGA-78-7633.TCGA-78-7633_treatment_1									Pharmacotherapy
+1112	TCGA-LUAD.TCGA-78-8640.TCGA-78-8640_treatment									Radiation Therapy
+1113	TCGA-LUAD.TCGA-78-8640.TCGA-78-8640_treatment_1									Pharmacotherapy
+1114	TCGA-LUAD.TCGA-78-8648.TCGA-78-8648_treatment									Radiation Therapy
+1115	TCGA-LUAD.TCGA-78-8648.TCGA-78-8648_treatment_1									Pharmacotherapy
+1116	TCGA-LUAD.TCGA-78-8655.TCGA-78-8655_treatment									Radiation Therapy
+1117	TCGA-LUAD.TCGA-78-8655.TCGA-78-8655_treatment_1									Pharmacotherapy
+1118	TCGA-LUAD.TCGA-78-8660.TCGA-78-8660_treatment									Radiation Therapy
+1119	TCGA-LUAD.TCGA-78-8660.TCGA-78-8660_treatment_1									Pharmacotherapy
+1120	TCGA-LUAD.TCGA-78-8662.TCGA-78-8662_treatment									Radiation Therapy
+1121	TCGA-LUAD.TCGA-78-8662.TCGA-78-8662_treatment_1									Pharmacotherapy
+1122	TCGA-LUAD.TCGA-80-5607.TCGA-80-5607_treatment									Radiation Therapy
+1123	TCGA-LUAD.TCGA-80-5607.TCGA-80-5607_treatment_1									Pharmacotherapy
+1124	TCGA-LUAD.TCGA-80-5608.TCGA-80-5608_treatment									Radiation Therapy
+1125	TCGA-LUAD.TCGA-80-5608.TCGA-80-5608_treatment_1									Pharmacotherapy
+1126	TCGA-LUAD.TCGA-80-5611.TCGA-80-5611_treatment									Radiation Therapy
+1127	TCGA-LUAD.TCGA-80-5611.TCGA-80-5611_treatment_1									Pharmacotherapy
+1128	TCGA-LUAD.TCGA-83-5908.TCGA-83-5908_treatment									Radiation Therapy
+1129	TCGA-LUAD.TCGA-83-5908.TCGA-83-5908_treatment_1									Pharmacotherapy
+1130	TCGA-LUAD.TCGA-86-6562.TCGA-86-6562_treatment									Radiation Therapy
+1131	TCGA-LUAD.TCGA-86-6562.TCGA-86-6562_treatment_1									Pharmacotherapy
+1132	TCGA-LUAD.TCGA-86-6851.TCGA-86-6851_treatment									Radiation Therapy
+1133	TCGA-LUAD.TCGA-86-6851.TCGA-86-6851_treatment_1									Pharmacotherapy
+1134	TCGA-LUAD.TCGA-86-7701.TCGA-86-7701_treatment									Radiation Therapy
+1135	TCGA-LUAD.TCGA-86-7701.TCGA-86-7701_treatment_1									Pharmacotherapy
+1136	TCGA-LUAD.TCGA-86-7711.TCGA-86-7711_treatment									Radiation Therapy
+1137	TCGA-LUAD.TCGA-86-7711.TCGA-86-7711_treatment_1									Pharmacotherapy
+1138	TCGA-LUAD.TCGA-86-7713.TCGA-86-7713_treatment									Radiation Therapy
+1139	TCGA-LUAD.TCGA-86-7713.TCGA-86-7713_treatment_1									Pharmacotherapy
+1140	TCGA-LUAD.TCGA-86-7714.TCGA-86-7714_treatment									Radiation Therapy
+1141	TCGA-LUAD.TCGA-86-7714.TCGA-86-7714_treatment_1									Pharmacotherapy
+1142	TCGA-LUAD.TCGA-86-7953.TCGA-86-7953_treatment									Radiation Therapy
+1143	TCGA-LUAD.TCGA-86-7953.TCGA-86-7953_treatment_1									Pharmacotherapy
+1144	TCGA-LUAD.TCGA-86-7954.TCGA-86-7954_treatment									Radiation Therapy
+1145	TCGA-LUAD.TCGA-86-7954.TCGA-86-7954_treatment_1									Pharmacotherapy
+1146	TCGA-LUAD.TCGA-86-7955.TCGA-86-7955_treatment									Radiation Therapy
+1147	TCGA-LUAD.TCGA-86-7955.TCGA-86-7955_treatment_1									Pharmacotherapy
+1148	TCGA-LUAD.TCGA-86-8054.TCGA-86-8054_treatment									Radiation Therapy
+1149	TCGA-LUAD.TCGA-86-8054.TCGA-86-8054_treatment_1									Pharmacotherapy
+1150	TCGA-LUAD.TCGA-86-8055.TCGA-86-8055_treatment									Radiation Therapy
+1151	TCGA-LUAD.TCGA-86-8055.TCGA-86-8055_treatment_1									Pharmacotherapy
+1152	TCGA-LUAD.TCGA-86-8056.TCGA-86-8056_treatment									Radiation Therapy
+1153	TCGA-LUAD.TCGA-86-8056.TCGA-86-8056_treatment_1									Pharmacotherapy
+1154	TCGA-LUAD.TCGA-86-8073.TCGA-86-8073_treatment									Radiation Therapy
+1155	TCGA-LUAD.TCGA-86-8073.TCGA-86-8073_treatment_1									Pharmacotherapy
+1156	TCGA-LUAD.TCGA-86-8074.TCGA-86-8074_treatment									Radiation Therapy
+1157	TCGA-LUAD.TCGA-86-8074.TCGA-86-8074_treatment_1									Pharmacotherapy
+1158	TCGA-LUAD.TCGA-86-8075.TCGA-86-8075_treatment									Radiation Therapy
+1159	TCGA-LUAD.TCGA-86-8075.TCGA-86-8075_treatment_1									Pharmacotherapy
+1160	TCGA-LUAD.TCGA-86-8076.TCGA-86-8076_treatment									Radiation Therapy
+1161	TCGA-LUAD.TCGA-86-8076.TCGA-86-8076_treatment_1									Pharmacotherapy
+1162	TCGA-LUAD.TCGA-86-8278.TCGA-86-8278_treatment									Radiation Therapy
+1163	TCGA-LUAD.TCGA-86-8278.TCGA-86-8278_treatment_1									Pharmacotherapy
+1164	TCGA-LUAD.TCGA-86-8279.TCGA-86-8279_treatment									Radiation Therapy
+1165	TCGA-LUAD.TCGA-86-8279.TCGA-86-8279_treatment_1									Pharmacotherapy
+1166	TCGA-LUAD.TCGA-86-8280.TCGA-86-8280_treatment									Radiation Therapy
+1167	TCGA-LUAD.TCGA-86-8280.TCGA-86-8280_treatment_1									Pharmacotherapy
+1168	TCGA-LUAD.TCGA-86-8281.TCGA-86-8281_treatment									Radiation Therapy
+1169	TCGA-LUAD.TCGA-86-8281.TCGA-86-8281_treatment_1									Pharmacotherapy
+1170	TCGA-LUAD.TCGA-86-8358.TCGA-86-8358_treatment									Radiation Therapy
+1171	TCGA-LUAD.TCGA-86-8358.TCGA-86-8358_treatment_1									Pharmacotherapy
+1172	TCGA-LUAD.TCGA-86-8359.TCGA-86-8359_treatment									Radiation Therapy
+1173	TCGA-LUAD.TCGA-86-8359.TCGA-86-8359_treatment_1									Pharmacotherapy
+1174	TCGA-LUAD.TCGA-86-8585.TCGA-86-8585_treatment									Radiation Therapy
+1175	TCGA-LUAD.TCGA-86-8585.TCGA-86-8585_treatment_1									Pharmacotherapy
+1176	TCGA-LUAD.TCGA-86-8668.TCGA-86-8668_treatment									Radiation Therapy
+1177	TCGA-LUAD.TCGA-86-8668.TCGA-86-8668_treatment_1									Pharmacotherapy
+1178	TCGA-LUAD.TCGA-86-8669.TCGA-86-8669_treatment									Radiation Therapy
+1179	TCGA-LUAD.TCGA-86-8669.TCGA-86-8669_treatment_1									Pharmacotherapy
+1180	TCGA-LUAD.TCGA-86-8671.TCGA-86-8671_treatment									Radiation Therapy
+1181	TCGA-LUAD.TCGA-86-8671.TCGA-86-8671_treatment_1									Pharmacotherapy
+1182	TCGA-LUAD.TCGA-86-8672.TCGA-86-8672_treatment									Radiation Therapy
+1183	TCGA-LUAD.TCGA-86-8672.TCGA-86-8672_treatment_1									Pharmacotherapy
+1184	TCGA-LUAD.TCGA-86-8673.TCGA-86-8673_treatment									Radiation Therapy
+1185	TCGA-LUAD.TCGA-86-8673.TCGA-86-8673_treatment_1									Pharmacotherapy
+1186	TCGA-LUAD.TCGA-86-8674.TCGA-86-8674_treatment									Radiation Therapy
+1187	TCGA-LUAD.TCGA-86-8674.TCGA-86-8674_treatment_1									Pharmacotherapy
+1188	TCGA-LUAD.TCGA-86-A456.TCGA-86-A456_treatment									Radiation Therapy
+1189	TCGA-LUAD.TCGA-86-A456.TCGA-86-A456_treatment_1									Pharmacotherapy
+1190	TCGA-LUAD.TCGA-86-A4D0.TCGA-86-A4D0_treatment									Radiation Therapy
+1191	TCGA-LUAD.TCGA-86-A4D0.TCGA-86-A4D0_treatment_1									Pharmacotherapy
+1192	TCGA-LUAD.TCGA-86-A4JF.TCGA-86-A4JF_treatment									Radiation Therapy
+1193	TCGA-LUAD.TCGA-86-A4JF.TCGA-86-A4JF_treatment_1									Pharmacotherapy
+1194	TCGA-LUAD.TCGA-86-A4P7.TCGA-86-A4P7_treatment									Radiation Therapy
+1195	TCGA-LUAD.TCGA-86-A4P7.TCGA-86-A4P7_treatment_1									Pharmacotherapy
+1196	TCGA-LUAD.TCGA-86-A4P8.TCGA-86-A4P8_treatment									Radiation Therapy
+1197	TCGA-LUAD.TCGA-86-A4P8.TCGA-86-A4P8_treatment_1									Pharmacotherapy
+1198	TCGA-LUAD.TCGA-91-6828.TCGA-91-6828_treatment									Radiation Therapy
+1199	TCGA-LUAD.TCGA-91-6828.TCGA-91-6828_treatment_1									Pharmacotherapy
+1200	TCGA-LUAD.TCGA-91-6829.TCGA-91-6829_treatment									Radiation Therapy
+1201	TCGA-LUAD.TCGA-91-6829.TCGA-91-6829_treatment_1									Pharmacotherapy
+1202	TCGA-LUAD.TCGA-91-6830.TCGA-91-6830_treatment									Radiation Therapy
+1203	TCGA-LUAD.TCGA-91-6830.TCGA-91-6830_treatment_1									Pharmacotherapy
+1204	TCGA-LUAD.TCGA-91-6831.TCGA-91-6831_treatment									Radiation Therapy
+1205	TCGA-LUAD.TCGA-91-6831.TCGA-91-6831_treatment_1									Pharmacotherapy
+1206	TCGA-LUAD.TCGA-91-6835.TCGA-91-6835_treatment									Radiation Therapy
+1207	TCGA-LUAD.TCGA-91-6835.TCGA-91-6835_treatment_1									Pharmacotherapy
+1208	TCGA-LUAD.TCGA-91-6836.TCGA-91-6836_treatment									Radiation Therapy
+1209	TCGA-LUAD.TCGA-91-6836.TCGA-91-6836_treatment_1									Pharmacotherapy
+1210	TCGA-LUAD.TCGA-91-6840.TCGA-91-6840_treatment									Radiation Therapy
+1211	TCGA-LUAD.TCGA-91-6840.TCGA-91-6840_treatment_1									Pharmacotherapy
+1212	TCGA-LUAD.TCGA-91-6847.TCGA-91-6847_treatment									Radiation Therapy
+1213	TCGA-LUAD.TCGA-91-6847.TCGA-91-6847_treatment_1									Pharmacotherapy
+1214	TCGA-LUAD.TCGA-91-6848.TCGA-91-6848_treatment									Radiation Therapy
+1215	TCGA-LUAD.TCGA-91-6848.TCGA-91-6848_treatment_1									Pharmacotherapy
+1216	TCGA-LUAD.TCGA-91-6849.TCGA-91-6849_treatment									Radiation Therapy
+1217	TCGA-LUAD.TCGA-91-6849.TCGA-91-6849_treatment_1									Pharmacotherapy
+1218	TCGA-LUAD.TCGA-91-7771.TCGA-91-7771_treatment									Radiation Therapy
+1219	TCGA-LUAD.TCGA-91-7771.TCGA-91-7771_treatment_1									Pharmacotherapy
+1220	TCGA-LUAD.TCGA-91-8496.TCGA-91-8496_treatment									Radiation Therapy
+1221	TCGA-LUAD.TCGA-91-8496.TCGA-91-8496_treatment_1									Pharmacotherapy
+1222	TCGA-LUAD.TCGA-91-8497.TCGA-91-8497_treatment									Radiation Therapy
+1223	TCGA-LUAD.TCGA-91-8497.TCGA-91-8497_treatment_1									Pharmacotherapy
+1224	TCGA-LUAD.TCGA-91-8499.TCGA-91-8499_treatment									Radiation Therapy
+1225	TCGA-LUAD.TCGA-91-8499.TCGA-91-8499_treatment_1									Pharmacotherapy
+1226	TCGA-LUAD.TCGA-91-A4BC.TCGA-91-A4BC_treatment									Radiation Therapy
+1227	TCGA-LUAD.TCGA-91-A4BC.TCGA-91-A4BC_treatment_1									Pharmacotherapy
+1228	TCGA-LUAD.TCGA-91-A4BD.TCGA-91-A4BD_treatment									Radiation Therapy
+1229	TCGA-LUAD.TCGA-91-A4BD.TCGA-91-A4BD_treatment_1									Pharmacotherapy
+1230	TCGA-LUAD.TCGA-93-7347.TCGA-93-7347_treatment									Radiation Therapy
+1231	TCGA-LUAD.TCGA-93-7347.TCGA-93-7347_treatment_1									Pharmacotherapy
+1232	TCGA-LUAD.TCGA-93-7348.TCGA-93-7348_treatment									Radiation Therapy
+1233	TCGA-LUAD.TCGA-93-7348.TCGA-93-7348_treatment_1									Pharmacotherapy
+1234	TCGA-LUAD.TCGA-93-8067.TCGA-93-8067_treatment									Radiation Therapy
+1235	TCGA-LUAD.TCGA-93-8067.TCGA-93-8067_treatment_1									Pharmacotherapy
+1236	TCGA-LUAD.TCGA-93-A4JN.TCGA-93-A4JN_treatment									Radiation Therapy
+1237	TCGA-LUAD.TCGA-93-A4JN.TCGA-93-A4JN_treatment_1									Pharmacotherapy
+1238	TCGA-LUAD.TCGA-93-A4JO.TCGA-93-A4JO_treatment									Radiation Therapy
+1239	TCGA-LUAD.TCGA-93-A4JO.TCGA-93-A4JO_treatment_1									Pharmacotherapy
+1240	TCGA-LUAD.TCGA-93-A4JP.TCGA-93-A4JP_treatment									Radiation Therapy
+1241	TCGA-LUAD.TCGA-93-A4JP.TCGA-93-A4JP_treatment_1									Pharmacotherapy
+1242	TCGA-LUAD.TCGA-93-A4JQ.TCGA-93-A4JQ_treatment									Radiation Therapy
+1243	TCGA-LUAD.TCGA-93-A4JQ.TCGA-93-A4JQ_treatment_1									Pharmacotherapy
+1244	TCGA-LUAD.TCGA-95-7039.TCGA-95-7039_treatment									Radiation Therapy
+1245	TCGA-LUAD.TCGA-95-7039.TCGA-95-7039_treatment_1									Pharmacotherapy
+1246	TCGA-LUAD.TCGA-95-7043.TCGA-95-7043_treatment									Radiation Therapy
+1247	TCGA-LUAD.TCGA-95-7043.TCGA-95-7043_treatment_1									Pharmacotherapy
+1248	TCGA-LUAD.TCGA-95-7562.TCGA-95-7562_treatment									Radiation Therapy
+1249	TCGA-LUAD.TCGA-95-7562.TCGA-95-7562_treatment_1									Pharmacotherapy
+1250	TCGA-LUAD.TCGA-95-7567.TCGA-95-7567_treatment									Radiation Therapy
+1251	TCGA-LUAD.TCGA-95-7567.TCGA-95-7567_treatment_1									Pharmacotherapy
+1252	TCGA-LUAD.TCGA-95-7944.TCGA-95-7944_treatment									Radiation Therapy
+1253	TCGA-LUAD.TCGA-95-7944.TCGA-95-7944_treatment_1									Pharmacotherapy
+1254	TCGA-LUAD.TCGA-95-7947.TCGA-95-7947_treatment									Radiation Therapy
+1255	TCGA-LUAD.TCGA-95-7947.TCGA-95-7947_treatment_1									Pharmacotherapy
+1256	TCGA-LUAD.TCGA-95-7948.TCGA-95-7948_treatment									Radiation Therapy
+1257	TCGA-LUAD.TCGA-95-7948.TCGA-95-7948_treatment_1									Pharmacotherapy
+1258	TCGA-LUAD.TCGA-95-8039.TCGA-95-8039_treatment									Radiation Therapy
+1259	TCGA-LUAD.TCGA-95-8039.TCGA-95-8039_treatment_1									Pharmacotherapy
+1260	TCGA-LUAD.TCGA-95-8494.TCGA-95-8494_treatment									Radiation Therapy
+1261	TCGA-LUAD.TCGA-95-8494.TCGA-95-8494_treatment_1									Pharmacotherapy
+1262	TCGA-LUAD.TCGA-95-A4VK.TCGA-95-A4VK_treatment									Radiation Therapy
+1263	TCGA-LUAD.TCGA-95-A4VK.TCGA-95-A4VK_treatment_1									Pharmacotherapy
+1264	TCGA-LUAD.TCGA-95-A4VN.TCGA-95-A4VN_treatment									Radiation Therapy
+1265	TCGA-LUAD.TCGA-95-A4VN.TCGA-95-A4VN_treatment_1									Pharmacotherapy
+1266	TCGA-LUAD.TCGA-95-A4VP.TCGA-95-A4VP_treatment									Radiation Therapy
+1267	TCGA-LUAD.TCGA-95-A4VP.TCGA-95-A4VP_treatment_1									Pharmacotherapy
+1268	TCGA-LUAD.TCGA-97-7546.TCGA-97-7546_treatment									Radiation Therapy
+1269	TCGA-LUAD.TCGA-97-7546.TCGA-97-7546_treatment_1									Pharmacotherapy
+1270	TCGA-LUAD.TCGA-97-7547.TCGA-97-7547_treatment									Radiation Therapy
+1271	TCGA-LUAD.TCGA-97-7547.TCGA-97-7547_treatment_1									Pharmacotherapy
+1272	TCGA-LUAD.TCGA-97-7552.TCGA-97-7552_treatment									Radiation Therapy
+1273	TCGA-LUAD.TCGA-97-7552.TCGA-97-7552_treatment_1									Pharmacotherapy
+1274	TCGA-LUAD.TCGA-97-7553.TCGA-97-7553_treatment									Radiation Therapy
+1275	TCGA-LUAD.TCGA-97-7553.TCGA-97-7553_treatment_1									Pharmacotherapy
+1276	TCGA-LUAD.TCGA-97-7554.TCGA-97-7554_treatment									Radiation Therapy
+1277	TCGA-LUAD.TCGA-97-7554.TCGA-97-7554_treatment_1									Pharmacotherapy
+1278	TCGA-LUAD.TCGA-97-7937.TCGA-97-7937_treatment									Radiation Therapy
+1279	TCGA-LUAD.TCGA-97-7937.TCGA-97-7937_treatment_1									Pharmacotherapy
+1280	TCGA-LUAD.TCGA-97-7938.TCGA-97-7938_treatment									Radiation Therapy
+1281	TCGA-LUAD.TCGA-97-7938.TCGA-97-7938_treatment_1									Pharmacotherapy
+1282	TCGA-LUAD.TCGA-97-7941.TCGA-97-7941_treatment									Radiation Therapy
+1283	TCGA-LUAD.TCGA-97-7941.TCGA-97-7941_treatment_1									Pharmacotherapy
+1284	TCGA-LUAD.TCGA-97-8171.TCGA-97-8171_treatment									Radiation Therapy
+1285	TCGA-LUAD.TCGA-97-8171.TCGA-97-8171_treatment_1									Pharmacotherapy
+1286	TCGA-LUAD.TCGA-97-8172.TCGA-97-8172_treatment									Radiation Therapy
+1287	TCGA-LUAD.TCGA-97-8172.TCGA-97-8172_treatment_1									Pharmacotherapy
+1288	TCGA-LUAD.TCGA-97-8174.TCGA-97-8174_treatment									Radiation Therapy
+1289	TCGA-LUAD.TCGA-97-8174.TCGA-97-8174_treatment_1									Pharmacotherapy
+1290	TCGA-LUAD.TCGA-97-8175.TCGA-97-8175_treatment									Radiation Therapy
+1291	TCGA-LUAD.TCGA-97-8175.TCGA-97-8175_treatment_1									Pharmacotherapy
+1292	TCGA-LUAD.TCGA-97-8176.TCGA-97-8176_treatment									Radiation Therapy
+1293	TCGA-LUAD.TCGA-97-8176.TCGA-97-8176_treatment_1									Pharmacotherapy
+1294	TCGA-LUAD.TCGA-97-8177.TCGA-97-8177_treatment									Radiation Therapy
+1295	TCGA-LUAD.TCGA-97-8177.TCGA-97-8177_treatment_1									Pharmacotherapy
+1296	TCGA-LUAD.TCGA-97-8179.TCGA-97-8179_treatment									Radiation Therapy
+1297	TCGA-LUAD.TCGA-97-8179.TCGA-97-8179_treatment_1									Pharmacotherapy
+1298	TCGA-LUAD.TCGA-97-8547.TCGA-97-8547_treatment									Radiation Therapy
+1299	TCGA-LUAD.TCGA-97-8547.TCGA-97-8547_treatment_1									Pharmacotherapy
+1300	TCGA-LUAD.TCGA-97-8552.TCGA-97-8552_treatment									Radiation Therapy
+1301	TCGA-LUAD.TCGA-97-8552.TCGA-97-8552_treatment_1									Pharmacotherapy
+1302	TCGA-LUAD.TCGA-97-A4LX.TCGA-97-A4LX_treatment									Radiation Therapy
+1303	TCGA-LUAD.TCGA-97-A4LX.TCGA-97-A4LX_treatment_1									Pharmacotherapy
+1304	TCGA-LUAD.TCGA-97-A4M0.TCGA-97-A4M0_treatment									Radiation Therapy
+1305	TCGA-LUAD.TCGA-97-A4M0.TCGA-97-A4M0_treatment_1									Pharmacotherapy
+1306	TCGA-LUAD.TCGA-97-A4M1.TCGA-97-A4M1_treatment									Radiation Therapy
+1307	TCGA-LUAD.TCGA-97-A4M1.TCGA-97-A4M1_treatment_1									Pharmacotherapy
+1308	TCGA-LUAD.TCGA-97-A4M2.TCGA-97-A4M2_treatment									Radiation Therapy
+1309	TCGA-LUAD.TCGA-97-A4M2.TCGA-97-A4M2_treatment_1									Pharmacotherapy
+1310	TCGA-LUAD.TCGA-97-A4M3.TCGA-97-A4M3_treatment									Radiation Therapy
+1311	TCGA-LUAD.TCGA-97-A4M3.TCGA-97-A4M3_treatment_1									Pharmacotherapy
+1312	TCGA-LUAD.TCGA-97-A4M5.TCGA-97-A4M5_treatment									Radiation Therapy
+1313	TCGA-LUAD.TCGA-97-A4M5.TCGA-97-A4M5_treatment_1									Pharmacotherapy
+1314	TCGA-LUAD.TCGA-97-A4M6.TCGA-97-A4M6_treatment									Radiation Therapy
+1315	TCGA-LUAD.TCGA-97-A4M6.TCGA-97-A4M6_treatment_1									Pharmacotherapy
+1316	TCGA-LUAD.TCGA-97-A4M7.TCGA-97-A4M7_treatment									Radiation Therapy
+1317	TCGA-LUAD.TCGA-97-A4M7.TCGA-97-A4M7_treatment_1									Pharmacotherapy
+1318	TCGA-LUAD.TCGA-99-7458.TCGA-99-7458_treatment									Radiation Therapy
+1319	TCGA-LUAD.TCGA-99-7458.TCGA-99-7458_treatment_1									Pharmacotherapy
+1320	TCGA-LUAD.TCGA-99-8025.TCGA-99-8025_treatment									Radiation Therapy
+1321	TCGA-LUAD.TCGA-99-8025.TCGA-99-8025_treatment_1									Pharmacotherapy
+1322	TCGA-LUAD.TCGA-99-8028.TCGA-99-8028_treatment									Radiation Therapy
+1323	TCGA-LUAD.TCGA-99-8028.TCGA-99-8028_treatment_1									Pharmacotherapy
+1324	TCGA-LUAD.TCGA-99-8032.TCGA-99-8032_treatment									Radiation Therapy
+1325	TCGA-LUAD.TCGA-99-8032.TCGA-99-8032_treatment_1									Pharmacotherapy
+1326	TCGA-LUAD.TCGA-99-8033.TCGA-99-8033_treatment									Radiation Therapy
+1327	TCGA-LUAD.TCGA-99-8033.TCGA-99-8033_treatment_1									Pharmacotherapy
+1328	TCGA-LUAD.TCGA-99-AA5R.TCGA-99-AA5R_treatment									Radiation Therapy
+1329	TCGA-LUAD.TCGA-99-AA5R.TCGA-99-AA5R_treatment_1									Pharmacotherapy
+1330	TCGA-LUAD.TCGA-J2-8192.TCGA-J2-8192_treatment									Radiation Therapy
+1331	TCGA-LUAD.TCGA-J2-8192.TCGA-J2-8192_treatment_1									Pharmacotherapy
+1332	TCGA-LUAD.TCGA-J2-8194.TCGA-J2-8194_treatment									Radiation Therapy
+1333	TCGA-LUAD.TCGA-J2-8194.TCGA-J2-8194_treatment_1									Pharmacotherapy
+1334	TCGA-LUAD.TCGA-J2-A4AD.TCGA-J2-A4AD_treatment									Radiation Therapy
+1335	TCGA-LUAD.TCGA-J2-A4AD.TCGA-J2-A4AD_treatment_1									Pharmacotherapy
+1336	TCGA-LUAD.TCGA-J2-A4AE.TCGA-J2-A4AE_treatment									Radiation Therapy
+1337	TCGA-LUAD.TCGA-J2-A4AE.TCGA-J2-A4AE_treatment_1									Pharmacotherapy
+1338	TCGA-LUAD.TCGA-J2-A4AG.TCGA-J2-A4AG_treatment									Radiation Therapy
+1339	TCGA-LUAD.TCGA-J2-A4AG.TCGA-J2-A4AG_treatment_1									Pharmacotherapy
+1340	TCGA-LUAD.TCGA-L4-A4E5.TCGA-L4-A4E5_treatment									Radiation Therapy
+1341	TCGA-LUAD.TCGA-L4-A4E5.TCGA-L4-A4E5_treatment_1									Pharmacotherapy
+1342	TCGA-LUAD.TCGA-L4-A4E6.TCGA-L4-A4E6_treatment									Radiation Therapy
+1343	TCGA-LUAD.TCGA-L4-A4E6.TCGA-L4-A4E6_treatment_1									Pharmacotherapy
+1344	TCGA-LUAD.TCGA-L9-A443.TCGA-L9-A443_treatment									Radiation Therapy
+1345	TCGA-LUAD.TCGA-L9-A443.TCGA-L9-A443_treatment_1									Pharmacotherapy
+1346	TCGA-LUAD.TCGA-L9-A444.TCGA-L9-A444_treatment									Radiation Therapy
+1347	TCGA-LUAD.TCGA-L9-A444.TCGA-L9-A444_treatment_1									Pharmacotherapy
+1348	TCGA-LUAD.TCGA-L9-A50W.TCGA-L9-A50W_treatment									Radiation Therapy
+1349	TCGA-LUAD.TCGA-L9-A50W.TCGA-L9-A50W_treatment_1									Pharmacotherapy
+1350	TCGA-LUAD.TCGA-L9-A5IP.TCGA-L9-A5IP_treatment									Radiation Therapy
+1351	TCGA-LUAD.TCGA-L9-A5IP.TCGA-L9-A5IP_treatment_1									Pharmacotherapy
+1352	TCGA-LUAD.TCGA-L9-A743.TCGA-L9-A743_treatment									Radiation Therapy
+1353	TCGA-LUAD.TCGA-L9-A743.TCGA-L9-A743_treatment_1									Pharmacotherapy
+1354	TCGA-LUAD.TCGA-L9-A7SV.TCGA-L9-A7SV_treatment									Radiation Therapy
+1355	TCGA-LUAD.TCGA-L9-A7SV.TCGA-L9-A7SV_treatment_1									Pharmacotherapy
+1356	TCGA-LUAD.TCGA-L9-A8F4.TCGA-L9-A8F4_treatment									Radiation Therapy
+1357	TCGA-LUAD.TCGA-L9-A8F4.TCGA-L9-A8F4_treatment_1									Pharmacotherapy
+1358	TCGA-LUAD.TCGA-MN-A4N1.TCGA-MN-A4N1_treatment									Radiation Therapy
+1359	TCGA-LUAD.TCGA-MN-A4N1.TCGA-MN-A4N1_treatment_1									Pharmacotherapy
+1360	TCGA-LUAD.TCGA-MN-A4N4.TCGA-MN-A4N4_treatment									Radiation Therapy
+1361	TCGA-LUAD.TCGA-MN-A4N4.TCGA-MN-A4N4_treatment_1									Pharmacotherapy
+1362	TCGA-LUAD.TCGA-MN-A4N5.TCGA-MN-A4N5_treatment									Radiation Therapy
+1363	TCGA-LUAD.TCGA-MN-A4N5.TCGA-MN-A4N5_treatment_1									Pharmacotherapy
+1364	TCGA-LUAD.TCGA-MP-A4SV.TCGA-MP-A4SV_treatment									Radiation Therapy
+1365	TCGA-LUAD.TCGA-MP-A4SV.TCGA-MP-A4SV_treatment_1									Pharmacotherapy
+1366	TCGA-LUAD.TCGA-MP-A4SW.TCGA-MP-A4SW_treatment									Radiation Therapy
+1367	TCGA-LUAD.TCGA-MP-A4SW.TCGA-MP-A4SW_treatment_1									Pharmacotherapy
+1368	TCGA-LUAD.TCGA-MP-A4SY.TCGA-MP-A4SY_treatment									Radiation Therapy
+1369	TCGA-LUAD.TCGA-MP-A4SY.TCGA-MP-A4SY_treatment_1									Pharmacotherapy
+1370	TCGA-LUAD.TCGA-MP-A4T2.TCGA-MP-A4T2_treatment									Radiation Therapy
+1371	TCGA-LUAD.TCGA-MP-A4T2.TCGA-MP-A4T2_treatment_1									Pharmacotherapy
+1372	TCGA-LUAD.TCGA-MP-A4T4.TCGA-MP-A4T4_treatment									Radiation Therapy
+1373	TCGA-LUAD.TCGA-MP-A4T4.TCGA-MP-A4T4_treatment_1									Pharmacotherapy
+1374	TCGA-LUAD.TCGA-MP-A4T6.TCGA-MP-A4T6_treatment									Radiation Therapy
+1375	TCGA-LUAD.TCGA-MP-A4T6.TCGA-MP-A4T6_treatment_1									Pharmacotherapy
+1376	TCGA-LUAD.TCGA-MP-A4T7.TCGA-MP-A4T7_treatment									Radiation Therapy
+1377	TCGA-LUAD.TCGA-MP-A4T7.TCGA-MP-A4T7_treatment_1									Pharmacotherapy
+1378	TCGA-LUAD.TCGA-MP-A4T8.TCGA-MP-A4T8_treatment									Radiation Therapy
+1379	TCGA-LUAD.TCGA-MP-A4T8.TCGA-MP-A4T8_treatment_1									Pharmacotherapy
+1380	TCGA-LUAD.TCGA-MP-A4T9.TCGA-MP-A4T9_treatment									Radiation Therapy
+1381	TCGA-LUAD.TCGA-MP-A4T9.TCGA-MP-A4T9_treatment_1									Pharmacotherapy
+1382	TCGA-LUAD.TCGA-MP-A4TA.TCGA-MP-A4TA_treatment									Radiation Therapy
+1383	TCGA-LUAD.TCGA-MP-A4TA.TCGA-MP-A4TA_treatment_1									Pharmacotherapy
+1384	TCGA-LUAD.TCGA-MP-A4TC.TCGA-MP-A4TC_treatment									Radiation Therapy
+1385	TCGA-LUAD.TCGA-MP-A4TC.TCGA-MP-A4TC_treatment_1									Pharmacotherapy
+1386	TCGA-LUAD.TCGA-MP-A4TD.TCGA-MP-A4TD_treatment									Radiation Therapy
+1387	TCGA-LUAD.TCGA-MP-A4TD.TCGA-MP-A4TD_treatment_1									Pharmacotherapy
+1388	TCGA-LUAD.TCGA-MP-A4TE.TCGA-MP-A4TE_treatment									Radiation Therapy
+1389	TCGA-LUAD.TCGA-MP-A4TE.TCGA-MP-A4TE_treatment_1									Pharmacotherapy
+1390	TCGA-LUAD.TCGA-MP-A4TF.TCGA-MP-A4TF_treatment									Radiation Therapy
+1391	TCGA-LUAD.TCGA-MP-A4TF.TCGA-MP-A4TF_treatment_1									Pharmacotherapy
+1392	TCGA-LUAD.TCGA-MP-A4TH.TCGA-MP-A4TH_treatment									Radiation Therapy
+1393	TCGA-LUAD.TCGA-MP-A4TH.TCGA-MP-A4TH_treatment_1									Pharmacotherapy
+1394	TCGA-LUAD.TCGA-MP-A4TI.TCGA-MP-A4TI_treatment									Radiation Therapy
+1395	TCGA-LUAD.TCGA-MP-A4TI.TCGA-MP-A4TI_treatment_1									Pharmacotherapy
+1396	TCGA-LUAD.TCGA-MP-A4TJ.TCGA-MP-A4TJ_treatment									Radiation Therapy
+1397	TCGA-LUAD.TCGA-MP-A4TJ.TCGA-MP-A4TJ_treatment_1									Pharmacotherapy
+1398	TCGA-LUAD.TCGA-MP-A4TK.TCGA-MP-A4TK_treatment									Radiation Therapy
+1399	TCGA-LUAD.TCGA-MP-A4TK.TCGA-MP-A4TK_treatment_1									Pharmacotherapy
+1400	TCGA-LUAD.TCGA-MP-A5C7.TCGA-MP-A5C7_treatment									Radiation Therapy
+1401	TCGA-LUAD.TCGA-MP-A5C7.TCGA-MP-A5C7_treatment_1									Pharmacotherapy
+1402	TCGA-LUAD.TCGA-NJ-A4YF.TCGA-NJ-A4YF_treatment									Radiation Therapy
+1403	TCGA-LUAD.TCGA-NJ-A4YF.TCGA-NJ-A4YF_treatment_1									Pharmacotherapy
+1404	TCGA-LUAD.TCGA-NJ-A4YG.TCGA-NJ-A4YG_treatment									Radiation Therapy
+1405	TCGA-LUAD.TCGA-NJ-A4YG.TCGA-NJ-A4YG_treatment_1									Pharmacotherapy
+1406	TCGA-LUAD.TCGA-NJ-A4YI.TCGA-NJ-A4YI_treatment									Radiation Therapy
+1407	TCGA-LUAD.TCGA-NJ-A4YI.TCGA-NJ-A4YI_treatment_1									Pharmacotherapy
+1408	TCGA-LUAD.TCGA-NJ-A4YP.TCGA-NJ-A4YP_treatment									Radiation Therapy
+1409	TCGA-LUAD.TCGA-NJ-A4YP.TCGA-NJ-A4YP_treatment_1									Pharmacotherapy
+1410	TCGA-LUAD.TCGA-NJ-A4YQ.TCGA-NJ-A4YQ_treatment									Radiation Therapy
+1411	TCGA-LUAD.TCGA-NJ-A4YQ.TCGA-NJ-A4YQ_treatment_1									Pharmacotherapy
+1412	TCGA-LUAD.TCGA-NJ-A55A.TCGA-NJ-A55A_treatment									Radiation Therapy
+1413	TCGA-LUAD.TCGA-NJ-A55A.TCGA-NJ-A55A_treatment_1									Pharmacotherapy
+1414	TCGA-LUAD.TCGA-NJ-A55O.TCGA-NJ-A55O_treatment									Radiation Therapy
+1415	TCGA-LUAD.TCGA-NJ-A55O.TCGA-NJ-A55O_treatment_1									Pharmacotherapy
+1416	TCGA-LUAD.TCGA-NJ-A55R.TCGA-NJ-A55R_treatment									Radiation Therapy
+1417	TCGA-LUAD.TCGA-NJ-A55R.TCGA-NJ-A55R_treatment_1									Pharmacotherapy
+1418	TCGA-LUAD.TCGA-NJ-A7XG.TCGA-NJ-A7XG_treatment									Radiation Therapy
+1419	TCGA-LUAD.TCGA-NJ-A7XG.TCGA-NJ-A7XG_treatment_1									Pharmacotherapy
+1420	TCGA-LUAD.TCGA-O1-A52J.TCGA-O1-A52J_treatment									Radiation Therapy
+1421	TCGA-LUAD.TCGA-O1-A52J.TCGA-O1-A52J_treatment_1									Pharmacotherapy
+1422	TCGA-LUAD.TCGA-S2-AA1A.TCGA-S2-AA1A_treatment									Radiation Therapy
+1423	TCGA-LUAD.TCGA-S2-AA1A.TCGA-S2-AA1A_treatment_1									Pharmacotherapy
+1424	TCGA-LUSC.TCGA-18-3406.TCGA-18-3406_treatment									Radiation Therapy
+1425	TCGA-LUSC.TCGA-18-3406.TCGA-18-3406_treatment_1									Pharmacotherapy
+1426	TCGA-LUSC.TCGA-18-3407.TCGA-18-3407_treatment									Radiation Therapy
+1427	TCGA-LUSC.TCGA-18-3407.TCGA-18-3407_treatment_1									Pharmacotherapy
+1428	TCGA-LUSC.TCGA-18-3408.TCGA-18-3408_treatment									Radiation Therapy
+1429	TCGA-LUSC.TCGA-18-3408.TCGA-18-3408_treatment_1									Pharmacotherapy
+1430	TCGA-LUSC.TCGA-18-3409.TCGA-18-3409_treatment									Radiation Therapy
+1431	TCGA-LUSC.TCGA-18-3409.TCGA-18-3409_treatment_1									Pharmacotherapy
+1432	TCGA-LUSC.TCGA-18-3410.TCGA-18-3410_treatment									Radiation Therapy
+1433	TCGA-LUSC.TCGA-18-3410.TCGA-18-3410_treatment_1									Pharmacotherapy
+1434	TCGA-LUSC.TCGA-18-3411.TCGA-18-3411_treatment									Radiation Therapy
+1435	TCGA-LUSC.TCGA-18-3411.TCGA-18-3411_treatment_1									Pharmacotherapy
+1436	TCGA-LUSC.TCGA-18-3412.TCGA-18-3412_treatment									Radiation Therapy
+1437	TCGA-LUSC.TCGA-18-3412.TCGA-18-3412_treatment_1									Pharmacotherapy
+1438	TCGA-LUSC.TCGA-18-3414.TCGA-18-3414_treatment									Radiation Therapy
+1439	TCGA-LUSC.TCGA-18-3414.TCGA-18-3414_treatment_1									Pharmacotherapy
+1440	TCGA-LUSC.TCGA-18-3415.TCGA-18-3415_treatment									Radiation Therapy
+1441	TCGA-LUSC.TCGA-18-3415.TCGA-18-3415_treatment_1									Pharmacotherapy
+1442	TCGA-LUSC.TCGA-18-3416.TCGA-18-3416_treatment									Radiation Therapy
+1443	TCGA-LUSC.TCGA-18-3416.TCGA-18-3416_treatment_1									Pharmacotherapy
+1444	TCGA-LUSC.TCGA-18-3417.TCGA-18-3417_treatment									Radiation Therapy
+1445	TCGA-LUSC.TCGA-18-3417.TCGA-18-3417_treatment_1									Pharmacotherapy
+1446	TCGA-LUSC.TCGA-18-3419.TCGA-18-3419_treatment									Radiation Therapy
+1447	TCGA-LUSC.TCGA-18-3419.TCGA-18-3419_treatment_1									Pharmacotherapy
+1448	TCGA-LUSC.TCGA-18-3421.TCGA-18-3421_treatment									Radiation Therapy
+1449	TCGA-LUSC.TCGA-18-3421.TCGA-18-3421_treatment_1									Pharmacotherapy
+1450	TCGA-LUSC.TCGA-18-4083.TCGA-18-4083_treatment									Radiation Therapy
+1451	TCGA-LUSC.TCGA-18-4083.TCGA-18-4083_treatment_1									Pharmacotherapy
+1452	TCGA-LUSC.TCGA-18-4086.TCGA-18-4086_treatment									Radiation Therapy
+1453	TCGA-LUSC.TCGA-18-4086.TCGA-18-4086_treatment_1									Pharmacotherapy
+1454	TCGA-LUSC.TCGA-18-4721.TCGA-18-4721_treatment									Radiation Therapy
+1455	TCGA-LUSC.TCGA-18-4721.TCGA-18-4721_treatment_1									Pharmacotherapy
+1456	TCGA-LUSC.TCGA-18-5592.TCGA-18-5592_treatment									Radiation Therapy
+1457	TCGA-LUSC.TCGA-18-5592.TCGA-18-5592_treatment_1									Pharmacotherapy
+1458	TCGA-LUSC.TCGA-18-5595.TCGA-18-5595_treatment									Radiation Therapy
+1459	TCGA-LUSC.TCGA-18-5595.TCGA-18-5595_treatment_1									Pharmacotherapy
+1460	TCGA-LUSC.TCGA-21-1070.TCGA-21-1070_treatment									Radiation Therapy
+1461	TCGA-LUSC.TCGA-21-1070.TCGA-21-1070_treatment_1									Pharmacotherapy
+1462	TCGA-LUSC.TCGA-21-1071.TCGA-21-1071_treatment									Radiation Therapy
+1463	TCGA-LUSC.TCGA-21-1071.TCGA-21-1071_treatment_1									Pharmacotherapy
+1464	TCGA-LUSC.TCGA-21-1072.TCGA-21-1072_treatment									Radiation Therapy
+1465	TCGA-LUSC.TCGA-21-1072.TCGA-21-1072_treatment_1									Pharmacotherapy
+1466	TCGA-LUSC.TCGA-21-1075.TCGA-21-1075_treatment									Radiation Therapy
+1467	TCGA-LUSC.TCGA-21-1075.TCGA-21-1075_treatment_1									Pharmacotherapy
+1468	TCGA-LUSC.TCGA-21-1076.TCGA-21-1076_treatment									Radiation Therapy
+1469	TCGA-LUSC.TCGA-21-1076.TCGA-21-1076_treatment_1									Pharmacotherapy
+1470	TCGA-LUSC.TCGA-21-1077.TCGA-21-1077_treatment									Radiation Therapy
+1471	TCGA-LUSC.TCGA-21-1077.TCGA-21-1077_treatment_1									Pharmacotherapy
+1472	TCGA-LUSC.TCGA-21-1078.TCGA-21-1078_treatment									Radiation Therapy
+1473	TCGA-LUSC.TCGA-21-1078.TCGA-21-1078_treatment_1									Pharmacotherapy
+1474	TCGA-LUSC.TCGA-21-1079.TCGA-21-1079_treatment									Radiation Therapy
+1475	TCGA-LUSC.TCGA-21-1079.TCGA-21-1079_treatment_1									Pharmacotherapy
+1476	TCGA-LUSC.TCGA-21-1080.TCGA-21-1080_treatment									Radiation Therapy
+1477	TCGA-LUSC.TCGA-21-1080.TCGA-21-1080_treatment_1									Pharmacotherapy
+1478	TCGA-LUSC.TCGA-21-1081.TCGA-21-1081_treatment									Radiation Therapy
+1479	TCGA-LUSC.TCGA-21-1081.TCGA-21-1081_treatment_1									Pharmacotherapy
+1480	TCGA-LUSC.TCGA-21-1082.TCGA-21-1082_treatment									Radiation Therapy
+1481	TCGA-LUSC.TCGA-21-1082.TCGA-21-1082_treatment_1									Pharmacotherapy
+1482	TCGA-LUSC.TCGA-21-1083.TCGA-21-1083_treatment									Radiation Therapy
+1483	TCGA-LUSC.TCGA-21-1083.TCGA-21-1083_treatment_1									Pharmacotherapy
+1484	TCGA-LUSC.TCGA-21-5782.TCGA-21-5782_treatment									Radiation Therapy
+1485	TCGA-LUSC.TCGA-21-5782.TCGA-21-5782_treatment_1									Pharmacotherapy
+1486	TCGA-LUSC.TCGA-21-5783.TCGA-21-5783_treatment									Radiation Therapy
+1487	TCGA-LUSC.TCGA-21-5783.TCGA-21-5783_treatment_1									Pharmacotherapy
+1488	TCGA-LUSC.TCGA-21-5784.TCGA-21-5784_treatment									Radiation Therapy
+1489	TCGA-LUSC.TCGA-21-5784.TCGA-21-5784_treatment_1									Pharmacotherapy
+1490	TCGA-LUSC.TCGA-21-5786.TCGA-21-5786_treatment									Radiation Therapy
+1491	TCGA-LUSC.TCGA-21-5786.TCGA-21-5786_treatment_1									Pharmacotherapy
+1492	TCGA-LUSC.TCGA-21-5787.TCGA-21-5787_treatment									Radiation Therapy
+1493	TCGA-LUSC.TCGA-21-5787.TCGA-21-5787_treatment_1									Pharmacotherapy
+1494	TCGA-LUSC.TCGA-21-A5DI.TCGA-21-A5DI_treatment									Radiation Therapy
+1495	TCGA-LUSC.TCGA-21-A5DI.TCGA-21-A5DI_treatment_1									Pharmacotherapy
+1496	TCGA-LUSC.TCGA-22-0940.TCGA-22-0940_treatment									Radiation Therapy
+1497	TCGA-LUSC.TCGA-22-0940.TCGA-22-0940_treatment_1									Pharmacotherapy
+1498	TCGA-LUSC.TCGA-22-0944.TCGA-22-0944_treatment									Radiation Therapy
+1499	TCGA-LUSC.TCGA-22-0944.TCGA-22-0944_treatment_1									Pharmacotherapy
+1500	TCGA-LUSC.TCGA-22-1000.TCGA-22-1000_treatment									Radiation Therapy
+1501	TCGA-LUSC.TCGA-22-1000.TCGA-22-1000_treatment_1									Pharmacotherapy
+1502	TCGA-LUSC.TCGA-22-1002.TCGA-22-1002_treatment									Radiation Therapy
+1503	TCGA-LUSC.TCGA-22-1002.TCGA-22-1002_treatment_1									Pharmacotherapy
+1504	TCGA-LUSC.TCGA-22-1005.TCGA-22-1005_treatment									Radiation Therapy
+1505	TCGA-LUSC.TCGA-22-1005.TCGA-22-1005_treatment_1									Pharmacotherapy
+1506	TCGA-LUSC.TCGA-22-1011.TCGA-22-1011_treatment									Radiation Therapy
+1507	TCGA-LUSC.TCGA-22-1011.TCGA-22-1011_treatment_1									Pharmacotherapy
+1508	TCGA-LUSC.TCGA-22-1012.TCGA-22-1012_treatment									Radiation Therapy
+1509	TCGA-LUSC.TCGA-22-1012.TCGA-22-1012_treatment_1									Pharmacotherapy
+1510	TCGA-LUSC.TCGA-22-1016.TCGA-22-1016_treatment									Radiation Therapy
+1511	TCGA-LUSC.TCGA-22-1016.TCGA-22-1016_treatment_1									Pharmacotherapy
+1512	TCGA-LUSC.TCGA-22-1017.TCGA-22-1017_treatment									Radiation Therapy
+1513	TCGA-LUSC.TCGA-22-1017.TCGA-22-1017_treatment_1									Pharmacotherapy
+1514	TCGA-LUSC.TCGA-22-4591.TCGA-22-4591_treatment									Radiation Therapy
+1515	TCGA-LUSC.TCGA-22-4591.TCGA-22-4591_treatment_1									Pharmacotherapy
+1516	TCGA-LUSC.TCGA-22-4593.TCGA-22-4593_treatment									Radiation Therapy
+1517	TCGA-LUSC.TCGA-22-4593.TCGA-22-4593_treatment_1									Pharmacotherapy
+1518	TCGA-LUSC.TCGA-22-4594.TCGA-22-4594_treatment									Radiation Therapy
+1519	TCGA-LUSC.TCGA-22-4594.TCGA-22-4594_treatment_1									Pharmacotherapy
+1520	TCGA-LUSC.TCGA-22-4595.TCGA-22-4595_treatment									Radiation Therapy
+1521	TCGA-LUSC.TCGA-22-4595.TCGA-22-4595_treatment_1									Pharmacotherapy
+1522	TCGA-LUSC.TCGA-22-4596.TCGA-22-4596_treatment									Radiation Therapy
+1523	TCGA-LUSC.TCGA-22-4596.TCGA-22-4596_treatment_1									Pharmacotherapy
+1524	TCGA-LUSC.TCGA-22-4599.TCGA-22-4599_treatment									Radiation Therapy
+1525	TCGA-LUSC.TCGA-22-4599.TCGA-22-4599_treatment_1									Pharmacotherapy
+1526	TCGA-LUSC.TCGA-22-4601.TCGA-22-4601_treatment									Radiation Therapy
+1527	TCGA-LUSC.TCGA-22-4601.TCGA-22-4601_treatment_1									Pharmacotherapy
+1528	TCGA-LUSC.TCGA-22-4604.TCGA-22-4604_treatment									Radiation Therapy
+1529	TCGA-LUSC.TCGA-22-4604.TCGA-22-4604_treatment_1									Pharmacotherapy
+1530	TCGA-LUSC.TCGA-22-4605.TCGA-22-4605_treatment									Radiation Therapy
+1531	TCGA-LUSC.TCGA-22-4605.TCGA-22-4605_treatment_1									Pharmacotherapy
+1532	TCGA-LUSC.TCGA-22-4607.TCGA-22-4607_treatment									Radiation Therapy
+1533	TCGA-LUSC.TCGA-22-4607.TCGA-22-4607_treatment_1									Pharmacotherapy
+1534	TCGA-LUSC.TCGA-22-4609.TCGA-22-4609_treatment									Radiation Therapy
+1535	TCGA-LUSC.TCGA-22-4609.TCGA-22-4609_treatment_1									Pharmacotherapy
+1536	TCGA-LUSC.TCGA-22-4613.TCGA-22-4613_treatment									Radiation Therapy
+1537	TCGA-LUSC.TCGA-22-4613.TCGA-22-4613_treatment_1									Pharmacotherapy
+1538	TCGA-LUSC.TCGA-22-5471.TCGA-22-5471_treatment									Radiation Therapy
+1539	TCGA-LUSC.TCGA-22-5471.TCGA-22-5471_treatment_1									Pharmacotherapy
+1540	TCGA-LUSC.TCGA-22-5472.TCGA-22-5472_treatment									Radiation Therapy
+1541	TCGA-LUSC.TCGA-22-5472.TCGA-22-5472_treatment_1									Pharmacotherapy
+1542	TCGA-LUSC.TCGA-22-5473.TCGA-22-5473_treatment									Radiation Therapy
+1543	TCGA-LUSC.TCGA-22-5473.TCGA-22-5473_treatment_1									Pharmacotherapy
+1544	TCGA-LUSC.TCGA-22-5474.TCGA-22-5474_treatment									Radiation Therapy
+1545	TCGA-LUSC.TCGA-22-5474.TCGA-22-5474_treatment_1									Pharmacotherapy
+1546	TCGA-LUSC.TCGA-22-5477.TCGA-22-5477_treatment									Radiation Therapy
+1547	TCGA-LUSC.TCGA-22-5477.TCGA-22-5477_treatment_1									Pharmacotherapy
+1548	TCGA-LUSC.TCGA-22-5478.TCGA-22-5478_treatment									Radiation Therapy
+1549	TCGA-LUSC.TCGA-22-5478.TCGA-22-5478_treatment_1									Pharmacotherapy
+1550	TCGA-LUSC.TCGA-22-5479.TCGA-22-5479_treatment									Radiation Therapy
+1551	TCGA-LUSC.TCGA-22-5479.TCGA-22-5479_treatment_1									Pharmacotherapy
+1552	TCGA-LUSC.TCGA-22-5480.TCGA-22-5480_treatment									Radiation Therapy
+1553	TCGA-LUSC.TCGA-22-5480.TCGA-22-5480_treatment_1									Pharmacotherapy
+1554	TCGA-LUSC.TCGA-22-5481.TCGA-22-5481_treatment									Radiation Therapy
+1555	TCGA-LUSC.TCGA-22-5481.TCGA-22-5481_treatment_1									Pharmacotherapy
+1556	TCGA-LUSC.TCGA-22-5482.TCGA-22-5482_treatment									Radiation Therapy
+1557	TCGA-LUSC.TCGA-22-5482.TCGA-22-5482_treatment_1									Pharmacotherapy
+1558	TCGA-LUSC.TCGA-22-5483.TCGA-22-5483_treatment									Radiation Therapy
+1559	TCGA-LUSC.TCGA-22-5483.TCGA-22-5483_treatment_1									Pharmacotherapy
+1560	TCGA-LUSC.TCGA-22-5485.TCGA-22-5485_treatment									Radiation Therapy
+1561	TCGA-LUSC.TCGA-22-5485.TCGA-22-5485_treatment_1									Pharmacotherapy
+1562	TCGA-LUSC.TCGA-22-5489.TCGA-22-5489_treatment									Radiation Therapy
+1563	TCGA-LUSC.TCGA-22-5489.TCGA-22-5489_treatment_1									Pharmacotherapy
+1564	TCGA-LUSC.TCGA-22-5491.TCGA-22-5491_treatment									Radiation Therapy
+1565	TCGA-LUSC.TCGA-22-5491.TCGA-22-5491_treatment_1									Pharmacotherapy
+1566	TCGA-LUSC.TCGA-22-5492.TCGA-22-5492_treatment									Radiation Therapy
+1567	TCGA-LUSC.TCGA-22-5492.TCGA-22-5492_treatment_1									Pharmacotherapy
+1568	TCGA-LUSC.TCGA-22-A5C4.TCGA-22-A5C4_treatment									Radiation Therapy
+1569	TCGA-LUSC.TCGA-22-A5C4.TCGA-22-A5C4_treatment_1									Pharmacotherapy
+1570	TCGA-LUSC.TCGA-33-4532.TCGA-33-4532_treatment									Radiation Therapy
+1571	TCGA-LUSC.TCGA-33-4532.TCGA-33-4532_treatment_1									Pharmacotherapy
+1572	TCGA-LUSC.TCGA-33-4533.TCGA-33-4533_treatment									Radiation Therapy
+1573	TCGA-LUSC.TCGA-33-4533.TCGA-33-4533_treatment_1									Pharmacotherapy
+1574	TCGA-LUSC.TCGA-33-4538.TCGA-33-4538_treatment									Radiation Therapy
+1575	TCGA-LUSC.TCGA-33-4538.TCGA-33-4538_treatment_1									Pharmacotherapy
+1576	TCGA-LUSC.TCGA-33-4547.TCGA-33-4547_treatment									Radiation Therapy
+1577	TCGA-LUSC.TCGA-33-4547.TCGA-33-4547_treatment_1									Pharmacotherapy
+1578	TCGA-LUSC.TCGA-33-4566.TCGA-33-4566_treatment									Radiation Therapy
+1579	TCGA-LUSC.TCGA-33-4566.TCGA-33-4566_treatment_1									Pharmacotherapy
+1580	TCGA-LUSC.TCGA-33-4582.TCGA-33-4582_treatment									Radiation Therapy
+1581	TCGA-LUSC.TCGA-33-4582.TCGA-33-4582_treatment_1									Pharmacotherapy
+1582	TCGA-LUSC.TCGA-33-4583.TCGA-33-4583_treatment									Radiation Therapy
+1583	TCGA-LUSC.TCGA-33-4583.TCGA-33-4583_treatment_1									Pharmacotherapy
+1584	TCGA-LUSC.TCGA-33-4586.TCGA-33-4586_treatment									Radiation Therapy
+1585	TCGA-LUSC.TCGA-33-4586.TCGA-33-4586_treatment_1									Pharmacotherapy
+1586	TCGA-LUSC.TCGA-33-4587.TCGA-33-4587_treatment									Radiation Therapy
+1587	TCGA-LUSC.TCGA-33-4587.TCGA-33-4587_treatment_1									Pharmacotherapy
+1588	TCGA-LUSC.TCGA-33-4589.TCGA-33-4589_treatment									Radiation Therapy
+1589	TCGA-LUSC.TCGA-33-4589.TCGA-33-4589_treatment_1									Pharmacotherapy
+1590	TCGA-LUSC.TCGA-33-6737.TCGA-33-6737_treatment									Radiation Therapy
+1591	TCGA-LUSC.TCGA-33-6737.TCGA-33-6737_treatment_1									Pharmacotherapy
+1592	TCGA-LUSC.TCGA-33-6738.TCGA-33-6738_treatment									Radiation Therapy
+1593	TCGA-LUSC.TCGA-33-6738.TCGA-33-6738_treatment_1									Pharmacotherapy
+1594	TCGA-LUSC.TCGA-33-A4WN.TCGA-33-A4WN_treatment									Radiation Therapy
+1595	TCGA-LUSC.TCGA-33-A4WN.TCGA-33-A4WN_treatment_1									Pharmacotherapy
+1596	TCGA-LUSC.TCGA-33-A5GW.TCGA-33-A5GW_treatment									Radiation Therapy
+1597	TCGA-LUSC.TCGA-33-A5GW.TCGA-33-A5GW_treatment_1									Pharmacotherapy
+1598	TCGA-LUSC.TCGA-33-AAS8.TCGA-33-AAS8_treatment									Radiation Therapy
+1599	TCGA-LUSC.TCGA-33-AAS8.TCGA-33-AAS8_treatment_1									Pharmacotherapy
+1600	TCGA-LUSC.TCGA-33-AASB.TCGA-33-AASB_treatment									Radiation Therapy
+1601	TCGA-LUSC.TCGA-33-AASB.TCGA-33-AASB_treatment_1									Pharmacotherapy
+1602	TCGA-LUSC.TCGA-33-AASD.TCGA-33-AASD_treatment									Radiation Therapy
+1603	TCGA-LUSC.TCGA-33-AASD.TCGA-33-AASD_treatment_1									Pharmacotherapy
+1604	TCGA-LUSC.TCGA-33-AASI.TCGA-33-AASI_treatment									Radiation Therapy
+1605	TCGA-LUSC.TCGA-33-AASI.TCGA-33-AASI_treatment_1									Pharmacotherapy
+1606	TCGA-LUSC.TCGA-33-AASJ.TCGA-33-AASJ_treatment									Radiation Therapy
+1607	TCGA-LUSC.TCGA-33-AASJ.TCGA-33-AASJ_treatment_1									Pharmacotherapy
+1608	TCGA-LUSC.TCGA-33-AASL.TCGA-33-AASL_treatment									Radiation Therapy
+1609	TCGA-LUSC.TCGA-33-AASL.TCGA-33-AASL_treatment_1									Pharmacotherapy
+1610	TCGA-LUSC.TCGA-34-2596.TCGA-34-2596_treatment									Radiation Therapy
+1611	TCGA-LUSC.TCGA-34-2596.TCGA-34-2596_treatment_1									Pharmacotherapy
+1612	TCGA-LUSC.TCGA-34-2600.TCGA-34-2600_treatment									Radiation Therapy
+1613	TCGA-LUSC.TCGA-34-2600.TCGA-34-2600_treatment_1									Pharmacotherapy
+1614	TCGA-LUSC.TCGA-34-2604.TCGA-34-2604_treatment									Radiation Therapy
+1615	TCGA-LUSC.TCGA-34-2604.TCGA-34-2604_treatment_1									Pharmacotherapy
+1616	TCGA-LUSC.TCGA-34-2605.TCGA-34-2605_treatment									Radiation Therapy
+1617	TCGA-LUSC.TCGA-34-2605.TCGA-34-2605_treatment_1									Pharmacotherapy
+1618	TCGA-LUSC.TCGA-34-2608.TCGA-34-2608_treatment									Radiation Therapy
+1619	TCGA-LUSC.TCGA-34-2608.TCGA-34-2608_treatment_1									Pharmacotherapy
+1620	TCGA-LUSC.TCGA-34-2609.TCGA-34-2609_treatment									Radiation Therapy
+1621	TCGA-LUSC.TCGA-34-2609.TCGA-34-2609_treatment_1									Pharmacotherapy
+1622	TCGA-LUSC.TCGA-34-5231.TCGA-34-5231_treatment									Radiation Therapy
+1623	TCGA-LUSC.TCGA-34-5231.TCGA-34-5231_treatment_1									Pharmacotherapy
+1624	TCGA-LUSC.TCGA-34-5232.TCGA-34-5232_treatment									Radiation Therapy
+1625	TCGA-LUSC.TCGA-34-5232.TCGA-34-5232_treatment_1									Pharmacotherapy
+1626	TCGA-LUSC.TCGA-34-5234.TCGA-34-5234_treatment									Radiation Therapy
+1627	TCGA-LUSC.TCGA-34-5234.TCGA-34-5234_treatment_1									Pharmacotherapy
+1628	TCGA-LUSC.TCGA-34-5236.TCGA-34-5236_treatment									Radiation Therapy
+1629	TCGA-LUSC.TCGA-34-5236.TCGA-34-5236_treatment_1									Pharmacotherapy
+1630	TCGA-LUSC.TCGA-34-5239.TCGA-34-5239_treatment									Radiation Therapy
+1631	TCGA-LUSC.TCGA-34-5239.TCGA-34-5239_treatment_1									Pharmacotherapy
+1632	TCGA-LUSC.TCGA-34-5240.TCGA-34-5240_treatment									Radiation Therapy
+1633	TCGA-LUSC.TCGA-34-5240.TCGA-34-5240_treatment_1									Pharmacotherapy
+1634	TCGA-LUSC.TCGA-34-5241.TCGA-34-5241_treatment									Radiation Therapy
+1635	TCGA-LUSC.TCGA-34-5241.TCGA-34-5241_treatment_1									Pharmacotherapy
+1636	TCGA-LUSC.TCGA-34-5927.TCGA-34-5927_treatment									Radiation Therapy
+1637	TCGA-LUSC.TCGA-34-5927.TCGA-34-5927_treatment_1									Pharmacotherapy
+1638	TCGA-LUSC.TCGA-34-5928.TCGA-34-5928_treatment									Radiation Therapy
+1639	TCGA-LUSC.TCGA-34-5928.TCGA-34-5928_treatment_1									Pharmacotherapy
+1640	TCGA-LUSC.TCGA-34-5929.TCGA-34-5929_treatment									Radiation Therapy
+1641	TCGA-LUSC.TCGA-34-5929.TCGA-34-5929_treatment_1									Pharmacotherapy
+1642	TCGA-LUSC.TCGA-34-7107.TCGA-34-7107_treatment									Radiation Therapy
+1643	TCGA-LUSC.TCGA-34-7107.TCGA-34-7107_treatment_1									Pharmacotherapy
+1644	TCGA-LUSC.TCGA-34-8454.TCGA-34-8454_treatment									Radiation Therapy
+1645	TCGA-LUSC.TCGA-34-8454.TCGA-34-8454_treatment_1									Pharmacotherapy
+1646	TCGA-LUSC.TCGA-34-8455.TCGA-34-8455_treatment									Radiation Therapy
+1647	TCGA-LUSC.TCGA-34-8455.TCGA-34-8455_treatment_1									Pharmacotherapy
+1648	TCGA-LUSC.TCGA-34-8456.TCGA-34-8456_treatment									Radiation Therapy
+1649	TCGA-LUSC.TCGA-34-8456.TCGA-34-8456_treatment_1									Pharmacotherapy
+1650	TCGA-LUSC.TCGA-34-A5IX.TCGA-34-A5IX_treatment									Radiation Therapy
+1651	TCGA-LUSC.TCGA-34-A5IX.TCGA-34-A5IX_treatment_1									Pharmacotherapy
+1652	TCGA-LUSC.TCGA-37-3783.TCGA-37-3783_treatment									Radiation Therapy
+1653	TCGA-LUSC.TCGA-37-3783.TCGA-37-3783_treatment_1									Pharmacotherapy
+1654	TCGA-LUSC.TCGA-37-3789.TCGA-37-3789_treatment									Radiation Therapy
+1655	TCGA-LUSC.TCGA-37-3789.TCGA-37-3789_treatment_1									Pharmacotherapy
+1656	TCGA-LUSC.TCGA-37-3792.TCGA-37-3792_treatment									Radiation Therapy
+1657	TCGA-LUSC.TCGA-37-3792.TCGA-37-3792_treatment_1									Pharmacotherapy
+1658	TCGA-LUSC.TCGA-37-4129.TCGA-37-4129_treatment									Radiation Therapy
+1659	TCGA-LUSC.TCGA-37-4129.TCGA-37-4129_treatment_1									Pharmacotherapy
+1660	TCGA-LUSC.TCGA-37-4130.TCGA-37-4130_treatment									Radiation Therapy
+1661	TCGA-LUSC.TCGA-37-4130.TCGA-37-4130_treatment_1									Pharmacotherapy
+1662	TCGA-LUSC.TCGA-37-4132.TCGA-37-4132_treatment									Radiation Therapy
+1663	TCGA-LUSC.TCGA-37-4132.TCGA-37-4132_treatment_1									Pharmacotherapy
+1664	TCGA-LUSC.TCGA-37-4133.TCGA-37-4133_treatment									Radiation Therapy
+1665	TCGA-LUSC.TCGA-37-4133.TCGA-37-4133_treatment_1									Pharmacotherapy
+1666	TCGA-LUSC.TCGA-37-4135.TCGA-37-4135_treatment									Radiation Therapy
+1667	TCGA-LUSC.TCGA-37-4135.TCGA-37-4135_treatment_1									Pharmacotherapy
+1668	TCGA-LUSC.TCGA-37-4141.TCGA-37-4141_treatment									Radiation Therapy
+1669	TCGA-LUSC.TCGA-37-4141.TCGA-37-4141_treatment_1									Pharmacotherapy
+1670	TCGA-LUSC.TCGA-37-5819.TCGA-37-5819_treatment									Radiation Therapy
+1671	TCGA-LUSC.TCGA-37-5819.TCGA-37-5819_treatment_1									Pharmacotherapy
+1672	TCGA-LUSC.TCGA-37-A5EL.TCGA-37-A5EL_treatment									Radiation Therapy
+1673	TCGA-LUSC.TCGA-37-A5EL.TCGA-37-A5EL_treatment_1									Pharmacotherapy
+1674	TCGA-LUSC.TCGA-37-A5EM.TCGA-37-A5EM_treatment									Radiation Therapy
+1675	TCGA-LUSC.TCGA-37-A5EM.TCGA-37-A5EM_treatment_1									Pharmacotherapy
+1676	TCGA-LUSC.TCGA-37-A5EN.TCGA-37-A5EN_treatment									Radiation Therapy
+1677	TCGA-LUSC.TCGA-37-A5EN.TCGA-37-A5EN_treatment_1									Pharmacotherapy
+1678	TCGA-LUSC.TCGA-39-5011.TCGA-39-5011_treatment									Radiation Therapy
+1679	TCGA-LUSC.TCGA-39-5011.TCGA-39-5011_treatment_1									Pharmacotherapy
+1680	TCGA-LUSC.TCGA-39-5016.TCGA-39-5016_treatment									Radiation Therapy
+1681	TCGA-LUSC.TCGA-39-5016.TCGA-39-5016_treatment_1									Pharmacotherapy
+1682	TCGA-LUSC.TCGA-39-5019.TCGA-39-5019_treatment									Radiation Therapy
+1683	TCGA-LUSC.TCGA-39-5019.TCGA-39-5019_treatment_1									Pharmacotherapy
+1684	TCGA-LUSC.TCGA-39-5021.TCGA-39-5021_treatment									Radiation Therapy
+1685	TCGA-LUSC.TCGA-39-5021.TCGA-39-5021_treatment_1									Pharmacotherapy
+1686	TCGA-LUSC.TCGA-39-5022.TCGA-39-5022_treatment									Radiation Therapy
+1687	TCGA-LUSC.TCGA-39-5022.TCGA-39-5022_treatment_1									Pharmacotherapy
+1688	TCGA-LUSC.TCGA-39-5024.TCGA-39-5024_treatment									Radiation Therapy
+1689	TCGA-LUSC.TCGA-39-5024.TCGA-39-5024_treatment_1									Pharmacotherapy
+1690	TCGA-LUSC.TCGA-39-5027.TCGA-39-5027_treatment									Radiation Therapy
+1691	TCGA-LUSC.TCGA-39-5027.TCGA-39-5027_treatment_1									Pharmacotherapy
+1692	TCGA-LUSC.TCGA-39-5028.TCGA-39-5028_treatment									Radiation Therapy
+1693	TCGA-LUSC.TCGA-39-5028.TCGA-39-5028_treatment_1									Pharmacotherapy
+1694	TCGA-LUSC.TCGA-39-5029.TCGA-39-5029_treatment									Radiation Therapy
+1695	TCGA-LUSC.TCGA-39-5029.TCGA-39-5029_treatment_1									Pharmacotherapy
+1696	TCGA-LUSC.TCGA-39-5030.TCGA-39-5030_treatment									Radiation Therapy
+1697	TCGA-LUSC.TCGA-39-5030.TCGA-39-5030_treatment_1									Pharmacotherapy
+1698	TCGA-LUSC.TCGA-39-5031.TCGA-39-5031_treatment									Radiation Therapy
+1699	TCGA-LUSC.TCGA-39-5031.TCGA-39-5031_treatment_1									Pharmacotherapy
+1700	TCGA-LUSC.TCGA-39-5034.TCGA-39-5034_treatment									Radiation Therapy
+1701	TCGA-LUSC.TCGA-39-5034.TCGA-39-5034_treatment_1									Pharmacotherapy
+1702	TCGA-LUSC.TCGA-39-5035.TCGA-39-5035_treatment									Radiation Therapy
+1703	TCGA-LUSC.TCGA-39-5035.TCGA-39-5035_treatment_1									Pharmacotherapy
+1704	TCGA-LUSC.TCGA-39-5036.TCGA-39-5036_treatment									Radiation Therapy
+1705	TCGA-LUSC.TCGA-39-5036.TCGA-39-5036_treatment_1									Pharmacotherapy
+1706	TCGA-LUSC.TCGA-39-5037.TCGA-39-5037_treatment									Radiation Therapy
+1707	TCGA-LUSC.TCGA-39-5037.TCGA-39-5037_treatment_1									Pharmacotherapy
+1708	TCGA-LUSC.TCGA-39-5039.TCGA-39-5039_treatment									Radiation Therapy
+1709	TCGA-LUSC.TCGA-39-5039.TCGA-39-5039_treatment_1									Pharmacotherapy
+1710	TCGA-LUSC.TCGA-39-5040.TCGA-39-5040_treatment									Radiation Therapy
+1711	TCGA-LUSC.TCGA-39-5040.TCGA-39-5040_treatment_1									Pharmacotherapy
+1712	TCGA-LUSC.TCGA-43-2576.TCGA-43-2576_treatment									Radiation Therapy
+1713	TCGA-LUSC.TCGA-43-2576.TCGA-43-2576_treatment_1									Pharmacotherapy
+1714	TCGA-LUSC.TCGA-43-2578.TCGA-43-2578_treatment									Radiation Therapy
+1715	TCGA-LUSC.TCGA-43-2578.TCGA-43-2578_treatment_1									Pharmacotherapy
+1716	TCGA-LUSC.TCGA-43-2581.TCGA-43-2581_treatment									Radiation Therapy
+1717	TCGA-LUSC.TCGA-43-2581.TCGA-43-2581_treatment_1									Pharmacotherapy
+1718	TCGA-LUSC.TCGA-43-3394.TCGA-43-3394_treatment									Radiation Therapy
+1719	TCGA-LUSC.TCGA-43-3394.TCGA-43-3394_treatment_1									Pharmacotherapy
+1720	TCGA-LUSC.TCGA-43-3920.TCGA-43-3920_treatment									Radiation Therapy
+1721	TCGA-LUSC.TCGA-43-3920.TCGA-43-3920_treatment_1									Pharmacotherapy
+1722	TCGA-LUSC.TCGA-43-5668.TCGA-43-5668_treatment									Radiation Therapy
+1723	TCGA-LUSC.TCGA-43-5668.TCGA-43-5668_treatment_1									Pharmacotherapy
+1724	TCGA-LUSC.TCGA-43-5670.TCGA-43-5670_treatment									Radiation Therapy
+1725	TCGA-LUSC.TCGA-43-5670.TCGA-43-5670_treatment_1									Pharmacotherapy
+1726	TCGA-LUSC.TCGA-43-6143.TCGA-43-6143_treatment									Radiation Therapy
+1727	TCGA-LUSC.TCGA-43-6143.TCGA-43-6143_treatment_1									Pharmacotherapy
+1728	TCGA-LUSC.TCGA-43-6647.TCGA-43-6647_treatment									Radiation Therapy
+1729	TCGA-LUSC.TCGA-43-6647.TCGA-43-6647_treatment_1									Pharmacotherapy
+1730	TCGA-LUSC.TCGA-43-6770.TCGA-43-6770_treatment									Radiation Therapy
+1731	TCGA-LUSC.TCGA-43-6770.TCGA-43-6770_treatment_1									Pharmacotherapy
+1732	TCGA-LUSC.TCGA-43-6771.TCGA-43-6771_treatment									Radiation Therapy
+1733	TCGA-LUSC.TCGA-43-6771.TCGA-43-6771_treatment_1									Pharmacotherapy
+1734	TCGA-LUSC.TCGA-43-6773.TCGA-43-6773_treatment									Radiation Therapy
+1735	TCGA-LUSC.TCGA-43-6773.TCGA-43-6773_treatment_1									Pharmacotherapy
+1736	TCGA-LUSC.TCGA-43-7656.TCGA-43-7656_treatment									Radiation Therapy
+1737	TCGA-LUSC.TCGA-43-7656.TCGA-43-7656_treatment_1									Pharmacotherapy
+1738	TCGA-LUSC.TCGA-43-7657.TCGA-43-7657_treatment									Radiation Therapy
+1739	TCGA-LUSC.TCGA-43-7657.TCGA-43-7657_treatment_1									Pharmacotherapy
+1740	TCGA-LUSC.TCGA-43-7658.TCGA-43-7658_treatment									Radiation Therapy
+1741	TCGA-LUSC.TCGA-43-7658.TCGA-43-7658_treatment_1									Pharmacotherapy
+1742	TCGA-LUSC.TCGA-43-8115.TCGA-43-8115_treatment									Radiation Therapy
+1743	TCGA-LUSC.TCGA-43-8115.TCGA-43-8115_treatment_1									Pharmacotherapy
+1744	TCGA-LUSC.TCGA-43-8116.TCGA-43-8116_treatment									Radiation Therapy
+1745	TCGA-LUSC.TCGA-43-8116.TCGA-43-8116_treatment_1									Pharmacotherapy
+1746	TCGA-LUSC.TCGA-43-8118.TCGA-43-8118_treatment									Radiation Therapy
+1747	TCGA-LUSC.TCGA-43-8118.TCGA-43-8118_treatment_1									Pharmacotherapy
+1748	TCGA-LUSC.TCGA-43-A474.TCGA-43-A474_treatment									Radiation Therapy
+1749	TCGA-LUSC.TCGA-43-A474.TCGA-43-A474_treatment_1									Pharmacotherapy
+1750	TCGA-LUSC.TCGA-43-A475.TCGA-43-A475_treatment									Radiation Therapy
+1751	TCGA-LUSC.TCGA-43-A475.TCGA-43-A475_treatment_1									Pharmacotherapy
+1752	TCGA-LUSC.TCGA-43-A56U.TCGA-43-A56U_treatment									Radiation Therapy
+1753	TCGA-LUSC.TCGA-43-A56U.TCGA-43-A56U_treatment_1									Pharmacotherapy
+1754	TCGA-LUSC.TCGA-43-A56V.TCGA-43-A56V_treatment									Radiation Therapy
+1755	TCGA-LUSC.TCGA-43-A56V.TCGA-43-A56V_treatment_1									Pharmacotherapy
+1756	TCGA-LUSC.TCGA-46-3765.TCGA-46-3765_treatment									Radiation Therapy
+1757	TCGA-LUSC.TCGA-46-3765.TCGA-46-3765_treatment_1									Pharmacotherapy
+1758	TCGA-LUSC.TCGA-46-3766.TCGA-46-3766_treatment									Radiation Therapy
+1759	TCGA-LUSC.TCGA-46-3766.TCGA-46-3766_treatment_1									Pharmacotherapy
+1760	TCGA-LUSC.TCGA-46-3767.TCGA-46-3767_treatment									Radiation Therapy
+1761	TCGA-LUSC.TCGA-46-3767.TCGA-46-3767_treatment_1									Pharmacotherapy
+1762	TCGA-LUSC.TCGA-46-3768.TCGA-46-3768_treatment									Radiation Therapy
+1763	TCGA-LUSC.TCGA-46-3768.TCGA-46-3768_treatment_1									Pharmacotherapy
+1764	TCGA-LUSC.TCGA-46-3769.TCGA-46-3769_treatment									Radiation Therapy
+1765	TCGA-LUSC.TCGA-46-3769.TCGA-46-3769_treatment_1									Pharmacotherapy
+1766	TCGA-LUSC.TCGA-46-6025.TCGA-46-6025_treatment									Radiation Therapy
+1767	TCGA-LUSC.TCGA-46-6025.TCGA-46-6025_treatment_1									Pharmacotherapy
+1768	TCGA-LUSC.TCGA-46-6026.TCGA-46-6026_treatment									Radiation Therapy
+1769	TCGA-LUSC.TCGA-46-6026.TCGA-46-6026_treatment_1									Pharmacotherapy
+1770	TCGA-LUSC.TCGA-51-4079.TCGA-51-4079_treatment									Radiation Therapy
+1771	TCGA-LUSC.TCGA-51-4079.TCGA-51-4079_treatment_1									Pharmacotherapy
+1772	TCGA-LUSC.TCGA-51-4080.TCGA-51-4080_treatment									Radiation Therapy
+1773	TCGA-LUSC.TCGA-51-4080.TCGA-51-4080_treatment_1									Pharmacotherapy
+1774	TCGA-LUSC.TCGA-51-4081.TCGA-51-4081_treatment									Radiation Therapy
+1775	TCGA-LUSC.TCGA-51-4081.TCGA-51-4081_treatment_1									Pharmacotherapy
+1776	TCGA-LUSC.TCGA-51-6867.TCGA-51-6867_treatment									Radiation Therapy
+1777	TCGA-LUSC.TCGA-51-6867.TCGA-51-6867_treatment_1									Pharmacotherapy
+1778	TCGA-LUSC.TCGA-52-7622.TCGA-52-7622_treatment									Radiation Therapy
+1779	TCGA-LUSC.TCGA-52-7622.TCGA-52-7622_treatment_1									Pharmacotherapy
+1780	TCGA-LUSC.TCGA-52-7809.TCGA-52-7809_treatment									Radiation Therapy
+1781	TCGA-LUSC.TCGA-52-7809.TCGA-52-7809_treatment_1									Pharmacotherapy
+1782	TCGA-LUSC.TCGA-52-7810.TCGA-52-7810_treatment									Radiation Therapy
+1783	TCGA-LUSC.TCGA-52-7810.TCGA-52-7810_treatment_1									Pharmacotherapy
+1784	TCGA-LUSC.TCGA-52-7811.TCGA-52-7811_treatment									Radiation Therapy
+1785	TCGA-LUSC.TCGA-52-7811.TCGA-52-7811_treatment_1									Pharmacotherapy
+1786	TCGA-LUSC.TCGA-52-7812.TCGA-52-7812_treatment									Radiation Therapy
+1787	TCGA-LUSC.TCGA-52-7812.TCGA-52-7812_treatment_1									Pharmacotherapy
+1788	TCGA-LUSC.TCGA-56-1622.TCGA-56-1622_treatment									Radiation Therapy
+1789	TCGA-LUSC.TCGA-56-1622.TCGA-56-1622_treatment_1									Pharmacotherapy
+1790	TCGA-LUSC.TCGA-56-5897.TCGA-56-5897_treatment									Radiation Therapy
+1791	TCGA-LUSC.TCGA-56-5897.TCGA-56-5897_treatment_1									Pharmacotherapy
+1792	TCGA-LUSC.TCGA-56-5898.TCGA-56-5898_treatment									Radiation Therapy
+1793	TCGA-LUSC.TCGA-56-5898.TCGA-56-5898_treatment_1									Pharmacotherapy
+1794	TCGA-LUSC.TCGA-56-6545.TCGA-56-6545_treatment									Radiation Therapy
+1795	TCGA-LUSC.TCGA-56-6545.TCGA-56-6545_treatment_1									Pharmacotherapy
+1796	TCGA-LUSC.TCGA-56-6546.TCGA-56-6546_treatment									Radiation Therapy
+1797	TCGA-LUSC.TCGA-56-6546.TCGA-56-6546_treatment_1									Pharmacotherapy
+1798	TCGA-LUSC.TCGA-56-7221.TCGA-56-7221_treatment									Radiation Therapy
+1799	TCGA-LUSC.TCGA-56-7221.TCGA-56-7221_treatment_1									Pharmacotherapy
+1800	TCGA-LUSC.TCGA-56-7222.TCGA-56-7222_treatment									Radiation Therapy
+1801	TCGA-LUSC.TCGA-56-7222.TCGA-56-7222_treatment_1									Pharmacotherapy
+1802	TCGA-LUSC.TCGA-56-7223.TCGA-56-7223_treatment									Radiation Therapy
+1803	TCGA-LUSC.TCGA-56-7223.TCGA-56-7223_treatment_1									Pharmacotherapy
+1804	TCGA-LUSC.TCGA-56-7579.TCGA-56-7579_treatment									Radiation Therapy
+1805	TCGA-LUSC.TCGA-56-7579.TCGA-56-7579_treatment_1									Pharmacotherapy
+1806	TCGA-LUSC.TCGA-56-7580.TCGA-56-7580_treatment									Radiation Therapy
+1807	TCGA-LUSC.TCGA-56-7580.TCGA-56-7580_treatment_1									Pharmacotherapy
+1808	TCGA-LUSC.TCGA-56-7582.TCGA-56-7582_treatment									Radiation Therapy
+1809	TCGA-LUSC.TCGA-56-7582.TCGA-56-7582_treatment_1									Pharmacotherapy
+1810	TCGA-LUSC.TCGA-56-7730.TCGA-56-7730_treatment									Radiation Therapy
+1811	TCGA-LUSC.TCGA-56-7730.TCGA-56-7730_treatment_1									Pharmacotherapy
+1812	TCGA-LUSC.TCGA-56-7731.TCGA-56-7731_treatment									Radiation Therapy
+1813	TCGA-LUSC.TCGA-56-7731.TCGA-56-7731_treatment_1									Pharmacotherapy
+1814	TCGA-LUSC.TCGA-56-7822.TCGA-56-7822_treatment									Radiation Therapy
+1815	TCGA-LUSC.TCGA-56-7822.TCGA-56-7822_treatment_1									Pharmacotherapy
+1816	TCGA-LUSC.TCGA-56-7823.TCGA-56-7823_treatment									Radiation Therapy
+1817	TCGA-LUSC.TCGA-56-7823.TCGA-56-7823_treatment_1									Pharmacotherapy
+1818	TCGA-LUSC.TCGA-56-8082.TCGA-56-8082_treatment									Radiation Therapy
+1819	TCGA-LUSC.TCGA-56-8082.TCGA-56-8082_treatment_1									Pharmacotherapy
+1820	TCGA-LUSC.TCGA-56-8083.TCGA-56-8083_treatment									Radiation Therapy
+1821	TCGA-LUSC.TCGA-56-8083.TCGA-56-8083_treatment_1									Pharmacotherapy
+1822	TCGA-LUSC.TCGA-56-8201.TCGA-56-8201_treatment									Radiation Therapy
+1823	TCGA-LUSC.TCGA-56-8201.TCGA-56-8201_treatment_1									Pharmacotherapy
+1824	TCGA-LUSC.TCGA-56-8304.TCGA-56-8304_treatment									Radiation Therapy
+1825	TCGA-LUSC.TCGA-56-8304.TCGA-56-8304_treatment_1									Pharmacotherapy
+1826	TCGA-LUSC.TCGA-56-8305.TCGA-56-8305_treatment									Radiation Therapy
+1827	TCGA-LUSC.TCGA-56-8305.TCGA-56-8305_treatment_1									Pharmacotherapy
+1828	TCGA-LUSC.TCGA-56-8307.TCGA-56-8307_treatment									Radiation Therapy
+1829	TCGA-LUSC.TCGA-56-8307.TCGA-56-8307_treatment_1									Pharmacotherapy
+1830	TCGA-LUSC.TCGA-56-8308.TCGA-56-8308_treatment									Radiation Therapy
+1831	TCGA-LUSC.TCGA-56-8308.TCGA-56-8308_treatment_1									Pharmacotherapy
+1832	TCGA-LUSC.TCGA-56-8309.TCGA-56-8309_treatment									Radiation Therapy
+1833	TCGA-LUSC.TCGA-56-8309.TCGA-56-8309_treatment_1									Pharmacotherapy
+1834	TCGA-LUSC.TCGA-56-8503.TCGA-56-8503_treatment									Radiation Therapy
+1835	TCGA-LUSC.TCGA-56-8503.TCGA-56-8503_treatment_1									Pharmacotherapy
+1836	TCGA-LUSC.TCGA-56-8504.TCGA-56-8504_treatment									Radiation Therapy
+1837	TCGA-LUSC.TCGA-56-8504.TCGA-56-8504_treatment_1									Pharmacotherapy
+1838	TCGA-LUSC.TCGA-56-8622.TCGA-56-8622_treatment									Radiation Therapy
+1839	TCGA-LUSC.TCGA-56-8622.TCGA-56-8622_treatment_1									Pharmacotherapy
+1840	TCGA-LUSC.TCGA-56-8623.TCGA-56-8623_treatment									Radiation Therapy
+1841	TCGA-LUSC.TCGA-56-8623.TCGA-56-8623_treatment_1									Pharmacotherapy
+1842	TCGA-LUSC.TCGA-56-8624.TCGA-56-8624_treatment									Radiation Therapy
+1843	TCGA-LUSC.TCGA-56-8624.TCGA-56-8624_treatment_1									Pharmacotherapy
+1844	TCGA-LUSC.TCGA-56-8625.TCGA-56-8625_treatment									Radiation Therapy
+1845	TCGA-LUSC.TCGA-56-8625.TCGA-56-8625_treatment_1									Pharmacotherapy
+1846	TCGA-LUSC.TCGA-56-8626.TCGA-56-8626_treatment									Radiation Therapy
+1847	TCGA-LUSC.TCGA-56-8626.TCGA-56-8626_treatment_1									Pharmacotherapy
+1848	TCGA-LUSC.TCGA-56-8628.TCGA-56-8628_treatment									Radiation Therapy
+1849	TCGA-LUSC.TCGA-56-8628.TCGA-56-8628_treatment_1									Pharmacotherapy
+1850	TCGA-LUSC.TCGA-56-8629.TCGA-56-8629_treatment									Radiation Therapy
+1851	TCGA-LUSC.TCGA-56-8629.TCGA-56-8629_treatment_1									Pharmacotherapy
+1852	TCGA-LUSC.TCGA-56-A49D.TCGA-56-A49D_treatment									Radiation Therapy
+1853	TCGA-LUSC.TCGA-56-A49D.TCGA-56-A49D_treatment_1									Pharmacotherapy
+1854	TCGA-LUSC.TCGA-56-A4BW.TCGA-56-A4BW_treatment									Radiation Therapy
+1855	TCGA-LUSC.TCGA-56-A4BW.TCGA-56-A4BW_treatment_1									Pharmacotherapy
+1856	TCGA-LUSC.TCGA-56-A4BX.TCGA-56-A4BX_treatment									Radiation Therapy
+1857	TCGA-LUSC.TCGA-56-A4BX.TCGA-56-A4BX_treatment_1									Pharmacotherapy
+1858	TCGA-LUSC.TCGA-56-A4BY.TCGA-56-A4BY_treatment									Radiation Therapy
+1859	TCGA-LUSC.TCGA-56-A4BY.TCGA-56-A4BY_treatment_1									Pharmacotherapy
+1860	TCGA-LUSC.TCGA-56-A4ZJ.TCGA-56-A4ZJ_treatment									Radiation Therapy
+1861	TCGA-LUSC.TCGA-56-A4ZJ.TCGA-56-A4ZJ_treatment_1									Pharmacotherapy
+1862	TCGA-LUSC.TCGA-56-A4ZK.TCGA-56-A4ZK_treatment									Radiation Therapy
+1863	TCGA-LUSC.TCGA-56-A4ZK.TCGA-56-A4ZK_treatment_1									Pharmacotherapy
+1864	TCGA-LUSC.TCGA-56-A5DR.TCGA-56-A5DR_treatment									Radiation Therapy
+1865	TCGA-LUSC.TCGA-56-A5DR.TCGA-56-A5DR_treatment_1									Pharmacotherapy
+1866	TCGA-LUSC.TCGA-56-A5DS.TCGA-56-A5DS_treatment									Radiation Therapy
+1867	TCGA-LUSC.TCGA-56-A5DS.TCGA-56-A5DS_treatment_1									Pharmacotherapy
+1868	TCGA-LUSC.TCGA-56-A62T.TCGA-56-A62T_treatment									Radiation Therapy
+1869	TCGA-LUSC.TCGA-56-A62T.TCGA-56-A62T_treatment_1									Pharmacotherapy
+1870	TCGA-LUSC.TCGA-58-8386.TCGA-58-8386_treatment									Radiation Therapy
+1871	TCGA-LUSC.TCGA-58-8386.TCGA-58-8386_treatment_1									Pharmacotherapy
+1872	TCGA-LUSC.TCGA-58-8387.TCGA-58-8387_treatment									Radiation Therapy
+1873	TCGA-LUSC.TCGA-58-8387.TCGA-58-8387_treatment_1									Pharmacotherapy
+1874	TCGA-LUSC.TCGA-58-8388.TCGA-58-8388_treatment									Radiation Therapy
+1875	TCGA-LUSC.TCGA-58-8388.TCGA-58-8388_treatment_1									Pharmacotherapy
+1876	TCGA-LUSC.TCGA-58-8390.TCGA-58-8390_treatment									Radiation Therapy
+1877	TCGA-LUSC.TCGA-58-8390.TCGA-58-8390_treatment_1									Pharmacotherapy
+1878	TCGA-LUSC.TCGA-58-8391.TCGA-58-8391_treatment									Radiation Therapy
+1879	TCGA-LUSC.TCGA-58-8391.TCGA-58-8391_treatment_1									Pharmacotherapy
+1880	TCGA-LUSC.TCGA-58-8392.TCGA-58-8392_treatment									Radiation Therapy
+1881	TCGA-LUSC.TCGA-58-8392.TCGA-58-8392_treatment_1									Pharmacotherapy
+1882	TCGA-LUSC.TCGA-58-8393.TCGA-58-8393_treatment									Radiation Therapy
+1883	TCGA-LUSC.TCGA-58-8393.TCGA-58-8393_treatment_1									Pharmacotherapy
+1884	TCGA-LUSC.TCGA-58-A46J.TCGA-58-A46J_treatment									Radiation Therapy
+1885	TCGA-LUSC.TCGA-58-A46J.TCGA-58-A46J_treatment_1									Pharmacotherapy
+1886	TCGA-LUSC.TCGA-58-A46K.TCGA-58-A46K_treatment									Radiation Therapy
+1887	TCGA-LUSC.TCGA-58-A46K.TCGA-58-A46K_treatment_1									Pharmacotherapy
+1888	TCGA-LUSC.TCGA-58-A46L.TCGA-58-A46L_treatment									Radiation Therapy
+1889	TCGA-LUSC.TCGA-58-A46L.TCGA-58-A46L_treatment_1									Pharmacotherapy
+1890	TCGA-LUSC.TCGA-58-A46M.TCGA-58-A46M_treatment									Radiation Therapy
+1891	TCGA-LUSC.TCGA-58-A46M.TCGA-58-A46M_treatment_1									Pharmacotherapy
+1892	TCGA-LUSC.TCGA-58-A46N.TCGA-58-A46N_treatment									Radiation Therapy
+1893	TCGA-LUSC.TCGA-58-A46N.TCGA-58-A46N_treatment_1									Pharmacotherapy
+1894	TCGA-LUSC.TCGA-60-2695.TCGA-60-2695_treatment									Radiation Therapy
+1895	TCGA-LUSC.TCGA-60-2695.TCGA-60-2695_treatment_1									Pharmacotherapy
+1896	TCGA-LUSC.TCGA-60-2696.TCGA-60-2696_treatment									Radiation Therapy
+1897	TCGA-LUSC.TCGA-60-2696.TCGA-60-2696_treatment_1									Pharmacotherapy
+1898	TCGA-LUSC.TCGA-60-2697.TCGA-60-2697_treatment									Radiation Therapy
+1899	TCGA-LUSC.TCGA-60-2697.TCGA-60-2697_treatment_1									Pharmacotherapy
+1900	TCGA-LUSC.TCGA-60-2698.TCGA-60-2698_treatment									Radiation Therapy
+1901	TCGA-LUSC.TCGA-60-2698.TCGA-60-2698_treatment_1									Pharmacotherapy
+1902	TCGA-LUSC.TCGA-60-2703.TCGA-60-2703_treatment									Radiation Therapy
+1903	TCGA-LUSC.TCGA-60-2703.TCGA-60-2703_treatment_1									Pharmacotherapy
+1904	TCGA-LUSC.TCGA-60-2704.TCGA-60-2704_treatment									Radiation Therapy
+1905	TCGA-LUSC.TCGA-60-2704.TCGA-60-2704_treatment_1									Pharmacotherapy
+1906	TCGA-LUSC.TCGA-60-2706.TCGA-60-2706_treatment									Radiation Therapy
+1907	TCGA-LUSC.TCGA-60-2706.TCGA-60-2706_treatment_1									Pharmacotherapy
+1908	TCGA-LUSC.TCGA-60-2707.TCGA-60-2707_treatment									Radiation Therapy
+1909	TCGA-LUSC.TCGA-60-2707.TCGA-60-2707_treatment_1									Pharmacotherapy
+1910	TCGA-LUSC.TCGA-60-2708.TCGA-60-2708_treatment									Radiation Therapy
+1911	TCGA-LUSC.TCGA-60-2708.TCGA-60-2708_treatment_1									Pharmacotherapy
+1912	TCGA-LUSC.TCGA-60-2709.TCGA-60-2709_treatment									Radiation Therapy
+1913	TCGA-LUSC.TCGA-60-2709.TCGA-60-2709_treatment_1									Pharmacotherapy
+1914	TCGA-LUSC.TCGA-60-2710.TCGA-60-2710_treatment									Radiation Therapy
+1915	TCGA-LUSC.TCGA-60-2710.TCGA-60-2710_treatment_1									Pharmacotherapy
+1916	TCGA-LUSC.TCGA-60-2711.TCGA-60-2711_treatment									Radiation Therapy
+1917	TCGA-LUSC.TCGA-60-2711.TCGA-60-2711_treatment_1									Pharmacotherapy
+1918	TCGA-LUSC.TCGA-60-2712.TCGA-60-2712_treatment									Radiation Therapy
+1919	TCGA-LUSC.TCGA-60-2712.TCGA-60-2712_treatment_1									Pharmacotherapy
+1920	TCGA-LUSC.TCGA-60-2713.TCGA-60-2713_treatment									Radiation Therapy
+1921	TCGA-LUSC.TCGA-60-2713.TCGA-60-2713_treatment_1									Pharmacotherapy
+1922	TCGA-LUSC.TCGA-60-2714.TCGA-60-2714_treatment									Radiation Therapy
+1923	TCGA-LUSC.TCGA-60-2714.TCGA-60-2714_treatment_1									Pharmacotherapy
+1924	TCGA-LUSC.TCGA-60-2715.TCGA-60-2715_treatment									Radiation Therapy
+1925	TCGA-LUSC.TCGA-60-2715.TCGA-60-2715_treatment_1									Pharmacotherapy
+1926	TCGA-LUSC.TCGA-60-2716.TCGA-60-2716_treatment									Radiation Therapy
+1927	TCGA-LUSC.TCGA-60-2716.TCGA-60-2716_treatment_1									Pharmacotherapy
+1928	TCGA-LUSC.TCGA-60-2719.TCGA-60-2719_treatment									Radiation Therapy
+1929	TCGA-LUSC.TCGA-60-2719.TCGA-60-2719_treatment_1									Pharmacotherapy
+1930	TCGA-LUSC.TCGA-60-2720.TCGA-60-2720_treatment									Radiation Therapy
+1931	TCGA-LUSC.TCGA-60-2720.TCGA-60-2720_treatment_1									Pharmacotherapy
+1932	TCGA-LUSC.TCGA-60-2721.TCGA-60-2721_treatment									Radiation Therapy
+1933	TCGA-LUSC.TCGA-60-2721.TCGA-60-2721_treatment_1									Pharmacotherapy
+1934	TCGA-LUSC.TCGA-60-2722.TCGA-60-2722_treatment									Radiation Therapy
+1935	TCGA-LUSC.TCGA-60-2722.TCGA-60-2722_treatment_1									Pharmacotherapy
+1936	TCGA-LUSC.TCGA-60-2723.TCGA-60-2723_treatment									Radiation Therapy
+1937	TCGA-LUSC.TCGA-60-2723.TCGA-60-2723_treatment_1									Pharmacotherapy
+1938	TCGA-LUSC.TCGA-60-2724.TCGA-60-2724_treatment									Radiation Therapy
+1939	TCGA-LUSC.TCGA-60-2724.TCGA-60-2724_treatment_1									Pharmacotherapy
+1940	TCGA-LUSC.TCGA-60-2725.TCGA-60-2725_treatment									Radiation Therapy
+1941	TCGA-LUSC.TCGA-60-2725.TCGA-60-2725_treatment_1									Pharmacotherapy
+1942	TCGA-LUSC.TCGA-60-2726.TCGA-60-2726_treatment									Radiation Therapy
+1943	TCGA-LUSC.TCGA-60-2726.TCGA-60-2726_treatment_1									Pharmacotherapy
+1944	TCGA-LUSC.TCGA-63-5128.TCGA-63-5128_treatment									Radiation Therapy
+1945	TCGA-LUSC.TCGA-63-5128.TCGA-63-5128_treatment_1									Pharmacotherapy
+1946	TCGA-LUSC.TCGA-63-5131.TCGA-63-5131_treatment									Radiation Therapy
+1947	TCGA-LUSC.TCGA-63-5131.TCGA-63-5131_treatment_1									Pharmacotherapy
+1948	TCGA-LUSC.TCGA-63-6202.TCGA-63-6202_treatment									Radiation Therapy
+1949	TCGA-LUSC.TCGA-63-6202.TCGA-63-6202_treatment_1									Pharmacotherapy
+1950	TCGA-LUSC.TCGA-63-7020.TCGA-63-7020_treatment									Radiation Therapy
+1951	TCGA-LUSC.TCGA-63-7020.TCGA-63-7020_treatment_1									Pharmacotherapy
+1952	TCGA-LUSC.TCGA-63-7021.TCGA-63-7021_treatment									Radiation Therapy
+1953	TCGA-LUSC.TCGA-63-7021.TCGA-63-7021_treatment_1									Pharmacotherapy
+1954	TCGA-LUSC.TCGA-63-7022.TCGA-63-7022_treatment									Radiation Therapy
+1955	TCGA-LUSC.TCGA-63-7022.TCGA-63-7022_treatment_1									Pharmacotherapy
+1956	TCGA-LUSC.TCGA-63-7023.TCGA-63-7023_treatment									Radiation Therapy
+1957	TCGA-LUSC.TCGA-63-7023.TCGA-63-7023_treatment_1									Pharmacotherapy
+1958	TCGA-LUSC.TCGA-63-A5M9.TCGA-63-A5M9_treatment									Radiation Therapy
+1959	TCGA-LUSC.TCGA-63-A5M9.TCGA-63-A5M9_treatment_1									Pharmacotherapy
+1960	TCGA-LUSC.TCGA-63-A5MB.TCGA-63-A5MB_treatment									Radiation Therapy
+1961	TCGA-LUSC.TCGA-63-A5MB.TCGA-63-A5MB_treatment_1									Pharmacotherapy
+1962	TCGA-LUSC.TCGA-63-A5MG.TCGA-63-A5MG_treatment									Radiation Therapy
+1963	TCGA-LUSC.TCGA-63-A5MG.TCGA-63-A5MG_treatment_1									Pharmacotherapy
+1964	TCGA-LUSC.TCGA-63-A5MH.TCGA-63-A5MH_treatment									Radiation Therapy
+1965	TCGA-LUSC.TCGA-63-A5MH.TCGA-63-A5MH_treatment_1									Pharmacotherapy
+1966	TCGA-LUSC.TCGA-63-A5MI.TCGA-63-A5MI_treatment									Radiation Therapy
+1967	TCGA-LUSC.TCGA-63-A5MI.TCGA-63-A5MI_treatment_1									Pharmacotherapy
+1968	TCGA-LUSC.TCGA-63-A5MJ.TCGA-63-A5MJ_treatment									Radiation Therapy
+1969	TCGA-LUSC.TCGA-63-A5MJ.TCGA-63-A5MJ_treatment_1									Pharmacotherapy
+1970	TCGA-LUSC.TCGA-63-A5ML.TCGA-63-A5ML_treatment									Radiation Therapy
+1971	TCGA-LUSC.TCGA-63-A5ML.TCGA-63-A5ML_treatment_1									Pharmacotherapy
+1972	TCGA-LUSC.TCGA-63-A5MM.TCGA-63-A5MM_treatment									Radiation Therapy
+1973	TCGA-LUSC.TCGA-63-A5MM.TCGA-63-A5MM_treatment_1									Pharmacotherapy
+1974	TCGA-LUSC.TCGA-63-A5MN.TCGA-63-A5MN_treatment									Radiation Therapy
+1975	TCGA-LUSC.TCGA-63-A5MN.TCGA-63-A5MN_treatment_1									Pharmacotherapy
+1976	TCGA-LUSC.TCGA-63-A5MP.TCGA-63-A5MP_treatment									Radiation Therapy
+1977	TCGA-LUSC.TCGA-63-A5MP.TCGA-63-A5MP_treatment_1									Pharmacotherapy
+1978	TCGA-LUSC.TCGA-63-A5MR.TCGA-63-A5MR_treatment									Radiation Therapy
+1979	TCGA-LUSC.TCGA-63-A5MR.TCGA-63-A5MR_treatment_1									Pharmacotherapy
+1980	TCGA-LUSC.TCGA-63-A5MS.TCGA-63-A5MS_treatment									Radiation Therapy
+1981	TCGA-LUSC.TCGA-63-A5MS.TCGA-63-A5MS_treatment_1									Pharmacotherapy
+1982	TCGA-LUSC.TCGA-63-A5MT.TCGA-63-A5MT_treatment									Radiation Therapy
+1983	TCGA-LUSC.TCGA-63-A5MT.TCGA-63-A5MT_treatment_1									Pharmacotherapy
+1984	TCGA-LUSC.TCGA-63-A5MU.TCGA-63-A5MU_treatment									Radiation Therapy
+1985	TCGA-LUSC.TCGA-63-A5MU.TCGA-63-A5MU_treatment_1									Pharmacotherapy
+1986	TCGA-LUSC.TCGA-63-A5MV.TCGA-63-A5MV_treatment									Radiation Therapy
+1987	TCGA-LUSC.TCGA-63-A5MV.TCGA-63-A5MV_treatment_1									Pharmacotherapy
+1988	TCGA-LUSC.TCGA-63-A5MW.TCGA-63-A5MW_treatment									Radiation Therapy
+1989	TCGA-LUSC.TCGA-63-A5MW.TCGA-63-A5MW_treatment_1									Pharmacotherapy
+1990	TCGA-LUSC.TCGA-63-A5MY.TCGA-63-A5MY_treatment									Radiation Therapy
+1991	TCGA-LUSC.TCGA-63-A5MY.TCGA-63-A5MY_treatment_1									Pharmacotherapy
+1992	TCGA-LUSC.TCGA-66-2727.TCGA-66-2727_treatment									Radiation Therapy
+1993	TCGA-LUSC.TCGA-66-2727.TCGA-66-2727_treatment_1									Pharmacotherapy
+1994	TCGA-LUSC.TCGA-66-2734.TCGA-66-2734_treatment									Radiation Therapy
+1995	TCGA-LUSC.TCGA-66-2734.TCGA-66-2734_treatment_1									Pharmacotherapy
+1996	TCGA-LUSC.TCGA-66-2737.TCGA-66-2737_treatment									Radiation Therapy
+1997	TCGA-LUSC.TCGA-66-2737.TCGA-66-2737_treatment_1									Pharmacotherapy
+1998	TCGA-LUSC.TCGA-66-2742.TCGA-66-2742_treatment									Radiation Therapy
+1999	TCGA-LUSC.TCGA-66-2742.TCGA-66-2742_treatment_1									Pharmacotherapy
+2000	TCGA-LUSC.TCGA-66-2744.TCGA-66-2744_treatment									Radiation Therapy
+2001	TCGA-LUSC.TCGA-66-2744.TCGA-66-2744_treatment_1									Pharmacotherapy
+2002	TCGA-LUSC.TCGA-66-2753.TCGA-66-2753_treatment									Radiation Therapy
+2003	TCGA-LUSC.TCGA-66-2753.TCGA-66-2753_treatment_1									Pharmacotherapy
+2004	TCGA-LUSC.TCGA-66-2754.TCGA-66-2754_treatment									Radiation Therapy
+2005	TCGA-LUSC.TCGA-66-2754.TCGA-66-2754_treatment_1									Pharmacotherapy
+2006	TCGA-LUSC.TCGA-66-2755.TCGA-66-2755_treatment									Radiation Therapy
+2007	TCGA-LUSC.TCGA-66-2755.TCGA-66-2755_treatment_1									Pharmacotherapy
+2008	TCGA-LUSC.TCGA-66-2756.TCGA-66-2756_treatment									Radiation Therapy
+2009	TCGA-LUSC.TCGA-66-2756.TCGA-66-2756_treatment_1									Pharmacotherapy
+2010	TCGA-LUSC.TCGA-66-2757.TCGA-66-2757_treatment									Radiation Therapy
+2011	TCGA-LUSC.TCGA-66-2757.TCGA-66-2757_treatment_1									Pharmacotherapy
+2012	TCGA-LUSC.TCGA-66-2758.TCGA-66-2758_treatment									Radiation Therapy
+2013	TCGA-LUSC.TCGA-66-2758.TCGA-66-2758_treatment_1									Pharmacotherapy
+2014	TCGA-LUSC.TCGA-66-2759.TCGA-66-2759_treatment									Radiation Therapy
+2015	TCGA-LUSC.TCGA-66-2759.TCGA-66-2759_treatment_1									Pharmacotherapy
+2016	TCGA-LUSC.TCGA-66-2763.TCGA-66-2763_treatment									Radiation Therapy
+2017	TCGA-LUSC.TCGA-66-2763.TCGA-66-2763_treatment_1									Pharmacotherapy
+2018	TCGA-LUSC.TCGA-66-2765.TCGA-66-2765_treatment									Radiation Therapy
+2019	TCGA-LUSC.TCGA-66-2765.TCGA-66-2765_treatment_1									Pharmacotherapy
+2020	TCGA-LUSC.TCGA-66-2766.TCGA-66-2766_treatment									Radiation Therapy
+2021	TCGA-LUSC.TCGA-66-2766.TCGA-66-2766_treatment_1									Pharmacotherapy
+2022	TCGA-LUSC.TCGA-66-2767.TCGA-66-2767_treatment									Radiation Therapy
+2023	TCGA-LUSC.TCGA-66-2767.TCGA-66-2767_treatment_1									Pharmacotherapy
+2024	TCGA-LUSC.TCGA-66-2768.TCGA-66-2768_treatment									Radiation Therapy
+2025	TCGA-LUSC.TCGA-66-2768.TCGA-66-2768_treatment_1									Pharmacotherapy
+2026	TCGA-LUSC.TCGA-66-2769.TCGA-66-2769_treatment									Radiation Therapy
+2027	TCGA-LUSC.TCGA-66-2769.TCGA-66-2769_treatment_1									Pharmacotherapy
+2028	TCGA-LUSC.TCGA-66-2770.TCGA-66-2770_treatment									Radiation Therapy
+2029	TCGA-LUSC.TCGA-66-2770.TCGA-66-2770_treatment_1									Pharmacotherapy
+2030	TCGA-LUSC.TCGA-66-2771.TCGA-66-2771_treatment									Radiation Therapy
+2031	TCGA-LUSC.TCGA-66-2771.TCGA-66-2771_treatment_1									Pharmacotherapy
+2032	TCGA-LUSC.TCGA-66-2773.TCGA-66-2773_treatment									Radiation Therapy
+2033	TCGA-LUSC.TCGA-66-2773.TCGA-66-2773_treatment_1									Pharmacotherapy
+2034	TCGA-LUSC.TCGA-66-2777.TCGA-66-2777_treatment									Radiation Therapy
+2035	TCGA-LUSC.TCGA-66-2777.TCGA-66-2777_treatment_1									Pharmacotherapy
+2036	TCGA-LUSC.TCGA-66-2778.TCGA-66-2778_treatment									Radiation Therapy
+2037	TCGA-LUSC.TCGA-66-2778.TCGA-66-2778_treatment_1									Pharmacotherapy
+2038	TCGA-LUSC.TCGA-66-2780.TCGA-66-2780_treatment									Radiation Therapy
+2039	TCGA-LUSC.TCGA-66-2780.TCGA-66-2780_treatment_1									Pharmacotherapy
+2040	TCGA-LUSC.TCGA-66-2781.TCGA-66-2781_treatment									Radiation Therapy
+2041	TCGA-LUSC.TCGA-66-2781.TCGA-66-2781_treatment_1									Pharmacotherapy
+2042	TCGA-LUSC.TCGA-66-2782.TCGA-66-2782_treatment									Radiation Therapy
+2043	TCGA-LUSC.TCGA-66-2782.TCGA-66-2782_treatment_1									Pharmacotherapy
+2044	TCGA-LUSC.TCGA-66-2783.TCGA-66-2783_treatment									Radiation Therapy
+2045	TCGA-LUSC.TCGA-66-2783.TCGA-66-2783_treatment_1									Pharmacotherapy
+2046	TCGA-LUSC.TCGA-66-2785.TCGA-66-2785_treatment									Radiation Therapy
+2047	TCGA-LUSC.TCGA-66-2785.TCGA-66-2785_treatment_1									Pharmacotherapy
+2048	TCGA-LUSC.TCGA-66-2786.TCGA-66-2786_treatment									Radiation Therapy
+2049	TCGA-LUSC.TCGA-66-2786.TCGA-66-2786_treatment_1									Pharmacotherapy
+2050	TCGA-LUSC.TCGA-66-2787.TCGA-66-2787_treatment									Radiation Therapy
+2051	TCGA-LUSC.TCGA-66-2787.TCGA-66-2787_treatment_1									Pharmacotherapy
+2052	TCGA-LUSC.TCGA-66-2788.TCGA-66-2788_treatment									Radiation Therapy
+2053	TCGA-LUSC.TCGA-66-2788.TCGA-66-2788_treatment_1									Pharmacotherapy
+2054	TCGA-LUSC.TCGA-66-2789.TCGA-66-2789_treatment									Radiation Therapy
+2055	TCGA-LUSC.TCGA-66-2789.TCGA-66-2789_treatment_1									Pharmacotherapy
+2056	TCGA-LUSC.TCGA-66-2790.TCGA-66-2790_treatment									Radiation Therapy
+2057	TCGA-LUSC.TCGA-66-2790.TCGA-66-2790_treatment_1									Pharmacotherapy
+2058	TCGA-LUSC.TCGA-66-2791.TCGA-66-2791_treatment									Radiation Therapy
+2059	TCGA-LUSC.TCGA-66-2791.TCGA-66-2791_treatment_1									Pharmacotherapy
+2060	TCGA-LUSC.TCGA-66-2792.TCGA-66-2792_treatment									Radiation Therapy
+2061	TCGA-LUSC.TCGA-66-2792.TCGA-66-2792_treatment_1									Pharmacotherapy
+2062	TCGA-LUSC.TCGA-66-2793.TCGA-66-2793_treatment									Radiation Therapy
+2063	TCGA-LUSC.TCGA-66-2793.TCGA-66-2793_treatment_1									Pharmacotherapy
+2064	TCGA-LUSC.TCGA-66-2794.TCGA-66-2794_treatment									Radiation Therapy
+2065	TCGA-LUSC.TCGA-66-2794.TCGA-66-2794_treatment_1									Pharmacotherapy
+2066	TCGA-LUSC.TCGA-66-2795.TCGA-66-2795_treatment									Radiation Therapy
+2067	TCGA-LUSC.TCGA-66-2795.TCGA-66-2795_treatment_1									Pharmacotherapy
+2068	TCGA-LUSC.TCGA-66-2800.TCGA-66-2800_treatment									Radiation Therapy
+2069	TCGA-LUSC.TCGA-66-2800.TCGA-66-2800_treatment_1									Pharmacotherapy
+2070	TCGA-LUSC.TCGA-68-7755.TCGA-68-7755_treatment									Radiation Therapy
+2071	TCGA-LUSC.TCGA-68-7755.TCGA-68-7755_treatment_1									Pharmacotherapy
+2072	TCGA-LUSC.TCGA-68-7756.TCGA-68-7756_treatment									Radiation Therapy
+2073	TCGA-LUSC.TCGA-68-7756.TCGA-68-7756_treatment_1									Pharmacotherapy
+2074	TCGA-LUSC.TCGA-68-7757.TCGA-68-7757_treatment									Radiation Therapy
+2075	TCGA-LUSC.TCGA-68-7757.TCGA-68-7757_treatment_1									Pharmacotherapy
+2076	TCGA-LUSC.TCGA-68-8250.TCGA-68-8250_treatment									Radiation Therapy
+2077	TCGA-LUSC.TCGA-68-8250.TCGA-68-8250_treatment_1									Pharmacotherapy
+2078	TCGA-LUSC.TCGA-68-8251.TCGA-68-8251_treatment									Radiation Therapy
+2079	TCGA-LUSC.TCGA-68-8251.TCGA-68-8251_treatment_1									Pharmacotherapy
+2080	TCGA-LUSC.TCGA-68-A59I.TCGA-68-A59I_treatment									Radiation Therapy
+2081	TCGA-LUSC.TCGA-68-A59I.TCGA-68-A59I_treatment_1									Pharmacotherapy
+2082	TCGA-LUSC.TCGA-68-A59J.TCGA-68-A59J_treatment									Radiation Therapy
+2083	TCGA-LUSC.TCGA-68-A59J.TCGA-68-A59J_treatment_1									Pharmacotherapy
+2084	TCGA-LUSC.TCGA-6A-AB49.TCGA-6A-AB49_treatment									Radiation Therapy
+2085	TCGA-LUSC.TCGA-6A-AB49.TCGA-6A-AB49_treatment_1									Pharmacotherapy
+2086	TCGA-LUSC.TCGA-70-6722.TCGA-70-6722_treatment									Radiation Therapy
+2087	TCGA-LUSC.TCGA-70-6722.TCGA-70-6722_treatment_1									Pharmacotherapy
+2088	TCGA-LUSC.TCGA-70-6723.TCGA-70-6723_treatment									Radiation Therapy
+2089	TCGA-LUSC.TCGA-70-6723.TCGA-70-6723_treatment_1									Pharmacotherapy
+2090	TCGA-LUSC.TCGA-77-6842.TCGA-77-6842_treatment									Radiation Therapy
+2091	TCGA-LUSC.TCGA-77-6842.TCGA-77-6842_treatment_1									Pharmacotherapy
+2092	TCGA-LUSC.TCGA-77-6843.TCGA-77-6843_treatment									Radiation Therapy
+2093	TCGA-LUSC.TCGA-77-6843.TCGA-77-6843_treatment_1									Pharmacotherapy
+2094	TCGA-LUSC.TCGA-77-6844.TCGA-77-6844_treatment									Radiation Therapy
+2095	TCGA-LUSC.TCGA-77-6844.TCGA-77-6844_treatment_1									Pharmacotherapy
+2096	TCGA-LUSC.TCGA-77-6845.TCGA-77-6845_treatment									Radiation Therapy
+2097	TCGA-LUSC.TCGA-77-6845.TCGA-77-6845_treatment_1									Pharmacotherapy
+2098	TCGA-LUSC.TCGA-77-7138.TCGA-77-7138_treatment									Radiation Therapy
+2099	TCGA-LUSC.TCGA-77-7138.TCGA-77-7138_treatment_1									Pharmacotherapy
+2100	TCGA-LUSC.TCGA-77-7139.TCGA-77-7139_treatment									Radiation Therapy
+2101	TCGA-LUSC.TCGA-77-7139.TCGA-77-7139_treatment_1									Pharmacotherapy
+2102	TCGA-LUSC.TCGA-77-7140.TCGA-77-7140_treatment									Radiation Therapy
+2103	TCGA-LUSC.TCGA-77-7140.TCGA-77-7140_treatment_1									Pharmacotherapy
+2104	TCGA-LUSC.TCGA-77-7141.TCGA-77-7141_treatment									Radiation Therapy
+2105	TCGA-LUSC.TCGA-77-7141.TCGA-77-7141_treatment_1									Pharmacotherapy
+2106	TCGA-LUSC.TCGA-77-7142.TCGA-77-7142_treatment									Radiation Therapy
+2107	TCGA-LUSC.TCGA-77-7142.TCGA-77-7142_treatment_1									Pharmacotherapy
+2108	TCGA-LUSC.TCGA-77-7335.TCGA-77-7335_treatment									Radiation Therapy
+2109	TCGA-LUSC.TCGA-77-7335.TCGA-77-7335_treatment_1									Pharmacotherapy
+2110	TCGA-LUSC.TCGA-77-7337.TCGA-77-7337_treatment									Radiation Therapy
+2111	TCGA-LUSC.TCGA-77-7337.TCGA-77-7337_treatment_1									Pharmacotherapy
+2112	TCGA-LUSC.TCGA-77-7338.TCGA-77-7338_treatment									Radiation Therapy
+2113	TCGA-LUSC.TCGA-77-7338.TCGA-77-7338_treatment_1									Pharmacotherapy
+2114	TCGA-LUSC.TCGA-77-7463.TCGA-77-7463_treatment									Radiation Therapy
+2115	TCGA-LUSC.TCGA-77-7463.TCGA-77-7463_treatment_1									Pharmacotherapy
+2116	TCGA-LUSC.TCGA-77-7465.TCGA-77-7465_treatment									Radiation Therapy
+2117	TCGA-LUSC.TCGA-77-7465.TCGA-77-7465_treatment_1									Pharmacotherapy
+2118	TCGA-LUSC.TCGA-77-8007.TCGA-77-8007_treatment									Radiation Therapy
+2119	TCGA-LUSC.TCGA-77-8007.TCGA-77-8007_treatment_1									Pharmacotherapy
+2120	TCGA-LUSC.TCGA-77-8008.TCGA-77-8008_treatment									Radiation Therapy
+2121	TCGA-LUSC.TCGA-77-8008.TCGA-77-8008_treatment_1									Pharmacotherapy
+2122	TCGA-LUSC.TCGA-77-8009.TCGA-77-8009_treatment									Radiation Therapy
+2123	TCGA-LUSC.TCGA-77-8009.TCGA-77-8009_treatment_1									Pharmacotherapy
+2124	TCGA-LUSC.TCGA-77-8128.TCGA-77-8128_treatment									Radiation Therapy
+2125	TCGA-LUSC.TCGA-77-8128.TCGA-77-8128_treatment_1									Pharmacotherapy
+2126	TCGA-LUSC.TCGA-77-8130.TCGA-77-8130_treatment									Radiation Therapy
+2127	TCGA-LUSC.TCGA-77-8130.TCGA-77-8130_treatment_1									Pharmacotherapy
+2128	TCGA-LUSC.TCGA-77-8131.TCGA-77-8131_treatment									Radiation Therapy
+2129	TCGA-LUSC.TCGA-77-8131.TCGA-77-8131_treatment_1									Pharmacotherapy
+2130	TCGA-LUSC.TCGA-77-8133.TCGA-77-8133_treatment									Radiation Therapy
+2131	TCGA-LUSC.TCGA-77-8133.TCGA-77-8133_treatment_1									Pharmacotherapy
+2132	TCGA-LUSC.TCGA-77-8136.TCGA-77-8136_treatment									Radiation Therapy
+2133	TCGA-LUSC.TCGA-77-8136.TCGA-77-8136_treatment_1									Pharmacotherapy
+2134	TCGA-LUSC.TCGA-77-8138.TCGA-77-8138_treatment									Radiation Therapy
+2135	TCGA-LUSC.TCGA-77-8138.TCGA-77-8138_treatment_1									Pharmacotherapy
+2136	TCGA-LUSC.TCGA-77-8139.TCGA-77-8139_treatment									Radiation Therapy
+2137	TCGA-LUSC.TCGA-77-8139.TCGA-77-8139_treatment_1									Pharmacotherapy
+2138	TCGA-LUSC.TCGA-77-8140.TCGA-77-8140_treatment									Radiation Therapy
+2139	TCGA-LUSC.TCGA-77-8140.TCGA-77-8140_treatment_1									Pharmacotherapy
+2140	TCGA-LUSC.TCGA-77-8143.TCGA-77-8143_treatment									Radiation Therapy
+2141	TCGA-LUSC.TCGA-77-8143.TCGA-77-8143_treatment_1									Pharmacotherapy
+2142	TCGA-LUSC.TCGA-77-8144.TCGA-77-8144_treatment									Radiation Therapy
+2143	TCGA-LUSC.TCGA-77-8144.TCGA-77-8144_treatment_1									Pharmacotherapy
+2144	TCGA-LUSC.TCGA-77-8145.TCGA-77-8145_treatment									Radiation Therapy
+2145	TCGA-LUSC.TCGA-77-8145.TCGA-77-8145_treatment_1									Pharmacotherapy
+2146	TCGA-LUSC.TCGA-77-8146.TCGA-77-8146_treatment									Radiation Therapy
+2147	TCGA-LUSC.TCGA-77-8146.TCGA-77-8146_treatment_1									Pharmacotherapy
+2148	TCGA-LUSC.TCGA-77-8148.TCGA-77-8148_treatment									Radiation Therapy
+2149	TCGA-LUSC.TCGA-77-8148.TCGA-77-8148_treatment_1									Pharmacotherapy
+2150	TCGA-LUSC.TCGA-77-8150.TCGA-77-8150_treatment									Radiation Therapy
+2151	TCGA-LUSC.TCGA-77-8150.TCGA-77-8150_treatment_1									Pharmacotherapy
+2152	TCGA-LUSC.TCGA-77-8153.TCGA-77-8153_treatment									Radiation Therapy
+2153	TCGA-LUSC.TCGA-77-8153.TCGA-77-8153_treatment_1									Pharmacotherapy
+2154	TCGA-LUSC.TCGA-77-8154.TCGA-77-8154_treatment									Radiation Therapy
+2155	TCGA-LUSC.TCGA-77-8154.TCGA-77-8154_treatment_1									Pharmacotherapy
+2156	TCGA-LUSC.TCGA-77-8156.TCGA-77-8156_treatment									Radiation Therapy
+2157	TCGA-LUSC.TCGA-77-8156.TCGA-77-8156_treatment_1									Pharmacotherapy
+2158	TCGA-LUSC.TCGA-77-A5FZ.TCGA-77-A5FZ_treatment									Radiation Therapy
+2159	TCGA-LUSC.TCGA-77-A5FZ.TCGA-77-A5FZ_treatment_1									Pharmacotherapy
+2160	TCGA-LUSC.TCGA-77-A5G1.TCGA-77-A5G1_treatment									Radiation Therapy
+2161	TCGA-LUSC.TCGA-77-A5G1.TCGA-77-A5G1_treatment_1									Pharmacotherapy
+2162	TCGA-LUSC.TCGA-77-A5G3.TCGA-77-A5G3_treatment									Radiation Therapy
+2163	TCGA-LUSC.TCGA-77-A5G3.TCGA-77-A5G3_treatment_1									Pharmacotherapy
+2164	TCGA-LUSC.TCGA-77-A5G6.TCGA-77-A5G6_treatment									Radiation Therapy
+2165	TCGA-LUSC.TCGA-77-A5G6.TCGA-77-A5G6_treatment_1									Pharmacotherapy
+2166	TCGA-LUSC.TCGA-77-A5G7.TCGA-77-A5G7_treatment									Radiation Therapy
+2167	TCGA-LUSC.TCGA-77-A5G7.TCGA-77-A5G7_treatment_1									Pharmacotherapy
+2168	TCGA-LUSC.TCGA-77-A5G8.TCGA-77-A5G8_treatment									Radiation Therapy
+2169	TCGA-LUSC.TCGA-77-A5G8.TCGA-77-A5G8_treatment_1									Pharmacotherapy
+2170	TCGA-LUSC.TCGA-77-A5GA.TCGA-77-A5GA_treatment									Radiation Therapy
+2171	TCGA-LUSC.TCGA-77-A5GA.TCGA-77-A5GA_treatment_1									Pharmacotherapy
+2172	TCGA-LUSC.TCGA-77-A5GB.TCGA-77-A5GB_treatment									Radiation Therapy
+2173	TCGA-LUSC.TCGA-77-A5GB.TCGA-77-A5GB_treatment_1									Pharmacotherapy
+2174	TCGA-LUSC.TCGA-77-A5GF.TCGA-77-A5GF_treatment									Radiation Therapy
+2175	TCGA-LUSC.TCGA-77-A5GF.TCGA-77-A5GF_treatment_1									Pharmacotherapy
+2176	TCGA-LUSC.TCGA-77-A5GH.TCGA-77-A5GH_treatment									Radiation Therapy
+2177	TCGA-LUSC.TCGA-77-A5GH.TCGA-77-A5GH_treatment_1									Pharmacotherapy
+2178	TCGA-LUSC.TCGA-79-5596.TCGA-79-5596_treatment									Radiation Therapy
+2179	TCGA-LUSC.TCGA-79-5596.TCGA-79-5596_treatment_1									Pharmacotherapy
+2180	TCGA-LUSC.TCGA-85-6175.TCGA-85-6175_treatment									Radiation Therapy
+2181	TCGA-LUSC.TCGA-85-6175.TCGA-85-6175_treatment_1									Pharmacotherapy
+2182	TCGA-LUSC.TCGA-85-6560.TCGA-85-6560_treatment									Radiation Therapy
+2183	TCGA-LUSC.TCGA-85-6560.TCGA-85-6560_treatment_1									Pharmacotherapy
+2184	TCGA-LUSC.TCGA-85-6561.TCGA-85-6561_treatment									Radiation Therapy
+2185	TCGA-LUSC.TCGA-85-6561.TCGA-85-6561_treatment_1									Pharmacotherapy
+2186	TCGA-LUSC.TCGA-85-6798.TCGA-85-6798_treatment									Radiation Therapy
+2187	TCGA-LUSC.TCGA-85-6798.TCGA-85-6798_treatment_1									Pharmacotherapy
+2188	TCGA-LUSC.TCGA-85-7696.TCGA-85-7696_treatment									Radiation Therapy
+2189	TCGA-LUSC.TCGA-85-7696.TCGA-85-7696_treatment_1									Pharmacotherapy
+2190	TCGA-LUSC.TCGA-85-7697.TCGA-85-7697_treatment									Radiation Therapy
+2191	TCGA-LUSC.TCGA-85-7697.TCGA-85-7697_treatment_1									Pharmacotherapy
+2192	TCGA-LUSC.TCGA-85-7698.TCGA-85-7698_treatment									Radiation Therapy
+2193	TCGA-LUSC.TCGA-85-7698.TCGA-85-7698_treatment_1									Pharmacotherapy
+2194	TCGA-LUSC.TCGA-85-7699.TCGA-85-7699_treatment									Radiation Therapy
+2195	TCGA-LUSC.TCGA-85-7699.TCGA-85-7699_treatment_1									Pharmacotherapy
+2196	TCGA-LUSC.TCGA-85-7710.TCGA-85-7710_treatment									Radiation Therapy
+2197	TCGA-LUSC.TCGA-85-7710.TCGA-85-7710_treatment_1									Pharmacotherapy
+2198	TCGA-LUSC.TCGA-85-7843.TCGA-85-7843_treatment									Radiation Therapy
+2199	TCGA-LUSC.TCGA-85-7843.TCGA-85-7843_treatment_1									Pharmacotherapy
+2200	TCGA-LUSC.TCGA-85-7844.TCGA-85-7844_treatment									Radiation Therapy
+2201	TCGA-LUSC.TCGA-85-7844.TCGA-85-7844_treatment_1									Pharmacotherapy
+2202	TCGA-LUSC.TCGA-85-7950.TCGA-85-7950_treatment									Radiation Therapy
+2203	TCGA-LUSC.TCGA-85-7950.TCGA-85-7950_treatment_1									Pharmacotherapy
+2204	TCGA-LUSC.TCGA-85-8048.TCGA-85-8048_treatment									Radiation Therapy
+2205	TCGA-LUSC.TCGA-85-8048.TCGA-85-8048_treatment_1									Pharmacotherapy
+2206	TCGA-LUSC.TCGA-85-8049.TCGA-85-8049_treatment									Radiation Therapy
+2207	TCGA-LUSC.TCGA-85-8049.TCGA-85-8049_treatment_1									Pharmacotherapy
+2208	TCGA-LUSC.TCGA-85-8052.TCGA-85-8052_treatment									Radiation Therapy
+2209	TCGA-LUSC.TCGA-85-8052.TCGA-85-8052_treatment_1									Pharmacotherapy
+2210	TCGA-LUSC.TCGA-85-8070.TCGA-85-8070_treatment									Radiation Therapy
+2211	TCGA-LUSC.TCGA-85-8070.TCGA-85-8070_treatment_1									Pharmacotherapy
+2212	TCGA-LUSC.TCGA-85-8071.TCGA-85-8071_treatment									Radiation Therapy
+2213	TCGA-LUSC.TCGA-85-8071.TCGA-85-8071_treatment_1									Pharmacotherapy
+2214	TCGA-LUSC.TCGA-85-8072.TCGA-85-8072_treatment									Radiation Therapy
+2215	TCGA-LUSC.TCGA-85-8072.TCGA-85-8072_treatment_1									Pharmacotherapy
+2216	TCGA-LUSC.TCGA-85-8276.TCGA-85-8276_treatment									Radiation Therapy
+2217	TCGA-LUSC.TCGA-85-8276.TCGA-85-8276_treatment_1									Pharmacotherapy
+2218	TCGA-LUSC.TCGA-85-8277.TCGA-85-8277_treatment									Radiation Therapy
+2219	TCGA-LUSC.TCGA-85-8277.TCGA-85-8277_treatment_1									Pharmacotherapy
+2220	TCGA-LUSC.TCGA-85-8287.TCGA-85-8287_treatment									Radiation Therapy
+2221	TCGA-LUSC.TCGA-85-8287.TCGA-85-8287_treatment_1									Pharmacotherapy
+2222	TCGA-LUSC.TCGA-85-8288.TCGA-85-8288_treatment									Radiation Therapy
+2223	TCGA-LUSC.TCGA-85-8288.TCGA-85-8288_treatment_1									Pharmacotherapy
+2224	TCGA-LUSC.TCGA-85-8350.TCGA-85-8350_treatment									Radiation Therapy
+2225	TCGA-LUSC.TCGA-85-8350.TCGA-85-8350_treatment_1									Pharmacotherapy
+2226	TCGA-LUSC.TCGA-85-8351.TCGA-85-8351_treatment									Radiation Therapy
+2227	TCGA-LUSC.TCGA-85-8351.TCGA-85-8351_treatment_1									Pharmacotherapy
+2228	TCGA-LUSC.TCGA-85-8352.TCGA-85-8352_treatment									Radiation Therapy
+2229	TCGA-LUSC.TCGA-85-8352.TCGA-85-8352_treatment_1									Pharmacotherapy
+2230	TCGA-LUSC.TCGA-85-8353.TCGA-85-8353_treatment									Radiation Therapy
+2231	TCGA-LUSC.TCGA-85-8353.TCGA-85-8353_treatment_1									Pharmacotherapy
+2232	TCGA-LUSC.TCGA-85-8354.TCGA-85-8354_treatment									Radiation Therapy
+2233	TCGA-LUSC.TCGA-85-8354.TCGA-85-8354_treatment_1									Pharmacotherapy
+2234	TCGA-LUSC.TCGA-85-8355.TCGA-85-8355_treatment									Radiation Therapy
+2235	TCGA-LUSC.TCGA-85-8355.TCGA-85-8355_treatment_1									Pharmacotherapy
+2236	TCGA-LUSC.TCGA-85-8479.TCGA-85-8479_treatment									Radiation Therapy
+2237	TCGA-LUSC.TCGA-85-8479.TCGA-85-8479_treatment_1									Pharmacotherapy
+2238	TCGA-LUSC.TCGA-85-8481.TCGA-85-8481_treatment									Radiation Therapy
+2239	TCGA-LUSC.TCGA-85-8481.TCGA-85-8481_treatment_1									Pharmacotherapy
+2240	TCGA-LUSC.TCGA-85-8580.TCGA-85-8580_treatment									Radiation Therapy
+2241	TCGA-LUSC.TCGA-85-8580.TCGA-85-8580_treatment_1									Pharmacotherapy
+2242	TCGA-LUSC.TCGA-85-8582.TCGA-85-8582_treatment									Radiation Therapy
+2243	TCGA-LUSC.TCGA-85-8582.TCGA-85-8582_treatment_1									Pharmacotherapy
+2244	TCGA-LUSC.TCGA-85-8584.TCGA-85-8584_treatment									Radiation Therapy
+2245	TCGA-LUSC.TCGA-85-8584.TCGA-85-8584_treatment_1									Pharmacotherapy
+2246	TCGA-LUSC.TCGA-85-8664.TCGA-85-8664_treatment									Radiation Therapy
+2247	TCGA-LUSC.TCGA-85-8664.TCGA-85-8664_treatment_1									Pharmacotherapy
+2248	TCGA-LUSC.TCGA-85-8666.TCGA-85-8666_treatment									Radiation Therapy
+2249	TCGA-LUSC.TCGA-85-8666.TCGA-85-8666_treatment_1									Pharmacotherapy
+2250	TCGA-LUSC.TCGA-85-A4CL.TCGA-85-A4CL_treatment									Radiation Therapy
+2251	TCGA-LUSC.TCGA-85-A4CL.TCGA-85-A4CL_treatment_1									Pharmacotherapy
+2252	TCGA-LUSC.TCGA-85-A4CN.TCGA-85-A4CN_treatment									Radiation Therapy
+2253	TCGA-LUSC.TCGA-85-A4CN.TCGA-85-A4CN_treatment_1									Pharmacotherapy
+2254	TCGA-LUSC.TCGA-85-A4JB.TCGA-85-A4JB_treatment									Radiation Therapy
+2255	TCGA-LUSC.TCGA-85-A4JB.TCGA-85-A4JB_treatment_1									Pharmacotherapy
+2256	TCGA-LUSC.TCGA-85-A4JC.TCGA-85-A4JC_treatment									Radiation Therapy
+2257	TCGA-LUSC.TCGA-85-A4JC.TCGA-85-A4JC_treatment_1									Pharmacotherapy
+2258	TCGA-LUSC.TCGA-85-A4PA.TCGA-85-A4PA_treatment									Radiation Therapy
+2259	TCGA-LUSC.TCGA-85-A4PA.TCGA-85-A4PA_treatment_1									Pharmacotherapy
+2260	TCGA-LUSC.TCGA-85-A4QQ.TCGA-85-A4QQ_treatment									Radiation Therapy
+2261	TCGA-LUSC.TCGA-85-A4QQ.TCGA-85-A4QQ_treatment_1									Pharmacotherapy
+2262	TCGA-LUSC.TCGA-85-A4QR.TCGA-85-A4QR_treatment									Radiation Therapy
+2263	TCGA-LUSC.TCGA-85-A4QR.TCGA-85-A4QR_treatment_1									Pharmacotherapy
+2264	TCGA-LUSC.TCGA-85-A50M.TCGA-85-A50M_treatment									Radiation Therapy
+2265	TCGA-LUSC.TCGA-85-A50M.TCGA-85-A50M_treatment_1									Pharmacotherapy
+2266	TCGA-LUSC.TCGA-85-A50Z.TCGA-85-A50Z_treatment									Radiation Therapy
+2267	TCGA-LUSC.TCGA-85-A50Z.TCGA-85-A50Z_treatment_1									Pharmacotherapy
+2268	TCGA-LUSC.TCGA-85-A510.TCGA-85-A510_treatment									Radiation Therapy
+2269	TCGA-LUSC.TCGA-85-A510.TCGA-85-A510_treatment_1									Pharmacotherapy
+2270	TCGA-LUSC.TCGA-85-A511.TCGA-85-A511_treatment									Radiation Therapy
+2271	TCGA-LUSC.TCGA-85-A511.TCGA-85-A511_treatment_1									Pharmacotherapy
+2272	TCGA-LUSC.TCGA-85-A512.TCGA-85-A512_treatment									Radiation Therapy
+2273	TCGA-LUSC.TCGA-85-A512.TCGA-85-A512_treatment_1									Pharmacotherapy
+2274	TCGA-LUSC.TCGA-85-A513.TCGA-85-A513_treatment									Radiation Therapy
+2275	TCGA-LUSC.TCGA-85-A513.TCGA-85-A513_treatment_1									Pharmacotherapy
+2276	TCGA-LUSC.TCGA-85-A53L.TCGA-85-A53L_treatment									Radiation Therapy
+2277	TCGA-LUSC.TCGA-85-A53L.TCGA-85-A53L_treatment_1									Pharmacotherapy
+2278	TCGA-LUSC.TCGA-85-A5B5.TCGA-85-A5B5_treatment									Radiation Therapy
+2279	TCGA-LUSC.TCGA-85-A5B5.TCGA-85-A5B5_treatment_1									Pharmacotherapy
+2280	TCGA-LUSC.TCGA-90-6837.TCGA-90-6837_treatment									Radiation Therapy
+2281	TCGA-LUSC.TCGA-90-6837.TCGA-90-6837_treatment_1									Pharmacotherapy
+2282	TCGA-LUSC.TCGA-90-7766.TCGA-90-7766_treatment									Radiation Therapy
+2283	TCGA-LUSC.TCGA-90-7766.TCGA-90-7766_treatment_1									Pharmacotherapy
+2284	TCGA-LUSC.TCGA-90-7767.TCGA-90-7767_treatment									Radiation Therapy
+2285	TCGA-LUSC.TCGA-90-7767.TCGA-90-7767_treatment_1									Pharmacotherapy
+2286	TCGA-LUSC.TCGA-90-7769.TCGA-90-7769_treatment									Radiation Therapy
+2287	TCGA-LUSC.TCGA-90-7769.TCGA-90-7769_treatment_1									Pharmacotherapy
+2288	TCGA-LUSC.TCGA-90-7964.TCGA-90-7964_treatment									Radiation Therapy
+2289	TCGA-LUSC.TCGA-90-7964.TCGA-90-7964_treatment_1									Pharmacotherapy
+2290	TCGA-LUSC.TCGA-90-A4ED.TCGA-90-A4ED_treatment									Radiation Therapy
+2291	TCGA-LUSC.TCGA-90-A4ED.TCGA-90-A4ED_treatment_1									Pharmacotherapy
+2292	TCGA-LUSC.TCGA-90-A4EE.TCGA-90-A4EE_treatment									Radiation Therapy
+2293	TCGA-LUSC.TCGA-90-A4EE.TCGA-90-A4EE_treatment_1									Pharmacotherapy
+2294	TCGA-LUSC.TCGA-90-A59Q.TCGA-90-A59Q_treatment									Radiation Therapy
+2295	TCGA-LUSC.TCGA-90-A59Q.TCGA-90-A59Q_treatment_1									Pharmacotherapy
+2296	TCGA-LUSC.TCGA-92-7340.TCGA-92-7340_treatment									Radiation Therapy
+2297	TCGA-LUSC.TCGA-92-7340.TCGA-92-7340_treatment_1									Pharmacotherapy
+2298	TCGA-LUSC.TCGA-92-7341.TCGA-92-7341_treatment									Radiation Therapy
+2299	TCGA-LUSC.TCGA-92-7341.TCGA-92-7341_treatment_1									Pharmacotherapy
+2300	TCGA-LUSC.TCGA-92-8063.TCGA-92-8063_treatment									Radiation Therapy
+2301	TCGA-LUSC.TCGA-92-8063.TCGA-92-8063_treatment_1									Pharmacotherapy
+2302	TCGA-LUSC.TCGA-92-8064.TCGA-92-8064_treatment									Radiation Therapy
+2303	TCGA-LUSC.TCGA-92-8064.TCGA-92-8064_treatment_1									Pharmacotherapy
+2304	TCGA-LUSC.TCGA-92-8065.TCGA-92-8065_treatment									Radiation Therapy
+2305	TCGA-LUSC.TCGA-92-8065.TCGA-92-8065_treatment_1									Pharmacotherapy
+2306	TCGA-LUSC.TCGA-94-7033.TCGA-94-7033_treatment									Radiation Therapy
+2307	TCGA-LUSC.TCGA-94-7033.TCGA-94-7033_treatment_1									Pharmacotherapy
+2308	TCGA-LUSC.TCGA-94-7557.TCGA-94-7557_treatment									Radiation Therapy
+2309	TCGA-LUSC.TCGA-94-7557.TCGA-94-7557_treatment_1									Pharmacotherapy
+2310	TCGA-LUSC.TCGA-94-7943.TCGA-94-7943_treatment									Radiation Therapy
+2311	TCGA-LUSC.TCGA-94-7943.TCGA-94-7943_treatment_1									Pharmacotherapy
+2312	TCGA-LUSC.TCGA-94-8035.TCGA-94-8035_treatment									Radiation Therapy
+2313	TCGA-LUSC.TCGA-94-8035.TCGA-94-8035_treatment_1									Pharmacotherapy
+2314	TCGA-LUSC.TCGA-94-8490.TCGA-94-8490_treatment									Radiation Therapy
+2315	TCGA-LUSC.TCGA-94-8490.TCGA-94-8490_treatment_1									Pharmacotherapy
+2316	TCGA-LUSC.TCGA-94-8491.TCGA-94-8491_treatment									Radiation Therapy
+2317	TCGA-LUSC.TCGA-94-8491.TCGA-94-8491_treatment_1									Pharmacotherapy
+2318	TCGA-LUSC.TCGA-94-A4VJ.TCGA-94-A4VJ_treatment									Radiation Therapy
+2319	TCGA-LUSC.TCGA-94-A4VJ.TCGA-94-A4VJ_treatment_1									Pharmacotherapy
+2320	TCGA-LUSC.TCGA-94-A5I4.TCGA-94-A5I4_treatment									Radiation Therapy
+2321	TCGA-LUSC.TCGA-94-A5I4.TCGA-94-A5I4_treatment_1									Pharmacotherapy
+2322	TCGA-LUSC.TCGA-94-A5I6.TCGA-94-A5I6_treatment									Radiation Therapy
+2323	TCGA-LUSC.TCGA-94-A5I6.TCGA-94-A5I6_treatment_1									Pharmacotherapy
+2324	TCGA-LUSC.TCGA-96-7544.TCGA-96-7544_treatment									Radiation Therapy
+2325	TCGA-LUSC.TCGA-96-7544.TCGA-96-7544_treatment_1									Pharmacotherapy
+2326	TCGA-LUSC.TCGA-96-7545.TCGA-96-7545_treatment									Radiation Therapy
+2327	TCGA-LUSC.TCGA-96-7545.TCGA-96-7545_treatment_1									Pharmacotherapy
+2328	TCGA-LUSC.TCGA-96-8169.TCGA-96-8169_treatment									Radiation Therapy
+2329	TCGA-LUSC.TCGA-96-8169.TCGA-96-8169_treatment_1									Pharmacotherapy
+2330	TCGA-LUSC.TCGA-96-8170.TCGA-96-8170_treatment									Radiation Therapy
+2331	TCGA-LUSC.TCGA-96-8170.TCGA-96-8170_treatment_1									Pharmacotherapy
+2332	TCGA-LUSC.TCGA-96-A4JK.TCGA-96-A4JK_treatment									Radiation Therapy
+2333	TCGA-LUSC.TCGA-96-A4JK.TCGA-96-A4JK_treatment_1									Pharmacotherapy
+2334	TCGA-LUSC.TCGA-96-A4JL.TCGA-96-A4JL_treatment									Radiation Therapy
+2335	TCGA-LUSC.TCGA-96-A4JL.TCGA-96-A4JL_treatment_1									Pharmacotherapy
+2336	TCGA-LUSC.TCGA-98-7454.TCGA-98-7454_treatment									Radiation Therapy
+2337	TCGA-LUSC.TCGA-98-7454.TCGA-98-7454_treatment_1									Pharmacotherapy
+2338	TCGA-LUSC.TCGA-98-8020.TCGA-98-8020_treatment									Radiation Therapy
+2339	TCGA-LUSC.TCGA-98-8020.TCGA-98-8020_treatment_1									Pharmacotherapy
+2340	TCGA-LUSC.TCGA-98-8021.TCGA-98-8021_treatment									Radiation Therapy
+2341	TCGA-LUSC.TCGA-98-8021.TCGA-98-8021_treatment_1									Pharmacotherapy
+2342	TCGA-LUSC.TCGA-98-8022.TCGA-98-8022_treatment									Radiation Therapy
+2343	TCGA-LUSC.TCGA-98-8022.TCGA-98-8022_treatment_1									Pharmacotherapy
+2344	TCGA-LUSC.TCGA-98-8023.TCGA-98-8023_treatment									Radiation Therapy
+2345	TCGA-LUSC.TCGA-98-8023.TCGA-98-8023_treatment_1									Pharmacotherapy
+2346	TCGA-LUSC.TCGA-98-A538.TCGA-98-A538_treatment									Radiation Therapy
+2347	TCGA-LUSC.TCGA-98-A538.TCGA-98-A538_treatment_1									Pharmacotherapy
+2348	TCGA-LUSC.TCGA-98-A539.TCGA-98-A539_treatment									Radiation Therapy
+2349	TCGA-LUSC.TCGA-98-A539.TCGA-98-A539_treatment_1									Pharmacotherapy
+2350	TCGA-LUSC.TCGA-98-A53A.TCGA-98-A53A_treatment									Radiation Therapy
+2351	TCGA-LUSC.TCGA-98-A53A.TCGA-98-A53A_treatment_1									Pharmacotherapy
+2352	TCGA-LUSC.TCGA-98-A53B.TCGA-98-A53B_treatment									Radiation Therapy
+2353	TCGA-LUSC.TCGA-98-A53B.TCGA-98-A53B_treatment_1									Pharmacotherapy
+2354	TCGA-LUSC.TCGA-98-A53C.TCGA-98-A53C_treatment									Radiation Therapy
+2355	TCGA-LUSC.TCGA-98-A53C.TCGA-98-A53C_treatment_1									Pharmacotherapy
+2356	TCGA-LUSC.TCGA-98-A53D.TCGA-98-A53D_treatment									Radiation Therapy
+2357	TCGA-LUSC.TCGA-98-A53D.TCGA-98-A53D_treatment_1									Pharmacotherapy
+2358	TCGA-LUSC.TCGA-98-A53H.TCGA-98-A53H_treatment									Radiation Therapy
+2359	TCGA-LUSC.TCGA-98-A53H.TCGA-98-A53H_treatment_1									Pharmacotherapy
+2360	TCGA-LUSC.TCGA-98-A53I.TCGA-98-A53I_treatment									Radiation Therapy
+2361	TCGA-LUSC.TCGA-98-A53I.TCGA-98-A53I_treatment_1									Pharmacotherapy
+2362	TCGA-LUSC.TCGA-98-A53J.TCGA-98-A53J_treatment									Radiation Therapy
+2363	TCGA-LUSC.TCGA-98-A53J.TCGA-98-A53J_treatment_1									Pharmacotherapy
+2364	TCGA-LUSC.TCGA-J1-A4AH.TCGA-J1-A4AH_treatment									Radiation Therapy
+2365	TCGA-LUSC.TCGA-J1-A4AH.TCGA-J1-A4AH_treatment_1									Pharmacotherapy
+2366	TCGA-LUSC.TCGA-L3-A4E7.TCGA-L3-A4E7_treatment									Radiation Therapy
+2367	TCGA-LUSC.TCGA-L3-A4E7.TCGA-L3-A4E7_treatment_1									Pharmacotherapy
+2368	TCGA-LUSC.TCGA-L3-A524.TCGA-L3-A524_treatment									Radiation Therapy
+2369	TCGA-LUSC.TCGA-L3-A524.TCGA-L3-A524_treatment_1									Pharmacotherapy
+2370	TCGA-LUSC.TCGA-LA-A446.TCGA-LA-A446_treatment									Radiation Therapy
+2371	TCGA-LUSC.TCGA-LA-A446.TCGA-LA-A446_treatment_1									Pharmacotherapy
+2372	TCGA-LUSC.TCGA-LA-A7SW.TCGA-LA-A7SW_treatment									Radiation Therapy
+2373	TCGA-LUSC.TCGA-LA-A7SW.TCGA-LA-A7SW_treatment_1									Pharmacotherapy
+2374	TCGA-LUSC.TCGA-MF-A522.TCGA-MF-A522_treatment									Radiation Therapy
+2375	TCGA-LUSC.TCGA-MF-A522.TCGA-MF-A522_treatment_1									Pharmacotherapy
+2376	TCGA-LUSC.TCGA-NC-A5HD.TCGA-NC-A5HD_treatment									Radiation Therapy
+2377	TCGA-LUSC.TCGA-NC-A5HD.TCGA-NC-A5HD_treatment_1									Pharmacotherapy
+2378	TCGA-LUSC.TCGA-NC-A5HE.TCGA-NC-A5HE_treatment									Radiation Therapy
+2379	TCGA-LUSC.TCGA-NC-A5HE.TCGA-NC-A5HE_treatment_1									Pharmacotherapy
+2380	TCGA-LUSC.TCGA-NC-A5HF.TCGA-NC-A5HF_treatment									Radiation Therapy
+2381	TCGA-LUSC.TCGA-NC-A5HF.TCGA-NC-A5HF_treatment_1									Pharmacotherapy
+2382	TCGA-LUSC.TCGA-NC-A5HG.TCGA-NC-A5HG_treatment									Radiation Therapy
+2383	TCGA-LUSC.TCGA-NC-A5HG.TCGA-NC-A5HG_treatment_1									Pharmacotherapy
+2384	TCGA-LUSC.TCGA-NC-A5HH.TCGA-NC-A5HH_treatment									Radiation Therapy
+2385	TCGA-LUSC.TCGA-NC-A5HH.TCGA-NC-A5HH_treatment_1									Pharmacotherapy
+2386	TCGA-LUSC.TCGA-NC-A5HI.TCGA-NC-A5HI_treatment									Radiation Therapy
+2387	TCGA-LUSC.TCGA-NC-A5HI.TCGA-NC-A5HI_treatment_1									Pharmacotherapy
+2388	TCGA-LUSC.TCGA-NC-A5HJ.TCGA-NC-A5HJ_treatment									Radiation Therapy
+2389	TCGA-LUSC.TCGA-NC-A5HJ.TCGA-NC-A5HJ_treatment_1									Pharmacotherapy
+2390	TCGA-LUSC.TCGA-NC-A5HK.TCGA-NC-A5HK_treatment									Radiation Therapy
+2391	TCGA-LUSC.TCGA-NC-A5HK.TCGA-NC-A5HK_treatment_1									Pharmacotherapy
+2392	TCGA-LUSC.TCGA-NC-A5HL.TCGA-NC-A5HL_treatment									Radiation Therapy
+2393	TCGA-LUSC.TCGA-NC-A5HL.TCGA-NC-A5HL_treatment_1									Pharmacotherapy
+2394	TCGA-LUSC.TCGA-NC-A5HM.TCGA-NC-A5HM_treatment									Radiation Therapy
+2395	TCGA-LUSC.TCGA-NC-A5HM.TCGA-NC-A5HM_treatment_1									Pharmacotherapy
+2396	TCGA-LUSC.TCGA-NC-A5HN.TCGA-NC-A5HN_treatment									Radiation Therapy
+2397	TCGA-LUSC.TCGA-NC-A5HN.TCGA-NC-A5HN_treatment_1									Pharmacotherapy
+2398	TCGA-LUSC.TCGA-NC-A5HO.TCGA-NC-A5HO_treatment									Radiation Therapy
+2399	TCGA-LUSC.TCGA-NC-A5HO.TCGA-NC-A5HO_treatment_1									Pharmacotherapy
+2400	TCGA-LUSC.TCGA-NC-A5HP.TCGA-NC-A5HP_treatment									Radiation Therapy
+2401	TCGA-LUSC.TCGA-NC-A5HP.TCGA-NC-A5HP_treatment_1									Pharmacotherapy
+2402	TCGA-LUSC.TCGA-NC-A5HQ.TCGA-NC-A5HQ_treatment									Radiation Therapy
+2403	TCGA-LUSC.TCGA-NC-A5HQ.TCGA-NC-A5HQ_treatment_1									Pharmacotherapy
+2404	TCGA-LUSC.TCGA-NC-A5HR.TCGA-NC-A5HR_treatment									Radiation Therapy
+2405	TCGA-LUSC.TCGA-NC-A5HR.TCGA-NC-A5HR_treatment_1									Pharmacotherapy
+2406	TCGA-LUSC.TCGA-NC-A5HT.TCGA-NC-A5HT_treatment									Radiation Therapy
+2407	TCGA-LUSC.TCGA-NC-A5HT.TCGA-NC-A5HT_treatment_1									Pharmacotherapy
+2408	TCGA-LUSC.TCGA-NK-A5CR.TCGA-NK-A5CR_treatment									Radiation Therapy
+2409	TCGA-LUSC.TCGA-NK-A5CR.TCGA-NK-A5CR_treatment_1									Pharmacotherapy
+2410	TCGA-LUSC.TCGA-NK-A5CT.TCGA-NK-A5CT_treatment									Radiation Therapy
+2411	TCGA-LUSC.TCGA-NK-A5CT.TCGA-NK-A5CT_treatment_1									Pharmacotherapy
+2412	TCGA-LUSC.TCGA-NK-A5CX.TCGA-NK-A5CX_treatment									Radiation Therapy
+2413	TCGA-LUSC.TCGA-NK-A5CX.TCGA-NK-A5CX_treatment_1									Pharmacotherapy
+2414	TCGA-LUSC.TCGA-NK-A5D1.TCGA-NK-A5D1_treatment									Radiation Therapy
+2415	TCGA-LUSC.TCGA-NK-A5D1.TCGA-NK-A5D1_treatment_1									Pharmacotherapy
+2416	TCGA-LUSC.TCGA-NK-A7XE.TCGA-NK-A7XE_treatment									Radiation Therapy
+2417	TCGA-LUSC.TCGA-NK-A7XE.TCGA-NK-A7XE_treatment_1									Pharmacotherapy
+2418	TCGA-LUSC.TCGA-O2-A52N.TCGA-O2-A52N_treatment									Radiation Therapy
+2419	TCGA-LUSC.TCGA-O2-A52N.TCGA-O2-A52N_treatment_1									Pharmacotherapy
+2420	TCGA-LUSC.TCGA-O2-A52Q.TCGA-O2-A52Q_treatment									Radiation Therapy
+2421	TCGA-LUSC.TCGA-O2-A52Q.TCGA-O2-A52Q_treatment_1									Pharmacotherapy
+2422	TCGA-LUSC.TCGA-O2-A52S.TCGA-O2-A52S_treatment									Radiation Therapy
+2423	TCGA-LUSC.TCGA-O2-A52S.TCGA-O2-A52S_treatment_1									Pharmacotherapy
+2424	TCGA-LUSC.TCGA-O2-A52V.TCGA-O2-A52V_treatment									Radiation Therapy
+2425	TCGA-LUSC.TCGA-O2-A52V.TCGA-O2-A52V_treatment_1									Pharmacotherapy
+2426	TCGA-LUSC.TCGA-O2-A52W.TCGA-O2-A52W_treatment									Radiation Therapy
+2427	TCGA-LUSC.TCGA-O2-A52W.TCGA-O2-A52W_treatment_1									Pharmacotherapy
+2428	TCGA-LUSC.TCGA-O2-A5IB.TCGA-O2-A5IB_treatment									Radiation Therapy
+2429	TCGA-LUSC.TCGA-O2-A5IB.TCGA-O2-A5IB_treatment_1									Pharmacotherapy
+2430	TCGA-LUSC.TCGA-XC-AA0X.TCGA-XC-AA0X_treatment									Radiation Therapy
+2431	TCGA-LUSC.TCGA-XC-AA0X.TCGA-XC-AA0X_treatment_1									Pharmacotherapy
+2432	TCGA-MESO.TCGA-3H-AB3X.TCGA-3H-AB3X_treatment									Radiation Therapy
+2433	TCGA-MESO.TCGA-3H-AB3X.TCGA-3H-AB3X_treatment_1									Pharmacotherapy
+2434	VAREPOP-APOLLO.AP-6H6G.AP-6H6G-DIAGNOSIS-1-TREATMENT-1		146		Carboplatin					Chemotherapy
+2435	VAREPOP-APOLLO.AP-6M60.AP-6M60-DIAGNOSIS-1-TREATMENT-1		76		Cisplatin					Chemotherapy
+2436	VAREPOP-APOLLO.AP-6M60.AP-6M60-DIAGNOSIS-1-TREATMENT-2									
+2437	VAREPOP-APOLLO.AP-95DK.AP-95DK-DIAGNOSIS-1-TREATMENT-1		69		Carboplatin					Chemotherapy
+2438	VAREPOP-APOLLO.AP-97PG.AP-97PG-DIAGNOSIS-1-TREATMENT-1		36							
+2439	VAREPOP-APOLLO.AP-9GTR.AP-9GTR-DIAGNOSIS-1-TREATMENT-1		28		Carboplatin					Chemotherapy
+2440	VAREPOP-APOLLO.AP-CL9I.AP-CL9I-DIAGNOSIS-1-TREATMENT-1		390							
+2441	VAREPOP-APOLLO.AP-DRVN.AP-DRVN-DIAGNOSIS-1-TREATMENT-1		54		Cisplatin					Chemotherapy

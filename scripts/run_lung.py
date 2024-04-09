@@ -1,12 +1,26 @@
 import os
 from google.protobuf.json_format import MessageToJson
 
-from cdapython import Q
+# https://cda.readthedocs.io/en/latest/documentation/cdapython/code_update/#install
+#from cdapython import Q
+from cdapython import tables, columns, column_values, fetch_rows, summary_counts # updated CDA 
 from oncoexporter.cda import CdaTableImporter, configure_cda_table_importer
 
-table_importer: CdaTableImporter = configure_cda_table_importer()
+'''
+https://cda.readthedocs.io/en/latest/documentation/cdapython/code_update/#returning-a-matrix-of-results
+old: all of the functions previously used with, or chained onto Q()...run() have been replaced with the single function fetch_rows()
 
-Tsite = Q('primary_diagnosis_site = "%lung%" OR primary_diagnosis_site = "%pulmonary%"')
+fetch_rows(table=None, *, match_all=[], match_any=[], data_source=[], add_columns=[], link_to_table='', provenance=False, count_only=False, return_data_as='dataframe', output_file='', debug=False)
+
+fetch_rows( table='subject', match_all=[ 'primary_disease_type = *duct*', 'sex = F*' ] )
+fetch_rows( table='researchsubject', match_all=[ 'primary_diagnosis_site = NULL' ] )
+'''
+table_importer: CdaTableImporter = configure_cda_table_importer(use_cache=False)
+
+#Tsite = Q('primary_diagnosis_site = "%lung%" OR primary_diagnosis_site = "%pulmonary%"')
+# b = {'x':42, 'y':None}
+# function(1, **b) # equal to function(1, x=42, y=None)
+Tsite = {'match_any': ['primary_diagnosis_site = *lung*' , 'primary_diagnosis_site = *pulmonary*']}
 cohort_name = 'Lung'
 p = table_importer.get_ga4gh_phenopackets(Tsite, cohort_name=cohort_name)
 
