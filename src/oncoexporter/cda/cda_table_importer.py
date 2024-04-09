@@ -131,12 +131,6 @@ class CdaTableImporter(CdaImporter[Q]):
         treatment_df = self._get_cda_df(treatment_callable, f"{cohort_name}_treatment_df.pkl")
         return treatment_df
 
-    def get_mutation_df(self, q: Q, cohort_name: str) -> pd.DataFrame:
-        mutation_callable = lambda: q.mutation.run(page_size=self._page_size).get_all().to_dataframe()
-        mutation_df = self._get_cda_df(mutation_callable, f"{cohort_name}_mutation_df.pkl")
-        return mutation_df
-
-
     def get_ga4gh_phenopackets(self, source: Q, **kwargs) -> typing.List[PPkt.Phenopacket]:
         """Get a list of GA4GH phenopackets corresponding to the individuals returned by the query passed to the constructor.
 
@@ -161,7 +155,6 @@ class CdaTableImporter(CdaImporter[Q]):
         merged_df = self.get_merged_diagnosis_research_subject_df(source, cohort_name)
         specimen_df = self.get_specimen_df(source, cohort_name)
         treatment_df = self.get_treatment_df(source, cohort_name)
-        mutation_df = self.get_mutation_df(source, cohort_name)
         subj_rsub_df = self.get_merged_subject_research_subject_df(source, cohort_name)
 
         # Now use the CdaFactory classes to transform the information from the DataFrames into
