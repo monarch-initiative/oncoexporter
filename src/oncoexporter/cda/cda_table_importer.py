@@ -5,6 +5,8 @@ import phenopackets as PPkt
 import typing
 import pandas as pd
 import pickle
+import re
+
 from .cda_disease_factory import CdaDiseaseFactory
 from .cda_importer import CdaImporter
 from .cda_factory import CdaFactory
@@ -91,7 +93,7 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
                     pickle.dump(individual_df, f)
         return individual_df
 
-
+    # not clear why this is _ but others are not...
     def _get_subject_df(self, q: dict, cohort_name: str) -> pd.DataFrame:
         """Retrieve the subject dataframe from CDA
 
@@ -107,7 +109,6 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
         subject_df = self._get_cda_df(callable, f"{cohort_name}_individual_df.pkl")
         print("obtained subject_df")
         return subject_df
-
 
     def get_merged_diagnosis_research_subject_df(self, q: dict, cohort_name: str) -> pd.DataFrame:
         """
@@ -137,45 +138,57 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
         diagnosis_callable = lambda: fetch_rows( table='diagnosis', **q , add_columns=['subject_id'])
         diagnosis_df = self._get_cda_df(diagnosis_callable, f"{cohort_name}_diagnosis_df.pkl")
         print("obtained diagnosis_df")
-        diagnosis_df.to_csv('diagnosis_df.txt', sep='\t')
+        #diagnosis_df.to_csv('diagnosis_df.txt', sep='\t')
         
-        # tried link_to_table='diagnosis' but it doesn't add any columns, try add_columns=['primary_diagnosis', 'age_at_diagnosis', 'stage']
+        # tried link_to_table='diagnosis' but it doesn't add any columns
         rsub_callable = lambda: fetch_rows( table='researchsubject', **q , add_columns=['subject_id'])
-        rsub_df = self._get_cda_df(rsub_callable, f"{cohort_name}_researchsubject_df.pkl")
+        rsub_df = self._get_cda_df(rsub_callable, f"{cohort_name}_researchsubject_df.pkl") # call is repeated below in get_merged_subject_research_subject_df
         print("obtained researchsubject_df")
-        rsub_df.to_csv('rsub_diagnosis_df.txt', sep='\t')
+        #rsub_df.to_csv('rsub_diagnosis_df.txt', sep='\t')
         
         # merge tables
         diag_rsub_df = pd.merge(diagnosis_df, rsub_df, left_on='subject_id', right_on='subject_id') #, suffixes=["_di", "_rs"])
         print("obtained merged diagnosis researchsubject df")
-        diag_rsub_df.to_csv('diagnosis_rsub.txt', sep='\t')
+        #diag_rsub_df.to_csv('diagnosis_rsub.txt', sep='\t')
 
         return diag_rsub_df
 
     def get_merged_subject_research_subject_df(self, q: dict, cohort_name: str) -> pd.DataFrame:
-        """Retrieve a merged dataframe from CDA corresponding to the subject and research subject tables
-        
+        """
+        Retrieve a merged dataframe from CDA corresponding to the subject and research subject tables
+        Need both subject_id and researchsubject_id to include variants in phenopacket 
+
         subject table columns: subject_id, cause_of_death, days_to_birth, days_to_death, ethnicity, race
                                sex, species, vital_status
         
-        researchsubject table columns: researchsubject_id, member_of_research_project, primary_diagnosis_condition, primary_diagnosis_site
-
-        Need to combine in order to match subject_id with researchsubject_id to get variants from GDC
-            - Do we only need researchsubject table with subject_id added?
+        researchsubject table columns: researchsubject_id, member_of_research_project, primary_diagnosis_condition, 
+                                        primary_diagnosis_site
+        
+        M. Sierk 4-11-24: 
+            This is how Henry Schaeffer from CBIIT recommended getting the data source:
+        
+            I consolidate the data_source_id columns (as opposed to just deleting it which works also) or else 
+            the merge expands each subject into many more rows. For example, for subject provenance I used:
+            
+            sub = fetch_rows(table='subject', provenance=True)
+            sub['subject_data_source_id_concat'] = sub.groupby(['subject_id','subject_data_source'])['subject_data_source_id'].transform(lambda x: ','.join(x))
+            sub = sub.drop(columns=['subject_data_source_id'], axis=1)
+            sub = sub.drop_duplicates()
+            
         """
         print("\nGetting merged subject and researchsubject df...")
         #subject_callable = lambda: q.subject.run(page_size=self._page_size).get_all().to_dataframe()
-        # link_to_table='researchsubject' doesn't add anything
-        subject_callable = lambda: fetch_rows( table='subject', **q )
+        
+        subject_callable = lambda: fetch_rows( table='subject', **q ) # link_to_table='researchsubject' doesn't add anything
         subject_df = self._get_cda_df(subject_callable, f"{cohort_name}_subject_df.pkl")
         
-        rsub_callable = lambda: fetch_rows( table='researchsubject', **q , add_columns=['subject_id'])
+        rsub_callable = lambda: fetch_rows( table='researchsubject', **q , add_columns=['subject_id']) # repeat from above
         rsub_df = self._get_cda_df(rsub_callable, f"{cohort_name}_researchsubject_df.pkl")
 
         # merge tables
         subject_rsub_df = pd.merge(subject_df, rsub_df, left_on='subject_id', right_on='subject_id') #, suffixes=["_di", "_rs"])
         print("obtained merged subject and researchsubject df")
-        subject_rsub_df.to_csv('subject_rsub_df.txt', sep='\t')
+        #subject_rsub_df.to_csv('subject_rsub_df.txt', sep='\t')
         
             
         #rsub_callable = lambda: q.researchsubject.run(page_size=self._page_size).get_all().to_dataframe()
@@ -200,21 +213,23 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
         print("\nGetting specimen df...")
         #specimen_callable = lambda: q.specimen.run(page_size=self._page_size).get_all().to_dataframe()
         specimen_callable = lambda: fetch_rows( table='specimen', **q, add_columns=['subject_id'] )
-        # need to get subject_id  
         specimen_df = self._get_cda_df(specimen_callable, f"{cohort_name}_specimen_df.pkl")
-        specimen_df.to_csv('specimen_df.txt', sep='\t')
+        #specimen_df.to_csv('specimen_df.txt', sep='\t')
         return specimen_df
 
     def get_treatment_df(self, q: dict, cohort_name: str) -> pd.DataFrame:
         print("\nGetting treatment df...")
         #treatment_callable = lambda: q.treatment.run(page_size=self._page_size).get_all().to_dataframe()
         treatment_callable = lambda: fetch_rows( table='treatment', **q, add_columns=['subject_id'] )
-        # need to get subject_id
         treatment_df = self._get_cda_df(treatment_callable, f"{cohort_name}_treatment_df.pkl")
-        treatment_df.to_csv('treatment_df.txt', sep='\t')
+        #treatment_df.to_csv('treatment_df.txt', sep='\t')
         return treatment_df
 
     def get_mutation_df(self, q: dict, cohort_name: str) -> pd.DataFrame:
+        '''
+            Don't need this with calls to GDC API
+        '''
+        
         print("\nGetting mutation df...")
         #mutation_callable = lambda: q.mutation.run(page_size=self._page_size).get_all().to_dataframe()
         mutation_callable = lambda: fetch_rows( table='somatic_mutation', **q )
@@ -230,7 +245,7 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
         New version of CDA: need to change Q to fetch_rows()
         """
         # no longer using Q objects
-        #if not isinstance(source, Q):
+        # if not isinstance(source, Q):
         #    raise ValueError(f"query_obj argument must be Q.Q object, but instead was {type(source)}")
 
         if 'cohort_name' in kwargs:
@@ -246,12 +261,9 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
         # First obtain the pandas DataFrames from the CDA tables with rows that correspond to the Query
         subject_df = self._get_subject_df(source, cohort_name)
         diag_rsub_df = self.get_merged_diagnosis_research_subject_df(source, cohort_name)
-        #print("diag_rsub_df:")
-        #print(diag_rsub_df.head())
-        
         specimen_df = self.get_specimen_df(source, cohort_name)
         treatment_df = self.get_treatment_df(source, cohort_name)
-        #mutation_df = self.get_mutation_df(source, cohort_name) # takes a long time - not used?
+        #mutation_df = self.get_mutation_df(source, cohort_name) 
         subj_rsub_df = self.get_merged_subject_research_subject_df(source, cohort_name)
 
         # Now use the CdaFactory classes to transform the information from the DataFrames into
@@ -281,7 +293,7 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
         for _, row in tqdm(diag_rsub_df.iterrows(), total= len(diag_rsub_df.index), desc="merged diagnosis and researchsubject dataframe"):
             disease_message = self._disease_factory.to_ga4gh(row)
             #print(row)
-            pp = ppackt_d.get(row["subject_id"]) # KeyError with subject_id_rs
+            pp = ppackt_d.get(row["subject_id"]) 
 
             # Do not add the disease if it is already in the phenopacket.
             if not any(disease.term.id == disease_message.term.id for disease in pp.diseases):
@@ -315,19 +327,17 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
             #for rsub_subj in row["subject_identifier"]:
             #    if rsub_subj["system"] == "GDC":
             
-            # have to strip off the leading name before first '.'
+            # have to strip off the leading name before first period
             # e.g. TCGA.TCGA-05-4250 -> TCGA-05-4250
-            import re
-            
             subj_id = re.sub("^[^.]+\.", "", row["subject_id"])
-            print(row["subject_id"], subj_id)
+            #print(row["subject_id"], subj_id)
 
             variant_interpretations = self._gdc_mutation_service.fetch_variants(subj_id) # was rsub_subj['value']
             if len(variant_interpretations) == 0:
-                print("No variants found")
+                #print("No variants found")
                 continue
-            else:
-                print("length variant_interpretations: {}".format(len(variant_interpretations)))
+            #else:
+                #print("length variant_interpretations: {}".format(len(variant_interpretations)))
                 
             # TODO: improve/enhance diagnosis term annotations
             diagnosis = PPkt.Diagnosis()

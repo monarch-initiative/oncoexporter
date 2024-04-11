@@ -16,7 +16,7 @@ fetch_rows( table='subject', match_all=[ 'primary_disease_type = *duct*', 'sex =
 fetch_rows( table='researchsubject', match_all=[ 'primary_diagnosis_site = NULL' ] )
 '''
 ######   Input parameters  ########
-table_importer: CdaTableImporter = configure_cda_table_importer(use_cache=False)
+table_importer: CdaTableImporter = configure_cda_table_importer(use_cache=True)
 
 #Tsite = Q('primary_diagnosis_site = "%lung%" OR primary_diagnosis_site = "%pulmonary%"')
 # b = {'x':42, 'y':None}
