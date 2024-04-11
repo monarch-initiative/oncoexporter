@@ -110,54 +110,74 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
 
 
     def get_merged_diagnosis_research_subject_df(self, q: dict, cohort_name: str) -> pd.DataFrame:
-        """Retrieve a merged dataframe from CDA corresponding to the diagnosis and research subject tables
         """
-        print("\nGetting merged diagnosis and researchsubject df...")
-        #diagnosis_callable = lambda: q.diagnosis.run(page_size=self._page_size).get_all().to_dataframe()
-        diagnosis_callable = lambda: fetch_rows( table='diagnosis', **q )
-        # fetch_rows(table='researchsubject', match_any=['primary_diagnosis_site = *lung*' , 'primary_diagnosis_site = *pulmonary*'])        
+        Retrieve a merged dataframe from CDA corresponding to the diagnosis and research subject tables
+        
+        diagnosis table columns: diagnosis_id, age_at_diagnosis, grade, method_of_diagnosis, morphology, primary_diagnosis, stage
+        
+        researchsubject table columns: researchsubject_id, member_of_research_project, primary_diagnosis_condition, primary_diagnosis_site
+
+        Need to combine in order to get primary_diagnosis_condition and primary_diagnosis_site with diagnosis table
+        
+        Original:
+        diagnosis_callable = lambda: q.diagnosis.run(page_size=self._page_size).get_all().to_dataframe()
         diagnosis_df = self._get_cda_df(diagnosis_callable, f"{cohort_name}_diagnosis_df.pkl")
         print("obtained diagnosis_df")
-        #diagnosis_df.to_csv('diagnosis_df.txt', sep='\t')
         
-        #rsub_callable = lambda: q.researchsubject.run(page_size=self._page_size).get_all().to_dataframe()
-        # tried link_to_table='diagnosis' but it doesn't add any columns
-        rsub_callable = lambda: fetch_rows( table='researchsubject', **q , add_columns=['primary_diagnosis', 'age_at_diagnosis', 'stage'])
+        rsub_callable = lambda: q.researchsubject.run(page_size=self._page_size).get_all().to_dataframe()
         research_subject_df = self._get_cda_df(rsub_callable, f"{cohort_name}_research_subject_df.pkl")
         print("obtained research_subject_df")
-        #merged_df = pd.merge(diagnosis_df, research_subject_df, left_on='researchsubject_id', right_on='researchsubject_id',
-                                #suffixes=["_di", "_rs"])
-        #research_subject_df.to_csv('rsub_diagnosis_df.txt', sep='\t')
         
-        # combine with subject table
-        subject_callable = lambda: fetch_rows( table='subject', **q, add_columns=['researchsubject_id'] )
-        subject_df = self._get_cda_df(subject_callable, f"{cohort_name}_subject_df.pkl")
-        subject_df.to_csv('subject_df_in_rsub.txt', sep='\t')
-        #print(list(subject_df))
-        #print(list(research_subject_df))
-        merged_df = pd.merge(research_subject_df, subject_df, left_on='researchsubject_id', right_on='researchsubject_id') #, suffixes=["_di", "_rs"])
-        print("obtained merged diagnosis subject df")
-        #merged_df.to_csv('rsub_diagnosis_df2.txt', sep='\t')
-
+        merged_df = pd.merge(diagnosis_df, research_subject_df, left_on='researchsubject_id', right_on='researchsubject_id',
+                             suffixes=["_di", "_rs"])
         return merged_df
+
+        """
+        print("\nGetting merged diagnosis and researchsubject df...")
+        diagnosis_callable = lambda: fetch_rows( table='diagnosis', **q , add_columns=['subject_id'])
+        diagnosis_df = self._get_cda_df(diagnosis_callable, f"{cohort_name}_diagnosis_df.pkl")
+        print("obtained diagnosis_df")
+        diagnosis_df.to_csv('diagnosis_df.txt', sep='\t')
+        
+        # tried link_to_table='diagnosis' but it doesn't add any columns, try add_columns=['primary_diagnosis', 'age_at_diagnosis', 'stage']
+        rsub_callable = lambda: fetch_rows( table='researchsubject', **q , add_columns=['subject_id'])
+        rsub_df = self._get_cda_df(rsub_callable, f"{cohort_name}_researchsubject_df.pkl")
+        print("obtained researchsubject_df")
+        rsub_df.to_csv('rsub_diagnosis_df.txt', sep='\t')
+        
+        # merge tables
+        diag_rsub_df = pd.merge(diagnosis_df, rsub_df, left_on='subject_id', right_on='subject_id') #, suffixes=["_di", "_rs"])
+        print("obtained merged diagnosis researchsubject df")
+        diag_rsub_df.to_csv('diagnosis_rsub.txt', sep='\t')
+
+        return diag_rsub_df
 
     def get_merged_subject_research_subject_df(self, q: dict, cohort_name: str) -> pd.DataFrame:
         """Retrieve a merged dataframe from CDA corresponding to the subject and research subject tables
+        
+        subject table columns: subject_id, cause_of_death, days_to_birth, days_to_death, ethnicity, race
+                               sex, species, vital_status
+        
+        researchsubject table columns: researchsubject_id, member_of_research_project, primary_diagnosis_condition, primary_diagnosis_site
+
+        Need to combine in order to match subject_id with researchsubject_id to get variants from GDC
+            - Do we only need researchsubject table with subject_id added?
         """
         print("\nGetting merged subject and researchsubject df...")
         #subject_callable = lambda: q.subject.run(page_size=self._page_size).get_all().to_dataframe()
         # link_to_table='researchsubject' doesn't add anything
-        subject_callable = lambda: fetch_rows( table='subject', **q, 
-                                              add_columns=['researchsubject_id', 'member_of_research_project', 'primary_diagnosis_condition', 'primary_diagnosis_site']  )
+        subject_callable = lambda: fetch_rows( table='subject', **q )
         subject_df = self._get_cda_df(subject_callable, f"{cohort_name}_subject_df.pkl")
-        print("obtained subject_df and researchsubject_df")
-        #subject_df.to_csv('subject_df_add_columns.txt', sep='\t')
         
-        #subject table columns: subject_id, cause_of_death, days_to_birth, days_to_death, ethnicity, race
-        #                       sex, species, vital_status
-        #
-        #researchsubject table columns: researchsubject_id, member_of_research_project, primary_diagnosis_condition, primary_diagnosis_site
+        rsub_callable = lambda: fetch_rows( table='researchsubject', **q , add_columns=['subject_id'])
+        rsub_df = self._get_cda_df(rsub_callable, f"{cohort_name}_researchsubject_df.pkl")
+
+        # merge tables
+        subject_rsub_df = pd.merge(subject_df, rsub_df, left_on='subject_id', right_on='subject_id') #, suffixes=["_di", "_rs"])
+        print("obtained merged subject and researchsubject df")
+        subject_rsub_df.to_csv('subject_rsub_df.txt', sep='\t')
         
+            
         #rsub_callable = lambda: q.researchsubject.run(page_size=self._page_size).get_all().to_dataframe()
         #rsub_callable = lambda: fetch_rows( table='researchsubject', **q , link_to_table='subject' )
         #research_subject_df = self._get_cda_df(rsub_callable, f"{cohort_name}_research_subject_df.pkl")
@@ -166,7 +186,7 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
                                 #suffixes=["_subj", "_rs"])
         #research_subject_df.to_csv('researchsubject_df.txt', sep='\t')
         
-        return subject_df
+        return subject_rsub_df
 
     def get_specimen_df(self, q: dict, cohort_name: str) -> pd.DataFrame:
         """Retrieve the subject dataframe from CDA
@@ -179,7 +199,7 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
         """
         print("\nGetting specimen df...")
         #specimen_callable = lambda: q.specimen.run(page_size=self._page_size).get_all().to_dataframe()
-        specimen_callable = lambda: fetch_rows( table='specimen', **q )
+        specimen_callable = lambda: fetch_rows( table='specimen', **q, add_columns=['subject_id'] )
         # need to get subject_id  
         specimen_df = self._get_cda_df(specimen_callable, f"{cohort_name}_specimen_df.pkl")
         specimen_df.to_csv('specimen_df.txt', sep='\t')
@@ -188,7 +208,7 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
     def get_treatment_df(self, q: dict, cohort_name: str) -> pd.DataFrame:
         print("\nGetting treatment df...")
         #treatment_callable = lambda: q.treatment.run(page_size=self._page_size).get_all().to_dataframe()
-        treatment_callable = lambda: fetch_rows( table='treatment', **q )
+        treatment_callable = lambda: fetch_rows( table='treatment', **q, add_columns=['subject_id'] )
         # need to get subject_id
         treatment_df = self._get_cda_df(treatment_callable, f"{cohort_name}_treatment_df.pkl")
         treatment_df.to_csv('treatment_df.txt', sep='\t')
@@ -277,7 +297,8 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
             # convert CDA days_to_collection to PPKt time_of_collection
             #         days_to_collection: number of days from index date to sample collection date
             #         time_of_collection: Age of subject at time sample was collected 
-            days_to_coll_iso = CdaFactory.days_to_iso(row["days_to_collection"])
+            if not pd.isna(row['days_to_collection']):
+                days_to_coll_iso = CdaFactory.days_to_iso(int(row["days_to_collection"]))
             # this should work if both are pd.Timedelta:
             # TODO: fix the code below!
             # time_of_collection = ppackt_d[individual_id]["iso8601duration"] + days_to_coll_iso # should it be 'Age' or 'iso8601duration'?
@@ -286,34 +307,37 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
             ppackt_d.get(individual_id).biosamples.append(biosample_message)
 
         # Get variant data for each ResearchSubject in Subject
-        for _, row in tqdm(subj_rsub_df.iterrows(), total=subj_rsub_df.shape[0], desc="subject research subject dataframe"):
+        # takes 45 minutes due to API calls to gdc
+        for _, row in tqdm(subj_rsub_df.iterrows(), total=subj_rsub_df.shape[0], desc="subject researchsubject dataframe"):
             individual_id = row["subject_id"]
-            for rsub_subj in row["subject_identifier"]:
-                if rsub_subj["system"] == "GDC":
-                    variant_interpretations = self._gdc_mutation_service.fetch_variants(rsub_subj["value"])
+            # removing this loop for new CDA API.  Should work the same to go through df by row (MS 4-10-24)
+            #  Note: as of 4-10-24, no way to access system/data source from result of fetch_rows (can specify in fetch_rows)
+            #for rsub_subj in row["subject_identifier"]:
+            #    if rsub_subj["system"] == "GDC":
+            variant_interpretations = self._gdc_mutation_service.fetch_variants(row["subject_id"]) # was rsub_subj['value']
 
-                    if len(variant_interpretations) == 0:
-                        continue
+            if len(variant_interpretations) == 0:
+                continue
 
-                    # TODO: improve/enhance diagnosis term annotations
-                    diagnosis = PPkt.Diagnosis()
-                    diagnosis.disease.id = "NCIT:C3262"
-                    diagnosis.disease.label = "Neoplasm"
+            # TODO: improve/enhance diagnosis term annotations
+            diagnosis = PPkt.Diagnosis()
+            diagnosis.disease.id = "NCIT:C3262"
+            diagnosis.disease.label = "Neoplasm"
 
-                    for variant in variant_interpretations:
-                        genomic_interpretation = PPkt.GenomicInterpretation()
-                        genomic_interpretation.subject_or_biosample_id = rsub_subj["value"]
-                        genomic_interpretation.interpretation_status = PPkt.GenomicInterpretation.InterpretationStatus.UNKNOWN_STATUS
-                        genomic_interpretation.variant_interpretation.CopyFrom(variant)
-                        
-                        diagnosis.genomic_interpretations.append(genomic_interpretation)
+            for variant in variant_interpretations:
+                genomic_interpretation = PPkt.GenomicInterpretation()
+                genomic_interpretation.subject_or_biosample_id = row["subject_id"]
+                genomic_interpretation.interpretation_status = PPkt.GenomicInterpretation.InterpretationStatus.UNKNOWN_STATUS
+                genomic_interpretation.variant_interpretation.CopyFrom(variant)
+                
+                diagnosis.genomic_interpretations.append(genomic_interpretation)
 
-                    interpretation = PPkt.Interpretation()
-                    interpretation.id = f"{individual_id}-{rsub_subj['value']}"
-                    interpretation.progress_status = PPkt.Interpretation.ProgressStatus.IN_PROGRESS 
-                    interpretation.diagnosis.CopyFrom(diagnosis)
+            interpretation = PPkt.Interpretation()
+            interpretation.id = f"{individual_id}-{row['researchsubject_id']}"
+            interpretation.progress_status = PPkt.Interpretation.ProgressStatus.IN_PROGRESS 
+            interpretation.diagnosis.CopyFrom(diagnosis)
 
-                    ppackt_d.get(individual_id).interpretations.append(interpretation)
+            ppackt_d.get(individual_id).interpretations.append(interpretation)
 
         # TODO Treatment
         # make_cda_medicalaction

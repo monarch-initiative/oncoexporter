@@ -50,6 +50,7 @@ class CdaDiseaseFactory(CdaFactory):
         - 'primary_diagnosis_condition'
         - 'primary_diagnosis_site'
         - 'primary_diagnosis'
+        - 'age_at_diagnosis'
 
         :param row: a :class:`pd.Series` with a row from the merged CDA table.
         """
