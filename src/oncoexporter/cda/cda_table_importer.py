@@ -314,11 +314,21 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
             #  Note: as of 4-10-24, no way to access system/data source from result of fetch_rows (can specify in fetch_rows)
             #for rsub_subj in row["subject_identifier"]:
             #    if rsub_subj["system"] == "GDC":
-            variant_interpretations = self._gdc_mutation_service.fetch_variants(row["subject_id"]) # was rsub_subj['value']
+            
+            # have to strip off the leading name before first '.'
+            # e.g. TCGA.TCGA-05-4250 -> TCGA-05-4250
+            import re
+            
+            subj_id = re.sub("^[^.]+\.", "", row["subject_id"])
+            print(row["subject_id"], subj_id)
 
+            variant_interpretations = self._gdc_mutation_service.fetch_variants(subj_id) # was rsub_subj['value']
             if len(variant_interpretations) == 0:
+                print("No variants found")
                 continue
-
+            else:
+                print("length variant_interpretations: {}".format(len(variant_interpretations)))
+                
             # TODO: improve/enhance diagnosis term annotations
             diagnosis = PPkt.Diagnosis()
             diagnosis.disease.id = "NCIT:C3262"

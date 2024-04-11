@@ -15,14 +15,18 @@ fetch_rows(table=None, *, match_all=[], match_any=[], data_source=[], add_column
 fetch_rows( table='subject', match_all=[ 'primary_disease_type = *duct*', 'sex = F*' ] )
 fetch_rows( table='researchsubject', match_all=[ 'primary_diagnosis_site = NULL' ] )
 '''
-table_importer: CdaTableImporter = configure_cda_table_importer(use_cache=True)
+######   Input parameters  ########
+table_importer: CdaTableImporter = configure_cda_table_importer(use_cache=False)
 
 #Tsite = Q('primary_diagnosis_site = "%lung%" OR primary_diagnosis_site = "%pulmonary%"')
 # b = {'x':42, 'y':None}
 # function(1, **b) # equal to function(1, x=42, y=None)
-Tsite = {'match_any': ['primary_diagnosis_site = *lung*' , 'primary_diagnosis_site = *pulmonary*']}
+Query = {'match_any': ['primary_diagnosis_site = *lung*' , 'primary_diagnosis_site = *pulmonary*'],
+         'data_source': 'GDC'}
 cohort_name = 'Lung'
-p = table_importer.get_ga4gh_phenopackets(Tsite, cohort_name=cohort_name)
+#################################### 
+ 
+p = table_importer.get_ga4gh_phenopackets(Query, cohort_name=cohort_name)
 
 result_dir = os.path.abspath(os.path.join('phenopackets', cohort_name))
 os.makedirs(result_dir, exist_ok=True)
