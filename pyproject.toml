@@ -33,7 +33,7 @@ dependencies = [
     "hpo-toolkit>=0.3.0,<0.4.0",
     "phenopackets>=2.0.2",
     "requests>=2.25.0,<3.0",
-    "cdapython@git+https://github.com/CancerDataAggregator/cda-python",
+    "cdapython@git+https://github.com/CancerDataAggregator/cdapython@0324510",
     "ipython<=8.22.2",  # higher versions result in an import error
     "tqdm>=4.60",
 ]
