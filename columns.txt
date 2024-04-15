@@ -1,0 +1,205 @@
+	table	column	data_type	nullable	description
+0	diagnosis	diagnosis_id	text	False	The logical identifier of the entity in the repository, e.g. a UUID. This id is unique within a given system. The identified entity may have a different id in a different system.
+1	diagnosis	age_at_diagnosis	integer	True	The age in days of the individual at the time of diagnosis.
+2	diagnosis	grade	text	True	The degree of abnormality of cancer cells, a measure of differentiation, the extent to which cancer cells are similar in appearance and function to healthy cells of the same tissue type. The degree of differentiation often relates to the clinical behavior of the particular tumor. Based on the microscopic findings, tumor grade is commonly described by one of four degrees of severity. Histopathologic grade of a tumor may be used to plan treatment and estimate the future course, outcome, and overall prognosis of disease. Certain types of cancers, such as soft tissue sarcoma, primary brain tumors, lymphomas, and breast have special grading systems.
+3	diagnosis	method_of_diagnosis	text	True	The method used to confirm the subjects malignant diagnosis.
+4	diagnosis	morphology	text	True	Code that represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology, published in 2000, used principally in tumor and cancer registries for coding the site (topography) and the histology (morphology) of neoplasms.
+5	diagnosis	primary_diagnosis	text	True	The diagnosis instance that qualified a subject for inclusion on a ResearchProject.
+6	diagnosis	stage	text	True	The extent of a cancer in the body. Staging is usually based on the size of the tumor, whether lymph nodes contain cancer, and whether the cancer has spread from the original site to other parts of the body.
+7	file	file_id	text	False	The logical identifier of the entity in the repository, e.g. a UUID. This id is unique within a given system. The identified entity may have a different id in a different system.
+8	file	byte_size	bigint	True	Size of the file in bytes. Maps to dcat:byteSize.
+9	file	checksum	text	True	A digit representing the sum of the correct digits in a piece of stored or transmitted digital data, against which later comparisons can be made to detect errors in the data.
+10	file	data_category	text	True	Broad categorization of the contents of the data file.
+11	file	data_modality	text	True	Data modality describes the biological nature of the information gathered as the result of an Activity, independent of the technology or methods used to produce the information.
+12	file	data_type	text	True	Specific content type of the data file.
+13	file	dbgap_accession_number	text	True	The dbgap accession number for the project.
+14	file	drs_uri	text	True	A string of characters used to identify a resource on the Data Repo Service(DRS).
+15	file	file_format	text	True	Format of the data files.
+16	file	imaging_modality	text	True	An imaging modality describes the imaging equipment and/or method used to acquire certain structural or functional information about the body. These include but are not limited to computed tomography (CT) and magnetic resonance imaging (MRI). Taken from the DICOM standard.
+17	file	imaging_series	text	True	The logical identifier of the series or grouping of imaging files in the system of record which the file is a part of.
+18	file	label	text	True	Short name or abbreviation for dataset. Maps to rdfs:label.
+19	researchsubject	researchsubject_id	text	False	The logical identifier of the entity in the system of record, e.g. a UUID. This id is unique within a given system. The identified entity may have a different id in a different system. For CDA, this is case_id.
+20	researchsubject	member_of_research_project	text	True	A reference to the Study(s) of which this ResearchSubject is a member.
+21	researchsubject	primary_diagnosis_condition	text	True	The text term used to describe the type of malignant disease, as categorized by the World Health Organizations (WHO) International Classification of Diseases for Oncology (ICD-O). This attribute represents the disease that qualified the subject for inclusion on the ResearchProject.
+22	researchsubject	primary_diagnosis_site	text	True	The text term used to describe the primary site of disease, as categorized by the World Health Organizations (WHO) International Classification of Diseases for Oncology (ICD-O). This categorization groups cases into general categories. This attribute represents the primary site of disease that qualified the subject for inclusion on the ResearchProject.
+23	somatic_mutation	case_id	text	True	Unique GDC identifier for the underlying case
+24	somatic_mutation	cda_subject_id	text	False	CDA subject ID corresponding to value in case_barcode
+25	somatic_mutation	entrez_gene_id	integer	True	Entrez gene ID (an integer). 0 is used for regions that do not correspond to a gene region or Ensembl ID
+26	somatic_mutation	file_gdc_id	text	True	|-delimited list of unique GDC identifiers for underlying MAF file
+27	somatic_mutation	hgnc_id	text	True	Gene identifier from the HUGO Gene Nomenclature Committee if applicable
+28	somatic_mutation	transcript_id	text	True	Ensembl ID of the transcript affected by the variant
+29	somatic_mutation	aliquot_barcode_normal	text	True	TCGA aliquot barcode for the normal control, eg TCGA-12-1089-01A-01D-0517-01]
+30	somatic_mutation	aliquot_barcode_tumor	text	True	TCGA aliquot barcode for the tumor, eg TCGA-12-1089-01A-01D-0517-01
+31	somatic_mutation	all_effects	text	True	A semicolon delimited list of all possible variant effects, sorted by priority ([Symbol,Consequence,HGVSp_Short,Transcript_ID,RefSeq,HGVSc,Impact,Canonical,Sift,PolyPhen,Strand])
+32	somatic_mutation	allele	text	True	The variant allele used to calculate the consequence
+33	somatic_mutation	amino_acids	text	True	Amino acid substitution caused by the mutation. Only given if the variation affects the protein-coding sequence
+34	somatic_mutation	appris	text	True	Annotates alternatively spliced transcripts as primary or alternate based on a range of computational methods
+35	somatic_mutation	bam_file	text	True	Not in use
+36	somatic_mutation	biotype	text	True	Biotype of transcript
+37	somatic_mutation	callers	text	True	|-delimited list of mutation caller(s) that agreed on this particular call, always in alphabetical order: muse, mutect, somaticsniper, varscan
+38	somatic_mutation	canonical	text	True	A flag (YES) indicating that the VEP-based canonical transcript, the longest translation, was used for this gene. If not, the value is null
+39	somatic_mutation	case_barcode	text	True	Original case barcode, eg TCGA-DX-A8BN
+40	somatic_mutation	ccds	text	True	The CCDS identifier for this transcript, where applicable
+41	somatic_mutation	cdna_position	text	True	Relative position of base pair in the cDNA sequence as a fraction. A - symbol is displayed as the numerator if the variant does not appear in cDNA
+42	somatic_mutation	cds_position	text	True	Relative position of base pair in coding sequence. A - symbol is displayed as the numerator if the variant does not appear in coding sequence
+43	somatic_mutation	center	text	True	One or more genome sequencing center reporting the variant
+44	somatic_mutation	chromosome	text	True	Chromosome, possible values: chr1-22, and chrX
+45	somatic_mutation	clin_sig	text	True	Clinical significance of variant from dbSNP
+46	somatic_mutation	codons	text	True	The alternative codons with the variant base in upper case
+47	somatic_mutation	consequence	text	True	Consequence type of this variant; sequence ontology terms
+48	somatic_mutation	context	text	True	The reference allele per VCF specs, and its five flanking base pairs
+49	somatic_mutation	cosmic	text	True	Overlapping COSMIC variants
+50	somatic_mutation	dbsnp_rs	text	True	The rs-IDs from the dbSNP database, novel if not found in any database used, or null if there is no dbSNP record, but it is found in other databases
+51	somatic_mutation	dbsnp_val_status	text	True	The dbSNP validation status is reported as a semicolon-separated list of statuses. The union of all rs-IDs is taken when there are multiple
+52	somatic_mutation	distance	text	True	Shortest distance from the variant to transcript
+53	somatic_mutation	domains	text	True	The source and identifier of any overlapping protein domains
+54	somatic_mutation	end_position	integer	True	Highest numeric genomic position of the reported variant on the genomic reference sequence. Mutation end coordinate
+55	somatic_mutation	ensp	text	True	The Ensembl protein identifier of the affected transcript
+56	somatic_mutation	esp_aa_af	numeric	True	Non-reference allele and frequency of existing variant in NHLBI-ESP African American population
+57	somatic_mutation	esp_ea_af	numeric	True	Non-reference allele and frequency of existing variant in NHLBI-ESP European American population
+58	somatic_mutation	existing_variation	text	True	Known identifier of existing variation
+59	somatic_mutation	exon	text	True	The exon number (out of total number)
+60	somatic_mutation	exon_number	text	True	The exon number (out of total number)
+61	somatic_mutation	feature	text	True	Stable Ensembl ID of feature (transcript, regulatory, motif)
+62	somatic_mutation	feature_type	text	True	Type of feature. Currently one of Transcript, RegulatoryFeature, MotifFeature (or blank)
+63	somatic_mutation	flags	text	True	Transcript quality flags
+64	somatic_mutation	gdc_filter	text	True	GDC filters applied universally across all MAFs
+65	somatic_mutation	gene	text	True	The gene symbol. In this table, gene symbol is gene name e.g. ACADVL
+66	somatic_mutation	gene_pheno	text	True	Indicates if gene that the variant maps to is associated with a phenotype, disease or trait (0, 1, or null)
+67	somatic_mutation	gnomad_af	numeric	True	Frequency of existing variant in gnomAD exomes combined population
+68	somatic_mutation	gnomad_afr_af	numeric	True	Frequency of existing variant in gnomAD exomes African/American population
+69	somatic_mutation	gnomad_amr_af	numeric	True	Frequency of existing variant in gnomAD exomes American population
+70	somatic_mutation	gnomad_asj_af	numeric	True	Frequency of existing variant in gnomAD exomes Ashkenazi Jewish population
+71	somatic_mutation	gnomad_eas_af	numeric	True	Frequency of existing variant in gnomAD exomes East Asian population
+72	somatic_mutation	gnomad_fin_af	numeric	True	Frequency of existing variant in gnomAD exomes Finnish population
+73	somatic_mutation	gnomad_nfe_af	numeric	True	tFrequency of existing variant in gnomAD exomes Non-Finnish European population
+74	somatic_mutation	gnomad_non_cancer_af	numeric	True	Frequency of exisiting variant in gnomAD genomes combined non-cancer population
+75	somatic_mutation	gnomad_non_cancer_afr_af	numeric	True	Frequency of exisiting variant in gnomAD genomes non-cancer African/American population
+76	somatic_mutation	gnomad_non_cancer_ami_af	numeric	True	Frequency of exisiting variant in gnomAD genomes non-cancer Amish population
+77	somatic_mutation	gnomad_non_cancer_amr_af	numeric	True	Frequency of exisiting variant in gnomAD genomes non-cancer Latino population
+78	somatic_mutation	gnomad_non_cancer_asj_af	numeric	True	Frequency of exisiting variant in gnomAD genomes non-cancer Ashkenazi Jewish population
+79	somatic_mutation	gnomad_non_cancer_eas_af	numeric	True	Frequency of exisiting variant in gnomAD genomes non-cancer East Asian population
+80	somatic_mutation	gnomad_non_cancer_fin_af	numeric	True	Frequency of exisiting variant in gnomAD genomes non-cancer Finnish population
+81	somatic_mutation	gnomad_non_cancer_max_af_adj	numeric	True	Maximum observed allele frequency in non-cancer gnomAD genomes populations after removing subpopulations with less than 2 allele counts
+82	somatic_mutation	gnomad_non_cancer_max_af_pops_adj	text	True	Non-cancer gnomAD genomes populations in which the maximum allele frequency was observed after removing those with less than 2 allele counts
+83	somatic_mutation	gnomad_non_cancer_mid_af	numeric	True	Frequency of exisiting variant in gnomAD genomes non-cancer Middle Eastern population
+84	somatic_mutation	gnomad_non_cancer_nfe_af	numeric	True	Frequency of exisiting variant in gnomAD genomes non-cancer Non-Finnish European population
+85	somatic_mutation	gnomad_non_cancer_oth_af	numeric	True	Frequency of exisiting variant in gnomAD genomes non-cancer Other population
+86	somatic_mutation	gnomad_non_cancer_sas_af	numeric	True	Frequency of exisiting variant in gnomAD genomes non-cancer South Asian population
+87	somatic_mutation	gnomad_oth_af	numeric	True	Frequency of existing variant in gnomAD exomes other combined population
+88	somatic_mutation	gnomad_sas_af	numeric	True	Frequency of existing variant in gnomAD exomes South Asian population
+89	somatic_mutation	hgvs_offset	text	True	Indicates by how many bases the HGVS notations for this variant have been shifted
+90	somatic_mutation	hgvsc	text	True	The coding sequence of the variant in HGVS recommended format
+91	somatic_mutation	hgvsp	text	True	The protein sequence of the variant in HGVS recommended format. p.= signifies no change in the protein
+92	somatic_mutation	hgvsp_short	text	True	Same as the HGVSp column, but using 1-letter amino-acid codes
+93	somatic_mutation	high_inf_pos	text	True	A flag indicating if the variant falls in a high information position of a transcription factor binding profile (TFBP) (Y, N, or null)
+94	somatic_mutation	hotspot	boolean	True	A flag indicating if the variant is a known hotspot (Y, N, or null)
+95	somatic_mutation	hugo_symbol	text	True	HUGO symbol for the gene (HUGO symbols are always in all caps). Unknown is used for regions that do not correspond to a gene
+96	somatic_mutation	impact	text	True	The impact modifier for the consequence type
+97	somatic_mutation	intron	text	True	The intron number (out of total number)
+98	somatic_mutation	mane	text	True	MANE (Matched Annotation by NCBI and EMBL-EBI) Transcript
+99	somatic_mutation	match_norm_seq_allele1	text	True	Primary data genotype. Matched normal sequencing allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases (cleared in somatic MAF)
+100	somatic_mutation	match_norm_seq_allele2	text	True	Matched normal sequencing allele 2
+101	somatic_mutation	match_norm_validation_allele1	text	True	Secondary data from orthogonal technology. Matched normal genotyping (validation) for allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases (cleared in somatic MAF)
+102	somatic_mutation	match_norm_validation_allele2	text	True	Secondary data from orthogonal technology. Matched normal genotyping (validation) for allele 2 (cleared in somatic MAF)
+103	somatic_mutation	matched_norm_aliquot_barcode	text	True	Aliquot barcode for the matched normal sample
+104	somatic_mutation	matched_norm_aliquot_uuid	text	True	Unique GDC identifier for normal aliquot (10189 unique)
+105	somatic_mutation	max_af	numeric	True	Maximum observed allele frequency in 1000 Genomes, ESP and ExAC/gnomAD
+106	somatic_mutation	max_af_pops	text	True	Populations in which maximum allele frequency was observed
+107	somatic_mutation	mirna	text	True	SO terms of overlapped miRNA secondary structure feature(s)
+108	somatic_mutation	motif_name	text	True	The source and identifier of a transcription factor binding profile aligned at this position
+109	somatic_mutation	motif_pos	text	True	The relative position of the variation in the aligned TFBP
+110	somatic_mutation	motif_score_change	text	True	The difference in motif score of the reference and variant sequences for the TFBP
+111	somatic_mutation	muse	text	True	Muse caller identified the variant at this position
+112	somatic_mutation	mutation_status	text	True	An assessment of the mutation as somatic, germline, LOH, post transcriptional modification, unknown, or none. The values allowed in this field are constrained by the value in the Validation_Status field
+113	somatic_mutation	mutect2	text	True	Mutect2 caller identified the variant at this position
+114	somatic_mutation	n_alt_count	text	True	Read depth supporting the variant allele in normal BAM (cleared in somatic MAF)
+115	somatic_mutation	n_depth	integer	True	Read depth across this locus in normal BAM
+116	somatic_mutation	n_ref_count	text	True	Read depth supporting the reference allele in normal BAM (cleared in somatic MAF)
+117	somatic_mutation	ncbi_build	text	True	The reference genome used for the alignment (GRCh38)
+118	somatic_mutation	normal_submitter_uuid	text	True	Unique GDC identifier for the normal file submitter
+119	somatic_mutation	one_consequence	text	True	The single consequence of the canonical transcript in sequence ontology terms, eg missense_variant
+120	somatic_mutation	pheno	text	True	Indicates if existing variant is associated with a phenotype, disease or trait (0, 1, or null)
+121	somatic_mutation	pick	text	True	Indicates if this block of consequence data was picked by VEPs pick feature (1 or null)
+122	somatic_mutation	pindel	text	True	pindel caller identified the variant at this position
+123	somatic_mutation	polyphen	text	True	The PolyPhen prediction and/or score
+124	somatic_mutation	primary_site	text	True	Anatomical site of the cancer under investigation or review
+125	somatic_mutation	project_short_name	text	True	Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc.
+126	somatic_mutation	protein_position	text	True	Relative position of affected amino acid in protein. A - symbol is displayed as the numerator if the variant does not appear in coding sequence
+127	somatic_mutation	pubmed	text	True	Pubmed ID(s) of publications that cite existing variant
+128	somatic_mutation	reference_allele	text	True	The plus strand reference allele at this position. Includes the deleted sequence for a deletion or - for an insertion
+129	somatic_mutation	refseq	text	True	RefSeq identifier for this transcript
+130	somatic_mutation	rna_alt_count	text	True	Read depth supporting the variant allele at this locus if the variant is supported by tumor RNA-seq data.
+131	somatic_mutation	rna_depth	text	True	Read depth at this locus if the variant is supported by tumor RNA-seq data.
+132	somatic_mutation	rna_ref_count	text	True	Read depth supporting the reference allele at this locus if the variant is supported by tumor RNA-seq data.
+133	somatic_mutation	rna_support	text	True	Indicates if the variant is found and alleles (Match), simply (Overlap), or is not supported (No) by tumor RNA-Seq. If it has not been checked against RNA-Seq data, the value will be Unknown.
+134	somatic_mutation	sample_barcode_normal	text	True	TCGA sample barcode for the normal control, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries
+135	somatic_mutation	sample_barcode_tumor	text	True	TCGA sample barcode for the tumor, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries
+136	somatic_mutation	score	text	True	Not in use
+137	somatic_mutation	sequence_source	text	True	Molecular assay type used to produce the analytes used for sequencing. Allowed values are a subset of the SRA 1.5 library_strategy field values. This subset matches those used at CGHub
+138	somatic_mutation	sequencer	text	True	Instrument used to produce primary sequence data
+139	somatic_mutation	sequencing_phase	text	True	TCGA sequencing phase (if applicable). Phase should change under any circumstance that the targets under consideration change
+140	somatic_mutation	sift	text	True	The SIFT prediction and/or score, with both given as prediction (score)
+141	somatic_mutation	somatic	text	True	Somatic status of each ID reported under Existing_variation (0, 1, or null)
+142	somatic_mutation	start_position	integer	True	Lowest numeric position of the reported variant on the genomic reference sequence. Mutation start coordinate
+143	somatic_mutation	strand	text	True	Either + or - to denote whether read mapped to the sense (+) or anti-sense (-) strand
+144	somatic_mutation	swissprot	text	True	UniProtKB/Swiss-Prot accession
+145	somatic_mutation	symbol	text	True	Eg TP53, LRP1B, etc (same as Hugo_Symbol field except blank instead of Unknown
+146	somatic_mutation	symbol_source	text	True	The source of the gene symbol, usually HGNC, rarely blank, other sources include Uniprot_gn, EntrezGene, etc
+147	somatic_mutation	t_alt_count	integer	True	Read depth supporting the variant allele in tumor BAM
+148	somatic_mutation	t_depth	integer	True	Read depth across this locus in tumor BAM
+149	somatic_mutation	t_ref_count	integer	True	Read depth supporting the reference allele in tumor BAM
+150	somatic_mutation	thousg_af	numeric	True	Non-reference allele and frequency of existing variant in 1000 Genomes
+151	somatic_mutation	thousg_afr_af	numeric	True	Non-reference allele and frequency of existing variant in 1000 Genomes combined African population
+152	somatic_mutation	thousg_amr_af	numeric	True	Non-reference allele and frequency of existing variant in 1000 Genomes combined American population
+153	somatic_mutation	thousg_eas_af	numeric	True	Non-reference allele and frequency of existing variant in 1000 Genomes combined East Asian population
+154	somatic_mutation	thousg_eur_af	numeric	True	Non-reference allele and frequency of existing variant in 1000 Genomes combined European population
+155	somatic_mutation	thousg_sas_af	numeric	True	Non-reference allele and frequency of existing variant in 1000 Genomes combined South Asian population
+156	somatic_mutation	transcript_strand	text	True	The DNA strand (1 or -1) on which the transcript/feature lies
+157	somatic_mutation	transcription_factors	text	True	List of transcription factors which bind to the transcription factor binding profile
+158	somatic_mutation	trembl	text	True	UniProtKB/TrEMBL identifier of protein product
+159	somatic_mutation	tsl	text	True	Transcript support level, which is based on independent RNA analyses
+160	somatic_mutation	tumor_aliquot_barcode	text	True	Aliquot barcode for the tumor sample
+161	somatic_mutation	tumor_aliquot_uuid	text	True	Unique GDC identifier for tumor aliquot (10189 unique)
+162	somatic_mutation	tumor_seq_allele1	text	True	Primary data genotype for tumor sequencing (discovery) allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases
+163	somatic_mutation	tumor_seq_allele2	text	True	Primary data genotype for tumor sequencing (discovery) allele 2. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases
+164	somatic_mutation	tumor_submitter_uuid	text	True	Unique GDC identifier for the tumor file submitter
+165	somatic_mutation	tumor_validation_allele1	text	True	Secondary data from orthogonal technology. Tumor genotyping (validation) for allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases
+166	somatic_mutation	tumor_validation_allele2	text	True	Secondary data from orthogonal technology. Tumor genotyping (validation) for allele 2
+167	somatic_mutation	uniparc	text	True	UniParc identifier of protein product
+168	somatic_mutation	uniprot_isoform	text	True	Direct mappings to UniProtKB isoforms
+169	somatic_mutation	validation_method	text	True	The assay platforms used for the validation call
+170	somatic_mutation	validation_status	text	True	Second pass results from orthogonal technology
+171	somatic_mutation	variant_class	text	True	Sequence Ontology variant class
+172	somatic_mutation	variant_classification	text	True	Translational effect of variant allele
+173	somatic_mutation	variant_type	text	True	Type of mutation. TNP (tri-nucleotide polymorphism) is analogous to DNP (di-nucleotide polymorphism) but for three consecutive nucleotides. ONP (oligo-nucleotide polymorphism) is analogous to TNP but for consecutive runs of four or more (SNP, DNP, TNP, ONP, INS, DEL, or Consolidated)
+174	somatic_mutation	varscan2	text	True	Varscan2 caller identified the variant at this position
+175	somatic_mutation	verification_status	text	True	Second pass results from independent attempt using same methods as primary data source. Generally reserved for 3730 Sanger Sequencing
+176	specimen	specimen_id	text	False	The logical identifier of the entity in the system of record, e.g. a UUID. This id is unique within a given system. The identified entity may have a different id in a different system.
+177	specimen	anatomical_site	text	True	Per GDC Dictionary, the text term that represents the name of the primary disease site of the submitted tumor sample; recommend dropping tumor; biospecimen_anatomic_site.
+178	specimen	days_to_collection	integer	True	The number of days from the index date to either the date a sample was collected for a specific study or project, or the date a subject underwent a procedure (e.g. surgical resection) yielding a sample that was eventually used for research.
+179	specimen	derived_from_specimen	text	True	A source/parent specimen from which this one was directly derived.
+180	specimen	derived_from_subject	text	True	The Patient/ResearchSubject, or Biologically Derived Materal (e.g. a cell line, tissue culture, organoid) from which the specimen was directly or indirectly derived.
+181	specimen	primary_disease_type	text	True	The text term used to describe the type of malignant disease, as categorized by the World Health Organizations (WHO) International Classification of Diseases for Oncology (ICD-O). This attribute represents the disease that qualified the subject for inclusion on the ResearchProject.
+182	specimen	source_material_type	text	True	The general kind of material from which the specimen was derived, indicating the physical nature of the source material.
+183	specimen	specimen_associated_project	text	True	The Project associated with the specimen.
+184	specimen	specimen_type	text	True	The high-level type of the specimen, based on its how it has been derived from the original extracted sample.
+185	subject	subject_id	text	False	The logical identifier of the entity in the system of record, e.g. a UUID. This id is unique within a given system. The identified entity may have a different id in a different system.
+186	subject	cause_of_death	text	True	Coded value indicating the circumstance or condition that results in the death of the subject.
+187	subject	days_to_birth	integer	True	Number of days between the date used for index and the date from a persons date of birth represented as a calculated negative number of days.
+188	subject	days_to_death	integer	True	Number of days between the date used for index and the date from a persons date of death represented as a calculated number of days.
+189	subject	ethnicity	text	True	An individuals self-described social and cultural grouping, specifically whether an individual describes themselves as Hispanic or Latino. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.
+190	subject	race	text	True	An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.
+191	subject	sex	text	True	The biologic character or quality that distinguishes male and female from one another as expressed by analysis of the persons gonadal, morphologic (internal and external), chromosomal, and hormonal characteristics.
+192	subject	species	text	True	The taxonomic group (e.g. species) of the patient. For MVP, since taxonomy vocabulary is consistent between GDC and PDC, using text. Ultimately, this will be a term returned by the vocabulary service.
+193	subject	vital_status	text	True	Coded value indicating the state or condition of being living or deceased; also includes the case where the vital status is unknown.
+194	treatment	treatment_id	text	False	The logical identifier of the entity in the repository, e.g. a UUID. This id is unique within a given system. The identified entity may have a different id in a different system.
+195	treatment	days_to_treatment_end	integer	True	The timepoint at which the treatment ended.
+196	treatment	days_to_treatment_start	integer	True	The timepoint at which the treatment started.
+197	treatment	number_of_cycles	integer	True	The number of treatment cycles the subject received.
+198	treatment	therapeutic_agent	text	True	One or more therapeutic agents as part of this treatment.
+199	treatment	treatment_anatomic_site	text	True	The anatomical site that the treatment targets.
+200	treatment	treatment_effect	text	True	The effect of a treatment on the diagnosis or tumor.
+201	treatment	treatment_end_reason	text	True	The reason the treatment ended.
+202	treatment	treatment_outcome	text	True	The final outcome of the treatment.
+203	treatment	treatment_type	text	True	The treatment type including medication/therapeutics or other procedures.
