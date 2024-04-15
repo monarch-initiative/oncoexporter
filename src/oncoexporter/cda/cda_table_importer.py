@@ -225,7 +225,7 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
         #treatment_df.to_csv('treatment_df.txt', sep='\t')
         return treatment_df
 
-    def get_ga4gh_phenopackets(self, source: Q, **kwargs) -> typing.List[PPkt.Phenopacket]:
+    def get_ga4gh_phenopackets(self, source: dict, **kwargs) -> typing.List[PPkt.Phenopacket]:
         """Get a list of GA4GH phenopackets corresponding to the individuals returned by the query passed to the constructor.
 
         :returns: A list of GA4GH phenopackets corresponding to the individuals selected by the query passed to the constructor.
