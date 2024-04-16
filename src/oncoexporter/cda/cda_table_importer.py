@@ -321,9 +321,11 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
             #print(row["subject_id"], subj_id)
 
             variant_interpretations = self._gdc_mutation_service.fetch_variants(subj_id) # was rsub_subj['value']
+            vital_status = self._gdc_mutation_service.fetch_vital_status(subj_id)
             if len(variant_interpretations) == 0:
                 #print("No variants found")
                 continue
+            ppackt_d.get(individual_id).subject.vital_status.CopyFrom(vital_status)
             #else:
                 #print("length variant_interpretations: {}".format(len(variant_interpretations)))
                 
