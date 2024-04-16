@@ -58,7 +58,7 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
                  use_cache: bool = False,
                  cache_dir: typing.Optional[str] = None,
                  #page_size: int = 10000,
-                 gdc_timeout: int = 100_000,
+                 gdc_timeout: int = 100000,
                  ):
         self._use_cache = use_cache
         #self._page_size = page_size # not in new CDA 
@@ -225,17 +225,6 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
         #treatment_df.to_csv('treatment_df.txt', sep='\t')
         return treatment_df
 
-    def get_mutation_df(self, q: dict, cohort_name: str) -> pd.DataFrame:
-        '''
-            Don't need this with calls to GDC API
-        '''
-        
-        print("\nGetting mutation df...")
-        #mutation_callable = lambda: q.mutation.run(page_size=self._page_size).get_all().to_dataframe()
-        mutation_callable = lambda: fetch_rows( table='somatic_mutation', **q )
-        mutation_df = self._get_cda_df(mutation_callable, f"{cohort_name}_mutation_df.pkl")
-        return mutation_df
-
     def get_ga4gh_phenopackets(self, source: dict, **kwargs) -> typing.List[PPkt.Phenopacket]:
         """Get a list of GA4GH phenopackets corresponding to the individuals returned by the query passed to the constructor.
 
@@ -263,7 +252,6 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
         diag_rsub_df = self.get_merged_diagnosis_research_subject_df(source, cohort_name)
         specimen_df = self.get_specimen_df(source, cohort_name)
         treatment_df = self.get_treatment_df(source, cohort_name)
-        #mutation_df = self.get_mutation_df(source, cohort_name) 
         subj_rsub_df = self.get_merged_subject_research_subject_df(source, cohort_name)
 
         # Now use the CdaFactory classes to transform the information from the DataFrames into
@@ -333,9 +321,11 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
             #print(row["subject_id"], subj_id)
 
             variant_interpretations = self._gdc_mutation_service.fetch_variants(subj_id) # was rsub_subj['value']
+            vital_status = self._gdc_mutation_service.fetch_vital_status(subj_id)
             if len(variant_interpretations) == 0:
                 #print("No variants found")
                 continue
+            ppackt_d.get(individual_id).subject.vital_status.CopyFrom(vital_status)
             #else:
                 #print("length variant_interpretations: {}".format(len(variant_interpretations)))
                 
