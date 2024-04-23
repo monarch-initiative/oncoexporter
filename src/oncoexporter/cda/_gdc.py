@@ -43,6 +43,8 @@ class GdcMutationService:
         ))
         self._case_fields = ','.join((
             "demographic.vital_status",
+            "diagnoses.days_to_last_follow_up",
+            "diagnoses.age_at_diagnosis",
         ))
 
     def _fetch_data_from_gdc(self, url: str, subject_id: str, fields: typing.List[str]=None) -> typing.Any:
@@ -80,7 +82,20 @@ class GdcMutationService:
             mutation_details.append(vi)
 
         return mutation_details
-    
+
+    def _calculate_survival_time_when_alive(self, subject_id: str) -> int:
+        diagnosis_data = self._fetch_data_from_gdc(self._cases, subject_id, self._case_fields)
+        hits = diagnosis_data.get("data", {}).get("hits", [])
+        if hits:
+            diagnoses = hits[0].get("diagnoses", [])
+            if diagnoses:
+                last_follow_up = diagnoses[0].get("days_to_last_follow_up")
+                age_at_diagnosis = diagnoses[0].get("age_at_diagnosis")
+                if last_follow_up is not None and age_at_diagnosis is not None:
+                    return last_follow_up - age_at_diagnosis
+                else:
+                    self._logger.info(f"Cannot calculate survival time for subject {subject_id} due to missing data")
+
     def fetch_vital_status(self, subject_id: str) -> pp.VitalStatus:
         survival_data = self._fetch_data_from_gdc(self._survival_url, subject_id)
         vital_status_data = self._fetch_data_from_gdc(self._cases, subject_id, self._case_fields)
@@ -100,11 +115,15 @@ class GdcMutationService:
             vital_status = demographic.get("vital_status")
 
         vital_status_obj = pp.VitalStatus()
-        vital_status_obj.survival_time_in_days = int(survival_time) if survival_time is not None else 0
         if vital_status == "Dead":
             vital_status_obj.status = pp.VitalStatus.Status.DECEASED
+            if survival_time is not None:
+                vital_status_obj.survival_time_in_days = int(survival_time)
         elif vital_status == "Alive":
             vital_status_obj.status = pp.VitalStatus.Status.ALIVE
+            survival_time = self._calculate_survival_time_when_alive(subject_id)
+            if survival_time is not None:
+                vital_status_obj.survival_time_in_days = int(survival_time)
         else:
             vital_status_obj.status = pp.VitalStatus.Status.UNKNOWN_STATUS
         
