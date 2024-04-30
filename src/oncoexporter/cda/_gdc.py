@@ -55,7 +55,7 @@ class GdcMutationService:
             return data
         else:
             raise ValueError(f'Failed to fetch data from {url} due to {response.status_code}: {response.reason}')
-    
+
     def _prepare_query_params(self, subject_id: str, fields: typing.List[str]=None) -> typing.Dict:
         filters = {
             "op": "in",
@@ -83,18 +83,21 @@ class GdcMutationService:
 
         return mutation_details
 
-    def _calculate_survival_time_when_alive(self, subject_id: str) -> int:
+    def _calculate_survival_time_when_alive(self, subject_id: str) -> typing.Optional[int]:
         diagnosis_data = self._fetch_data_from_gdc(self._cases, subject_id, self._case_fields)
         hits = diagnosis_data.get("data", {}).get("hits", [])
+        if len(hits) > 1:
+            self._logger.warning(f"Multiple diagnoses found for subject {subject_id}. Using the first one.")
         if hits:
             diagnoses = hits[0].get("diagnoses", [])
             if diagnoses:
                 last_follow_up = diagnoses[0].get("days_to_last_follow_up")
-                age_at_diagnosis = diagnoses[0].get("age_at_diagnosis")
-                if last_follow_up is not None and age_at_diagnosis is not None:
-                    return last_follow_up - age_at_diagnosis
-                else:
+                # Via these docs:
+                # https://docs.gdc.cancer.gov/Data_Dictionary/viewer/#?view=table-definition-view&id=diagnosis&anchor=days_to_last_follow_up
+                # last_follow_up is days since diagnosis (not days since birth)^^
+                if last_follow_up is None:
                     self._logger.info(f"Cannot calculate survival time for subject {subject_id} due to missing data")
+                return last_follow_up
 
     def fetch_vital_status(self, subject_id: str) -> pp.VitalStatus:
         survival_data = self._fetch_data_from_gdc(self._survival_url, subject_id)
@@ -123,10 +126,13 @@ class GdcMutationService:
             vital_status_obj.status = pp.VitalStatus.Status.ALIVE
             survival_time = self._calculate_survival_time_when_alive(subject_id)
             if survival_time is not None:
-                vital_status_obj.survival_time_in_days = int(survival_time)
+                if survival_time < 0:
+                    self._logger.warning(f"Survival time for subject {subject_id} is negative: {survival_time}")
+                else:
+                    vital_status_obj.survival_time_in_days = int(survival_time)
         else:
             vital_status_obj.status = pp.VitalStatus.Status.UNKNOWN_STATUS
-        
+
         return vital_status_obj
 
     def _map_mutation_to_variant_interpretation(self, mutation) -> pp.VariantInterpretation:
