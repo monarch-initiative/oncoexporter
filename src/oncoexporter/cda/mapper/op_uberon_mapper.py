@@ -19,6 +19,7 @@ class OpUberonMapper(OpMapper):
         super().__init__(('primary_diagnosis_site',))
         self._uberon_label_to_id = {
             'lung': 'UBERON:0002048',
+            'endocervix': "UBERON:0000458",
             "uterine cervix": "UBERON:0000002",
             "uterus": "UBERON:0000995",
             "body of uterus": "UBERON:0009853",
@@ -43,6 +44,7 @@ class OpUberonMapper(OpMapper):
             "Cervix Uteri": "uterine cervix",
             "Cervix Uteri, Unknown": "uterine cervix",
             "Cervix": "uterine cervix",
+            "Endocervix": "endocervix",
             "Uterus, NOS": "uterus",
             "Corpus uteri": "body of uterus",
             "Corpus Uteri": "body of uterus",
