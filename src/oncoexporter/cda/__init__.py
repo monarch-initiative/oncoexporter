@@ -12,5 +12,5 @@ __all__ = [
     "CdaFactory",
     "CdaDiseaseFactory", "CdaIndividualFactory", "CdaBiosampleFactory", "CdaMutationFactory",
     "CdaTableImporter", "make_cda_medicalaction", "configure_cda_table_importer",
-    'GdcMutationService',
+    'GdcService',
 ]
