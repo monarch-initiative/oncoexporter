@@ -2,6 +2,7 @@ import json
 import logging
 import typing
 
+import pandas as pd
 import phenopackets as pp
 import requests
 
@@ -13,7 +14,7 @@ class GdcService:
         variants
         vital status
         stage
-    
+
     Changed the name from GdcMutationService since we are using it to get things in addition to variants
     """
 
@@ -62,7 +63,7 @@ class GdcService:
             return data
         else:
             raise ValueError(f'Failed to fetch data from {url} due to {response.status_code}: {response.reason}')
-    
+
     def _prepare_query_params(self, subject_ids: typing.List, fields: typing.List[str]=None) -> typing.Dict:
         filters = {
             "op": "in",
@@ -71,7 +72,7 @@ class GdcService:
                 "value": [subject_ids]
             }
         }
-        # filters = {"op":"and","content":[{"op":"in","content":{"field":"submitter_id","value":subj}}]} 
+        # filters = {"op":"and","content":[{"op":"in","content":{"field":"submitter_id","value":subj}}]}
 
         return {
             "fields": fields,
@@ -83,7 +84,7 @@ class GdcService:
     def fetch_variants(self, subject_id: str) -> typing.Sequence[pp.VariantInterpretation]:
         variants = self._fetch_data_from_gdc(self._variants_url, subject_id, self._variant_fields)
         # need to do a POST, GET takes too long...
-        
+
         mutations = variants.get("data", {}).get("hits", [])
 
         mutation_details = []
@@ -92,7 +93,7 @@ class GdcService:
             mutation_details.append(vi)
 
         return mutation_details
-    
+
     def fetch_vital_status(self, subject_id: str) -> pp.VitalStatus:
         survival_data = self._fetch_data_from_gdc(self._survival_url, subject_id)
         vital_status_data = self._fetch_data_from_gdc(self._cases_url, subject_id, self._case_fields)
@@ -119,14 +120,14 @@ class GdcService:
             vital_status_obj.status = pp.VitalStatus.Status.ALIVE
         else:
             vital_status_obj.status = pp.VitalStatus.Status.UNKNOWN_STATUS
-        
+
         return vital_status_obj
 
     def fetch_stage(self, subject_id: str) -> str:
-        
+
         stage = 'Unknown'
         stage_data = self._fetch_data_from_gdc(self._cases_url, subject_id, self._case_fields)
-        
+
         stage_hits = stage_data.get("data", {}).get("hits", [])
         # [{'id': 'bdd09566-f2ba-4771-82eb-9c30563dc669', 'diagnoses': [{'ajcc_pathologic_stage': 'Stage I'}], 'demographic': {'vital_status': 'Alive'}}]
         # gdc_stage: Stage I
@@ -140,7 +141,7 @@ class GdcService:
             #print("No stage_hits...", stage_data)
 
         return stage
-    
+
     def fetch_stage_df(self, subj_id_list) -> pd.DataFrame:
         '''
         Get df from GDC API with stages for input list of subject IDs
