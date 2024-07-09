@@ -5,6 +5,7 @@ import typing
 import pandas as pd
 import phenopackets as pp
 import requests
+from io import StringIO
 
 
 class GdcService:
@@ -22,7 +23,7 @@ class GdcService:
             self,
             page_size=100,
             page=1,
-            timeout=10,
+            timeout=30,
     ):
         self._logger = logging.getLogger(__name__)
         self._variants_url = 'https://api.gdc.cancer.gov/ssms'
@@ -142,13 +143,33 @@ class GdcService:
 
         return stage
 
-    def fetch_stage_df(self, subj_id_list) -> pd.DataFrame:
+    def fetch_stage_dict(self, subj_id_list) -> dict:
         '''
-        Get df from GDC API with stages for input list of subject IDs
+        Get df from GDC API with stages for input list of subject IDs using POST instead of GET
         '''
-        stage_data = self._fetch_data_from_gdc(self._cases_url, subj_id_list, self._case_fields)
+        fields = [
+            "submitter_id",
+            "cases.submitter_id",
+            "diagnoses.ajcc_pathologic_stage"
+        ]
+        fields = ",".join(fields)
 
-        return stage_df
+        # A POST is used, so the filter parameters can be passed directly as a Dict object.
+        params = {
+            "fields": fields,
+            "format": "TSV",
+            "size": "50000"
+            }
+
+        # The parameters are passed to 'json' rather than 'params' in this case
+        response = requests.post(self._cases_url, headers = {"Content-Type": "application/json"}, json = params)
+        stage_df = pd.read_csv(StringIO(response.content.decode("utf-8")), sep='\t')
+        stage_df.columns = ['ajcc0', 'ajcc1', 'ajcc2','id','submitter_id']
+        #stage_df.head()
+        #stage_df.shape
+        stage_dict = dict(zip(stage_df.submitter_id, stage_df.ajcc0))
+
+        return stage_dict
     def _map_mutation_to_variant_interpretation(self, mutation) -> pp.VariantInterpretation:
         vcf_record = self._parse_vcf_record(mutation)
 

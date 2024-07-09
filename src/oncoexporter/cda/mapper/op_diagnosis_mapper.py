@@ -158,7 +158,8 @@ class OpDiagnosisMapper(OpMapper):
         primary_diagnosis = replace_with_empty_str_if_none(row["primary_diagnosis"])
         primary_diagnosis_condition = replace_with_empty_str_if_none(row["primary_diagnosis_condition"])
         primary_diagnosis_site = replace_with_empty_str_if_none(row["primary_diagnosis_site"])
-
+        print(primary_diagnosis, primary_diagnosis_condition, primary_diagnosis_site)
+        
         # First, search using the composite key.
         key = get_cda_key(primary_diagnosis, primary_diagnosis_condition, primary_diagnosis_site)
         if key in self._ncit_map:
