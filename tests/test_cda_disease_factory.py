@@ -116,7 +116,7 @@ class TestCdaDiseaseFactory:
         ])
         def test_correct_stage_parsing(self, subject_id, expected_ncit_ontology,
                                        stage_values_test_df, factory):
-            this_row = stage_values_test_df[stage_values_test_df['subject_id_rs'] == subject_id].iloc[0]
+            this_row = stage_values_test_df[stage_values_test_df['subject_id'] == subject_id].iloc[0]
             disease_obj = factory.to_ga4gh(this_row)
 
             expected_oc = pp.OntologyClass()
