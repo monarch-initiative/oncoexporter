@@ -31,7 +31,7 @@ class TestCdaDiseaseFactory:
 
     @pytest.fixture
     def factory(self) -> CdaDiseaseFactory:
-        return CdaDiseaseFactory(disease_term_mapper=OpDiagnosisMapper.multitissue_mapper())
+        return CdaDiseaseFactory(disease_term_mapper=OpDiagnosisMapper.default_mapper())
 
     @pytest.fixture
     def row(self) -> pd.Series:
