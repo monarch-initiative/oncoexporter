@@ -99,17 +99,18 @@ class CdaDiseaseFactory(CdaFactory):
         #print("\n\nrow[subject_id]",row['subject_id'])
         #print("row:", list(row))
         #print("cda stage:", row["stage"]) # empty if coming from GDC
-        subj_id = re.sub("^[^.]+\.", "", row["subject_id"]) # remove initial data source label
-        gdc_stage = self._gdc_service.fetch_stage(subj_id) # returns a string
-        stage_str = ''
+        #subj_id = re.sub("^[^.]+\.", "", row["subject_id"]) # remove initial data source label: TCGA.TCGA-4J-AA1J > TCGA=4J-AA1J
+        #gdc_stage = self._gdc_service.fetch_stage(subj_id) # returns a string (too slow - need to use get_stage_df using POST instead)
+        
+        #stage_str = ''
 
-        if row["stage"] == '': # probably should put in a check for data source here
-            stage_str = gdc_stage
-        else:
-            stage_str = row["stage"]
+        #if row["stage"] == '': # probably should put in a check for data source here
+        #    stage_str = gdc_stage
+        #else:
+        #    stage_str = row["stage"]
 
         # map to ontology:
-        stage = self._stage_mapper.get_ontology_term(stage_str=stage_str) # returns ontology_term = PPkt.OntologyClass()
+        stage = self._stage_mapper.get_ontology_term(stage_str=row['stage']) # returns ontology_term = PPkt.OntologyClass()
         if stage is not None:
             disease.disease_stage.append(stage) # list, so use append instead of CopyFrom
         ###
