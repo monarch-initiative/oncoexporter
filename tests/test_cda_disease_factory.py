@@ -1,4 +1,5 @@
 import os
+from collections import defaultdict
 
 import pandas as pd
 import phenopackets as pp
@@ -87,9 +88,10 @@ class TestCdaDiseaseFactory:
         @pytest.fixture
         def disease_objs(self, factory: CdaDiseaseFactory,
                          stage_values_test_df: pd.DataFrame):
-            disease_objs = {}
+            # make a defaultdict
+            disease_objs = defaultdict()
             for i, row in stage_values_test_df.iterrows():
-                disease_objs[row['subject_id_rs']] = factory.to_ga4gh(row)
+                disease_objs[row['subject_id']] = factory.to_ga4gh(row)
             return disease_objs
 
         def test_disease_stage_is_ontology_term(self, disease_objs):
