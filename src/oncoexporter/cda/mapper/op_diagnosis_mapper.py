@@ -94,6 +94,8 @@ class OpDiagnosisMapper(OpMapper):
         )
         frames = []
         for tissue in tissue_tables:
+            # open_text deprecated, need to switch to files()
+            # https://importlib-resources.readthedocs.io/en/latest/using.html#migrating-from-legacy
             #eml = files('email.tests.data').joinpath('message.eml').read_text()
             with open_text(module_with_tissue_mapping_tables, tissue) as fh:
                 df = pd.read_csv(

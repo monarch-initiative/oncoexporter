@@ -19,7 +19,7 @@ class OpDiseaseStageMapper(OpMapper):
         # CDA pulls, is empty in GDC for some reason
         
         #stage_str = row["stage"]
-        
+
         ncit_label_to_id_d = {'Stage I': 'NCIT:C27966',
                             'Stage IA':'NCIT:C27975',
                             'Stage IB': 'NCIT:C27976',
@@ -29,7 +29,10 @@ class OpDiseaseStageMapper(OpMapper):
                             'Stage III':'NCIT:C27970',
                             'Stage IIIA': 'NCIT:C27977',
                             'Stage IIIB': 'NCIT:C27978',
-                            'Stage IV': 'NCIT:C27971'
+                            'Stage IIIC1': 'NCIT:C95179',
+                            'Stage IIIC2': 'NCIT:C95180',
+                            'Stage IV': 'NCIT:C27971',
+                            'Stage IVB': 'NCIT:C27972'
                             }
         
         stage_d = {'Stage I': 'Stage I',
@@ -64,10 +67,14 @@ class OpDiseaseStageMapper(OpMapper):
                 'Stage IIIB':'Stage IIIB',
                 'Stage 3B':'Stage IIIB',
                 'stage 3B':'Stage IIIB',
+                'Stage IIIC1': 'Stage IIIC1',
+                'Stage IIIC2': 'Stage IIIC2',
                 'IV':'Stage IV',
                 'Stage 4':'Stage IV',
                 'Stage IV':'Stage IV',
-                'stage IV':'Stage IV'
+                'stage IV':'Stage IV',
+                'Stage IVA': 'Stage IVA',
+                'Stage IVB': 'Stage IVB'
                 }
         
         ontology_term = PPkt.OntologyClass()
