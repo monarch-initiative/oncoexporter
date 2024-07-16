@@ -50,7 +50,6 @@ class OpUberonMapper(OpMapper):
             "Corpus Uteri": "body of uterus",
             "Corpus Uteri, Unknown": "body of uterus",
             "Uterus": "uterus",
-            "Abdomen, Arm, Bladder, Chest, Head-Neck, Kidney, Leg, Retroperitoneum, Stomach, Uterus": "uterus",
             "Bronchus and lung": "lower respiratory tract",
             "Bronchus and Lung": "lower respiratory tract",
             "Lower lobe, lung": "lower respiratory tract",

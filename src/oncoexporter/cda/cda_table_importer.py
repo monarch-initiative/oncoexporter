@@ -203,7 +203,7 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
          
         print("merged subject-researchsubject-diagnosis df")
         print(sub_rsub_diag_df.shape)
-        sub_rsub_diag_df.to_csv("subject_researchsubject_diagnosis_df.tsv", sep='\t')
+        
         # Now use the CdaFactory classes to transform the information from the DataFrames into
         # components of the GA4GH Phenopacket Schema
         # Add these components one at a time to Phenopacket objects.
@@ -250,7 +250,7 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
         for _, row in tqdm(sub_rsub_diag_df.iterrows(), total=len(sub_rsub_diag_df.index), desc="creating disease messsages"):
             #print(list(row))
             #print("\n", row["subject_id"])
-
+            
             # Retrieve GA4GH Disease messages
             disease_message = self._disease_factory.to_ga4gh(row)
             pp = ppackt_d.get(row["subject_id"]) 
@@ -269,8 +269,8 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
             # ppackt_d.get(individual_id).subject.vital_status.CopyFrom(vital_status)         
 
         # Get variant data 
-        # takes ~45 minutes due to GET API calls to GDC
-        sub_rsub_diag_GDC_df = sub_rsub_diag_df[sub_rsub_diag_df['subject_data_source'] == 'GDC']
+        # takes ~45 minutes due to API calls to GDC
+        sub_rsub_diag_GDC_df = sub_rsub_diag_df[sub_rsub_diag_df['subject_data_data_source' == 'GDC']]
         for _, row in tqdm(sub_rsub_diag_GDC_df.iterrows(), total=len(sub_rsub_diag_df.index), desc="getting variants from GDC"):
 
             individual_id = row["subject_id"]
@@ -281,6 +281,7 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
             # have to strip off the leading name before first period
             # e.g. TCGA.TCGA-05-4250 -> TCGA-05-4250
             subj_id = re.sub("^[^.]+\.", "", individual_id)
+            #print(row["subject_id"], subj_id)
         
             # get variants
             variant_interpretations = self._gdc_service.fetch_variants(subj_id) # was rsub_subj['value']
