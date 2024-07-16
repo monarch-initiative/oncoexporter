@@ -12,8 +12,14 @@ class OpDiseaseStageMapper(OpMapper):
         """
         super().__init__(('stage',))
 
-    def get_ontology_term(self, row:pd.Series) -> Optional[PPkt.OntologyClass]:
-        stage_str = row["stage"]
+    def get_ontology_term(self, stage_str) -> Optional[PPkt.OntologyClass]:
+        # changed passed variable from row (pandas series) to a string, because 
+        # need to be able to submit a single term obtained from the GDC API, 
+        # since the diagnoses.tumor_stage field, which 
+        # CDA pulls, is empty in GDC for some reason
+        
+        #stage_str = row["stage"]
+
         ncit_label_to_id_d = {'Stage I': 'NCIT:C27966',
                             'Stage IA':'NCIT:C27975',
                             'Stage IB': 'NCIT:C27976',
@@ -23,8 +29,12 @@ class OpDiseaseStageMapper(OpMapper):
                             'Stage III':'NCIT:C27970',
                             'Stage IIIA': 'NCIT:C27977',
                             'Stage IIIB': 'NCIT:C27978',
-                            'Stage IV': 'NCIT:C27971'
+                            'Stage IIIC1': 'NCIT:C95179',
+                            'Stage IIIC2': 'NCIT:C95180',
+                            'Stage IV': 'NCIT:C27971',
+                            'Stage IVB': 'NCIT:C27972'
                             }
+        
         stage_d = {'Stage I': 'Stage I',
                 'Stage 1': 'Stage I',
                 'stage I': 'Stage I',
@@ -57,12 +67,18 @@ class OpDiseaseStageMapper(OpMapper):
                 'Stage IIIB':'Stage IIIB',
                 'Stage 3B':'Stage IIIB',
                 'stage 3B':'Stage IIIB',
+                'Stage IIIC1': 'Stage IIIC1',
+                'Stage IIIC2': 'Stage IIIC2',
                 'IV':'Stage IV',
                 'Stage 4':'Stage IV',
                 'Stage IV':'Stage IV',
-                'stage IV':'Stage IV'
+                'stage IV':'Stage IV',
+                'Stage IVA': 'Stage IVA',
+                'Stage IVB': 'Stage IVB'
                 }
+        
         ontology_term = PPkt.OntologyClass()
+        
         if stage_str in stage_d:
             # get standard label and NCIT id
             stage_label = stage_d.get(stage_str)
@@ -72,4 +88,5 @@ class OpDiseaseStageMapper(OpMapper):
         else:
             ontology_term.id ='NCIT:C92207'  # Stage unknown
             ontology_term.label = 'Stage Unknown'
+            
         return ontology_term

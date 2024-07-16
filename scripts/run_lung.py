@@ -19,8 +19,7 @@ fetch_rows( table='researchsubject', match_all=[ 'primary_diagnosis_site = NULL'
 table_importer: CdaTableImporter = configure_cda_table_importer(use_cache=True)
 
 #Tsite = Q('primary_diagnosis_site = "%lung%" OR primary_diagnosis_site = "%pulmonary%"')
-# b = {'x':42, 'y':None}
-# function(1, **b) # equal to function(1, x=42, y=None)
+
 Query = {'match_any': ['primary_diagnosis_site = *lung*' , 'primary_diagnosis_site = *pulmonary*'],
          'data_source': 'GDC'}
 cohort_name = 'Lung'
