@@ -11,8 +11,9 @@ from oncoexporter.cda import CdaDiseaseFactory
 from oncoexporter.cda.mapper import OpDiagnosisMapper
 
 
-MERGED_DIAG_RESEARCH_DF_FILE = os.path.join(os.path.dirname(__file__), 'data', 'merged_diagnosis_researchsubject_tiny.tsv')
-ALL_STAGE_VALUES_TEST_DF_FILE = os.path.join(os.path.dirname(__file__), 'data', 'merged_diagnosis_researchsubject_unique_stages_lung_cervix.tsv')
+MERGED_DIAG_RESEARCH_DF_FILE = os.path.join(os.path.dirname(__file__), 'data', 'merged_diagnosis_researchsubject_tiny.tsv') # not used
+ALL_STAGE_VALUES_TEST_DF_FILE = os.path.join(os.path.dirname(__file__), 'data', 'merged_diagnosis_researchsubject_unique_stages_cervix.tsv')
+# merged_diagnosis_researchsubject_unique_stages_lung_cervix.tsv
 
 # Global variables for NCIT ontology terms
 STAGE_I = ('NCIT:C27966', 'Stage I')

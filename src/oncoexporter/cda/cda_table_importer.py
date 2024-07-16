@@ -242,10 +242,10 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
         # remove initial data source label: TCGA.TCGA-4J-AA1J > TCGA-4J-AA1J
         sub_rsub_diag_df['subject_id_short'] = sub_rsub_diag_df["subject_id"].str.extract(r'^[^\.]+\.(.+)', expand=False)
         sub_rsub_diag_df['stage'] = sub_rsub_diag_df['subject_id_short'].map(stage_dict).fillna(sub_rsub_diag_df['stage'])
-        #sub_rsub_diag_df.to_csv('sub_rsub_diag_df.txt', sep='\t')
 
         sub_rsub_diag_df['primary_diagnosis'] = sub_rsub_diag_df['primary_diagnosis'].fillna('') # remove nans (not sure why they are there)
-        
+        sub_rsub_diag_df.to_csv('sub_rsub_diag_df.txt', sep='\t')
+
         # Retrieve GA4GH Disease messages 
         for _, row in tqdm(sub_rsub_diag_df.iterrows(), total=len(sub_rsub_diag_df.index), desc="creating disease messsages"):
             #print(list(row))
@@ -254,11 +254,16 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
             # Retrieve GA4GH Disease messages
             disease_message = self._disease_factory.to_ga4gh(row)
             pp = ppackt_d.get(row["subject_id"]) 
-
+            
             # Do not add the disease if it is already in the phenopacket.
             if not any(disease.term.id == disease_message.term.id for disease in pp.diseases):
                 pp.diseases.append(disease_message)
-            
+
+            # need to check if we have the age_at_diagnosis in the phenopacket message
+            for disease in pp.diseases:
+                if not disease.HasField("onset") and disease.term.id == disease_message.term.id and disease_message.HasField("onset"):
+                    disease.onset.CopyFrom(disease_message.onset)
+                
             # get vital status from GDC - probably not needed (should be same as subject_df obtained from CDA)
             # vital_status = self._gdc_service.fetch_vital_status(subj_id)
             # ppackt_d.get(individual_id).subject.vital_status.CopyFrom(vital_status)         
