@@ -53,7 +53,7 @@ class GdcMutationService:
             return data
         else:
             raise ValueError(f'Failed to fetch data from {url} due to {response.status_code}: {response.reason}')
-    
+
     def _prepare_query_params(self, subject_id: str, fields: typing.List[str]=None) -> typing.Dict:
         filters = {
             "op": "in",
@@ -80,7 +80,7 @@ class GdcMutationService:
             mutation_details.append(vi)
 
         return mutation_details
-    
+
     def fetch_vital_status(self, subject_id: str) -> pp.VitalStatus:
         survival_data = self._fetch_data_from_gdc(self._survival_url, subject_id)
         vital_status_data = self._fetch_data_from_gdc(self._cases, subject_id, self._case_fields)
@@ -107,7 +107,7 @@ class GdcMutationService:
             vital_status_obj.status = pp.VitalStatus.Status.ALIVE
         else:
             vital_status_obj.status = pp.VitalStatus.Status.UNKNOWN_STATUS
-        
+
         return vital_status_obj
 
     def _map_mutation_to_variant_interpretation(self, mutation) -> pp.VariantInterpretation:
@@ -115,17 +115,20 @@ class GdcMutationService:
 
         vd = pp.VariationDescriptor()
         vd.id = mutation['id']
+
         if vcf_record is not None:
             vd.vcf_record.CopyFrom(vcf_record)
 
-        # TODO: set gene
         # TODO: 't_depth', 't_ref_count', 't_alt_count', 'n_depth', 'n_ref_count', 'n_alt_count'
         # TODO: mutation status
 
         for csq in mutation['consequence']:
-            expression = GdcMutationService._map_consequence_to_expression(csq)
+            (expression, gene_descriptor) = (
+                GdcMutationService._map_consequence_to_expression_and_gene_descriptor(csq))
             if expression is not None:
                 vd.expressions.append(expression)
+            if gene_descriptor is not None:
+                vd.gene_context.CopyFrom(gene_descriptor)
 
         vd.molecule_context = pp.MoleculeContext.genomic
 
@@ -152,7 +155,8 @@ class GdcMutationService:
         return vcf_record
 
     @staticmethod
-    def _map_consequence_to_expression(csq) -> typing.Optional[pp.Expression]:
+    def _map_consequence_to_expression_and_gene_descriptor(csq) -> (typing.Optional[pp.Expression],
+                                                                    typing.Optional[pp.GeneDescriptor]):
         tx = csq['transcript']
 
         expression = pp.Expression()
@@ -161,4 +165,8 @@ class GdcMutationService:
         ann = tx['annotation']['hgvsc']
         expression.value = f'{tx_id}:{ann}'
 
-        return expression
+        gene_context = pp.GeneDescriptor()
+        gene_context.value_id = tx['gene']['gene_id']
+        gene_context.symbol = tx['gene']['symbol']
+
+        return (expression, gene_context)
