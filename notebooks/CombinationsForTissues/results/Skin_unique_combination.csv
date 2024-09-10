@@ -1,0 +1,178 @@
+,primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site
+0,Apocrine adenocarcinoma,Adnexal and Skin Appendage Neoplasms,Skin
+1,"Clear cell sarcoma, NOS",Synovial-like Neoplasms,"Connective, subcutaneous and other soft tissues"
+2,"Fibrosarcoma, NOS",Fibromatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+3,"Dermatofibrosarcoma, NOS",Fibromatous Neoplasms,Skin
+4,Glomangiosarcoma,Paragangliomas and Glomus Tumors,"Connective, subcutaneous and other soft tissues"
+5,"Desmoplastic melanoma, malignant",Nevi and Melanomas,Skin
+6,"Epithelioid hemangioendothelioma, malignant",Blood Vessel Tumors,"Connective, subcutaneous and other soft tissues"
+7,Lentigo maligna melanoma,Nevi and Melanomas,Skin
+8,Alveolar rhabdomyosarcoma,Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+9,Epithelioid cell melanoma,Nevi and Melanomas,Skin
+10,Superficial spreading melanoma,Nevi and Melanomas,Skin
+11,Pleomorphic liposarcoma,Lipomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+12,Malignant myoepithelioma,Complex Mixed and Stromal Neoplasms,"Connective, subcutaneous and other soft tissues"
+13,"Pleomorphic rhabdomyosarcoma, adult type",Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+14,"Synovial sarcoma, spindle cell",Synovial-like Neoplasms,"Connective, subcutaneous and other soft tissues"
+15,Nodular melanoma,Nevi and Melanomas,Skin
+16,"Leiomyoma, NOS",Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+17,"Paget disease, extramammary",Ductal and Lobular Neoplasms,Skin
+18,"Mesenchymoma, NOS",Complex Mixed and Stromal Neoplasms,"Connective, subcutaneous and other soft tissues"
+19,"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+20,Mixed epithelioid and spindle cell melanoma,Nevi and Melanomas,Skin
+21,Amelanotic melanoma,Nevi and Melanomas,Skin
+22,"Hemangioma, NOS",Blood Vessel Tumors,"Connective, subcutaneous and other soft tissues"
+23,"Extra-adrenal paraganglioma, NOS",Paragangliomas and Glomus Tumors,"Connective, subcutaneous and other soft tissues"
+24,Spindle cell rhabdomyosarcoma,Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+25,Angiosarcoma,"Soft Tissue Tumors and Sarcomas, NOS",Skin
+26,Sebaceous adenocarcinoma,Adnexal and Skin Appendage Neoplasms,Skin
+27,Myxosarcoma,Myxomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+28,Intimal sarcoma,Blood Vessel Tumors,"Connective, subcutaneous and other soft tissues"
+29,"Eccrine poroma, malignant",Adnexal and Skin Appendage Neoplasms,Skin
+30,Alveolar soft part sarcoma,Granular Cell Tumors and Alveolar Soft Part Sarcomas,"Connective, subcutaneous and other soft tissues"
+31,Small cell sarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+32,"Myofibroblastic tumor, NOS",Fibromatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+33,Not Reported,Nevi and Melanomas,Skin
+34,"Malignant melanoma, NOS",Nevi and Melanomas,Skin
+35,Ganglioneuroblastoma,Neuroepitheliomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+36,"Myxoma, NOS",Myxomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+37,"Squamous cell carcinoma, NOS",Squamous Cell Neoplasms,Skin
+38,Interdigitating dendritic cell sarcoma,Neoplasms of Histiocytes and Accessory Lymphoid Cells,"Connective, subcutaneous and other soft tissues"
+39,"Neoplasm, malignant","Neoplasms, NOS","Connective, subcutaneous and other soft tissues"
+40,"Adenocarcinoma, NOS",Adenomas and Adenocarcinomas,"Connective, subcutaneous and other soft tissues"
+41,Giant cell sarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+42,Tenosynovial giant cell tumor,Giant Cell Tumors,"Connective, subcutaneous and other soft tissues"
+43,Not Reported,Blood Vessel Tumors,"Connective, subcutaneous and other soft tissues"
+44,"Giant pigmented nevus, NOS",Nevi and Melanomas,Skin
+45,"Dermatofibroma, NOS",Fibromatous Neoplasms,Skin
+46,"Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,"Connective, subcutaneous and other soft tissues"
+47,Epithelioid sarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+48,Ossifying fibromyxoid tumor,Myxomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+49,Eccrine spiradenoma,Adnexal and Skin Appendage Neoplasms,Skin
+50,Spindle cell sarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+51,Malignant peripheral nerve sheath tumor,Nerve Sheath Tumors,"Connective, subcutaneous and other soft tissues"
+52,Sweat gland adenocarcinoma,Adnexal and Skin Appendage Neoplasms,Skin
+53,"Spindle cell melanoma, NOS",Nevi and Melanomas,Skin
+54,Spindle cell sarcoma,"Soft Tissue Tumors and Sarcomas, NOS",Skin
+55,"Neoplasm, malignant","Neoplasms, NOS",Skin
+56,"Neuroblastoma, NOS",Neuroepitheliomatous Neoplasms,Skin
+57,Fibromyxosarcoma,Fibromatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+58,"Synovial sarcoma, biphasic",Synovial-like Neoplasms,"Connective, subcutaneous and other soft tissues"
+59,"Acral lentiginous melanoma, malignant","Neoplasms, NOS",Skin
+60,Epithelioid sarcoma,Blood Vessel Tumors,"Connective, subcutaneous and other soft tissues"
+61,Not specified in data,Unknown,Skin
+62,Not specified in data,Unknown,"Skin, Unknown"
+63,Sarcoma,Miscellaneous Tumors,"Connective, subcutaneous and other soft tissues"
+64,Not specified in data,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of pelvis"
+65,Infantile fibrosarcoma,Infantile fibrosarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+66,Not specified in data,Pigmented dermatofibrosarcoma protuberans,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+67,High-grade Synovial Sarcoma,"Synovial sarcoma, NOS","Connective, subcutaneous and other soft tissues, NOS"
+68,Embryonal Rhabdomyosarcoma,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of pelvis"
+69,Ewing sarcoma,Miscellaneous Tumors,"Connective, subcutaneous and other soft tissues"
+70,Small Round Blue Cell Sarcoma,Ewing sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+71,Not specified in data,Myxoid liposarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+72,Cellular neoplasm,"Synovial sarcoma, NOS","Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+73,Not specified in data,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+74,Melanoma,Neoplasm,Skin
+75,Not specified in data,Aggressive fibromatosis,"Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)"
+76,Round cell sarcoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues, NOS"
+77,Not specified in data,"Synovial sarcoma, NOS","Connective, subcutaneous and other soft tissues, NOS"
+78,Not specified in data,Aggressive fibromatosis,"Connective, subcutaneous and other soft tissues of pelvis"
+79,Spindle Cell Sarcoma,Spindle cell sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+80,Not specified in data,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)"
+81,Not specified in data,"Synovial sarcoma, spindle cell","Connective, subcutaneous and other soft tissues of lower limb and hip"
+82,Low grade spindle cell neoplasm,Aggressive fibromatosis,"Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)"
+83,Not specified in data,"Synovial sarcoma, NOS","Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+84,Alveolar Rhabdomyosarcoma,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of pelvis"
+85,Not specified in data,"Dermatofibroma, NOS",Skin of scalp and neck
+86,Not specified in data,Undifferentiated sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+87,Desmoplastic/Nodular Medulloblastoma,Myofibromatosis,"Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+88,Possible Synovial Sarcoma,"Synovial sarcoma, spindle cell","Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+89,Residual CIC-rearranged sarcoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+90,Not specified in data,"Spindle cell carcinoma, NOS","Connective, subcutaneous and other soft tissues of lower limb and hip"
+91,Not specified in data,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues, NOS"
+92,Not specified in data,"Malignant tumor, spindle cell type","Connective, subcutaneous and other soft tissues of thorax (excludes thymus C37.9, heart and mediastinum C38._)"
+93,Not specified in data,"Malignant melanoma, NOS",Skin of lower limb and hip
+94,Residual Dermatofibrosarcoma protuberans,Pigmented dermatofibrosarcoma protuberans,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+95,Not specified in data,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues, NOS"
+96,Desmoplastic/Nodular Medulloblastoma,Pigmented dermatofibrosarcoma protuberans,"Connective, subcutaneous and other soft tissues of abdomen"
+97,Not specified in data,Epithelioid sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+98,Not specified in data,Aggressive fibromatosis,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+99,Low grade spindle cell neoplasm,"Spindle cell carcinoma, NOS","Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+100,Biphasic Synovial Sarcoma,"Synovial sarcoma, biphasic","Connective, subcutaneous and other soft tissues of pelvis"
+101,Not specified in data,Ewing sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+102,Angiomatoid fibrous histiocytoma,Angiomatoid fibrous histiocytoma,"Connective, subcutaneous and other soft tissues of pelvis"
+103,Merkel Cell Tumor,Neuroepithelial Neoplasm,Skin
+104,Undifferentiated small round cell sarcoma,Undifferentiated sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+105,Alveolar Rhabdomyosarcoma,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)"
+106,Not specified in data,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+107,Not specified in data,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of lower limb and hip"
+108,Not specified in data,Spindle cell sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+109,Not specified in data,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of pelvis"
+110,Not specified in data,"Dermatofibroma, NOS","Connective, subcutaneous and other soft tissues of pelvis"
+111,Not specified in data,Alveolar soft part sarcoma,"Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+112,Rhabdomyosarcoma,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)"
+113,Sarcoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues, NOS"
+114,Not specified in data,"Myofibroblastic tumor, NOS","Connective, subcutaneous and other soft tissues of pelvis"
+115,Synovial sarcoma,"Synovial sarcoma, spindle cell","Connective, subcutaneous and other soft tissues of lower limb and hip"
+116,Spindle cell rhabdomyosarcoma,Smooth muscle tumor of uncertain malignant potential,"Connective, subcutaneous and other soft tissues of trunk, NOS"
+117,Not specified in data,Smooth muscle tumor of uncertain malignant potential,"Connective, subcutaneous and other soft tissues of trunk, NOS"
+118,Not specified in data,"Spindle cell carcinoma, NOS","Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+119,Rhabdomyosarcoma,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues, NOS"
+120,Not specified in data,"Synovial sarcoma, spindle cell","Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+121,Rhabdomyosarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+122,Alveolar Rhabdomyosarcoma,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+123,Not specified in data,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+124,Alveolar Rhabdomyosarcoma,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+125,Not specified in data,Angiomatoid fibrous histiocytoma,"Connective, subcutaneous and other soft tissues of pelvis"
+126,Embryonal Rhabdomyosarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+127,Not specified in data,"Rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of lower limb and hip"
+128,Fibromatosis,Aggressive fibromatosis,"Connective, subcutaneous and other soft tissues of pelvis"
+129,Desmoplastic/Nodular Medulloblastoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of thorax (excludes thymus C37.9, heart and mediastinum C38._)"
+130,Not specified in data,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of trunk, NOS"
+131,Anaplastic rhabdomyosarcoma,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of trunk, NOS"
+132,Not specified in data,Myofibromatosis,"Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+133,Epitheloid sarcoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+134,Sarcoma,Undifferentiated sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+135,Embryonal Rhabdomyosarcoma,"Embryonal rhabdomyosarcoma, NOS","Connective, subcutaneous and other soft tissues of lower limb and hip"
+136,Not specified in data,Alveolar rhabdomyosarcoma,"Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)"
+137,Not specified in data,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of thorax (excludes thymus C37.9, heart and mediastinum C38._)"
+138,Not specified in data,Infantile fibrosarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+139,Not specified in data,"Synovial sarcoma, biphasic","Connective, subcutaneous and other soft tissues of pelvis"
+140,Synovial sarcoma,"Synovial sarcoma, biphasic","Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)"
+141,Not specified in data,Melanoma in situ,"Skin, NOS (excludes skin of labia majora C51.0, skin of vulva C51.9, skin of penis C60.9 and skin of scrotum C63.2)"
+142,Not specified in data,Undifferentiated sarcoma,"Connective, subcutaneous and other soft tissues, NOS"
+143,Not specified in data,"Synovial sarcoma, biphasic","Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)"
+144,Epitheloid Sarcoma,Epithelioid sarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+145,Myxoid liposarcoma,Myxoid liposarcoma,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+146,Not specified in data,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of lower limb and hip"
+147,Not specified in data,Undifferentiated sarcoma,"Connective, subcutaneous and other soft tissues of head, face, and neck (excludes connective tissue of orbit C69.6 and nasal cartilage C30.0)"
+148,Poorly differentiated sarcoma,"Sarcoma, NOS","Connective, subcutaneous and other soft tissues of lower limb and hip"
+149,Alveolar soft part sarcoma,Alveolar soft part sarcoma,"Connective, subcutaneous and other soft tissues of upper limb and shoulder"
+150,Not specified in data,Pigmented dermatofibrosarcoma protuberans,"Connective, subcutaneous and other soft tissues of abdomen"
+151,Not specified in data,Desmoplastic small round cell tumor,"Connective, subcutaneous and other soft tissues of lower limb and hip"
+152,"Basal cell carcinoma, NOS",Basal Cell Neoplasms,Skin
+153,Merkel cell carcinoma,Adenomas and Adenocarcinomas,Skin
+154,Adnexal carcinoma,Adnexal and Skin Appendage Neoplasms,Skin
+155,Skin appendage carcinoma,Adnexal and Skin Appendage Neoplasms,Skin
+156,"Paraganglioma, NOS",Paragangliomas and Glomus Tumors,"Connective, subcutaneous and other soft tissues"
+157,"Melanoma, NOS",Nevi and Melanomas,Skin
+158,"Melanoma, NOS","Neoplasms, NOS",Skin
+159,"Acral lentiginous melanoma, malignant",Nevi and Melanomas,Skin
+160,"Sarcoma, NOS","Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+161,"Sarcoma, NOS","Neoplasms, NOS","Connective, subcutaneous and other soft tissues"
+162,Undifferentiated sarcoma,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+163,Desmoplastic small round cell tumor,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+164,Solitary fibrous tumor,Fibromatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+165,Solitary fibrous tumor,"Soft Tissue Tumors and Sarcomas, NOS","Connective, subcutaneous and other soft tissues"
+166,Aggressive fibromatosis,Fibromatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+167,Malignant fibrous histiocytoma,Fibromatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+168,"Liposarcoma, NOS",Lipomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+169,"Liposarcoma, well differentiated",Lipomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+170,Myxoid liposarcoma,Lipomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+171,Dedifferentiated liposarcoma,Lipomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+172,"Leiomyosarcoma, NOS",Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+173,"Rhabdomyosarcoma, NOS",Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+174,"Embryonal rhabdomyosarcoma, NOS",Myomatous Neoplasms,"Connective, subcutaneous and other soft tissues"
+175,"Synovial sarcoma, NOS",Synovial-like Neoplasms,"Connective, subcutaneous and other soft tissues"
+176,Haemangiosarcoma,Blood Vessel Tumors,"Connective, subcutaneous and other soft tissues"

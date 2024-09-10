@@ -1,0 +1,3 @@
+# Include the TSV mapping files.
+include src/oncoexporter/ncit_mapping_files/*.tsv
+include src/oncoexporter/ncit_mapping_files/cda_to_ncit_tissue_wise_mappings/*.csv

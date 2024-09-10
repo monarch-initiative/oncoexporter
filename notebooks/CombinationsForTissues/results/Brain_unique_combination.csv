@@ -1,0 +1,284 @@
+,primary_diagnosis,primary_diagnosis_condition,primary_diagnosis_site
+0,Yolk sac tumor,Germ Cell Neoplasms,Brain
+1,Low grade glial neoplasm,Pilocytic astrocytoma,"Brain, NOS"
+2,Cerebellopontine angle tumor,"Neoplasm, benign","Brain, NOS"
+3,Embryonal tumor,"Glioblastoma, NOS",Overlapping lesion of brain and central nervous system
+4,Atypical Teratoid/Rhabdoid Tumor,Miscellaneous Tumors,Brain
+5,Brain Tumor,"Neoplasm, malignant","Brain, NOS"
+6,Poorly differentiated malignant neoplasm with sarcomatoid features,"Neoplasm, malignant","Brain, NOS"
+7,Neoplasm,"Sarcoma, NOS",Overlapping lesion of brain
+8,Germinoma,Germ Cell Neoplasms,Brain
+9,"Neoplasm, uncertain whether benign or malignant","Neoplasms, NOS",Brain
+10,Glial Neoplasm,"Glioma, malignant","Brain, NOS"
+11,Anaplastic Ganglioglioma,Gliomas,Brain
+12,Low-grade glial/glioneuronal tumor,"Ganglioglioma, NOS","Brain, NOS"
+13,Ganglioglioma,"Ganglioglioma, NOS","Brain, NOS"
+14,Diffuse Glioma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+15,Pineoblastoma,"Glioma, malignant","Brain, NOS"
+16,"Malignant lymphoma, NOS","Malignant Lymphomas, NOS or Diffuse",Brain
+17,Dysembryoplastic Neuroepithelial Tumor,Dysembryoplastic neuroepithelial tumor,"Brain, NOS"
+18,Glioblastoma multiforme,"Neoplasms, NOS",Brain
+19,Papillary glioneuronal tumor,Neuroepitheliomatous Neoplasms,Brain
+20,Adamantinomatous Craniopharyngioma,Craniopharyngioma,"Brain, NOS"
+21,Diffuse Glioma,"Glioma, malignant","Brain, NOS"
+22,Glial Neoplasm,Craniopharyngioma,"Brain, NOS"
+23,Brain Tumor,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+24,Non-WNT/non-SHH medulloblastoma,"Medulloblastoma, NOS","Brain, NOS"
+25,Atypical Teratoid/Rhabdoid Tumor,Atypical teratoid/rhabdoid tumor,"Brain, NOS"
+26,Choroid Plexus Papillary Tumor,"Choroid plexus papilloma, NOS","Brain, NOS"
+27,Glial tumor,"Glioma, malignant","Brain, NOS"
+28,Glial Neoplasm,Pilocytic astrocytoma,"Brain, NOS"
+29,Diffuse astrocytoma,"Astrocytoma, NOS","Brain, NOS"
+30,"Teratoma, benign",Germ Cell Neoplasms,Brain
+31,Choroid plexus carcinoma,Choroid plexus carcinoma,"Brain, NOS"
+32,Low grade neuroepithelial tumor,Astroblastoma,"Brain, NOS"
+33,Neoplasm,"Glioblastoma, NOS","Brain, NOS"
+34,Supratentorial choroid plexus papilloma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+35,Neoplasm,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+36,"Embryonal carcinoma, NOS",Germ Cell Neoplasms,Brain
+37,Primary central nervous system neoplasm consistent with high grade glioma,"Glioma, malignant","Brain, NOS"
+38,High-grade Central Nervous System Neoplasm Favor Embryonal,"Medulloblastoma, NOS",Brain stem
+39,Neuroepithelial Tumor,"Glioma, malignant","Brain, NOS"
+40,Glioneuronal lesion,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+41,Glioneuronal tumor,"Glioma, malignant","Brain, NOS"
+42,Astrocytoma,Pilocytic astrocytoma,"Brain, NOS"
+43,Adamantinomatous Craniopharyngioma,"Craniopharyngioma, adamantinomatous","Brain, NOS"
+44,Glial-neuronal neoplasm,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+45,"Malignant lymphoma, large B-cell, diffuse, NOS",Mature B-Cell Lymphomas,Brain
+46,Malignant glioma,Gliomas,Brain
+47,Neuroepithelial Tumor,"Neoplasm, malignant","Brain, NOS"
+48,Small round blue cell tumor,"Medulloblastoma, NOS","Brain, NOS"
+49,Low grade glioneuronal neoplasm,Dysembryoplastic neuroepithelial tumor,"Brain, NOS"
+50,Anaplastic medulloblastoma,"Medulloblastoma, NOS","Brain, NOS"
+51,Atypical Teratoid/Rhabdoid Tumor,"Rhabdoid tumor, NOS",Brain stem
+52,Diffuse Glioma,"Astrocytoma, NOS","Brain, NOS"
+53,Brain Tumor,"Glioma, malignant","Brain, NOS"
+54,Low grade neuroglial tumor,"Neoplasm, benign","Brain, NOS"
+55,Neuroepithelial neoplasm,"Glioma, malignant","Brain, NOS"
+56,Low grade glial neoplasm,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+57,Brain Tumor,Pilocytic astrocytoma,"Brain, NOS"
+58,Posterior fossa group A ependymoma,"Ependymoma, NOS","Brain, NOS"
+59,Astrocytoma,"Astrocytoma, NOS","Brain, NOS"
+60,Embryonal Neoplasm,"Neoplasm, malignant","Brain, NOS"
+61,Suprasellar mass,Pilocytic astrocytoma,"Brain, NOS"
+62,Myxoid Glioneuronal tumor,"Neoplasm, benign","Brain, NOS"
+63,Angiocentric Glioma,"Glioma, malignant","Brain, NOS"
+64,Pure germinoma,Mixed germ cell tumor,"Brain, NOS"
+65,Atypical choroid plexus papilloma,Atypical choroid plexus papilloma,"Brain, NOS"
+66,Unknown,Gliomas,Brain
+67,CNS Embryonal Tumor,Miscellaneous Tumors,Brain
+68,High-grade tumor,"Neoplasm, malignant","Brain, NOS"
+69,Embryonal Neoplasm,"Medulloblastoma, NOS","Brain, NOS"
+70,"Malignant embryonal tumor, favor medulloblastoma",Large cell medulloblastoma,"Brain, NOS"
+71,Glial Neoplasm,Subependymal giant cell astrocytoma,"Brain, NOS"
+72,Glial Neoplasm,"Astrocytoma, NOS","Brain, NOS"
+73,Neoplasm,"Neoplasm, malignant","Brain, NOS"
+74,Anaplastic Ependymoma,"Ependymoma, anaplastic","Brain, NOS"
+75,Astrocytoma,"Glioma, malignant","Brain, NOS"
+76,Glial Neoplasm,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+77,Oligoastrocytoma,Gliomas,Brain
+78,High-grade Central Nervous System Neoplasm Favor Embryonal,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+79,Choroid Plexus Papillary Tumor,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+80,Cerebellopontine angle tumor,"Astrocytoma, NOS","Brain, NOS"
+81,Astrocytoma,"Astrocytoma, anaplastic","Brain, NOS"
+82,Anaplastic Ependymoma,"Unknown, to be completed later","Brain, NOS"
+83,Thalamic brain tumor,"Glioma, malignant",Brain stem
+84,Glial-neuronal neoplasm,"Glioma, malignant","Brain, NOS"
+85,Atypical Teratoid/Rhabdoid Tumor,Atypical teratoid/rhabdoid tumor,Brain stem
+86,Atypical epithelial neoplasm,Choroid plexus carcinoma,"Brain, NOS"
+87,Glial Neoplasm,"Ependymoma, NOS","Brain, NOS"
+88,4th ventricular brain tumor,"CNS embryonal tumor, NOS","Brain, NOS"
+89,Glial Neoplasm,"Tumor cells, uncertain whether benign or malignant","Brain, NOS"
+90,High-grade Ependymal Neoplasm,"Ependymoma, NOS","Brain, NOS"
+91,Infant hemispheric glioma,"Glioma, malignant","Brain, NOS"
+92,Posterior fossa ependymoma,"Tumor cells, uncertain whether benign or malignant","Brain, NOS"
+93,Low-grade glial neoplasm,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+94,Germinoma,Germinoma,"Brain, NOS"
+95,Pleomorphic xanthoastrocytoma,Pleomorphic xanthoastrocytoma,"Brain, NOS"
+96,Clear cell meningioma,Miscellaneous Tumors,Brain
+97,Mesenchymal Neoplasm,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+98,Glioblastoma multiforme,Gliomas,Brain
+99,Brain Tumor,"Neoplasm, benign","Brain, NOS"
+100,Mixed germ cell w/ matrue teratoma,Mixed germ cell tumor,"Brain, NOS"
+101,Cellular ependymoma,"Ependymoma, NOS","Brain, NOS"
+102,Posterior fossa ependymoma,"Ependymoma, NOS","Brain, NOS"
+103,Pituitary tumor,"Craniopharyngioma, adamantinomatous","Brain, NOS"
+104,Low-grade Glioma,"Glioma, malignant","Brain, NOS"
+105,Brain Tumor,"Ependymoma, NOS",Overlapping lesion of brain and central nervous system
+106,Brain Tumor,"Glioma, malignant",Overlapping lesion of brain
+107,Posterior fossa ependymoma,"Neoplasm, malignant","Brain, NOS"
+108,Embryonal tumor,"Medulloblastoma, NOS","Brain, NOS"
+109,Cerebellar mass,Pineoblastoma,"Brain, NOS"
+110,Neuroepithelial neoplasm,"Glioma, malignant",Overlapping lesion of brain
+111,Primitive neuroectoderma tumor,"Tumor cells, uncertain whether benign or malignant","Brain, NOS"
+112,Pleomorphic xanthoastrocytoma,"Astrocytoma, NOS","Brain, NOS"
+113,Neoplasm,"Glioma, malignant","Brain, NOS"
+114,Posterior fossa tumor,"Medulloblastoma, NOS","Brain, NOS"
+115,Meningioma,"Meningioma, malignant","Brain, NOS"
+116,Low grade glioneuronal tumor,Dysembryoplastic neuroepithelial tumor,"Brain, NOS"
+117,Atypical central neurocytoma,Central neurocytoma,"Brain, NOS"
+118,CNS primative neuroectodermal tumor (PNET),Miscellaneous Tumors,Brain
+119,Low-grade glial/glioneuronal neoplasm,"Unknown, to be completed later","Brain, NOS"
+120,High-grade blue cell tumor,"Medulloblastoma, NOS","Brain, NOS"
+121,Schwannoma,"Neurofibromatosis, NOS","Brain, NOS"
+122,Supratentorial choroid plexus papilloma,"Ependymoma, NOS","Brain, NOS"
+123,Posterior fossa ependymoma,"Ependymoma, NOS",Brain stem
+124,Posterior fossa tumor,"Astrocytoma, NOS","Brain, NOS"
+125,Posterior fossa ependymoma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+126,Neuroepithelial neoplasm,"Medulloblastoma, NOS","Brain, NOS"
+127,Embryonal tumor,"CNS embryonal tumor, NOS","Brain, NOS"
+128,Low grade glial neoplasm,"Astrocytoma, NOS","Brain, NOS"
+129,Ganglioglioma,"Neoplasm, malignant","Brain, NOS"
+130,Atypical Teratoid/Rhabdoid Tumor,Atypical teratoid/rhabdoid tumor,Overlapping lesion of brain
+131,Subependymal giant cell astrocytoma,"Glioma, malignant","Brain, NOS"
+132,Embryonal tumor,"Neoplasm, benign","Brain, NOS"
+133,Diffuse Glioma,"Glioma, malignant",Brain stem
+134,Cerebellar tumor,Pilocytic astrocytoma,"Brain, NOS"
+135,Brain Tumor,"Glioma, malignant",Brain stem
+136,Low-grade Glial Neoplasm,"Glioma, malignant","Brain, NOS"
+137,Atypical Teratoid/Rhabdoid Tumor,"Neoplasm, malignant","Brain, NOS"
+138,Neuroepithelial Tumor,Pilocytic astrocytoma,"Brain, NOS"
+139,Piloid glial proliferation,"Glioma, malignant",Brain stem
+140,Polymorphous low grade neuroepithelial tumor,"Ganglioglioma, NOS","Brain, NOS"
+141,"Teratoma, malignant, NOS",Germ Cell Neoplasms,Brain
+142,Central Nervous System Tumor with High Grade Histological Features,Astroblastoma,Overlapping lesion of brain
+143,Neoplasm,"Unknown, to be completed later","Brain, NOS"
+144,Intraventricular tumor,"Glioma, malignant","Brain, NOS"
+145,Neurofibromatosis; Moderately cellular neoplasm,"Glioma, malignant","Brain, NOS"
+146,Low-grade glial neoplasm,"Glioma, malignant","Brain, NOS"
+147,Glial Neoplasm,"Glioma, malignant",Brain stem
+148,Supratentorial Ependymoma,"Neoplasm, malignant","Brain, NOS"
+149,Infiltrating glioma,"Glioma, malignant","Brain, NOS"
+150,Brain Tumor,"Medulloblastoma, NOS","Brain, NOS"
+151,Small Round Blue Cell Sarcoma,"CNS embryonal tumor, NOS","Brain, NOS"
+152,Round blue cell tumor,"Medulloblastoma, NOS","Brain, NOS"
+153,Astrocytic Glioma,Pilocytic astrocytoma,"Brain, NOS"
+154,Supratentorial choroid plexus papilloma,"Choroid plexus papilloma, NOS","Brain, NOS"
+155,Astrocytoma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+156,Embryonal tumor,"Neoplasm, metastatic","Brain, NOS"
+157,Brain Tumor,"Unknown, to be completed later","Brain, NOS"
+158,Histiocytic malignancy,"Neoplasm, benign","Brain, NOS"
+159,Gliosarcoma,Gliomas,Brain
+160,Classic Medulloblastoma,"Tumor cells, uncertain whether benign or malignant","Brain, NOS"
+161,Pineal parenchymal tumor,Pinealoma,"Brain, NOS"
+162,Neuroepithelial Tumor,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+163,Posterior fossa ependymoma,"Ependymoma, anaplastic","Brain, NOS"
+164,Diffuse Glioma,"Neoplasm, malignant","Brain, NOS"
+165,Astrocytic Glioma,"Unknown, to be completed later","Brain, NOS"
+166,Low grade glial neoplasm,Pleomorphic xanthoastrocytoma,"Brain, NOS"
+167,Low-grade circumscribed glial/glioneuronal tumor,"Ganglioglioma, NOS","Brain, NOS"
+168,Anaplastic Ependymoma,Gliomas,Brain
+169,Low-cellularity glioma,"Glioma, malignant","Brain, NOS"
+170,,,Brain
+171,Glioma,"Glioma, malignant","Brain, NOS"
+172,Glioma,Astroblastoma,"Brain, NOS"
+173,Glioma,Pilocytic astrocytoma,"Brain, NOS"
+174,Glioma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+175,Glioma,"Neoplasm, malignant","Brain, NOS"
+176,Glioma,"Glioma, malignant",Brain stem
+177,Glioma,"Astrocytoma, NOS",Brain stem
+178,"Glioma, NOS",Pediatric/AYA Brain Tumors,Brain
+179,Glioblastoma,Glioblastoma,Brain
+180,Glioblastoma,Gliomas,Brain
+181,Glioblastoma,"Glioblastoma, NOS","Brain, NOS"
+182,Mixed glioma,Gliomas,Brain
+183,Neuroblastoma,"Neuroblastoma, NOS",Brain
+184,Neuroblastoma,"CNS embryonal tumor, NOS","Brain, NOS"
+185,Ependymoma NOS,"Ependymoma, anaplastic","Brain, NOS"
+186,Ependymoma NOS,"Medulloblastoma, NOS","Brain, NOS"
+187,Ependymoma NOS,"Ependymoma, NOS","Brain, NOS"
+188,Ependymoma NOS,"Ependymoma, NOS",Brain stem
+189,Ependymoma NOS,"Medulloblastoma, NOS",Brain stem
+190,Ependymoma NOS,"Ependymoma, anaplastic",Brain stem
+191,Ependymoma NOS,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+192,Ependymoma NOS,"Neoplasm, uncertain whether benign or malignant",Brain stem
+193,"Ependymoma, NOS",Pediatric/AYA Brain Tumors,Brain
+194,Medulloblastoma,"Medulloblastoma, NOS","Brain, NOS"
+195,Medulloblastoma,Miscellaneous Tumors,Brain
+196,Medulloblastoma,"Medulloblastoma, NOS",Overlapping lesion of brain and central nervous system
+197,Medulloblastoma,"Medulloblastoma, NOS",Brain stem
+198,Medulloblastoma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+199,Medulloblastoma,Desmoplastic nodular medulloblastoma,"Brain, NOS"
+200,Medulloblastoma,"Tumor cells, uncertain whether benign or malignant","Brain, NOS"
+201,"Astrocytoma, NOS",Gliomas,Brain
+202,Craniopharyngioma,Pediatric/AYA Brain Tumors,Brain
+203,Craniopharyngioma,Craniopharyngioma,"Brain, NOS"
+204,"Glioma, malignant",Pediatric/AYA Brain Tumors,Brain
+205,"Ganglioglioma, NOS",Pediatric/AYA Brain Tumors,Brain
+206,"Neoplasm, malignant","Neoplasms, NOS",Brain
+207,"Medulloblastoma, NOS",Pediatric/AYA Brain Tumors,Brain
+208,Mixed germ cell tumor,Germ Cell Neoplasms,Brain
+209,Mixed germ cell tumor,Mixed germ cell tumor,"Brain, NOS"
+210,Not specified in data,Pineoblastoma,"Brain, NOS"
+211,Not specified in data,Mixed germ cell tumor,"Brain, NOS"
+212,Not specified in data,"Neoplasm, malignant","Brain, NOS"
+213,Not specified in data,"Medulloblastoma, NOS",Overlapping lesion of brain and central nervous system
+214,Not specified in data,"Neoplasm, benign","Brain, NOS"
+215,Not specified in data,"Glioma, malignant","Brain, NOS"
+216,Not specified in data,"Astrocytoma, NOS","Brain, NOS"
+217,Not specified in data,"Medulloblastoma, NOS","Brain, NOS"
+218,Not specified in data,"Glioma, malignant",Overlapping lesion of brain
+219,Not specified in data,Pilocytic astrocytoma,"Brain, NOS"
+220,Not specified in data,"Ganglioglioma, NOS","Brain, NOS"
+221,Not specified in data,Atypical teratoid/rhabdoid tumor,Brain stem
+222,Not specified in data,"Medulloblastoma, NOS",Brain stem
+223,Not specified in data,"Ependymoma, NOS","Brain, NOS"
+224,Not specified in data,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+225,Not specified in data,"Schwannoma, NOS","Brain, NOS"
+226,Not specified in data,"Craniopharyngioma, adamantinomatous","Brain, NOS"
+227,Not specified in data,"Unknown, to be completed later","Brain, NOS"
+228,Not specified in data,Atypical teratoid/rhabdoid tumor,"Brain, NOS"
+229,Not specified in data,Pilocytic astrocytoma,Brain stem
+230,Not specified in data,Atypical teratoid/rhabdoid tumor,Overlapping lesion of brain
+231,Not specified in data,Dysembryoplastic neuroepithelial tumor,"Brain, NOS"
+232,Not specified in data,"Choroid plexus papilloma, NOS","Brain, NOS"
+233,Not specified in data,"Tumor cells, uncertain whether benign or malignant","Brain, NOS"
+234,Not specified in data,"Glioma, malignant",Brain stem
+235,Not specified in data,"CNS embryonal tumor, NOS","Brain, NOS"
+236,Not specified in data,Craniopharyngioma,"Brain, NOS"
+237,Not specified in data,"Neoplasm, uncertain whether benign or malignant",Brain stem
+238,Not specified in data,"Neuroblastoma, NOS","Brain, NOS"
+239,Not specified in data,Germinoma,"Brain, NOS"
+240,Not specified in data,Pinealoma,"Brain, NOS"
+241,Not specified in data,"Pituitary adenoma, NOS","Brain, NOS"
+242,Not specified in data,Astroblastoma,"Brain, NOS"
+243,Not specified in data,Central neurocytoma,"Brain, NOS"
+244,Not specified in data,Malignant histiocytosis,"Brain, NOS"
+245,Not specified in data,Choroid plexus carcinoma,"Brain, NOS"
+246,Not specified in data,"Ependymoma, anaplastic","Brain, NOS"
+247,Not specified in data,"Neoplasm, metastatic","Brain, NOS"
+248,Not specified in data,"Glioblastoma, NOS",Overlapping lesion of brain and central nervous system
+249,Not specified in data,Pleomorphic xanthoastrocytoma,"Brain, NOS"
+250,Not specified in data,Atypical choroid plexus papilloma,"Brain, NOS"
+251,Not specified in data,"Ependymoma, NOS",Brain stem
+252,Not specified in data,"Astrocytoma, anaplastic","Brain, NOS"
+253,Not specified in data,"Germ cell tumor, nonseminomatous","Brain, NOS"
+254,Not specified in data,"Glioblastoma, NOS","Brain, NOS"
+255,Not specified in data,"Neurofibromatosis, NOS","Brain, NOS"
+256,Not specified in data,"Ependymoma, anaplastic",Brain stem
+257,Not specified in data,"Rhabdoid tumor, NOS",Brain stem
+258,Not specified in data,"Astrocytoma, NOS",Brain stem
+259,Not specified in data,"Sarcoma, NOS",Overlapping lesion of brain
+260,Not specified in data,Desmoplastic nodular medulloblastoma,"Brain, NOS"
+261,Not specified in data,Subependymal giant cell astrocytoma,"Brain, NOS"
+262,Not specified in data,"Embryonal carcinoma, NOS",Brain stem
+263,Not specified in data,"Neoplasm, malignant, uncertain whether primary or metastatic","Brain, NOS"
+264,Not specified in data,"Teratoma, malignant, NOS","Brain, NOS"
+265,Not specified in data,"Meningioma, malignant","Brain, NOS"
+266,Not specified in data,"Ependymoma, NOS",Overlapping lesion of brain and central nervous system
+267,Not specified in data,"Sarcoma, NOS","Brain, NOS"
+268,Not specified in data,Astroblastoma,Overlapping lesion of brain
+269,Not specified in data,"Oligodendroglioma, NOS","Brain, NOS"
+270,Not specified in data,Large cell medulloblastoma,"Brain, NOS"
+271,Pilocytic Astrocytoma,Gliomas,Brain
+272,Pilocytic Astrocytoma,"Unknown, to be completed later","Brain, NOS"
+273,Pilocytic Astrocytoma,Pilocytic astrocytoma,"Brain, NOS"
+274,Pilocytic Astrocytoma,Pilocytic astrocytoma,Brain stem
+275,Pilocytic Astrocytoma,"Astrocytoma, NOS","Brain, NOS"
+276,Pilocytic Astrocytoma,"Glioma, malignant","Brain, NOS"
+277,Pilocytic Astrocytoma,"Neoplasm, uncertain whether benign or malignant","Brain, NOS"
+278,Pilocytic Astrocytoma,"Neoplasm, malignant","Brain, NOS"
+279,"Oligodendroglioma, NOS",Gliomas,Brain
+280,"Astrocytoma, anaplastic",Gliomas,Brain
+281,"Oligodendroglioma, anaplastic",Gliomas,Brain
+282,Atypical teratoid/rhabdoid tumor,Pediatric/AYA Brain Tumors,Brain
