@@ -1,0 +1,1530 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../cda_disease/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>cda_mutation - oncoexporter</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cda-mutation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="oncoexporter" class="md-header__button md-logo" aria-label="oncoexporter" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            oncoexporter
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              cda_mutation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="white"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="oncoexporter" class="md-nav__button md-logo" aria-label="oncoexporter" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    oncoexporter
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workplan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workplan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    cda
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            cda
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cda/cda_table_importer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cda_table_importer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cda/cda_factory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cda_factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cda/cda_individual_factory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cda_individual_factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cda/cda_disease_factory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cda_disease_factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cda/cda_biosample_factory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cda_biosample_factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cda/cda_mutation_factory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cda_mutation_factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/op_individual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    op_individual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    explanations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            explanations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cda_disease/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cda_disease
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    cda_mutation
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="cda-mutation">CDA Mutation</h1>
+<p>We extract information about variants from the CDA table <code>mutation</code>.
+We first summarize the table and then outline our ETL strategy.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Column</th>
+<th style="text-align: left;">Example</th>
+<th style="text-align: left;">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">project_short_name</td>
+<td style="text-align: left;">TCGA-CESC</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">case_barcode</td>
+<td style="text-align: left;">TCGA-C5-A1MI</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">cda_subject_id</td>
+<td style="text-align: left;">TCGA.TCGA-C5-A1MI</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">primary_site</td>
+<td style="text-align: left;">Cervix uteri</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Hugo_Symbol</td>
+<td style="text-align: left;">IGSF9B</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Entrez_Gene_Id</td>
+<td style="text-align: left;">22997</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Center</td>
+<td style="text-align: left;">BI</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">NCBI_Build</td>
+<td style="text-align: left;">GRCh38</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Chromosome</td>
+<td style="text-align: left;">chr11</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Start_Position</td>
+<td style="text-align: left;">133921225</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">End_Position</td>
+<td style="text-align: left;">133921225</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Strand</td>
+<td style="text-align: left;">+</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Variant_Classification</td>
+<td style="text-align: left;">Missense_Mutation</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Variant_Type</td>
+<td style="text-align: left;">SNP</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Reference_Allele</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Tumor_Seq_Allele1</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Tumor_Seq_Allele2</td>
+<td style="text-align: left;">T</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">dbSNP_RS</td>
+<td style="text-align: left;">rs771150072</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">dbSNP_Val_Status</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Tumor_Aliquot_Barcode</td>
+<td style="text-align: left;">TCGA-C5-A1MI-01A-11D-A14W-08</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Matched_Norm_Aliquot_Barcode</td>
+<td style="text-align: left;">TCGA-C5-A1MI-10A-01D-A14W-08</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Match_Norm_Seq_Allele1</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Match_Norm_Seq_Allele2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Tumor_Validation_Allele1</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Tumor_Validation_Allele2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Match_Norm_Validation_Allele1</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Match_Norm_Validation_Allele2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Verification_Status</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Validation_Status</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Mutation_Status</td>
+<td style="text-align: left;">Somatic</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Sequencing_Phase</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Sequence_Source</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Validation_Method</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Score</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">BAM_File</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Sequencer</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Tumor_Aliquot_UUID</td>
+<td style="text-align: left;">497c20f0-8a42-4d20-abdc-0415982ebb9f</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Matched_Norm_Aliquot_UUID</td>
+<td style="text-align: left;">a3d0503b-baac-4f83-9182-be7b4154c61d</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">HGVSc</td>
+<td style="text-align: left;">c.2500G&gt;A</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">HGVSp</td>
+<td style="text-align: left;">p.Val834Met</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">HGVSp_Short</td>
+<td style="text-align: left;">p.V834M</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Transcript_ID</td>
+<td style="text-align: left;">ENST00000321016</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Exon_Number</td>
+<td style="text-align: left;">18/19</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">t_depth</td>
+<td style="text-align: left;">64</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">t_ref_count</td>
+<td style="text-align: left;">43</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">t_alt_count</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">n_depth</td>
+<td style="text-align: left;">88</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">n_ref_count</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">n_alt_count</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">all_effects</td>
+<td style="text-align: left;">IGSF9B,missense_variant,p.V834M,ENST00000533871,NM_001277285.4,c.2500G&gt;A,MODERATE,YES,deleterious(0),probably_damaging(1),-1;IGSF9B,missense_variant,p.V834M,ENST00000321016,,c.2500G&gt;A,MODERATE,,deleterious(0.01),probably_damaging(0.988),-1;IGSF9B,downstream_gene_variant,,ENST00000527648,,,MODIFIER,,,,-1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Allele</td>
+<td style="text-align: left;">T</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Gene</td>
+<td style="text-align: left;">ENSG00000080854</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Feature</td>
+<td style="text-align: left;">ENST00000321016</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Feature_type</td>
+<td style="text-align: left;">Transcript</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">One_Consequence</td>
+<td style="text-align: left;">missense_variant</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Consequence</td>
+<td style="text-align: left;">missense_variant</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">cDNA_position</td>
+<td style="text-align: left;">2500/4050</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Protein_position</td>
+<td style="text-align: left;">834/1349</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Amino_acids</td>
+<td style="text-align: left;">V/M</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Codons</td>
+<td style="text-align: left;">Gtg/Atg</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Existing_variation</td>
+<td style="text-align: left;">rs771150072;COSV58068494</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">DISTANCE</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">TRANSCRIPT_STRAND</td>
+<td style="text-align: left;">-1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">SYMBOL</td>
+<td style="text-align: left;">IGSF9B</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">SYMBOL_SOURCE</td>
+<td style="text-align: left;">HGNC</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">HGNC_ID</td>
+<td style="text-align: left;">HGNC:32326</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">BIOTYPE</td>
+<td style="text-align: left;">protein_coding</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">CANONICAL</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">CCDS</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ENSP</td>
+<td style="text-align: left;">ENSP00000317980</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">SWISSPROT</td>
+<td style="text-align: left;">Q9UPX0.150</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">TREMBL</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">UNIPARC</td>
+<td style="text-align: left;">UPI0001545E3E</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">UNIPROT_ISOFORM</td>
+<td style="text-align: left;">Q9UPX0-1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">RefSeq</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">MANE</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">APPRIS</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">FLAGS</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">SIFT</td>
+<td style="text-align: left;">deleterious(0.01)</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">PolyPhen</td>
+<td style="text-align: left;">probably_damaging(0.988)</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">EXON</td>
+<td style="text-align: left;">18/19</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">INTRON</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">DOMAINS</td>
+<td style="text-align: left;">PANTHER:PTHR12231;PANTHER:PTHR12231:SF240;Low_complexity_(Seg):seg</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ThousG_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ThousG_AFR_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ThousG_AMR_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ThousG_EAS_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ThousG_EUR_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ThousG_SAS_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ESP_AA_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ESP_EA_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_AF</td>
+<td style="text-align: left;">1.216e-05</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_AFR_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_AMR_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_ASJ_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_EAS_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_FIN_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_NFE_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_OTH_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_SAS_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">MAX_AF</td>
+<td style="text-align: left;">9.968e-05</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">MAX_AF_POPS</td>
+<td style="text-align: left;">3.278e-05</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_non_cancer_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_non_cancer_AFR_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_non_cancer_AMI_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_non_cancer_AMR_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_non_cancer_ASJ_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_non_cancer_EAS_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_non_cancer_FIN_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_non_cancer_MID_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_non_cancer_NFE_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_non_cancer_OTH_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_non_cancer_SAS_AF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_non_cancer_MAX_AF_adj</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">gnomAD_non_cancer_MAX_AF_POPS_adj</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">CLIN_SIG</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">SOMATIC</td>
+<td style="text-align: left;">0;1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">PUBMED</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">TRANSCRIPTION_FACTORS</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">MOTIF_NAME</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">MOTIF_POS</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">HIGH_INF_POS</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">MOTIF_SCORE_CHANGE</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">miRNA</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">IMPACT</td>
+<td style="text-align: left;">MODERATE</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">PICK</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">VARIANT_CLASS</td>
+<td style="text-align: left;">SNV</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">TSL</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">HGVS_OFFSET</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">PHENO</td>
+<td style="text-align: left;">0;1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">GENE_PHENO</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">CONTEXT</td>
+<td style="text-align: left;">GGCCACGCTGT</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">tumor_submitter_uuid</td>
+<td style="text-align: left;">8c3559db-155f-42d3-9a73-38d5610f74b5</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">normal_submitter_uuid</td>
+<td style="text-align: left;">59778b5f-335a-471e-abb2-6dde0b5d7fe7</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">case_id</td>
+<td style="text-align: left;">941f75a1-fea4-4539-ba69-60bb11608f6d</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">GDC_FILTER</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">COSMIC</td>
+<td style="text-align: left;">COSM376595;COSM376596</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">hotspot</td>
+<td style="text-align: left;">False</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">RNA_Support</td>
+<td style="text-align: left;">Unknown</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">RNA_depth</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">RNA_ref_count</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">RNA_alt_count</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">callers</td>
+<td style="text-align: left;">muse;mutect2;varscan2</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">file_gdc_id</td>
+<td style="text-align: left;">3fd5afe7-9e69-4ea8-ab01-80e41783d795</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">muse</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">mutect2</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">pindel</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">varscan2</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">sample_barcode_tumor</td>
+<td style="text-align: left;">TCGA-C5-A1MI-01A</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">sample_barcode_normal</td>
+<td style="text-align: left;">TCGA-C5-A1MI-10A</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">aliquot_barcode_tumor</td>
+<td style="text-align: left;">TCGA-C5-A1MI-01A-11D-A14W-08</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">aliquot_barcode_normal</td>
+<td style="text-align: left;">TCGA-C5-A1MI-10A-01D-A14W-08</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>We will use only a few fields for extracting data for the phenopacket. These fields are explained below.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>
