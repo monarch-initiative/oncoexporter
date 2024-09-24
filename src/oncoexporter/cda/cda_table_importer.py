@@ -236,15 +236,16 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
             ppackt.subject.CopyFrom(individual_message)
             ppackt_d[individual_id] = ppackt
 
-        # get stage dictionary
+        # get stage dictionary, map to subject ID
         print("Retrieving stage info from GDC...")
-        stage_dict = self._gdc_service.fetch_stage_dict(sub_rsub_diag_df)
+        stage_dict = self._gdc_service.fetch_stage_dict()
         # remove initial data source label: TCGA.TCGA-4J-AA1J > TCGA-4J-AA1J
         sub_rsub_diag_df['subject_id_short'] = sub_rsub_diag_df["subject_id"].str.extract(r'^[^\.]+\.(.+)', expand=False)
         sub_rsub_diag_df['stage'] = sub_rsub_diag_df['subject_id_short'].map(stage_dict).fillna(sub_rsub_diag_df['stage'])
 
         sub_rsub_diag_df['primary_diagnosis'] = sub_rsub_diag_df['primary_diagnosis'].fillna('') # remove nans (not sure why they are there)
-        sub_rsub_diag_df.to_csv('sub_rsub_diag_df.txt', sep='\t')
+        #sub_rsub_diag_df.to_csv('sub_rsub_diag_df.txt', sep='\t')
+
 
         # Retrieve GA4GH Disease messages 
         for _, row in tqdm(sub_rsub_diag_df.iterrows(), total=len(sub_rsub_diag_df.index), desc="creating disease messsages"):
@@ -270,7 +271,7 @@ class CdaTableImporter(CdaImporter[fetch_rows]):
 
         # Get variant data 
         # takes ~45 minutes due to API calls to GDC
-        sub_rsub_diag_GDC_df = sub_rsub_diag_df[sub_rsub_diag_df['subject_data_data_source' == 'GDC']]
+        sub_rsub_diag_GDC_df = sub_rsub_diag_df[sub_rsub_diag_df['subject_data_source'] == 'GDC']
         for _, row in tqdm(sub_rsub_diag_GDC_df.iterrows(), total=len(sub_rsub_diag_df.index), desc="getting variants from GDC"):
 
             individual_id = row["subject_id"]

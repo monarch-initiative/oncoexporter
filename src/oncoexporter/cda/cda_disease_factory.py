@@ -99,11 +99,11 @@ class CdaDiseaseFactory(CdaFactory):
         #print("\n\nrow[subject_id]",row['subject_id'])
         #print("row:", list(row))
         #print("cda stage:", row["stage"]) # empty if coming from GDC
-        subj_id = re.sub("^[^.]+\.", "", row["subject_id"]) # remove initial data source label
-        gdc_stage = self._gdc_service.fetch_stage(subj_id) # returns a string
         stage_str = ''
 
         if row["stage"] == '': # probably should put in a check for data source here
+            subj_id = re.sub("^[^.]+\.", "", row["subject_id"]) # remove initial data source label
+            gdc_stage = self._gdc_service.fetch_stage(subj_id) # returns a string
             stage_str = gdc_stage
         else:
             stage_str = row["stage"]

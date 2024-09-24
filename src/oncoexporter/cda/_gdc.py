@@ -5,6 +5,7 @@ import typing
 import pandas as pd
 import phenopackets as pp
 import requests
+from io import StringIO
 
 
 class GdcService:
@@ -89,18 +90,26 @@ class GdcService:
 
         mutation_details = []
         for mutation in mutations:
+            print(mutation)
             vi = self._map_mutation_to_variant_interpretation(mutation)
             mutation_details.append(vi)
 
         return mutation_details
 
     def fetch_vital_status(self, subject_id: str) -> pp.VitalStatus:
+        '''
+        Need to make sure we are getting demographics.time_to_last_follow_up and demographics.time_to_last_known_disease_status for
+        survival analysis of patients who have not died
+        
+        
+        '''
         survival_data = self._fetch_data_from_gdc(self._survival_url, subject_id)
         vital_status_data = self._fetch_data_from_gdc(self._cases_url, subject_id, self._case_fields)
 
         survival_time = None
         vital_status = None
 
+        # need to get 'censored' field as well? And survival estimate?
         survival_results = survival_data.get("results", [])
         if survival_results:
             donors = survival_results[0].get("donors", [])
@@ -142,13 +151,48 @@ class GdcService:
 
         return stage
 
-    def fetch_stage_df(self, subj_id_list) -> pd.DataFrame:
+    def fetch_stage_dict(self) -> dict:
         '''
-        Get df from GDC API with stages for input list of subject IDs
+         Get df from GDC API with stages for input list of subject IDs using POST instead of GET
+          - speeds up creating of phenopackets
+          - returns a dictionary of subject ID -> stage
+          
+        Note: diagnoses.tumor_stage is empty, with 4 other options available
+            - not clear if they conflict with each other
+            - ajcc_pathologic_stage has the highest number so we use that initially 
         '''
-        stage_data = self._fetch_data_from_gdc(self._cases_url, subj_id_list, self._case_fields)
+        
+        fields = [
+             "submitter_id",
+             "cases.submitter_id",
+             "diagnoses.ajcc_pathologic_stage" # one of 4 options (ajcc_clinical, ann_arbor_pathologic, ann_arbor_clinical)
+         ]
+        fields = ",".join(fields)
 
-        return stage_df
+        # A POST is used, so the filter parameters can be passed directly as a Dict object.
+        params = {
+             "fields": fields,
+             "format": "TSV",
+             "size": "50000"
+             }
+
+        # The parameters are passed to 'json' rather than 'params' in this case
+        response = requests.post(self._cases_url, headers = {"Content-Type": "application/json"}, json = params)
+        stage_df = pd.read_csv(StringIO(response.content.decode("utf-8")), sep='\t')
+        stage_df.columns = ['ajcc0', 'ajcc1', 'ajcc2','id','submitter_id']
+        #stage_df.head()
+        #stage_df.shape
+        stage_dict = dict(zip(stage_df.submitter_id, stage_df.ajcc0))
+        
+        return stage_dict
+    
+    #def fetch_stage_df(self, subj_id_list) -> pd.DataFrame:
+    #    '''
+    #    Get df from GDC API with stages for input list of subject IDs
+    #    '''
+    #    stage_data = self._fetch_data_from_gdc(self._cases_url, subj_id_list, self._case_fields)
+
+    #    return stage_data
     def _map_mutation_to_variant_interpretation(self, mutation) -> pp.VariantInterpretation:
         vcf_record = self._parse_vcf_record(mutation)
 
@@ -193,7 +237,11 @@ class GdcService:
     @staticmethod
     def _map_consequence_to_expression(csq) -> typing.Optional[pp.Expression]:
         tx = csq['transcript']
-
+        print(tx)
+        
+        #     "consequence.transcript.gene.gene_id",
+        #    "consequence.transcript.gene.symbol",
+        
         expression = pp.Expression()
         expression.syntax = 'hgvs.c'
         tx_id = tx['transcript_id']

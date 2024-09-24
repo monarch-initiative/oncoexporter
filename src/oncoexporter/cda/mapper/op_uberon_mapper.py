@@ -15,6 +15,8 @@ class OpUberonMapper(OpMapper):
     def __init__(self):
         """
         This is a simple map from the 'primary_diagnosis_site = row["primary_diagnosis_site"]' field of the diagnosis row
+        
+        Not sure how to deal with multiple sites that are listed in one entry
         """
         super().__init__(('primary_diagnosis_site',))
         self._uberon_label_to_id = {
@@ -38,6 +40,7 @@ class OpUberonMapper(OpMapper):
             'thyroid gland': 'UBERON:0002046'
         }
         self._site_to_uberon_label_d = {
+            "Abdomen, Arm, Bladder, Chest, Head-Neck, Kidney, Leg, Retroperitoneum, Stomach, Uterus": "uterus",
             "Lung": "lung",
             "Lung, NOS": "lung",
             "Cervix uteri": "uterine cervix",
