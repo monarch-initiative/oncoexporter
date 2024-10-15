@@ -1,7 +1,7 @@
 import json
 import logging
 import typing
-
+import pandas as pd
 import phenopackets as pp
 import requests
 
@@ -15,7 +15,7 @@ class GdcMutationService:
             self,
             page_size=100,
             page=1,
-            timeout=10,
+            timeout=30,
     ):
         self._logger = logging.getLogger(__name__)
         self._variants_url = 'https://api.gdc.cancer.gov/ssms'
@@ -35,7 +35,7 @@ class GdcMutationService:
             "tumor_allele",
             # "genomic_dna_change",
             # "end_position",
-            # "gene_aa_change",
+            "consequence.transcript.aa_change",
             "consequence.transcript.gene.gene_id",
             "consequence.transcript.gene.symbol",
             "consequence.transcript.transcript_id",
@@ -44,6 +44,9 @@ class GdcMutationService:
         self._case_fields = ','.join((
             "demographic.vital_status",
         ))
+        self._ensembl_tx2prot = pd.read_csv("Homo_sapiens.GRCh38.112.ena.tsv", sep="\t") # from https://ftp.ensembl.org/pub/current_tsv/homo_sapiens/
+        self._tx_to_prot_dict = dict(zip(self._ensembl_tx2prot.transcript_stable_id, self._ensembl_tx2prot.protein_stable_id))
+
 
     def _fetch_data_from_gdc(self, url: str, subject_id: str, fields: typing.List[str]=None) -> typing.Any:
         params = self._prepare_query_params(subject_id, fields)
@@ -62,7 +65,15 @@ class GdcMutationService:
                 "value": [subject_id]
             }
         }
+        
+        # To avoid this error: 
+        # requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+        headers = {
+            'User-Agent': 'My User Agent 1.0',
+        }
+        
         return {
+            "headers": headers,
             "fields": fields,
             "filters": json.dumps(filters),
             "format": "JSON",
@@ -111,22 +122,25 @@ class GdcMutationService:
         return vital_status_obj
 
     def _map_mutation_to_variant_interpretation(self, mutation) -> pp.VariantInterpretation:
-        vcf_record = self._parse_vcf_record(mutation)
-
+        
+        # TODO: 't_depth', 't_ref_count', 't_alt_count', 'n_depth', 'n_ref_count', 'n_alt_count'
+        # TODO: mutation status
+        # "gene_aa_change": ["KRAS G12D"]
+        
         vd = pp.VariationDescriptor()
         vd.id = mutation['id']
 
+        vcf_record = self._parse_vcf_record(mutation)
         if vcf_record is not None:
             vd.vcf_record.CopyFrom(vcf_record)
 
-        # TODO: 't_depth', 't_ref_count', 't_alt_count', 'n_depth', 'n_ref_count', 'n_alt_count'
-        # TODO: mutation status
-
         for csq in mutation['consequence']:
-            (expression, gene_descriptor) = (
-                GdcMutationService._map_consequence_to_expression_and_gene_descriptor(csq))
-            if expression is not None:
-                vd.expressions.append(expression)
+            expression_list = self._map_consequence_to_expression(csq)# GdcMutationService._map_consequence_to_expression(csq)
+            gene_descriptor = GdcMutationService._map_consequence_to_gene_descriptor(csq)
+            
+            if expression_list is not None:
+                vd.expressions.extend(expression_list)
+                
             if gene_descriptor is not None:
                 vd.gene_context.CopyFrom(gene_descriptor)
 
@@ -154,19 +168,68 @@ class GdcMutationService:
 
         return vcf_record
 
-    @staticmethod
-    def _map_consequence_to_expression_and_gene_descriptor(csq) -> (typing.Optional[pp.Expression],
-                                                                    typing.Optional[pp.GeneDescriptor]):
+    #@staticmethod # [pp.Expression]
+    def _map_consequence_to_expression(self, csq) -> typing.Optional[list]:
+                                                                    
         tx = csq['transcript']
 
-        expression = pp.Expression()
-        expression.syntax = 'hgvs.c'
+        expression_c = pp.Expression()
+        expression_c.syntax = 'hgvs.c'
         tx_id = tx['transcript_id']
         ann = tx['annotation']['hgvsc']
-        expression.value = f'{tx_id}:{ann}'
-
+        expression_c.value = f'{tx_id}:{ann}'
+        
+        expression_p = pp.Expression()
+        prot_id = None
+        if tx_id in self._tx_to_prot_dict:
+            prot_id = self._tx_to_prot_dict[tx_id]
+        
+        aa_change = None
+        if 'aa_change' in tx:
+            aa_change = 'p.'+tx['aa_change']
+        
+        if aa_change is not None and prot_id is not None:
+            expression_p.syntax = 'hgvs.p'
+            expression_p.value = f'{prot_id}:{aa_change}'
+            
+        
+        '''
+        Phenopacket:
+        "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "ENST00000373125:c.55C>T"
+                  },
+        
+        GDC:
+        curl 'https://api.gdc.cancer.gov/ssms/edd1ae2c-3ca9-52bd-a124-b09ed304fcc2?pretty=true&expand=consequence.transcript'
+        {
+            "data": {
+                "start_position": 25245350,
+                "gene_aa_change": [
+                    "KRAS G12D"
+                ],
+            "consequence": [
+            {
+                "transcript": {
+                    "transcript_id": "ENST00000556131",
+                    "aa_end": 12,
+                    "consequence_type": "missense_variant",
+                    "aa_start": 12,
+                    "is_canonical": false,
+                    "aa_change": "G12D",
+                    "ref_seq_accession": ""
+            }
+        },
+        '''
+        return ([expression_c,expression_p])
+    @staticmethod
+    def _map_consequence_to_gene_descriptor(csq) -> (typing.Optional[pp.GeneDescriptor]):
+        
+        tx = csq['transcript']
+        
         gene_context = pp.GeneDescriptor()
         gene_context.value_id = tx['gene']['gene_id']
         gene_context.symbol = tx['gene']['symbol']
-
-        return (expression, gene_context)
+        
+        return(gene_context)
