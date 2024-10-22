@@ -174,7 +174,7 @@ c2p_env/
 !src/oncoexporter/ncit_mapping_files/*.tsv
 !src/oncoexporter/ncit_mapping_files/*.csv
 
-*.tar.gz
+#*.tar.gz
 
 
 # Mac General
