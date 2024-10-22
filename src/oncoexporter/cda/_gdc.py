@@ -1,6 +1,10 @@
 import json
 import logging
+import os
+import tempfile
 import typing
+import urllib
+
 import pandas as pd
 import phenopackets as pp
 import requests
@@ -16,6 +20,7 @@ class GdcMutationService:
             page_size=100,
             page=1,
             timeout=30,
+            transcript_to_protein_url='https://ftp.ensembl.org/pub/current_tsv/homo_sapiens/Homo_sapiens.GRCh38.113.ena.tsv.gz'
     ):
         self._logger = logging.getLogger(__name__)
         self._variants_url = 'https://api.gdc.cancer.gov/ssms'
@@ -44,9 +49,23 @@ class GdcMutationService:
         self._case_fields = ','.join((
             "demographic.vital_status",
         ))
-        self._ensembl_tx2prot = pd.read_csv("Homo_sapiens.GRCh38.112.ena.tsv", sep="\t") # from https://ftp.ensembl.org/pub/current_tsv/homo_sapiens/
-        self._tx_to_prot_dict = dict(zip(self._ensembl_tx2prot.transcript_stable_id, self._ensembl_tx2prot.protein_stable_id))
 
+        # Use a temporary directory to download the file
+        with tempfile.TemporaryDirectory() as tmpdir:
+            local_transcript_file = os.path.join(tmpdir,
+                                                 'Homo_sapiens.GRCh38.113.ena.tsv.gz')
+
+            self._logger.info(
+                f"Downloading {local_transcript_file} from {transcript_to_protein_url}...")
+            urllib.request.urlretrieve(transcript_to_protein_url,
+                                       local_transcript_file)
+            self._logger.info(f"Downloaded and saved {local_transcript_file}.")
+
+            # Load the Ensembl transcript to protein mappings
+            self._ensembl_tx2prot = pd.read_csv(local_transcript_file, sep="\t")
+            self._tx_to_prot_dict = dict(
+                zip(self._ensembl_tx2prot.transcript_stable_id,
+                    self._ensembl_tx2prot.protein_stable_id))
 
     def _fetch_data_from_gdc(self, url: str, subject_id: str, fields: typing.List[str]=None) -> typing.Any:
         params = self._prepare_query_params(subject_id, fields)
@@ -65,13 +84,13 @@ class GdcMutationService:
                 "value": [subject_id]
             }
         }
-        
-        # To avoid this error: 
+
+        # To avoid this error:
         # requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
         headers = {
             'User-Agent': 'My User Agent 1.0',
         }
-        
+
         return {
             "headers": headers,
             "fields": fields,
@@ -122,11 +141,11 @@ class GdcMutationService:
         return vital_status_obj
 
     def _map_mutation_to_variant_interpretation(self, mutation) -> pp.VariantInterpretation:
-        
+
         # TODO: 't_depth', 't_ref_count', 't_alt_count', 'n_depth', 'n_ref_count', 'n_alt_count'
         # TODO: mutation status
         # "gene_aa_change": ["KRAS G12D"]
-        
+
         vd = pp.VariationDescriptor()
         vd.id = mutation['id']
 
@@ -137,10 +156,10 @@ class GdcMutationService:
         for csq in mutation['consequence']:
             expression_list = self._map_consequence_to_expression(csq)# GdcMutationService._map_consequence_to_expression(csq)
             gene_descriptor = GdcMutationService._map_consequence_to_gene_descriptor(csq)
-            
+
             if expression_list is not None:
                 vd.expressions.extend(expression_list)
-                
+
             if gene_descriptor is not None:
                 vd.gene_context.CopyFrom(gene_descriptor)
 
@@ -170,7 +189,7 @@ class GdcMutationService:
 
     #@staticmethod # [pp.Expression]
     def _map_consequence_to_expression(self, csq) -> typing.Optional[list]:
-                                                                    
+
         tx = csq['transcript']
 
         expression_c = pp.Expression()
@@ -178,21 +197,21 @@ class GdcMutationService:
         tx_id = tx['transcript_id']
         ann = tx['annotation']['hgvsc']
         expression_c.value = f'{tx_id}:{ann}'
-        
+
         expression_p = pp.Expression()
         prot_id = None
         if tx_id in self._tx_to_prot_dict:
             prot_id = self._tx_to_prot_dict[tx_id]
-        
+
         aa_change = None
         if 'aa_change' in tx:
             aa_change = 'p.'+tx['aa_change']
-        
+
         if aa_change is not None and prot_id is not None:
             expression_p.syntax = 'hgvs.p'
             expression_p.value = f'{prot_id}:{aa_change}'
-            
-        
+
+
         '''
         Phenopacket:
         "expressions": [
@@ -225,11 +244,11 @@ class GdcMutationService:
         return ([expression_c,expression_p])
     @staticmethod
     def _map_consequence_to_gene_descriptor(csq) -> (typing.Optional[pp.GeneDescriptor]):
-        
+
         tx = csq['transcript']
-        
+
         gene_context = pp.GeneDescriptor()
         gene_context.value_id = tx['gene']['gene_id']
         gene_context.symbol = tx['gene']['symbol']
-        
+
         return(gene_context)
